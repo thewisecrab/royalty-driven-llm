@@ -1,4 +1,4 @@
-# RDLLM: Grounded Attribution and Royalty Settlement for AI Outputs
+# RDLLM: A Source-Grounded Attribution and Royalty Settlement Framework for Verifiable AI Outputs
 
 Version: 2026-07-08
 

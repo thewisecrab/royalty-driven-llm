@@ -30,7 +30,10 @@ SOURCE = ROOT / "paper" / "rdllm_white_paper.md"
 OUT_DIR = ROOT / "paper" / "arxiv"
 OUTPUT = OUT_DIR / "rdllm_white_paper.pdf"
 
-TITLE = "RDLLM: Grounded Attribution and Royalty Settlement for AI Outputs"
+TITLE = (
+    "RDLLM: A Source-Grounded Attribution and Royalty Settlement Framework "
+    "for Verifiable AI Outputs"
+)
 AUTHOR = "Siddharth Nilesh Patel"
 SUBTITLE = "Public technical white paper, version 2026-07-08"
 
@@ -218,7 +221,7 @@ def build_story(markdown: str):
     styles = build_styles()
     story = [
         Paragraph(TITLE, styles["TitlePageTitle"]),
-        Paragraph(AUTHOR, styles["Byline"]),
+        Paragraph(f"Author: {AUTHOR}", styles["Byline"]),
         Paragraph(SUBTITLE, styles["Byline"]),
         Spacer(1, 0.18 * inch),
     ]
