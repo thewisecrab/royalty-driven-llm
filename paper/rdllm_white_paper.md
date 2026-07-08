@@ -1,8 +1,12 @@
-# RDLLM White Paper: Grounded Attribution And Royalty Settlement For AI Outputs
+# RDLLM: Grounded Attribution and Royalty Settlement for AI Outputs
 
 Version: 2026-07-08
 
+Author: Siddharth Nilesh Patel
+
 Status: public technical white paper
+
+Document label: RDLLM White Paper
 
 Companion artifacts:
 
