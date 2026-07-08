@@ -1,0 +1,39 @@
+{
+  "audit_errors": [],
+  "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+  "event_id": "evt_1ed43e106d466249",
+  "grounding_quality": {
+    "issues": [],
+    "overall_score": 1.0,
+    "quality_version": "rdllm-grounding-quality/v1",
+    "scores": {
+      "citation_integrity": 1.0,
+      "evidence_relevance": 1.0,
+      "fact_support": 1.0,
+      "payout_alignment": 1.0,
+      "policy_alignment": 1.0,
+      "source_accessibility": 1.0
+    },
+    "summary": {
+      "claim_count": 6,
+      "footer_source_count": 3,
+      "footer_span_hash_count": 6,
+      "source_count": 3,
+      "supported_claims": 6
+    },
+    "verdict": "verified"
+  },
+  "grounding_report": {
+    "coverage": 1.0,
+    "policy_denials": 0,
+    "policy_status": "allowed",
+    "registry_conflicts": 0,
+    "registry_report_hash": "",
+    "registry_status": "clear",
+    "source_count": 3,
+    "status": "grounded",
+    "supported_claims": 6,
+    "total_claims": 6,
+    "unsupported_claims": 0
+  }
+}

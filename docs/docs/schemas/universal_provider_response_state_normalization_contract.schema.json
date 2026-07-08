@@ -1,0 +1,314 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_provider_response_state_normalization_contract.schema.json",
+  "title": "RDLLM Universal Provider Response State Normalization Contract",
+  "type": "object",
+  "required": [
+    "universal_provider_response_state_normalization_contract_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "artifact_bindings",
+    "provider_response_state_surface_rows",
+    "normalized_response_state_field_rows",
+    "route_response_state_rows",
+    "release_gate_rows",
+    "negative_response_state_rows",
+    "evidence_roots",
+    "checks",
+    "provider_response_state_normalization_decision",
+    "coverage",
+    "privacy",
+    "summary",
+    "universal_provider_response_state_normalization_contract_hash"
+  ],
+  "properties": {
+    "universal_provider_response_state_normalization_contract_version": {
+      "const": "rdllm-universal-provider-response-state-normalization-contract/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_provider_response_state_normalization_contract.schema.json"
+    },
+    "created_at": { "type": "string", "minLength": 1 },
+    "issuer": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_provider_meter_normalization_level",
+        "minimum_claim_evidence_footer_level",
+        "minimum_runtime_route_binding_level",
+        "provider_terminal_state_must_be_observed",
+        "native_finish_or_status_must_normalize",
+        "safe_release_requires_complete_supported_state",
+        "source_footer_reliance_requires_complete_supported_state",
+        "creator_settlement_requires_complete_supported_state",
+        "refusal_or_abstention_requires_state_receipt",
+        "blocked_refused_truncated_tool_error_states_fail_closed",
+        "unknown_terminal_states_fail_closed"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-provider-response-state-normalization-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L186" },
+        "minimum_provider_meter_normalization_level": { "const": "RDLLM-L185" },
+        "minimum_claim_evidence_footer_level": { "const": "RDLLM-L184" },
+        "minimum_runtime_route_binding_level": { "const": "RDLLM-L179" },
+        "provider_terminal_state_must_be_observed": { "const": true },
+        "native_finish_or_status_must_normalize": { "const": true },
+        "safe_release_requires_complete_supported_state": { "const": true },
+        "source_footer_reliance_requires_complete_supported_state": {
+          "const": true
+        },
+        "creator_settlement_requires_complete_supported_state": { "const": true },
+        "refusal_or_abstention_requires_state_receipt": { "const": true },
+        "blocked_refused_truncated_tool_error_states_fail_closed": {
+          "const": true
+        },
+        "unknown_terminal_states_fail_closed": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-provider-response-state-normalization-contract.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-provider-response-state-normalization-contract/v1"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "universal_provider_meter_normalization_contract",
+        "universal_claim_evidence_footer_verification_contract",
+        "universal_runtime_route_binding_contract"
+      ],
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "present",
+          "artifact_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "status",
+          "level",
+          "minimum_level",
+          "ready"
+        ],
+        "properties": {
+          "present": { "type": "boolean" },
+          "artifact_hash": { "type": "string" },
+          "payload_hash": { "type": "string" },
+          "hash_reproducible": { "type": "boolean" },
+          "status": { "type": "string" },
+          "level": { "type": "string" },
+          "minimum_level": { "type": "string" },
+          "ready": { "type": "boolean" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "provider_response_state_surface_rows": {
+      "type": "object",
+      "minProperties": 24,
+      "additionalProperties": { "type": "object" }
+    },
+    "normalized_response_state_field_rows": {
+      "type": "object",
+      "minProperties": 19,
+      "additionalProperties": { "type": "object" }
+    },
+    "route_response_state_rows": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "object" }
+    },
+    "release_gate_rows": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "object" }
+    },
+    "negative_response_state_rows": {
+      "type": "object",
+      "minProperties": 20,
+      "additionalProperties": { "type": "object" }
+    },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "provider_response_state_surface_root",
+        "normalized_response_state_field_root",
+        "route_response_state_root",
+        "release_gate_root",
+        "negative_response_state_root",
+        "combined_response_state_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "provider_meter_normalization_l185_ready",
+        "claim_evidence_footer_l184_ready",
+        "runtime_route_binding_l179_ready",
+        "provider_response_state_surface_rows_complete",
+        "normalized_response_state_field_rows_complete",
+        "route_response_state_rows_complete",
+        "release_gate_rows_complete",
+        "negative_response_state_fixtures_reject",
+        "contract_signed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "provider_response_state_normalization_decision": {
+      "type": "object",
+      "required": [
+        "universal_provider_response_state_normalization_ready",
+        "provider_response_states_normalized",
+        "model_invocation_allowed",
+        "safe_response_release_allowed",
+        "source_footer_reliance_allowed",
+        "creator_settlement_allowed",
+        "abstention_or_refusal_release_allowed_with_state_receipt",
+        "blocked_or_filtered_answer_release_blocked",
+        "truncated_answer_reliance_blocked",
+        "unknown_finish_reason_blocked",
+        "private_safety_payload_blocked",
+        "failure_modes"
+      ],
+      "properties": {
+        "universal_provider_response_state_normalization_ready": {
+          "type": "boolean"
+        },
+        "provider_response_states_normalized": { "type": "boolean" },
+        "model_invocation_allowed": { "type": "boolean" },
+        "safe_response_release_allowed": { "type": "boolean" },
+        "source_footer_reliance_allowed": { "type": "boolean" },
+        "creator_settlement_allowed": { "type": "boolean" },
+        "abstention_or_refusal_release_allowed_with_state_receipt": {
+          "type": "boolean"
+        },
+        "blocked_or_filtered_answer_release_blocked": { "const": true },
+        "truncated_answer_reliance_blocked": { "const": true },
+        "unknown_finish_reason_blocked": { "const": true },
+        "private_safety_payload_blocked": { "const": true },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "coverage": { "type": "object" },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payloads_excluded",
+        "private_prompts_excluded",
+        "private_outputs_excluded",
+        "private_source_text_excluded",
+        "private_refusal_payloads_excluded",
+        "private_safety_payloads_excluded",
+        "private_guardrail_payloads_excluded",
+        "private_provider_error_payloads_excluded",
+        "public_contract_uses_hashes_routes_state_classes_gates_and_verdicts"
+      ],
+      "properties": {
+        "private_payloads_excluded": { "const": true },
+        "private_prompts_excluded": { "const": true },
+        "private_outputs_excluded": { "const": true },
+        "private_source_text_excluded": { "const": true },
+        "private_refusal_payloads_excluded": { "const": true },
+        "private_safety_payloads_excluded": { "const": true },
+        "private_guardrail_payloads_excluded": { "const": true },
+        "private_provider_error_payloads_excluded": { "const": true },
+        "public_contract_uses_hashes_routes_state_classes_gates_and_verdicts": {
+          "const": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_provider_meter_normalization_level",
+        "minimum_claim_evidence_footer_level",
+        "minimum_runtime_route_binding_level",
+        "provider_response_state_surface_count",
+        "ready_provider_response_state_surface_count",
+        "normalized_response_state_field_count",
+        "ready_normalized_response_state_field_count",
+        "route_count",
+        "ready_route_response_state_count",
+        "ready_release_gate_count",
+        "negative_response_state_failure_count",
+        "ready_negative_response_state_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_provider_response_state_normalization_contract"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L186" },
+        "minimum_provider_meter_normalization_level": { "const": "RDLLM-L185" },
+        "minimum_claim_evidence_footer_level": { "const": "RDLLM-L184" },
+        "minimum_runtime_route_binding_level": { "const": "RDLLM-L179" },
+        "provider_response_state_surface_count": {
+          "type": "integer",
+          "minimum": 24
+        },
+        "ready_provider_response_state_surface_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "normalized_response_state_field_count": {
+          "type": "integer",
+          "minimum": 19
+        },
+        "ready_normalized_response_state_field_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "route_count": { "type": "integer", "minimum": 1 },
+        "ready_route_response_state_count": { "type": "integer", "minimum": 0 },
+        "ready_release_gate_count": { "type": "integer", "minimum": 0 },
+        "negative_response_state_failure_count": {
+          "type": "integer",
+          "minimum": 20
+        },
+        "ready_negative_response_state_failure_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failure_mode_count": { "type": "integer", "minimum": 0 },
+        "privacy_preserved": { "type": "boolean" },
+        "signed_provider_response_state_normalization_contract": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "universal_provider_response_state_normalization_contract_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

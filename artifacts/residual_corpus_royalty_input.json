@@ -1,0 +1,732 @@
+{
+  "case_id": "case:rdllm-residual-corpus-royalty:001",
+  "creator_license_contract": {
+    "commitments": {
+      "content_hash_root": "6a574168c63d95e10ea2c51c052f4bcf1eaabdcab678705d33bf682c2be5235a",
+      "creator_root": "f8360bf459ec271fc44c6b09fd1f51c7b5e55af808448e67829cb0a1be59cd82",
+      "policy_root": "1de2a731fde834cefffdbd50dba02586eff3756f18865d95e59556b115e9076f",
+      "term_root": "5302f6f5c8060d77c6ec07bb3f4863b65035be86e6dea61b71dc18351e00f530"
+    },
+    "contract_hash": "b72a02031cb195f1899bdec74f511d38b390d7d03e68409c567e1e3724e2fe08",
+    "contract_version": "rdllm-creator-license-contract/v1",
+    "created_at": "2026-05-31T00:00:00Z",
+    "creator_commitments": [
+      {
+        "creator_id": "arjun",
+        "creator_name": "Arjun Rao",
+        "payout_account_disclosed": false,
+        "payout_account_hash": "36046f2f9ba53892df7e7815fe5e2f5c5635908722ff258bdb6798aaca33f993"
+      },
+      {
+        "creator_id": "lina",
+        "creator_name": "Lina Park",
+        "payout_account_disclosed": false,
+        "payout_account_hash": "e40e0e769e8810ddee05459d531a117078b5d3c0df0838ecc0d527d8ae9efb24"
+      },
+      {
+        "creator_id": "maya",
+        "creator_name": "Maya Sen",
+        "payout_account_disclosed": false,
+        "payout_account_hash": "093ef537c9af164c23f6868280281b5be3bbc058642bd017153126dc407fda1e"
+      }
+    ],
+    "effective_at": "2026-05-31T00:00:00Z",
+    "enforcement": {
+      "license_terms_must_precede_use": true,
+      "minimum_creator_pool_rate_must_be_met": true,
+      "policy_engine_must_enforce_allowed_uses": true,
+      "proof_pack_required_for_public_answers": true,
+      "revoked_works_denied_for_future_use": true,
+      "unlicensed_traced_use_routes_to_rights_conflict_escrow": true
+    },
+    "issuer": "rdllm-local-demo",
+    "privacy": {
+      "contract_uses_content_hashes": true,
+      "contract_uses_payout_account_hashes": true,
+      "payout_account_disclosed": false,
+      "work_text_disclosed": false
+    },
+    "profile": {
+      "bom_standard": "SPDX 3",
+      "dataset_metadata_standard": "MLCommons Croissant",
+      "profile_id": "rdllm-creator-license-contract-profile/v1",
+      "provenance_standard": "W3C PROV",
+      "rights_standard": "ODRL"
+    },
+    "provider": "provider:rdllm-reference",
+    "schemas": {
+      "creator_license_contract": "docs/schemas/creator_license_contract.schema.json"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "6e47667c4138879f91252d84389a74e044faa90a6eccf8960bbec88a33040768"
+    },
+    "summary": {
+      "active_term_count": 3,
+      "creator_count": 3,
+      "minimum_creator_pool_rate_max": 0.0,
+      "offline_verification_supported": true,
+      "revoked_term_count": 0,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L38",
+      "term_count": 3,
+      "work_count": 3
+    },
+    "terms": [
+      {
+        "allowed_uses": [
+          "display",
+          "external_attribution",
+          "generation",
+          "quote",
+          "retrieval",
+          "training"
+        ],
+        "consent_status": "active",
+        "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+        "creator_id": "arjun",
+        "creator_name": "Arjun Rao",
+        "duties": {
+          "attribution_required": true,
+          "audit_trail_required": true,
+          "challenge_process_required": true,
+          "proof_pack_required": true,
+          "revocation_must_affect_future_use": true,
+          "royalty_required": true
+        },
+        "jurisdictions": [
+          "GLOBAL"
+        ],
+        "license": "royalty-bearing",
+        "license_uri": "",
+        "minimum_creator_pool_rate": 0.0,
+        "payout_account_disclosed": false,
+        "payout_account_hash": "36046f2f9ba53892df7e7815fe5e2f5c5635908722ff258bdb6798aaca33f993",
+        "policy_id": "policy:arjun-provenance-ledger",
+        "prohibited_uses": [],
+        "requires_attribution": true,
+        "requires_royalty": true,
+        "revoked": false,
+        "revoked_at": "",
+        "source_uri": "registered://works/arjun-provenance-ledger",
+        "standards": {
+          "croissant_usage_policy": {
+            "allowedUses": [
+              "display",
+              "external_attribution",
+              "generation",
+              "quote",
+              "retrieval",
+              "training"
+            ],
+            "copyrightHolder": "arjun",
+            "jurisdictions": [
+              "GLOBAL"
+            ],
+            "license": "royalty-bearing",
+            "prohibitedUses": []
+          },
+          "odrl_policy": {
+            "@context": "http://www.w3.org/ns/odrl.jsonld",
+            "asset": "registered://works/arjun-provenance-ledger",
+            "constraint": [
+              {
+                "leftOperand": "spatial",
+                "operator": "isAnyOf",
+                "rightOperand": [
+                  "GLOBAL"
+                ]
+              }
+            ],
+            "duty": [
+              {
+                "action": "attribute",
+                "target": "arjun-provenance-ledger"
+              },
+              {
+                "action": "compensate"
+              },
+              {
+                "action": "audit",
+                "target": "rdllm:proofPack"
+              }
+            ],
+            "permission": [
+              {
+                "action": "display"
+              },
+              {
+                "action": "external_attribution"
+              },
+              {
+                "action": "generation"
+              },
+              {
+                "action": "quote"
+              },
+              {
+                "action": "retrieval"
+              },
+              {
+                "action": "training"
+              }
+            ],
+            "profile": "rdllm-creator-license-contract",
+            "prohibition": [],
+            "type": "Offer",
+            "uid": "policy:arjun-provenance-ledger"
+          },
+          "spdx_external_ref": {
+            "intendedUse": [
+              "display",
+              "external_attribution",
+              "generation",
+              "quote",
+              "retrieval",
+              "training"
+            ],
+            "name": "Provenance Ledgers for AI Outputs",
+            "verifiedUsing": [
+              {
+                "algorithm": "SHA256",
+                "hashValue": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f"
+              }
+            ]
+          }
+        },
+        "term_hash": "cbcb535107e8bdeb9f9c64a7325e4b4c9e46c5f3c36740bbd42c3fc524bc8dd1",
+        "term_id": "term:arjun-provenance-ledger:policy:arjun-provenance-ledger",
+        "title": "Provenance Ledgers for AI Outputs",
+        "title_hash": "bd7e52e1f8409358f7b1fd6b04874617d1bbaa14a2205d68a9babd3c1735e13d",
+        "work_id": "arjun-provenance-ledger",
+        "work_text_disclosed": false
+      },
+      {
+        "allowed_uses": [
+          "display",
+          "external_attribution",
+          "generation",
+          "quote",
+          "retrieval",
+          "training"
+        ],
+        "consent_status": "active",
+        "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+        "creator_id": "lina",
+        "creator_name": "Lina Park",
+        "duties": {
+          "attribution_required": true,
+          "audit_trail_required": true,
+          "challenge_process_required": true,
+          "proof_pack_required": true,
+          "revocation_must_affect_future_use": true,
+          "royalty_required": true
+        },
+        "jurisdictions": [
+          "GLOBAL"
+        ],
+        "license": "royalty-bearing",
+        "license_uri": "",
+        "minimum_creator_pool_rate": 0.0,
+        "payout_account_disclosed": false,
+        "payout_account_hash": "e40e0e769e8810ddee05459d531a117078b5d3c0df0838ecc0d527d8ae9efb24",
+        "policy_id": "policy:lina-governance-disputes",
+        "prohibited_uses": [],
+        "requires_attribution": true,
+        "requires_royalty": true,
+        "revoked": false,
+        "revoked_at": "",
+        "source_uri": "registered://works/lina-governance-disputes",
+        "standards": {
+          "croissant_usage_policy": {
+            "allowedUses": [
+              "display",
+              "external_attribution",
+              "generation",
+              "quote",
+              "retrieval",
+              "training"
+            ],
+            "copyrightHolder": "lina",
+            "jurisdictions": [
+              "GLOBAL"
+            ],
+            "license": "royalty-bearing",
+            "prohibitedUses": []
+          },
+          "odrl_policy": {
+            "@context": "http://www.w3.org/ns/odrl.jsonld",
+            "asset": "registered://works/lina-governance-disputes",
+            "constraint": [
+              {
+                "leftOperand": "spatial",
+                "operator": "isAnyOf",
+                "rightOperand": [
+                  "GLOBAL"
+                ]
+              }
+            ],
+            "duty": [
+              {
+                "action": "attribute",
+                "target": "lina-governance-disputes"
+              },
+              {
+                "action": "compensate"
+              },
+              {
+                "action": "audit",
+                "target": "rdllm:proofPack"
+              }
+            ],
+            "permission": [
+              {
+                "action": "display"
+              },
+              {
+                "action": "external_attribution"
+              },
+              {
+                "action": "generation"
+              },
+              {
+                "action": "quote"
+              },
+              {
+                "action": "retrieval"
+              },
+              {
+                "action": "training"
+              }
+            ],
+            "profile": "rdllm-creator-license-contract",
+            "prohibition": [],
+            "type": "Offer",
+            "uid": "policy:lina-governance-disputes"
+          },
+          "spdx_external_ref": {
+            "intendedUse": [
+              "display",
+              "external_attribution",
+              "generation",
+              "quote",
+              "retrieval",
+              "training"
+            ],
+            "name": "Creator Governance for AI Licensing",
+            "verifiedUsing": [
+              {
+                "algorithm": "SHA256",
+                "hashValue": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac"
+              }
+            ]
+          }
+        },
+        "term_hash": "9a704be10d700f08f46f97990c6efdf946312817343eb70317143ce60a140df0",
+        "term_id": "term:lina-governance-disputes:policy:lina-governance-disputes",
+        "title": "Creator Governance for AI Licensing",
+        "title_hash": "66125b1b2829bed8ddd5576b0156ad6eaafc612e1dede78432cafcb8cb42dc5a",
+        "work_id": "lina-governance-disputes",
+        "work_text_disclosed": false
+      },
+      {
+        "allowed_uses": [
+          "display",
+          "external_attribution",
+          "generation",
+          "quote",
+          "retrieval",
+          "training"
+        ],
+        "consent_status": "active",
+        "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+        "creator_id": "maya",
+        "creator_name": "Maya Sen",
+        "duties": {
+          "attribution_required": true,
+          "audit_trail_required": true,
+          "challenge_process_required": true,
+          "proof_pack_required": true,
+          "revocation_must_affect_future_use": true,
+          "royalty_required": true
+        },
+        "jurisdictions": [
+          "GLOBAL"
+        ],
+        "license": "royalty-bearing",
+        "license_uri": "",
+        "minimum_creator_pool_rate": 0.0,
+        "payout_account_disclosed": false,
+        "payout_account_hash": "093ef537c9af164c23f6868280281b5be3bbc058642bd017153126dc407fda1e",
+        "policy_id": "policy:maya-youtube-style-pool",
+        "prohibited_uses": [],
+        "requires_attribution": true,
+        "requires_royalty": true,
+        "revoked": false,
+        "revoked_at": "",
+        "source_uri": "registered://works/maya-youtube-style-pool",
+        "standards": {
+          "croissant_usage_policy": {
+            "allowedUses": [
+              "display",
+              "external_attribution",
+              "generation",
+              "quote",
+              "retrieval",
+              "training"
+            ],
+            "copyrightHolder": "maya",
+            "jurisdictions": [
+              "GLOBAL"
+            ],
+            "license": "royalty-bearing",
+            "prohibitedUses": []
+          },
+          "odrl_policy": {
+            "@context": "http://www.w3.org/ns/odrl.jsonld",
+            "asset": "registered://works/maya-youtube-style-pool",
+            "constraint": [
+              {
+                "leftOperand": "spatial",
+                "operator": "isAnyOf",
+                "rightOperand": [
+                  "GLOBAL"
+                ]
+              }
+            ],
+            "duty": [
+              {
+                "action": "attribute",
+                "target": "maya-youtube-style-pool"
+              },
+              {
+                "action": "compensate"
+              },
+              {
+                "action": "audit",
+                "target": "rdllm:proofPack"
+              }
+            ],
+            "permission": [
+              {
+                "action": "display"
+              },
+              {
+                "action": "external_attribution"
+              },
+              {
+                "action": "generation"
+              },
+              {
+                "action": "quote"
+              },
+              {
+                "action": "retrieval"
+              },
+              {
+                "action": "training"
+              }
+            ],
+            "profile": "rdllm-creator-license-contract",
+            "prohibition": [],
+            "type": "Offer",
+            "uid": "policy:maya-youtube-style-pool"
+          },
+          "spdx_external_ref": {
+            "intendedUse": [
+              "display",
+              "external_attribution",
+              "generation",
+              "quote",
+              "retrieval",
+              "training"
+            ],
+            "name": "Usage Pools for Creator Platforms",
+            "verifiedUsing": [
+              {
+                "algorithm": "SHA256",
+                "hashValue": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7"
+              }
+            ]
+          }
+        },
+        "term_hash": "de302176c9eccd11587c84a39617633e839230c34772a704d23bf437e39b0b2a",
+        "term_id": "term:maya-youtube-style-pool:policy:maya-youtube-style-pool",
+        "title": "Usage Pools for Creator Platforms",
+        "title_hash": "39093cc41eb52cdc1465230b9e6a61c9f9fc33c36ceba6ef1ebedfd6416db31d",
+        "work_id": "maya-youtube-style-pool",
+        "work_text_disclosed": false
+      }
+    ]
+  },
+  "direct_attribution_settlement_rows": [
+    {
+      "amount": "0.550000",
+      "settlement_row_hash": "5c0f430752d904859123b16bf8b340e26e29d947ef7a431b7bb58f2e8f43227e",
+      "source_report_hash": "e202528da6f08a3f1060cfa7d65966a3ee13612c9400595033f45475aa5f7d71"
+    }
+  ],
+  "model_usage_revenue_rows": [
+    {
+      "amount": "10.000000",
+      "currency": "USD",
+      "period_end": "2026-05-31",
+      "period_start": "2026-05-01",
+      "revenue_id": "revenue:rdllm-model-usage:2026-05",
+      "revenue_source_hash": "e51b7c04725ab2fec902d91ab27c02b8e94d9481dcbfb198867b1ad41a90f039",
+      "source_type": "subscription_api_and_enterprise_usage"
+    }
+  ],
+  "period_end": "2026-05-31",
+  "period_start": "2026-05-01",
+  "policy": {
+    "creator_pool_rate": "0.55",
+    "currency": "USD",
+    "max_single_creator_share": "0.50",
+    "minimum_confidence_score": "0.50",
+    "minimum_valuation_score": "0.000001",
+    "residual_pool_rate": "0.10",
+    "valuation_method_family": "dynamic_local_shapley"
+  },
+  "private_strings": [
+    "Private May 2026 model usage revenue export.",
+    "Private low-confidence valuation evidence."
+  ],
+  "training_content_summary": {
+    "certification": {
+      "highest_level": "RDLLM-L131",
+      "report_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+      "status": "passed"
+    },
+    "commitments": {
+      "certification_report_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+      "content_hash_root": "6a574168c63d95e10ea2c51c052f4bcf1eaabdcab678705d33bf682c2be5235a",
+      "policy_root": "e441c4cf6e287bb0f1022a0056cc96b57bc11923e0e543e1c0b0f7decdb9a3f5",
+      "provider_card_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+      "training_value_root": "f2b095f258979a66f7f0b410c1ab0f629e8b0aae5088beec6b23e8734ca962a1",
+      "work_root": "ff314391f6301f742aedb83ccc1898428012154d419a07d27f60c2477c6b12cd"
+    },
+    "created_at": "2026-05-31T00:00:00Z",
+    "issuer": "rdllm-local-demo",
+    "limitations": [
+      "reference summary covers registered training corpus, not web-scale unregistered training data",
+      "training influence is represented by deterministic training-value priors, not provider hidden states",
+      "public summary does not disclose private work text"
+    ],
+    "privacy": {
+      "answer_text_disclosed": false,
+      "chunk_text_disclosed": false,
+      "prompt_text_disclosed": false,
+      "public_summary_uses_counts_and_hash_roots": true,
+      "work_text_disclosed": false
+    },
+    "provider": {
+      "id": "provider:rdllm-reference",
+      "model_id": "model:rdllm-reference",
+      "model_version": "2026-05",
+      "training_stage": "reference_corpus"
+    },
+    "provider_card": {
+      "card_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+      "highest_level": "RDLLM-L131"
+    },
+    "rights_policy": {
+      "copyright_policy": "respect machine-readable allowed uses, prohibited uses, revocation, attribution duties, and royalty duties",
+      "minimum_creator_pool_rate_enforced": true,
+      "revoked_works_excluded": true,
+      "rights_checked_before_training": true,
+      "tdm_rights_signal": "rights metadata is expressed separately from provenance credentials"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "6b4b35096757ddea35f98431a31f7cd665025b134722c980d148cc861d706aa4"
+    },
+    "summary_hash": "96d7b568363adf49f46b0cb6c2d36bcdc4482371f7a8c136825fcb3a52133ab7",
+    "summary_version": "rdllm-training-content-summary/v1",
+    "template_alignment": {
+      "croissant_1_1_usage_policy": true,
+      "eu_ai_act_article_53_training_summary": true,
+      "odrl_rights_policy": true,
+      "public_summary_uses_categories_and_hash_roots": true,
+      "spdx_3_ai_dataset_bom": true
+    },
+    "training_content": {
+      "aggregate": {
+        "allowed_use_counts": {
+          "display": 3,
+          "external_attribution": 3,
+          "generation": 3,
+          "quote": 3,
+          "retrieval": 3,
+          "training": 3
+        },
+        "attribution_required_work_count": 3,
+        "chunk_count": 3,
+        "creator_count": 3,
+        "license_counts": {
+          "royalty-bearing": 3
+        },
+        "prohibited_use_counts": {},
+        "revoked_work_count": 0,
+        "royalty_required_work_count": 3,
+        "source_category_counts": {
+          "registered_creator_text": 3
+        },
+        "training_allowed_work_count": 3,
+        "training_blocked_work_count": 0,
+        "training_rights_coverage": 1.0,
+        "work_count": 3
+      },
+      "cohorts": [
+        {
+          "allowed_uses": [
+            "training",
+            "retrieval",
+            "generation",
+            "display",
+            "quote",
+            "external_attribution"
+          ],
+          "chunk_count": 1,
+          "chunk_hash_root": "4e89b4fab301dd86a537dc87e3132b69e0ef734af3a6d46c5343b2e6213d6983",
+          "content_category": "registered_creator_text",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "content_modality": "text",
+          "creator_id": "arjun",
+          "derived_from": [],
+          "has_upstream_lineage": false,
+          "jurisdictions": [
+            "GLOBAL"
+          ],
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:arjun-provenance-ledger",
+          "prohibited_uses": [],
+          "requires_attribution": true,
+          "requires_royalty": true,
+          "revoked": false,
+          "revoked_at": "",
+          "source_uri": "registered://works/arjun-provenance-ledger",
+          "training_allowed": true,
+          "training_policy_reasons": [
+            "permit:training"
+          ],
+          "training_value_root": "5089ed01b9cb3f2b364b572771007455ade7c58aa969057a079a9ed28ab8bff9",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "allowed_uses": [
+            "training",
+            "retrieval",
+            "generation",
+            "display",
+            "quote",
+            "external_attribution"
+          ],
+          "chunk_count": 1,
+          "chunk_hash_root": "2a360a87e44ec4a467083af6cef4d8847e733e184fe67ee391b82d49afb25a8a",
+          "content_category": "registered_creator_text",
+          "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+          "content_modality": "text",
+          "creator_id": "lina",
+          "derived_from": [],
+          "has_upstream_lineage": false,
+          "jurisdictions": [
+            "GLOBAL"
+          ],
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:lina-governance-disputes",
+          "prohibited_uses": [],
+          "requires_attribution": true,
+          "requires_royalty": true,
+          "revoked": false,
+          "revoked_at": "",
+          "source_uri": "registered://works/lina-governance-disputes",
+          "training_allowed": true,
+          "training_policy_reasons": [
+            "permit:training"
+          ],
+          "training_value_root": "f91ad52bd01af7c3d9aa67790cf2f39197b9c76b6bc9afbb0dfc4c00518b3ed2",
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "allowed_uses": [
+            "training",
+            "retrieval",
+            "generation",
+            "display",
+            "quote",
+            "external_attribution"
+          ],
+          "chunk_count": 1,
+          "chunk_hash_root": "b72eb7be55ee2b2203af97193b7883979fce9a652dfad9ccef6ffca8323b8b27",
+          "content_category": "registered_creator_text",
+          "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+          "content_modality": "text",
+          "creator_id": "maya",
+          "derived_from": [],
+          "has_upstream_lineage": false,
+          "jurisdictions": [
+            "GLOBAL"
+          ],
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:maya-youtube-style-pool",
+          "prohibited_uses": [],
+          "requires_attribution": true,
+          "requires_royalty": true,
+          "revoked": false,
+          "revoked_at": "",
+          "source_uri": "registered://works/maya-youtube-style-pool",
+          "training_allowed": true,
+          "training_policy_reasons": [
+            "permit:training"
+          ],
+          "training_value_root": "68c4851b1ca59158789fdf4256ca33372be4ee789019ea03a3652e678b57cc20",
+          "work_id": "maya-youtube-style-pool"
+        }
+      ],
+      "modalities": {
+        "text": 3
+      },
+      "source_scope": "registered_creator_works",
+      "training_stage": "reference_corpus"
+    }
+  },
+  "valuation_rows": [
+    {
+      "confidence_score": "0.95",
+      "creator_id": "arjun",
+      "valuation_evidence_hash": "c844097b157bb155886060907428522dd1e25a2e4da38ecee1b3c7656f5a621e",
+      "valuation_id": "valuation:arjun:residual:2026-05",
+      "valuation_method": "dynamic_local_shapley",
+      "valuation_score": "0.50",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "confidence_score": "0.90",
+      "creator_id": "maya",
+      "valuation_evidence_hash": "c6d0a4a78d675bf686a6c8e3edbf9a872ba6dd65c8fe0cfa301f1966012e9ff2",
+      "valuation_id": "valuation:maya:residual:2026-05",
+      "valuation_method": "dynamic_local_shapley",
+      "valuation_score": "0.30",
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "confidence_score": "0.20",
+      "creator_id": "lina",
+      "training_text": "Private low-confidence valuation evidence.",
+      "valuation_evidence_hash": "40c44686760e6758dcb281713915bec19770a711d1be5c87b1b16af2e840f737",
+      "valuation_id": "valuation:lina:residual:2026-05",
+      "valuation_method": "leave_one_out_influence",
+      "valuation_score": "0.20",
+      "work_id": "lina-governance-disputes"
+    }
+  ]
+}

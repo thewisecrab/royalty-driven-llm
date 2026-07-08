@@ -1,0 +1,546 @@
+{
+  "blocked_controls": [],
+  "control_rows": [
+    {
+      "category": "profile",
+      "control_id": "profile.schema",
+      "evidence": "rdllm-production-readiness-profile/v1",
+      "requirement": "profile schema must be rdllm-production-readiness-profile/v1",
+      "status": "ready"
+    },
+    {
+      "category": "deployment",
+      "control_id": "deployment.deployment_id",
+      "evidence": "rdllm-open-production-baseline",
+      "requirement": "deployment.deployment_id must be set",
+      "status": "ready"
+    },
+    {
+      "category": "deployment",
+      "control_id": "deployment.operator_name",
+      "evidence": "RDLLM open-source operator",
+      "requirement": "deployment.operator_name must be set",
+      "status": "ready"
+    },
+    {
+      "category": "deployment",
+      "control_id": "deployment.operator_type",
+      "evidence": "public_sector",
+      "requirement": "deployment.operator_type must be set",
+      "status": "ready"
+    },
+    {
+      "category": "deployment",
+      "control_id": "deployment.environment",
+      "evidence": "public_sector_production",
+      "requirement": "deployment.environment must be set",
+      "status": "ready"
+    },
+    {
+      "category": "deployment",
+      "control_id": "deployment.tenancy_model",
+      "evidence": "multi_tenant",
+      "requirement": "deployment.tenancy_model must be set",
+      "status": "ready"
+    },
+    {
+      "category": "deployment",
+      "control_id": "deployment.deployment_region_policy",
+      "evidence": "Operator-defined regional deployment policy with data residency controls for regulated users.",
+      "requirement": "deployment.deployment_region_policy must be set",
+      "status": "ready"
+    },
+    {
+      "category": "deployment",
+      "control_id": "deployment.operator_type_allowed",
+      "evidence": "public_sector",
+      "requirement": "operator_type must be one of ['company', 'government', 'individual', 'institution', 'model_provider', 'nonprofit', 'public_sector']",
+      "status": "ready"
+    },
+    {
+      "category": "deployment",
+      "control_id": "deployment.environment_production",
+      "evidence": "public_sector_production",
+      "requirement": "environment must be one of ['production', 'public_sector_production', 'regulated_production', 'sovereign_production']",
+      "status": "ready"
+    },
+    {
+      "category": "deployment",
+      "control_id": "deployment.tenancy_model_allowed",
+      "evidence": "multi_tenant",
+      "requirement": "tenancy_model must be one of ['federated', 'multi_tenant', 'offline_single_user', 'single_tenant']",
+      "status": "ready"
+    },
+    {
+      "category": "public_surfaces",
+      "control_id": "public_surfaces.discovery_manifest_url",
+      "evidence": "/.well-known/rdllm.json",
+      "requirement": "public_surfaces.discovery_manifest_url must be published",
+      "status": "ready"
+    },
+    {
+      "category": "public_surfaces",
+      "control_id": "public_surfaces.provider_attribution_card_url",
+      "evidence": "/.well-known/rdllm/provider-attribution-card.json",
+      "requirement": "public_surfaces.provider_attribution_card_url must be published",
+      "status": "ready"
+    },
+    {
+      "category": "public_surfaces",
+      "control_id": "public_surfaces.public_schema_base_url",
+      "evidence": "/docs/schemas/",
+      "requirement": "public_surfaces.public_schema_base_url must be published",
+      "status": "ready"
+    },
+    {
+      "category": "public_surfaces",
+      "control_id": "public_surfaces.transparency_log_url",
+      "evidence": "/.well-known/rdllm/transparency-log.json",
+      "requirement": "public_surfaces.transparency_log_url must be published",
+      "status": "ready"
+    },
+    {
+      "category": "public_surfaces",
+      "control_id": "public_surfaces.security_contact",
+      "evidence": "GitHub Security Advisory or operator security contact",
+      "requirement": "public_surfaces.security_contact must be published",
+      "status": "ready"
+    },
+    {
+      "category": "public_surfaces",
+      "control_id": "public_surfaces.license_url",
+      "evidence": "LICENSE",
+      "requirement": "public_surfaces.license_url must be published",
+      "status": "ready"
+    },
+    {
+      "category": "runtime_controls",
+      "control_id": "runtime_controls.auth_required",
+      "evidence": true,
+      "requirement": "runtime_controls.auth_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "runtime_controls",
+      "control_id": "runtime_controls.rate_limits_enabled",
+      "evidence": true,
+      "requirement": "runtime_controls.rate_limits_enabled must be true",
+      "status": "ready"
+    },
+    {
+      "category": "runtime_controls",
+      "control_id": "runtime_controls.tenant_isolation_enabled",
+      "evidence": true,
+      "requirement": "runtime_controls.tenant_isolation_enabled must be true",
+      "status": "ready"
+    },
+    {
+      "category": "runtime_controls",
+      "control_id": "runtime_controls.abuse_monitoring_enabled",
+      "evidence": true,
+      "requirement": "runtime_controls.abuse_monitoring_enabled must be true",
+      "status": "ready"
+    },
+    {
+      "category": "runtime_controls",
+      "control_id": "runtime_controls.fail_closed_on_unknown_provider_state",
+      "evidence": true,
+      "requirement": "runtime_controls.fail_closed_on_unknown_provider_state must be true",
+      "status": "ready"
+    },
+    {
+      "category": "runtime_controls",
+      "control_id": "runtime_controls.source_footer_required",
+      "evidence": true,
+      "requirement": "runtime_controls.source_footer_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "runtime_controls",
+      "control_id": "runtime_controls.response_envelope_required",
+      "evidence": true,
+      "requirement": "runtime_controls.response_envelope_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "runtime_controls",
+      "control_id": "runtime_controls.streaming_emission_gate_required",
+      "evidence": true,
+      "requirement": "runtime_controls.streaming_emission_gate_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "runtime_controls",
+      "control_id": "runtime_controls.provider_route_allowlist_required",
+      "evidence": true,
+      "requirement": "runtime_controls.provider_route_allowlist_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "runtime_controls",
+      "control_id": "runtime_controls.no_raw_prompt_publication",
+      "evidence": true,
+      "requirement": "runtime_controls.no_raw_prompt_publication must be true",
+      "status": "ready"
+    },
+    {
+      "category": "security_controls",
+      "control_id": "security_controls.secrets_externalized",
+      "evidence": true,
+      "requirement": "security_controls.secrets_externalized must be true",
+      "status": "ready"
+    },
+    {
+      "category": "security_controls",
+      "control_id": "security_controls.dependency_update_policy",
+      "evidence": true,
+      "requirement": "security_controls.dependency_update_policy must be true",
+      "status": "ready"
+    },
+    {
+      "category": "security_controls",
+      "control_id": "security_controls.ci_required",
+      "evidence": true,
+      "requirement": "security_controls.ci_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "security_controls",
+      "control_id": "security_controls.supply_chain_provenance_required",
+      "evidence": true,
+      "requirement": "security_controls.supply_chain_provenance_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "security_controls",
+      "control_id": "security_controls.vulnerability_reporting_path",
+      "evidence": true,
+      "requirement": "security_controls.vulnerability_reporting_path must be true",
+      "status": "ready"
+    },
+    {
+      "category": "security_controls",
+      "control_id": "security_controls.audit_log_immutability",
+      "evidence": true,
+      "requirement": "security_controls.audit_log_immutability must be true",
+      "status": "ready"
+    },
+    {
+      "category": "security_controls",
+      "control_id": "security_controls.backup_restore_tested",
+      "evidence": true,
+      "requirement": "security_controls.backup_restore_tested must be true",
+      "status": "ready"
+    },
+    {
+      "category": "security_controls",
+      "control_id": "security_controls.incident_response_runbook",
+      "evidence": true,
+      "requirement": "security_controls.incident_response_runbook must be true",
+      "status": "ready"
+    },
+    {
+      "category": "security_controls",
+      "control_id": "security_controls.privacy_redaction_public_surfaces",
+      "evidence": true,
+      "requirement": "security_controls.privacy_redaction_public_surfaces must be true",
+      "status": "ready"
+    },
+    {
+      "category": "security_controls",
+      "control_id": "security_controls.admin_actions_audited",
+      "evidence": true,
+      "requirement": "security_controls.admin_actions_audited must be true",
+      "status": "ready"
+    },
+    {
+      "category": "evidence_controls",
+      "control_id": "evidence_controls.claim_source_verification_required",
+      "evidence": true,
+      "requirement": "evidence_controls.claim_source_verification_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "evidence_controls",
+      "control_id": "evidence_controls.source_rationale_required",
+      "evidence": true,
+      "requirement": "evidence_controls.source_rationale_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "evidence_controls",
+      "control_id": "evidence_controls.footer_copy_export_preservation",
+      "evidence": true,
+      "requirement": "evidence_controls.footer_copy_export_preservation must be true",
+      "status": "ready"
+    },
+    {
+      "category": "evidence_controls",
+      "control_id": "evidence_controls.proof_pack_publication_required",
+      "evidence": true,
+      "requirement": "evidence_controls.proof_pack_publication_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "evidence_controls",
+      "control_id": "evidence_controls.public_discovery_manifest_required",
+      "evidence": true,
+      "requirement": "evidence_controls.public_discovery_manifest_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "evidence_controls",
+      "control_id": "evidence_controls.third_party_audit_supported",
+      "evidence": true,
+      "requirement": "evidence_controls.third_party_audit_supported must be true",
+      "status": "ready"
+    },
+    {
+      "category": "evidence_controls",
+      "control_id": "evidence_controls.negative_fixture_replay_required",
+      "evidence": true,
+      "requirement": "evidence_controls.negative_fixture_replay_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "evidence_controls",
+      "control_id": "evidence_controls.model_response_state_normalization_required",
+      "evidence": true,
+      "requirement": "evidence_controls.model_response_state_normalization_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "governance_controls",
+      "control_id": "governance_controls.creator_onboarding_policy",
+      "evidence": true,
+      "requirement": "governance_controls.creator_onboarding_policy must be true",
+      "status": "ready"
+    },
+    {
+      "category": "governance_controls",
+      "control_id": "governance_controls.rights_registry_required",
+      "evidence": true,
+      "requirement": "governance_controls.rights_registry_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "governance_controls",
+      "control_id": "governance_controls.duplicate_claim_dispute_process",
+      "evidence": true,
+      "requirement": "governance_controls.duplicate_claim_dispute_process must be true",
+      "status": "ready"
+    },
+    {
+      "category": "governance_controls",
+      "control_id": "governance_controls.dispute_escrow_required",
+      "evidence": true,
+      "requirement": "governance_controls.dispute_escrow_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "governance_controls",
+      "control_id": "governance_controls.human_review_for_conflicts",
+      "evidence": true,
+      "requirement": "governance_controls.human_review_for_conflicts must be true",
+      "status": "ready"
+    },
+    {
+      "category": "governance_controls",
+      "control_id": "governance_controls.appeals_process",
+      "evidence": true,
+      "requirement": "governance_controls.appeals_process must be true",
+      "status": "ready"
+    },
+    {
+      "category": "governance_controls",
+      "control_id": "governance_controls.consent_revocation_process",
+      "evidence": true,
+      "requirement": "governance_controls.consent_revocation_process must be true",
+      "status": "ready"
+    },
+    {
+      "category": "governance_controls",
+      "control_id": "governance_controls.terms_publication_required",
+      "evidence": true,
+      "requirement": "governance_controls.terms_publication_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "settlement_controls",
+      "control_id": "settlement_controls.escrow_for_unattributed_enabled",
+      "evidence": true,
+      "requirement": "settlement_controls.escrow_for_unattributed_enabled must be true",
+      "status": "ready"
+    },
+    {
+      "category": "settlement_controls",
+      "control_id": "settlement_controls.raw_payment_accounts_never_public",
+      "evidence": true,
+      "requirement": "settlement_controls.raw_payment_accounts_never_public must be true",
+      "status": "ready"
+    },
+    {
+      "category": "settlement_controls",
+      "control_id": "settlement_controls.payout_reconciliation_required",
+      "evidence": true,
+      "requirement": "settlement_controls.payout_reconciliation_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "settlement_controls",
+      "control_id": "settlement_controls.settlement_report_required",
+      "evidence": true,
+      "requirement": "settlement_controls.settlement_report_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "settlement_controls",
+      "control_id": "settlement_controls.processor_attestation_or_instruction_only",
+      "evidence": true,
+      "requirement": "settlement_controls.processor_attestation_or_instruction_only must be true",
+      "status": "ready"
+    },
+    {
+      "category": "settlement_controls",
+      "control_id": "settlement_controls.tax_and_legal_operator_responsibility_accepted",
+      "evidence": true,
+      "requirement": "settlement_controls.tax_and_legal_operator_responsibility_accepted must be true",
+      "status": "ready"
+    },
+    {
+      "category": "public_sector_controls",
+      "control_id": "public_sector_controls.procurement_evidence_export_enabled",
+      "evidence": true,
+      "requirement": "public_sector_controls.procurement_evidence_export_enabled must be true",
+      "status": "ready"
+    },
+    {
+      "category": "public_sector_controls",
+      "control_id": "public_sector_controls.records_retention_policy_defined",
+      "evidence": true,
+      "requirement": "public_sector_controls.records_retention_policy_defined must be true",
+      "status": "ready"
+    },
+    {
+      "category": "public_sector_controls",
+      "control_id": "public_sector_controls.accessibility_review_required",
+      "evidence": true,
+      "requirement": "public_sector_controls.accessibility_review_required must be true",
+      "status": "ready"
+    },
+    {
+      "category": "public_sector_controls",
+      "control_id": "public_sector_controls.data_residency_policy_defined",
+      "evidence": true,
+      "requirement": "public_sector_controls.data_residency_policy_defined must be true",
+      "status": "ready"
+    },
+    {
+      "category": "public_sector_controls",
+      "control_id": "public_sector_controls.public_interest_review_policy_defined",
+      "evidence": true,
+      "requirement": "public_sector_controls.public_interest_review_policy_defined must be true",
+      "status": "ready"
+    },
+    {
+      "category": "operations_slo",
+      "control_id": "operations_slo.revocation_propagation_sla_hours",
+      "evidence": 24,
+      "requirement": "operations_slo.revocation_propagation_sla_hours must be <= 24",
+      "status": "ready"
+    },
+    {
+      "category": "operations_slo",
+      "control_id": "operations_slo.incident_triage_sla_hours",
+      "evidence": 24,
+      "requirement": "operations_slo.incident_triage_sla_hours must be <= 24",
+      "status": "ready"
+    },
+    {
+      "category": "operations_slo",
+      "control_id": "operations_slo.footer_verification_latency_budget_ms",
+      "evidence": 2000,
+      "requirement": "operations_slo.footer_verification_latency_budget_ms must be <= 2000",
+      "status": "ready"
+    },
+    {
+      "category": "operations_slo",
+      "control_id": "operations_slo.transparency_publication_sla_minutes",
+      "evidence": 60,
+      "requirement": "operations_slo.transparency_publication_sla_minutes must be <= 60",
+      "status": "ready"
+    },
+    {
+      "category": "operations_slo",
+      "control_id": "operations_slo.backup_restore_test_interval_days",
+      "evidence": 90,
+      "requirement": "operations_slo.backup_restore_test_interval_days must be <= 90",
+      "status": "ready"
+    },
+    {
+      "category": "settlement_controls",
+      "control_id": "settlement_controls.minimum_creator_pool_rate",
+      "evidence": 0.01,
+      "requirement": "settlement_controls.minimum_creator_pool_rate must be >= 0.0001",
+      "status": "ready"
+    },
+    {
+      "category": "settlement_controls",
+      "control_id": "settlement_controls.settlement_mode",
+      "evidence": "processor_attested",
+      "requirement": "settlement_mode must be processor_attested, instruction_only, or escrow_only",
+      "status": "ready"
+    },
+    {
+      "category": "settlement_controls",
+      "control_id": "settlement_controls.direct_payout_enabled",
+      "evidence": true,
+      "requirement": "direct_payout_enabled must be a boolean",
+      "status": "ready"
+    },
+    {
+      "category": "settlement_controls",
+      "control_id": "settlement_controls.external_payment_processor_attestation_required",
+      "evidence": true,
+      "requirement": "external_payment_processor_attestation_required must be a boolean",
+      "status": "ready"
+    },
+    {
+      "category": "settlement_controls",
+      "control_id": "settlement_controls.direct_payout_attested",
+      "evidence": {
+        "direct_payout_enabled": true,
+        "external_payment_processor_attestation_required": true
+      },
+      "requirement": "direct payout requires external payment processor attestation",
+      "status": "ready"
+    },
+    {
+      "category": "settlement_controls",
+      "control_id": "settlement_controls.mode_direct_payout_consistency",
+      "evidence": {
+        "direct_payout_enabled": true,
+        "external_payment_processor_attestation_required": true,
+        "settlement_mode": "processor_attested"
+      },
+      "requirement": "processor_attested enables direct payout; instruction_only and escrow_only must not",
+      "status": "ready"
+    }
+  ],
+  "profile_hash": "a0a30eb22e7b84ca57fc1e15040342f6a1ef6e4ba9c47620ea3379af8a2c102f",
+  "schema": "rdllm-production-readiness-report/v1",
+  "summary": {
+    "blocked_control_count": 0,
+    "deployment_id": "rdllm-open-production-baseline",
+    "direct_creator_settlement_allowed": true,
+    "direct_payout_enabled": true,
+    "operator_type": "public_sector",
+    "payment_processor_attested": true,
+    "production_grade_claim_allowed": true,
+    "public_sector_use_supported": true,
+    "ready_control_count": 74,
+    "settlement_mode": "processor_attested",
+    "status": "ready",
+    "total_control_count": 74
+  }
+}

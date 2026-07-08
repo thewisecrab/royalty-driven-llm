@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/lineage_report.schema.json",
+  "title": "RDLLM Lineage Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "event",
+    "lineage_policy",
+    "source_royalty_shares",
+    "lineage_graph",
+    "settlement_obligations",
+    "issues",
+    "commitments",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-lineage-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "creator_pool",
+        "royalty_share_count",
+        "settleable_source_share_count"
+      ],
+      "additionalProperties": true
+    },
+    "lineage_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "pass_through_rate",
+        "recursive_pass_through",
+        "derived_work_does_not_extinguish_upstream_obligations",
+        "missing_or_cyclic_lineage_fails_verification"
+      ],
+      "additionalProperties": true
+    },
+    "source_royalty_shares": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_share_id",
+          "creator_id",
+          "work_id",
+          "chunk_id",
+          "content_hash",
+          "work_content_hash",
+          "payout",
+          "contribution_weight",
+          "has_upstream_lineage",
+          "source_share_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "lineage_graph": {
+      "type": "object",
+      "required": ["nodes", "edges"],
+      "additionalProperties": true
+    },
+    "settlement_obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_share_id",
+          "source_work_id",
+          "source_chunk_id",
+          "recipient_work_id",
+          "recipient_creator_id",
+          "role",
+          "lineage_depth",
+          "lineage_path",
+          "share_of_source_payout",
+          "payout",
+          "obligation_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "event_hash",
+        "source_share_root",
+        "lineage_edge_root",
+        "obligation_root",
+        "work_lineage_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "source_share_count",
+        "derivative_source_count",
+        "upstream_obligation_count",
+        "recipient_count",
+        "lineage_edge_count",
+        "issue_count",
+        "max_lineage_depth",
+        "total_direct_payout",
+        "total_obligation_payout",
+        "payout_conserved"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "work_text_disclosed",
+        "report_uses_hashes_and_work_ids"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

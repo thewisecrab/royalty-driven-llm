@@ -1,0 +1,163 @@
+{
+  "candidate_documents": [
+    {
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "content": "Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. Hashes do not prove legal ownership by themselves, but they do prove that a payout was tied to a specific registered text at a specific point in the ledger.",
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "creator_id": "arjun",
+      "creator_name": "Arjun Rao",
+      "document_id": "arjun-provenance-ledger:c1",
+      "document_role": "supporting",
+      "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+      "title": "Provenance Ledgers for AI Outputs",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_id": "lina-governance-disputes:c1",
+      "content": "Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. A practical AI licensing marketplace can combine direct opt in registration with collective management for works whose owners are difficult to contact, while maintaining public summaries of training content and private audit trails.",
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "creator_id": "lina",
+      "creator_name": "Lina Park",
+      "document_id": "lina-governance-disputes:c1",
+      "document_role": "supporting",
+      "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+      "title": "Creator Governance for AI Licensing",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "content": "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. A royalty driven LLM should use the same business idea but replace video views with generation events, retrieved source use, and output support.",
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "creator_id": "maya",
+      "creator_name": "Maya Sen",
+      "document_id": "maya-youtube-style-pool:c1",
+      "document_role": "supporting",
+      "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+      "title": "Usage Pools for Creator Platforms",
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "chunk_id": "chunk_artifact_topical_antidocument",
+      "content": "Attribution, citations, footers, provenance, revenue shares, and royalty ledgers are common terms in AI governance interfaces.",
+      "creator_id": "creator_artifact_decoy",
+      "creator_name": "Artifact Decoy Owner",
+      "document_id": "doc_artifact_topical_antidocument",
+      "document_role": "hard_anti_document",
+      "source_uri": "https://example.test/artifacts/topical-antidocument",
+      "title": "Generic AI Attribution Note",
+      "work_id": "work_artifact_topical_antidocument"
+    }
+  ],
+  "claims": [
+    {
+      "citation_ids": [
+        "S1"
+      ],
+      "claim_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+      "claim_id": "claim_1",
+      "claim_text": "Every royalty bearing AI answer should have a provenance record.",
+      "expected_work_ids": [
+        "arjun-provenance-ledger"
+      ],
+      "forbidden_work_ids": [
+        "work_artifact_topical_antidocument"
+      ],
+      "required_evidence_phrases": [
+        "Every royalty bearing AI answer should have a provenance record."
+      ]
+    },
+    {
+      "citation_ids": [
+        "S1"
+      ],
+      "claim_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+      "claim_id": "claim_2",
+      "claim_text": "The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.",
+      "expected_work_ids": [
+        "arjun-provenance-ledger"
+      ],
+      "forbidden_work_ids": [
+        "work_artifact_topical_antidocument"
+      ],
+      "required_evidence_phrases": [
+        "The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution."
+      ]
+    },
+    {
+      "citation_ids": [
+        "S2"
+      ],
+      "claim_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+      "claim_id": "claim_3",
+      "claim_text": "Royalty systems need governance as much as scoring.",
+      "expected_work_ids": [
+        "lina-governance-disputes"
+      ],
+      "forbidden_work_ids": [
+        "work_artifact_topical_antidocument"
+      ],
+      "required_evidence_phrases": [
+        "Royalty systems need governance as much as scoring."
+      ]
+    },
+    {
+      "citation_ids": [
+        "S2"
+      ],
+      "claim_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+      "claim_id": "claim_4",
+      "claim_text": "Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.",
+      "expected_work_ids": [
+        "lina-governance-disputes"
+      ],
+      "forbidden_work_ids": [
+        "work_artifact_topical_antidocument"
+      ],
+      "required_evidence_phrases": [
+        "Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process."
+      ]
+    },
+    {
+      "citation_ids": [
+        "S3"
+      ],
+      "claim_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+      "claim_id": "claim_5",
+      "claim_text": "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage.",
+      "expected_work_ids": [
+        "maya-youtube-style-pool"
+      ],
+      "forbidden_work_ids": [
+        "work_artifact_topical_antidocument"
+      ],
+      "required_evidence_phrases": [
+        "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage."
+      ]
+    },
+    {
+      "citation_ids": [
+        "S3"
+      ],
+      "claim_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+      "claim_id": "claim_6",
+      "claim_text": "Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.",
+      "expected_work_ids": [
+        "maya-youtube-style-pool"
+      ],
+      "forbidden_work_ids": [
+        "work_artifact_topical_antidocument"
+      ],
+      "required_evidence_phrases": [
+        "Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue."
+      ]
+    }
+  ],
+  "event": {
+    "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+    "event_id": "evt_1ed43e106d466249",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05",
+    "prompt_text": "How should AI prove attribution?",
+    "response_text": "Royalty-aware answer:\nFor the prompt 'How should AI prove attribution?', the strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]"
+  }
+}

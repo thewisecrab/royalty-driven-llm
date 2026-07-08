@@ -1,0 +1,280 @@
+{
+  "artifact_catalog": {
+    "artifact_count": 10,
+    "artifact_root": "138d9f70c80c8cf331e3df87b66cad37ab54aa8ebf56dbc5107b5f0e0be9128e",
+    "entries": [
+      {
+        "artifact_type": "rdllm-discovery-manifest/v1",
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "declared_hash": "ef30383461749d41f25c23439b7fa299dd10e267eeed8cd3978fe438bc911600",
+        "entry_hash": "9f503a70fcd199254f3b5b03ba4a0f7a16abd5189521474c0f50d9f36099b981",
+        "hash_reproducible": true,
+        "name": "discovery_manifest",
+        "payload_hash": "bcb6fac771753a8e81053c8273937baa64cfd99215d3a34a213c643f53e336de",
+        "publication_phase": "pre_release",
+        "required": true,
+        "well_known_path": "/.well-known/rdllm.json"
+      },
+      {
+        "artifact_type": "rdllm-integration-profile/v1",
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "declared_hash": "ce0c5fe1085f700dc54137f30861d1b5319e322b9a2d027c7902afbc4822cb98",
+        "entry_hash": "a6c62b6a84c335807f64502030f266136466a5e4bcdc960d4d84218195821f18",
+        "hash_reproducible": true,
+        "name": "integration_profile",
+        "payload_hash": "9d287f6629beeaef95a42d7c1adfe4edb70de52fa5dfcae5994544c2b0b3a15b",
+        "publication_phase": "pre_release",
+        "required": true,
+        "well_known_path": "/.well-known/rdllm/integration-profile.json"
+      },
+      {
+        "artifact_type": "rdllm-provider-attribution-card/v1",
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "declared_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+        "entry_hash": "09eb954a1a5fc4f6edd688db2c4612416a57ee2532f7f1d68738c42b67d5d36a",
+        "hash_reproducible": true,
+        "name": "provider_attribution_card",
+        "payload_hash": "4b5559fda1ff496ff9c85b4fd9c264963da95f686ca32f4bde0cc337cc1d0d48",
+        "publication_phase": "pre_release",
+        "required": true,
+        "well_known_path": "/.well-known/rdllm/provider-attribution-card.json"
+      },
+      {
+        "artifact_type": "rdllm-certification/v1",
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "declared_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+        "entry_hash": "c0d07db89a59417669270877b95bd9565a69d570fe109e15658bf6b5afa9c686",
+        "hash_reproducible": true,
+        "name": "certification_report",
+        "payload_hash": "c90d268a46ee16f3059c1597b1524eebf002393cae74ec2d4a74f273c5fc3495",
+        "publication_phase": "pre_release",
+        "required": true,
+        "well_known_path": "/.well-known/rdllm/certification-report.json"
+      },
+      {
+        "artifact_type": "rdllm-proof-carrying-response/v1",
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "declared_hash": "e651c5ed4d1069bcf624a4b04c7cda35fa01518f435ff0e063c6b9b31de58ed4",
+        "entry_hash": "dc20f5c2de32b4a95c17bbd347ae06177c083835bce1ecb9c12f312d363a6d83",
+        "hash_reproducible": true,
+        "name": "proof_carrying_response",
+        "payload_hash": "847a6e66473edcee58b6a2335f1a681d48726a3a790b67aa5c1da7af8f080130",
+        "publication_phase": "post_release",
+        "required": true,
+        "well_known_path": "/.well-known/rdllm/proof-carrying-response.json"
+      },
+      {
+        "artifact_type": "rdllm-serving-gateway-report/v1",
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "declared_hash": "e610b412a692e607ad0b5b3c3da2c53fa46954d3cea66adead9958f3dc1df82d",
+        "entry_hash": "1c741c32a4c316cc7a1ba460042b94e5949d582f3fadf0b62e02649e325f7e84",
+        "hash_reproducible": true,
+        "name": "serving_gateway_report",
+        "payload_hash": "bedd4944f2fae33c6d002b80551d093549bd6b5163eb7eb17ecade21990b1afe",
+        "publication_phase": "post_release",
+        "required": true,
+        "well_known_path": "/.well-known/rdllm/serving-gateway-report.json"
+      },
+      {
+        "artifact_type": "rdllm-attribution-capsule/v1",
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "declared_hash": "ed1f87386630aef7a418af4e4d6bf077e519bfa1661ff1579c8c1409b072d3be",
+        "entry_hash": "ec6e75b113164f3e1353017b89b55e88a75f7f71685726e6fce0bb21115d425b",
+        "hash_reproducible": true,
+        "name": "attribution_capsule",
+        "payload_hash": "acf2817d854c9cd0e408cdade0e966aec3bc2a569804a6264179101967d1cd8d",
+        "publication_phase": "post_release",
+        "required": true,
+        "well_known_path": "/.well-known/rdllm/attribution-capsule.json"
+      },
+      {
+        "artifact_type": "rdllm-watchtower-challenge-settlement-report/v1",
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "declared_hash": "776da742308aeabc71b281e1b88fb38b60f7644133f046c1af8cc454f3a32cd7",
+        "entry_hash": "96c871663cd5909e3ddd6c412bb583e992e4884ca59c788f31eace3941efcb8b",
+        "hash_reproducible": true,
+        "name": "watchtower_challenge_settlement_report",
+        "payload_hash": "0c02f3bc8770ea9ff33d527d2f847fb93b729b751da17a7708b93deb4354c8db",
+        "publication_phase": "post_release",
+        "required": true,
+        "well_known_path": "/.well-known/rdllm/watchtower-challenge-settlement-report.json"
+      },
+      {
+        "artifact_type": "rdllm-output-provenance-binding-report/v1",
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "declared_hash": "471cd005df0c111a7c113e86dc9f18d298339c5ca1d0a396e07edc039455532d",
+        "entry_hash": "ef4404ea57707aee0e3f1c406c144ddb463d88cbe4a841f72a7d91b6fb3f54fd",
+        "hash_reproducible": true,
+        "name": "output_provenance_binding_report",
+        "payload_hash": "f8a29619459fe9e08da72fbdf93fa9acf738b12ab9570f966a4893797aa4b1aa",
+        "publication_phase": "post_release",
+        "required": true,
+        "well_known_path": "/.well-known/rdllm/output-provenance-binding-report.json"
+      },
+      {
+        "artifact_type": "rdllm-proof-dependency-graph/v1",
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "declared_hash": "6d997fcf641cae8a251d42f0d4641ee74eba20fd72bb390b7d07d6c9290fa745",
+        "entry_hash": "03e39ebf3c6f3a64e2377b433f4a42c671785205e1975d0e7af5d4b9db8fff88",
+        "hash_reproducible": true,
+        "name": "proof_dependency_graph",
+        "payload_hash": "339f2468d0caa7d5c043ea23eb9ac6f2c232712c31cc35fdd577f0c641306085",
+        "publication_phase": "post_release",
+        "required": true,
+        "well_known_path": "/.well-known/rdllm/proof-dependency-graph.json"
+      }
+    ],
+    "post_release_artifact_count": 6
+  },
+  "checks": {
+    "all_late_artifacts_cataloged": true,
+    "base_discovery_declares_output_binding_surface": true,
+    "base_discovery_declares_post_release_surface": true,
+    "base_discovery_manifest_ready": true,
+    "certification_level_at_least_l75": true,
+    "integration_declares_post_release_schema_and_surface": true,
+    "late_artifact_hashes_reproducible": true,
+    "output_provenance_binding_ready": true,
+    "output_provenance_binding_verified": true,
+    "proof_dependency_graph_contains_late_artifacts": true,
+    "proof_dependency_graph_ready": true,
+    "provider_declares_post_release_discovery_channel": true,
+    "provider_declares_post_release_discovery_surface": true,
+    "public_report_has_no_private_field_names": true,
+    "publication_entries_bind_release_subject": true,
+    "self_catalog_cycle_absent": true
+  },
+  "commitments": {
+    "artifact_root": "138d9f70c80c8cf331e3df87b66cad37ab54aa8ebf56dbc5107b5f0e0be9128e",
+    "release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+    "schema": "docs/schemas/post_release_discovery_report.schema.json",
+    "verification_root": "93b2797a1d4265850e3232420cb25d041f7cb52f4656f21f9a39d80c8ce1d095"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "base_manifest_must_not_be_mutated_after_release": true,
+    "late_artifacts_required": [
+      "proof_carrying_response",
+      "serving_gateway_report",
+      "attribution_capsule",
+      "watchtower_challenge_settlement_report",
+      "output_provenance_binding_report",
+      "proof_dependency_graph"
+    ],
+    "minimum_output_binding_level": "RDLLM-L75",
+    "profile": "rdllm-post-release-discovery-policy/v1",
+    "self_hash_excluded_from_artifact_catalog": true,
+    "target_certification_level": "RDLLM-L76",
+    "two_phase_publication_required": true
+  },
+  "post_release_report_hash": "a9e3c578ae268ebddbcc8f1764d099d5a7e45ac2bd940cea384e22839d1ddf51",
+  "privacy": {
+    "artifact_payloads_embedded": false,
+    "private_field_findings": [],
+    "prompt_text_disclosed": false,
+    "raw_output_text_disclosed": false,
+    "report_uses_hashes_paths_and_release_subjects": true,
+    "source_text_disclosed": false
+  },
+  "publication_plan": {
+    "base_manifest_mutation_required": false,
+    "base_manifest_path": "/.well-known/rdllm.json",
+    "hash_cycle_prevented": true,
+    "post_release_report_path": "/.well-known/rdllm/post-release-discovery-report.json",
+    "publication_sequence": [
+      "publish_base_discovery_manifest",
+      "release_proof_carrying_response",
+      "publish_output_provenance_binding_report",
+      "publish_post_release_discovery_report"
+    ]
+  },
+  "release_subject": {
+    "base_discovery_highest_level": "RDLLM-L131",
+    "base_discovery_manifest_hash": "ef30383461749d41f25c23439b7fa299dd10e267eeed8cd3978fe438bc911600",
+    "base_discovery_status": "ready",
+    "certification_highest_level": "RDLLM-L131",
+    "certification_report_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+    "copied_output_hash": "dad739af040ffff4288e04fc4178287c632a3509e89a107feefff9882344cb5b",
+    "integration_profile_hash": "ce0c5fe1085f700dc54137f30861d1b5319e322b9a2d027c7902afbc4822cb98",
+    "output_binding_status": "ready",
+    "output_binding_subject_hash": "4970e1ffd9dd72f411f8892d97aa1ada22ea440c12f9d144a668532790065d4b",
+    "output_binding_target_certification_level": "RDLLM-L75",
+    "output_provenance_binding_report_hash": "471cd005df0c111a7c113e86dc9f18d298339c5ca1d0a396e07edc039455532d",
+    "proof_dependency_graph_hash": "6d997fcf641cae8a251d42f0d4641ee74eba20fd72bb390b7d07d6c9290fa745",
+    "proof_graph_status": "ready",
+    "proof_graph_target_certification_level": "RDLLM-L131",
+    "provider_card_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+    "release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+    "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1"
+  },
+  "report_version": "rdllm-post-release-discovery-report/v1",
+  "schemas": {
+    "attribution_capsule": "docs/schemas/attribution_capsule.schema.json",
+    "certification_report": "docs/schemas/certification_report.schema.json",
+    "discovery_manifest": "docs/schemas/discovery_manifest.schema.json",
+    "integration_profile": "docs/schemas/integration_profile.schema.json",
+    "output_provenance_binding_report": "docs/schemas/output_provenance_binding_report.schema.json",
+    "post_release_discovery_report": "docs/schemas/post_release_discovery_report.schema.json",
+    "proof_carrying_response": "docs/schemas/proof_carrying_response.schema.json",
+    "proof_dependency_graph": "docs/schemas/proof_dependency_graph.schema.json",
+    "provider_attribution_card": "docs/schemas/provider_attribution_card.schema.json",
+    "serving_gateway_report": "docs/schemas/serving_gateway_report.schema.json",
+    "watchtower_challenge_settlement_report": "docs/schemas/watchtower_challenge_settlement_report.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "ac45fd57b475d6247d5b8db45b569ad9cf7c259fc62238e059e03a066b3b3265"
+  },
+  "summary": {
+    "artifact_count": 10,
+    "base_manifest_mutation_required": false,
+    "copied_output_hash": "dad739af040ffff4288e04fc4178287c632a3509e89a107feefff9882344cb5b",
+    "hash_cycle_prevented": true,
+    "offline_verification_supported": true,
+    "post_release_artifact_count": 6,
+    "raw_output_text_disclosed": false,
+    "release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+    "status": "ready",
+    "target_certification_level": "RDLLM-L76"
+  },
+  "verification": {
+    "graph_node_count": 93,
+    "output_provenance_binding_errors": [],
+    "verification_rows": [
+      {
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "path": "/.well-known/rdllm/post-release-discovery-report.json",
+        "required": true,
+        "surface": "post_release_discovery_report",
+        "verification_row_hash": "555116fe6b4df61c7fe54c4ffeb5bf910c659643c2e62ae76f436568dad1de62",
+        "verifier_command": "verify-post-release-discovery-report"
+      },
+      {
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "path": "/.well-known/rdllm/output-provenance-binding-report.json",
+        "required": true,
+        "surface": "output_provenance_binding_report",
+        "verification_row_hash": "6600418f1d076755ea76e08b07d81d2d1b93f8a2fa39519be086dce06de8def4",
+        "verifier_command": "verify-output-provenance-binding-report"
+      },
+      {
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "path": "/.well-known/rdllm/proof-dependency-graph.json",
+        "required": true,
+        "surface": "proof_dependency_graph",
+        "verification_row_hash": "2a2bd553455a608d48a2fda71b3d75f0152de217c9e9a4338eb4c61b7f774590",
+        "verifier_command": "verify-proof-dependency-graph"
+      },
+      {
+        "bound_release_subject_hash": "f81a2857a01135677d38081bdbba1b042f503221a784e660bbc93776dc1685d3",
+        "path": "/.well-known/rdllm.json",
+        "required": true,
+        "surface": "base_discovery_manifest",
+        "verification_row_hash": "b203935d7694664626db72731b815ba28c387b8d57d154bd57d98cf8b8010972",
+        "verifier_command": "verify-discovery-manifest"
+      }
+    ]
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/answer_claim_coverage_report.schema.json",
+  "title": "RDLLM Answer Claim Coverage Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "event",
+    "artifact_bindings",
+    "answer_units",
+    "summary",
+    "commitments",
+    "schemas",
+    "privacy",
+    "issues",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-answer-claim-coverage-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "source_sections_excluded",
+        "minimum_support_tokens",
+        "requires_source_materialization",
+        "requires_evidence_sufficiency_when_present",
+        "requires_counterevidence_free_when_present"
+      ],
+      "additionalProperties": true
+    },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "answer_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "answer_card_hash",
+        "source_verification_report_hash",
+        "evidence_sufficiency_report_hash",
+        "counterevidence_report_hash",
+        "citation_footer_contract_hash",
+        "answer_card_bound",
+        "source_verification_bound"
+      ],
+      "additionalProperties": true
+    },
+    "answer_units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "unit_index",
+          "text_hash",
+          "token_count",
+          "source_markers",
+          "requires_support",
+          "unit_hash",
+          "matched_claim_index",
+          "matched_source_label",
+          "matched_evidence_span_prefix",
+          "source_claim_materialized",
+          "evidence_sufficient",
+          "counterevidence_free",
+          "covered",
+          "coverage_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "answer_unit_count",
+        "support_required_unit_count",
+        "covered_unit_count",
+        "unsupported_unit_count",
+        "non_claim_unit_count",
+        "all_answer_claims_covered",
+        "issue_count"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "answer_unit_root",
+        "artifact_binding_root",
+        "issue_root",
+        "rendered_output_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["answer_claim_coverage_report"],
+      "additionalProperties": { "type": "string" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "claim_text_disclosed",
+        "source_text_disclosed",
+        "report_uses_public_output_hashes_only"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "issues": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "report_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

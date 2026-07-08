@@ -1,0 +1,353 @@
+{
+  "accepted_training_item_pools": [
+    {
+      "artifact_hash": "8b21d4be3c96aef03b76f128b573fe508e109e1afb4519add2fcde9e60a1c10d",
+      "decision": "accepted_model_lineage",
+      "item_hash": "e684faf4cf188fcbf9165dadc4d531e8d2aa58a6e8f18bef00051ab7f016ac2b",
+      "item_id": "item:student-accepted",
+      "item_pool": "0.825000",
+      "item_pool_hash": "32e887e6f7d7009d8f28ea6394826ab91f0bcf98342b305597bc11725ee0aa11",
+      "share_of_model_lineage_pool": "0.75000000",
+      "training_item_row_hash": "107cc6621a7760a19ae00f566ef22b4f2e98290f0bb8d3bf011c6d30921c5c7a"
+    }
+  ],
+  "checks": {
+    "accepted_training_items_present": true,
+    "all_synthetic_training_disclosed": true,
+    "creator_pool_conserved": true,
+    "direct_payout_or_escrow_conserved": true,
+    "distillation_evidence_bound": true,
+    "duplicate_training_items_not_overpaid": true,
+    "footer_rows_present_for_direct_payout": true,
+    "no_private_text_disclosed": true,
+    "student_model_bound": true,
+    "training_lineage_declared": true,
+    "training_run_bound": true,
+    "training_summary_hash_reproducible": true
+  },
+  "commitments": {
+    "accepted_item_pool_root": "3808e3637fbe917a41c341ee9e9beafa952b6164a1d87407092b205e37a21e0c",
+    "escrow_root": "00f5379da289d731df6bdf0c8bb40b144726fd359decb8ca945d2e671b625115",
+    "footer_root": "3ced25da523c688e74d2bf1676cb40c644816ccb7396ce52670c1491292bd3bb",
+    "obligation_root": "74ade8f937019282a00bc05c7254dadce02b4709194d0ea62b1fa16c45286d9a",
+    "policy_hash": "1e42b2fbe5750459d91b5b96e0f91bb760db1f3dfb8d463c9abf2349dcf7b7e0",
+    "student_model_hash": "450f6143209d647011d1c72fec61ee1b887270a14cdbc3a8e3c740d5d193b9f9",
+    "student_usage_hash": "be006ba6204f0a6ab3b414110ba74a529e3b368af8be52cb6f029da4d331ce2f",
+    "training_item_root": "0b0970f876b4c1ca69e92b7ac940d6b5c32f85c65283ec0a058b05e6992ec9b1",
+    "training_run_hash": "be4f113817ae31f958ea418c78381e91fafcb71b94d56242601a1413a7f1e511",
+    "training_summary_hash": "96d7b568363adf49f46b0cb6c2d36bcdc4482371f7a8c136825fcb3a52133ab7"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "economics": {
+    "creator_pool": "5.500000",
+    "creator_pool_rate": "0.55",
+    "direct_payout_total": "0.825000",
+    "escrow_total": "0.275000",
+    "gross_revenue": "10.000000",
+    "model_lineage_pool": "1.100000",
+    "residual_pool": "4.400000"
+  },
+  "escrow_rows": [
+    {
+      "artifact_hash": "37166dbcc7de282c2222d1b2a8bfda5b0f7d3acd6735809f596f135bccc4e0cb",
+      "decision": "model_lineage_rights_escrow",
+      "escrow_hash": "4703a71efccebbcdf16af2ef8eb939bb9ef651edd17b8be798f636a9f405ae8c",
+      "escrow_id": "escrow:model-lineage:item:student-revoked",
+      "escrow_reason": "model_lineage_rights_escrow",
+      "item_hash": "abec8a56d7f83e6e731583e43a74c89b4fa922f628bcc257c7bb052d99ae49af",
+      "item_id": "item:student-revoked",
+      "item_pool": "0.275000",
+      "item_pool_hash": "e1a914278f7c23ee7789831964203d3c2dc8a08ffaafce60a492ff2092dd644c",
+      "payout": "0.275000",
+      "recipient_creator_id": "creator:model_lineage_escrow",
+      "share_of_model_lineage_pool": "0.25000000",
+      "training_item_row_hash": "91107b93a155529b3ca04e1427d107262b3d10c1888a3fe46a6479da58788346",
+      "work_id": "escrow:model_lineage"
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "model_lineage_footer_rows": [
+    {
+      "basis": "model_lineage_training_inheritance",
+      "chunk_id": "jaron-data-dignity:chunk:0",
+      "creator_id": "jaron",
+      "creator_name": "Jaron Lanier",
+      "footer_row_hash": "c0503ceb19d6b7ff0dc5dc3d8b47b3c6b67fa298737d0c5281b917a65de0df0b",
+      "payout": "0.247500",
+      "source_row_hash": "f186d428927d476f24c2108d1e4c95471991db42fe53cd2050ac38ba9cbaf14a",
+      "work_id": "jaron-data-dignity"
+    },
+    {
+      "basis": "model_lineage_training_inheritance",
+      "chunk_id": "maya-youtube-transcript:chunk:0",
+      "creator_id": "maya",
+      "creator_name": "Maya Rao",
+      "footer_row_hash": "5151a1dbd851338c8a71c1ce884c5c02d897cfe43e7f2ad3c2b30100ea15a597",
+      "payout": "0.577500",
+      "source_row_hash": "d97c0b60eb463e6c390780e0b874c6824042a1225bec8a66a3664d0fe26a5d1c",
+      "work_id": "maya-youtube-transcript"
+    }
+  ],
+  "model_lineage_policy": {
+    "distillation_and_fine_tuning_cannot_extinguish_upstream_royalties": true,
+    "duplicate_training_artifacts_do_not_inflate_credit": true,
+    "future_usage_pool_split": "model_lineage_pool_then_residual_local_pool",
+    "model_lineage_rate": "0.20",
+    "profile": "rdllm-model-lineage-attribution/v1",
+    "synthetic_training_must_be_disclosed": true,
+    "trigger": "student_model_trained_or_distilled_from_attributed_outputs_or_synthetic_data"
+  },
+  "privacy": {
+    "public_report_uses_hashes_source_ids_and_model_metadata": true,
+    "source_text_disclosed": false,
+    "student_output_text_disclosed": false,
+    "student_prompt_text_disclosed": false,
+    "teacher_output_text_disclosed": false,
+    "training_text_disclosed": false
+  },
+  "report_hash": "93dfb78a8335e3709eaa1a6b4265b542faf2cd2171188ab68084f2051b07c0c7",
+  "report_version": "rdllm-model-lineage-attribution/v1",
+  "schemas": {
+    "model_lineage_attribution_report": "docs/schemas/model_lineage_attribution_report.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "c97b4a1f403b1654588ffb42eed3263909ae485ef4e5ee7bb77a4d32f46c7d9c"
+  },
+  "student_model": {
+    "base_model_id": "model:rdllm-base",
+    "model_card_hash": "",
+    "model_id": "model:rdllm-student-distilled",
+    "model_version": "2026-06",
+    "provider": "provider:downstream-reference"
+  },
+  "student_usage": {
+    "creator_pool": "5.500000",
+    "event_hash": "0aa64c2cf4d5c5bcd7f10e0dc252db8cd515de947f3a0e3bba692c957a3de995",
+    "event_id": "event:rdllm-student-usage",
+    "usage_hash": "be006ba6204f0a6ab3b414110ba74a529e3b368af8be52cb6f029da4d331ce2f"
+  },
+  "summary": {
+    "accepted_training_item_count": 1,
+    "creator_pool_conserved": true,
+    "duplicate_training_item_count": 1,
+    "escrow_item_count": 1,
+    "footer_row_count": 2,
+    "hidden_synthetic_failure_count": 0,
+    "missing_teacher_evidence_count": 0,
+    "model_lineage_pool": "1.100000",
+    "model_lineage_pool_conserved": true,
+    "settlement_obligation_count": 2,
+    "status": "ready",
+    "student_model_id": "model:rdllm-student-distilled",
+    "target_certification_level": "RDLLM-L91",
+    "training_item_count": 3
+  },
+  "training_items": [
+    {
+      "artifact_hash": "8b21d4be3c96aef03b76f128b573fe508e109e1afb4519add2fcde9e60a1c10d",
+      "artifact_type": "rdllm-proof-carrying-response",
+      "checks": {
+        "artifact_hash_present": true,
+        "duplicate_not_overpaid": true,
+        "item_hash_present": true,
+        "lineage_tracking_enabled": true,
+        "positive_training_weight": true,
+        "source_row_hashes_valid": true,
+        "source_rows_present": true,
+        "source_training_rights_valid": true,
+        "synthetic_source_disclosed": true,
+        "teacher_evidence_present": true
+      },
+      "decision": "accepted_model_lineage",
+      "item_hash": "e684faf4cf188fcbf9165dadc4d531e8d2aa58a6e8f18bef00051ab7f016ac2b",
+      "item_id": "item:student-accepted",
+      "source_row_count": 2,
+      "source_rows": [
+        {
+          "allowed_uses": [
+            "distillation",
+            "training"
+          ],
+          "chunk_id": "maya-youtube-transcript:chunk:0",
+          "content_hash": "c48a6abd49d85bf98b54c8bd9b3450731cbfc6bc3ee79d09e61a92c9adc6921a",
+          "contribution_weight": "0.70000000",
+          "creator_id": "maya",
+          "creator_name": "Maya Rao",
+          "license_status": "active",
+          "source_evidence_hash": "",
+          "source_label": "S1",
+          "source_row_hash": "d97c0b60eb463e6c390780e0b874c6824042a1225bec8a66a3664d0fe26a5d1c",
+          "source_uri_hash": "",
+          "training_allowed": true,
+          "work_id": "maya-youtube-transcript"
+        },
+        {
+          "allowed_uses": [
+            "training"
+          ],
+          "chunk_id": "jaron-data-dignity:chunk:0",
+          "content_hash": "79474a3fa627b1bd9928787eff5138cf290b9bb196e24f618e4229c7f6f5fd75",
+          "contribution_weight": "0.30000000",
+          "creator_id": "jaron",
+          "creator_name": "Jaron Lanier",
+          "license_status": "active",
+          "source_evidence_hash": "",
+          "source_label": "S2",
+          "source_row_hash": "f186d428927d476f24c2108d1e4c95471991db42fe53cd2050ac38ba9cbaf14a",
+          "source_uri_hash": "",
+          "training_allowed": true,
+          "work_id": "jaron-data-dignity"
+        }
+      ],
+      "synthetic_disclosed": true,
+      "synthetic_generated": true,
+      "teacher_distribution_root": "b77e57eb693f97849ad021c837436bf85cbad2a1988c1b8ebfee9320f6a3294c",
+      "teacher_model_id_hash": "a3a23b96aced76779932337134ca807ad1aaafcdee1c013bc8162507749330e8",
+      "teacher_output_hash": "",
+      "training_item_row_hash": "107cc6621a7760a19ae00f566ef22b4f2e98290f0bb8d3bf011c6d30921c5c7a",
+      "training_method": "distillation",
+      "training_weight": "3.00000000"
+    },
+    {
+      "artifact_hash": "8b21d4be3c96aef03b76f128b573fe508e109e1afb4519add2fcde9e60a1c10d",
+      "artifact_type": "rdllm-proof-carrying-response",
+      "checks": {
+        "artifact_hash_present": true,
+        "duplicate_not_overpaid": false,
+        "item_hash_present": true,
+        "lineage_tracking_enabled": true,
+        "positive_training_weight": true,
+        "source_row_hashes_valid": true,
+        "source_rows_present": true,
+        "source_training_rights_valid": true,
+        "synthetic_source_disclosed": true,
+        "teacher_evidence_present": true
+      },
+      "decision": "duplicate_training_item_held",
+      "item_hash": "818c5d077ddec9b3a12687ff8f9719a5a3a989ee850391cedcd2e7ed9bfcfad6",
+      "item_id": "item:student-duplicate",
+      "source_row_count": 1,
+      "source_rows": [
+        {
+          "allowed_uses": [
+            "training"
+          ],
+          "chunk_id": "maya-youtube-transcript:chunk:0",
+          "content_hash": "c48a6abd49d85bf98b54c8bd9b3450731cbfc6bc3ee79d09e61a92c9adc6921a",
+          "contribution_weight": "1.00000000",
+          "creator_id": "maya",
+          "creator_name": "Maya Rao",
+          "license_status": "active",
+          "source_evidence_hash": "",
+          "source_label": "",
+          "source_row_hash": "b83e4dd6eb300e86ceac520892cfb7f767ef215a64692f13b1fb0a52d5788ccd",
+          "source_uri_hash": "",
+          "training_allowed": true,
+          "work_id": "maya-youtube-transcript"
+        }
+      ],
+      "synthetic_disclosed": true,
+      "synthetic_generated": true,
+      "teacher_distribution_root": "040d1739d5982d4cded4d24dbc1f17b41b208c060dd6a8d648d2778cb9383454",
+      "teacher_model_id_hash": "a3a23b96aced76779932337134ca807ad1aaafcdee1c013bc8162507749330e8",
+      "teacher_output_hash": "",
+      "training_item_row_hash": "6fb906c5baa8baf5dd903d4d1e1d48b01f329d3992a7a949d24243d9c3abfc72",
+      "training_method": "distillation",
+      "training_weight": "3.00000000"
+    },
+    {
+      "artifact_hash": "37166dbcc7de282c2222d1b2a8bfda5b0f7d3acd6735809f596f135bccc4e0cb",
+      "artifact_type": "synthetic-dataset-row",
+      "checks": {
+        "artifact_hash_present": true,
+        "duplicate_not_overpaid": true,
+        "item_hash_present": true,
+        "lineage_tracking_enabled": true,
+        "positive_training_weight": true,
+        "source_row_hashes_valid": true,
+        "source_rows_present": true,
+        "source_training_rights_valid": false,
+        "synthetic_source_disclosed": true,
+        "teacher_evidence_present": true
+      },
+      "decision": "model_lineage_rights_escrow",
+      "item_hash": "abec8a56d7f83e6e731583e43a74c89b4fa922f628bcc257c7bb052d99ae49af",
+      "item_id": "item:student-revoked",
+      "source_row_count": 1,
+      "source_rows": [
+        {
+          "allowed_uses": [
+            "training"
+          ],
+          "chunk_id": "revoked-work:chunk:0",
+          "content_hash": "09f8d880a2a9950bda44063ec0f91eaa2eb573dfb95899cf7af4bb85187ee59b",
+          "contribution_weight": "1.00000000",
+          "creator_id": "revoked",
+          "creator_name": "Revoked Creator",
+          "license_status": "revoked",
+          "source_evidence_hash": "",
+          "source_label": "",
+          "source_row_hash": "e6d8c429df5ca0f5a04c7f879beb73f023de81207c471f523c113813c1c96133",
+          "source_uri_hash": "",
+          "training_allowed": false,
+          "work_id": "revoked-work"
+        }
+      ],
+      "synthetic_disclosed": true,
+      "synthetic_generated": true,
+      "teacher_distribution_root": "72aa20c5e2ffbf91e302032740287acfe359990cc2ca9b89c5eba18acf887c22",
+      "teacher_model_id_hash": "a3a23b96aced76779932337134ca807ad1aaafcdee1c013bc8162507749330e8",
+      "teacher_output_hash": "",
+      "training_item_row_hash": "91107b93a155529b3ca04e1427d107262b3d10c1888a3fe46a6479da58788346",
+      "training_method": "distillation",
+      "training_weight": "1.00000000"
+    }
+  ],
+  "training_run": {
+    "dataset_hash": "1296b1f65f83f964085d7651b6c52ec3a661299d4a4c02e71227e24744f6c008",
+    "lineage_tracking_enabled": true,
+    "method": "distillation",
+    "run_id": "train:rdllm-student:001",
+    "stage": "post_training",
+    "synthetic_data_disclosed": true,
+    "training_content_summary_hash": "96d7b568363adf49f46b0cb6c2d36bcdc4482371f7a8c136825fcb3a52133ab7"
+  },
+  "usage_settlement_obligations": [
+    {
+      "basis": "downstream_model_usage_inherits_training_lineage",
+      "chunk_id": "maya-youtube-transcript:chunk:0",
+      "obligation_hash": "b5d73c1c2ac61a99179cda01c4573c4677e86dda8fc6cede183fd454e4045b66",
+      "obligation_id": "model-lineage:event:rdllm-student-usage:1:1",
+      "payout": "0.577500",
+      "recipient_creator_id": "maya",
+      "recipient_creator_name": "Maya Rao",
+      "share_of_item_pool": "0.70000000",
+      "source_row_hash": "d97c0b60eb463e6c390780e0b874c6824042a1225bec8a66a3664d0fe26a5d1c",
+      "student_model_id": "model:rdllm-student-distilled",
+      "student_model_version": "2026-06",
+      "training_item_row_hash": "107cc6621a7760a19ae00f566ef22b4f2e98290f0bb8d3bf011c6d30921c5c7a",
+      "usage_event_hash": "0aa64c2cf4d5c5bcd7f10e0dc252db8cd515de947f3a0e3bba692c957a3de995",
+      "usage_event_id": "event:rdllm-student-usage",
+      "work_id": "maya-youtube-transcript"
+    },
+    {
+      "basis": "downstream_model_usage_inherits_training_lineage",
+      "chunk_id": "jaron-data-dignity:chunk:0",
+      "obligation_hash": "48bda6b91053e052620e5396c8ecf789082a6f4c69526e1b0f9a5181f7ebc115",
+      "obligation_id": "model-lineage:event:rdllm-student-usage:1:2",
+      "payout": "0.247500",
+      "recipient_creator_id": "jaron",
+      "recipient_creator_name": "Jaron Lanier",
+      "share_of_item_pool": "0.30000000",
+      "source_row_hash": "f186d428927d476f24c2108d1e4c95471991db42fe53cd2050ac38ba9cbaf14a",
+      "student_model_id": "model:rdllm-student-distilled",
+      "student_model_version": "2026-06",
+      "training_item_row_hash": "107cc6621a7760a19ae00f566ef22b4f2e98290f0bb8d3bf011c6d30921c5c7a",
+      "usage_event_hash": "0aa64c2cf4d5c5bcd7f10e0dc252db8cd515de947f3a0e3bba692c957a3de995",
+      "usage_event_id": "event:rdllm-student-usage",
+      "work_id": "jaron-data-dignity"
+    }
+  ]
+}

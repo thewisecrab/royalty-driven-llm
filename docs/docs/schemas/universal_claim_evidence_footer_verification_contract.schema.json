@@ -1,0 +1,272 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_claim_evidence_footer_verification_contract.schema.json",
+  "title": "RDLLM Universal Claim-Evidence Footer Verification Contract",
+  "type": "object",
+  "required": [
+    "universal_claim_evidence_footer_verification_contract_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "artifact_bindings",
+    "verification_dimension_rows",
+    "verified_footer_field_rows",
+    "route_claim_evidence_rows",
+    "verified_footer_source_rows",
+    "negative_claim_evidence_rows",
+    "evidence_roots",
+    "checks",
+    "claim_evidence_footer_decision",
+    "coverage",
+    "privacy",
+    "summary",
+    "universal_claim_evidence_footer_verification_contract_hash"
+  ],
+  "properties": {
+    "universal_claim_evidence_footer_verification_contract_version": {
+      "const": "rdllm-universal-claim-evidence-footer-verification-contract/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_claim_evidence_footer_verification_contract.schema.json"
+    },
+    "created_at": { "type": "string", "minLength": 1 },
+    "issuer": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_native_source_annotation_level",
+        "minimum_verified_source_footer_level",
+        "citations_must_be_parsed_as_structured_objects",
+        "cited_content_must_be_materialized",
+        "footer_sources_must_support_specific_claims",
+        "source_suitability_and_intent_alignment_required",
+        "answer_source_fidelity_required",
+        "unsupported_or_misleading_footer_sources_fail_closed"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-claim-evidence-footer-verification-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L184" },
+        "minimum_native_source_annotation_level": { "const": "RDLLM-L183" },
+        "minimum_verified_source_footer_level": { "const": "RDLLM-L180" },
+        "citations_must_be_parsed_as_structured_objects": { "const": true },
+        "cited_content_must_be_materialized": { "const": true },
+        "footer_sources_must_support_specific_claims": { "const": true },
+        "source_suitability_and_intent_alignment_required": { "const": true },
+        "answer_source_fidelity_required": { "const": true },
+        "unsupported_or_misleading_footer_sources_fail_closed": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-claim-evidence-footer-verification-contract.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-claim-evidence-footer-verification-contract/v1"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "universal_native_source_annotation_contract",
+        "universal_verified_source_footer_contract"
+      ],
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "present",
+          "artifact_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "status",
+          "level",
+          "minimum_level",
+          "ready"
+        ],
+        "properties": {
+          "present": { "type": "boolean" },
+          "artifact_hash": { "type": "string" },
+          "payload_hash": { "type": "string" },
+          "hash_reproducible": { "type": "boolean" },
+          "status": { "type": "string" },
+          "level": { "type": "string" },
+          "minimum_level": { "type": "string" },
+          "ready": { "type": "boolean" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "verification_dimension_rows": {
+      "type": "object",
+      "minProperties": 12,
+      "additionalProperties": { "type": "object" }
+    },
+    "verified_footer_field_rows": {
+      "type": "object",
+      "minProperties": 15,
+      "additionalProperties": { "type": "object" }
+    },
+    "route_claim_evidence_rows": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "object" }
+    },
+    "verified_footer_source_rows": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "object" }
+    },
+    "negative_claim_evidence_rows": {
+      "type": "object",
+      "minProperties": 18,
+      "additionalProperties": { "type": "object" }
+    },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "verification_dimension_root",
+        "verified_footer_field_root",
+        "route_claim_evidence_root",
+        "verified_footer_source_root",
+        "negative_claim_evidence_root",
+        "combined_claim_evidence_footer_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "native_source_annotation_l183_ready",
+        "verified_source_footer_l180_ready",
+        "verification_dimension_rows_complete",
+        "verified_footer_field_rows_complete",
+        "route_claim_evidence_rows_complete",
+        "verified_footer_source_rows_complete",
+        "negative_claim_evidence_fixtures_reject",
+        "contract_signed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "claim_evidence_footer_decision": {
+      "type": "object",
+      "required": [
+        "universal_claim_evidence_footer_verification_ready",
+        "source_footer_reliance_allowed",
+        "response_release_allowed",
+        "creator_settlement_allowed",
+        "citation_existence_verified",
+        "source_suitability_verified",
+        "answer_source_fidelity_verified",
+        "unsupported_claim_blocked",
+        "misleading_citation_blocked",
+        "fabricated_citation_blocked",
+        "posthoc_citation_blocked",
+        "failure_modes"
+      ],
+      "properties": {
+        "universal_claim_evidence_footer_verification_ready": { "type": "boolean" },
+        "source_footer_reliance_allowed": { "type": "boolean" },
+        "response_release_allowed": { "type": "boolean" },
+        "creator_settlement_allowed": { "type": "boolean" },
+        "citation_existence_verified": { "type": "boolean" },
+        "source_suitability_verified": { "type": "boolean" },
+        "answer_source_fidelity_verified": { "type": "boolean" },
+        "unsupported_claim_blocked": { "const": true },
+        "misleading_citation_blocked": { "const": true },
+        "fabricated_citation_blocked": { "const": true },
+        "posthoc_citation_blocked": { "const": true },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "coverage": { "type": "object" },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payloads_excluded",
+        "private_prompts_excluded",
+        "private_outputs_excluded",
+        "private_source_text_excluded",
+        "private_provider_annotations_excluded",
+        "public_contract_uses_hashes_verdicts_routes_and_footer_rows"
+      ],
+      "properties": {
+        "private_payloads_excluded": { "const": true },
+        "private_prompts_excluded": { "const": true },
+        "private_outputs_excluded": { "const": true },
+        "private_source_text_excluded": { "const": true },
+        "private_provider_annotations_excluded": { "const": true },
+        "public_contract_uses_hashes_verdicts_routes_and_footer_rows": {
+          "const": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_native_source_annotation_level",
+        "minimum_verified_source_footer_level",
+        "verification_dimension_count",
+        "ready_verification_dimension_count",
+        "verified_footer_field_count",
+        "ready_verified_footer_field_count",
+        "l183_route_count",
+        "ready_route_claim_evidence_count",
+        "verified_footer_source_count",
+        "ready_verified_footer_source_count",
+        "negative_claim_evidence_failure_count",
+        "ready_negative_claim_evidence_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_claim_evidence_footer_contract"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L184" },
+        "minimum_native_source_annotation_level": { "const": "RDLLM-L183" },
+        "minimum_verified_source_footer_level": { "const": "RDLLM-L180" },
+        "verification_dimension_count": { "const": 12 },
+        "ready_verification_dimension_count": { "type": "integer", "minimum": 0 },
+        "verified_footer_field_count": { "const": 15 },
+        "ready_verified_footer_field_count": { "type": "integer", "minimum": 0 },
+        "l183_route_count": { "type": "integer", "minimum": 1 },
+        "ready_route_claim_evidence_count": { "type": "integer", "minimum": 0 },
+        "verified_footer_source_count": { "type": "integer", "minimum": 1 },
+        "ready_verified_footer_source_count": { "type": "integer", "minimum": 0 },
+        "negative_claim_evidence_failure_count": { "const": 18 },
+        "ready_negative_claim_evidence_failure_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failure_mode_count": { "type": "integer", "minimum": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_claim_evidence_footer_contract": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "universal_claim_evidence_footer_verification_contract_hash": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "signature": { "type": "object" }
+  },
+  "additionalProperties": true
+}

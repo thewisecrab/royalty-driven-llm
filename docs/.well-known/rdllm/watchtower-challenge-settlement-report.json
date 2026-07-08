@@ -1,0 +1,279 @@
+{
+  "artifact_bindings": {
+    "artifact_binding_root": "80f867ef45f131a0a0ebc2bff2e463e5bc24062bef97d575a5902492e3ff1536",
+    "artifact_count": 5,
+    "bindings": [
+      {
+        "artifact_type": "rdllm-receipt-transparency-consistency-report/v1",
+        "binding_hash": "ddf1c66bb46bfc76d376103cdcce769121977fa0464bd65e28c5d37554291b5a",
+        "declared_hash": "617f839b7e11a763407f328431d149fc2251d60e5267ae5609227ea5d9c1ee26",
+        "hash_reproducible": true,
+        "name": "receipt_transparency_consistency_report",
+        "payload_hash": "0ad10e692fb7ac9a59a84fcce46a3df82e546c990427a40f718845e149e3736d"
+      },
+      {
+        "artifact_type": "rdllm-verifier-accountability-report/v1",
+        "binding_hash": "56fbc0d449de17edd5bd4628f8176ef0d5050827cbf500c04c20b239898801a6",
+        "declared_hash": "c31b04a05c53c3ec29f1e3d1c2075dbfbb31baf1923048ae77102e62b5887b74",
+        "hash_reproducible": true,
+        "name": "verifier_accountability_report",
+        "payload_hash": "31a55b45e8ad816bccfb056ec614d2c6ab17ecf4352b390a62884572ce434f5c"
+      },
+      {
+        "artifact_type": "rdllm-trust-registry/v1",
+        "binding_hash": "77648cec54655b358ea0c73cdf1e52df8a8005595b32378a67dfb389343c8dc9",
+        "declared_hash": "ca4bf6639b80b98dd0dffcf7b67855a0a9717e22ceca6576df57e0c029346974",
+        "hash_reproducible": true,
+        "name": "trust_registry",
+        "payload_hash": "13b69e349e4e0d309d4ee9af06382b4f8e0a1328d39b33bbfd0d5ab66cb65fc0"
+      },
+      {
+        "artifact_type": "rdllm-provider-attribution-card/v1",
+        "binding_hash": "6b544856630eef88c31960a89a7de570fc879ad431c0979b15e9f2a3e829794a",
+        "declared_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+        "hash_reproducible": true,
+        "name": "provider_attribution_card",
+        "payload_hash": "4b5559fda1ff496ff9c85b4fd9c264963da95f686ca32f4bde0cc337cc1d0d48"
+      },
+      {
+        "artifact_type": "rdllm-certification/v1",
+        "binding_hash": "82d0e8ea094a3eae73d6501abbddc172d0ad29d064425b01f77a95e3dd10b0d3",
+        "declared_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+        "hash_reproducible": true,
+        "name": "certification_report",
+        "payload_hash": "c90d268a46ee16f3059c1597b1524eebf002393cae74ec2d4a74f273c5fc3495"
+      }
+    ],
+    "certification_report_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+    "provider_card_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+    "receipt_transparency_consistency_report_hash": "617f839b7e11a763407f328431d149fc2251d60e5267ae5609227ea5d9c1ee26",
+    "trust_registry_hash": "ca4bf6639b80b98dd0dffcf7b67855a0a9717e22ceca6576df57e0c029346974",
+    "verifier_accountability_report_hash": "c31b04a05c53c3ec29f1e3d1c2075dbfbb31baf1923048ae77102e62b5887b74"
+  },
+  "bounty_rows": [],
+  "challenge_rows": [],
+  "checks": {
+    "artifact_hashes_reproducible": true,
+    "certification_level_at_least_l73": true,
+    "creator_pool_conserved_or_escrowed": true,
+    "no_open_or_accepted_blocking_challenges": true,
+    "provider_declares_watchtower_challenge_channel": true,
+    "provider_declares_watchtower_challenge_surface": true,
+    "public_report_has_no_private_field_names": true,
+    "receipt_transparency_consistency_ready": true,
+    "slashing_rows_hash_reproducible": true,
+    "verifier_accountability_ready": true,
+    "watchtower_quorum_met": true,
+    "watchtower_quorum_policy_nonzero": true,
+    "watchtower_registry_entries_active": true,
+    "watchtower_signatures_valid": true,
+    "watchtower_subject_present": true
+  },
+  "commitments": {
+    "bounty_row_root": "2e1cfa82b035c26cbbbdae632cea070514eb8b773f616aaeaf668e2f0be8f10d",
+    "challenge_row_root": "2e1cfa82b035c26cbbbdae632cea070514eb8b773f616aaeaf668e2f0be8f10d",
+    "settlement_row_root": "a6465231d8567a3aa0b535e84bea33548c0bf69e7cb32fbfc10c674e2a13151a",
+    "slashing_evidence_root": "2e1cfa82b035c26cbbbdae632cea070514eb8b773f616aaeaf668e2f0be8f10d",
+    "watchtower_attestation_root": "e45fd3a9fe2efc64e6bf4143f5fb870a109c7c40b770f53cd25979e51108970d",
+    "watchtower_registry_root": "b969be905f6430e7ccbca839bbbf23544f4e23c0080718841d4e627353e6b556",
+    "watchtower_subject_hash": "59e4ee83274c4933c56ad79e0fd31f2fa8513c2739ef4d145e6ce0cb3468eb8a"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "accepted_challenge_bounty_fraction": "0.500000",
+    "accepted_challenge_slashing_fraction": "0.100000",
+    "challenge_statuses_that_block_direct_settlement": [
+      "open",
+      "accepted"
+    ],
+    "direct_settlement_requires": [
+      "ready_receipt_transparency_consistency_report",
+      "active_registered_independent_watchtower_quorum",
+      "watchtower_subject_attestations",
+      "no_open_or_accepted_blocking_challenges",
+      "creator_pool_conservation"
+    ],
+    "failure_route": "watchtower_challenge_escrow",
+    "profile": "rdllm-watchtower-challenge-settlement-policy/v1",
+    "required_watchtower_quorum": 2,
+    "target_certification_level": "RDLLM-L74",
+    "watchtower_role": "independent_watchtower"
+  },
+  "privacy": {
+    "answer_text_disclosed": false,
+    "customer_or_payment_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "receipt_payload_disclosed": false,
+    "source_text_disclosed": false,
+    "watchtower_report_uses_hashes_attestations_challenges_and_roots": true
+  },
+  "report_version": "rdllm-watchtower-challenge-settlement-report/v1",
+  "schemas": {
+    "certification_report": "docs/schemas/certification_report.schema.json",
+    "provider_attribution_card": "docs/schemas/provider_attribution_card.schema.json",
+    "receipt_transparency_consistency_report": "docs/schemas/receipt_transparency_consistency_report.schema.json",
+    "trust_registry": "docs/schemas/trust_registry.schema.json",
+    "verifier_accountability_report": "docs/schemas/verifier_accountability_report.schema.json",
+    "watchtower_challenge_settlement_report": "docs/schemas/watchtower_challenge_settlement_report.schema.json"
+  },
+  "settlement_gate": {
+    "accepted_challenge_count": 0,
+    "blocking_challenge_count": 0,
+    "decision": "watchtower_challenge_settlement_ready",
+    "direct_settlement_ready": true,
+    "open_challenge_count": 0,
+    "slash_ready_count": 0
+  },
+  "settlement_rows": [
+    {
+      "contribution_weight": 0.33368545,
+      "creator_id": "arjun",
+      "escrow_amount": "0.000000",
+      "payout": "0.183527",
+      "prior_settlement_decision": "accepted",
+      "settlement_decision": "accepted",
+      "settlement_row_hash": "e7a25420b83c2ecf94a01782094f16fb6a6b627712fc5175bc8d063af40633c7",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "contribution_weight": 0.33219273,
+      "creator_id": "lina",
+      "escrow_amount": "0.000000",
+      "payout": "0.182706",
+      "prior_settlement_decision": "accepted",
+      "settlement_decision": "accepted",
+      "settlement_row_hash": "9e4a3d41bb4dc4c0fef778c836eca3aa6abbf87adf14eea485e026d9de641a1d",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "contribution_weight": 0.33412182,
+      "creator_id": "maya",
+      "escrow_amount": "0.000000",
+      "payout": "0.183767",
+      "prior_settlement_decision": "accepted",
+      "settlement_decision": "accepted",
+      "settlement_row_hash": "3b8ab7a746c3cd6ce2799afa7dfdfdb188709a24b7cb864f01c7257975410c3f",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "531fbf0ce9f886c9cce4800c9232c873324e8b9235db0e8a573ae9e2c43324c9"
+  },
+  "slashing_evidence_rows": [],
+  "summary": {
+    "accepted_challenge_count": 0,
+    "active_watchtower_count": 2,
+    "attestation_count": 2,
+    "blocking_challenge_count": 0,
+    "bounty_row_count": 0,
+    "creator_pool_conserved_or_escrowed": true,
+    "direct_settlement_ready": true,
+    "escrow_total": "0.000000",
+    "offline_verification_supported": true,
+    "open_challenge_count": 0,
+    "payout_total": "0.550000",
+    "registered_watchtower_count": 2,
+    "required_watchtower_quorum": 2,
+    "settlement_decision": "watchtower_challenge_settlement_ready",
+    "settlement_row_count": 3,
+    "slash_ready_count": 0,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L74",
+    "watchtower_subject_hash": "59e4ee83274c4933c56ad79e0fd31f2fa8513c2739ef4d145e6ce0cb3468eb8a"
+  },
+  "watchtower_attestations": [
+    {
+      "attestation_hash": "f771fdbbf7e1a16f65fe722bf64fcf1811d23881fc518f87ea3c5dff500b878d",
+      "observed_at": "2026-05-31T00:00:00Z",
+      "receipt_missing_count": 0,
+      "receipt_required_count": 1,
+      "receipt_settlement_decision": "receipt_transparency_consistency_ready",
+      "receipt_split_view_conflict_count": 0,
+      "receipt_transparency_consistency_report_hash": "617f839b7e11a763407f328431d149fc2251d60e5267ae5609227ea5d9c1ee26",
+      "signature": "bbf5638175ef05994399bd5b18fe873cd8e5364778f8285a263d505e573bd775",
+      "signature_algorithm": "HMAC-SHA256",
+      "subject_hash": "59e4ee83274c4933c56ad79e0fd31f2fa8513c2739ef4d145e6ce0cb3468eb8a",
+      "watchtower_id": "watchtower_alpha",
+      "watchtower_key_hash": "3879a8a90c2eede4b073fca2b1ba724f7ef1320718e6fa580238f316d04ad48d",
+      "watchtower_role": "independent_watchtower"
+    },
+    {
+      "attestation_hash": "f2abebd676b07ef369a67e57003fc3f30b9ea476014425e167e8514990395770",
+      "observed_at": "2026-05-31T00:00:00Z",
+      "receipt_missing_count": 0,
+      "receipt_required_count": 1,
+      "receipt_settlement_decision": "receipt_transparency_consistency_ready",
+      "receipt_split_view_conflict_count": 0,
+      "receipt_transparency_consistency_report_hash": "617f839b7e11a763407f328431d149fc2251d60e5267ae5609227ea5d9c1ee26",
+      "signature": "18c6a069714a3366b8ac80f0805ebd3be9052071e964b9642f0fec672ceacb10",
+      "signature_algorithm": "HMAC-SHA256",
+      "subject_hash": "59e4ee83274c4933c56ad79e0fd31f2fa8513c2739ef4d145e6ce0cb3468eb8a",
+      "watchtower_id": "watchtower_beta",
+      "watchtower_key_hash": "95598d1684a6de7c5e6a290c528c9a63582815971007e1b8cf38d38917aeccbc",
+      "watchtower_role": "independent_watchtower"
+    }
+  ],
+  "watchtower_quorum": {
+    "active_watchtower_count": 2,
+    "attestation_count": 2,
+    "attesting_watchtower_ids": [
+      "watchtower_alpha",
+      "watchtower_beta"
+    ],
+    "quorum_met": true,
+    "registered_watchtower_count": 2,
+    "required_quorum": 2
+  },
+  "watchtower_registry_rows": [
+    {
+      "active_registered_watchtower": true,
+      "derived_key_hash": "3879a8a90c2eede4b073fca2b1ba724f7ef1320718e6fa580238f316d04ad48d",
+      "key_hash_matches_registry": true,
+      "key_id": "3e35ff1a9944ad3afd55f4b8",
+      "registry_key_hash": "3879a8a90c2eede4b073fca2b1ba724f7ef1320718e6fa580238f316d04ad48d",
+      "revoked_key_used": false,
+      "role": "independent_watchtower",
+      "secret_available_to_reference_verifier": true,
+      "status": "active",
+      "watchtower_id": "watchtower_alpha",
+      "watchtower_row_hash": "f4b05eeda2b72cab79dfed5fc92641b12be7e161159736d0631c7b8318ad7e8f"
+    },
+    {
+      "active_registered_watchtower": true,
+      "derived_key_hash": "95598d1684a6de7c5e6a290c528c9a63582815971007e1b8cf38d38917aeccbc",
+      "key_hash_matches_registry": true,
+      "key_id": "b9d4416e906d1e1bd7c1c12d",
+      "registry_key_hash": "95598d1684a6de7c5e6a290c528c9a63582815971007e1b8cf38d38917aeccbc",
+      "revoked_key_used": false,
+      "role": "independent_watchtower",
+      "secret_available_to_reference_verifier": true,
+      "status": "active",
+      "watchtower_id": "watchtower_beta",
+      "watchtower_row_hash": "ad8dbcd1142ff175f9d152e7e58e4c111c57df37b105df62a328e6be535e8a55"
+    }
+  ],
+  "watchtower_report_hash": "776da742308aeabc71b281e1b88fb38b60f7644133f046c1af8cc454f3a32cd7",
+  "watchtower_subject": {
+    "certification_highest_level": "RDLLM-L131",
+    "certification_report_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+    "provider_card_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+    "receipt_append_only_violation_count": 0,
+    "receipt_direct_settlement_ready": true,
+    "receipt_gate_decision": "receipt_transparency_consistency_ready",
+    "receipt_missing_count": 0,
+    "receipt_required_count": 1,
+    "receipt_settlement_decision": "receipt_transparency_consistency_ready",
+    "receipt_split_view_conflict_count": 0,
+    "receipt_status": "ready",
+    "receipt_target_certification_level": "RDLLM-L73",
+    "receipt_transparency_consistency_report_hash": "617f839b7e11a763407f328431d149fc2251d60e5267ae5609227ea5d9c1ee26",
+    "subject_hash": "59e4ee83274c4933c56ad79e0fd31f2fa8513c2739ef4d145e6ce0cb3468eb8a",
+    "trust_registry_hash": "ca4bf6639b80b98dd0dffcf7b67855a0a9717e22ceca6576df57e0c029346974",
+    "verifier_accountability_blocking_challenge_count": 0,
+    "verifier_accountability_report_hash": "c31b04a05c53c3ec29f1e3d1c2075dbfbb31baf1923048ae77102e62b5887b74",
+    "verifier_accountability_status": "ready"
+  }
+}

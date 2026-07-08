@@ -1,0 +1,47 @@
+{
+  "entries": [
+    {
+      "entry_hash": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+      "entry_type": "rdllm-creator-attribution-audit-federation/v1",
+      "federation_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "index": 0,
+      "log_id": "creator-audit-federation-prefix",
+      "participant_index_hash": "",
+      "provider_id": "",
+      "provider_set_hash": "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76",
+      "query_hash": "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207",
+      "subject_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "subject_payload_hash": "7accfe5cd38fd27cd7e9d79598f76e30f4e9a567f36c479aaf1defdd1e86f03e"
+    },
+    {
+      "entry_hash": "c965c57d2f4881ea7bd9b4091ab0d1a69e2d4ddd014b29da2e7ec35313bbd124",
+      "entry_type": "rdllm-creator-attribution-audit-index/v1",
+      "federation_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "index": 1,
+      "log_id": "creator-audit-federation-latest",
+      "participant_index_hash": "0c7cad5fb40f02cd8d0752e9a018d3ee4eb637c2fb04712c2805c59ce1a5f439",
+      "provider_id": "provider:rdllm-partner",
+      "provider_set_hash": "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76",
+      "query_hash": "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207",
+      "subject_hash": "0c7cad5fb40f02cd8d0752e9a018d3ee4eb637c2fb04712c2805c59ce1a5f439",
+      "subject_payload_hash": "244e1fd1f42677df43d7d7abbba501551af36c8114c21a04b7bcb17dd8192051"
+    },
+    {
+      "entry_hash": "508f87ffa054858efd97a3e585e0377ed254d17ed8657e1bc0fa99b303aa880e",
+      "entry_type": "rdllm-creator-attribution-audit-index/v1",
+      "federation_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "index": 2,
+      "log_id": "creator-audit-federation-latest",
+      "participant_index_hash": "2f496b48660fd9bf24eb2b44b82fb7401b9f3b275846b21a9b8f05c40ed60271",
+      "provider_id": "provider:rdllm-reference",
+      "provider_set_hash": "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76",
+      "query_hash": "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207",
+      "subject_hash": "2f496b48660fd9bf24eb2b44b82fb7401b9f3b275846b21a9b8f05c40ed60271",
+      "subject_payload_hash": "94d5e3a9e8e0c15d35c6820c74f371546e8bfd02d001420937f2f2551d26c5c5"
+    }
+  ],
+  "log_id": "creator-audit-federation-latest",
+  "log_version": "rdllm-creator-attribution-audit-federation-transparency-log/v1",
+  "root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+  "tree_size": 3
+}

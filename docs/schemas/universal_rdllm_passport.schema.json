@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_rdllm_passport.schema.json",
+  "title": "RDLLM Universal RDLLM Passport",
+  "type": "object",
+  "required": [
+    "passport_version",
+    "issuer",
+    "created_at",
+    "passport_policy",
+    "artifact_bindings",
+    "provider_family_rows",
+    "adoption_surface_rows",
+    "verifier_command_rows",
+    "core_proof_rows",
+    "research_alignment_rows",
+    "interoperability_profile",
+    "commitments",
+    "checks",
+    "passport_decision",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_rdllm_passport_hash",
+    "signature"
+  ],
+  "properties": {
+    "passport_version": {
+      "const": "rdllm-universal-rdllm-passport/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "passport_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "required_core_artifacts",
+        "required_provider_families",
+        "required_public_surfaces",
+        "required_verifier_commands"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "artifact_count",
+        "artifact_binding_root",
+        "bindings"
+      ],
+      "additionalProperties": true
+    },
+    "provider_family_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "provider_family",
+          "covered_by_adapter",
+          "covered_by_conformance",
+          "covered_by_contract",
+          "fail_closed_backed",
+          "passport_provider_family_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "adoption_surface_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "surface",
+          "provider_disclosure_declared",
+          "integration_surface_declared",
+          "discovery_path_declared",
+          "published",
+          "adoption_surface_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "verifier_command_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "command",
+          "declared_by_integration_profile",
+          "offline_replay_command",
+          "verifier_command_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "core_proof_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "declared_hash",
+          "hash_reproducible",
+          "present",
+          "core_proof_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "research_alignment_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "reference_id",
+          "reference_url",
+          "control",
+          "passport_binding",
+          "research_alignment_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "interoperability_profile": {
+      "type": "object",
+      "required": [
+        "profile",
+        "well_known_passport_path",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "artifact_binding_root",
+        "provider_family_root",
+        "adoption_surface_root",
+        "verifier_command_root",
+        "core_proof_root",
+        "research_alignment_root",
+        "passport_commitment_hash"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "passport_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "release_authorized",
+        "failed_checks",
+        "failure_modes",
+        "safe_output_policy"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["universal_rdllm_passport"],
+      "additionalProperties": { "type": "string" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_prompt_text_disclosed",
+        "raw_output_text_disclosed",
+        "raw_source_text_disclosed",
+        "private_payment_details_disclosed",
+        "hash_only_provider_and_creator_bindings",
+        "private_strings_absent"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "provider_family_count",
+        "covered_provider_family_count",
+        "core_artifact_count",
+        "public_surface_count",
+        "verifier_command_count",
+        "failed_check_count",
+        "offline_verification_supported",
+        "privacy_preserved"
+      ],
+      "additionalProperties": true
+    },
+    "universal_rdllm_passport_hash": {
+      "type": "string",
+      "minLength": 32
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

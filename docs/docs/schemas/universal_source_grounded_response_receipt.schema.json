@@ -1,0 +1,477 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_source_grounded_response_receipt.schema.json",
+  "title": "Universal Source-Grounded Response Receipt",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "universal_source_grounded_response_receipt_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "production_admission_binding",
+    "live_attribution_binding",
+    "source_category_rows",
+    "claim_grounding_rows",
+    "response_surface_rows",
+    "settlement_release_rows",
+    "negative_response_rows",
+    "evidence_roots",
+    "checks",
+    "response_release_decision",
+    "response_coverage",
+    "privacy",
+    "summary",
+    "universal_source_grounded_response_receipt_hash"
+  ],
+  "properties": {
+    "universal_source_grounded_response_receipt_version": {
+      "const": "rdllm-universal-source-grounded-response-receipt/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_source_grounded_response_receipt.schema.json"
+    },
+    "created_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_production_admission_level",
+        "minimum_live_attribution_level",
+        "source_footer_required_before_response_release",
+        "claim_source_support_required",
+        "citation_metadata_verification_required",
+        "copy_export_source_preservation_required",
+        "settlement_hold_required_until_grounded_footer",
+        "private_payloads_forbidden_in_public_receipt"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-source-grounded-response-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L171" },
+        "minimum_production_admission_level": { "const": "RDLLM-L170" },
+        "minimum_live_attribution_level": { "const": "RDLLM-L165" },
+        "source_footer_required_before_response_release": { "const": true },
+        "claim_source_support_required": { "const": true },
+        "citation_metadata_verification_required": { "const": true },
+        "copy_export_source_preservation_required": { "const": true },
+        "settlement_hold_required_until_grounded_footer": { "const": true },
+        "private_payloads_forbidden_in_public_receipt": { "const": true }
+      }
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-source-grounded-response-receipt.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-source-grounded-response-receipt/v1"
+        }
+      }
+    },
+    "production_admission_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 32 },
+        "payload_hash": { "type": "string", "minLength": 32 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L170" }
+      }
+    },
+    "live_attribution_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 32 },
+        "payload_hash": { "type": "string", "minLength": 32 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L165" }
+      }
+    },
+    "source_category_rows": {
+      "type": "object",
+      "required": [
+        "retrieval_document",
+        "tool_observation",
+        "web_source",
+        "licensed_corpus_work",
+        "conversation_memory",
+        "persistent_memory",
+        "parametric_memory",
+        "post_training_signal",
+        "code_repository",
+        "media_asset",
+        "human_creator_work",
+        "no_source_abstention"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/sourceCategoryRow" }
+    },
+    "claim_grounding_rows": {
+      "type": "object",
+      "required": [
+        "answer_claim",
+        "factual_claim",
+        "citation_claim",
+        "quotation_claim",
+        "summary_claim",
+        "comparative_claim",
+        "code_claim",
+        "media_claim",
+        "safety_or_policy_claim",
+        "no_source_abstention_claim"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/claimGroundingRow" }
+    },
+    "response_surface_rows": {
+      "type": "object",
+      "required": [
+        "api_json",
+        "markdown_footer",
+        "html_footer",
+        "streaming_final",
+        "copy_export",
+        "content_credential",
+        "audit_export"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/responseSurfaceRow" }
+    },
+    "settlement_release_rows": {
+      "type": "object",
+      "required": [
+        "direct_creator_payout",
+        "collective_management_pool",
+        "residual_corpus_pool",
+        "escrow_unattributed",
+        "escrow_rights_conflict",
+        "post_correction_adjustment"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/settlementReleaseRow" }
+    },
+    "negative_response_rows": {
+      "type": "object",
+      "required": [
+        "missing_l170_admission",
+        "stale_l170_admission",
+        "source_footer_missing",
+        "claim_without_source_support",
+        "fabricated_source_identifier",
+        "citation_target_unavailable",
+        "citation_metadata_mismatch",
+        "right_answer_wrong_source",
+        "hidden_payable_source",
+        "unsupported_parametric_claim",
+        "low_confidence_source_released",
+        "posthoc_footer_added_after_response",
+        "copy_export_strips_sources",
+        "settlement_without_grounded_footer",
+        "private_payload_leak"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/negativeResponseRow" }
+    },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "source_category_root",
+        "claim_grounding_root",
+        "response_surface_root",
+        "settlement_release_root",
+        "negative_response_root"
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "production_invocation_admission_bound",
+        "production_invocation_admission_l170_ready",
+        "live_attribution_proof_bound",
+        "live_attribution_proof_l165_ready",
+        "source_category_rows_complete",
+        "claim_grounding_rows_complete",
+        "response_surface_rows_complete",
+        "settlement_release_rows_complete",
+        "negative_response_fixtures_reject",
+        "source_grounded_response_receipt_signed"
+      ]
+    },
+    "response_release_decision": {
+      "type": "object",
+      "required": [
+        "source_grounded_response_ready",
+        "final_answer_release_allowed",
+        "user_footer_display_allowed",
+        "source_reliance_allowed",
+        "citation_reliance_allowed",
+        "copy_export_allowed",
+        "creator_settlement_allowed",
+        "unsupported_claims_blocked",
+        "hidden_payable_sources_blocked",
+        "failure_modes"
+      ],
+      "properties": {
+        "source_grounded_response_ready": { "const": true },
+        "final_answer_release_allowed": { "const": true },
+        "user_footer_display_allowed": { "const": true },
+        "source_reliance_allowed": { "const": true },
+        "citation_reliance_allowed": { "const": true },
+        "copy_export_allowed": { "const": true },
+        "creator_settlement_allowed": { "const": true },
+        "unsupported_claims_blocked": { "const": true },
+        "hidden_payable_sources_blocked": { "const": true },
+        "failure_modes": { "type": "array", "maxItems": 0 }
+      }
+    },
+    "response_coverage": {
+      "type": "object",
+      "required": [
+        "required_source_category_count",
+        "ready_source_category_count",
+        "required_claim_type_count",
+        "ready_claim_type_count",
+        "required_response_surface_count",
+        "ready_response_surface_count",
+        "required_settlement_scope_count",
+        "ready_settlement_scope_count"
+      ],
+      "properties": {
+        "required_source_category_count": { "const": 12 },
+        "ready_source_category_count": { "const": 12 },
+        "required_claim_type_count": { "const": 10 },
+        "ready_claim_type_count": { "const": 10 },
+        "required_response_surface_count": { "const": 7 },
+        "ready_response_surface_count": { "const": 7 },
+        "required_settlement_scope_count": { "const": 6 },
+        "ready_settlement_scope_count": { "const": 6 }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payload_fields",
+        "private_strings_absent",
+        "private_payloads_excluded"
+      ],
+      "properties": {
+        "private_payload_fields": { "type": "array", "maxItems": 0 },
+        "private_strings_absent": { "const": true },
+        "private_payloads_excluded": { "const": true }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_production_admission_level",
+        "minimum_live_attribution_level",
+        "source_category_count",
+        "ready_source_category_count",
+        "claim_type_count",
+        "ready_claim_type_count",
+        "response_surface_count",
+        "ready_response_surface_count",
+        "settlement_scope_count",
+        "ready_settlement_scope_count",
+        "negative_response_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_source_grounded_response_receipt"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L171" },
+        "minimum_production_admission_level": { "const": "RDLLM-L170" },
+        "minimum_live_attribution_level": { "const": "RDLLM-L165" },
+        "source_category_count": { "const": 12 },
+        "ready_source_category_count": { "const": 12 },
+        "claim_type_count": { "const": 10 },
+        "ready_claim_type_count": { "const": 10 },
+        "response_surface_count": { "const": 7 },
+        "ready_response_surface_count": { "const": 7 },
+        "settlement_scope_count": { "const": 6 },
+        "ready_settlement_scope_count": { "const": 6 },
+        "negative_response_failure_count": { "const": 15 },
+        "failure_mode_count": { "const": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_source_grounded_response_receipt": { "const": true }
+      }
+    },
+    "universal_source_grounded_response_receipt_hash": {
+      "type": "string",
+      "minLength": 32
+    },
+    "signature": { "type": "object" }
+  },
+  "$defs": {
+    "sourceCategoryRow": {
+      "type": "object",
+      "required": [
+        "source_row_hash",
+        "source_identity_hash",
+        "locator_hash",
+        "license_hash",
+        "creator_hash",
+        "evidence_hash",
+        "confidence_hash",
+        "footer_label_hash",
+        "settlement_share_hash",
+        "verifier_hash",
+        "source_available",
+        "claim_support_verified",
+        "footer_visible",
+        "rights_allow_display",
+        "confidence_calibrated",
+        "settlement_bound",
+        "no_private_payloads"
+      ],
+      "properties": {
+        "source_available": { "const": true },
+        "claim_support_verified": { "const": true },
+        "footer_visible": { "const": true },
+        "rights_allow_display": { "const": true },
+        "confidence_calibrated": { "const": true },
+        "settlement_bound": { "const": true },
+        "no_private_payloads": { "const": true }
+      }
+    },
+    "claimGroundingRow": {
+      "type": "object",
+      "required": [
+        "claim_row_hash",
+        "claim_hash",
+        "claim_type",
+        "source_row_hash",
+        "evidence_span_hash",
+        "citation_locator_hash",
+        "confidence_hash",
+        "verifier_hash",
+        "supported_by_source",
+        "source_visible_in_footer",
+        "evidence_span_bound",
+        "citation_metadata_verified",
+        "unsupported_claim_blocked",
+        "no_private_payloads"
+      ],
+      "properties": {
+        "claim_type": { "type": "string" },
+        "supported_by_source": { "const": true },
+        "source_visible_in_footer": { "const": true },
+        "evidence_span_bound": { "const": true },
+        "citation_metadata_verified": { "const": true },
+        "unsupported_claim_blocked": { "const": true },
+        "no_private_payloads": { "const": true }
+      }
+    },
+    "responseSurfaceRow": {
+      "type": "object",
+      "required": [
+        "response_surface_hash",
+        "rendered_footer_hash",
+        "admission_token_hash",
+        "live_proof_hash",
+        "claim_root_hash",
+        "copy_export_hash",
+        "verifier_hash",
+        "surface_rendered",
+        "source_footer_visible",
+        "l170_admission_bound",
+        "live_proof_bound",
+        "claim_rows_bound",
+        "copy_export_preserves_sources",
+        "fail_closed",
+        "public_or_auditor_accessible"
+      ],
+      "properties": {
+        "surface_rendered": { "const": true },
+        "source_footer_visible": { "const": true },
+        "l170_admission_bound": { "const": true },
+        "live_proof_bound": { "const": true },
+        "claim_rows_bound": { "const": true },
+        "copy_export_preserves_sources": { "const": true },
+        "fail_closed": { "const": true },
+        "public_or_auditor_accessible": { "const": true }
+      }
+    },
+    "settlementReleaseRow": {
+      "type": "object",
+      "required": [
+        "settlement_row_hash",
+        "creator_hash",
+        "source_row_hash",
+        "license_hash",
+        "usage_meter_hash",
+        "allocation_hash",
+        "remittance_hold_hash",
+        "verifier_hash",
+        "source_visible_in_footer",
+        "claim_support_verified",
+        "l170_admission_bound",
+        "footer_release_bound",
+        "settlement_held_until_footer",
+        "no_hidden_payable_source",
+        "no_private_payloads"
+      ],
+      "properties": {
+        "source_visible_in_footer": { "const": true },
+        "claim_support_verified": { "const": true },
+        "l170_admission_bound": { "const": true },
+        "footer_release_bound": { "const": true },
+        "settlement_held_until_footer": { "const": true },
+        "no_hidden_payable_source": { "const": true },
+        "no_private_payloads": { "const": true }
+      }
+    },
+    "negativeResponseRow": {
+      "type": "object",
+      "required": [
+        "fixture_hash",
+        "expected_reject",
+        "observed_reject",
+        "response_release_blocked",
+        "footer_reliance_blocked",
+        "source_reliance_blocked",
+        "citation_reliance_blocked",
+        "copy_export_blocked",
+        "settlement_held",
+        "public_status_marked_failed"
+      ],
+      "properties": {
+        "fixture_hash": { "type": "string", "minLength": 32 },
+        "expected_reject": { "const": true },
+        "observed_reject": { "const": true },
+        "response_release_blocked": { "const": true },
+        "footer_reliance_blocked": { "const": true },
+        "source_reliance_blocked": { "const": true },
+        "citation_reliance_blocked": { "const": true },
+        "copy_export_blocked": { "const": true },
+        "settlement_held": { "const": true },
+        "public_status_marked_failed": { "const": true }
+      }
+    }
+  }
+}

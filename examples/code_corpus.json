@@ -1,0 +1,38 @@
+{
+  "creators": [
+    {
+      "creator_id": "nora",
+      "name": "Nora Kim",
+      "payout_account": "acct_nora"
+    },
+    {
+      "creator_id": "omar",
+      "name": "Omar Reyes",
+      "payout_account": "acct_omar"
+    }
+  ],
+  "works": [
+    {
+      "work_id": "nora-python-cache-helper",
+      "creator_id": "nora",
+      "title": "Python Cache Helper",
+      "license": "MIT",
+      "license_uri": "https://spdx.org/licenses/MIT.html",
+      "allowed_uses": ["training", "retrieval", "generation", "display", "quote", "external_attribution"],
+      "requires_attribution": true,
+      "requires_royalty": true,
+      "content": "def memoized_lookup(cache, key, factory):\n    if key not in cache:\n        cache[key] = factory(key)\n    return cache[key]"
+    },
+    {
+      "work_id": "omar-network-copyleft-router",
+      "creator_id": "omar",
+      "title": "Network Copyleft Router",
+      "license": "AGPL-3.0",
+      "license_uri": "https://spdx.org/licenses/AGPL-3.0-only.html",
+      "allowed_uses": ["training", "retrieval", "generation", "display", "quote", "external_attribution"],
+      "requires_attribution": true,
+      "requires_royalty": true,
+      "content": "function routeRequest(routes, path) {\n  if (!routes[path]) {\n    throw new Error('missing route');\n  }\n  return routes[path]();\n}"
+    }
+  ]
+}

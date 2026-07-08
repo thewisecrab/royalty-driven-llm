@@ -1,0 +1,316 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_foundation_model_contract.schema.json",
+  "title": "RDLLM Universal Foundation Model Contract",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "issuer",
+    "created_at",
+    "contract_policy",
+    "artifact_bindings",
+    "provider_family_rows",
+    "selected_route_binding",
+    "public_surface_binding",
+    "universal_contract_binding",
+    "contract_decision",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_foundation_model_contract_hash",
+    "signature"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "rdllm-universal-foundation-model-contract/v1"
+    },
+    "issuer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contract_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "required_provider_families",
+        "required_chain_artifacts",
+        "required_public_surfaces",
+        "on_missing_provider_family",
+        "on_missing_public_surface",
+        "on_unreleased_runtime_chain",
+        "on_unsettled_composition",
+        "on_private_text_leak"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-foundation-model-contract-policy/v1"
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L132"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L131"
+        },
+        "required_provider_families": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "on_missing_provider_family": {
+          "const": "block_model_release"
+        },
+        "on_missing_public_surface": {
+          "const": "block_model_release"
+        },
+        "on_unreleased_runtime_chain": {
+          "const": "block_model_release"
+        },
+        "on_unsettled_composition": {
+          "const": "block_model_release"
+        },
+        "on_private_text_leak": {
+          "const": "block_publication"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/artifactBinding"
+      }
+    },
+    "provider_family_rows": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/providerFamilyRow"
+      }
+    },
+    "selected_route_binding": {
+      "type": "object",
+      "required": [
+        "selected_route_id",
+        "selected_provider_family",
+        "runtime_adapter_provider_family",
+        "deployment_provider_family",
+        "foundation_runtime_adapter_hash",
+        "foundation_runtime_router_hash",
+        "foundation_model_deployment_attestation_hash",
+        "runtime_release_authorized",
+        "router_release_authorized",
+        "deployment_release_authorized"
+      ],
+      "additionalProperties": true
+    },
+    "public_surface_binding": {
+      "type": "object",
+      "required": [
+        "integration_profile_hash",
+        "discovery_manifest_hash",
+        "proof_dependency_graph_hash",
+        "required_public_surfaces",
+        "missing_integration_surfaces",
+        "missing_discovery_surfaces",
+        "public_surface_binding_hash"
+      ],
+      "additionalProperties": true
+    },
+    "universal_contract_binding": {
+      "type": "object",
+      "required": [
+        "profile",
+        "provider_family_root",
+        "artifact_binding_root",
+        "selected_route_binding_hash",
+        "public_surface_binding_hash",
+        "foundation_provider_conformance_hash",
+        "foundation_runtime_router_hash",
+        "universal_composition_receipt_hash",
+        "universal_composition_settlement_hash",
+        "contract_binding_hash"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-foundation-model-contract-binding/v1"
+        }
+      },
+      "additionalProperties": true
+    },
+    "contract_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "release_authorized",
+        "failed_checks",
+        "failure_modes",
+        "safe_output_policy"
+      ],
+      "properties": {
+        "decision": {
+          "enum": [
+            "release_universal_contract",
+            "block_universal_contract"
+          ]
+        },
+        "release_authorized": {
+          "type": "boolean"
+        },
+        "failed_checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "failure_modes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "required_artifacts_present",
+        "artifact_hashes_reproducible",
+        "provider_families_cover_required_set",
+        "composite_adapter_ready_l125",
+        "provider_conformance_ready_l126",
+        "runtime_router_released_l128",
+        "router_covers_all_provider_families",
+        "fail_closed_router_policy",
+        "selected_route_binds_runtime_and_deployment",
+        "universal_composition_released_l130",
+        "universal_composition_settlement_ready_l131",
+        "source_footer_to_settlement_bound",
+        "creator_pool_conserved",
+        "discovery_profile_and_graph_publish_contract",
+        "required_public_surfaces_published",
+        "private_text_not_disclosed"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "required": [
+        "missing_provider_families",
+        "missing_integration_surfaces",
+        "missing_discovery_surfaces",
+        "failed_checks"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "artifact_binding_root",
+        "provider_family_root",
+        "public_surface_binding_hash",
+        "selected_route_binding_hash",
+        "l131_settlement_hash"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "universal_foundation_model_contract"
+      ],
+      "properties": {
+        "universal_foundation_model_contract": {
+          "const": "docs/schemas/universal_foundation_model_contract.schema.json"
+        }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_text_fields_excluded",
+        "hash_only_provider_fixtures",
+        "raw_prompts_outputs_sources_excluded",
+        "private_strings_absent"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "required_provider_family_count",
+        "covered_provider_family_count",
+        "provider_family_row_count",
+        "universal_contract_release_authorized",
+        "failed_check_count",
+        "failure_mode_count"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "ready",
+            "blocked"
+          ]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L132"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L131"
+        }
+      },
+      "additionalProperties": true
+    },
+    "universal_foundation_model_contract_hash": {
+      "type": "string",
+      "minLength": 32
+    },
+    "signature": {
+      "oneOf": [
+        { "type": "object" },
+        { "type": "string", "minLength": 64 }
+      ]
+    }
+  },
+  "$defs": {
+    "artifactBinding": {
+      "type": "object",
+      "required": [
+        "name",
+        "declared_hash",
+        "hash_reproducible",
+        "present"
+      ],
+      "additionalProperties": true
+    },
+    "providerFamilyRow": {
+      "type": "object",
+      "required": [
+        "provider_family",
+        "covered_by_adapter",
+        "covered_by_conformance",
+        "covered_by_router",
+        "fail_closed_backed",
+        "universal_provider_contract_row_hash"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

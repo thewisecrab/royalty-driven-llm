@@ -1,0 +1,387 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_procurement_regulatory_reliance_contract.schema.json",
+  "title": "Universal Procurement Regulatory Reliance Contract",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "universal_procurement_regulatory_reliance_contract_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "adversarial_quorum_binding",
+    "industry_root_binding",
+    "adoption_role_rows",
+    "contractual_control_rows",
+    "jurisdiction_mapping_rows",
+    "negative_procurement_rows",
+    "evidence_roots",
+    "checks",
+    "procurement_reliance_decision",
+    "contract_coverage",
+    "privacy",
+    "summary",
+    "universal_procurement_regulatory_reliance_contract_hash"
+  ],
+  "properties": {
+    "universal_procurement_regulatory_reliance_contract_version": {
+      "const": "rdllm-universal-procurement-regulatory-reliance-contract/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_procurement_regulatory_reliance_contract.schema.json"
+    },
+    "created_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_adversarial_provenance_level",
+        "minimum_industry_adoption_root_level",
+        "provider_terms_must_not_override_creator_payment",
+        "source_footer_and_machine_readable_attribution_survive_distribution",
+        "marketplace_listing_requires_current_l173_quorum",
+        "regulator_export_required",
+        "creator_challenge_route_required",
+        "settlement_hold_required_on_contract_breach",
+        "private_payloads_forbidden_in_public_contract"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-procurement-regulatory-reliance-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L174" },
+        "minimum_adversarial_provenance_level": { "const": "RDLLM-L173" },
+        "minimum_industry_adoption_root_level": { "const": "RDLLM-L163" },
+        "provider_terms_must_not_override_creator_payment": { "const": true },
+        "source_footer_and_machine_readable_attribution_survive_distribution": {
+          "const": true
+        },
+        "marketplace_listing_requires_current_l173_quorum": { "const": true },
+        "regulator_export_required": { "const": true },
+        "creator_challenge_route_required": { "const": true },
+        "settlement_hold_required_on_contract_breach": { "const": true },
+        "private_payloads_forbidden_in_public_contract": { "const": true }
+      }
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-procurement-regulatory-reliance-contract.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-procurement-regulatory-reliance-contract/v1"
+        }
+      }
+    },
+    "adversarial_quorum_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 32 },
+        "payload_hash": { "type": "string", "minLength": 32 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L173" }
+      }
+    },
+    "industry_root_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 32 },
+        "payload_hash": { "type": "string", "minLength": 32 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L163" }
+      }
+    },
+    "adoption_role_rows": {
+      "type": "object",
+      "required": [
+        "foundation_model_provider",
+        "api_gateway_or_router",
+        "cloud_marketplace",
+        "enterprise_customer",
+        "application_developer",
+        "auditor_or_lab",
+        "regulator_or_court",
+        "creator_collective",
+        "payment_processor",
+        "end_user_surface"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/adoptionRoleRow" }
+    },
+    "contractual_control_rows": {
+      "type": "object",
+      "required": [
+        "conformance_claim_binding",
+        "model_version_binding",
+        "source_footer_display_duty",
+        "machine_readable_source_duty",
+        "distribution_survival_duty",
+        "adversarial_quorum_duty",
+        "audit_right",
+        "regulator_export",
+        "creator_challenge_route",
+        "settlement_hold_and_remedy",
+        "revocation_and_correction_sla",
+        "procurement_sla",
+        "marketplace_delisting"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/contractualControlRow" }
+    },
+    "jurisdiction_mapping_rows": {
+      "type": "object",
+      "required": [
+        "copyright_and_ai_training_disclosure",
+        "eu_ai_act_gpai_summary",
+        "us_copyright_record",
+        "uk_tdm_reservation",
+        "data_protection_privacy",
+        "consumer_deception_disclosure",
+        "accessibility_and_machine_readability",
+        "payment_and_tax_reporting"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/jurisdictionMappingRow" }
+    },
+    "negative_procurement_rows": {
+      "type": "object",
+      "required": [
+        "unbound_conformance_claim",
+        "terms_override_creator_payment",
+        "model_version_substitution",
+        "router_bypass",
+        "marketplace_listing_without_proof",
+        "missing_audit_right",
+        "missing_regulator_export",
+        "revoked_trust_root_accepted",
+        "settlement_hold_unenforceable",
+        "creator_challenge_unroutable",
+        "jurisdiction_mapping_missing",
+        "sla_missing_or_unmeasured",
+        "source_footer_removed_in_terms",
+        "private_payload_leak"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/negativeProcurementRow" }
+    },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "adoption_role_root",
+        "contractual_control_root",
+        "jurisdiction_mapping_root",
+        "negative_procurement_root"
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "adversarial_provenance_quorum_bound",
+        "adversarial_provenance_quorum_l173_ready",
+        "industry_adoption_root_bound",
+        "industry_adoption_root_l163_ready",
+        "adoption_role_rows_complete",
+        "contractual_control_rows_complete",
+        "jurisdiction_mapping_rows_complete",
+        "negative_procurement_fixtures_reject",
+        "procurement_reliance_contract_signed"
+      ]
+    },
+    "procurement_reliance_decision": {
+      "type": "object",
+      "required": [
+        "procurement_reliance_ready",
+        "provider_conformance_claim_allowed",
+        "marketplace_listing_allowed",
+        "enterprise_procurement_allowed",
+        "regulator_reliance_allowed",
+        "creator_collective_reliance_allowed",
+        "settlement_contract_enforceable",
+        "source_footer_contract_enforceable",
+        "noncompliant_routes_blocked",
+        "failure_modes"
+      ],
+      "properties": {
+        "procurement_reliance_ready": { "const": true },
+        "provider_conformance_claim_allowed": { "const": true },
+        "marketplace_listing_allowed": { "const": true },
+        "enterprise_procurement_allowed": { "const": true },
+        "regulator_reliance_allowed": { "const": true },
+        "creator_collective_reliance_allowed": { "const": true },
+        "settlement_contract_enforceable": { "const": true },
+        "source_footer_contract_enforceable": { "const": true },
+        "noncompliant_routes_blocked": { "const": true },
+        "failure_modes": { "type": "array", "maxItems": 0 }
+      }
+    },
+    "contract_coverage": {
+      "type": "object",
+      "required": [
+        "required_adoption_role_count",
+        "ready_adoption_role_count",
+        "required_contractual_control_count",
+        "ready_contractual_control_count",
+        "required_jurisdiction_mapping_count",
+        "ready_jurisdiction_mapping_count",
+        "required_negative_procurement_failure_count",
+        "ready_negative_procurement_failure_count"
+      ],
+      "properties": {
+        "required_adoption_role_count": { "const": 10 },
+        "ready_adoption_role_count": { "const": 10 },
+        "required_contractual_control_count": { "const": 13 },
+        "ready_contractual_control_count": { "const": 13 },
+        "required_jurisdiction_mapping_count": { "const": 8 },
+        "ready_jurisdiction_mapping_count": { "const": 8 },
+        "required_negative_procurement_failure_count": { "const": 14 },
+        "ready_negative_procurement_failure_count": { "const": 14 }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payload_fields",
+        "private_strings_absent",
+        "private_payloads_excluded"
+      ],
+      "properties": {
+        "private_payload_fields": { "type": "array", "maxItems": 0 },
+        "private_strings_absent": { "const": true },
+        "private_payloads_excluded": { "const": true }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_adversarial_provenance_level",
+        "minimum_industry_adoption_root_level",
+        "adoption_role_count",
+        "ready_adoption_role_count",
+        "contractual_control_count",
+        "ready_contractual_control_count",
+        "jurisdiction_mapping_count",
+        "ready_jurisdiction_mapping_count",
+        "negative_procurement_failure_count",
+        "ready_negative_procurement_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_procurement_reliance_contract"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L174" },
+        "minimum_adversarial_provenance_level": { "const": "RDLLM-L173" },
+        "minimum_industry_adoption_root_level": { "const": "RDLLM-L163" },
+        "adoption_role_count": { "const": 10 },
+        "ready_adoption_role_count": { "const": 10 },
+        "contractual_control_count": { "const": 13 },
+        "ready_contractual_control_count": { "const": 13 },
+        "jurisdiction_mapping_count": { "const": 8 },
+        "ready_jurisdiction_mapping_count": { "const": 8 },
+        "negative_procurement_failure_count": { "const": 14 },
+        "ready_negative_procurement_failure_count": { "const": 14 },
+        "failure_mode_count": { "const": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_procurement_reliance_contract": { "const": true }
+      }
+    },
+    "universal_procurement_regulatory_reliance_contract_hash": {
+      "type": "string",
+      "minLength": 32
+    }
+  },
+  "$defs": {
+    "adoptionRoleRow": {
+      "type": "object",
+      "required": [
+        "role_hash",
+        "contract_hash",
+        "l173_quorum_hash",
+        "authority_hash",
+        "endpoint_hash",
+        "verifier_hash",
+        "accepts_rdllm_standard",
+        "binds_l173_quorum",
+        "publishes_well_known_contract",
+        "blocks_unbound_claims",
+        "preserves_footer_or_machine_readable_sources",
+        "supports_creator_challenge",
+        "no_private_payloads"
+      ]
+    },
+    "contractualControlRow": {
+      "type": "object",
+      "required": [
+        "control_hash",
+        "obligation_hash",
+        "evidence_hash",
+        "enforcement_hash",
+        "remedy_hash",
+        "verifier_hash",
+        "obligation_binding",
+        "measurable_sla",
+        "audit_evidence_exported",
+        "breach_blocks_reliance",
+        "settlement_or_display_remedy",
+        "no_private_payloads"
+      ]
+    },
+    "jurisdictionMappingRow": {
+      "type": "object",
+      "required": [
+        "jurisdiction_hash",
+        "obligation_hash",
+        "mapping_hash",
+        "evidence_export_hash",
+        "verifier_hash",
+        "maps_to_provider_duty",
+        "maps_to_customer_duty",
+        "regulator_readable",
+        "creator_readable",
+        "footer_and_machine_readable_attribution_supported",
+        "no_private_payloads"
+      ]
+    },
+    "negativeProcurementRow": {
+      "type": "object",
+      "required": [
+        "fixture_hash",
+        "route_trace_hash",
+        "contract_hash",
+        "verifier_hash",
+        "expected_reject",
+        "observed_reject",
+        "procurement_blocked",
+        "marketplace_delisted",
+        "regulator_warning_emitted",
+        "settlement_held",
+        "creator_challenge_routed",
+        "no_private_payloads"
+      ]
+    }
+  }
+}

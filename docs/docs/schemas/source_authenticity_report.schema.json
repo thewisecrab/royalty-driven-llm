@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/source_authenticity_report.schema.json",
+  "title": "RDLLM Source Authenticity Report",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "event",
+    "policy",
+    "artifact_bindings",
+    "artifact_status",
+    "source_authenticity_rows",
+    "authenticity_signal_commitments",
+    "checks",
+    "issues",
+    "commitments",
+    "summary",
+    "schemas",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-source-authenticity-report/v1" },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "answer_hash",
+        "source_availability_report_hash",
+        "source_boundary_report_hash",
+        "creator_license_contract_hash",
+        "source_confidence_report_hash"
+      ]
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "maximum_source_farm_risk",
+        "maximum_poisoning_risk",
+        "minimum_domain_reputation",
+        "requires_signed_origin_evidence",
+        "requires_trusted_origin_issuer"
+      ],
+      "properties": {
+        "policy_version": { "const": "rdllm-source-authenticity-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L64" }
+      }
+    },
+    "artifact_bindings": { "type": "object" },
+    "artifact_status": { "type": "object" },
+    "source_authenticity_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "work_id",
+          "chunk_id",
+          "content_hash",
+          "availability_row_hash",
+          "source_boundary_hash",
+          "license_term_hash",
+          "authenticity_signal_hash",
+          "origin_signature_verified",
+          "origin_issuer_trusted",
+          "human_non_synthetic_origin",
+          "source_farm_risk_below_threshold",
+          "poisoning_risk_below_threshold",
+          "source_authenticity_verified",
+          "direct_payout_eligible",
+          "payout_mode",
+          "source_authenticity_hash"
+        ]
+      }
+    },
+    "authenticity_signal_commitments": { "type": "array" },
+    "checks": { "type": "object" },
+    "issues": { "type": "array" },
+    "commitments": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "source_count",
+        "verified_source_count",
+        "synthetic_or_unverified_count",
+        "high_poisoning_risk_count",
+        "direct_payout_eligible_count",
+        "escrow_recommended_count",
+        "issue_count",
+        "all_sources_authentic"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L64" }
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["source_authenticity_report"]
+    },
+    "privacy": { "type": "object" },
+    "report_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

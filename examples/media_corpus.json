@@ -1,0 +1,52 @@
+{
+  "assets": [
+    {
+      "asset_id": "asset_canyon_mural",
+      "content_hash": "sha256:rdllm-image-canyon-mural-v1",
+      "creator_id": "creator_visual",
+      "descriptor": "sunlit desert mural turquoise river red mesa signed lower corner",
+      "license": "royalty-bearing",
+      "media_type": "image",
+      "perceptual_hash": "1111000011110000111100001111000011110000111100001111000011110000",
+      "source_uri": "https://example.test/media/canyon-mural",
+      "title": "Canyon Mural"
+    },
+    {
+      "asset_id": "asset_brass_loop",
+      "creator_id": "creator_audio",
+      "descriptor": "bright brass jazz loop brushed snare walking bass sixty beats",
+      "license": "royalty-bearing",
+      "media_type": "audio",
+      "perceptual_hash": "1010101010101010101010101010101010101010101010101010101010101010",
+      "source_uri": "https://example.test/media/brass-loop",
+      "title": "Brass Loop"
+    },
+    {
+      "asset_id": "asset_tea_video",
+      "creator_id": "creator_video",
+      "descriptor": "quiet tea ceremony clip ceramic bowl tatami room slow camera",
+      "license": "royalty-bearing",
+      "media_type": "video",
+      "perceptual_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "source_uri": "https://example.test/media/tea-ceremony",
+      "title": "Tea Ceremony Clip"
+    }
+  ],
+  "creators": [
+    {
+      "creator_id": "creator_visual",
+      "name": "Visual Owner",
+      "payout_account": "acct_visual"
+    },
+    {
+      "creator_id": "creator_audio",
+      "name": "Audio Owner",
+      "payout_account": "acct_audio"
+    },
+    {
+      "creator_id": "creator_video",
+      "name": "Video Owner",
+      "payout_account": "acct_video"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "artifact_bindings": {
+    "attested_runtime": {
+      "artifact_type": "",
+      "declared_hash": "",
+      "hash_reproducible": false,
+      "present": false
+    },
+    "foundation_runtime_adapter": {
+      "artifact_type": "rdllm-foundation-runtime-adapter/v1",
+      "declared_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "foundation_runtime_router": {
+      "artifact_type": "rdllm-foundation-runtime-router/v1",
+      "declared_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+      "hash_reproducible": true,
+      "present": true
+    }
+  },
+  "checks": {
+    "api_boundary_attestation_present": true,
+    "artifact_hashes_reproducible": true,
+    "deployment_statement_attestation_type_allowed": true,
+    "deployment_statement_binds_request_response_boundary": true,
+    "deployment_statement_hash_reproducible": true,
+    "deployment_statement_matches_selected_route": true,
+    "deployment_statement_model_commitments_present": true,
+    "deployment_statement_signature_valid": true,
+    "deployment_statement_valid_for_report_time": true,
+    "deployment_statement_version_supported": true,
+    "foundation_runtime_router_released_l128": true,
+    "private_text_not_disclosed": true,
+    "request_response_binding_complete": true,
+    "request_response_binding_matches_runtime_adapter": true,
+    "selected_route_binds_runtime_adapter": true,
+    "trusted_deployment_key_active": true
+  },
+  "commitments": {
+    "foundation_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+    "foundation_runtime_router_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+    "model_deployment_statement_hash": "de2de816bac68e305587680a01aa1be2b0167ce14662b8589d1599cf9d280bd4",
+    "request_response_binding_hash": "b6448e7bd58defc96aa5cd0ccd705c462b232699a8c808f92647fcb24baf7176",
+    "schema": "docs/schemas/foundation_model_deployment_attestation.schema.json",
+    "trusted_deployment_key_root": "69fa3257ebf8a827af1906dbdbfb12b6ab260aa23c15d4baed2e43b63b9a9bfd"
+  },
+  "coverage_gaps": {
+    "failed_checks": [],
+    "failure_modes": [],
+    "matched_deployment_key_id": "deployment-key:artifact-foundation-runtime",
+    "missing_model_commitments": []
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "deployment_attestation_version": "rdllm-foundation-model-deployment-attestation/v1",
+  "deployment_decision": {
+    "decision": "release",
+    "failed_checks": [],
+    "failure_modes": [],
+    "release_authorized": true,
+    "safe_output_policy": "emit_attested_foundation_model_output"
+  },
+  "deployment_policy": {
+    "accepted_attestation_types": [
+      "provider_signed_deployment",
+      "api_boundary_attestation",
+      "tee_remote_attestation",
+      "third_party_deployment_audit",
+      "aex_api_boundary"
+    ],
+    "minimum_input_level": "RDLLM-L128",
+    "on_model_identity_mismatch": "block_display",
+    "on_request_response_boundary_mismatch": "block_display",
+    "on_unattested_deployment": "block_display",
+    "profile": "rdllm-foundation-model-deployment-attestation-policy/v1",
+    "raw_model_weights_disclosure_allowed": false,
+    "raw_request_or_response_disclosure_allowed": false,
+    "required_model_commitments": [
+      "model_manifest_hash",
+      "weights_commitment_hash",
+      "tokenizer_hash",
+      "inference_stack_hash",
+      "safety_policy_hash",
+      "attribution_policy_hash"
+    ],
+    "target_certification_level": "RDLLM-L129"
+  },
+  "foundation_model_deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+  "issuer": "rdllm-local-demo",
+  "model_deployment_statement": {
+    "api_boundary_attestation_hash": "c917760b05df8bb949b2450ff91e3d360427694f095c37090dfc2bba6aed6148",
+    "attestation_type": "provider_signed_deployment",
+    "attribution_policy_hash": "9babd2929d2172b9374700eabf10400c04d9c228944ddb3eef47e5344c845127",
+    "created_at": "2026-05-31T00:00:00Z",
+    "deployment_id": "deployment:artifact-foundation-runtime",
+    "deployment_key_id": "deployment-key:artifact-foundation-runtime",
+    "foundation_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+    "foundation_runtime_router_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+    "inference_stack_hash": "c16b60ca911b6009889c3e07041556d88efb4633dfd2d12e78d4643b73f5487b",
+    "model_manifest_hash": "0186d7e22031f7f4e8449800e075f85715e6d917416e2d85490c87ddb5378852",
+    "model_version": "2026-06-02",
+    "native_model": "openai:responses-compatible",
+    "provider_family": "openai_responses",
+    "provider_id": "provider:openai-responses",
+    "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+    "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+    "route_decision_hash": "be7c1645424246ff54377b59bd6895ef9df1b7f6147a2392ace3a27f3eef51c2",
+    "safety_policy_hash": "9801dc39dd91bc273648221f1baf1763ecb38792c885190ce9ba3aae2b65d315",
+    "selected_route_id": "route:openai_responses",
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "key_id": "deployment-key:artifact-foundation-runtime",
+      "value": "cf8e79dbff1ef9b2168c6f1e757a21c4bd77871ce1ca7fcc4c99d42452dcfefe"
+    },
+    "statement_hash": "de2de816bac68e305587680a01aa1be2b0167ce14662b8589d1599cf9d280bd4",
+    "statement_version": "rdllm-foundation-model-deployment-statement/v1",
+    "tokenizer_hash": "8719a6432f3cb39129deea31cdfc7a1de297bdb3d7252a3e8e77e41458ac17b3",
+    "valid_from": "2026-01-01T00:00:00Z",
+    "valid_until": "2026-12-31T23:59:59Z",
+    "weights_commitment_hash": "2c706137c82cdd0bc388c00a4e42b83825774584333f58e082bb0bd76d78d038"
+  },
+  "privacy": {
+    "deployment_key_secret_disclosed": false,
+    "hash_only_model_commitments": true,
+    "raw_model_weights_disclosed": false,
+    "raw_request_disclosed": false,
+    "raw_response_disclosed": false,
+    "raw_router_payload_disclosed": false
+  },
+  "request_response_binding": {
+    "api_boundary_attestation_hash": "c917760b05df8bb949b2450ff91e3d360427694f095c37090dfc2bba6aed6148",
+    "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+    "native_response_id": "runtime_rdllm_reference_response",
+    "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+    "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+    "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be"
+  },
+  "schemas": {
+    "attested_runtime": "docs/schemas/attested_runtime.schema.json",
+    "foundation_model_deployment_attestation": "docs/schemas/foundation_model_deployment_attestation.schema.json",
+    "foundation_runtime_adapter": "docs/schemas/foundation_runtime_adapter.schema.json",
+    "foundation_runtime_router": "docs/schemas/foundation_runtime_router.schema.json"
+  },
+  "selected_route_binding": {
+    "foundation_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+    "foundation_runtime_router_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+    "native_model": "openai:responses-compatible",
+    "provider_family": "openai_responses",
+    "provider_id": "provider:openai-responses",
+    "route_decision_hash": "be7c1645424246ff54377b59bd6895ef9df1b7f6147a2392ace3a27f3eef51c2",
+    "route_id": "route:openai_responses"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "61b1eba9f22e2b5b13cd1345000dbc1a744f6d40fb49edcbf453067baf0cea2e"
+  },
+  "summary": {
+    "api_boundary_attested": true,
+    "attestation_type": "provider_signed_deployment",
+    "deployment_id": "deployment:artifact-foundation-runtime",
+    "deployment_release_authorized": true,
+    "failed_check_count": 0,
+    "failure_mode_count": 0,
+    "minimum_input_level": "RDLLM-L128",
+    "model_identity_bound": true,
+    "native_model": "openai:responses-compatible",
+    "privacy_preserved": true,
+    "provider_family": "openai_responses",
+    "provider_id": "provider:openai-responses",
+    "request_response_boundary_bound": true,
+    "status": "released",
+    "target_certification_level": "RDLLM-L129"
+  },
+  "trusted_deployment_key_rows": [
+    {
+      "deployment_key_hash": "1cfddf990906b928fda189222f7f0f779e93b8ab48be6e052ad1b7d1182812d3",
+      "deployment_key_id": "deployment-key:artifact-foundation-runtime",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "status": "active",
+      "trusted_deployment_key_row_hash": "c3db55ba8e84b455d61bc41b4e1714723c01070ca608ebaac96108230b77a84d",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": "2026-12-31T23:59:59Z"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/decision_provenance_report.schema.json",
+  "title": "RDLLM Decision Provenance Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "event",
+    "artifact_bindings",
+    "artifact_nodes",
+    "decision_nodes",
+    "influence_edges",
+    "checks",
+    "commitments",
+    "schemas",
+    "summary",
+    "privacy",
+    "issues",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-decision-provenance-report/v1" },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": { "type": "object" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "answer_hash",
+        "trace_hash",
+        "response_envelope_hash",
+        "release_gate_hash"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": { "type": "object" },
+    "artifact_nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "node_id",
+          "node_type",
+          "artifact_name",
+          "artifact_type",
+          "declared_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "influence_boundary",
+          "node_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "decision_nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "node_id",
+          "node_type",
+          "decision_type",
+          "decision_scope",
+          "decision_status",
+          "subject",
+          "node_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "influence_edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_node",
+          "target_node",
+          "edge_class",
+          "influence_channel",
+          "allowed_influence",
+          "reason",
+          "edge_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "response_envelope_verified",
+        "release_gate_verified",
+        "trace_exchange_verified",
+        "source_boundary_verified",
+        "claim_decisions_have_required_proof_edges",
+        "footer_decisions_have_required_display_edges",
+        "payout_decisions_have_policy_and_accounting_edges",
+        "payout_decisions_have_no_untrusted_source_text_edges",
+        "release_decision_has_required_proof_edges",
+        "private_input_fields_absent"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": { "type": "object" },
+    "schemas": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "artifact_node_count",
+        "decision_node_count",
+        "claim_decision_count",
+        "footer_decision_count",
+        "payout_decision_count",
+        "release_decision_count",
+        "influence_edge_count",
+        "passed_check_count",
+        "check_count",
+        "issue_count"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L62" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": { "type": "object" },
+    "issues": { "type": "array", "items": { "type": "string" } },
+    "report_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

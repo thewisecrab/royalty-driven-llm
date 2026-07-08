@@ -1,0 +1,692 @@
+{
+  "adoption_decision": {
+    "creator_settlement_release_allowed": true,
+    "failure_modes": [],
+    "incomplete_adoption_roles": [],
+    "incomplete_negative_root_failures": [],
+    "incomplete_publication_endpoints": [],
+    "industry_adoption_root_ready": true,
+    "missing_adoption_roles": [],
+    "missing_negative_root_failures": [],
+    "missing_publication_endpoints": [],
+    "provider_self_assertion_sufficient": false,
+    "source_footer_reliance_allowed": true
+  },
+  "artifact_bindings": {
+    "assurance_bundle": {
+      "artifact_hash": "72378ed1d1d7dca2cc0a967f966cc3ba9b275f5bfe6c6e09d482a1aa30eaf31a",
+      "hash_reproducible": true,
+      "level": "",
+      "payload_hash": "72378ed1d1d7dca2cc0a967f966cc3ba9b275f5bfe6c6e09d482a1aa30eaf31a",
+      "present": true,
+      "status": ""
+    },
+    "certification_attestation": {
+      "artifact_hash": "77299f33de4f5dd1a498bf3bebfc07d7c410353e8f0e7a9cfa31913a56c212ed",
+      "hash_reproducible": true,
+      "level": "RDLLM-L52",
+      "payload_hash": "77299f33de4f5dd1a498bf3bebfc07d7c410353e8f0e7a9cfa31913a56c212ed",
+      "present": true,
+      "status": "attested"
+    },
+    "certification_report": {
+      "artifact_hash": "dc1e7090d04e2ab7240ea7675cc965f789d31c5d7518d0e18a5a7f35f60631ec",
+      "hash_reproducible": true,
+      "level": "RDLLM-L186",
+      "payload_hash": "dc1e7090d04e2ab7240ea7675cc965f789d31c5d7518d0e18a5a7f35f60631ec",
+      "present": true,
+      "status": "passed"
+    },
+    "discovery_manifest": {
+      "artifact_hash": "ceab40a4fb7b3829680b8b79e6e22507c16effe0683528d5258bdfcc3795c363",
+      "hash_reproducible": true,
+      "level": "RDLLM-L186",
+      "payload_hash": "ceab40a4fb7b3829680b8b79e6e22507c16effe0683528d5258bdfcc3795c363",
+      "present": true,
+      "status": "ready"
+    },
+    "finance_ledger_attestation": {
+      "artifact_hash": "bf9213efed842b864f119fc30fcfd464e6f4df7ce8845bfe2677530d7d973ef0",
+      "hash_reproducible": true,
+      "level": "RDLLM-L47",
+      "payload_hash": "bf9213efed842b864f119fc30fcfd464e6f4df7ce8845bfe2677530d7d973ef0",
+      "present": true,
+      "status": "ready"
+    },
+    "integration_profile": {
+      "artifact_hash": "88a249a6054b067fd8f1dafdc798be572b137b7a998f3cef9f13fe75ac582df6",
+      "hash_reproducible": true,
+      "level": "RDLLM-L186",
+      "payload_hash": "88a249a6054b067fd8f1dafdc798be572b137b7a998f3cef9f13fe75ac582df6",
+      "present": true,
+      "status": "ready"
+    },
+    "proof_dependency_graph": {
+      "artifact_hash": "6255b1a9934cab5dd5cf2c9e5b85d2439b34c149ca0705a7a0e0da7af24746e9",
+      "hash_reproducible": true,
+      "level": "RDLLM-L186",
+      "payload_hash": "6255b1a9934cab5dd5cf2c9e5b85d2439b34c149ca0705a7a0e0da7af24746e9",
+      "present": true,
+      "status": "ready"
+    },
+    "provider_attribution_card": {
+      "artifact_hash": "461be8e9acd24c00504972ab2480806c5ae3ca157fa1dea47a6137f40dae8289",
+      "hash_reproducible": true,
+      "level": "RDLLM-L186",
+      "payload_hash": "461be8e9acd24c00504972ab2480806c5ae3ca157fa1dea47a6137f40dae8289",
+      "present": true,
+      "status": ""
+    },
+    "response_envelope": {
+      "artifact_hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243",
+      "hash_reproducible": true,
+      "level": "RDLLM-L186",
+      "payload_hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243",
+      "present": true,
+      "status": "verified"
+    },
+    "revenue_allocation_report": {
+      "artifact_hash": "d927e86b83c754197b4c9f28cf00828bff8b29289e9b5a0cc49d7604761d1cd3",
+      "hash_reproducible": true,
+      "level": "RDLLM-L46",
+      "payload_hash": "d927e86b83c754197b4c9f28cf00828bff8b29289e9b5a0cc49d7604761d1cd3",
+      "present": true,
+      "status": "ready"
+    },
+    "source_footer_delivery": {
+      "artifact_hash": "833f09a89007c28a097e80471cc0ccd1a59783aa5889b89e8c56a7ba52541104",
+      "hash_reproducible": true,
+      "level": "RDLLM-L103",
+      "payload_hash": "833f09a89007c28a097e80471cc0ccd1a59783aa5889b89e8c56a7ba52541104",
+      "present": true,
+      "status": "ready"
+    },
+    "trust_registry": {
+      "artifact_hash": "ca4bf6639b80b98dd0dffcf7b67855a0a9717e22ceca6576df57e0c029346974",
+      "hash_reproducible": true,
+      "level": "RDLLM-L51",
+      "payload_hash": "ca4bf6639b80b98dd0dffcf7b67855a0a9717e22ceca6576df57e0c029346974",
+      "present": true,
+      "status": "ready"
+    },
+    "universal_certification_trust_federation": {
+      "artifact_hash": "1e67b49c919ee1bf4d41cb1588df9bd13d593827a709f898c8d659422c9cc031",
+      "hash_reproducible": true,
+      "level": "RDLLM-L161",
+      "payload_hash": "1e67b49c919ee1bf4d41cb1588df9bd13d593827a709f898c8d659422c9cc031",
+      "present": true,
+      "status": "ready"
+    },
+    "universal_foundation_provider_adoption_pack": {
+      "artifact_hash": "d52f372c886612f98306e78347d09a170e2017a777e30dc401803294ad11fb69",
+      "hash_reproducible": true,
+      "level": "RDLLM-L162",
+      "payload_hash": "d52f372c886612f98306e78347d09a170e2017a777e30dc401803294ad11fb69",
+      "present": true,
+      "status": "ready"
+    },
+    "universal_negotiated_invocation_enforcement": {
+      "artifact_hash": "585cfff486eb0fcd9118effef5ded2f07172b549cb7c778fb61b0924519eddce",
+      "hash_reproducible": true,
+      "level": "RDLLM-L160",
+      "payload_hash": "585cfff486eb0fcd9118effef5ded2f07172b549cb7c778fb61b0924519eddce",
+      "present": true,
+      "status": "ready"
+    }
+  },
+  "checks": {
+    "adoption_pack_binds_current_proof_graph": true,
+    "adoption_pack_l162_ready": true,
+    "all_adoption_roles_fail_closed": true,
+    "all_publication_endpoints_verified": true,
+    "attestation_level_at_least_l162": true,
+    "certification_level_at_least_l162": true,
+    "core_artifacts_bound": true,
+    "core_artifacts_ready": true,
+    "discovery_manifest_declares_industry_root": true,
+    "discovery_manifest_level_at_least_l162": true,
+    "integration_profile_declares_industry_root": true,
+    "negative_root_fixtures_reject": true,
+    "private_fields_absent": true,
+    "private_strings_absent": true,
+    "proof_graph_l162_ready": true,
+    "provider_card_declares_industry_root": true,
+    "provider_card_level_at_least_l162": true
+  },
+  "closure_model": {
+    "adoption_pack_binds_proof_graph": true,
+    "adoption_pack_hash": "d52f372c886612f98306e78347d09a170e2017a777e30dc401803294ad11fb69",
+    "proof_graph_hash": "6255b1a9934cab5dd5cf2c9e5b85d2439b34c149ca0705a7a0e0da7af24746e9",
+    "root_binds_adoption_pack": true,
+    "root_binds_publication_endpoints": true,
+    "root_binds_role_obligations": true,
+    "type": "two_phase_acyclic_root"
+  },
+  "created_at": "2026-06-03T00:00:00Z",
+  "evidence_roots": {
+    "artifact_binding_root": "4307ab00d854921b98d3a6c616d28132f458c3cea888ede7c366222c0994d513",
+    "negative_root": "c3f8deefcaf819211cd4895df54e028032227ccd5fafec538f74831efef9fda5",
+    "publication_endpoint_root": "16691486c06e98697c6fc18a229970fa1d0debf06c879bd16d7f3cd58ec5e418",
+    "role_obligation_root": "8f405f3d6321dc95a727086e86cbd3ab0ac79a7ca242b49eddb59fbb1980eb20"
+  },
+  "issuer": "rdllm-local-demo",
+  "negative_root_rows": {
+    "copied_output_without_status_link": {
+      "expected_reject": true,
+      "fixture_hash": "6edd07fc8b11416f705dd8fb0707bc28d6cc848020f204ea01257488818b604b",
+      "observed_reject": true,
+      "public_status_marked_failed": true,
+      "root_reliance_blocked": true,
+      "settlement_held": true
+    },
+    "creator_audit_route_missing": {
+      "expected_reject": true,
+      "fixture_hash": "0aa3a722d142d9bd2d501805f24da323106487a0cb603ae553f0283b346d89df",
+      "observed_reject": true,
+      "public_status_marked_failed": true,
+      "root_reliance_blocked": true,
+      "settlement_held": true
+    },
+    "endpoint_without_verifier": {
+      "expected_reject": true,
+      "fixture_hash": "389f56ab3d742e9a7451b185e3585f7d0aa603a56e26f96d3181f9fd143c057a",
+      "observed_reject": true,
+      "public_status_marked_failed": true,
+      "root_reliance_blocked": true,
+      "settlement_held": true
+    },
+    "invalid_trust_chain": {
+      "expected_reject": true,
+      "fixture_hash": "0d15811e1f9a3c6a47dc830bbcb06fcd5e0b0a697e403c9f407b3c9ea93572a2",
+      "observed_reject": true,
+      "public_status_marked_failed": true,
+      "root_reliance_blocked": true,
+      "settlement_held": true
+    },
+    "missing_l162_adoption_pack": {
+      "expected_reject": true,
+      "fixture_hash": "554d50d1697fe89593b76ad687d7225c200a1e316c4601e1cfcc2df26d9340fc",
+      "observed_reject": true,
+      "public_status_marked_failed": true,
+      "root_reliance_blocked": true,
+      "settlement_held": true
+    },
+    "private_payload_leak": {
+      "expected_reject": true,
+      "fixture_hash": "30ad10870f9a724d3831e41c0190d8919949ff6b68487325c818da887d39cbed",
+      "observed_reject": true,
+      "public_status_marked_failed": true,
+      "root_reliance_blocked": true,
+      "settlement_held": true
+    },
+    "provider_route_without_l162": {
+      "expected_reject": true,
+      "fixture_hash": "7388ad0f7d22909ca8b292989da56bdbee2b4b32b95aa238b332c0104b12e5ba",
+      "observed_reject": true,
+      "public_status_marked_failed": true,
+      "root_reliance_blocked": true,
+      "settlement_held": true
+    },
+    "regulator_export_missing": {
+      "expected_reject": true,
+      "fixture_hash": "e111c0b38cd14e26a03ae289ca94bc62a7c112402bf9f29b41ae8781a0b0ca16",
+      "observed_reject": true,
+      "public_status_marked_failed": true,
+      "root_reliance_blocked": true,
+      "settlement_held": true
+    },
+    "role_without_settlement_hold": {
+      "expected_reject": true,
+      "fixture_hash": "77c52c5094ea70b8c22c88fa7105715698af6f1f21abbd387bc7944e00372809",
+      "observed_reject": true,
+      "public_status_marked_failed": true,
+      "root_reliance_blocked": true,
+      "settlement_held": true
+    },
+    "root_not_in_discovery": {
+      "expected_reject": true,
+      "fixture_hash": "2e196e3cbfb469a6855526aedfd8e87907e8595c109532881a7634a2921ac09c",
+      "observed_reject": true,
+      "public_status_marked_failed": true,
+      "root_reliance_blocked": true,
+      "settlement_held": true
+    },
+    "settlement_without_l162_root": {
+      "expected_reject": true,
+      "fixture_hash": "fe7467bfd3cf6a68bee729b1f3a54235a102b38f9b09504f214be14279b3225f",
+      "observed_reject": true,
+      "public_status_marked_failed": true,
+      "root_reliance_blocked": true,
+      "settlement_held": true
+    },
+    "stale_proof_dependency_graph": {
+      "expected_reject": true,
+      "fixture_hash": "4b868e71fa2b57596c6fab2a136eb9c4fe50b8d704297693c976413119172a73",
+      "observed_reject": true,
+      "public_status_marked_failed": true,
+      "root_reliance_blocked": true,
+      "settlement_held": true
+    }
+  },
+  "policy": {
+    "creator_settlement_release_requires_root": true,
+    "minimum_adoption_pack_level": "RDLLM-L162",
+    "minimum_trust_federation_level": "RDLLM-L161",
+    "policy_version": "rdllm-universal-industry-adoption-root-policy/v1",
+    "provider_neutral_root_required": true,
+    "public_endpoint_verifiers_required": true,
+    "self_assertion_sufficient": false,
+    "source_footer_reliance_requires_root": true,
+    "target_certification_level": "RDLLM-L163",
+    "two_phase_acyclic_closure_required": true
+  },
+  "privacy": {
+    "answer_text_disclosed": false,
+    "native_provider_payloads_disclosed": false,
+    "payment_account_details_disclosed": false,
+    "prompt_text_disclosed": false,
+    "public_root_uses_hashes_status_rows_and_verifier_commands": true,
+    "source_text_disclosed": false,
+    "tool_payloads_disclosed": false
+  },
+  "publication_endpoint_rows": {
+    "c2pa_content_credential_assertion": {
+      "endpoint_hash": "128b0882aa65bf7ec3744bfc0a1fd55ccca91aaa7abf432e3eec3c4089671638",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "c7375808b346a3da27fbac80c757407d9c56acd4b921194e11f1aa6c20e05f77",
+      "status_hash": "bcb75a583b0c4ce5784a73f759aff5b0a453554cdb39337e3f27b8b36d3c8be7",
+      "verifier_available": true,
+      "verifier_command_hash": "00f6da64555f067d00d8726bd72fadf2e990b839c4c29be651d41cbd3f6489b0",
+      "version_hash": "e4dbc62a71ef131b1c08e0fa6213a6299ab6a1cd69d3d82ec01c03e80ac6d1e1"
+    },
+    "certification_attestation": {
+      "endpoint_hash": "10c746a5dda999ddf01a305f44a312482b40ed2aa151a5e05b90989292a12d9b",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "dde1bef74e6d4c47ee98c8d789f698e32455f5edf15d514fa1a62b9608a6b7a0",
+      "status_hash": "f738b88466c426eb2a2ce1de1a4cbc3b66f4023c9476ee5b9d288f3716ebf615",
+      "verifier_available": true,
+      "verifier_command_hash": "f7239b1121be2543eb87508528d7e82c32865501b6dcfe549a798b303ab1c7e0",
+      "version_hash": "4988661ddf3eb33a961a525e0e8c1bcb8d242106e2b45138ec3a19ae081831b2"
+    },
+    "certification_report": {
+      "endpoint_hash": "cca9450ce338c59ad915cb9ed267a0e7da5d2afbddfb371f0e85f1df6aca409a",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "ef54d0138bfea09c89579126445eebe8d3741f97b3d135603542296a91f40efe",
+      "status_hash": "8b9a0262af4ff065e9ba4bd1d55744879c400080d796d1a2fcfad09960f72643",
+      "verifier_available": true,
+      "verifier_command_hash": "2b1ca7acfdce0c6c3baacf0acd2a4bd5af7e0c9892232d0df87a8f1e176410b2",
+      "version_hash": "e453e0a2b570bf9d57ac8c5b57a50c21a57f7316e0827b63a447a90c29781a38"
+    },
+    "creator_audit_query": {
+      "endpoint_hash": "d1e70e6368ae2a9b75a33e6fdc41db2e8d5ecd08d874d6e9062326d2d85da92e",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "bcb842e193ae9624863360f65c701a261619f3f2a53dfd34db274218d308ca75",
+      "status_hash": "b7e8b59341daf7f6bd924b4551b70cee817733199b5e4fe5882b269ab1db37a5",
+      "verifier_available": true,
+      "verifier_command_hash": "70280336f18383df8bdc1a84c2e0339d659739ca92b0407d71883cac09fca3d3",
+      "version_hash": "1e7b3f9939e2bf54dd61bbf735af1202dc1688c0857a2e0cf0437b881f110bf7"
+    },
+    "discovery_manifest": {
+      "endpoint_hash": "588f8ef486b05c2bb258df5e1e9eda6fbb885a7c3ed3e00bd382d12b0a0ae4a5",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "e1138ec0047221190bdd46c932f07f26bb7a0e40949ee12fd06028cd9b2510e0",
+      "status_hash": "1d1d50fc7fc2d44366f82842842e3f6ec23162cfe289e4793bb1e82f5297b1c6",
+      "verifier_available": true,
+      "verifier_command_hash": "2e798e00c38e6070e6ff628b216b35b3be054235ff2efca5856f8a36eff34a65",
+      "version_hash": "15a36bda05cb305c20a659d4f8645374a527a680d5cc06ebe07c859bd23a9578"
+    },
+    "foundation_provider_adoption_pack": {
+      "endpoint_hash": "680f5f6b4f078ed504c670a4a427fe5e27a98a88ed0ad590dad22bd295b04bcf",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "f01ca836ea16bb4a4897e347a940d84521b125c7fab632719c124bdcca01151b",
+      "status_hash": "0f009534f9d0728956d4a0e08d1847994d179e70adf15bbb569c746c2f69dc1f",
+      "verifier_available": true,
+      "verifier_command_hash": "2edef8f328ef2fd137fef6663dfe9e060e41de4945e3e393c6877036cd9c0f3f",
+      "version_hash": "8e1d0c3efce5c13fdffa48e0106283abf8419ef6fe4b647715e58d2d48a4e6b2"
+    },
+    "industry_adoption_root": {
+      "endpoint_hash": "2c8af6f5f252dedd57a971c06c9e1e4b32ce944243fb65c216c6fb564212eb8b",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "2a4c78e033fc81d393e2a3c108aedc6aa2eb32731686f14b7612800dffd4f964",
+      "status_hash": "a137077ecff85e48e0357695bfa32041104ed2c03454a40dd5b1dccded2595f8",
+      "verifier_available": true,
+      "verifier_command_hash": "a1acda06addb2216ba1fe4bb557bcf45734f0645f0b63ee96e3f17b4159d47f5",
+      "version_hash": "07c1196b28d28c1842047912bd8463f58fc04ff27b6a826fb65e1f40038f939a"
+    },
+    "integration_profile": {
+      "endpoint_hash": "1c8853efe151dca1fc3d6413eb9e0474efd60bb36570e7cee033d38d712247ef",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "87ed246b20f092146e1ace19f8c83e4b29e79de6a8579ef1a39871f2c9cacfa5",
+      "status_hash": "bb19807c9bbc751f9df0412b0cabbf3d7d5cc211f8c928261e2fb2a6acbdd034",
+      "verifier_available": true,
+      "verifier_command_hash": "31691e082387699d8d874c49cf795ce2993fdbca84f0bd682caedea373158f16",
+      "version_hash": "b0a0f14b6bdfb9fee8a241f54702fe033c17af4fed50182faa4cb228ec55753f"
+    },
+    "mcp_tool_resource_contract": {
+      "endpoint_hash": "745d68acc640f6031dc87d04e8322bb9f3fe6fee7afc09dd95b8c234da24b7fd",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "4dacf34ad73684e54955ee73d27d1ff1766f7a23c954d7c34d30577ad8ec0dc9",
+      "status_hash": "6b15e1008414f40e031d68866f8be981ee440714075164cc22a1bfb6a3b99bb6",
+      "verifier_available": true,
+      "verifier_command_hash": "007e96554722a097874336e9e082b50f2497f0b8e2643da39bf8e757df7ee073",
+      "version_hash": "cf9f400a61c07ac051a21b9930eaefeb135bd25fa77f6450de01efa771fc49f6"
+    },
+    "openapi_discovery": {
+      "endpoint_hash": "6b50e91cfd0c8012c417e4e50aeae08b528e26f405ebad94af6e2cec8b6b63e8",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "cc3e36b54dd4cc7413b21310dc3a70e3c83e2f06074d46f07b72fc046102c76a",
+      "status_hash": "993255d7484e42d56457b7dd7608777f5211d5dffd4aaef096379b086fba780e",
+      "verifier_available": true,
+      "verifier_command_hash": "9881b1950d7d4f76f17fb5cbd681f478ed4a5da4f37aa17237e5c93691c538c2",
+      "version_hash": "f6141fcf8ae7839191f09c3daab66ffe00923e1cb6910cb423ebd386ff5fff0a"
+    },
+    "otel_genai_mapping": {
+      "endpoint_hash": "fed6e1faccb7c8ba502b324936ba285a6d62f88333f4aa15ee079d098c90083a",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "e2068bb5816b199b682439aa5ca517bbab4ae6d943847477214cc2f9cc5e4d5c",
+      "status_hash": "628951cfbd45975fe690e449207674389d7c2ca67cd1f26752f9053741461c53",
+      "verifier_available": true,
+      "verifier_command_hash": "07ce7919a7c856bd74dc75e2bfd12fa2df59da43583c10efa79a15492681db43",
+      "version_hash": "19282f050e79b2c1badedc44984cb609436686a135d1ace65a0516743c613c4d"
+    },
+    "payment_settlement_rail_profile": {
+      "endpoint_hash": "44884c4760d189c049cbb044c9857ae076e199fbbe68574bcfc5e9e4a570cdb7",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "8b2852f943deca6346b5e98c15b6fc5c5498f425560073a50ea2571c47960cbe",
+      "status_hash": "6febfc4d6331d5a8fab32fbb638f3d0c12a622ab988a03cb6c4243dbbc9f5e15",
+      "verifier_available": true,
+      "verifier_command_hash": "109c0b067365a36a2f8b83e748affd47e0fc93de09d103edec75e5f9d239d3e7",
+      "version_hash": "26331ebe96c2eff03cf839887eda6d11598813d03881bcf218613e6a3f3f84f2"
+    },
+    "proof_dependency_graph": {
+      "endpoint_hash": "7664a464c31117ad00c0653c7946557df9341af0337869392e95206f631cd00a",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "28d42f0df22adb229727a205657a760a68a1d046eb26e5c90947c6cff06b39d9",
+      "status_hash": "acee2a62a641cd7c93cce11bcca4ae46db47df47cdbce87cb6d3d9d6f1aa3e11",
+      "verifier_available": true,
+      "verifier_command_hash": "373690dee3742c3a9143d2454f96cddd52b388b66ddcca0f9e5fa0a9459f7889",
+      "version_hash": "61dac5208d3b0e2bf28bac450b92c0b6dcc045fd370dc6c21b11e567afbe6209"
+    },
+    "provider_attribution_card": {
+      "endpoint_hash": "be84e7e6b8eb41c507b72cc822c7710006f38ebcef41683783a11a1a2b903c67",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "30cddca360f2726817b7e863350ae33cf8073aea202a6cad75c60ed281db4ee0",
+      "status_hash": "b719682cb77f351d9fe36eacda0dd040bfdacb1d3f518d10cf1f48df0f3a8b5f",
+      "verifier_available": true,
+      "verifier_command_hash": "c8ab4f8d89f23be361dac6318e350e7f7211b90509d36faf4ddd52378dc4a6df",
+      "version_hash": "c2ba9153373a5b884938828449bdb6feda7e962684c669f64182029b59351225"
+    },
+    "regulator_export": {
+      "endpoint_hash": "367c58bf9ff1bfb6010827f71d5b8a520001c20622e1e5e3f30e5162297fb058",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "85940a16432bcc8e06104f5d6da6fe13bfa0c46092790ea9fe889ddc2193e4f2",
+      "status_hash": "b77a5b348af5184ba133dfccf6d93d9d7d07ee4d9137898343e83072a414e852",
+      "verifier_available": true,
+      "verifier_command_hash": "3bc6f78834dc6a6f8f69b9d4f0458f5c520015391e3a9f077ed344f741ff901c",
+      "version_hash": "1ef8a58b0415c84ec6db05a14451412e32752551a0d396b03f3522415423ed23"
+    },
+    "revocation_status": {
+      "endpoint_hash": "ad1693b2be98e2018a206c7c5272bde0c9dd281036d14d224d9622d0ae1d70c5",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "6e488d15e83865ae58cefa0576257ed3bd8d6f6ec1c450b1313b0715888fb30d",
+      "status_hash": "6797507dbe3936666ed3df0fa9ec293caa217889b473c6a429d2f34836e871d9",
+      "verifier_available": true,
+      "verifier_command_hash": "06446460a77e77ca5dea2243f7ab722dcc0775a42e5a72a7b41734e98bcccda8",
+      "version_hash": "76b05d44b1f798916957a277807dc7faafae48e4132a92ebe0d5c47e59f0747c"
+    },
+    "scitt_transparency_statement": {
+      "endpoint_hash": "3a50f2d3c8604553362f475067033ca6e6c9e2bef0aed67c36a101e2be5b0ec0",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "4c7caf757c50caaa06c168ff58b27c8200ae4c3aba854d565f2fe0098838e59e",
+      "status_hash": "e92fe1b47b721af49e478aab2452d5cd5f578b5ef4d8c12609c3d52ec694e947",
+      "verifier_available": true,
+      "verifier_command_hash": "41da707a9377c13d59efb3129a96c88fac66fa24b818f0e9d3a77c08030dbf21",
+      "version_hash": "829641847c40777f92459da721d58eb5aeb5b0702351d9b0e0aae9af9f1bc684"
+    },
+    "sdk_middleware_package": {
+      "endpoint_hash": "528ad7ac100c160c2e29df750cc7a76667636e89cb24ea214db76cd419b56f3c",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "1e01835b6a96ddf8cebc6e416e830288662c23e9ccc57b66d560c9abd715f26e",
+      "status_hash": "58e7b80927746e7d5abcb3a7afc7315ba653ff49ff691bbce739f64857746450",
+      "verifier_available": true,
+      "verifier_command_hash": "904aa1dd17737a34b7a4f00763df055d529d809e7b57f05ef21ed05224e58cff",
+      "version_hash": "68deda05dc7d036bd46546507010c32e17a84ca1ee529dba54f2a5c0b2567bdc"
+    },
+    "trust_registry": {
+      "endpoint_hash": "be366edcdce946fc08a517af6dd5306ac8df5a28097ada2da8f8fda859432038",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "23074e407fc58cd5e0998db2920464ab086f6e5ce2caf7caad21c08492a919ba",
+      "status_hash": "d0fd7b9cd2c00a07033bd69c76e45ae67d29c494486149ab1211d84662c8a31a",
+      "verifier_available": true,
+      "verifier_command_hash": "600125dc295defe201addbca2517ea132726ca040d214a9b3589766af6a16752",
+      "version_hash": "2acba35b0bd5c4fabfea375eedccc85dc242d2c282fc79afc9dd10eaf5b413e7"
+    },
+    "w3c_vc_trust_mark": {
+      "endpoint_hash": "afdaaf02e0f4caa06ade34fce4afcde19365317c1466d5bbbed8040bf5fb86bb",
+      "privacy_preserving": true,
+      "published": true,
+      "revocation_status_available": true,
+      "schema_hash": "d1dd742a9efe00195dd033bc2bf239563f4ce07715f57a87def712d42f58e801",
+      "status_hash": "12b0b5a59b7b68c43a917c13ba8d3ce8563e563bada4acbc6d39ddfea92bbefa",
+      "verifier_available": true,
+      "verifier_command_hash": "14f0a06100e7a8858387b0722171e6bed41273a604e80a933903c2259d23f44f",
+      "version_hash": "8af91810037b400c33c61a64fa8165307e91c7db5e4d387c65e1460abff6ad3a"
+    }
+  },
+  "role_obligation_rows": {
+    "agent_runtime": {
+      "adoption_policy_hash": "47cc7fa6f31c4e997cad881a7d8cb464a01004df589d94af27ec0bacfcceaef9",
+      "audit_visible": true,
+      "blocks_on_failure": true,
+      "public_discovery_safe": true,
+      "required": true,
+      "responsibility_hash": "4b3de9c6b94ed74b828863bb440eb7756d8ab2bef8bb122468c5d3767dcd6b4b",
+      "role_hash": "c9c52351197691a024826246ab492a96a7a56bed4954445f3745b2f629056080",
+      "settlement_hold_on_failure": true,
+      "status_endpoint_hash": "01cb1ac71436452dfc9c46f3b3bbe5003178ea3bc4a7fab728c8af3077a06658",
+      "verifier_hash": "a5fd7ca3aaa3788c38898c0c64a1ea6c7f3fe1c70f40d9592f80c162b5ac63fb"
+    },
+    "cloud_platform_gateway": {
+      "adoption_policy_hash": "a40f34675d1604b81d70acbe6a3528eea1614814f0737b6be278c30e5fc8aae4",
+      "audit_visible": true,
+      "blocks_on_failure": true,
+      "public_discovery_safe": true,
+      "required": true,
+      "responsibility_hash": "b8b29a759f9aa0e768b933ed2794ac2097b9b72095ac10ec6bd9752baa24d50e",
+      "role_hash": "6be16a520f3daa5911d4b2dd879468ceecbcd440bb1229b5b0096363e070b833",
+      "settlement_hold_on_failure": true,
+      "status_endpoint_hash": "3be5041e82f2ccbab85e88dc6eec0d7f2118a169179859664a1fea95eaf327fa",
+      "verifier_hash": "f23bb1b317b9f88c1f0a47a27051510115fc001dc5c2f1b7dbea568c876b0bc5"
+    },
+    "creator_registry": {
+      "adoption_policy_hash": "faf738588ef6e156282cd0302824faf53334b01289d8ca5cac02f21a59e55169",
+      "audit_visible": true,
+      "blocks_on_failure": true,
+      "public_discovery_safe": true,
+      "required": true,
+      "responsibility_hash": "3d9a2c0f96042a6ddda3862c8830286534c6f6821ec453367b723d7273b48178",
+      "role_hash": "56a9dedd24386c56f3c10b783f6e1203df8bdb144f396e5292b00388cdd4e81f",
+      "settlement_hold_on_failure": true,
+      "status_endpoint_hash": "a96d0ae8dc8a3c899963318043f36d0ceab70ac1de1501ca3614e2162acf612a",
+      "verifier_hash": "78188103c704e206a25d20ea822aaf400a62f20147754c3c763b3f1c8f62d174"
+    },
+    "downstream_publisher": {
+      "adoption_policy_hash": "5a40e5e3f8335144705b09db8e17d957fca4d6f598b386e3f1708e7543754027",
+      "audit_visible": true,
+      "blocks_on_failure": true,
+      "public_discovery_safe": true,
+      "required": true,
+      "responsibility_hash": "b04380d81a0fcd03ca8ec4976740d2ac81cae0d1bd36c9cfce30de06cb32da27",
+      "role_hash": "48f5dd132172dadf9d024c828be298b6c5abf2462da9f050410d24794c5db163",
+      "settlement_hold_on_failure": true,
+      "status_endpoint_hash": "3bda741998cddc3ea8f818b7dab1d5931e764ee8f2e3370ba5dc6aab439ce616",
+      "verifier_hash": "bd0f274ccdc879a5e96369d8e4f5f6f02436e5dd2be5669d5ef20d9271657bae"
+    },
+    "enterprise_proxy": {
+      "adoption_policy_hash": "89a3f4c23ed001e85ed21f67b3c23d9079b4ddfecf074d282d3a06331838581b",
+      "audit_visible": true,
+      "blocks_on_failure": true,
+      "public_discovery_safe": true,
+      "required": true,
+      "responsibility_hash": "b48e6692091113a6d583441e87d37026c8e1001c4e27089cc62cef509c5177df",
+      "role_hash": "e2513fc25bd7bec589057af7dcedd78bab5336da51de44ed6d5994b31ee672f3",
+      "settlement_hold_on_failure": true,
+      "status_endpoint_hash": "6fe64839f6be33788b5fa18e053086e26d8d706ade804759058f01adb71319f4",
+      "verifier_hash": "6fed2b6ec37369bb0df3fd2e98625395ceca963471bf0f77625596b504d0f96c"
+    },
+    "foundation_model_provider": {
+      "adoption_policy_hash": "c447367076a7fb224757a58edc8e7044c0897ec406483a9b59fb3e5a0fe07548",
+      "audit_visible": true,
+      "blocks_on_failure": true,
+      "public_discovery_safe": true,
+      "required": true,
+      "responsibility_hash": "b09213a55b21b46c1ac26679f439f34dfb791850dd44e8321495511943846774",
+      "role_hash": "f88a318c626e3793fdb557d12e7efaa663acc5977d334abca13160914ed6d4be",
+      "settlement_hold_on_failure": true,
+      "status_endpoint_hash": "1cc3539ff8a0640e4b217dbf912b2fe3bd959b5daffd1bd0ab19f0be412ad205",
+      "verifier_hash": "0c57d9e815b426b9bb9f7f48dbf59be85ed16c00a0a8fd17e0718b65de9756c7"
+    },
+    "independent_certifier": {
+      "adoption_policy_hash": "d31f40249a1152cd4998905936e7393e404a6730cc29686b7e897c64a65ef4d1",
+      "audit_visible": true,
+      "blocks_on_failure": true,
+      "public_discovery_safe": true,
+      "required": true,
+      "responsibility_hash": "644db468b82f0187cf5ebb37610912cc00f857144dd51d54064fd3879948cb78",
+      "role_hash": "d38eaf44102019c82003664c1dc36808e9dc0890e6065ee3bb77a861ad260505",
+      "settlement_hold_on_failure": true,
+      "status_endpoint_hash": "d5e2a2901ba60c0582fa7f39182dcc1e2cc24c0711fc412b0013d4e8fd76117a",
+      "verifier_hash": "182a95423f8e4ea048eb22f13fb17a05be40abd6518fb5d340777fd2d98742a9"
+    },
+    "mcp_tool_server": {
+      "adoption_policy_hash": "7816e55a00e7b592ec4ec803073570f8763253615121b2f0104f009341409fb6",
+      "audit_visible": true,
+      "blocks_on_failure": true,
+      "public_discovery_safe": true,
+      "required": true,
+      "responsibility_hash": "064af6162a79c081ffec30114d1468ea8de8fa3f7ea4fa515865d404d49855e2",
+      "role_hash": "1cee42035b828a857ba6408892d0170f93d180f135124e8dcd572aebe9ab2720",
+      "settlement_hold_on_failure": true,
+      "status_endpoint_hash": "84f7e10f3a5c65946ff170b12ef4d74b77c7547fe3d10623920e72e16c1b8d34",
+      "verifier_hash": "13003ec877d95dba6fe81b807337d736608a3b1c6ae374ceb17169c7d2d7511b"
+    },
+    "open_weight_runtime": {
+      "adoption_policy_hash": "8e14229fddc7792dd212b14002b10cb0c52935a079fd44082baef3d78cda58c4",
+      "audit_visible": true,
+      "blocks_on_failure": true,
+      "public_discovery_safe": true,
+      "required": true,
+      "responsibility_hash": "b7275c347462cb06fdb8cf0a8259b568ff1990de7cae612c971c1f6501669b6a",
+      "role_hash": "ba58df31bc25d5a473fc222235117e09e82e94423f4dd8d23393759933011e4b",
+      "settlement_hold_on_failure": true,
+      "status_endpoint_hash": "589ba729718d3a561ecd3202df04ba1fa31712e384aef177ce66f4f41a6147ba",
+      "verifier_hash": "b266995bbabe184e06ee3dc3a497c0beaa2ee1479ecf068d124fc24ab54d143a"
+    },
+    "payment_settlement_processor": {
+      "adoption_policy_hash": "c780a418f25fe95650e3e5697fc5460238258dc7bc094866d7c66201cd424909",
+      "audit_visible": true,
+      "blocks_on_failure": true,
+      "public_discovery_safe": true,
+      "required": true,
+      "responsibility_hash": "b51150ed187e68f655e958b521a01007ca0f37ed950d92d6ce62415c30312b55",
+      "role_hash": "7d2cfa340208dae1db95fea9a30d0dc3282b7dfcce437a6da8cd4097503be690",
+      "settlement_hold_on_failure": true,
+      "status_endpoint_hash": "2a164892221bad96853fc25204154bcbdab06ebc638407adb622f7bacc253e1d",
+      "verifier_hash": "80f2c0a1548f7664fc4647d297deab53276276a38d3e85621b3d4987954756b9"
+    },
+    "regulator_observer": {
+      "adoption_policy_hash": "e66c0386a1a62c3eae6466ef1539896578aed82225223390e5ed062cbd7d335f",
+      "audit_visible": true,
+      "blocks_on_failure": true,
+      "public_discovery_safe": true,
+      "required": true,
+      "responsibility_hash": "853dce79930a81020e9caa17951191893d263ed2760b7090e597683b32b13714",
+      "role_hash": "503511900c505b433e6a8448a9d83f873eab072ac1b58a93c1b3f40c8e9a1bd7",
+      "settlement_hold_on_failure": true,
+      "status_endpoint_hash": "7090196bcd8abe7e8a90f5ca650c61a417d55a2a66aa1e40ae5a91d394148665",
+      "verifier_hash": "6b7f7abd53b18b8a852075de6a0030e1d9e9c683938475a59ad7e3e427007929"
+    },
+    "retrieval_connector": {
+      "adoption_policy_hash": "c6ac9c85aac0331da60fb2fba10ab41f70aef3b6f392203e0f0c3d52c02a373c",
+      "audit_visible": true,
+      "blocks_on_failure": true,
+      "public_discovery_safe": true,
+      "required": true,
+      "responsibility_hash": "facf74e1a4c745c22d25d042934b7375b402e5fe8b3e225d613c5297936b8ad1",
+      "role_hash": "2bbe47dfcd248c0369586f03b7e71c0ce123da8d62091948382f7311785dadbf",
+      "settlement_hold_on_failure": true,
+      "status_endpoint_hash": "6f6032bd8256a6120bfd1c144fb94f5e7f8db3a4c2613b25b4c95d4041c9fc84",
+      "verifier_hash": "1f74a0b06a64b713c46777248be7e5a63b336d5f39a3aa98d75ea00c30a44481"
+    }
+  },
+  "schema": "docs/schemas/universal_industry_adoption_root.schema.json",
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "60ae2abf811a89e5684b8dc3e88daaf8e3f32a887096de37af07e015b22e43f8"
+  },
+  "summary": {
+    "adoption_role_count": 12,
+    "bound_core_artifact_count": 15,
+    "core_artifact_count": 15,
+    "creator_settlement_release_allowed": true,
+    "failure_mode_count": 0,
+    "minimum_adoption_pack_level": "RDLLM-L162",
+    "minimum_trust_federation_level": "RDLLM-L161",
+    "negative_root_failure_count": 12,
+    "privacy_preserved": true,
+    "provider_neutral_root_supported": true,
+    "publication_endpoint_count": 20,
+    "ready_adoption_role_count": 12,
+    "ready_negative_root_failure_count": 12,
+    "ready_publication_endpoint_count": 20,
+    "source_footer_reliance_allowed": true,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L163",
+    "two_phase_acyclic_closure": true
+  },
+  "universal_industry_adoption_root_hash": "8e611e14d47f375244c6a298192237aeacf0c5bf900bf1caf1fd9661b5ebf585",
+  "universal_industry_adoption_root_version": "rdllm-universal-industry-adoption-root/v1",
+  "well_known": {
+    "path": "/.well-known/rdllm/universal-industry-adoption-root.json",
+    "returns": "rdllm-universal-industry-adoption-root/v1"
+  }
+}

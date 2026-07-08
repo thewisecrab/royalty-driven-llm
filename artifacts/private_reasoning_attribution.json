@@ -1,0 +1,178 @@
+{
+  "artifact_bindings": {
+    "agent_tool_attribution_ledger_hash": "",
+    "agent_tool_attribution_ledger_hash_reproducible": true,
+    "client_enforcement_hash": "31f1c7d919bbeb81f3259ceee324c931360dae638b40905824f3863c5383fbf0",
+    "client_enforcement_hash_reproducible": true,
+    "persistent_memory_provenance_hash": "a61a76f2f7c5168a073cd9ac81e8838a0f1ac6c899456739d8670621ae05aa5c",
+    "persistent_memory_provenance_hash_reproducible": true,
+    "reasoning_step_input_hash": "a10e8409488dff9eea3920ea35198f314e15573099a1b085e00a8d1958f56a3f",
+    "reasoning_step_root": "39d05a42733217f7db0696d0063f23b3fa5e3612da9b9575312af3fa7924af62",
+    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+    "royalty_obligation_root": "ecfcc449a0690cc78243f6218bbd6f124e1b712c9e72c144eb67c1247b38c987",
+    "source_footer_delivery_hash": "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+    "source_footer_delivery_hash_reproducible": true
+  },
+  "case": {
+    "case_id": "artifact:private-reasoning-attribution",
+    "status": "ready"
+  },
+  "checks": {
+    "agent_tool_ledger_verified_when_tools_used": true,
+    "artifact_hashes_reproducible": true,
+    "client_attribution_enforcement_verified": true,
+    "delegation_steps_identify_model_and_artifacts": true,
+    "memory_reasoning_steps_bind_l106_receipt": true,
+    "persistent_memory_provenance_verified": true,
+    "raw_private_reasoning_not_disclosed": true,
+    "reasoning_policy_is_fail_closed": true,
+    "reasoning_royalty_obligations_cover_sources": true,
+    "reasoning_source_labels_declared": true,
+    "reasoning_source_labels_visible_in_footer": true,
+    "reasoning_steps_bind_client_rendered_output": true,
+    "reasoning_steps_bind_upstream_artifacts": true,
+    "reasoning_steps_have_private_commitments": true,
+    "source_footer_delivery_verified": true,
+    "tool_reasoning_steps_bind_tool_ledger": true
+  },
+  "issued_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "answer_text_disclosed": false,
+    "chain_of_thought_disclosed": false,
+    "memory_text_disclosed": false,
+    "payment_data_disclosed": false,
+    "prompt_text_disclosed": false,
+    "raw_private_reasoning_disclosed": false,
+    "receipt_uses_hashes_labels_and_commitments": true,
+    "source_text_disclosed": false,
+    "tool_output_text_disclosed": false
+  },
+  "private_reasoning_attribution_hash": "e66553a238d95638b4fec18cbe48a41bfc28193aef82509a5dd150a247de5a0e",
+  "reasoning_policy": {
+    "policy_hash": "db297ddec7a6a4e886512cc6a4803906e372297c081e961ba9e68aa6ad344c49",
+    "policy_id": "policy:private-reasoning-source-carry-forward",
+    "requires_auditor_challenge_support": true,
+    "requires_footer_closure": true,
+    "requires_memory_receipts_for_memory_steps": true,
+    "requires_no_raw_private_reasoning": true,
+    "requires_private_trace_commitments": true,
+    "requires_source_carry_forward": true
+  },
+  "reasoning_steps": [
+    {
+      "audit_opening_commitment": "07c983770433fd558165c77374f54100c83eca65d1bc13badda78d3f6b10009b",
+      "claim_hashes": [
+        "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e"
+      ],
+      "delegate_model_id": "",
+      "input_artifact_hashes": [
+        "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+        "31f1c7d919bbeb81f3259ceee324c931360dae638b40905824f3863c5383fbf0",
+        "a61a76f2f7c5168a073cd9ac81e8838a0f1ac6c899456739d8670621ae05aa5c"
+      ],
+      "memory_ids": [
+        "mem:reference-provenance-ledger-source"
+      ],
+      "operation": "source_influenced_reasoning",
+      "output_commitment_hash": "4e67a194737dae8f80b20e6a793e25c7dbbae51e16a0ae7da9e7929f537d5922",
+      "private_trace_hash": "9df26c79c51e0d94bfa2ddd36355960eaedcb6f372d38a522119c183a12b9543",
+      "private_trace_salt_hash": "ea858c24a821d13a4e3eb026d06d9ffcfcb9d0cb9b11bfe38b2e4a15dc415962",
+      "raw_private_reasoning_disclosed": false,
+      "reasoning_step_hash": "18abef740a138c5a5b695ca318e585e87670d42e79b8ee52e5cef5bc17e841a3",
+      "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+      "sequence": 1,
+      "source_labels": [
+        "S1"
+      ],
+      "step_id": "reason:memory-source-synthesis",
+      "step_type": "memory_reuse",
+      "tool_call_ids": [],
+      "visible_source_labels": [
+        "S1"
+      ]
+    },
+    {
+      "audit_opening_commitment": "125d4e024cf7649703e723fa097fded820ad96f72f040daf3c9142a6ea8b7ffb",
+      "claim_hashes": [
+        "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e"
+      ],
+      "delegate_model_id": "model:rdllm-attribution-reviewer",
+      "input_artifact_hashes": [
+        "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+        "31f1c7d919bbeb81f3259ceee324c931360dae638b40905824f3863c5383fbf0",
+        "a61a76f2f7c5168a073cd9ac81e8838a0f1ac6c899456739d8670621ae05aa5c"
+      ],
+      "memory_ids": [
+        "mem:reference-provenance-ledger-source"
+      ],
+      "operation": "delegated_reasoning_review",
+      "output_commitment_hash": "ef0211b8a5b9f70516d6d6b389a59e341502562ea27ca49db32e89d65643ed77",
+      "private_trace_hash": "1bc27e64c9aa8e3a9533b1583dca8d7360b4d1b8f29b4f39c9e78d518364fc39",
+      "private_trace_salt_hash": "2a77d848326eae708fb868d0a415d68d50389f23ca4325918429851cec82e064",
+      "raw_private_reasoning_disclosed": false,
+      "reasoning_step_hash": "7c00204d3cb71abc106ffe0a8e0e28d00d473e9129e4867c91ccaab89bc32b1b",
+      "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+      "sequence": 2,
+      "source_labels": [
+        "S1"
+      ],
+      "step_id": "reason:delegate-attribution-check",
+      "step_type": "model_router_synthesis",
+      "tool_call_ids": [],
+      "visible_source_labels": [
+        "S1"
+      ]
+    }
+  ],
+  "reasoning_system": {
+    "minimum_memory_level": "RDLLM-L106",
+    "scope": "private_reasoning_and_delegation",
+    "system_id": "reasoning:rdllm-reference-orchestrator",
+    "system_version": "2026-06"
+  },
+  "royalty_obligations": [
+    {
+      "basis": "private_reasoning_source_influence",
+      "creator_id": "arjun",
+      "obligation_hash": "b24c16c1de7ccc6dfc3acbff16b806acd9052a15d09a8df181d63d1db5206ca2",
+      "royalty_row_hash": "68d44c64c82d39388acfdaf227632c2bc8f2e4920eb1c9456c34161b98f54dcc",
+      "settlement_state": "direct",
+      "share": "1.0",
+      "source_label": "S1",
+      "work_id": "arjun-provenance-ledger"
+    }
+  ],
+  "schemas": {
+    "client_attribution_enforcement": "docs/schemas/client_attribution_enforcement.schema.json",
+    "persistent_memory_provenance": "docs/schemas/persistent_memory_provenance.schema.json",
+    "private_reasoning_attribution": "docs/schemas/private_reasoning_attribution.schema.json",
+    "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "a4850dd69a711b5167eb356a25b372d717196b96ed7db2f7e991e3ac4e422c9d"
+  },
+  "summary": {
+    "delegation_step_count": 1,
+    "failed_check_count": 0,
+    "memory_step_count": 2,
+    "minimum_memory_level": "RDLLM-L106",
+    "privacy_preserved": true,
+    "private_reasoning_attribution_ready": true,
+    "reasoning_step_count": 2,
+    "royalty_obligation_count": 1,
+    "source_label_count": 1,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L107",
+    "tool_step_count": 0
+  },
+  "verification_errors": {
+    "agent_tool_attribution_ledger": 0,
+    "client_attribution_enforcement": 0,
+    "persistent_memory_provenance": 0,
+    "source_footer_delivery": 0
+  },
+  "version": "rdllm-private-reasoning-attribution/v1"
+}

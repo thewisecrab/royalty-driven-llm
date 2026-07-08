@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/evidence_sufficiency_report.schema.json",
+  "title": "RDLLM Evidence Sufficiency Report",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "event",
+    "artifact_bindings",
+    "claims",
+    "summary",
+    "commitments",
+    "schemas",
+    "privacy",
+    "issues",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-evidence-sufficiency-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "requires_top_ranked_cited_span",
+        "requires_minimal_sufficient_prefix",
+        "max_minimal_prefix_size",
+        "support_threshold",
+        "minimum_decoy_margin",
+        "requires_source_availability",
+        "requires_source_materialization",
+        "requires_footer_binding"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-evidence-sufficiency-policy/v1" },
+        "requires_top_ranked_cited_span": { "const": true },
+        "requires_minimal_sufficient_prefix": { "const": true },
+        "max_minimal_prefix_size": { "type": "integer", "minimum": 1 },
+        "support_threshold": { "type": "number", "minimum": 0, "maximum": 1 },
+        "minimum_decoy_margin": { "type": "number", "minimum": 0, "maximum": 1 },
+        "requires_source_availability": { "const": true },
+        "requires_source_materialization": { "const": true },
+        "requires_footer_binding": { "const": true }
+      }
+    },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "answer_hash"
+      ]
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "answer_card_hash",
+        "source_verification_report_hash",
+        "source_availability_report_hash",
+        "citation_footer_contract_hash",
+        "answer_card_bound",
+        "source_verification_bound",
+        "source_availability_bound",
+        "citation_footer_bound"
+      ]
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_index",
+          "claim_hash",
+          "source_label",
+          "evidence_span_hash",
+          "evidence_span_prefix",
+          "claim_support_score",
+          "support_threshold",
+          "minimum_decoy_margin",
+          "candidate_count",
+          "candidate_limit",
+          "cited_evidence_rank",
+          "minimal_sufficient_prefix_size",
+          "top_candidate_is_cited_span",
+          "top_support_score",
+          "best_non_cited_support_score",
+          "decoy_margin",
+          "ambiguous_decoy",
+          "source_available",
+          "source_verified_claim",
+          "source_footer_bound",
+          "span_footer_bound",
+          "sufficient",
+          "inspection_order",
+          "candidates",
+          "claim_sufficiency_hash"
+        ]
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "claim_count",
+        "sufficient_claim_count",
+        "top_ranked_cited_span_count",
+        "footer_bound_claim_count",
+        "source_available_claim_count",
+        "ambiguous_decoy_claim_count",
+        "minimum_decoy_margin_observed",
+        "all_claims_have_minimal_sufficient_evidence",
+        "issue_count"
+      ],
+      "properties": {
+        "status": { "enum": ["verified", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L56" },
+        "claim_count": { "type": "integer", "minimum": 0 },
+        "sufficient_claim_count": { "type": "integer", "minimum": 0 },
+        "top_ranked_cited_span_count": { "type": "integer", "minimum": 0 },
+        "footer_bound_claim_count": { "type": "integer", "minimum": 0 },
+        "source_available_claim_count": { "type": "integer", "minimum": 0 },
+        "ambiguous_decoy_claim_count": { "type": "integer", "minimum": 0 },
+        "minimum_decoy_margin_observed": { "type": "number", "minimum": 0, "maximum": 1 },
+        "all_claims_have_minimal_sufficient_evidence": { "type": "boolean" },
+        "issue_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "claim_sufficiency_root",
+        "artifact_binding_root",
+        "issue_root",
+        "event_hash"
+      ]
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["evidence_sufficiency_report"]
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "claim_text_disclosed",
+        "source_text_disclosed",
+        "candidate_evidence_text_disclosed",
+        "claim_evidence_text_disclosed",
+        "report_uses_hashes_scores_and_offsets"
+      ],
+      "properties": {
+        "prompt_text_disclosed": { "const": false },
+        "answer_text_disclosed": { "const": false },
+        "claim_text_disclosed": { "const": false },
+        "source_text_disclosed": { "const": false },
+        "candidate_evidence_text_disclosed": { "const": false },
+        "claim_evidence_text_disclosed": { "const": false },
+        "report_uses_hashes_scores_and_offsets": { "const": true }
+      }
+    },
+    "issues": { "type": "array", "items": { "type": "string" } },
+    "report_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

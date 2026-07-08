@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/assurance_bundle.schema.json",
+  "title": "RDLLM Assurance Bundle",
+  "type": "object",
+  "required": [
+    "assurance_version",
+    "issuer",
+    "created_at",
+    "publication_profile",
+    "summary",
+    "artifacts",
+    "inclusion_proofs",
+    "privacy",
+    "bundle_hash",
+    "signature"
+  ],
+  "properties": {
+    "assurance_version": {
+      "const": "rdllm-assurance-bundle/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "publication_profile": {
+      "type": "object",
+      "required": [
+        "scitt_like_signed_statements",
+        "rekor_like_merkle_inclusion",
+        "in_toto_like_attestation_subjects",
+        "c2pa_like_conformance_assurance"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["artifact_count", "artifact_types", "tree_size", "root"],
+      "properties": {
+        "artifact_count": { "type": "integer", "minimum": 0 },
+        "artifact_types": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "tree_size": { "type": "integer", "minimum": 0 },
+        "root": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "artifact_type",
+          "declared_hash",
+          "payload_hash",
+          "leaf_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "inclusion_proofs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["leaf_index", "leaf_hash", "tree_size", "root", "path"],
+        "additionalProperties": true
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "artifact_payloads_disclosed",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "work_text_disclosed",
+        "public_bundle_uses_hashes_and_inclusion_proofs"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "bundle_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

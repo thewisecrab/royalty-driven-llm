@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/attribution_consensus_report.schema.json",
+  "title": "RDLLM Attribution Consensus Report",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "event",
+    "economics",
+    "artifact_bindings",
+    "channel_status",
+    "consensus_rows",
+    "royalty_shares",
+    "commitments",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-attribution-consensus-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "creator_pool_rate",
+        "required_channels",
+        "minimum_quorum",
+        "require_event_alignment",
+        "accepted_decision",
+        "escrow_decision"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-attribution-consensus-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L70" },
+        "required_channels": {
+          "type": "array",
+          "contains": { "const": "source_confidence" }
+        },
+        "minimum_quorum": { "type": "integer", "minimum": 1 },
+        "require_event_alignment": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_hashes",
+        "aligned_event_hashes",
+        "event_hash"
+      ],
+      "additionalProperties": true
+    },
+    "economics": {
+      "type": "object",
+      "required": [
+        "gross_revenue",
+        "creator_pool",
+        "payout_total",
+        "escrow_total"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "source_confidence_report_hash",
+        "evidence_sufficiency_report_hash",
+        "counterevidence_report_hash",
+        "source_authenticity_report_hash",
+        "pinpoint_provenance_report_hash",
+        "citation_identity_report_hash"
+      ],
+      "additionalProperties": true
+    },
+    "channel_status": {
+      "type": "object",
+      "required": [
+        "source_confidence_verified",
+        "evidence_sufficiency_verified",
+        "counterevidence_verified",
+        "source_authenticity_verified",
+        "pinpoint_provenance_ready",
+        "citation_identity_ready"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "consensus_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "work_id",
+          "chunk_id",
+          "creator_id",
+          "channel_votes",
+          "positive_channel_count",
+          "required_channel_count",
+          "minimum_quorum",
+          "missing_channels",
+          "blockers",
+          "consensus_score",
+          "decision",
+          "consensus_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "royalty_shares": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "work_id",
+          "decision",
+          "payout",
+          "contribution_weight"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "artifact_binding_root",
+        "consensus_row_root",
+        "share_root"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "all_artifact_hashes_reproducible",
+        "all_required_channel_reports_bound",
+        "all_channel_reports_ready",
+        "event_hashes_aligned",
+        "accepted_rows_meet_quorum",
+        "blocked_or_incomplete_rows_never_direct_payout",
+        "non_consensus_rows_route_to_escrow",
+        "creator_pool_conserved",
+        "public_report_has_no_private_field_names",
+        "public_report_uses_no_private_text_fields"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["attribution_consensus_report"],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "source_count",
+        "accepted_source_count",
+        "escrow_source_count",
+        "minimum_quorum",
+        "required_channel_count",
+        "event_alignment_required",
+        "event_aligned",
+        "creator_pool_conserved",
+        "offline_verification_supported"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L70" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_prompt_disclosed",
+        "private_response_disclosed",
+        "private_source_text_disclosed",
+        "private_tool_payload_disclosed",
+        "report_uses_public_hashes_scores_and_decisions"
+      ],
+      "additionalProperties": true
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  }
+}

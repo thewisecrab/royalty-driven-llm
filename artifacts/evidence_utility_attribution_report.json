@@ -1,0 +1,513 @@
+{
+  "baseline": {
+    "baseline_hash": "0267431794134378b1ab9fb0f1b3a361b38f0dd3d6164e86d603231087c12123",
+    "claim_outcome_count": 6,
+    "claim_outcome_hashes": [
+      "9aac0855e38567d922322814a7fc6a73c2d860426837e8b075fae56274bf5fdc",
+      "236cf0a716c931c1544e62638c99caf409d1082468147285dc4788541666de35",
+      "bccec24705a45dbc3bb769952d2b271b27457605893a05ef06a287388fcee8a9",
+      "64379bcab5bf72796d22b795195a2878d46052b50a6ba3eecf2ed9fc96897fea",
+      "2567e9a47fd3d92b922fa2ac8d42ea14f505113b20cc2c9f83b6fc06cdc0c67a",
+      "781feb1b195888d030e0f449954174654e28e3bf0f18dfccb72b6f1e510810b4"
+    ]
+  },
+  "checks": {
+    "all_claims_have_causal_sources": true,
+    "claim_source_report_bound": true,
+    "creator_pool_conserved": true,
+    "duplicate_trials_do_not_inflate_credit": true,
+    "intervention_trials_cover_cited_sources": true,
+    "no_prior_context_citation_drift": true,
+    "no_raw_private_text": true,
+    "no_rejected_cited_sources": true
+  },
+  "claim_attribution": [
+    {
+      "accepted_source_ids": [
+        "arjun-provenance-ledger:c1"
+      ],
+      "causal_source_count": 1,
+      "claim_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+      "claim_id": "claim_1",
+      "rejected_source_ids": [],
+      "status": "causally_grounded",
+      "total_utility": 0.996
+    },
+    {
+      "accepted_source_ids": [
+        "arjun-provenance-ledger:c1"
+      ],
+      "causal_source_count": 1,
+      "claim_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+      "claim_id": "claim_2",
+      "rejected_source_ids": [],
+      "status": "causally_grounded",
+      "total_utility": 0.996
+    },
+    {
+      "accepted_source_ids": [
+        "lina-governance-disputes:c1"
+      ],
+      "causal_source_count": 1,
+      "claim_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+      "claim_id": "claim_3",
+      "rejected_source_ids": [],
+      "status": "causally_grounded",
+      "total_utility": 0.996
+    },
+    {
+      "accepted_source_ids": [
+        "lina-governance-disputes:c1"
+      ],
+      "causal_source_count": 1,
+      "claim_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+      "claim_id": "claim_4",
+      "rejected_source_ids": [],
+      "status": "causally_grounded",
+      "total_utility": 0.996
+    },
+    {
+      "accepted_source_ids": [
+        "maya-youtube-style-pool:c1"
+      ],
+      "causal_source_count": 1,
+      "claim_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+      "claim_id": "claim_5",
+      "rejected_source_ids": [],
+      "status": "causally_grounded",
+      "total_utility": 0.996
+    },
+    {
+      "accepted_source_ids": [
+        "maya-youtube-style-pool:c1"
+      ],
+      "causal_source_count": 1,
+      "claim_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+      "claim_id": "claim_6",
+      "rejected_source_ids": [],
+      "status": "causally_grounded",
+      "total_utility": 0.996
+    }
+  ],
+  "claim_source_report_binding": {
+    "report_hash": "8ae89a164bb0bf6169a0e163b09ad98dd9bd19cbc3a460cdc09c82bb32546a6a",
+    "status": "ready",
+    "target_certification_level": "RDLLM-L87"
+  },
+  "claims": [
+    {
+      "claim_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+      "claim_id": "claim_1",
+      "expected_source_ids": [
+        "arjun-provenance-ledger:c1"
+      ],
+      "requires_current_turn_evidence": true
+    },
+    {
+      "claim_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+      "claim_id": "claim_2",
+      "expected_source_ids": [
+        "arjun-provenance-ledger:c1"
+      ],
+      "requires_current_turn_evidence": true
+    },
+    {
+      "claim_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+      "claim_id": "claim_3",
+      "expected_source_ids": [
+        "lina-governance-disputes:c1"
+      ],
+      "requires_current_turn_evidence": true
+    },
+    {
+      "claim_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+      "claim_id": "claim_4",
+      "expected_source_ids": [
+        "lina-governance-disputes:c1"
+      ],
+      "requires_current_turn_evidence": true
+    },
+    {
+      "claim_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+      "claim_id": "claim_5",
+      "expected_source_ids": [
+        "maya-youtube-style-pool:c1"
+      ],
+      "requires_current_turn_evidence": true
+    },
+    {
+      "claim_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+      "claim_id": "claim_6",
+      "expected_source_ids": [
+        "maya-youtube-style-pool:c1"
+      ],
+      "requires_current_turn_evidence": true
+    }
+  ],
+  "created_at": "2026-05-31T00:00:00Z",
+  "economics": {
+    "creator_payouts": [
+      {
+        "amount": "0.183334",
+        "creator_id": "arjun"
+      },
+      {
+        "amount": "0.183334",
+        "creator_id": "lina"
+      },
+      {
+        "amount": "0.183332",
+        "creator_id": "maya"
+      }
+    ],
+    "creator_pool": "0.550000",
+    "creator_pool_rate": "0.55",
+    "escrow": "0.000000",
+    "gross_revenue": "1.000000",
+    "per_claim_pool": "0.091667",
+    "pool_conserved": true,
+    "source_payouts": [
+      {
+        "amount": "0.183334",
+        "creator_id": "arjun",
+        "source_id": "arjun-provenance-ledger:c1"
+      },
+      {
+        "amount": "0.183334",
+        "creator_id": "lina",
+        "source_id": "lina-governance-disputes:c1"
+      },
+      {
+        "amount": "0.183332",
+        "creator_id": "maya",
+        "source_id": "maya-youtube-style-pool:c1"
+      }
+    ],
+    "total_paid": "0.550000"
+  },
+  "event": {
+    "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+    "event_id": "evt_1ed43e106d466249",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05",
+    "prompt_hash": "3ff9b4d52e3ba4909f885835c6d362c80d35db9cafec55166ee62a73722aa7c6",
+    "response_hash": "069df2b36f4c12ee438a0edb55cc944c675fb5f3802cb70592907f047916ac51"
+  },
+  "footer": {
+    "claim_rows": [
+      {
+        "claim_id": "claim_1",
+        "source_ids": [
+          "arjun-provenance-ledger:c1"
+        ],
+        "status": "causally_grounded"
+      },
+      {
+        "claim_id": "claim_2",
+        "source_ids": [
+          "arjun-provenance-ledger:c1"
+        ],
+        "status": "causally_grounded"
+      },
+      {
+        "claim_id": "claim_3",
+        "source_ids": [
+          "lina-governance-disputes:c1"
+        ],
+        "status": "causally_grounded"
+      },
+      {
+        "claim_id": "claim_4",
+        "source_ids": [
+          "lina-governance-disputes:c1"
+        ],
+        "status": "causally_grounded"
+      },
+      {
+        "claim_id": "claim_5",
+        "source_ids": [
+          "maya-youtube-style-pool:c1"
+        ],
+        "status": "causally_grounded"
+      },
+      {
+        "claim_id": "claim_6",
+        "source_ids": [
+          "maya-youtube-style-pool:c1"
+        ],
+        "status": "causally_grounded"
+      }
+    ],
+    "footer_hash": "b8ab75611ddfa265d719562e099a6904d08e6a471d627915b290fe281dd3c8e2",
+    "source_row_count": 3,
+    "source_rows": [
+      {
+        "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+        "creator_id": "arjun",
+        "source_id": "arjun-provenance-ledger:c1",
+        "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "title": "Provenance Ledgers for AI Outputs",
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+        "creator_id": "lina",
+        "source_id": "lina-governance-disputes:c1",
+        "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "title": "Creator Governance for AI Licensing",
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+        "creator_id": "maya",
+        "source_id": "maya-youtube-style-pool:c1",
+        "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "title": "Usage Pools for Creator Platforms",
+        "work_id": "maya-youtube-style-pool"
+      }
+    ]
+  },
+  "issuer": "rdllm-local-demo",
+  "perturbation_commitments": {
+    "trial_count": 18,
+    "trial_hashes": [
+      "17eb68f05fccb6dac12cd2a8125e2856091910322b38d67cc0e02dd27b78a642",
+      "0b969fef0b67043905b8601cec3d4e8dfe7080db2efe545c1bf883196f635cdf",
+      "c111527f3ff289453affda8ed3b25555bb50289bbfa986789329764b2827f757",
+      "eaebdcf849c950d3bc2136b52825fbe83d84ac17365272f3044bd64c85deb37a",
+      "1a0b77d7c26c19566b6d6055c1f62d43eaa30f0aa926cfb2e52dfe8cf848c067",
+      "ee0f28509f4c14a1a52aa8724b0f05362870ae92ad12c3634350d1efe3bc406b",
+      "7e37c68bfe81cfa2ece18cdf4ab8e9ae5a107d681c6775897ee620e9cf12c3cd",
+      "81d28aea882b2c0d6e8955db8e4f5fba9978f56a1419f65b344cdde958c87000",
+      "46110042194a2964b6c8258f57c4a942ee26e7c8d8fb2527a1c75aa65f251d45",
+      "d7fa2482a1a30b0ec10e680a16a424b0855831b7ed1c2cbbadf5cf2226cae4e7",
+      "efaa3faa0b7e7ff2cb93a065ce8953c15732e9381b6608982a46ff0811f0c9d0",
+      "e398efc58140d1c3524b8c747f43995bdd8f047fac295c534dd37a35bd76c2d5",
+      "f715dcc4e5500377e183f66d2d6b87c56b7985f09a58434f2e74486920cadcef",
+      "a99011d45682092cdca080927f0a37d41982ddb5c1398c6909098319bc3df05b",
+      "c34ef4d751d40c618006c73c9d19cb657bad3395c0e284cb46389b9bf251ca45",
+      "9a68f503d8437ffeedc7ff4d9716ebe90cae6e59ec2dd95063e72bd15d981b8d",
+      "ed86a7d3a82b52848a878e43e80d1614a28654385ef46d83dfa0afe5c05db2ce",
+      "5742a2a92ce66f24cc824dba7b4ad27444f2cc899215775e6889ff13c34db26e"
+    ]
+  },
+  "policy": {
+    "max_duplicate_credit_inflation": 0.02,
+    "max_duplicate_trace_drift": 0.12,
+    "min_utility": 0.35,
+    "profile": "rdllm-causal-evidence-utility-policy/v1",
+    "target_certification_level": "RDLLM-L88"
+  },
+  "report_hash": "ec1cac3a911029e93f1f83904fd06e6bd49748e80d23d7fa14540a535b286bc5",
+  "report_version": "rdllm-causal-evidence-utility/v1",
+  "retrieval_trace": {
+    "carried_forward_source_ids": [],
+    "current_turn_source_ids": [
+      "arjun-provenance-ledger:c1",
+      "lina-governance-disputes:c1",
+      "maya-youtube-style-pool:c1"
+    ],
+    "prior_turn_source_ids": [
+      "source_artifact_prior_context"
+    ],
+    "step_count": 3,
+    "step_hashes": [
+      "34ec1535d0707033efe90fb70c64bfef5b1e4e2279f1fc4470f5dbb5bd44dcab",
+      "a05c202d75aba6b3f6a159c03f3b01f2197a180fb90ed1d85871501cb5c5e7da",
+      "9b00a6bc417d3b43a23a6dc66b8c509bc19cc6448b0b2473c21a290e93870644"
+    ],
+    "trace_hash": "da60a4954b1c64b44c0c14a96ae1d7616041e29d809c1c31b743995725c13303",
+    "turn_id": "turn:artifact:evidence-utility"
+  },
+  "schemas": {
+    "evidence_utility_attribution_report": "docs/schemas/evidence_utility_attribution_report.schema.json"
+  },
+  "signature": "f0e9dd9dac71e0624c6f3603551dd06926b1289d3a558bde3e5227d6d11d6807",
+  "sources": [
+    {
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "creator_id": "arjun",
+      "creator_name": "Arjun Rao",
+      "modality": "text",
+      "source_id": "arjun-provenance-ledger:c1",
+      "source_role": "candidate",
+      "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+      "title": "Provenance Ledgers for AI Outputs",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_id": "lina-governance-disputes:c1",
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "creator_id": "lina",
+      "creator_name": "Lina Park",
+      "modality": "text",
+      "source_id": "lina-governance-disputes:c1",
+      "source_role": "candidate",
+      "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+      "title": "Creator Governance for AI Licensing",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "creator_id": "maya",
+      "creator_name": "Maya Sen",
+      "modality": "text",
+      "source_id": "maya-youtube-style-pool:c1",
+      "source_role": "candidate",
+      "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+      "title": "Usage Pools for Creator Platforms",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "summary": {
+    "accepted_source_count": 3,
+    "causally_grounded_claim_count": 6,
+    "claim_count": 6,
+    "context_drift_rejection_count": 0,
+    "duplicate_overcredit_rejection_count": 0,
+    "escrow_claim_count": 0,
+    "footer_hash": "b8ab75611ddfa265d719562e099a6904d08e6a471d627915b290fe281dd3c8e2",
+    "rejected_source_count": 0,
+    "source_count": 3,
+    "spurious_source_rejection_count": 0,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L88",
+    "trial_count": 18
+  },
+  "utility_attribution": [
+    {
+      "accepted": true,
+      "baseline_cited": true,
+      "baseline_claim_supported": true,
+      "claim_id": "claim_1",
+      "creator_id": "arjun",
+      "duplicate_credit_inflation": 0.0,
+      "duplicate_neutral": true,
+      "duplicate_trace_drift": 0.01,
+      "duplicate_trial_id": "trial:duplicate:1",
+      "failure_reasons": [],
+      "in_current_turn_trace": true,
+      "remove_trial_id": "trial:remove:1",
+      "remove_utility": 0.996,
+      "replace_trial_id": "trial:replace:1",
+      "replace_utility": 0.9665,
+      "source_id": "arjun-provenance-ledger:c1",
+      "synergy_trial_id": "",
+      "synergy_utility": 0.0,
+      "utility_role": "necessary",
+      "utility_score": 0.996
+    },
+    {
+      "accepted": true,
+      "baseline_cited": true,
+      "baseline_claim_supported": true,
+      "claim_id": "claim_2",
+      "creator_id": "arjun",
+      "duplicate_credit_inflation": 0.0,
+      "duplicate_neutral": true,
+      "duplicate_trace_drift": 0.01,
+      "duplicate_trial_id": "trial:duplicate:2",
+      "failure_reasons": [],
+      "in_current_turn_trace": true,
+      "remove_trial_id": "trial:remove:2",
+      "remove_utility": 0.996,
+      "replace_trial_id": "trial:replace:2",
+      "replace_utility": 0.9665,
+      "source_id": "arjun-provenance-ledger:c1",
+      "synergy_trial_id": "",
+      "synergy_utility": 0.0,
+      "utility_role": "necessary",
+      "utility_score": 0.996
+    },
+    {
+      "accepted": true,
+      "baseline_cited": true,
+      "baseline_claim_supported": true,
+      "claim_id": "claim_3",
+      "creator_id": "lina",
+      "duplicate_credit_inflation": 0.0,
+      "duplicate_neutral": true,
+      "duplicate_trace_drift": 0.01,
+      "duplicate_trial_id": "trial:duplicate:3",
+      "failure_reasons": [],
+      "in_current_turn_trace": true,
+      "remove_trial_id": "trial:remove:3",
+      "remove_utility": 0.996,
+      "replace_trial_id": "trial:replace:3",
+      "replace_utility": 0.9665,
+      "source_id": "lina-governance-disputes:c1",
+      "synergy_trial_id": "",
+      "synergy_utility": 0.0,
+      "utility_role": "necessary",
+      "utility_score": 0.996
+    },
+    {
+      "accepted": true,
+      "baseline_cited": true,
+      "baseline_claim_supported": true,
+      "claim_id": "claim_4",
+      "creator_id": "lina",
+      "duplicate_credit_inflation": 0.0,
+      "duplicate_neutral": true,
+      "duplicate_trace_drift": 0.01,
+      "duplicate_trial_id": "trial:duplicate:4",
+      "failure_reasons": [],
+      "in_current_turn_trace": true,
+      "remove_trial_id": "trial:remove:4",
+      "remove_utility": 0.996,
+      "replace_trial_id": "trial:replace:4",
+      "replace_utility": 0.9665,
+      "source_id": "lina-governance-disputes:c1",
+      "synergy_trial_id": "",
+      "synergy_utility": 0.0,
+      "utility_role": "necessary",
+      "utility_score": 0.996
+    },
+    {
+      "accepted": true,
+      "baseline_cited": true,
+      "baseline_claim_supported": true,
+      "claim_id": "claim_5",
+      "creator_id": "maya",
+      "duplicate_credit_inflation": 0.0,
+      "duplicate_neutral": true,
+      "duplicate_trace_drift": 0.01,
+      "duplicate_trial_id": "trial:duplicate:5",
+      "failure_reasons": [],
+      "in_current_turn_trace": true,
+      "remove_trial_id": "trial:remove:5",
+      "remove_utility": 0.996,
+      "replace_trial_id": "trial:replace:5",
+      "replace_utility": 0.9665,
+      "source_id": "maya-youtube-style-pool:c1",
+      "synergy_trial_id": "",
+      "synergy_utility": 0.0,
+      "utility_role": "necessary",
+      "utility_score": 0.996
+    },
+    {
+      "accepted": true,
+      "baseline_cited": true,
+      "baseline_claim_supported": true,
+      "claim_id": "claim_6",
+      "creator_id": "maya",
+      "duplicate_credit_inflation": 0.0,
+      "duplicate_neutral": true,
+      "duplicate_trace_drift": 0.01,
+      "duplicate_trial_id": "trial:duplicate:6",
+      "failure_reasons": [],
+      "in_current_turn_trace": true,
+      "remove_trial_id": "trial:remove:6",
+      "remove_utility": 0.996,
+      "replace_trial_id": "trial:replace:6",
+      "replace_utility": 0.9665,
+      "source_id": "maya-youtube-style-pool:c1",
+      "synergy_trial_id": "",
+      "synergy_utility": 0.0,
+      "utility_role": "necessary",
+      "utility_score": 0.996
+    }
+  ]
+}

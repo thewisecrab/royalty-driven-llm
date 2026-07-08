@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/operator_bootstrap_manifest.schema.json",
+  "title": "RDLLM Operator Bootstrap Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "summary",
+    "paths",
+    "commands",
+    "errors",
+    "included_reference_artifacts"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-operator-bootstrap/v1"
+    },
+    "status": {
+      "enum": ["ready", "blocked"]
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "operator_name",
+        "operator_template",
+        "service_template",
+        "profile_status",
+        "service_config_status",
+        "settlement_mode",
+        "production_grade_claim_allowed",
+        "direct_creator_settlement_allowed",
+        "public_sector_use_supported",
+        "sample_corpus_included",
+        "reference_artifacts_included"
+      ],
+      "properties": {
+        "operator_name": { "type": "string", "minLength": 1 },
+        "operator_template": { "type": "string", "minLength": 1 },
+        "service_template": { "type": "string", "minLength": 1 },
+        "profile_status": { "enum": ["ready", "blocked"] },
+        "service_config_status": { "enum": ["ready", "blocked"] },
+        "settlement_mode": { "type": "string", "minLength": 1 },
+        "production_grade_claim_allowed": { "type": "boolean" },
+        "direct_creator_settlement_allowed": { "type": "boolean" },
+        "public_sector_use_supported": { "type": "boolean" },
+        "sample_corpus_included": { "type": "boolean" },
+        "reference_artifacts_included": { "type": "boolean" }
+      }
+    },
+    "paths": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "output_dir",
+        "operator_profile",
+        "readiness_report",
+        "service_config",
+        "artifact_dir",
+        "corpus",
+        "runtime_dir",
+        "manifest",
+        "readme"
+      ],
+      "properties": {
+        "output_dir": { "type": "string", "minLength": 1 },
+        "operator_profile": { "type": "string", "minLength": 1 },
+        "readiness_report": { "type": "string", "minLength": 1 },
+        "service_config": { "type": "string", "minLength": 1 },
+        "artifact_dir": { "type": "string", "minLength": 1 },
+        "corpus": { "type": "string", "minLength": 1 },
+        "runtime_dir": { "type": "string", "minLength": 1 },
+        "manifest": { "type": "string", "minLength": 1 },
+        "readme": { "type": "string", "minLength": 1 }
+      }
+    },
+    "commands": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "validate_profile",
+        "validate_service_config",
+        "start_service"
+      ],
+      "properties": {
+        "validate_profile": { "type": "string", "minLength": 1 },
+        "validate_service_config": { "type": "string", "minLength": 1 },
+        "start_service": { "type": "string", "minLength": 1 }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "included_reference_artifacts": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}

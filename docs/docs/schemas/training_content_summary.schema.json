@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/training_content_summary.schema.json",
+  "title": "RDLLM Training Content Summary",
+  "type": "object",
+  "required": [
+    "summary_version",
+    "issuer",
+    "created_at",
+    "provider",
+    "template_alignment",
+    "certification",
+    "provider_card",
+    "training_content",
+    "rights_policy",
+    "commitments",
+    "privacy",
+    "limitations",
+    "summary_hash",
+    "signature"
+  ],
+  "properties": {
+    "summary_version": {
+      "const": "rdllm-training-content-summary/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "provider": {
+      "type": "object",
+      "required": ["id", "model_id", "model_version", "training_stage"],
+      "properties": {
+        "id": { "type": "string" },
+        "model_id": { "type": "string" },
+        "model_version": { "type": "string" },
+        "training_stage": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "template_alignment": {
+      "type": "object",
+      "required": [
+        "eu_ai_act_article_53_training_summary",
+        "croissant_1_1_usage_policy",
+        "spdx_3_ai_dataset_bom",
+        "odrl_rights_policy",
+        "public_summary_uses_categories_and_hash_roots"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "certification": {
+      "type": "object",
+      "required": ["report_hash", "highest_level", "status"],
+      "additionalProperties": true
+    },
+    "provider_card": {
+      "type": "object",
+      "required": ["card_hash", "highest_level"],
+      "additionalProperties": true
+    },
+    "training_content": {
+      "type": "object",
+      "required": ["modalities", "source_scope", "training_stage", "aggregate", "cohorts"],
+      "properties": {
+        "modalities": { "type": "object" },
+        "source_scope": { "type": "string" },
+        "training_stage": { "type": "string" },
+        "aggregate": {
+          "type": "object",
+          "required": [
+            "creator_count",
+            "work_count",
+            "training_allowed_work_count",
+            "training_blocked_work_count",
+            "chunk_count",
+            "training_rights_coverage"
+          ],
+          "properties": {
+            "training_rights_coverage": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "additionalProperties": true
+        },
+        "cohorts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "work_id",
+              "creator_id",
+              "content_modality",
+              "content_category",
+              "content_hash",
+              "chunk_hash_root",
+              "training_allowed",
+              "training_policy_reasons",
+              "training_value_root"
+            ],
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "rights_policy": {
+      "type": "object",
+      "required": [
+        "rights_checked_before_training",
+        "revoked_works_excluded",
+        "minimum_creator_pool_rate_enforced",
+        "copyright_policy",
+        "tdm_rights_signal"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "work_root",
+        "content_hash_root",
+        "policy_root",
+        "training_value_root",
+        "certification_report_hash",
+        "provider_card_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "work_text_disclosed",
+        "chunk_text_disclosed",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "public_summary_uses_counts_and_hash_roots"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "summary_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

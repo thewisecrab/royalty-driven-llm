@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/claim_source_attribution_report.schema.json",
+  "title": "RDLLM Claim Source Attribution Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "event",
+    "policy",
+    "economics",
+    "claims",
+    "sources",
+    "candidate_rows",
+    "footer",
+    "royalty_shares",
+    "commitments",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-claim-source-attribution/v1" },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "prompt_hash",
+        "response_hash",
+        "model_id",
+        "model_version"
+      ],
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "creator_pool_rate",
+        "accept_threshold",
+        "min_loo_margin",
+        "min_anti_document_margin",
+        "topical_similarity_alone_is_insufficient",
+        "claim_level_footer_required",
+        "visual_region_commitments_required_when_visual_source_is_credited",
+        "loo_source_importance_enabled"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-claim-source-attribution-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L87" }
+      },
+      "additionalProperties": true
+    },
+    "economics": {
+      "type": "object",
+      "required": [
+        "gross_revenue",
+        "creator_pool",
+        "payout_total",
+        "escrow_total"
+      ],
+      "additionalProperties": true
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_hash",
+          "top_source_id",
+          "top_content_hash",
+          "top_decision_score",
+          "support_margin",
+          "anti_document_margin",
+          "expected_refusal",
+          "decision",
+          "accepted_source_ids"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "work_id",
+          "chunk_id",
+          "creator_id",
+          "title",
+          "source_uri",
+          "content_hash",
+          "source_role",
+          "modality",
+          "visual_region_hashes",
+          "visual_region_count"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "candidate_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_hash",
+          "source_id",
+          "work_id",
+          "chunk_id",
+          "creator_id",
+          "content_hash",
+          "modality",
+          "source_role",
+          "candidate_relation",
+          "scores",
+          "feature_commitment",
+          "rank",
+          "loo_utility_drop",
+          "anti_document_margin",
+          "attribution_credit",
+          "decision",
+          "row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "footer": {
+      "type": "object",
+      "required": [
+        "profile",
+        "source_rows",
+        "claim_rows",
+        "footer_text",
+        "source_row_count",
+        "claim_row_count",
+        "footer_hash"
+      ],
+      "additionalProperties": true
+    },
+    "royalty_shares": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "work_id",
+          "chunk_id",
+          "claim_ids",
+          "decision",
+          "payout",
+          "contribution_weight"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "claim_root",
+        "source_root",
+        "candidate_row_root",
+        "footer_hash",
+        "share_root",
+        "private_input_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "every_claim_has_grounded_source_or_escrow",
+        "grounded_claims_have_visible_footer_rows",
+        "accepted_sources_are_not_anti_documents",
+        "accepted_sources_meet_threshold_margin_and_anti_margin",
+        "visual_sources_have_region_commitments",
+        "attribution_credit_conserved_per_grounded_claim",
+        "unattributed_claims_route_to_escrow",
+        "footer_hash_reproducible",
+        "candidate_row_hashes_reproducible",
+        "creator_pool_conserved",
+        "public_report_does_not_embed_private_text"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["claim_source_attribution_report"],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "claim_count",
+        "source_count",
+        "candidate_row_count",
+        "grounded_claim_count",
+        "escrow_claim_count",
+        "accepted_source_count",
+        "anti_document_rejected_count",
+        "visual_region_commitment_count",
+        "footer_hash",
+        "creator_pool_conserved",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "response_text_disclosed",
+        "claim_text_disclosed",
+        "source_text_disclosed",
+        "visual_region_text_disclosed",
+        "public_report_uses_hashes_scores_source_ids_and_footer_rows"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

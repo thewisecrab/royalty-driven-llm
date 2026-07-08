@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_invocation_witness.schema.json",
+  "title": "RDLLM Universal Invocation Witness",
+  "type": "object",
+  "required": [
+    "witness_version",
+    "issuer",
+    "created_at",
+    "witness_policy",
+    "coverage_binding",
+    "coverage_call_rows",
+    "provider_receipt_rows",
+    "egress_event_rows",
+    "witness_rows",
+    "nonrepudiation_reconciliation",
+    "witness_decision",
+    "checks",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_invocation_witness_hash",
+    "signature"
+  ],
+  "properties": {
+    "witness_version": {
+      "const": "rdllm-universal-invocation-witness/v1"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "witness_policy": {
+      "type": "object"
+    },
+    "coverage_binding": {
+      "type": "object",
+      "required": [
+        "universal_invocation_coverage_hash",
+        "hash_reproducible",
+        "status",
+        "target_level",
+        "coverage_complete",
+        "metered_call_count",
+        "uncovered_call_count"
+      ]
+    },
+    "coverage_call_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "invocation_id",
+          "request_id",
+          "meter_event_id",
+          "guard_hash",
+          "provider_family",
+          "route_id",
+          "native_model",
+          "coverage_call_hash"
+        ]
+      }
+    },
+    "provider_receipt_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "provider_receipt_id",
+          "provider_id",
+          "invocation_id",
+          "request_id",
+          "meter_event_id",
+          "guard_hash",
+          "provider_family",
+          "route_id",
+          "provider_receipt_hash",
+          "provider_key_hash",
+          "provider_signature"
+        ]
+      }
+    },
+    "egress_event_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "egress_event_id",
+          "invocation_id",
+          "request_id",
+          "guard_hash",
+          "provider_family",
+          "route_id",
+          "allowed_by_gateway",
+          "observed_by_independent_collector",
+          "egress_hash"
+        ]
+      }
+    },
+    "witness_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "witness_event_id",
+          "witness_id",
+          "organization_id",
+          "trust_tier",
+          "invocation_id",
+          "request_id",
+          "provider_receipt_id",
+          "egress_event_id",
+          "witness_event_hash",
+          "witness_key_hash",
+          "witness_signature"
+        ]
+      }
+    },
+    "nonrepudiation_reconciliation": {
+      "type": "object",
+      "required": [
+        "matched_invocations",
+        "missing_provider_receipt_invocations",
+        "missing_egress_invocations",
+        "missing_witness_invocations",
+        "quorum_failures",
+        "field_mismatches"
+      ]
+    },
+    "witness_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "nonrepudiation_complete",
+        "failed_checks",
+        "failure_modes",
+        "safe_call_policy"
+      ],
+      "properties": {
+        "decision": {
+          "enum": [
+            "certify_nonrepudiation",
+            "block_nonrepudiation"
+          ]
+        }
+      }
+    },
+    "checks": {
+      "type": "object"
+    },
+    "commitments": {
+      "type": "object"
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "universal_invocation_witness",
+        "universal_invocation_coverage"
+      ]
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "covered_call_count",
+        "provider_receipt_count",
+        "egress_event_count",
+        "witness_event_count",
+        "nonrepudiation_complete"
+      ],
+      "properties": {
+        "target_certification_level": {
+          "const": "RDLLM-L135"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L134"
+        }
+      }
+    },
+    "universal_invocation_witness_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

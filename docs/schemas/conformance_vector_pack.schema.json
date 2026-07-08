@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/conformance_vector_pack.schema.json",
+  "title": "RDLLM Conformance Vector Pack",
+  "type": "object",
+  "required": [
+    "vector_pack_version",
+    "issuer",
+    "created_at",
+    "provider",
+    "conformance_contract",
+    "fixture_hashes",
+    "artifact_catalog",
+    "test_vectors",
+    "schemas",
+    "commitments",
+    "readiness_checks",
+    "summary",
+    "privacy",
+    "vector_pack_hash",
+    "signature"
+  ],
+  "properties": {
+    "vector_pack_version": {
+      "const": "rdllm-conformance-vector-pack/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "provider": {
+      "type": "object",
+      "required": ["id", "model_id", "model_version"],
+      "additionalProperties": true
+    },
+    "conformance_contract": {
+      "type": "object",
+      "required": [
+        "profile",
+        "well_known_path",
+        "target_certification_level",
+        "implementation_rule",
+        "required_verifier_commands"
+      ],
+      "additionalProperties": true
+    },
+    "fixture_hashes": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "artifact_catalog": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "artifact_type",
+          "schema",
+          "required",
+          "declared_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "entry_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "test_vectors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "vector_id",
+          "title",
+          "level",
+          "artifact",
+          "verifier_command",
+          "expected",
+          "negative_mutations",
+          "vector_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "attribution_receipt",
+        "answer_provenance_card",
+        "source_verification_report",
+        "response_envelope",
+        "provider_attribution_card",
+        "creator_license_contract",
+        "semantic_text_attribution_report",
+        "attribution_exchange",
+        "conformance_vector_pack",
+        "federation_handshake",
+        "attribution_capsule",
+        "response_release_gate",
+        "proof_carrying_response",
+        "serving_gateway_report",
+        "streaming_attribution_manifest",
+        "assurance_bundle",
+        "certification_report",
+        "integration_profile",
+        "discovery_manifest"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "artifact_catalog_root",
+        "test_vector_root",
+        "fixture_root",
+        "schema_root",
+        "provider_card_hash",
+        "certification_report_hash",
+        "integration_profile_hash",
+        "discovery_manifest_hash",
+        "response_envelope_hash",
+        "assurance_bundle_hash",
+        "semantic_text_attribution_report_hash",
+        "creator_license_contract_hash",
+        "attribution_exchange_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "readiness_checks": {
+      "type": "object",
+      "required": [
+        "all_required_artifacts_bound",
+        "certification_reaches_l31",
+        "response_envelope_verified",
+        "semantic_text_report_ready",
+        "attribution_exchange_ready",
+        "creator_license_contract_ready",
+        "negative_vectors_present",
+        "l32_vector_present",
+        "artifact_hashes_reproducible",
+        "vector_schema_declared",
+        "offline_verifier_declared"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "highest_upstream_level",
+        "artifact_count",
+        "required_artifact_count",
+        "test_vector_count",
+        "negative_mutation_count",
+        "covered_levels",
+        "schema_count",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "artifact_payloads_embedded",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "matched_text_disclosed",
+        "vector_pack_uses_hashes_expected_outcomes_and_mutation_names"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "vector_pack_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

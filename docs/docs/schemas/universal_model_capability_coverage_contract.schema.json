@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_model_capability_coverage_contract.schema.json",
+  "title": "RDLLM Universal Model Capability Coverage Contract",
+  "type": "object",
+  "required": [
+    "universal_model_capability_coverage_contract_version",
+    "schema",
+    "policy",
+    "well_known",
+    "artifact_bindings",
+    "model_capability_rows",
+    "modality_pair_rows",
+    "operation_surface_rows",
+    "route_capability_rows",
+    "negative_capability_rows",
+    "evidence_roots",
+    "checks",
+    "model_capability_coverage_decision",
+    "coverage",
+    "privacy",
+    "summary",
+    "universal_model_capability_coverage_contract_hash"
+  ],
+  "properties": {
+    "universal_model_capability_coverage_contract_version": {
+      "const": "rdllm-universal-model-capability-coverage-contract/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_model_capability_coverage_contract.schema.json"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_model_provider_registry_level",
+        "minimum_provider_catalog_coverage_level",
+        "minimum_runtime_route_binding_level",
+        "minimum_verified_source_footer_level",
+        "every_declared_capability_requires_fixture",
+        "capability_modality_and_operation_surfaces_must_be_bound",
+        "uncertified_capabilities_fail_closed",
+        "source_footer_or_abstention_required_per_capability",
+        "creator_settlement_requires_capability_receipt"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-model-capability-coverage-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L181" },
+        "minimum_model_provider_registry_level": { "const": "RDLLM-L176" },
+        "minimum_provider_catalog_coverage_level": { "const": "RDLLM-L178" },
+        "minimum_runtime_route_binding_level": { "const": "RDLLM-L179" },
+        "minimum_verified_source_footer_level": { "const": "RDLLM-L180" },
+        "every_declared_capability_requires_fixture": { "const": true },
+        "capability_modality_and_operation_surfaces_must_be_bound": {
+          "const": true
+        },
+        "uncertified_capabilities_fail_closed": { "const": true },
+        "source_footer_or_abstention_required_per_capability": {
+          "const": true
+        },
+        "creator_settlement_requires_capability_receipt": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-model-capability-coverage-contract.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-model-capability-coverage-contract/v1"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "universal_model_provider_registry",
+        "universal_provider_catalog_coverage_contract",
+        "universal_runtime_route_binding_contract",
+        "universal_verified_source_footer_contract"
+      ],
+      "additionalProperties": true
+    },
+    "model_capability_rows": {
+      "type": "object",
+      "minProperties": 24
+    },
+    "modality_pair_rows": {
+      "type": "object",
+      "minProperties": 14
+    },
+    "operation_surface_rows": {
+      "type": "object",
+      "minProperties": 16
+    },
+    "route_capability_rows": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "negative_capability_rows": {
+      "type": "object",
+      "minProperties": 18
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "model_provider_registry_l176_ready",
+        "provider_catalog_coverage_l178_ready",
+        "runtime_route_binding_l179_ready",
+        "verified_source_footer_l180_ready",
+        "model_capability_rows_complete",
+        "modality_pair_rows_complete",
+        "operation_surface_rows_complete",
+        "catalog_covered_route_capability_rows_complete",
+        "negative_capability_fixtures_reject",
+        "contract_signed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "model_capability_coverage_decision": {
+      "type": "object",
+      "required": [
+        "universal_model_capability_coverage_ready",
+        "all_declared_model_capabilities_covered",
+        "model_invocation_allowed",
+        "response_release_allowed",
+        "source_footer_reliance_allowed",
+        "creator_settlement_allowed",
+        "uncertified_capability_blocked",
+        "capability_downgrade_blocked"
+      ],
+      "properties": {
+        "universal_model_capability_coverage_ready": { "const": true },
+        "all_declared_model_capabilities_covered": { "const": true },
+        "model_invocation_allowed": { "const": true },
+        "response_release_allowed": { "const": true },
+        "source_footer_reliance_allowed": { "const": true },
+        "creator_settlement_allowed": { "const": true },
+        "uncertified_capability_blocked": { "const": true },
+        "capability_downgrade_blocked": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payloads_excluded",
+        "private_prompts_excluded",
+        "private_outputs_excluded",
+        "private_media_payloads_excluded",
+        "private_vectors_excluded",
+        "public_contract_uses_hashes_routes_capabilities_and_modes"
+      ],
+      "properties": {
+        "private_payloads_excluded": { "const": true },
+        "private_prompts_excluded": { "const": true },
+        "private_outputs_excluded": { "const": true },
+        "private_media_payloads_excluded": { "const": true },
+        "private_vectors_excluded": { "const": true },
+        "public_contract_uses_hashes_routes_capabilities_and_modes": {
+          "const": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_model_provider_registry_level",
+        "minimum_provider_catalog_coverage_level",
+        "minimum_runtime_route_binding_level",
+        "minimum_verified_source_footer_level",
+        "model_capability_count",
+        "ready_model_capability_count",
+        "modality_pair_count",
+        "ready_modality_pair_count",
+        "operation_surface_count",
+        "ready_operation_surface_count",
+        "catalog_covered_route_count",
+        "ready_route_capability_count",
+        "negative_capability_failure_count",
+        "ready_negative_capability_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_model_capability_coverage_contract"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L181" },
+        "minimum_model_provider_registry_level": { "const": "RDLLM-L176" },
+        "minimum_provider_catalog_coverage_level": { "const": "RDLLM-L178" },
+        "minimum_runtime_route_binding_level": { "const": "RDLLM-L179" },
+        "minimum_verified_source_footer_level": { "const": "RDLLM-L180" },
+        "model_capability_count": { "const": 24 },
+        "ready_model_capability_count": { "const": 24 },
+        "modality_pair_count": { "const": 14 },
+        "ready_modality_pair_count": { "const": 14 },
+        "operation_surface_count": { "const": 16 },
+        "ready_operation_surface_count": { "const": 16 },
+        "catalog_covered_route_count": { "type": "integer", "minimum": 1 },
+        "ready_route_capability_count": { "type": "integer", "minimum": 1 },
+        "negative_capability_failure_count": { "const": 18 },
+        "ready_negative_capability_failure_count": { "const": 18 },
+        "failure_mode_count": { "const": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_model_capability_coverage_contract": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "universal_model_capability_coverage_contract_hash": {
+      "type": "string",
+      "minLength": 64
+    }
+  },
+  "additionalProperties": true
+}

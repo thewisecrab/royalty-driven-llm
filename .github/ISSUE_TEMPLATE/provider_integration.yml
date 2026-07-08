@@ -1,0 +1,41 @@
+name: Provider integration
+description: Request or propose support for a model provider, gateway, runtime, or agent surface.
+title: "[Provider]: "
+labels: ["provider", "integration"]
+body:
+  - type: input
+    id: provider
+    attributes:
+      label: Provider or runtime
+      placeholder: OpenAI, Anthropic, Gemini, Bedrock, OpenRouter, local runtime, enterprise gateway, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: surfaces
+    attributes:
+      label: Native surfaces
+      description: List request, response, streaming, tool, citation, safety/refusal, usage, billing, and telemetry fields.
+    validations:
+      required: true
+  - type: textarea
+    id: docs
+    attributes:
+      label: Primary documentation
+      description: Link official docs or stable API references for every native surface.
+    validations:
+      required: true
+  - type: checkboxes
+    id: gates
+    attributes:
+      label: Required RDLLM gates
+      options:
+        - label: Native source annotations can map to RDLLM footer rows or explicit abstention.
+        - label: Claim-evidence footer verification can be run on materialized sources.
+        - label: Provider usage and billing meters can map to RDLLM settlement meters.
+        - label: Finish, refusal, safety, guardrail, truncation, tool, error, and stream-final states are observable.
+        - label: Negative fixtures can be replayed without exposing private payloads.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Known incompatibilities, missing fields, legal constraints, or deployment caveats.

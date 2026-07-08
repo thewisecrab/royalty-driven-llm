@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/royalty_statement.schema.json",
+  "title": "RDLLM Royalty Statement",
+  "type": "object",
+  "required": [
+    "statement_version",
+    "issuer",
+    "issued_at",
+    "period",
+    "summary",
+    "commitments",
+    "event_rollups",
+    "creator_statements",
+    "escrow_statements",
+    "work_statements",
+    "source_usage",
+    "receipt_rollups",
+    "trace_rollups",
+    "privacy",
+    "statement_hash",
+    "signature"
+  ],
+  "properties": {
+    "statement_version": {
+      "const": "rdllm-royalty-statement/v1"
+    },
+    "issuer": { "type": "string" },
+    "issued_at": { "type": "string" },
+    "period": {
+      "type": "object",
+      "required": ["start", "end"],
+      "properties": {
+        "start": { "type": "string" },
+        "end": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "event_count",
+        "receipt_count",
+        "trace_count",
+        "creator_count",
+        "escrow_account_count",
+        "source_access_count",
+        "visible_source_count",
+        "supported_claim_count",
+        "gross_revenue_total",
+        "creator_pool_total",
+        "payout_total",
+        "direct_creator_total",
+        "escrow_total",
+        "attribution_gap_event_count"
+      ],
+      "properties": {
+        "event_count": { "type": "integer", "minimum": 0 },
+        "receipt_count": { "type": "integer", "minimum": 0 },
+        "trace_count": { "type": "integer", "minimum": 0 },
+        "creator_count": { "type": "integer", "minimum": 0 },
+        "escrow_account_count": { "type": "integer", "minimum": 0 },
+        "source_access_count": { "type": "integer", "minimum": 0 },
+        "visible_source_count": { "type": "integer", "minimum": 0 },
+        "supported_claim_count": { "type": "integer", "minimum": 0 },
+        "gross_revenue_total": { "type": "string" },
+        "creator_pool_total": { "type": "string" },
+        "payout_total": { "type": "string" },
+        "direct_creator_total": { "type": "string" },
+        "escrow_total": { "type": "string" },
+        "attribution_gap_event_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "ledger_hash",
+        "event_root",
+        "share_root",
+        "creator_statement_root",
+        "escrow_statement_root",
+        "work_statement_root",
+        "source_usage_root",
+        "source_access_root",
+        "source_reference_root",
+        "claim_support_root",
+        "receipt_root",
+        "trace_root"
+      ],
+      "properties": {
+        "ledger_hash": { "type": "string" },
+        "event_root": { "type": "string" },
+        "share_root": { "type": "string" },
+        "creator_statement_root": { "type": "string" },
+        "escrow_statement_root": { "type": "string" },
+        "work_statement_root": { "type": "string" },
+        "source_usage_root": { "type": "string" },
+        "source_access_root": { "type": "string" },
+        "source_reference_root": { "type": "string" },
+        "claim_support_root": { "type": "string" },
+        "receipt_root": { "type": "string" },
+        "trace_root": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "event_rollups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "event_id",
+          "event_hash",
+          "gross_revenue",
+          "creator_pool",
+          "source_access_count",
+          "visible_source_count",
+          "supported_claim_count"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "creator_statements": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/account_statement" }
+    },
+    "escrow_statements": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/account_statement" }
+    },
+    "work_statements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "work_id",
+          "total_payout",
+          "event_count",
+          "chunk_count",
+          "source_access_count",
+          "visible_source_count",
+          "supported_claim_count"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "source_usage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "work_id",
+          "chunk_id",
+          "content_hash",
+          "total_payout",
+          "source_access_count",
+          "visible_source_count",
+          "supported_claim_count"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "receipt_rollups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["event_id", "event_hash", "receipt_hash"],
+        "additionalProperties": true
+      }
+    },
+    "trace_rollups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["event_id", "event_hash", "trace_hash"],
+        "additionalProperties": true
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_disclosed",
+        "answer_disclosed",
+        "source_quotes_disclosed",
+        "evidence_text_disclosed",
+        "matched_text_disclosed"
+      ],
+      "additionalProperties": true
+    },
+    "statement_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "account_statement": {
+      "type": "object",
+      "required": [
+        "creator_id",
+        "kind",
+        "total_payout",
+        "event_count",
+        "work_count",
+        "chunk_count",
+        "source_access_count",
+        "visible_source_count",
+        "supported_claim_count",
+        "work_statement_hash"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

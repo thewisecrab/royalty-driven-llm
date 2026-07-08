@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_foundation_provider_adoption_pack.schema.json",
+  "title": "RDLLM Universal Foundation Provider Adoption Pack",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "universal_foundation_provider_adoption_pack_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "artifact_bindings",
+    "provider_family_rows",
+    "standard_export_rows",
+    "adoption_gate_rows",
+    "negative_adoption_rows",
+    "evidence_roots",
+    "adoption_decision",
+    "privacy",
+    "checks",
+    "summary",
+    "universal_foundation_provider_adoption_pack_hash",
+    "signature"
+  ],
+  "properties": {
+    "universal_foundation_provider_adoption_pack_version": {
+      "const": "rdllm-universal-foundation-provider-adoption-pack/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_foundation_provider_adoption_pack.schema.json"
+    },
+    "created_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_certification_trust_level",
+        "minimum_invocation_enforcement_level",
+        "provider_neutral_adoption_required",
+        "self_certification_sufficient",
+        "source_footer_required",
+        "creator_settlement_required",
+        "telemetry_export_required",
+        "negative_fixture_fail_closed_required"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-foundation-provider-adoption-pack-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L162" },
+        "minimum_certification_trust_level": { "const": "RDLLM-L161" },
+        "minimum_invocation_enforcement_level": { "const": "RDLLM-L160" },
+        "provider_neutral_adoption_required": { "const": true },
+        "self_certification_sufficient": { "const": false },
+        "source_footer_required": { "const": true },
+        "creator_settlement_required": { "const": true },
+        "telemetry_export_required": { "const": true },
+        "negative_fixture_fail_closed_required": { "const": true }
+      }
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-foundation-provider-adoption-pack.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-foundation-provider-adoption-pack/v1"
+        }
+      }
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "artifact_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "present"
+        ],
+        "properties": {
+          "artifact_hash": { "type": "string" },
+          "payload_hash": { "type": "string" },
+          "hash_reproducible": { "type": "boolean" },
+          "status": { "type": "string" },
+          "level": { "type": "string" },
+          "present": { "type": "boolean" }
+        }
+      }
+    },
+    "provider_family_rows": { "$ref": "#/$defs/rowMap" },
+    "standard_export_rows": { "$ref": "#/$defs/rowMap" },
+    "adoption_gate_rows": { "$ref": "#/$defs/rowMap" },
+    "negative_adoption_rows": { "$ref": "#/$defs/rowMap" },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "artifact_binding_root",
+        "provider_family_root",
+        "standard_export_root",
+        "adoption_gate_root",
+        "negative_adoption_root"
+      ],
+      "properties": {
+        "artifact_binding_root": { "type": "string" },
+        "provider_family_root": { "type": "string" },
+        "standard_export_root": { "type": "string" },
+        "adoption_gate_root": { "type": "string" },
+        "negative_adoption_root": { "type": "string" }
+      }
+    },
+    "adoption_decision": {
+      "type": "object",
+      "required": [
+        "provider_neutral_adoption_ready",
+        "foundation_provider_self_assertion_sufficient",
+        "failure_modes"
+      ],
+      "properties": {
+        "provider_neutral_adoption_ready": { "type": "boolean" },
+        "foundation_provider_self_assertion_sufficient": { "const": false },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "native_provider_payloads_disclosed",
+        "tool_payloads_disclosed",
+        "payment_account_details_disclosed",
+        "public_pack_uses_hashes_and_status_rows"
+      ],
+      "properties": {
+        "prompt_text_disclosed": { "const": false },
+        "answer_text_disclosed": { "const": false },
+        "source_text_disclosed": { "const": false },
+        "native_provider_payloads_disclosed": { "const": false },
+        "tool_payloads_disclosed": { "const": false },
+        "payment_account_details_disclosed": { "const": false },
+        "public_pack_uses_hashes_and_status_rows": { "const": true }
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_certification_trust_level",
+        "minimum_invocation_enforcement_level",
+        "provider_neutral_adoption_supported"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L162" },
+        "minimum_certification_trust_level": { "const": "RDLLM-L161" },
+        "minimum_invocation_enforcement_level": { "const": "RDLLM-L160" },
+        "provider_neutral_adoption_supported": { "const": true }
+      }
+    },
+    "universal_foundation_provider_adoption_pack_hash": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "properties": {
+        "algorithm": { "const": "HMAC-SHA256" },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "rowMap": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    }
+  }
+}

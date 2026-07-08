@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_foundation_adoption_kernel.schema.json",
+  "title": "RDLLM Universal Foundation Adoption Kernel",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "foundation_adoption_kernel_version",
+    "issuer",
+    "created_at",
+    "foundation_adoption_policy",
+    "artifact_bindings",
+    "provider_family_rows",
+    "kernel_endpoint_rows",
+    "response_binding_rows",
+    "client_gate_rows",
+    "text_attribution_rows",
+    "standard_mapping_rows",
+    "failure_case_rows",
+    "evidence_commitments",
+    "checks",
+    "adoption_decision",
+    "verifier_commands",
+    "standards_controls",
+    "privacy",
+    "summary",
+    "universal_foundation_adoption_kernel_hash"
+  ],
+  "properties": {
+    "foundation_adoption_kernel_version": {
+      "const": "rdllm-universal-foundation-adoption-kernel/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "foundation_adoption_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_correction_level",
+        "well_known_path"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-foundation-adoption-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L156" },
+        "minimum_correction_level": { "const": "RDLLM-L155" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-foundation-adoption-kernel.json"
+        }
+      }
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [ "artifact_count", "artifact_binding_root", "bindings" ],
+      "properties": {
+        "artifact_count": { "type": "integer", "minimum": 0 },
+        "artifact_binding_root": { "type": "string" },
+        "bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "declared_hash",
+              "hash_reproducible",
+              "present",
+              "artifact_binding_hash"
+            ],
+            "properties": {
+              "name": { "type": "string" },
+              "declared_hash": { "type": "string" },
+              "hash_reproducible": { "type": "boolean" },
+              "present": { "type": "boolean" },
+              "artifact_binding_hash": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "provider_family_rows": { "type": "array", "items": { "type": "object" } },
+    "kernel_endpoint_rows": { "type": "array", "items": { "type": "object" } },
+    "response_binding_rows": { "type": "array", "items": { "type": "object" } },
+    "client_gate_rows": { "type": "array", "items": { "type": "object" } },
+    "text_attribution_rows": { "type": "array", "items": { "type": "object" } },
+    "standard_mapping_rows": { "type": "array", "items": { "type": "object" } },
+    "failure_case_rows": { "type": "array", "items": { "type": "object" } },
+    "evidence_commitments": { "type": "object" },
+    "checks": { "type": "object" },
+    "adoption_decision": {
+      "type": "object",
+      "required": [
+        "foundation_adoption_kernel_authorized",
+        "unverified_foundation_model_output_allowed",
+        "source_footer_without_status_resolver_allowed",
+        "metadata_stripping_proxy_allowed",
+        "provider_family_without_adapter_allowed",
+        "posthoc_citation_laundering_allowed",
+        "unsupported_claim_rendering_allowed",
+        "failure_modes"
+      ],
+      "properties": {
+        "foundation_adoption_kernel_authorized": { "type": "boolean" },
+        "unverified_foundation_model_output_allowed": { "const": false },
+        "source_footer_without_status_resolver_allowed": { "const": false },
+        "metadata_stripping_proxy_allowed": { "const": false },
+        "provider_family_without_adapter_allowed": { "const": false },
+        "posthoc_citation_laundering_allowed": { "const": false },
+        "unsupported_claim_rendering_allowed": { "const": false },
+        "failure_modes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "verifier_commands": {
+      "type": "object",
+      "required": [ "create", "verify", "well_known_path", "schema" ],
+      "properties": {
+        "create": { "const": "universal-foundation-adoption-kernel" },
+        "verify": { "const": "verify-universal-foundation-adoption-kernel" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-foundation-adoption-kernel.json"
+        },
+        "schema": {
+          "const": "docs/schemas/universal_foundation_adoption_kernel.schema.json"
+        }
+      }
+    },
+    "standards_controls": { "type": "object" },
+    "privacy": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_correction_level"
+      ],
+      "properties": {
+        "status": { "enum": [ "ready", "blocked" ] },
+        "target_certification_level": { "const": "RDLLM-L156" },
+        "minimum_correction_level": { "const": "RDLLM-L155" }
+      }
+    },
+    "universal_foundation_adoption_kernel_hash": { "type": "string" },
+    "signature": { "type": "string" }
+  }
+}

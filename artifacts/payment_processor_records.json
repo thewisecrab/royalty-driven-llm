@@ -1,0 +1,44 @@
+[
+  {
+    "currency": "USD",
+    "end_to_end_id": "RDLLM-4349aee8d2d7413ee95cc7355b29a",
+    "external_processor": "processor:rdllm-reference-ach",
+    "payment_instruction_id": "4349aee8d2d7413ee95cc7355b29a3320a63605dd127a387fa017ace062d8c38",
+    "payout_account_hash": "36046f2f9ba53892df7e7815fe5e2f5c5635908722ff258bdb6798aaca33f993",
+    "processor_record_hash": "1a2b8afb217c70f5c36c7c8cfacace33ba4aa94dfe4e2cff2028028e30da317f",
+    "processor_record_id": "artifact-payment-processor:1",
+    "record_type": "payment_settlement",
+    "settled_amount": "0.183682",
+    "settled_at": "2026-05-31T00:00:00Z",
+    "settlement_batch_hash": "0203e5726136a5dd64c12d622945f579fb83c74b9355489000986d1f4806cd64",
+    "settlement_status": "settled"
+  },
+  {
+    "currency": "USD",
+    "end_to_end_id": "RDLLM-aeebfbc8deb5684735cb631bc46a2",
+    "external_processor": "processor:rdllm-reference-ach",
+    "payment_instruction_id": "aeebfbc8deb5684735cb631bc46a204f77c2aec11b5087d0efbdd3dd4b99813b",
+    "payout_account_hash": "e40e0e769e8810ddee05459d531a117078b5d3c0df0838ecc0d527d8ae9efb24",
+    "processor_record_hash": "e9aab6ef2b7f5cc32bf389afd7bff1d1da7dd7e6967a6e393b32161a9835d80b",
+    "processor_record_id": "artifact-payment-processor:2",
+    "record_type": "payment_settlement",
+    "settled_amount": "0.125703",
+    "settled_at": "2026-05-31T00:00:00Z",
+    "settlement_batch_hash": "0203e5726136a5dd64c12d622945f579fb83c74b9355489000986d1f4806cd64",
+    "settlement_status": "settled"
+  },
+  {
+    "currency": "USD",
+    "end_to_end_id": "RDLLM-aec86cb4615425ad5074de5614193",
+    "external_processor": "processor:rdllm-reference-ach",
+    "payment_instruction_id": "aec86cb4615425ad5074de56141939e4f874e0cc9bae0632b01bfb6c5713f180",
+    "payout_account_hash": "093ef537c9af164c23f6868280281b5be3bbc058642bd017153126dc407fda1e",
+    "processor_record_hash": "f0a280e3d724d6048d962c2b23144e556b650e32add2d6456b23261dca5d9d92",
+    "processor_record_id": "artifact-payment-processor:3",
+    "record_type": "payment_settlement",
+    "settled_amount": "0.240615",
+    "settled_at": "2026-05-31T00:00:00Z",
+    "settlement_batch_hash": "0203e5726136a5dd64c12d622945f579fb83c74b9355489000986d1f4806cd64",
+    "settlement_status": "settled"
+  }
+]

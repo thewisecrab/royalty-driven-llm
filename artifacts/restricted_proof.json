@@ -1,0 +1,12 @@
+{
+  "leaf_hash": "9f0bb2d3f3aa183604b7f7c8929eb6f6fe03c25901560fa2e6aee0618580a7bc",
+  "leaf_index": 1,
+  "path": [
+    {
+      "hash": "03f637768d3116c8e8598566276e785d5d6456d14031549c155791d2776e19bb",
+      "side": "left"
+    }
+  ],
+  "root": "91f41cc0667176d291317657e3382479a4332ee144879a62e3d256aab0bf8c70",
+  "tree_size": 2
+}

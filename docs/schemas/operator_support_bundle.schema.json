@@ -1,0 +1,239 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/operator_support_bundle.schema.json",
+  "title": "RDLLM Operator Support Bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "generated_at",
+    "errors",
+    "checks_run",
+    "environment",
+    "redaction",
+    "doctor"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-operator-support-bundle/v1"
+    },
+    "status": {
+      "enum": ["passed", "failed"]
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "checks_run": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "doctor",
+          "bootstrap_verification",
+          "service_config_validation",
+          "response_verification",
+          "acceptance_verification"
+        ]
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["package", "python", "platform"],
+      "properties": {
+        "package": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "version"],
+          "properties": {
+            "name": { "const": "royalty-driven-llm" },
+            "version": { "type": "string" }
+          }
+        },
+        "python": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["version", "implementation"],
+          "properties": {
+            "version": { "type": "string", "minLength": 1 },
+            "implementation": { "type": "string", "minLength": 1 }
+          }
+        },
+        "platform": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["system", "machine"],
+          "properties": {
+            "system": { "type": "string" },
+            "machine": { "type": "string" }
+          }
+        }
+      }
+    },
+    "redaction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw_prompts_included",
+        "raw_outputs_included",
+        "raw_source_text_included",
+        "evidence_previews_included",
+        "rendered_footers_included",
+        "tokens_or_api_keys_included",
+        "payment_account_details_included",
+        "local_paths_included",
+        "retained_fields"
+      ],
+      "properties": {
+        "raw_prompts_included": { "const": false },
+        "raw_outputs_included": { "const": false },
+        "raw_source_text_included": { "const": false },
+        "evidence_previews_included": { "const": false },
+        "rendered_footers_included": { "const": false },
+        "tokens_or_api_keys_included": { "const": false },
+        "payment_account_details_included": { "const": false },
+        "local_paths_included": { "const": false },
+        "retained_fields": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "doctor": {
+      "$ref": "#/$defs/doctor_section"
+    },
+    "bootstrap_verification": {
+      "$ref": "#/$defs/status_section"
+    },
+    "service_config_validation": {
+      "$ref": "#/$defs/service_config_section"
+    },
+    "response_verification": {
+      "$ref": "#/$defs/response_verification"
+    },
+    "acceptance_verification": {
+      "$ref": "#/$defs/acceptance_verification"
+    }
+  },
+  "$defs": {
+    "hash64_or_empty": {
+      "type": "string",
+      "pattern": "^$|^[0-9a-f]{64}$"
+    },
+    "status_section": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["status", "errors"],
+      "properties": {
+        "status": { "type": "string", "minLength": 1 },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "doctor_section": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["status", "errors"],
+      "properties": {
+        "schema": { "const": "rdllm-operator-doctor/v1" },
+        "status": { "enum": ["passed", "failed", "skipped"] },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "package_resources": { "$ref": "#/$defs/status_section" },
+        "profile_templates": { "$ref": "#/$defs/status_section" },
+        "bootstrap": { "$ref": "#/$defs/status_section" },
+        "response": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "service_config_section": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "status",
+        "errors",
+        "schema_status",
+        "runtime_status",
+        "public_summary"
+      ],
+      "properties": {
+        "status": { "type": "string", "minLength": 1 },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "schema_status": { "type": "string" },
+        "runtime_status": { "type": "string" },
+        "public_summary": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "response_verification": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "schema",
+        "status",
+        "errors",
+        "event_hash",
+        "footer_hash",
+        "display_hash",
+        "source_count",
+        "claim_count"
+      ],
+      "properties": {
+        "schema": { "const": "rdllm-service-response-verification/v1" },
+        "status": { "type": "string", "minLength": 1 },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "event_hash": { "$ref": "#/$defs/hash64_or_empty" },
+        "footer_hash": { "$ref": "#/$defs/hash64_or_empty" },
+        "display_hash": { "$ref": "#/$defs/hash64_or_empty" },
+        "source_count": { "type": "integer", "minimum": 0 },
+        "claim_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "acceptance_verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "status",
+        "errors",
+        "acceptance_status",
+        "production_acceptance_decision",
+        "traffic_decision",
+        "recorded_acceptance_report_hash",
+        "computed_acceptance_report_hash"
+      ],
+      "properties": {
+        "schema": { "const": "rdllm-operator-acceptance-verification/v1" },
+        "status": { "enum": ["passed", "failed"] },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "acceptance_status": { "type": "string" },
+        "production_acceptance_decision": { "type": "string" },
+        "traffic_decision": { "type": "string" },
+        "recorded_acceptance_report_hash": { "$ref": "#/$defs/hash64_or_empty" },
+        "computed_acceptance_report_hash": { "$ref": "#/$defs/hash64_or_empty" }
+      }
+    }
+  }
+}

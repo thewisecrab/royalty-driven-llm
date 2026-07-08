@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/evidence_utility_attribution_report.schema.json",
+  "title": "RDLLM Causal Evidence Utility Attribution Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "created_at",
+    "issuer",
+    "event",
+    "policy",
+    "retrieval_trace",
+    "baseline",
+    "perturbation_commitments",
+    "claim_source_report_binding",
+    "sources",
+    "claims",
+    "utility_attribution",
+    "claim_attribution",
+    "footer",
+    "economics",
+    "checks",
+    "schemas",
+    "summary",
+    "report_hash"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-causal-evidence-utility/v1" },
+    "created_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": ["event_id", "event_hash", "prompt_hash", "response_hash"],
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "min_utility",
+        "max_duplicate_credit_inflation",
+        "max_duplicate_trace_drift"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-causal-evidence-utility-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L88" },
+        "min_utility": { "type": "number", "minimum": 0, "maximum": 1 },
+        "max_duplicate_credit_inflation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_duplicate_trace_drift": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "retrieval_trace": {
+      "type": "object",
+      "required": [
+        "turn_id",
+        "trace_hash",
+        "current_turn_source_ids",
+        "prior_turn_source_ids",
+        "carried_forward_source_ids",
+        "step_count",
+        "step_hashes"
+      ],
+      "additionalProperties": true
+    },
+    "baseline": {
+      "type": "object",
+      "required": ["baseline_hash", "claim_outcome_count", "claim_outcome_hashes"],
+      "additionalProperties": true
+    },
+    "perturbation_commitments": {
+      "type": "object",
+      "required": ["trial_count", "trial_hashes"],
+      "additionalProperties": true
+    },
+    "claim_source_report_binding": {
+      "type": "object",
+      "required": ["report_hash", "status", "target_certification_level"],
+      "additionalProperties": true
+    },
+    "sources": { "type": "array", "items": { "type": "object" } },
+    "claims": { "type": "array", "items": { "type": "object" } },
+    "utility_attribution": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "source_id",
+          "creator_id",
+          "baseline_cited",
+          "baseline_claim_supported",
+          "in_current_turn_trace",
+          "remove_utility",
+          "replace_utility",
+          "synergy_utility",
+          "utility_score",
+          "duplicate_neutral",
+          "utility_role",
+          "accepted",
+          "failure_reasons"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "claim_attribution": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_hash",
+          "accepted_source_ids",
+          "rejected_source_ids",
+          "causal_source_count",
+          "status",
+          "total_utility"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "footer": {
+      "type": "object",
+      "required": ["footer_hash", "source_rows", "claim_rows", "source_row_count"],
+      "additionalProperties": true
+    },
+    "economics": {
+      "type": "object",
+      "required": [
+        "gross_revenue",
+        "creator_pool_rate",
+        "creator_pool",
+        "per_claim_pool",
+        "source_payouts",
+        "creator_payouts",
+        "escrow",
+        "total_paid",
+        "pool_conserved"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "all_claims_have_causal_sources",
+        "intervention_trials_cover_cited_sources",
+        "no_prior_context_citation_drift",
+        "duplicate_trials_do_not_inflate_credit",
+        "no_rejected_cited_sources",
+        "creator_pool_conserved",
+        "claim_source_report_bound",
+        "no_raw_private_text"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["evidence_utility_attribution_report"],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "claim_count",
+        "causally_grounded_claim_count",
+        "escrow_claim_count",
+        "source_count",
+        "accepted_source_count",
+        "rejected_source_count",
+        "context_drift_rejection_count",
+        "duplicate_overcredit_rejection_count",
+        "spurious_source_rejection_count",
+        "trial_count",
+        "footer_hash"
+      ],
+      "additionalProperties": true
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "oneOf": [
+        { "type": "object" },
+        { "type": "string", "minLength": 64 }
+      ]
+    }
+  },
+  "additionalProperties": true
+}

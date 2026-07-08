@@ -1,0 +1,282 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/payment_execution_report.schema.json",
+  "title": "RDLLM Payment Execution Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "execution_policy",
+    "processor_record_rows",
+    "payment_execution_rows",
+    "escrow_execution_rows",
+    "hold_carryforward_rows",
+    "unmatched_processor_records",
+    "duplicate_processor_records",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "schemas",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-payment-execution-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "execution_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "payment_execution_mode",
+        "remittance_report_hash",
+        "payment_rail",
+        "target_certification_level",
+        "minimum_input_level",
+        "standards_alignment",
+        "raw_payout_accounts_forbidden",
+        "processor_records_required"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L77" },
+        "minimum_input_level": { "const": "RDLLM-L44" }
+      },
+      "additionalProperties": true
+    },
+    "processor_record_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "processor_record_id",
+          "external_processor",
+          "record_type",
+          "end_to_end_id",
+          "settlement_status",
+          "settled_amount",
+          "currency",
+          "processor_record_hash",
+          "settlement_batch_hash",
+          "raw_processor_record_disclosed",
+          "raw_payment_account_disclosed",
+          "customer_or_tax_record_disclosed",
+          "processor_record_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "payment_execution_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "payment_instruction_id",
+          "recipient_creator_id",
+          "work_id",
+          "currency",
+          "instructed_amount",
+          "executed_amount",
+          "execution_status",
+          "processor_settlement_status",
+          "processor_record_hash",
+          "settlement_batch_hash",
+          "end_to_end_id",
+          "payout_account_hash",
+          "payout_account_disclosed",
+          "instruction_row_hash",
+          "processor_record_row_hash",
+          "remittance_report_hash",
+          "amount_match",
+          "currency_match",
+          "payout_account_hash_match",
+          "end_to_end_id_match",
+          "execution_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "escrow_execution_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "escrow_instruction_id",
+          "recipient_creator_id",
+          "work_id",
+          "currency",
+          "instructed_amount",
+          "executed_amount",
+          "execution_status",
+          "processor_settlement_status",
+          "processor_record_hash",
+          "settlement_batch_hash",
+          "end_to_end_id",
+          "escrow_account_hash",
+          "escrow_account_disclosed",
+          "instruction_row_hash",
+          "processor_record_row_hash",
+          "remittance_report_hash",
+          "amount_match",
+          "currency_match",
+          "escrow_account_hash_match",
+          "end_to_end_id_match",
+          "execution_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "hold_carryforward_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "hold_id",
+          "hold_status",
+          "hold_reason",
+          "recipient_creator_id",
+          "work_id",
+          "currency",
+          "amount",
+          "execution_status",
+          "remittance_report_hash",
+          "remittance_hold_row_hash",
+          "hold_carryforward_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "unmatched_processor_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "processor_record_row_hash",
+          "processor_record_id",
+          "record_type",
+          "instruction_id",
+          "settlement_status",
+          "reason",
+          "unmatched_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "duplicate_processor_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "record_class",
+          "instruction_id",
+          "reason",
+          "duplicate_key_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "remittance_hash_reproducible",
+        "remittance_report_ready",
+        "remittance_input_is_instruction_only",
+        "processor_records_match_instruction_count",
+        "processor_record_rows_hash_bound",
+        "processor_record_hashes_present",
+        "no_duplicate_processor_records",
+        "no_unmatched_processor_records",
+        "all_payment_instructions_matched",
+        "payment_execution_amounts_match_instructions",
+        "payment_execution_accounts_match_instructions",
+        "payment_execution_references_match_instructions",
+        "all_escrow_instructions_matched",
+        "escrow_execution_amounts_match_instructions",
+        "escrow_execution_accounts_match_instructions",
+        "escrow_execution_references_match_instructions",
+        "remittance_holds_preserved_not_paid",
+        "executed_payment_total_matches_remittance",
+        "executed_escrow_total_matches_remittance",
+        "all_remittance_value_accounted_for",
+        "private_payment_fields_absent_from_input",
+        "payout_accounts_not_disclosed",
+        "private_payment_fields_absent_from_report"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "remittance_report_hash",
+        "payment_instruction_root",
+        "escrow_instruction_root",
+        "remittance_hold_root",
+        "processor_record_root",
+        "payment_execution_root",
+        "escrow_execution_root",
+        "hold_carryforward_root",
+        "unmatched_processor_record_root",
+        "duplicate_processor_record_root",
+        "settlement_batch_root"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "payment_execution_count",
+        "escrow_execution_count",
+        "hold_carryforward_count",
+        "processor_record_count",
+        "expected_processor_record_count",
+        "unmatched_processor_record_count",
+        "duplicate_processor_record_count",
+        "executed_payment_total",
+        "expected_payment_total",
+        "executed_escrow_total",
+        "expected_escrow_total",
+        "hold_total",
+        "accounted_total",
+        "expected_remittance_total",
+        "external_payment_execution_attested"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L77" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "raw_processor_records_disclosed",
+        "raw_payout_accounts_disclosed",
+        "raw_escrow_accounts_disclosed",
+        "customer_or_tax_records_disclosed",
+        "uses_processor_hashes",
+        "uses_payout_account_hashes",
+        "uses_escrow_account_hashes"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["payment_execution_report", "remittance_report"],
+      "additionalProperties": { "type": "string" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

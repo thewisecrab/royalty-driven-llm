@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/revenue_allocation_report.schema.json",
+  "title": "RDLLM Revenue Allocation Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "allocation_policy",
+    "revenue_sources",
+    "event_allocation_rows",
+    "receipt_rollups",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "schemas",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-revenue-allocation-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "allocation_policy": {
+      "type": "object",
+      "required": [
+        "policy_id",
+        "allocation_mode",
+        "canonical_basis",
+        "currency",
+        "target_certification_level"
+      ],
+      "properties": {
+        "policy_id": { "type": "string" },
+        "allocation_mode": { "type": "string" },
+        "canonical_basis": { "type": "string" },
+        "currency": { "type": "string" },
+        "rounding": { "type": "string" },
+        "event_order": { "type": "string" },
+        "raw_customer_records_forbidden": { "type": "boolean" },
+        "requires_source_revenue_conservation": { "type": "boolean" },
+        "requires_ledger_event_gross_match": { "type": "boolean" },
+        "target_certification_level": { "const": "RDLLM-L46" }
+      },
+      "additionalProperties": true
+    },
+    "revenue_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "source_type",
+          "currency",
+          "gross_revenue",
+          "allocation_basis",
+          "source_hashes",
+          "source_row_hash"
+        ],
+        "properties": {
+          "source_id": { "type": "string" },
+          "source_type": { "type": "string" },
+          "period_start": { "type": "string" },
+          "period_end": { "type": "string" },
+          "currency": { "type": "string" },
+          "gross_revenue": { "type": "string" },
+          "allocation_basis": { "type": "string" },
+          "source_hashes": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          },
+          "raw_account_disclosed": { "type": "boolean" },
+          "invoice_text_disclosed": { "type": "boolean" },
+          "raw_billing_record_disclosed": { "type": "boolean" },
+          "source_row_hash": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "event_allocation_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "event_id",
+          "event_hash",
+          "allocation_basis",
+          "basis_weight",
+          "allocated_gross_revenue",
+          "ledger_gross_revenue",
+          "gross_revenue_matches_ledger",
+          "creator_pool_rate",
+          "expected_creator_pool",
+          "ledger_creator_pool",
+          "creator_pool_matches_allocation",
+          "allocation_row_hash"
+        ],
+        "properties": {
+          "event_id": { "type": "string" },
+          "event_hash": { "type": "string" },
+          "receipt_hash": { "type": "string" },
+          "receipt_event_hash": { "type": "string" },
+          "allocation_basis": { "type": "string" },
+          "canonical_basis": { "type": "string" },
+          "basis_weight": { "type": "string" },
+          "usage_metrics": {
+            "type": "object",
+            "additionalProperties": { "type": "integer" }
+          },
+          "revenue_source_count": { "type": "integer" },
+          "revenue_source_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "source_allocations": {
+            "type": "array",
+            "items": { "type": "object" }
+          },
+          "allocated_gross_revenue": { "type": "string" },
+          "ledger_gross_revenue": { "type": "string" },
+          "gross_revenue_matches_ledger": { "type": "boolean" },
+          "creator_pool_rate": { "type": "string" },
+          "expected_creator_pool": { "type": "string" },
+          "ledger_creator_pool": { "type": "string" },
+          "creator_pool_matches_allocation": { "type": "boolean" },
+          "royalty_share_root": { "type": "string" },
+          "allocation_row_hash": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "receipt_rollups": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "source_revenue_conserved_to_event_allocations",
+        "ledger_gross_revenue_matches_allocations",
+        "creator_pool_conserved_from_allocated_revenue",
+        "receipt_hashes_bind_events"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "ledger_hash",
+        "allocation_policy_hash",
+        "revenue_source_root",
+        "event_allocation_root",
+        "gross_revenue_total",
+        "creator_pool_total"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "revenue_source_count",
+        "event_count",
+        "gross_revenue_total",
+        "creator_pool_total"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L46" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_customer_account_disclosed",
+        "invoice_text_disclosed",
+        "raw_billing_records_disclosed",
+        "uses_account_invoice_and_meter_hashes"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": { "type": "object" },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "properties": {
+        "algorithm": { "type": "string" },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      }
+    }
+  },
+  "additionalProperties": true
+}

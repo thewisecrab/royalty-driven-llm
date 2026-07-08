@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/source_freshness_audit.schema.json",
+  "title": "RDLLM Source Freshness Audit",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "audit_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "answer_binding",
+    "artifact_bindings",
+    "source_rows",
+    "claim_temporal_rows",
+    "candidate_temporal_rows",
+    "checks",
+    "commitments",
+    "schemas",
+    "summary",
+    "privacy",
+    "source_freshness_audit_hash",
+    "signature"
+  ],
+  "properties": {
+    "audit_version": { "const": "rdllm-source-freshness-audit/v1" },
+    "issuer": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "dynamic_requirements",
+        "static_requirements",
+        "source_metadata_must_include_retrieved_and_effective_time",
+        "retrieval_must_precede_or_equal_answer_time",
+        "fresher_supported_candidates_must_not_be_ignored",
+        "min_relevance_score",
+        "min_factual_support_score",
+        "default_max_source_age_days",
+        "default_max_retrieval_lag_hours",
+        "candidate_support_margin"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-source-freshness-audit-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L116" },
+        "minimum_input_level": { "const": "RDLLM-L115" },
+        "dynamic_requirements": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "static_requirements": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "source_metadata_must_include_retrieved_and_effective_time": { "const": true },
+        "retrieval_must_precede_or_equal_answer_time": { "const": true },
+        "fresher_supported_candidates_must_not_be_ignored": { "const": true },
+        "min_relevance_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "min_factual_support_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "default_max_source_age_days": { "type": "number", "exclusiveMinimum": 0 },
+        "default_max_retrieval_lag_hours": { "type": "number", "exclusiveMinimum": 0 },
+        "candidate_support_margin": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "answer_binding": {
+      "type": "object",
+      "required": [
+        "answer_id_hash",
+        "answer_time",
+        "source_count",
+        "claim_count",
+        "dynamic_claim_count",
+        "candidate_count"
+      ],
+      "properties": {
+        "answer_id_hash": { "type": "string", "minLength": 1 },
+        "answer_time": { "type": "string", "minLength": 1 },
+        "source_count": { "type": "integer", "minimum": 0 },
+        "claim_count": { "type": "integer", "minimum": 0 },
+        "dynamic_claim_count": { "type": "integer", "minimum": 0 },
+        "candidate_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "artifact_bindings": { "type": "object" },
+    "source_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "title",
+          "source_uri",
+          "retrieval_status",
+          "retrieved_at",
+          "effective_at",
+          "content_hash",
+          "source_version_hash",
+          "temporal_metadata_present",
+          "valid_at_answer_time",
+          "source_row_hash"
+        ],
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "title": { "type": "string" },
+          "source_uri": { "type": "string" },
+          "archive_uri": { "type": "string" },
+          "retrieval_status": { "type": "string" },
+          "retrieved_at": { "type": "string" },
+          "published_at": { "type": "string" },
+          "last_modified_at": { "type": "string" },
+          "valid_from": { "type": "string" },
+          "valid_until": { "type": "string" },
+          "effective_at": { "type": "string" },
+          "content_hash": { "type": "string" },
+          "source_version_hash": { "type": "string" },
+          "license_status": { "type": "string" },
+          "link_materialized": { "type": "boolean" },
+          "temporal_metadata_present": { "type": "boolean" },
+          "valid_at_answer_time": { "type": "boolean" },
+          "source_row_hash": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "claim_temporal_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_hash",
+          "temporal_requirement",
+          "dynamic_temporal_claim",
+          "as_of",
+          "citation_labels",
+          "resolved_citation_labels",
+          "source_temporal_rows",
+          "has_fresh_supported_source",
+          "claim_temporal_hash"
+        ]
+      }
+    },
+    "candidate_temporal_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidate_id",
+          "claim_id",
+          "label",
+          "selected",
+          "candidate_effective_at",
+          "supported_candidate",
+          "displaces_selected_source",
+          "candidate_temporal_hash"
+        ]
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "answer_time_present",
+        "source_rows_present",
+        "source_rows_have_temporal_metadata",
+        "claim_rows_present",
+        "temporal_requirements_recognized",
+        "every_claim_has_resolved_sources",
+        "every_temporal_claim_has_policy",
+        "every_dynamic_claim_has_fresh_source",
+        "every_selected_temporal_source_is_fresh",
+        "every_dynamic_claim_retrieved_within_lag",
+        "every_temporal_claim_valid_at_answer_time",
+        "every_selected_temporal_source_materialized",
+        "freshest_supported_candidate_selected",
+        "claim_support_hashes_present",
+        "artifact_bindings_hash_reproducible",
+        "public_report_has_no_private_field_names",
+        "private_strings_absent"
+      ]
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "source_temporal_root",
+        "claim_temporal_root",
+        "candidate_temporal_root",
+        "schema"
+      ],
+      "properties": {
+        "schema": { "const": "docs/schemas/source_freshness_audit.schema.json" }
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["source_freshness_audit"],
+      "properties": {
+        "source_freshness_audit": {
+          "const": "docs/schemas/source_freshness_audit.schema.json"
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "source_count",
+        "claim_count",
+        "dynamic_claim_count",
+        "fresh_dynamic_claim_count",
+        "stale_dynamic_claim_count",
+        "selected_candidate_count",
+        "fresher_supported_candidate_count"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L116" },
+        "minimum_input_level": { "const": "RDLLM-L115" }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_prompt_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_source_text_disclosed",
+        "raw_evidence_text_disclosed",
+        "public_report_uses_hashes_scores_uris_titles_and_timestamps"
+      ]
+    },
+    "source_freshness_audit_hash": { "type": "string", "minLength": 1 },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"]
+    }
+  }
+}

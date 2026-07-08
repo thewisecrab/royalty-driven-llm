@@ -1,0 +1,58 @@
+{
+  "creators": [
+    {
+      "creator_id": "arjun",
+      "name": "Arjun Rao",
+      "payout_account": "acct_arjun"
+    },
+    {
+      "creator_id": "copycat",
+      "name": "Disputed Claimant",
+      "payout_account": "acct_copycat"
+    }
+  ],
+  "works": [
+    {
+      "work_id": "arjun-provenance-ledger",
+      "creator_id": "arjun",
+      "title": "Provenance Ledgers for AI Outputs",
+      "license": "royalty-bearing",
+      "data_value_prior": 1.1,
+      "content": "Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. Hashes do not prove legal ownership by themselves, but they do prove that a payout was tied to a specific registered text at a specific point in the ledger."
+    },
+    {
+      "work_id": "copycat-provenance-ledger",
+      "creator_id": "copycat",
+      "title": "Copied Provenance Ledger Claim",
+      "license": "royalty-bearing",
+      "data_value_prior": 1.1,
+      "content": "Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. Hashes do not prove legal ownership by themselves, but they do prove that a payout was tied to a specific registered text at a specific point in the ledger."
+    }
+  ],
+  "attestations": [
+    {
+      "attestation_id": "attest_arjun_provenance_001",
+      "work_id": "arjun-provenance-ledger",
+      "creator_id": "arjun",
+      "claim_type": "self_asserted",
+      "issuer": "rdllm-demo-registry",
+      "issued_at": "2026-05-29T00:00:00Z",
+      "evidence_uri": "registered://attestations/arjun-provenance-ledger",
+      "evidence_hash": "d4b72a6cf1c1a5abf2dc38acee699d8c854037252d6adfb49d66067a21b3e6bf",
+      "signature": "demo-signature",
+      "status": "active"
+    },
+    {
+      "attestation_id": "attest_copycat_provenance_001",
+      "work_id": "copycat-provenance-ledger",
+      "creator_id": "copycat",
+      "claim_type": "self_asserted",
+      "issuer": "rdllm-demo-registry",
+      "issued_at": "2026-05-29T00:00:00Z",
+      "evidence_uri": "registered://attestations/copycat-provenance-ledger",
+      "evidence_hash": "4f57c40ce768743ab9efbdb3e4f8d6b8f0cb6945d1bc64f5af7ca0c14646fc1a",
+      "signature": "demo-signature",
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "event": {
+    "declared_style_creator_ids": [
+      "maya"
+    ],
+    "event_id": "event:artifact:style-influence",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05",
+    "output_text": "We trace the model room with bright careful rhythm; every hidden doorway gets named, every owed thread becomes a receipt.",
+    "prompt_text": "Draft an attribution note in Maya's registered prose style."
+  },
+  "style_profiles": [
+    {
+      "allowed_uses": [
+        "style_generation"
+      ],
+      "creator_id": "maya",
+      "license_status": "active",
+      "license_term_hash": "56604a8820c94723e88409e5a9e437dc007517ff4bd166118333f80c41e496c7",
+      "modality": "text",
+      "profile_id": "style:maya-prose",
+      "source_role": "style_candidate",
+      "source_uri": "registered://styles/maya-prose",
+      "style_examples": [
+        "We move through the archive with bright careful rhythm; every fragment stays visible, every debt becomes a receipt.",
+        "The work turns quiet evidence into a living ledger; every source remains visible and every payment finds its person."
+      ],
+      "title": "Maya Registered Prose Style",
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "allowed_uses": [
+        "style_generation"
+      ],
+      "creator_id": "decoy-style-owner",
+      "license_status": "active",
+      "modality": "text",
+      "profile_id": "style:blunt-decoy",
+      "source_role": "anti_style",
+      "source_uri": "registered://styles/blunt-decoy",
+      "style_examples": [
+        "Short blunt notes. Minimal cadence. Plain hard commands. No ornate rhythm."
+      ],
+      "title": "Blunt Decoy Style",
+      "work_id": "style:blunt-decoy"
+    }
+  ]
+}

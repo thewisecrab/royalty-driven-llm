@@ -1,0 +1,399 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_composition_settlement.schema.json",
+  "title": "RDLLM Universal Composition Settlement",
+  "type": "object",
+  "required": [
+    "settlement_version",
+    "issuer",
+    "created_at",
+    "settlement_policy",
+    "artifact_bindings",
+    "composition_binding",
+    "revenue_binding",
+    "provider_segment_settlement_rows",
+    "source_entitlement_rows",
+    "creator_obligation_rows",
+    "aggregate_recipient_rows",
+    "settlement_decision",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_composition_settlement_hash",
+    "signature"
+  ],
+  "properties": {
+    "settlement_version": {
+      "const": "rdllm-universal-composition-settlement/v1"
+    },
+    "issuer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "settlement_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "currency",
+        "rounding",
+        "segment_weight_source",
+        "source_entitlement_weight_source",
+        "requires_l130_release",
+        "requires_revenue_conservation",
+        "requires_explicit_source_entitlements",
+        "requires_source_footer_binding",
+        "on_missing_source_entitlement",
+        "on_unresolved_rights",
+        "on_disputed_rights",
+        "on_pool_mismatch"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-composition-settlement-policy/v1"
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L131"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L130"
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 3
+        },
+        "rounding": {
+          "const": "0.000001"
+        },
+        "on_missing_source_entitlement": {
+          "const": "block_settlement"
+        },
+        "on_unresolved_rights": {
+          "const": "escrow"
+        },
+        "on_disputed_rights": {
+          "const": "hold"
+        },
+        "on_pool_mismatch": {
+          "const": "block_settlement"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "universal_composition_receipt",
+        "revenue_allocation_report",
+        "clearinghouse_report"
+      ],
+      "additionalProperties": {
+        "$ref": "#/$defs/artifactBinding"
+      }
+    },
+    "composition_binding": {
+      "type": "object",
+      "required": [
+        "universal_composition_receipt_hash",
+        "composition_id",
+        "composition_status",
+        "composition_target_level",
+        "final_response_envelope_hash",
+        "source_footer_delivery_hash",
+        "provider_segment_root",
+        "deployment_attestation_root",
+        "telemetry_span_root",
+        "provider_segment_count",
+        "provider_families",
+        "segment_ids",
+        "composition_binding_hash"
+      ],
+      "additionalProperties": true
+    },
+    "revenue_binding": {
+      "type": "object",
+      "required": [
+        "currency",
+        "gross_revenue",
+        "creator_pool_rate",
+        "creator_pool",
+        "expected_creator_pool",
+        "revenue_allocation_report_hash",
+        "revenue_allocation_status",
+        "revenue_allocation_target_level",
+        "revenue_binding_hash"
+      ],
+      "additionalProperties": true
+    },
+    "provider_segment_settlement_rows": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/hashRow"
+      }
+    },
+    "source_entitlement_rows": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/hashRow"
+      }
+    },
+    "creator_obligation_rows": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/hashRow"
+      }
+    },
+    "aggregate_recipient_rows": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/hashRow"
+      }
+    },
+    "settlement_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "settlement_authorized",
+        "failed_checks",
+        "failure_modes",
+        "safe_output_policy"
+      ],
+      "properties": {
+        "decision": {
+          "enum": [
+            "release_settlement",
+            "block_settlement"
+          ]
+        },
+        "settlement_authorized": {
+          "type": "boolean"
+        },
+        "failed_checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "failure_modes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "l130_composition_receipt_hash_reproducible",
+        "l130_composition_receipt_released",
+        "revenue_basis_present",
+        "revenue_allocation_ready_if_present",
+        "creator_pool_matches_revenue_basis",
+        "settlement_currency_matches_revenue",
+        "provider_segment_rows_cover_l130_segments",
+        "provider_weights_conserve_unit",
+        "segment_pools_conserve_creator_pool",
+        "source_entitlement_rows_cover_segments",
+        "source_entitlements_reference_l130_claims_and_sources",
+        "source_entitlement_weights_conserve_each_segment",
+        "creator_obligations_conserve_segment_pools",
+        "aggregate_rows_conserve_creator_obligations",
+        "settlement_statuses_explicit",
+        "unresolved_or_disputed_sources_not_paid",
+        "source_footer_binding_preserved",
+        "no_duplicate_creator_obligations",
+        "clearinghouse_ready_if_present",
+        "private_text_not_disclosed"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "required": [
+        "failed_checks",
+        "failure_modes",
+        "missing_segment_entitlements",
+        "unknown_source_references",
+        "unknown_claim_references",
+        "duplicate_obligation_keys",
+        "entitlement_weight_sums_by_segment"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "universal_composition_receipt_hash",
+        "revenue_allocation_report_hash",
+        "clearinghouse_report_hash",
+        "composition_binding_hash",
+        "revenue_binding_hash",
+        "provider_segment_root",
+        "segment_settlement_root",
+        "source_entitlement_root",
+        "creator_obligation_root",
+        "aggregate_recipient_root",
+        "payable_root",
+        "escrow_root",
+        "held_root",
+        "schema"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "universal_composition_settlement",
+        "universal_composition_receipt",
+        "revenue_allocation_report",
+        "clearinghouse_report"
+      ],
+      "properties": {
+        "universal_composition_settlement": {
+          "const": "docs/schemas/universal_composition_settlement.schema.json"
+        }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_prompt_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_source_text_disclosed",
+        "raw_billing_records_disclosed",
+        "raw_provider_response_disclosed",
+        "settlement_uses_hashes_ids_and_totals"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "composition_id",
+        "currency",
+        "gross_revenue",
+        "creator_pool",
+        "provider_segment_count",
+        "source_entitlement_count",
+        "creator_obligation_count",
+        "aggregate_recipient_count",
+        "payable_total",
+        "escrow_total",
+        "held_total",
+        "settled_total",
+        "failed_check_count",
+        "failure_mode_count",
+        "composition_settlement_authorized",
+        "double_payment_prevented",
+        "unresolved_sources_escrowed_or_held",
+        "source_footer_binding_preserved",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "ready",
+            "blocked"
+          ]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L131"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L130"
+        }
+      },
+      "additionalProperties": true
+    },
+    "universal_composition_settlement_hash": {
+      "type": "string",
+      "minLength": 64
+    },
+    "signature": {
+      "$ref": "#/$defs/signature"
+    }
+  },
+  "$defs": {
+    "artifactBinding": {
+      "type": "object",
+      "required": [
+        "present",
+        "declared_hash",
+        "hash_reproducible",
+        "artifact_type",
+        "status",
+        "target_certification_level"
+      ],
+      "properties": {
+        "present": {
+          "type": "boolean"
+        },
+        "declared_hash": {
+          "type": "string"
+        },
+        "hash_reproducible": {
+          "type": "boolean"
+        },
+        "artifact_type": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "target_certification_level": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "hashRow": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": true
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "properties": {
+        "algorithm": {
+          "enum": [
+            "HMAC-SHA256",
+            "UNSIGNED"
+          ]
+        },
+        "issuer": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

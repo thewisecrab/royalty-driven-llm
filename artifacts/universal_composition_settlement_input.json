@@ -1,0 +1,724 @@
+{
+  "clearinghouse_report": {
+    "checks": {
+      "all_obligations_accounted_for": true,
+      "duplicates_are_held_not_paid": true,
+      "escrow_rows_conserve_escrow_obligations": true,
+      "input_artifact_hashes_reproducible": true,
+      "no_duplicate_obligations_paid_twice": true,
+      "no_private_text_disclosed": true,
+      "payable_rows_conserve_payable_obligations": true,
+      "transitive_reports_ready": true
+    },
+    "commitments": {
+      "duplicate_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "escrow_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "held_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "input_artifact_root": "cf8aa58fba0f5bf3bcc6e7f63a2f47069a3478529183d845b15dba79ee106a23",
+      "normalized_obligation_root": "1cbfef9ce3865d579764c38987fa2adc4bfe88edac35b390f0639cf1b9fc06fa",
+      "payable_root": "dd8d433698715064462dae6e55032695459d47d638e8bfcd16ef7b8c846ccb36",
+      "policy_hash": "3375de545b4b905b1792ba0adfa0cb44f297e23b4a478402e1325e0b7ebba274"
+    },
+    "created_at": "2026-05-31T00:00:00Z",
+    "duplicate_rows": [],
+    "escrow_rows": [],
+    "held_rows": [],
+    "input_artifact_rows": [
+      {
+        "artifact_hash_reproducible": true,
+        "artifact_index": 1,
+        "artifact_ref": "statement:1",
+        "artifact_row_hash": "d281d825a83e0b91972c1dc4b29137467d1ecaab036b3d4f9f2a752b3f79150f",
+        "artifact_type": "royalty_statement",
+        "declared_hash": "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42",
+        "event_count": 1,
+        "event_ids_root": "a3e07dc87bd19b684ecc8fceeb6dffe29bbe9a52f14fbcaa10f2c7cc25efd907",
+        "event_root": "92589776798d65974cfa40ec5807b59b738e163c522c50c71c6e6a9f457c7eef",
+        "issuer": "rdllm-local-demo",
+        "payout_total": "0.550000",
+        "period_end": "",
+        "period_start": "",
+        "provider_id": "rdllm-local-demo"
+      }
+    ],
+    "issuer": "rdllm-local-demo",
+    "normalized_obligations": [
+      {
+        "basis": "provider_aggregate_royalty_statement",
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+        "currency": "USD",
+        "duplicate_of": "",
+        "event_hash_root": "92589776798d65974cfa40ec5807b59b738e163c522c50c71c6e6a9f457c7eef",
+        "event_ids_root": "a3e07dc87bd19b684ecc8fceeb6dffe29bbe9a52f14fbcaa10f2c7cc25efd907",
+        "hold_reason": "",
+        "normalized_obligation_hash": "f6c6b352447f795d7261c54bb93e1efa9e27e2df1f96e547f2a2861177cc31a2",
+        "obligation_key": "a54dc0b67de292ecdb7d24e04e38e739b621c41f75bf6a1ba200ed609711e44a",
+        "origin_artifact_ref": "statement:1",
+        "origin_hash": "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42",
+        "origin_provider_id": "rdllm-local-demo",
+        "origin_row_hash": "fa3fbea30c936369bf0fd6720e0ed22db69d64961eedece33c8720b682d5b311",
+        "origin_row_index": 1,
+        "origin_type": "royalty_statement",
+        "payout": "0.183682",
+        "recipient_creator_id": "arjun",
+        "recipient_creator_name": "",
+        "recipient_kind": "creator",
+        "settlement_status": "payable",
+        "source_access_count": 2,
+        "supported_claim_count": 2,
+        "visible_source_count": 1,
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "basis": "provider_aggregate_royalty_statement",
+        "chunk_id": "lina-governance-disputes:c1",
+        "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+        "currency": "USD",
+        "duplicate_of": "",
+        "event_hash_root": "92589776798d65974cfa40ec5807b59b738e163c522c50c71c6e6a9f457c7eef",
+        "event_ids_root": "a3e07dc87bd19b684ecc8fceeb6dffe29bbe9a52f14fbcaa10f2c7cc25efd907",
+        "hold_reason": "",
+        "normalized_obligation_hash": "d6d06bc3028695fec0a1a537db5181ecfb015c3e0c0ef4197141d0267db5667d",
+        "obligation_key": "4b2fedc1b7563dc64b50d8c7eaf83449c8df78e497b5981176d9f2c5d80178c1",
+        "origin_artifact_ref": "statement:1",
+        "origin_hash": "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42",
+        "origin_provider_id": "rdllm-local-demo",
+        "origin_row_hash": "27b90353f228a58be6b67c2b80d2ae6588a224a0af2776226f27987551eb3ba9",
+        "origin_row_index": 2,
+        "origin_type": "royalty_statement",
+        "payout": "0.125703",
+        "recipient_creator_id": "lina",
+        "recipient_creator_name": "",
+        "recipient_kind": "creator",
+        "settlement_status": "payable",
+        "source_access_count": 2,
+        "supported_claim_count": 2,
+        "visible_source_count": 1,
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "basis": "provider_aggregate_royalty_statement",
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+        "currency": "USD",
+        "duplicate_of": "",
+        "event_hash_root": "92589776798d65974cfa40ec5807b59b738e163c522c50c71c6e6a9f457c7eef",
+        "event_ids_root": "a3e07dc87bd19b684ecc8fceeb6dffe29bbe9a52f14fbcaa10f2c7cc25efd907",
+        "hold_reason": "",
+        "normalized_obligation_hash": "ef06f9a712e2a1ae77dd5661bc9f5b9e5198b1812384efb69fd6712167691cc2",
+        "obligation_key": "ec7580ae1ebedbf630770d1abb3fca2dc5a0a3a5f65b388dbfa3973b7e97e7bc",
+        "origin_artifact_ref": "statement:1",
+        "origin_hash": "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42",
+        "origin_provider_id": "rdllm-local-demo",
+        "origin_row_hash": "ca51bcceec7a4c61129af377cf38254308dd9011d98a987fd8c24aef0c5fb907",
+        "origin_row_index": 3,
+        "origin_type": "royalty_statement",
+        "payout": "0.240615",
+        "recipient_creator_id": "maya",
+        "recipient_creator_name": "",
+        "recipient_kind": "creator",
+        "settlement_status": "payable",
+        "source_access_count": 2,
+        "supported_claim_count": 2,
+        "visible_source_count": 1,
+        "work_id": "maya-youtube-style-pool"
+      }
+    ],
+    "payable_rows": [
+      {
+        "chunk_ids": [
+          "arjun-provenance-ledger:c1"
+        ],
+        "currency": "USD",
+        "obligation_count": 1,
+        "origin_hashes": [
+          "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42"
+        ],
+        "recipient_creator_id": "arjun",
+        "recipient_kind": "creator",
+        "settlement_row_hash": "018f77d8ce822986016db519dc00cf4b16b76571ae4b2e18a8fcb2bda1db0d87",
+        "total_payout": "0.183682",
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "chunk_ids": [
+          "lina-governance-disputes:c1"
+        ],
+        "currency": "USD",
+        "obligation_count": 1,
+        "origin_hashes": [
+          "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42"
+        ],
+        "recipient_creator_id": "lina",
+        "recipient_kind": "creator",
+        "settlement_row_hash": "00c6fe28f3be74304e5c95a081614caf5be61dc4088ef07ed920ef2b0767ea70",
+        "total_payout": "0.125703",
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "chunk_ids": [
+          "maya-youtube-style-pool:c1"
+        ],
+        "currency": "USD",
+        "obligation_count": 1,
+        "origin_hashes": [
+          "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42"
+        ],
+        "recipient_creator_id": "maya",
+        "recipient_kind": "creator",
+        "settlement_row_hash": "91941eac964e45bce7068b559761f632cb05014061ff89aa104ea830459df8a3",
+        "total_payout": "0.240615",
+        "work_id": "maya-youtube-style-pool"
+      }
+    ],
+    "privacy": {
+      "answer_text_disclosed": false,
+      "clearing_uses_hashes_totals_and_source_ids": true,
+      "copied_output_text_disclosed": false,
+      "prompt_text_disclosed": false,
+      "source_text_disclosed": false
+    },
+    "report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+    "report_version": "rdllm-clearinghouse-report/v1",
+    "settlement_policy": {
+      "clearinghouse_target_level": "RDLLM-L43",
+      "duplicate_policy": "pay_first_unique_origin_hold_repeated_or_overlapping_submissions",
+      "escrow_policy": "route_unresolved_or_escrow_recipients_to_registry_escrow",
+      "input_artifacts": [
+        "rdllm-royalty-statement/v1",
+        "rdllm-transitive-attribution-report/v1"
+      ],
+      "minimum_provider_certification_level": "RDLLM-L42",
+      "profile": "rdllm-cross-provider-clearing/v1",
+      "settlement_currency": "USD"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "7ed0e3b8cf72afdfbcb7e03d249837a6fc4f4c15c604ac3929bea0081d03c8a4"
+    },
+    "summary": {
+      "accounted_total": "0.550000",
+      "double_payment_prevented": true,
+      "duplicate_count": 0,
+      "escrow_account_count": 0,
+      "escrow_obligation_count": 0,
+      "escrow_total": "0.000000",
+      "gross_obligation_total": "0.550000",
+      "held_obligation_count": 0,
+      "held_total": "0.000000",
+      "input_artifact_count": 1,
+      "normalized_obligation_count": 3,
+      "payable_creator_count": 3,
+      "payable_obligation_count": 3,
+      "payable_total": "0.550000",
+      "settlement_currency": "USD",
+      "statement_count": 1,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L43",
+      "transitive_report_count": 0
+    }
+  },
+  "private_strings": [
+    "How should AI prove attribution?",
+    "Royalty-aware answer:\nFor the prompt 'How should AI prove attribution?', the strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]",
+    "Royalty-aware answer:\nFor the prompt 'How should AI prove attribution?', the strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]\n\nSources\n[S1] Provenance Ledgers for AI Outputs - Arjun Rao; chunk=arjun-provenance-ledger:c1; uri=registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1; support=0.303; text_match=0.900; hash=e94efa6d9bb3.\n    Evidence: span_hashes=399e7ff82b80,6ea90fbdd0fb. Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.\n[S2] Creator Governance for AI Licensing - Lina Park; chunk=lina-governance-disputes:c1; uri=registered://works/lina-governance-disputes#lina-governance-disputes:c1; support=0.204; text_match=0.633; hash=2e332f176133.\n    Evidence: span_hashes=71e11e089ebe,82b19c7059e7. Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.\n[S3] Usage Pools for Creator Platforms - Maya Sen; chunk=maya-youtube-style-pool:c1; uri=registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1; support=0.333; text_match=0.933; hash=6029417218e9.\n    Evidence: span_hashes=28528b6fc0db,a9ed8431a259. A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.\nGrounding: 6/6 claims supported; status=grounded.\nClaim Evidence\n[C1] S1; span=399e7ff82b80; chars=0-64.\n[C2] S1; span=6ea90fbdd0fb; chars=65-244.\n[C3] S2; span=71e11e089ebe; chars=0-51.\n[C4] S2; span=82b19c7059e7; chars=52-164.\n[C5] S3; span=28528b6fc0db; chars=0-136.\n[C6] S3; span=a9ed8431a259; chars=137-262.",
+    "artifact private universal composition settlement"
+  ],
+  "revenue_allocation_report": {
+    "allocation_policy": {
+      "allocation_mode": "ledger_gross_revenue",
+      "canonical_basis": "ledger_gross_revenue",
+      "currency": "USD",
+      "event_order": "event_id_ascending",
+      "policy_id": "revenue-allocation:ledger-gross",
+      "raw_customer_records_forbidden": true,
+      "requires_ledger_event_gross_match": true,
+      "requires_source_revenue_conservation": true,
+      "rounding": "0.000001",
+      "target_certification_level": "RDLLM-L46"
+    },
+    "checks": {
+      "allocation_mode_supported": true,
+      "creator_pool_conserved_from_allocated_revenue": true,
+      "ledger_events_present": true,
+      "ledger_gross_revenue_matches_allocations": true,
+      "no_duplicate_event_rows": true,
+      "private_billing_fields_absent_from_input": true,
+      "private_billing_fields_absent_from_report": true,
+      "receipt_hashes_bind_events": true,
+      "revenue_source_rows_hash_bound": true,
+      "revenue_sources_present": true,
+      "single_currency_report": true,
+      "source_revenue_conserved_to_event_allocations": true
+    },
+    "commitments": {
+      "allocated_gross_revenue_total": "1.000000",
+      "allocation_policy_hash": "2e77f5af27a8eee364d9333aa6c7f34a1e51d8013152517cb0a3b49f0a27b9fe",
+      "creator_pool_total": "0.550000",
+      "event_allocation_root": "89505cf7e50d490183ecc07e2ff954713fda1cbbbc67e5ed3ae2b28576798d57",
+      "gross_revenue_total": "1.000000",
+      "ledger_gross_revenue_total": "1.000000",
+      "ledger_hash": "594fe2b60c121e1678897cc0957c3bc7e1c0904e3d6096fa0b4fa6c83e775222",
+      "receipt_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "revenue_source_root": "0280b8dd21ff6938d35863be023d2b9a625f9f54f677ffe3d35b878ef4392134"
+    },
+    "created_at": "2026-05-31T00:00:00Z",
+    "event_allocation_rows": [
+      {
+        "allocated_gross_revenue": "1.000000",
+        "allocation_basis": "ledger_gross_revenue",
+        "allocation_row_hash": "6ad0e053b38b889efac046483c258f161249ff0413e67e909d7fd73172080cf0",
+        "basis_weight": "1.00000000",
+        "canonical_basis": "ledger_gross_revenue",
+        "creator_pool_matches_allocation": true,
+        "creator_pool_rate": "0.55",
+        "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+        "event_id": "evt_1ed43e106d466249",
+        "expected_creator_pool": "0.550000",
+        "gross_revenue_matches_ledger": true,
+        "ledger_creator_pool": "0.550000",
+        "ledger_gross_revenue": "1.000000",
+        "receipt_event_hash": "",
+        "receipt_hash": "",
+        "revenue_source_count": 2,
+        "revenue_source_ids": [
+          "revenue:api-meter:demo",
+          "revenue:subscription:demo"
+        ],
+        "royalty_share_root": "dad60e231e4b0b78ecb711f51a332f42d8cf80d8d7e4f15afa8a2eded29dadd7",
+        "source_allocations": [
+          {
+            "allocation_basis": "ledger_gross_revenue",
+            "currency": "USD",
+            "gross_revenue": "0.250000",
+            "source_id": "revenue:api-meter:demo",
+            "source_row_hash": "5edcccf587b05070032090d43dc541add91f7bf204ae0161e269ce532d790a33",
+            "source_type": "api_metering"
+          },
+          {
+            "allocation_basis": "ledger_gross_revenue",
+            "currency": "USD",
+            "gross_revenue": "0.750000",
+            "source_id": "revenue:subscription:demo",
+            "source_row_hash": "db0fd274833ae28b9b97b19a1ea5bdcc5aa88e469560e4e231d3d6363f860966",
+            "source_type": "subscription_pool"
+          }
+        ],
+        "usage_metrics": {
+          "event_count": 1,
+          "output_character_count": 804,
+          "output_token_count": 118,
+          "prompt_token_count": 5,
+          "request_count": 1,
+          "source_access_count": 6,
+          "supported_claim_count": 6,
+          "total_token_count": 123,
+          "visible_source_count": 3
+        }
+      }
+    ],
+    "issuer": "rdllm-local-demo",
+    "privacy": {
+      "answer_text_disclosed": false,
+      "event_rows_use_hashes_and_aggregate_metrics": true,
+      "invoice_text_disclosed": false,
+      "prompt_text_disclosed": false,
+      "raw_billing_records_disclosed": false,
+      "raw_customer_account_disclosed": false,
+      "source_text_disclosed": false,
+      "uses_account_invoice_and_meter_hashes": true
+    },
+    "receipt_rollups": [],
+    "report_hash": "d927e86b83c754197b4c9f28cf00828bff8b29289e9b5a0cc49d7604761d1cd3",
+    "report_version": "rdllm-revenue-allocation-report/v1",
+    "revenue_sources": [
+      {
+        "allocation_basis": "ledger_gross_revenue",
+        "currency": "USD",
+        "gross_revenue": "0.250000",
+        "invoice_text_disclosed": false,
+        "period_end": "2026-05-31",
+        "period_start": "2026-05-01",
+        "raw_account_disclosed": false,
+        "raw_billing_record_disclosed": false,
+        "source_hashes": {
+          "invoice_hash": "ffa23e6b894338b00e0793c0bc4504c21a7f4616d5238f8f2f3c10734db5484f",
+          "meter_event_root": "0ff1d862b195dc79c2574dfe0ff7e02b0a3030d2ab5c990979a5f3548e44f202"
+        },
+        "source_id": "revenue:api-meter:demo",
+        "source_row_hash": "5edcccf587b05070032090d43dc541add91f7bf204ae0161e269ce532d790a33",
+        "source_type": "api_metering"
+      },
+      {
+        "allocation_basis": "ledger_gross_revenue",
+        "currency": "USD",
+        "gross_revenue": "0.750000",
+        "invoice_text_disclosed": false,
+        "period_end": "2026-05-31",
+        "period_start": "2026-05-01",
+        "raw_account_disclosed": false,
+        "raw_billing_record_disclosed": false,
+        "source_hashes": {
+          "billing_record_hash": "ed9bf4887e415e570bf13f375ef50acf0c7a1835e92e671568efb60244eaf35b",
+          "subscription_pool_hash": "a72ba7aec381dd8b0655577218c6f7d1788b3972878b1d49c806e9d0392739ed"
+        },
+        "source_id": "revenue:subscription:demo",
+        "source_row_hash": "db0fd274833ae28b9b97b19a1ea5bdcc5aa88e469560e4e231d3d6363f860966",
+        "source_type": "subscription_pool"
+      }
+    ],
+    "schemas": {
+      "attribution_receipt": "docs/schemas/attribution_receipt.schema.json",
+      "revenue_allocation_report": "docs/schemas/revenue_allocation_report.schema.json",
+      "royalty_statement": "docs/schemas/royalty_statement.schema.json"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "fb410b23de82d0598e6b26b8bbcbfed45e1dd3bf772d2d16da86d4a8ee0eaba3"
+    },
+    "summary": {
+      "allocated_gross_revenue_total": "1.000000",
+      "allocation_mode": "ledger_gross_revenue",
+      "creator_pool_total": "0.550000",
+      "currency": "USD",
+      "event_count": 1,
+      "expected_creator_pool_total": "0.550000",
+      "gross_revenue_total": "1.000000",
+      "ledger_gross_revenue_total": "1.000000",
+      "private_input_field_paths": [],
+      "private_report_field_paths": [],
+      "receipt_count": 0,
+      "revenue_source_count": 2,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L46",
+      "unallocated_revenue_total": "0.000000"
+    }
+  },
+  "settlement_policy": {
+    "creator_pool": "0.550000",
+    "creator_pool_rate": "0.55",
+    "currency": "USD",
+    "gross_revenue": "1.000000"
+  },
+  "source_entitlements": [
+    {
+      "allocation_weight": "0.750000",
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "claim_id": "claim:artifact-composition:1",
+      "content_hash": "c41dfbd10095b8014795d9c2e63b22380378208e0bdb55ac74b7b9310095cea6",
+      "recipient_creator_id": "maya",
+      "recipient_kind": "creator",
+      "rights_status": "licensed",
+      "segment_id": "segment:artifact:openai_responses",
+      "source_label": "C1",
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "allocation_weight": "0.250000",
+      "chunk_id": "unresolved-artifact-source:c1",
+      "claim_id": "claim:artifact-composition:1",
+      "content_hash": "52e590e6307dd00f4098d552f38b0b1d5c55dcd7bb160d6acb6bfb91f32d1246",
+      "recipient_creator_id": "unknown_creator_escrow",
+      "recipient_kind": "escrow",
+      "rights_status": "unresolved",
+      "segment_id": "segment:artifact:openai_responses",
+      "source_label": "C1",
+      "work_id": "unresolved-artifact-source"
+    },
+    {
+      "allocation_weight": "1.000000",
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "claim_id": "claim:artifact-composition:2",
+      "content_hash": "2eaf0f182ac00e69b63d586ea551398675caad8d4adbf6406ae876878a06f58d",
+      "recipient_creator_id": "arjun",
+      "recipient_kind": "creator",
+      "rights_status": "licensed",
+      "segment_id": "segment:artifact:anthropic_messages",
+      "source_label": "C2",
+      "work_id": "arjun-provenance-ledger"
+    }
+  ],
+  "universal_composition_receipt": {
+    "artifact_bindings": {
+      "composite_foundation_adapter": {
+        "artifact_type": "rdllm-composite-foundation-adapter/v1",
+        "declared_hash": "6656bbf9c9129bfe19120e2a2655d979890e87e457dd722280ea1c5d85e75864",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "discovery_manifest": {
+        "artifact_type": "",
+        "declared_hash": "",
+        "hash_reproducible": false,
+        "present": false
+      },
+      "foundation_provider_conformance": {
+        "artifact_type": "rdllm-foundation-provider-conformance/v1",
+        "declared_hash": "db1fdda0749269946a8f5b65b2c86bcd42c54250e3c8a919a984f3558a2fad2f",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "foundation_runtime_router": {
+        "artifact_type": "rdllm-foundation-runtime-router/v1",
+        "declared_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "response_envelope": {
+        "artifact_type": "rdllm-response-envelope/v1",
+        "declared_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "source_footer_delivery": {
+        "artifact_type": "",
+        "declared_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+        "hash_reproducible": true,
+        "present": true
+      }
+    },
+    "checks": {
+      "artifact_hashes_reproducible": true,
+      "composition_plan_hash_reproducible": true,
+      "deployment_attestations_released_l129": true,
+      "each_segment_has_single_matching_deployment_attestation": true,
+      "final_response_binds_response_envelope": true,
+      "private_text_not_disclosed": true,
+      "provider_weights_conserve_unit": true,
+      "segment_claims_and_sources_declared": true,
+      "segment_count_positive": true,
+      "segment_hashes_present": true,
+      "segment_ids_unique": true,
+      "segment_provider_families_supported_by_composite_adapter": true,
+      "segment_provider_families_supported_by_conformance": true,
+      "segment_root_matches_plan": true,
+      "source_footer_delivery_bound": true,
+      "telemetry_spans_bind_segments": true
+    },
+    "commitments": {
+      "composition_plan_hash": "21c1ac841d4c6b84adaf9c5ae3f8746b4cf32bd7d3672bbe932b3d17f83a3bdd",
+      "deployment_attestation_root": "4f6f15a08009db3dfc4d6bf354e6d27d76b06d87592a2f572bef3bbbf26ff186",
+      "final_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "provider_segment_root": "d7eef94175a4aaf6c346828b3f9084a2cfabb9f948a6ef8964b9374656bb47d3",
+      "schema": "docs/schemas/universal_composition_receipt.schema.json",
+      "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+      "telemetry_span_root": "78586449b055a783310913a38605216cce6bb93379b5f47910d9e24cf9331a66"
+    },
+    "composition_decision": {
+      "decision": "release",
+      "failed_checks": [],
+      "failure_modes": [],
+      "release_authorized": true,
+      "safe_output_policy": "emit_universal_attributed_composite_answer"
+    },
+    "composition_plan": {
+      "composition_id": "composition:artifact:universal-foundation",
+      "composition_mode": "provider_segment_merge",
+      "computed_composition_plan_hash": "21c1ac841d4c6b84adaf9c5ae3f8746b4cf32bd7d3672bbe932b3d17f83a3bdd",
+      "computed_segment_root": "d7eef94175a4aaf6c346828b3f9084a2cfabb9f948a6ef8964b9374656bb47d3",
+      "declared_composition_plan_hash": "21c1ac841d4c6b84adaf9c5ae3f8746b4cf32bd7d3672bbe932b3d17f83a3bdd",
+      "declared_segment_root": "d7eef94175a4aaf6c346828b3f9084a2cfabb9f948a6ef8964b9374656bb47d3",
+      "final_rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "final_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "merge_policy": "hash_bound_segment_merge",
+      "provider_families": [
+        "anthropic_messages",
+        "openai_responses"
+      ],
+      "segment_count": 2,
+      "segment_ids": [
+        "segment:artifact:openai_responses",
+        "segment:artifact:anthropic_messages"
+      ],
+      "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737"
+    },
+    "composition_policy": {
+      "minimum_input_level": "RDLLM-L129",
+      "minimum_segment_level": "RDLLM-L129",
+      "on_merge_hash_mismatch": "block_display",
+      "on_source_footer_gap": "block_display",
+      "on_unattested_segment": "block_display",
+      "profile": "rdllm-universal-composition-policy/v1",
+      "provider_segment_attestation_required": true,
+      "provider_weight_conservation_required": true,
+      "raw_composition_payload_disclosure_allowed": false,
+      "source_footer_preservation_required": true,
+      "target_certification_level": "RDLLM-L130",
+      "telemetry_span_binding_required": true
+    },
+    "composition_receipt_version": "rdllm-universal-composition-receipt/v1",
+    "coverage_gaps": {
+      "duplicate_segment_ids": [],
+      "failed_checks": [],
+      "failure_modes": [],
+      "provider_families": [
+        "anthropic_messages",
+        "openai_responses"
+      ],
+      "segment_ids_without_matching_attestation": []
+    },
+    "created_at": "2026-05-31T00:00:00Z",
+    "deployment_attestation_rows": [
+      {
+        "api_boundary_attestation_hash": "c917760b05df8bb949b2450ff91e3d360427694f095c37090dfc2bba6aed6148",
+        "deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+        "deployment_attestation_row_hash": "1dbfe14b24cdbd4ed92f431f2c9f4029676d2159242ffc692fe910b6563f9cbc",
+        "deployment_id": "deployment:artifact-foundation-runtime",
+        "deployment_release_authorized": true,
+        "display_order": 1,
+        "hash_reproducible": true,
+        "native_model": "openai:responses-compatible",
+        "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+        "native_response_id": "runtime_rdllm_reference_response",
+        "provider_family": "openai_responses",
+        "provider_id": "provider:openai-responses",
+        "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+        "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+        "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "statement_hash": "de2de816bac68e305587680a01aa1be2b0167ce14662b8589d1599cf9d280bd4",
+        "status": "released",
+        "target_certification_level": "RDLLM-L129"
+      },
+      {
+        "api_boundary_attestation_hash": "f66376175d73a6ac7c2d0d5b132bc2e45c9c00a26407a15811fcc8ee19ba86cd",
+        "deployment_attestation_hash": "6eb45534e8d7ee3fc5c84b2fde3b909aacf3bb329420e86e9855bb1742cf6fb6",
+        "deployment_attestation_row_hash": "dd6e004d8003a9b1f36116313576b653cb02d6e5d7e47520831e67fcadc859de",
+        "deployment_id": "deployment:artifact-anthropic-composition",
+        "deployment_release_authorized": true,
+        "display_order": 2,
+        "hash_reproducible": true,
+        "native_model": "anthropic:messages-compatible",
+        "native_output_hash": "a3bf2e241bf9f3f6d053742d3e83b1f880e36d7e04411e976185e5d9d668e4cb",
+        "native_response_id": "msg_artifact_universal_composition_anthropic",
+        "provider_family": "anthropic_messages",
+        "provider_id": "provider:anthropic-messages",
+        "request_projection_hash": "875a26cd2bc94372efac7b0328d5cf3cd3d40e9d4104cf5441a0550c4811c64c",
+        "response_binding_hash": "0ae2101cc1f09ab00adc9b374adf83b534cab3f68cab4f49b4b0bd8c15fde979",
+        "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "statement_hash": "889b6dd730247d9e6f7d903537e5795224be6490da078b353965feeb09ab0a6e",
+        "status": "released",
+        "target_certification_level": "RDLLM-L129"
+      }
+    ],
+    "issuer": "rdllm-local-demo",
+    "privacy": {
+      "hash_only_segment_commitments": true,
+      "raw_answer_text_disclosed": false,
+      "raw_composition_payload_disclosed": false,
+      "raw_prompt_text_disclosed": false,
+      "raw_provider_response_disclosed": false,
+      "raw_source_text_disclosed": false
+    },
+    "provider_segments": [
+      {
+        "claim_ids": [
+          "claim:artifact-composition:1"
+        ],
+        "deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+        "deployment_id": "deployment:artifact-foundation-runtime",
+        "display_order": 1,
+        "merge_input_hash": "11f50b6dab2d19283772d8019acefd4a6df43b78368fc32b51adbae22d368d6f",
+        "merge_output_span_hash": "321d1f20c0113c6ea80d1dcc89aea682b692c2af30046d7ed77ad3246530858f",
+        "native_model": "openai:responses-compatible",
+        "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+        "native_response_id": "runtime_rdllm_reference_response",
+        "provider_family": "openai_responses",
+        "provider_id": "provider:openai-responses",
+        "provider_weight": "0.620000",
+        "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "segment_hash": "47309d3a2a4d03984fbb8135cfbe2a4386f7cd2273be46b790e56871922ac510",
+        "segment_id": "segment:artifact:openai_responses",
+        "segment_role": "synthesis_part",
+        "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+        "source_labels": [
+          "C1"
+        ]
+      },
+      {
+        "claim_ids": [
+          "claim:artifact-composition:2"
+        ],
+        "deployment_attestation_hash": "6eb45534e8d7ee3fc5c84b2fde3b909aacf3bb329420e86e9855bb1742cf6fb6",
+        "deployment_id": "deployment:artifact-anthropic-composition",
+        "display_order": 2,
+        "merge_input_hash": "43eb90d7818d04d218c2b332df037dd6ea6dfeac06d97e6df8f27a827b3170b1",
+        "merge_output_span_hash": "c19929d2f99d1a2c877d1234ea468593d27f0ba68bf54068adf3e96eb485fca6",
+        "native_model": "anthropic:messages-compatible",
+        "native_output_hash": "a3bf2e241bf9f3f6d053742d3e83b1f880e36d7e04411e976185e5d9d668e4cb",
+        "native_response_id": "msg_artifact_universal_composition_anthropic",
+        "provider_family": "anthropic_messages",
+        "provider_id": "provider:anthropic-messages",
+        "provider_weight": "0.380000",
+        "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "segment_hash": "a444435ea48469cca65da5b3ad7bdd8b0957585ec3bdc09e8d72492c10d75c48",
+        "segment_id": "segment:artifact:anthropic_messages",
+        "segment_role": "synthesis_part",
+        "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+        "source_labels": [
+          "C2"
+        ]
+      }
+    ],
+    "schemas": {
+      "composite_foundation_adapter": "docs/schemas/composite_foundation_adapter.schema.json",
+      "foundation_model_deployment_attestation": "docs/schemas/foundation_model_deployment_attestation.schema.json",
+      "foundation_provider_conformance": "docs/schemas/foundation_provider_conformance.schema.json",
+      "response_envelope": "docs/schemas/response_envelope.schema.json",
+      "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json",
+      "universal_composition_receipt": "docs/schemas/universal_composition_receipt.schema.json"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "a2557dec7dd47aaba1d7308f62ae1361b23f83dcf69ce3fd3e28e70a377eb854"
+    },
+    "summary": {
+      "composite_answer_release_authorized": true,
+      "composition_id": "composition:artifact:universal-foundation",
+      "deployment_attestation_count": 2,
+      "failed_check_count": 0,
+      "failure_mode_count": 0,
+      "minimum_input_level": "RDLLM-L129",
+      "privacy_preserved": true,
+      "provider_family_count": 2,
+      "provider_segment_count": 2,
+      "source_footer_obligations_preserved": true,
+      "status": "released",
+      "target_certification_level": "RDLLM-L130",
+      "telemetry_bound": true,
+      "universal_multi_provider_composition_supported": true
+    },
+    "telemetry_span_bindings": [
+      {
+        "display_order": 1,
+        "gen_ai_operation": "chat",
+        "native_response_id": "runtime_rdllm_reference_response",
+        "provider_family": "openai_responses",
+        "provider_id": "provider:openai-responses",
+        "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "segment_id": "segment:artifact:openai_responses",
+        "span_id_hash": "ce5ab5bfcaa3d8708f4b9162b9713b069560692d44f2d447bee8c5172a042637",
+        "span_kind": "CLIENT",
+        "telemetry_span_hash": "e41fa7f55a9892a9cfc4b07b35f9924deed683edc6a924be56d30e9afe177623",
+        "trace_id_hash": "b025e9063309b36b70e0f254a4a0419bec25621c591d3c8af62d6d78c361db7e"
+      },
+      {
+        "display_order": 2,
+        "gen_ai_operation": "chat",
+        "native_response_id": "msg_artifact_universal_composition_anthropic",
+        "provider_family": "anthropic_messages",
+        "provider_id": "provider:anthropic-messages",
+        "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "segment_id": "segment:artifact:anthropic_messages",
+        "span_id_hash": "116ea589174801ecd129dea92067d9f93337b5d04e6366cf4c855adfd6ebabfb",
+        "span_kind": "CLIENT",
+        "telemetry_span_hash": "56eabc43ff9667214cf3dcb0ad4284bf0a95793369db84d1cb0522640c634d57",
+        "trace_id_hash": "efc0de4998e594c77e1b7df3deae0ba886cc42eb71d0c07eada1a4dd3140b634"
+      }
+    ],
+    "universal_composition_receipt_hash": "1a7f07d1b8ed7aa665531a4678f15e4ffe69a0d8f8f472bb459d361b3af46f07"
+  }
+}

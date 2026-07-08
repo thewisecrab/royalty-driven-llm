@@ -1,0 +1,219 @@
+{
+  "audit_id": "audit:rdllm-black-box-provenance:001",
+  "auditor_id": "auditor:rdllm-independent-lab",
+  "candidate_models": [
+    {
+      "candidate_label": "RDLLM Reference Teacher",
+      "candidate_model_hash": "368dfa84b091bddf634bb310eadf581622d87c1ecb268c8ce2f92cd74b801bff",
+      "candidate_model_id": "model:rdllm-reference",
+      "declared_by_challenged_model": false,
+      "model_family": "rdllm-reference-family",
+      "owner_id": "provider:rdllm-reference",
+      "source_rows": [
+        {
+          "allowed_uses": [
+            "training",
+            "model_derivative"
+          ],
+          "chunk_id": "maya-youtube-transcript:chunk:0",
+          "content_hash": "c48a6abd49d85bf98b54c8bd9b3450731cbfc6bc3ee79d09e61a92c9adc6921a",
+          "contribution_weight": "0.70",
+          "creator_id": "maya",
+          "creator_name": "Maya Rao",
+          "derivative_model_use_allowed": true,
+          "license_status": "active",
+          "source_label": "S1",
+          "source_text": "Private Maya source text for challenge replay.",
+          "work_id": "maya-youtube-transcript"
+        },
+        {
+          "allowed_uses": [
+            "training",
+            "model_derivative"
+          ],
+          "chunk_id": "jaron-data-dignity:chunk:0",
+          "content_hash": "79474a3fa627b1bd9928787eff5138cf290b9bb196e24f618e4229c7f6f5fd75",
+          "contribution_weight": "0.30",
+          "creator_id": "jaron",
+          "creator_name": "Jaron Lanier",
+          "derivative_model_use_allowed": true,
+          "license_status": "active",
+          "source_label": "S2",
+          "work_id": "jaron-data-dignity"
+        }
+      ]
+    },
+    {
+      "candidate_label": "Unrelated Open Model",
+      "candidate_model_hash": "e1b54bf308e9d86d3763b1c3fa4c3cb74e86826d9769f45d68d6dc939bace164",
+      "candidate_model_id": "model:unrelated-open",
+      "declared_by_challenged_model": false,
+      "model_family": "unrelated-open-family",
+      "owner_id": "provider:unrelated",
+      "source_rows": []
+    }
+  ],
+  "challenge_set": [
+    {
+      "baseline_similarity_scores": [
+        "0.22",
+        "0.24",
+        "0.27",
+        "0.29",
+        "0.31",
+        "0.33",
+        "0.35",
+        "0.36",
+        "0.38",
+        "0.39"
+      ],
+      "candidate_scores": [
+        {
+          "behavior_similarity_score": "0.90",
+          "candidate_model_id": "model:rdllm-reference",
+          "output_similarity_score": "0.91",
+          "overall_score": "0.91",
+          "refusal_vector_similarity": "0.86",
+          "watermark_key_attested": true,
+          "watermark_score": "0.88"
+        },
+        {
+          "behavior_similarity_score": "0.33",
+          "candidate_model_id": "model:unrelated-open",
+          "output_similarity_score": "0.34",
+          "overall_score": "0.35",
+          "refusal_vector_similarity": "0.20",
+          "watermark_key_attested": true,
+          "watermark_score": "0.10"
+        }
+      ],
+      "challenge_id": "challenge:rdllm-black-box:1",
+      "challenged_output_hash": "9263f0ba6dc13f16b29ccc730af79dad8263c950c12660f6bc81c4150df95590",
+      "evidence_hash": "3ba51a785c135eeae8b42b7d1d8602033e69d4258615b4cc23a9cf9135db22aa",
+      "prompt_text": "Private provenance challenge prompt 1."
+    },
+    {
+      "baseline_similarity_scores": [
+        "0.22",
+        "0.24",
+        "0.27",
+        "0.29",
+        "0.31",
+        "0.33",
+        "0.35",
+        "0.36",
+        "0.38",
+        "0.39"
+      ],
+      "candidate_scores": [
+        {
+          "behavior_similarity_score": "0.90",
+          "candidate_model_id": "model:rdllm-reference",
+          "output_similarity_score": "0.91",
+          "overall_score": "0.92",
+          "refusal_vector_similarity": "0.86",
+          "watermark_key_attested": true,
+          "watermark_score": "0.88"
+        },
+        {
+          "behavior_similarity_score": "0.33",
+          "candidate_model_id": "model:unrelated-open",
+          "output_similarity_score": "0.34",
+          "overall_score": "0.35",
+          "refusal_vector_similarity": "0.20",
+          "watermark_key_attested": true,
+          "watermark_score": "0.10"
+        }
+      ],
+      "challenge_id": "challenge:rdllm-black-box:2",
+      "challenged_output_hash": "30e8f80025984b7d8111d1562b227116d9460918e63064bfd8258b7dbf2a2b7c",
+      "evidence_hash": "56d7fe57f34af174899d1926232374930a8db9f7856eecc49c91c32151f2a395",
+      "prompt_text": "Private provenance challenge prompt 2."
+    },
+    {
+      "baseline_similarity_scores": [
+        "0.22",
+        "0.24",
+        "0.27",
+        "0.29",
+        "0.31",
+        "0.33",
+        "0.35",
+        "0.36",
+        "0.38",
+        "0.39"
+      ],
+      "candidate_scores": [
+        {
+          "behavior_similarity_score": "0.90",
+          "candidate_model_id": "model:rdllm-reference",
+          "output_similarity_score": "0.91",
+          "overall_score": "0.93",
+          "refusal_vector_similarity": "0.86",
+          "watermark_key_attested": true,
+          "watermark_score": "0.88"
+        },
+        {
+          "behavior_similarity_score": "0.33",
+          "candidate_model_id": "model:unrelated-open",
+          "output_similarity_score": "0.34",
+          "overall_score": "0.35",
+          "refusal_vector_similarity": "0.20",
+          "watermark_key_attested": true,
+          "watermark_score": "0.10"
+        }
+      ],
+      "challenge_id": "challenge:rdllm-black-box:3",
+      "challenged_output_hash": "ee03382f8fb20eaa10e90f9ca788dc35ff72354dfec50e120938f3f9c2e141d8",
+      "evidence_hash": "8bc7d1cc8086e8170b4b0fac4c62f1edfb4daa6a93804292a5cee146e10199eb",
+      "prompt_text": "Private provenance challenge prompt 3."
+    },
+    {
+      "baseline_similarity_scores": [
+        "0.22",
+        "0.24",
+        "0.27",
+        "0.29",
+        "0.31",
+        "0.33",
+        "0.35",
+        "0.36",
+        "0.38",
+        "0.39"
+      ],
+      "candidate_scores": [
+        {
+          "behavior_similarity_score": "0.90",
+          "candidate_model_id": "model:rdllm-reference",
+          "output_similarity_score": "0.91",
+          "overall_score": "0.94",
+          "refusal_vector_similarity": "0.86",
+          "watermark_key_attested": true,
+          "watermark_score": "0.88"
+        },
+        {
+          "behavior_similarity_score": "0.33",
+          "candidate_model_id": "model:unrelated-open",
+          "output_similarity_score": "0.34",
+          "overall_score": "0.35",
+          "refusal_vector_similarity": "0.20",
+          "watermark_key_attested": true,
+          "watermark_score": "0.10"
+        }
+      ],
+      "challenge_id": "challenge:rdllm-black-box:4",
+      "challenged_output_hash": "7b67b1afde90439ad117b0ae9d54087fc911d6a52cc3ee064b32019c79d4af98",
+      "evidence_hash": "722df44e836f9a97dcc15df36940638fbf999b19a73617b78ca862534f90a74e",
+      "prompt_text": "Private provenance challenge prompt 4."
+    }
+  ],
+  "challenged_model": {
+    "endpoint": "https://api.example.test/v1/chat/completions",
+    "model_id": "model:undisclosed-downstream-api",
+    "provider_id": "provider:downstream-reference"
+  },
+  "private_strings": [
+    "Private Maya source text for challenge replay.",
+    "private challenged model output"
+  ]
+}

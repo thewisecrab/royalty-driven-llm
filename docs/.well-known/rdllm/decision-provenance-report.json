@@ -1,0 +1,1404 @@
+{
+  "artifact_bindings": {
+    "answer_claim_coverage_report_hash": "b5af4a7492533851f71eb57c2698179696015922dfc733b77bf657a153957cce",
+    "answer_provenance_card_hash": "04ee0bbb8a4d6becad29af370925e8de757bdccd6eb93f6ae2020b561c0a48bf",
+    "attribution_capsule_hash": "5bd4753a683a4a11982fa16544c284182a34e43cbfda8456164c0f24cd167d22",
+    "certification_report_hash": "111a5306ef0c73a7c7be1c09970a9729482686fb43831aecce6cfcfaba276264",
+    "citation_footer_contract_hash": "321949b721177295ab1ac7b509b72afd9b91fe8359752815ad4808e63d1be419",
+    "counterevidence_report_hash": "67e1e1b3c138f4622671661d6ce083fa2ef8f8df363d539ffe19de8eea4003ea",
+    "creator_license_contract_hash": "cdfbb03f6f42a1a0cbe7babf170245a53257f080cd8c802fd84ca047f95493b0",
+    "evidence_sufficiency_report_hash": "3274b7c2676c5d6676db45514ae2b640d465faee88facfb27b71f88a81358c11",
+    "generation_context_closure_report_hash": "9ee942968abd610e4d6a266f53084beb598e793969eae755434864d36ce7487e",
+    "provider_attribution_card_hash": "c1fa4ab331808f0faa1b64259033b3bf4a2bb1fcd29119f13e8ab0bb372b6aa9",
+    "public_receipt_hash": "07eb5116619eb8dd4221c2eb5d7694e9954d9bcdcbb0b17b2d53f8d02ed37c42",
+    "release_gate_hash": "adff16a2e9a8ae4ac3c92d492a0ffd3e5221cf1b21b7fe96ef16206a070280fe",
+    "response_envelope_hash": "c1ddfb45d3947513d9e25a67e2a064963444c6b0e72e82787f1179056399cf4a",
+    "source_availability_report_hash": "238518a63376867b5c25fad055995299505bf2a351f740882e4f7a090050f993",
+    "source_boundary_report_hash": "b94205b29d5ea652332b2ffd705edd50936edb4a1147e9f5acfc935aad562ffb",
+    "source_confidence_report_hash": "cce9496347cd5f9f1d6a3fbc30efeb51671b0444e3c2552a43cd761b24b710e8",
+    "source_verification_report_hash": "ac1c3c5b877a9d13573491393778910af06297afdce9ef2cc14095fe98e228e2",
+    "trace_exchange_hash": "064766df75319c153db28966b63e920dc01e8b8271e3bb87878719e18b1ca375"
+  },
+  "artifact_nodes": [
+    {
+      "artifact_name": "response_envelope",
+      "artifact_type": "rdllm-response-envelope/v1",
+      "declared_hash": "c1ddfb45d3947513d9e25a67e2a064963444c6b0e72e82787f1179056399cf4a",
+      "hash_reproducible": true,
+      "influence_boundary": "trusted_proof_packaging",
+      "node_hash": "f0a64d91de39f5b37d944582bbcdd491d4d00205112cf6f65b4ea4013881846e",
+      "node_id": "response_envelope",
+      "node_type": "proof_container",
+      "payload_hash": "97875496f299daa036a97e9aa058129f157d375e28e73280cacb262b8d4b7fd7"
+    },
+    {
+      "artifact_name": "release_gate",
+      "artifact_type": "rdllm-response-release-gate/v1",
+      "declared_hash": "adff16a2e9a8ae4ac3c92d492a0ffd3e5221cf1b21b7fe96ef16206a070280fe",
+      "hash_reproducible": true,
+      "influence_boundary": "release_policy_decision",
+      "node_hash": "401f78f878075cb0428e1627c91672eb7dc699bd9b7569e8fe9ab31bc4d5934b",
+      "node_id": "release_gate",
+      "node_type": "trusted_release_control",
+      "payload_hash": "0d68179d4e06ba20047c595ab3c37b8edb16b2fcffcea47f4d16038e50b2450e"
+    },
+    {
+      "artifact_name": "trace_exchange",
+      "artifact_type": "rdllm-trace-exchange/v1",
+      "declared_hash": "064766df75319c153db28966b63e920dc01e8b8271e3bb87878719e18b1ca375",
+      "hash_reproducible": true,
+      "influence_boundary": "runtime_observation",
+      "node_hash": "f69b7a4e4de5b44404b2d4fa701dd5ada6fc6889a45871a495e1288f75cc0711",
+      "node_id": "trace_exchange",
+      "node_type": "telemetry_proof",
+      "payload_hash": "4a618427e23228097cc36c2fe4fa1342747df637eaad8c88bc831ee6bf9187bc"
+    },
+    {
+      "artifact_name": "attribution_capsule",
+      "artifact_type": "rdllm-attribution-capsule/v1",
+      "declared_hash": "5bd4753a683a4a11982fa16544c284182a34e43cbfda8456164c0f24cd167d22",
+      "hash_reproducible": true,
+      "influence_boundary": "copied_output_binding",
+      "node_hash": "b3443eedde9613a5b2e685b416bedab1f768eeba777317e97babd897899b31e6",
+      "node_id": "attribution_capsule",
+      "node_type": "portable_control",
+      "payload_hash": "01b4593e9cd6c730176578a9d697656e3382a34a8c54b79f36dce3a8afefe743"
+    },
+    {
+      "artifact_name": "answer_provenance_card",
+      "artifact_type": "rdllm-answer-provenance-card/v1",
+      "declared_hash": "04ee0bbb8a4d6becad29af370925e8de757bdccd6eb93f6ae2020b561c0a48bf",
+      "hash_reproducible": true,
+      "influence_boundary": "answer_source_accounting",
+      "node_hash": "94aed908e0beff2d0e1e7327749c4b42958c12a8dd748282de447316b717b83a",
+      "node_id": "answer_provenance_card",
+      "node_type": "accounting_proof",
+      "payload_hash": "05035e0a99fae16534ed07f9254eea13dd69dd18c5c0a26c605f84cd7d84b459"
+    },
+    {
+      "artifact_name": "source_verification_report",
+      "artifact_type": "rdllm-source-verification-report/v1",
+      "declared_hash": "ac1c3c5b877a9d13573491393778910af06297afdce9ef2cc14095fe98e228e2",
+      "hash_reproducible": true,
+      "influence_boundary": "materialized_source_identity",
+      "node_hash": "705cddd3ec1f3d014d5193a1c797df6455e478231481ffaf6639b1363619e1f6",
+      "node_id": "source_verification_report",
+      "node_type": "evidence_proof",
+      "payload_hash": "5ed97008385cecd9c09c6270f01fce90e15d4d36b2a0ba289a2a2db6d8ba8d77"
+    },
+    {
+      "artifact_name": "source_confidence_report",
+      "artifact_type": "rdllm-source-confidence-report/v1",
+      "declared_hash": "cce9496347cd5f9f1d6a3fbc30efeb51671b0444e3c2552a43cd761b24b710e8",
+      "hash_reproducible": true,
+      "influence_boundary": "source_confidence_status",
+      "node_hash": "18213daa164867e1b1d56ff68e759f9024499fa482e30ef85623e7c0bf1dd061",
+      "node_id": "source_confidence_report",
+      "node_type": "quality_proof",
+      "payload_hash": "d7a17e4b13d7aec37b7cd6b806961ed112e204a7bd398aaa6b0fb0dab75b3f4a"
+    },
+    {
+      "artifact_name": "creator_license_contract",
+      "artifact_type": "rdllm-creator-license-contract/v1",
+      "declared_hash": "cdfbb03f6f42a1a0cbe7babf170245a53257f080cd8c802fd84ca047f95493b0",
+      "hash_reproducible": true,
+      "influence_boundary": "rights_and_royalty_policy",
+      "node_hash": "3944fc047706d7ddca27812acf1a44f3a01b4e0be4768e5392842975bde33e83",
+      "node_id": "creator_license_contract",
+      "node_type": "trusted_policy",
+      "payload_hash": "f1c61d70779f49a417ad08fdfa4dfb57d58cad5016e74924827f981c1ee1ff4f"
+    },
+    {
+      "artifact_name": "citation_footer_contract",
+      "artifact_type": "rdllm-citation-footer-contract/v1",
+      "declared_hash": "321949b721177295ab1ac7b509b72afd9b91fe8359752815ad4808e63d1be419",
+      "hash_reproducible": true,
+      "influence_boundary": "client_visible_attribution",
+      "node_hash": "0636b266f60a57505672987d2c69d133a26c5f1a8d3203a1992635f0e0031d4c",
+      "node_id": "citation_footer_contract",
+      "node_type": "trusted_display_contract",
+      "payload_hash": "feba8a747191d7a54dd73273cf707cafe28dbd6eb4ccc4b04146f448a1551d12"
+    },
+    {
+      "artifact_name": "source_availability_report",
+      "artifact_type": "rdllm-source-availability-report/v1",
+      "declared_hash": "238518a63376867b5c25fad055995299505bf2a351f740882e4f7a090050f993",
+      "hash_reproducible": true,
+      "influence_boundary": "source_resolution",
+      "node_hash": "0833bd93efd2d54b1cc115d0cf7ec5cb4a37a5e21a8135bc8c756fea0c8b4e7f",
+      "node_id": "source_availability_report",
+      "node_type": "evidence_proof",
+      "payload_hash": "1f5c2aab06bb47540befe5bd0cdc43714b276ebbe1e1972c647037ff2691bd0f"
+    },
+    {
+      "artifact_name": "evidence_sufficiency_report",
+      "artifact_type": "rdllm-evidence-sufficiency-report/v1",
+      "declared_hash": "3274b7c2676c5d6676db45514ae2b640d465faee88facfb27b71f88a81358c11",
+      "hash_reproducible": true,
+      "influence_boundary": "minimal_sufficient_evidence",
+      "node_hash": "d20dec941826df389639d3ce31bda9a8400c2f5f4fddc11997f5d927ca395e99",
+      "node_id": "evidence_sufficiency_report",
+      "node_type": "evidence_proof",
+      "payload_hash": "46361cdfca45ae72450f893d357f0d2e3732dacaab3a0de53b7244e3a820013b"
+    },
+    {
+      "artifact_name": "counterevidence_report",
+      "artifact_type": "rdllm-counterevidence-adjudication-report/v1",
+      "declared_hash": "67e1e1b3c138f4622671661d6ce083fa2ef8f8df363d539ffe19de8eea4003ea",
+      "hash_reproducible": true,
+      "influence_boundary": "counterevidence_adjudication",
+      "node_hash": "db9b740dd1a2cc61d73573605263723edbc8b19d517eb473373937b8feb74980",
+      "node_id": "counterevidence_report",
+      "node_type": "evidence_proof",
+      "payload_hash": "a20d15acc2aaf0998c7ba8c990970b11cb6295c069bbd48e85466a42e007dee2"
+    },
+    {
+      "artifact_name": "answer_claim_coverage_report",
+      "artifact_type": "rdllm-answer-claim-coverage-report/v1",
+      "declared_hash": "b5af4a7492533851f71eb57c2698179696015922dfc733b77bf657a153957cce",
+      "hash_reproducible": true,
+      "influence_boundary": "answer_claim_coverage",
+      "node_hash": "208d7eb8ef2ec8dfe06a24b296b4884f8cdbbd9d4c98442d390fbd6a2f3ea639",
+      "node_id": "answer_claim_coverage_report",
+      "node_type": "claim_proof",
+      "payload_hash": "b6eafc3453e2fd360bf4ae176a154c075ff6eafafd2280755a61598ca42c3d3d"
+    },
+    {
+      "artifact_name": "generation_context_closure_report",
+      "artifact_type": "rdllm-generation-context-closure-report/v1",
+      "declared_hash": "9ee942968abd610e4d6a266f53084beb598e793969eae755434864d36ce7487e",
+      "hash_reproducible": true,
+      "influence_boundary": "traced_generation_context",
+      "node_hash": "6a8f2c4ae88651ff7b2dd31177a5656a4ad6b73b0052f069aea327dd61016b90",
+      "node_id": "generation_context_closure_report",
+      "node_type": "context_proof",
+      "payload_hash": "32b15357314e70923b3f5c3c105d8bf93e65a9b7ad36c253f3bbe400f8a4faa0"
+    },
+    {
+      "artifact_name": "source_boundary_report",
+      "artifact_type": "rdllm-source-boundary-report/v1",
+      "declared_hash": "b94205b29d5ea652332b2ffd705edd50936edb4a1147e9f5acfc935aad562ffb",
+      "hash_reproducible": true,
+      "influence_boundary": "source_data_cannot_control_decisions",
+      "node_hash": "332ffb18e977a08d1c7e6aa93b2598ca1ff6516c82d77061c5019005bf43cefc",
+      "node_id": "source_boundary_report",
+      "node_type": "boundary_proof",
+      "payload_hash": "b07a6f8d08736f5863c245535a0dff16b77eee10692149ae9e0b240a73ef60af"
+    },
+    {
+      "artifact_name": "public_receipt",
+      "artifact_type": "rdllm-attribution-receipt/v1-public",
+      "declared_hash": "07eb5116619eb8dd4221c2eb5d7694e9954d9bcdcbb0b17b2d53f8d02ed37c42",
+      "hash_reproducible": true,
+      "influence_boundary": "public_usage_receipt",
+      "node_hash": "aa9267680d58387b30f3a778e9f6954955a378b92edebb35bab6441465ff0ec7",
+      "node_id": "public_receipt",
+      "node_type": "accounting_proof",
+      "payload_hash": "3b65ed8feafb38efb250c4f9e1f5986e0a0105bf6769f33d28f8ef74bb4234a9"
+    },
+    {
+      "artifact_name": "provider_attribution_card",
+      "artifact_type": "rdllm-provider-attribution-card/v1",
+      "declared_hash": "c1fa4ab331808f0faa1b64259033b3bf4a2bb1fcd29119f13e8ab0bb372b6aa9",
+      "hash_reproducible": true,
+      "influence_boundary": "provider_public_posture",
+      "node_hash": "b1f46c285d5874e2d3be3100af99ffee1971faa567434d44aa58364146e5a18c",
+      "node_id": "provider_attribution_card",
+      "node_type": "trusted_policy",
+      "payload_hash": "49f08a409f97d971bdf4dc65c3000db11806bcf613002a87742cd23a7253f5ba"
+    },
+    {
+      "artifact_name": "certification_report",
+      "artifact_type": "rdllm-certification/v1",
+      "declared_hash": "111a5306ef0c73a7c7be1c09970a9729482686fb43831aecce6cfcfaba276264",
+      "hash_reproducible": true,
+      "influence_boundary": "conformance_level",
+      "node_hash": "e5c44409965585744229874e11f6db658433783623df04763b70ae12b1bf37ce",
+      "node_id": "certification_report",
+      "node_type": "trusted_policy",
+      "payload_hash": "202840c6b1d71083a3f89b14b087dc339d0b7b4005d61a5776b05e29b949d947"
+    }
+  ],
+  "checks": {
+    "all_influence_edges_allowed": true,
+    "artifact_nodes_have_reproducible_hashes": true,
+    "attribution_capsule_shape_valid": true,
+    "claim_decisions_have_required_proof_edges": true,
+    "claim_decisions_present": true,
+    "decision_node_count_positive": true,
+    "event_hashes_match": true,
+    "footer_decisions_have_required_display_edges": true,
+    "footer_decisions_present": true,
+    "influence_edges_reference_known_nodes": true,
+    "payout_decisions_have_no_untrusted_source_text_edges": true,
+    "payout_decisions_have_policy_and_accounting_edges": true,
+    "payout_decisions_present": true,
+    "private_input_fields_absent": true,
+    "release_decision_has_required_proof_edges": true,
+    "release_gate_verified": true,
+    "rendered_output_hashes_match": true,
+    "response_envelope_verified": true,
+    "single_release_decision_present": true,
+    "source_boundary_blocks_attribution_and_payout_mutation": true,
+    "source_boundary_verified": true,
+    "trace_exchange_verified": true,
+    "trace_hashes_match": true
+  },
+  "commitments": {
+    "artifact_node_root": "c55bb863ea0296f562883da98731387c0b38baae1abf0d2c466bf1e01fdc938e",
+    "check_root": "0d4f84ccebfe7a0fecdfa5f375544036dc4bdf53a05682257965328cdb611bb8",
+    "decision_node_root": "b300b5371d1e2b70d3c56bacbb41bb2199a2d733714d67dd82126ae4b79d22df",
+    "influence_edge_root": "9cbe547229d7ed880e13773a5a63b9e19d0d0b23feb41d4b7ee6bf8e573ce28c",
+    "issue_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "schema": "docs/schemas/decision_provenance_report.schema.json"
+  },
+  "created_at": "2026-05-31T03:40:18Z",
+  "decision_nodes": [
+    {
+      "decision_scope": "answer_unit",
+      "decision_status": "covered",
+      "decision_type": "claim_grounding",
+      "node_hash": "819783b0a75802adca54edd762e85cdf4f4d7e08005ef1935e334e9a87e89c47",
+      "node_id": "claim_decision:1",
+      "node_type": "decision",
+      "subject": {
+        "counterevidence_free": true,
+        "evidence_sufficient": true,
+        "matched_claim_index": 1,
+        "matched_evidence_span_prefix": "399e7ff82b80",
+        "matched_source_label": "S1",
+        "text_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+        "unit_hash": "124052ff1a062a83ff00d7f56be2be7d652e9ef6ed0ced7957bae1bba1d5de3e",
+        "unit_index": 1
+      }
+    },
+    {
+      "decision_scope": "answer_unit",
+      "decision_status": "covered",
+      "decision_type": "claim_grounding",
+      "node_hash": "64b17d604c0dd780ad6cb6fe8e8752cc5e884b7ad9185d0bb0a83fc9e19fcc67",
+      "node_id": "claim_decision:2",
+      "node_type": "decision",
+      "subject": {
+        "counterevidence_free": true,
+        "evidence_sufficient": true,
+        "matched_claim_index": 2,
+        "matched_evidence_span_prefix": "6ea90fbdd0fb",
+        "matched_source_label": "S1",
+        "text_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+        "unit_hash": "860d2fa9a9791208f2e5c81e2248e7aa6fa14c823bf0a154484ba162032aece6",
+        "unit_index": 2
+      }
+    },
+    {
+      "decision_scope": "answer_unit",
+      "decision_status": "covered",
+      "decision_type": "claim_grounding",
+      "node_hash": "1cbb53283480dee71e11567993d4213e97d2ab63c938dbbdb512de708276f1a3",
+      "node_id": "claim_decision:3",
+      "node_type": "decision",
+      "subject": {
+        "counterevidence_free": true,
+        "evidence_sufficient": true,
+        "matched_claim_index": 3,
+        "matched_evidence_span_prefix": "71e11e089ebe",
+        "matched_source_label": "S2",
+        "text_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+        "unit_hash": "2c85567406157a16dbeeb837add0162ad2c175ab16e756cad27c2b8fe6696fe8",
+        "unit_index": 3
+      }
+    },
+    {
+      "decision_scope": "answer_unit",
+      "decision_status": "covered",
+      "decision_type": "claim_grounding",
+      "node_hash": "061d004ed531fff0fdaf5ed80256ae1b42f55b6cf62c742ab3fa4ee3343871a0",
+      "node_id": "claim_decision:4",
+      "node_type": "decision",
+      "subject": {
+        "counterevidence_free": true,
+        "evidence_sufficient": true,
+        "matched_claim_index": 4,
+        "matched_evidence_span_prefix": "82b19c7059e7",
+        "matched_source_label": "S2",
+        "text_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+        "unit_hash": "ee2026b0e92a07df24a9625c5493ad362fadadd5502b74ea9c0d4c55869683db",
+        "unit_index": 4
+      }
+    },
+    {
+      "decision_scope": "answer_unit",
+      "decision_status": "covered",
+      "decision_type": "claim_grounding",
+      "node_hash": "44e10b55c83234244c3cd99bdbf3602d279724e8740dfb0b36c6f10d13af724d",
+      "node_id": "claim_decision:5",
+      "node_type": "decision",
+      "subject": {
+        "counterevidence_free": true,
+        "evidence_sufficient": true,
+        "matched_claim_index": 5,
+        "matched_evidence_span_prefix": "28528b6fc0db",
+        "matched_source_label": "S3",
+        "text_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+        "unit_hash": "e3b3e97849a64989344589c504a386f987b816cae4aae07f9cefb0990f2ca39e",
+        "unit_index": 5
+      }
+    },
+    {
+      "decision_scope": "answer_unit",
+      "decision_status": "covered",
+      "decision_type": "claim_grounding",
+      "node_hash": "3065bc4f043bc1c3d2b7109197426e24490496f7385ed40e468cc86b06d05308",
+      "node_id": "claim_decision:6",
+      "node_type": "decision",
+      "subject": {
+        "counterevidence_free": true,
+        "evidence_sufficient": true,
+        "matched_claim_index": 6,
+        "matched_evidence_span_prefix": "a9ed8431a259",
+        "matched_source_label": "S3",
+        "text_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+        "unit_hash": "288b668215719dc83296cc824a0f9c420e1fa9fb6788ef0d1d5fb52a94e97927",
+        "unit_index": 6
+      }
+    },
+    {
+      "decision_scope": "source_footer_row",
+      "decision_status": "verified",
+      "decision_type": "visible_attribution_footer",
+      "node_hash": "a81cddf44b7dd9ec18ac4592b2db19150ce4fcc5a48183e988eed056246405e0",
+      "node_id": "footer_decision:S1",
+      "node_type": "decision",
+      "subject": {
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "content_hash_prefix": "e94efa6d9bb3",
+        "creator_id": "arjun",
+        "footer_row_hash": "705e37f156f90434ce1c4c17e436cc6220c792bb3baf88ffba9036ccc2b6dded",
+        "license_status": "active",
+        "royalty_status": "active",
+        "source_label": "S1",
+        "work_id": "arjun-provenance-ledger"
+      }
+    },
+    {
+      "decision_scope": "source_footer_row",
+      "decision_status": "verified",
+      "decision_type": "visible_attribution_footer",
+      "node_hash": "9caf30d56f8f280eb55c49d1883d6ec2f94e805556af2829e42ed075ea67e0da",
+      "node_id": "footer_decision:S2",
+      "node_type": "decision",
+      "subject": {
+        "chunk_id": "lina-governance-disputes:c1",
+        "content_hash_prefix": "2e332f176133",
+        "creator_id": "lina",
+        "footer_row_hash": "2d08433cd90a77c0db12977a034c504c1f6ba0542f877101218a32ef344767b0",
+        "license_status": "active",
+        "royalty_status": "active",
+        "source_label": "S2",
+        "work_id": "lina-governance-disputes"
+      }
+    },
+    {
+      "decision_scope": "source_footer_row",
+      "decision_status": "verified",
+      "decision_type": "visible_attribution_footer",
+      "node_hash": "0e7fe455b3ece2630d749aa6694a6da7a27958b6765ef5dc9398562f2b71a56c",
+      "node_id": "footer_decision:S3",
+      "node_type": "decision",
+      "subject": {
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "content_hash_prefix": "6029417218e9",
+        "creator_id": "maya",
+        "footer_row_hash": "52b59f173be54f98f3bde22c023c55571f14bff397f08641cb7e951a36de37a6",
+        "license_status": "active",
+        "royalty_status": "active",
+        "source_label": "S3",
+        "work_id": "maya-youtube-style-pool"
+      }
+    },
+    {
+      "decision_scope": "source_share",
+      "decision_status": "royalty_active",
+      "decision_type": "royalty_participation",
+      "node_hash": "27e5f622093d50dd4e825dd6a35a11ab079b39f2f4e5c90efcdbe24561a76f2e",
+      "node_id": "payout_decision:S1",
+      "node_type": "decision",
+      "subject": {
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+        "contribution_weight": "0.333968",
+        "creator_id": "arjun",
+        "source_entry_hash": "a150c2ed99906ad6ffcf0b4aad1dff84e424fd278226f354de595e8cdfc97b4e",
+        "source_label": "S1",
+        "work_id": "arjun-provenance-ledger"
+      }
+    },
+    {
+      "decision_scope": "source_share",
+      "decision_status": "royalty_active",
+      "decision_type": "royalty_participation",
+      "node_hash": "6bb131a7822e3212d45ecc27dd358a3f57f4baca5be775da7863ea35dbea4cdb",
+      "node_id": "payout_decision:S2",
+      "node_type": "decision",
+      "subject": {
+        "chunk_id": "lina-governance-disputes:c1",
+        "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+        "contribution_weight": "0.228551",
+        "creator_id": "lina",
+        "source_entry_hash": "7b3cece26e6fe21f375f086d87837685007c202c80df6f877a5ab1fd7f6001b0",
+        "source_label": "S2",
+        "work_id": "lina-governance-disputes"
+      }
+    },
+    {
+      "decision_scope": "source_share",
+      "decision_status": "royalty_active",
+      "decision_type": "royalty_participation",
+      "node_hash": "f9624e90d5f69021df58a34a1dd458082f93527480e28e483d8e9caacd2accfa",
+      "node_id": "payout_decision:S3",
+      "node_type": "decision",
+      "subject": {
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+        "contribution_weight": "0.437481",
+        "creator_id": "maya",
+        "source_entry_hash": "1b87f8dee3ffc920c04f639fe6c1720541e60624bd6d1cfe9c30054ade540a6b",
+        "source_label": "S3",
+        "work_id": "maya-youtube-style-pool"
+      }
+    },
+    {
+      "decision_scope": "model_egress",
+      "decision_status": "emit",
+      "decision_type": "response_release",
+      "node_hash": "2a05620b0fb691b8d97043bfb6ebed43cb4b4c462d5d019821367709e9fee41c",
+      "node_id": "release_decision:response",
+      "node_type": "decision",
+      "subject": {
+        "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+        "release_gate_hash": "adff16a2e9a8ae4ac3c92d492a0ffd3e5221cf1b21b7fe96ef16206a070280fe",
+        "release_mode": "grounded_answer",
+        "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1"
+      }
+    }
+  ],
+  "event": {
+    "answer_hash": "069df2b36f4c12ee438a0edb55cc944c675fb5f3802cb70592907f047916ac51",
+    "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+    "event_id": "evt_1ed43e106d466249",
+    "gate_event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+    "gate_rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+    "release_gate_hash": "adff16a2e9a8ae4ac3c92d492a0ffd3e5221cf1b21b7fe96ef16206a070280fe",
+    "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+    "response_envelope_hash": "c1ddfb45d3947513d9e25a67e2a064963444c6b0e72e82787f1179056399cf4a",
+    "trace_hash": "064766df75319c153db28966b63e920dc01e8b8271e3bb87878719e18b1ca375"
+  },
+  "influence_edges": [
+    {
+      "allowed_influence": true,
+      "edge_class": "claim_coverage",
+      "edge_hash": "fdc9b3537bfaaf97635b9a9cf0343c5ec53bbe1f98b8070540f7559c32803708",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "public answer unit must bind to a verified claim row",
+      "source_node": "answer_claim_coverage_report",
+      "target_node": "claim_decision:1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "certified_proof_requirement",
+      "edge_hash": "8ba5e890f4a689c0a97a22c66df3566437a65c951c7819817a8a4c93ee6d65fc",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "provider claims L62-grade decision provenance",
+      "source_node": "certification_report",
+      "target_node": "claim_decision:1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "counterevidence_adjudication",
+      "edge_hash": "b76c83ba288edae5f904eb9b19c8fe956ca16d8a85d5864aa7b8e5220efcf88a",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must have no unaddressed counterevidence",
+      "source_node": "counterevidence_report",
+      "target_node": "claim_decision:1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "minimal_evidence",
+      "edge_hash": "bc9f1fd8c85a0cd1b93f9f9b5c0556604eb8dfbb34f40b5e72ebeb3593527a9c",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim needs sufficient evidence margin",
+      "source_node": "evidence_sufficiency_report",
+      "target_node": "claim_decision:1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "context_closure",
+      "edge_hash": "4d0da7171d7d560609617c81d0327802bfad989ab10cb491989f3f7d6458ba80",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must be present in traced generation context",
+      "source_node": "generation_context_closure_report",
+      "target_node": "claim_decision:1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_resolution",
+      "edge_hash": "797bf33246f4e27d975c7cf660b95adb3f948bae53c3a12bb7f33181244092f1",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim source must be reachable or archived",
+      "source_node": "source_availability_report",
+      "target_node": "claim_decision:1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "boundary_guard",
+      "edge_hash": "7458cd940e27df4903cb83a3b1c8c32fef9036be94ce1efbba324c9e7883b667",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "source material is evidence-only, not instruction/control",
+      "source_node": "source_boundary_report",
+      "target_node": "claim_decision:1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_materialization",
+      "edge_hash": "d0a5c22648de28938bd172927db581eb669f743804eb05746c5228c087389a00",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must resolve to a materialized source row",
+      "source_node": "source_verification_report",
+      "target_node": "claim_decision:1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "claim_coverage",
+      "edge_hash": "48af85ea7ec5cf4b27b3b1b8fa956059450c8bdcd99379b4742ada7dbe88c070",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "public answer unit must bind to a verified claim row",
+      "source_node": "answer_claim_coverage_report",
+      "target_node": "claim_decision:2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "certified_proof_requirement",
+      "edge_hash": "b6943ee05b893d4d0cdd873846f491bc0a0a24af41779d56f2f63166ef52eea0",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "provider claims L62-grade decision provenance",
+      "source_node": "certification_report",
+      "target_node": "claim_decision:2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "counterevidence_adjudication",
+      "edge_hash": "d9681945c8fdd4f046114b4f97b7aa42579516079486e29c46bb39b63ccf31d3",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must have no unaddressed counterevidence",
+      "source_node": "counterevidence_report",
+      "target_node": "claim_decision:2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "minimal_evidence",
+      "edge_hash": "e672a9213f4dfee0c7de90831a4d9c107d1b7c02beea115864c06a5d095cc738",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim needs sufficient evidence margin",
+      "source_node": "evidence_sufficiency_report",
+      "target_node": "claim_decision:2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "context_closure",
+      "edge_hash": "c0be03af5001648829a65409739c7a763b7e4780739de817da6c3c736d885163",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must be present in traced generation context",
+      "source_node": "generation_context_closure_report",
+      "target_node": "claim_decision:2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_resolution",
+      "edge_hash": "b3688a5476a45c2e86a8f36c0cf90bfc38d2b57f58f75890899d24f835f5af64",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim source must be reachable or archived",
+      "source_node": "source_availability_report",
+      "target_node": "claim_decision:2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "boundary_guard",
+      "edge_hash": "2aabcb61af3af123f78ed76b89a318b3175e0eaf8b2b55f6d2dce842cdd81ee3",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "source material is evidence-only, not instruction/control",
+      "source_node": "source_boundary_report",
+      "target_node": "claim_decision:2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_materialization",
+      "edge_hash": "1f1f91a81b89ed5e31127928446f6ec0e24d7b935efa6ff51c6de61f049bf298",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must resolve to a materialized source row",
+      "source_node": "source_verification_report",
+      "target_node": "claim_decision:2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "claim_coverage",
+      "edge_hash": "afa968817aee3f902d667dad339b3d9c2f4fa8a8f7e3113c30237e640eba599d",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "public answer unit must bind to a verified claim row",
+      "source_node": "answer_claim_coverage_report",
+      "target_node": "claim_decision:3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "certified_proof_requirement",
+      "edge_hash": "e5089758b95a2239ad1d7dd2fb48c4d3d1ffa5d165acddb1056ce235bdb0c4a7",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "provider claims L62-grade decision provenance",
+      "source_node": "certification_report",
+      "target_node": "claim_decision:3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "counterevidence_adjudication",
+      "edge_hash": "919d88b46370b40d7462153cf00ddfc36f3572b11ccf6bed34691d701752cc7f",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must have no unaddressed counterevidence",
+      "source_node": "counterevidence_report",
+      "target_node": "claim_decision:3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "minimal_evidence",
+      "edge_hash": "9bff00a57c89e5159193e59bd97d7f7f4f1136a1acbb5b2ddbcfb788183ad66b",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim needs sufficient evidence margin",
+      "source_node": "evidence_sufficiency_report",
+      "target_node": "claim_decision:3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "context_closure",
+      "edge_hash": "628e96ecc3e0e38befa96949d7da2d56571b59e6bbacbac3bab31706b6701330",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must be present in traced generation context",
+      "source_node": "generation_context_closure_report",
+      "target_node": "claim_decision:3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_resolution",
+      "edge_hash": "5faddfb09be44540aa7e5a11d42f3f45878ef858f3950ae59736a34454b4904f",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim source must be reachable or archived",
+      "source_node": "source_availability_report",
+      "target_node": "claim_decision:3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "boundary_guard",
+      "edge_hash": "0b436eac07d3a9d8ffcc9056e6641a9bb07b8e9a3ff10eed0694333d2ff4ca26",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "source material is evidence-only, not instruction/control",
+      "source_node": "source_boundary_report",
+      "target_node": "claim_decision:3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_materialization",
+      "edge_hash": "2309fcf8c79f9d6f2e542407c5012138c410b9921acd3ec2fcbcdd6b58aac171",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must resolve to a materialized source row",
+      "source_node": "source_verification_report",
+      "target_node": "claim_decision:3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "claim_coverage",
+      "edge_hash": "0346cff3da3408a9b0c68c9cd2af76a289b47032a313887b42c2f8afda4530a6",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "public answer unit must bind to a verified claim row",
+      "source_node": "answer_claim_coverage_report",
+      "target_node": "claim_decision:4"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "certified_proof_requirement",
+      "edge_hash": "b05c3738266b9b64d294e1bfb78e554c59612f2449e74b2d1fbf8632ae73dc6f",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "provider claims L62-grade decision provenance",
+      "source_node": "certification_report",
+      "target_node": "claim_decision:4"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "counterevidence_adjudication",
+      "edge_hash": "ccec30ed7d43dd5c211f116ceecf414af1b23c9adfa92e7ed16d95c593311269",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must have no unaddressed counterevidence",
+      "source_node": "counterevidence_report",
+      "target_node": "claim_decision:4"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "minimal_evidence",
+      "edge_hash": "2a99bd16940d6c10ba0e537fd9ca59ad927a21a13e93926637100140f1cbbcf3",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim needs sufficient evidence margin",
+      "source_node": "evidence_sufficiency_report",
+      "target_node": "claim_decision:4"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "context_closure",
+      "edge_hash": "b09f0949eeb7b4b1114ab9ef14d0e061d431ac10dec2e8ce64ad948ec32f0c64",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must be present in traced generation context",
+      "source_node": "generation_context_closure_report",
+      "target_node": "claim_decision:4"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_resolution",
+      "edge_hash": "7514801c817347e7db02dd4727d0ef4339830fd96b1440563875a8768a4ee785",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim source must be reachable or archived",
+      "source_node": "source_availability_report",
+      "target_node": "claim_decision:4"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "boundary_guard",
+      "edge_hash": "88c6e949ed1eddc84a90a5e10cdc4048740c067df1b423055a8f39a3b38633bd",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "source material is evidence-only, not instruction/control",
+      "source_node": "source_boundary_report",
+      "target_node": "claim_decision:4"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_materialization",
+      "edge_hash": "621ae1882df35da02c2f3d118d28a4625acf5520abef5619118e0c87418978d2",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must resolve to a materialized source row",
+      "source_node": "source_verification_report",
+      "target_node": "claim_decision:4"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "claim_coverage",
+      "edge_hash": "21546d7af903bcd07efb28ca94b785ddae491ae30822bb5f194bf4b2827e3722",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "public answer unit must bind to a verified claim row",
+      "source_node": "answer_claim_coverage_report",
+      "target_node": "claim_decision:5"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "certified_proof_requirement",
+      "edge_hash": "cb00caac7537e8bf513f95f928bd15ba5431666c76ddfb89a564db53a5df4b4b",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "provider claims L62-grade decision provenance",
+      "source_node": "certification_report",
+      "target_node": "claim_decision:5"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "counterevidence_adjudication",
+      "edge_hash": "d9791a2455060304cca6a5944e86e4ac5e36f2e4797d4e61d3f796080e14c4d5",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must have no unaddressed counterevidence",
+      "source_node": "counterevidence_report",
+      "target_node": "claim_decision:5"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "minimal_evidence",
+      "edge_hash": "8010ca383717a629fe01b5b90c247e9af2b0979f577dd86c7b9c35c066053a79",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim needs sufficient evidence margin",
+      "source_node": "evidence_sufficiency_report",
+      "target_node": "claim_decision:5"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "context_closure",
+      "edge_hash": "94297c720fab1f8fe092dd5e8eebe39f9b7005874e33fc6a570b81cdd39a29f5",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must be present in traced generation context",
+      "source_node": "generation_context_closure_report",
+      "target_node": "claim_decision:5"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_resolution",
+      "edge_hash": "7a1af79654e5bf7391f1bf4a9ebe706b5d6569f0ef71f9f2439df09520ee5f13",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim source must be reachable or archived",
+      "source_node": "source_availability_report",
+      "target_node": "claim_decision:5"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "boundary_guard",
+      "edge_hash": "68a78993a69f5e4d364e377617be35ca7372420f014cc2ed1aea04391b55aef3",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "source material is evidence-only, not instruction/control",
+      "source_node": "source_boundary_report",
+      "target_node": "claim_decision:5"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_materialization",
+      "edge_hash": "eb31a4faf3f05102bdd98faa45d8f836d7a0aaacd530b14cfa5053f0e9796f48",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must resolve to a materialized source row",
+      "source_node": "source_verification_report",
+      "target_node": "claim_decision:5"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "claim_coverage",
+      "edge_hash": "c82b818ffebfc7e06779bd9539b9b1bc5d3048c6d6492e3df868566672b34d5c",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "public answer unit must bind to a verified claim row",
+      "source_node": "answer_claim_coverage_report",
+      "target_node": "claim_decision:6"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "certified_proof_requirement",
+      "edge_hash": "7a1ef9927a3ee6a9ed3395c6fe00e62df37c33c2d95a08093a06c862e0e73eda",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "provider claims L62-grade decision provenance",
+      "source_node": "certification_report",
+      "target_node": "claim_decision:6"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "counterevidence_adjudication",
+      "edge_hash": "d6e1ef4794ffa6ff798387ede76bf84a416526103d29d45b829483d94b5ea66f",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must have no unaddressed counterevidence",
+      "source_node": "counterevidence_report",
+      "target_node": "claim_decision:6"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "minimal_evidence",
+      "edge_hash": "8efb3f69a4541e5f202a790b5fa69b81597ed1964e1ab95563da747066560950",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim needs sufficient evidence margin",
+      "source_node": "evidence_sufficiency_report",
+      "target_node": "claim_decision:6"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "context_closure",
+      "edge_hash": "db26e538d82a54e06d60aa325b29193e50d2335abe8924583d8eb23cd36b7aa4",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must be present in traced generation context",
+      "source_node": "generation_context_closure_report",
+      "target_node": "claim_decision:6"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_resolution",
+      "edge_hash": "28797e88d925218dd8fcdc67a881fc36b1d05524452fc6bfcbbd7fbccb6549c9",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim source must be reachable or archived",
+      "source_node": "source_availability_report",
+      "target_node": "claim_decision:6"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "boundary_guard",
+      "edge_hash": "fcd327bd41f3ff6700a0e91a7881e5071bf287676616fd765e31a5c7c3025516",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "source material is evidence-only, not instruction/control",
+      "source_node": "source_boundary_report",
+      "target_node": "claim_decision:6"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_materialization",
+      "edge_hash": "aba3af619f4b53ea923efb8372f4346a12eb75c4ba4326c45f112aeb3ef20f7d",
+      "influence_channel": "trusted_proof_summary",
+      "reason": "claim must resolve to a materialized source row",
+      "source_node": "source_verification_report",
+      "target_node": "claim_decision:6"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "certified_proof_requirement",
+      "edge_hash": "448f442bfe5cf3f0407520b69c731c5d81d64187a9f71815bf5669ab367bbebf",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "provider claims L62-grade decision provenance",
+      "source_node": "certification_report",
+      "target_node": "footer_decision:S1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "display_contract",
+      "edge_hash": "442a2892331e668cf433c2d23a5ea28e29f82a27499e3b6ed80ac3fe1a6256a5",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "client-visible footer row must be hash-bound",
+      "source_node": "citation_footer_contract",
+      "target_node": "footer_decision:S1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "rights_duty",
+      "edge_hash": "cc0c49032e7b82c8d23c326cb6bea111c2fba66078b2f322afdca4b55410b004",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "license terms require attribution",
+      "source_node": "creator_license_contract",
+      "target_node": "footer_decision:S1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "boundary_guard",
+      "edge_hash": "757bad61fca9c9d7d2bbb765bcd28de8af9a97016d3cca957fcc64fd4eeb45ad",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "source content cannot rewrite attribution decisions",
+      "source_node": "source_boundary_report",
+      "target_node": "footer_decision:S1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_confidence",
+      "edge_hash": "cbb580e927989665afd30f83faca3855a45bd9f8615f3f16b6f39b4e611b520a",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "footer confidence label must match verification checks",
+      "source_node": "source_confidence_report",
+      "target_node": "footer_decision:S1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_materialization",
+      "edge_hash": "4eb2eeec3abfbc8ccc9b932c19baad17ee019efab7e83dc8b35ac9ea65657915",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "footer source row must resolve to registered material",
+      "source_node": "source_verification_report",
+      "target_node": "footer_decision:S1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "certified_proof_requirement",
+      "edge_hash": "769bdab5f9bce9f0fca56c487efd1bfda4d01ff07544988069801a9779ca0c9c",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "provider claims L62-grade decision provenance",
+      "source_node": "certification_report",
+      "target_node": "footer_decision:S2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "display_contract",
+      "edge_hash": "9f549c2051b558aa1a0a3aa0b196253cefa79bb426f46541f6216aea25e546a4",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "client-visible footer row must be hash-bound",
+      "source_node": "citation_footer_contract",
+      "target_node": "footer_decision:S2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "rights_duty",
+      "edge_hash": "36ec46d4416eaed8a0751bf1fc86f4ad6f1a8c5ec19a950b160436aedfca71db",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "license terms require attribution",
+      "source_node": "creator_license_contract",
+      "target_node": "footer_decision:S2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "boundary_guard",
+      "edge_hash": "05f4edae8268a17e5b980a38b800c4bf9f033d023f107449bd993e10d6ca0a0c",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "source content cannot rewrite attribution decisions",
+      "source_node": "source_boundary_report",
+      "target_node": "footer_decision:S2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_confidence",
+      "edge_hash": "80db73d93c067055c72add10fa1e07323cf20c1dab59e5b2ab2c285e099743a0",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "footer confidence label must match verification checks",
+      "source_node": "source_confidence_report",
+      "target_node": "footer_decision:S2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_materialization",
+      "edge_hash": "25d56c26695a47a86f0953df2da2c1c53a1f0ae4b58f0b126e7c57fae40b02d5",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "footer source row must resolve to registered material",
+      "source_node": "source_verification_report",
+      "target_node": "footer_decision:S2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "certified_proof_requirement",
+      "edge_hash": "27f4adc0dd4869021d3163589963bc9e25d2de9e06be0090289d41980e131e2f",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "provider claims L62-grade decision provenance",
+      "source_node": "certification_report",
+      "target_node": "footer_decision:S3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "display_contract",
+      "edge_hash": "1d1f458c2139b65057f129d7b923003cf04b810783245cdc0a3aed8e1b560a87",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "client-visible footer row must be hash-bound",
+      "source_node": "citation_footer_contract",
+      "target_node": "footer_decision:S3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "rights_duty",
+      "edge_hash": "aec2853ad9691d92a1ca78facb4a0ea52335208cae7013d711d0457a6491782b",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "license terms require attribution",
+      "source_node": "creator_license_contract",
+      "target_node": "footer_decision:S3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "boundary_guard",
+      "edge_hash": "ce03820cf5b59ab80f6f6c7dda785706ff09fd134680fd4f81625d10e9eb4c20",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "source content cannot rewrite attribution decisions",
+      "source_node": "source_boundary_report",
+      "target_node": "footer_decision:S3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_confidence",
+      "edge_hash": "9a81f5866a2597d943c0a631fecfee1dff233321d9b2a883141277ddc4bc95e3",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "footer confidence label must match verification checks",
+      "source_node": "source_confidence_report",
+      "target_node": "footer_decision:S3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_materialization",
+      "edge_hash": "a0df11f9f8f490da3bc371e295d34a680a186d23c068a8c4331ddae026b48f66",
+      "influence_channel": "trusted_display_or_policy",
+      "reason": "footer source row must resolve to registered material",
+      "source_node": "source_verification_report",
+      "target_node": "footer_decision:S3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "accounting_commitment",
+      "edge_hash": "08f18cc31fc945d5318a5cb63dd5c6e96f75637713d1c7ed1ff393f802127e30",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "answer card commits source identity and contribution weight",
+      "source_node": "answer_provenance_card",
+      "target_node": "payout_decision:S1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "certified_proof_requirement",
+      "edge_hash": "8dc2ef97a84597b65b154a04e186dbfa81d886dcd4abed9b9dd791a03e68ca90",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "provider claims L62-grade decision provenance",
+      "source_node": "certification_report",
+      "target_node": "payout_decision:S1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "royalty_policy",
+      "edge_hash": "9c71434da8885a2e4eb4e2992e430c5fb52b60fc97dc758839f72a36b31e25df",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "license terms require royalty handling",
+      "source_node": "creator_license_contract",
+      "target_node": "payout_decision:S1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "provider_public_posture",
+      "edge_hash": "c94846fd48e5d7b663869284e9f501589fea594838b1f2fdcf0c7d2bc9afd675",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "provider declares royalty and settlement surfaces",
+      "source_node": "provider_attribution_card",
+      "target_node": "payout_decision:S1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "usage_receipt_commitment",
+      "edge_hash": "b807d6c2e1383974335ab98c43eb1dbf0cdefdb260f1503100fb44318d54f911",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "public receipt commits usage event and credited sources",
+      "source_node": "public_receipt",
+      "target_node": "payout_decision:S1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "boundary_guard",
+      "edge_hash": "faccef27519866eb7624db34e965721813e40e0865f999a586adaf528b115c8d",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "source content cannot modify payout decisions",
+      "source_node": "source_boundary_report",
+      "target_node": "payout_decision:S1"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "accounting_commitment",
+      "edge_hash": "70ce5d6190abd4dd6ac8f30beeb04cdbff9477d1c026117df4f29e63ae0fc455",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "answer card commits source identity and contribution weight",
+      "source_node": "answer_provenance_card",
+      "target_node": "payout_decision:S2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "certified_proof_requirement",
+      "edge_hash": "fdae28c5c5ad533a7deaf12fbfeb26c12baa2c8ac496f5c160fc6a75bdf41e1d",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "provider claims L62-grade decision provenance",
+      "source_node": "certification_report",
+      "target_node": "payout_decision:S2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "royalty_policy",
+      "edge_hash": "c23d33065b23544d31913721fde3b546425e82c0474afaa8765a76b20c9c4942",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "license terms require royalty handling",
+      "source_node": "creator_license_contract",
+      "target_node": "payout_decision:S2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "provider_public_posture",
+      "edge_hash": "52408fb3a2d23a7f276234220a909cd30df5e1391f876dbba4c0ea4395bfdde7",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "provider declares royalty and settlement surfaces",
+      "source_node": "provider_attribution_card",
+      "target_node": "payout_decision:S2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "usage_receipt_commitment",
+      "edge_hash": "2c3df48583a1d0c0258275d02059b716d3bd712d9d8f8f18d77c8202b05e42b3",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "public receipt commits usage event and credited sources",
+      "source_node": "public_receipt",
+      "target_node": "payout_decision:S2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "boundary_guard",
+      "edge_hash": "9246a42cc0a1988e945c50a20c20a76b769e2b182adfdab17af77441769c30c0",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "source content cannot modify payout decisions",
+      "source_node": "source_boundary_report",
+      "target_node": "payout_decision:S2"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "accounting_commitment",
+      "edge_hash": "9f617de3408be1f6485da38e994b355b80e1bbd6e0cfb5e5a2506a0855c921fd",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "answer card commits source identity and contribution weight",
+      "source_node": "answer_provenance_card",
+      "target_node": "payout_decision:S3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "certified_proof_requirement",
+      "edge_hash": "3f878b79b24526374bf6f780d8410cbcac501340957f3b31814e3d9a966bfd3b",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "provider claims L62-grade decision provenance",
+      "source_node": "certification_report",
+      "target_node": "payout_decision:S3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "royalty_policy",
+      "edge_hash": "e9460d98f4fc032208b3861752ed5fe7f2c01cc907d3fd44bd68a44ad5aace93",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "license terms require royalty handling",
+      "source_node": "creator_license_contract",
+      "target_node": "payout_decision:S3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "provider_public_posture",
+      "edge_hash": "d2ac779d25a1e7748278023d032a09db9f0a648c9dc21aeb64725d60451ab600",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "provider declares royalty and settlement surfaces",
+      "source_node": "provider_attribution_card",
+      "target_node": "payout_decision:S3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "usage_receipt_commitment",
+      "edge_hash": "ba3d160817fec7252479d08a52781b447b6267da5db17ea9a0c745ad7839886c",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "public receipt commits usage event and credited sources",
+      "source_node": "public_receipt",
+      "target_node": "payout_decision:S3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "boundary_guard",
+      "edge_hash": "94aa82acc8563b7793a0fe16ca434e0b9c03971af0dca38f6e14f1ceeaad12d9",
+      "influence_channel": "trusted_policy_or_accounting",
+      "reason": "source content cannot modify payout decisions",
+      "source_node": "source_boundary_report",
+      "target_node": "payout_decision:S3"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "claim_coverage",
+      "edge_hash": "5796601238edd85967d6204edcdaa622d763fdabd92fe5a4dab3c38361c6dcb6",
+      "influence_channel": "trusted_release_control",
+      "reason": "release requires all public claims to be covered",
+      "source_node": "answer_claim_coverage_report",
+      "target_node": "release_decision:response"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "portable_binding",
+      "edge_hash": "1ad8d97eeb4c645e34d63e63b6db10238baa5f8d6e5d326a25a45f115f9cb079",
+      "influence_channel": "trusted_release_control",
+      "reason": "released answer must preserve portable attribution binding",
+      "source_node": "attribution_capsule",
+      "target_node": "release_decision:response"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "certified_proof_requirement",
+      "edge_hash": "4473df315ea2301fe69266eaffd0b0e66cf397be64f3de24df11ae70bc0107e8",
+      "influence_channel": "trusted_release_control",
+      "reason": "provider must meet the decision provenance level",
+      "source_node": "certification_report",
+      "target_node": "release_decision:response"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "counterevidence_adjudication",
+      "edge_hash": "ffe38cf97d336bce9171182cf29ddad2e8f086c37f9e90f97dc55cf2cce7055c",
+      "influence_channel": "trusted_release_control",
+      "reason": "release requires counterevidence closure",
+      "source_node": "counterevidence_report",
+      "target_node": "release_decision:response"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "minimal_evidence",
+      "edge_hash": "eaab3e99bbcede7b96b84ede0383db74f8a2d85ca0a4667c405431932024acd4",
+      "influence_channel": "trusted_release_control",
+      "reason": "release requires sufficient evidence",
+      "source_node": "evidence_sufficiency_report",
+      "target_node": "release_decision:response"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "context_closure",
+      "edge_hash": "c806d34b1c4f5395f3aa171220f92f8a3487911a50a1568651ec78f98dba1bf2",
+      "influence_channel": "trusted_release_control",
+      "reason": "release requires generation context closure",
+      "source_node": "generation_context_closure_report",
+      "target_node": "release_decision:response"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "provider_public_posture",
+      "edge_hash": "6b70200390a82f13201ba2d026fbe08c0ce92e571fecab96112cb854a2218676",
+      "influence_channel": "trusted_release_control",
+      "reason": "provider must disclose compatible surfaces",
+      "source_node": "provider_attribution_card",
+      "target_node": "release_decision:response"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "release_policy",
+      "edge_hash": "fb14b059007296e8ecbf67486072f74d57ab54ce4041503191a24db69836fd46",
+      "influence_channel": "trusted_release_control",
+      "reason": "emit decision comes from the signed release gate",
+      "source_node": "release_gate",
+      "target_node": "release_decision:response"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "proof_container",
+      "edge_hash": "a11eeb4e6219a4dd9ee88c9049ae41fec5a63df02f8e47452f4dc4940b0ae1d7",
+      "influence_channel": "trusted_release_control",
+      "reason": "release operates on the verified response envelope",
+      "source_node": "response_envelope",
+      "target_node": "release_decision:response"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "source_resolution",
+      "edge_hash": "9e6f76010d28efea0e3a0c86897c3f997c9e0b984e2e0ef06ae46069fb4e9efa",
+      "influence_channel": "trusted_release_control",
+      "reason": "release requires inspectable source rows",
+      "source_node": "source_availability_report",
+      "target_node": "release_decision:response"
+    },
+    {
+      "allowed_influence": true,
+      "edge_class": "boundary_guard",
+      "edge_hash": "0ca57748b40cdb6ed9d86fe94fb249059e1cffa28a02c5f49092db566547a9c9",
+      "influence_channel": "trusted_release_control",
+      "reason": "release requires source boundary integrity",
+      "source_node": "source_boundary_report",
+      "target_node": "release_decision:response"
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "issues": [],
+  "policy": {
+    "claim_decisions_may_use_verified_evidence": true,
+    "footer_decisions_must_use_display_contracts": true,
+    "payout_decisions_must_use_license_and_accounting_channels": true,
+    "policy_version": "rdllm-decision-provenance-policy/v1",
+    "release_decisions_must_bind_l55_to_l61_closure": true,
+    "requires_machine_verifiable_decision_edges": true,
+    "source_content_may_not_modify_attribution_or_payout": true,
+    "target_certification_level": "RDLLM-L62"
+  },
+  "privacy": {
+    "answer_text_disclosed": false,
+    "claim_text_disclosed": false,
+    "evidence_text_disclosed": false,
+    "hidden_state_disclosed": false,
+    "payout_account_disclosed": false,
+    "prompt_text_disclosed": false,
+    "report_uses_hashes_decision_ids_and_allowed_influence_edges": true,
+    "source_text_disclosed": false
+  },
+  "report_hash": "a79eada85bec2cd6ce4a2134cf094a5d3174fb51feadc188ef14c408efd0b228",
+  "report_version": "rdllm-decision-provenance-report/v1",
+  "schemas": {
+    "attribution_capsule": "docs/schemas/attribution_capsule.schema.json",
+    "decision_provenance_report": "docs/schemas/decision_provenance_report.schema.json",
+    "release_gate": "docs/schemas/release_gate.schema.json",
+    "response_envelope": "docs/schemas/response_envelope.schema.json",
+    "source_boundary_report": "docs/schemas/source_boundary_report.schema.json",
+    "trace_exchange": "docs/schemas/trace_exchange.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "593b5a6d285be59b0ef77b0347b8db9012aa2db6cf72a9a489aa9654ddeafe1d"
+  },
+  "summary": {
+    "artifact_node_count": 18,
+    "check_count": 23,
+    "claim_decision_count": 6,
+    "decision_node_count": 13,
+    "footer_decision_count": 3,
+    "influence_edge_count": 95,
+    "issue_count": 0,
+    "passed_check_count": 23,
+    "payout_decision_count": 3,
+    "release_decision_count": 1,
+    "status": "verified",
+    "target_certification_level": "RDLLM-L62"
+  }
+}

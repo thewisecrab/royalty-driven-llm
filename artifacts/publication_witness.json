@@ -1,0 +1,123 @@
+{
+  "checkpoint_subjects": [
+    {
+      "artifact_count": 10,
+      "artifact_root": "1e43ddfc14d068fe5963e6837ce56aa6e611aa503c0eeb653ffab2a347e08b4f",
+      "certification_level": "RDLLM-L63",
+      "checkpoint_hash": "5c18d9120a34ca0d875526b198095deabe651c9f9ce17ba70d6e5bdf8b82a6f4",
+      "checkpoint_index": 0,
+      "issuer": "rdllm-local-demo",
+      "monitor_created_at": "2026-05-31T03:36:59Z",
+      "monitor_hash": "0a103af2bb0a8ca4dd6c934028f5e9801c917205bf7c8a158a9c3bcd3e318281",
+      "monitor_status": "ready",
+      "previous_checkpoint_hash": "",
+      "snapshot_hash": "4dba1f510560c95a965c96ffef1a321bd5daae53c76dcdbe30b77e94b4a46bc7",
+      "subject_hash": "d40780f0b57cb04579e4ec8f6383f3525707fd63fa2c109522a748d7b37f16b6"
+    }
+  ],
+  "checks": {
+    "checkpoint_subjects_present": true,
+    "equivocation_absent": true,
+    "private_input_fields_absent": true,
+    "publication_monitors_self_consistent": true,
+    "witness_quorum_met": true,
+    "witness_quorum_policy_nonzero": true,
+    "witness_signatures_valid": true
+  },
+  "commitments": {
+    "attestation_root": "4adffbcb72c43cd0709474558ccbaf6c2da1eee27488a08fe9b38426a5661af6",
+    "schema": "docs/schemas/publication_witness.schema.json",
+    "subject_root": "d40780f0b57cb04579e4ec8f6383f3525707fd63fa2c109522a748d7b37f16b6"
+  },
+  "created_at": "2026-05-31T03:37:15Z",
+  "equivocation": {
+    "conflict_count": 0,
+    "conflicts": []
+  },
+  "issuer": "rdllm-local-demo",
+  "monitor_errors": {
+    "0a103af2bb0a8ca4dd6c934028f5e9801c917205bf7c8a158a9c3bcd3e318281": []
+  },
+  "privacy": {
+    "answer_text_disclosed": false,
+    "artifact_payloads_disclosed": false,
+    "customer_or_payment_text_disclosed": false,
+    "evidence_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "publication_monitor_payloads_embedded": false,
+    "source_text_disclosed": false,
+    "witness_report_uses_checkpoint_hashes_and_cosignatures": true
+  },
+  "publication_witness_hash": "af076ed804132552cf58d5c11c1b6bdc6292cb6ed16cdfe3c4cd38e231db5143",
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "8c25440bd231eea695003d344eb9c730a64bd84ef519a5c7ee0000ba1fcc730e"
+  },
+  "summary": {
+    "checkpoint_subject_count": 1,
+    "equivocation_count": 0,
+    "monitor_count": 1,
+    "private_input_field_count": 0,
+    "required_quorum": 2,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L50",
+    "witness_count": 3
+  },
+  "witness_attestations": [
+    {
+      "artifact_root": "1e43ddfc14d068fe5963e6837ce56aa6e611aa503c0eeb653ffab2a347e08b4f",
+      "attestation_hash": "65134eb7abe9bd2009e7099697b83cb06212df673f99be5cb1879b17d47289ff",
+      "checkpoint_hash": "5c18d9120a34ca0d875526b198095deabe651c9f9ce17ba70d6e5bdf8b82a6f4",
+      "checkpoint_index": 0,
+      "monitor_hash": "0a103af2bb0a8ca4dd6c934028f5e9801c917205bf7c8a158a9c3bcd3e318281",
+      "observed_at": "2026-05-31T03:37:15Z",
+      "signature": "d66dd4edb6657c5a3ad20497a53615dc3d3f3dff83ee67c5518994861771919b",
+      "signature_algorithm": "HMAC-SHA256",
+      "subject_hash": "d40780f0b57cb04579e4ec8f6383f3525707fd63fa2c109522a748d7b37f16b6",
+      "witness_id": "witness-alpha",
+      "witness_key_hash": "9a3767393bbc98c1a0bcfb65b8c470574af05df61d1301ddf959946e78410e29"
+    },
+    {
+      "artifact_root": "1e43ddfc14d068fe5963e6837ce56aa6e611aa503c0eeb653ffab2a347e08b4f",
+      "attestation_hash": "b58ce554bf0a1ff528df1047ca6feba7c4f7c3372adb2df161b4dd1ec5b971b8",
+      "checkpoint_hash": "5c18d9120a34ca0d875526b198095deabe651c9f9ce17ba70d6e5bdf8b82a6f4",
+      "checkpoint_index": 0,
+      "monitor_hash": "0a103af2bb0a8ca4dd6c934028f5e9801c917205bf7c8a158a9c3bcd3e318281",
+      "observed_at": "2026-05-31T03:37:15Z",
+      "signature": "b86c57c2d560fd86ebbcad016d15c7a2b7e4e60a2384917e7b530570005702af",
+      "signature_algorithm": "HMAC-SHA256",
+      "subject_hash": "d40780f0b57cb04579e4ec8f6383f3525707fd63fa2c109522a748d7b37f16b6",
+      "witness_id": "witness-bravo",
+      "witness_key_hash": "767fc853e0b235805e607cd66df8d38769c038650aed78493d1edb8c0b5cd630"
+    },
+    {
+      "artifact_root": "1e43ddfc14d068fe5963e6837ce56aa6e611aa503c0eeb653ffab2a347e08b4f",
+      "attestation_hash": "f335118f0bb6c28e81360e6a435f38862d477db382a8ec571814b6043ca4b7d6",
+      "checkpoint_hash": "5c18d9120a34ca0d875526b198095deabe651c9f9ce17ba70d6e5bdf8b82a6f4",
+      "checkpoint_index": 0,
+      "monitor_hash": "0a103af2bb0a8ca4dd6c934028f5e9801c917205bf7c8a158a9c3bcd3e318281",
+      "observed_at": "2026-05-31T03:37:15Z",
+      "signature": "99604a3aede97551f9d1306b79a89edad213aefa2705a0b7f54d63d09f136e92",
+      "signature_algorithm": "HMAC-SHA256",
+      "subject_hash": "d40780f0b57cb04579e4ec8f6383f3525707fd63fa2c109522a748d7b37f16b6",
+      "witness_id": "witness-charlie",
+      "witness_key_hash": "9ab90ac1bf89d62bca5abe2a156d3073aa0aa64e8834367e7cdc01a82c7dcef7"
+    }
+  ],
+  "witness_policy": {
+    "checkpoint_cosignatures_required": true,
+    "public_payloads_redacted": true,
+    "required_quorum": 2,
+    "split_view_detection": true,
+    "witness_count": 3
+  },
+  "witness_quorum": {
+    "d40780f0b57cb04579e4ec8f6383f3525707fd63fa2c109522a748d7b37f16b6": [
+      "witness-alpha",
+      "witness-bravo",
+      "witness-charlie"
+    ]
+  },
+  "witness_version": "rdllm-publication-witness/v1"
+}

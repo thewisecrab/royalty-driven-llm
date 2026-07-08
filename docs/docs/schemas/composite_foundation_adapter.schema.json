@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/composite_foundation_adapter.schema.json",
+  "title": "RDLLM Composite Foundation Adapter Report",
+  "type": "object",
+  "required": [
+    "adapter_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "provider_adapter_rows",
+    "composite_contract",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "composite_foundation_adapter_hash",
+    "signature"
+  ],
+  "properties": {
+    "adapter_version": {
+      "const": "rdllm-composite-foundation-adapter/v1"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "required_provider_families",
+        "native_output_hash_match_required",
+        "required_metadata_maps_headers",
+        "required_json_maps_fields",
+        "citation_and_tool_paths_required",
+        "streaming_final_event_hashes_required",
+        "fail_closed_on_adapter_failure",
+        "raw_native_response_disclosure_allowed",
+        "raw_prompt_or_source_text_disclosure_allowed"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "foundation_api_profile",
+        "response_envelope",
+        "citation_url_health"
+      ],
+      "additionalProperties": true
+    },
+    "provider_adapter_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "display_order",
+          "provider_id",
+          "provider_family",
+          "native_api_version",
+          "native_response_id",
+          "native_model",
+          "native_status",
+          "rdllm_event_id",
+          "rdllm_response_envelope_hash",
+          "foundation_profile_hash",
+          "citation_url_health_hash",
+          "rendered_output_hash",
+          "native_output_hash",
+          "native_output_hash_matches_rdllm",
+          "native_output_path",
+          "header_mappings",
+          "json_field_mappings",
+          "citation_mapping_paths",
+          "tool_mapping_paths",
+          "stream_final_event_hashes",
+          "required_headers_mapped",
+          "required_json_fields_mapped",
+          "citation_paths_declared",
+          "tool_paths_declared",
+          "stream_final_event_binds_hashes",
+          "failure_policy",
+          "fail_closed_policy_declared",
+          "native_response_shape_hash",
+          "provider_adapter_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "composite_contract": {
+      "type": "object",
+      "required": [
+        "profile",
+        "provider_families",
+        "required_provider_families",
+        "portable_response_object",
+        "portable_attribution_footer",
+        "portable_url_health",
+        "adapter_row_root",
+        "adoption_target"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "required": [
+        "failed_checks",
+        "missing_provider_families",
+        "native_output_hash_mismatch_providers",
+        "missing_header_mapping_providers",
+        "missing_json_mapping_providers",
+        "missing_stream_binding_providers",
+        "non_fail_closed_providers"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "artifact_binding_root",
+        "adapter_row_root",
+        "provider_family_root",
+        "schema"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "composite_foundation_adapter",
+        "foundation_api_profile",
+        "response_envelope",
+        "source_footer_delivery",
+        "citation_url_health"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_native_response_disclosed",
+        "raw_prompt_text_disclosed",
+        "raw_source_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_tool_output_disclosed",
+        "hash_only_native_output_commitments"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "provider_adapter_count",
+        "required_provider_family_count",
+        "covered_provider_family_count",
+        "failed_check_count",
+        "universal_foundation_model_contract_supported",
+        "native_response_hash_binding_supported",
+        "provider_neutral_metadata_supported",
+        "streaming_adapter_supported",
+        "privacy_preserved"
+      ],
+      "additionalProperties": true
+    },
+    "composite_foundation_adapter_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

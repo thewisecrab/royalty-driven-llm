@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/claim_verification_report.schema.json",
+  "title": "RDLLM Claim Verification Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "registry",
+    "attestation_rows",
+    "claim_rows",
+    "escrow_rows",
+    "commitments",
+    "summary",
+    "privacy",
+    "schemas",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-claim-verification-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "trusted_issuers",
+        "trusted_issuer_root",
+        "issuer_key_root",
+        "duplicate_threshold",
+        "direct_settlement_threshold",
+        "review_threshold",
+        "direct_settlement_requires_verified_signature",
+        "duplicate_claims_route_to_escrow",
+        "unverified_claims_route_to_escrow"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-claim-verification-policy/v1" },
+        "trusted_issuers": { "type": "array", "items": { "type": "string" } },
+        "trusted_issuer_root": { "type": "string" },
+        "issuer_key_root": { "type": "string" },
+        "duplicate_threshold": { "type": "number" },
+        "direct_settlement_threshold": { "type": "number" },
+        "review_threshold": { "type": "number" },
+        "direct_settlement_requires_verified_signature": { "const": true },
+        "duplicate_claims_route_to_escrow": { "const": true },
+        "unverified_claims_route_to_escrow": { "const": true }
+      }
+    },
+    "registry": {
+      "type": "object",
+      "required": ["registry_report_version", "report_hash", "summary", "conflicts"]
+    },
+    "attestation_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "attestation_id",
+          "work_id",
+          "creator_id",
+          "claim_type",
+          "issuer",
+          "issued_at",
+          "status",
+          "trusted_issuer",
+          "evidence_uri_present",
+          "evidence_hash",
+          "signature_hash",
+          "signature_verified",
+          "attestation_hash",
+          "row_hash"
+        ]
+      }
+    },
+    "claim_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "work_id",
+          "creator_id",
+          "title_hash",
+          "content_hash",
+          "source_uri_hash",
+          "attestation_ids",
+          "trusted_attestation_count",
+          "verified_signature_count",
+          "evidence_hash_count",
+          "duplicate_conflict_count",
+          "confidence_score",
+          "decision",
+          "release_recommendation",
+          "reason",
+          "row_hash"
+        ],
+        "properties": {
+          "decision": {
+            "enum": [
+              "direct_settlement_allowed",
+              "duplicate_claim_escrow",
+              "claim_review_escrow",
+              "unverified_claim_escrow"
+            ]
+          }
+        }
+      }
+    },
+    "escrow_rows": { "type": "array" },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "work_root",
+        "attestation_root",
+        "claim_root",
+        "escrow_root",
+        "conflict_root"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "work_count",
+        "attestation_count",
+        "trusted_issuer_count",
+        "verified_attestation_count",
+        "direct_settlement_work_count",
+        "review_or_escrow_work_count",
+        "duplicate_conflict_count",
+        "escrow_row_count",
+        "all_direct_rows_have_verified_attestations",
+        "unverified_claims_route_to_escrow",
+        "duplicate_claims_route_to_escrow"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L54" },
+        "all_direct_rows_have_verified_attestations": { "const": true },
+        "unverified_claims_route_to_escrow": { "const": true },
+        "duplicate_claims_route_to_escrow": { "const": true }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "work_text_disclosed",
+        "payout_accounts_disclosed",
+        "raw_issuer_keys_disclosed",
+        "raw_attestation_signatures_disclosed",
+        "report_uses_hashes_claim_metadata_and_escrow_decisions"
+      ],
+      "properties": {
+        "work_text_disclosed": { "const": false },
+        "payout_accounts_disclosed": { "const": false },
+        "raw_issuer_keys_disclosed": { "const": false },
+        "raw_attestation_signatures_disclosed": { "const": false }
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["claim_verification_report"]
+    },
+    "report_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"]
+    }
+  },
+  "additionalProperties": true
+}

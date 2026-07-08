@@ -1,0 +1,2604 @@
+{
+  "commitment_scheme": "path-bound salted SHA-256 Merkle commitments",
+  "disclosed": [
+    {
+      "leaf_hash": "2b6b553ecdbbc1264b126383bddaca25d6f12ab97e0c6a95ab0ee9eb66898591",
+      "path": "/event/answer_hash",
+      "salt": "7561306e4b1374f668fad98b39c5b0fe8b27e655f57d1c0d8c6662e91c0f395e",
+      "value": "9999f5ccce0ecac0fd8dc89b35fa20ca5ce9c93226edcb49522f15ee27090d6d"
+    },
+    {
+      "leaf_hash": "77959433fdab98c0dbbd181c86979e6bc9a906aa85f7de4c0e81eed6b9e8fcbe",
+      "path": "/event/event_hash",
+      "salt": "60d43676bbea9577996034be19b4901cf80d104a0049543164b65efe6588f286",
+      "value": "bc4d621873dfa3c670e50f94a211d1bd1d3687ccb2ee7853dd97e20af1798c13"
+    },
+    {
+      "leaf_hash": "415273f69528b76f355d5ca57e9ac4032caa3c457660f4c631433fb911ff3080",
+      "path": "/event/event_id",
+      "salt": "51d354c0dfa8dab3fb437d4aa0bbb110be4b211fb9a7681f59a4901a90bde255",
+      "value": "evt_bc4d621873dfa3c6"
+    },
+    {
+      "leaf_hash": "0a473d1e53f882bc18c3358db849726c2b9fa544e020e08128ab31e2fe8490be",
+      "path": "/event/prompt_hash",
+      "salt": "0859e94c93eb83bb0fdea21e22aab833e6aee11b62de695ffa32e68d9f4d3f1d",
+      "value": "50ab8c101c89ff008713591e3270032cb19923a1e89f68b4315afb839e95d35e"
+    },
+    {
+      "leaf_hash": "80806e3e707d742d5c21b089e124f9675998ab89694fe0742dfb123fb2318300",
+      "path": "/event/rendered_output_hash",
+      "salt": "826b86ef6b73d23f2c1b146eeb10286e81b9b8c2a8e137cf6b54d33e1e9af188",
+      "value": "e59741aa00aceaa5bfb4eabe429ad44d78fdbd961c67b24cde7b58234b00283e"
+    },
+    {
+      "leaf_hash": "748007c177e6dbf4495555405562f5dc2d692fc72c8846697fc6dca12fb1afa9",
+      "path": "/grounding/attribution_gap/report_hash",
+      "salt": "906cab3aa08f04e619b159c5083932cd7c0d0ef90a747abfbceb29144590c25d",
+      "value": "1d8d150f4dd3aaff60c47d543a8c2d25242b7b7543bc2c6589ec22baec7c0298"
+    },
+    {
+      "leaf_hash": "e8cac6fc2f2f69b5915863b8456f5e70e7d791d0f5f56e0cc0830c2dbdbf8ee2",
+      "path": "/grounding/attribution_gap/scores/allowed_credit_coverage",
+      "salt": "b57915fb56019a210fb8a2663def8ef0326497993b978bf4b40bb6ba7a250e2a",
+      "value": 1.0
+    },
+    {
+      "leaf_hash": "ed3a43e8ef33eefd04c97a37b27202afc467f486dd08903dc8f232907527c63b",
+      "path": "/grounding/attribution_gap/scores/attribution_gap_rate",
+      "salt": "8d229d523330cf52c21a2ff7ded23c68ac7d99ff0f89769fa618b4751f4de579",
+      "value": 0.0
+    },
+    {
+      "leaf_hash": "595c27e0ea3a619fd6134e2d857570ca402d4e2516e2eded919e60e5862e8db7",
+      "path": "/grounding/attribution_gap/scores/citation_efficiency",
+      "salt": "f16dc33441e048900197b90523b45a8f9e3c83857038aab7dbb641535fc38ca4",
+      "value": 1.0
+    },
+    {
+      "leaf_hash": "53ff49d826dcb11ca2112d08e51579f245513e9945c91e45ad260918cd6d0856",
+      "path": "/grounding/attribution_gap/scores/credit_efficiency",
+      "salt": "4609b046bf900f5dfe829595a4ae0c339a74c0b7d741e3801f9213321cce194b",
+      "value": 1.0
+    },
+    {
+      "leaf_hash": "f61d1c5ca63bb0053b5f023f1eba10905a6f1f44f2471b70d111fec95418cebb",
+      "path": "/grounding/attribution_gap/scores/payout_visibility",
+      "salt": "fd080c64ad5243b2e0c054fcab5468ed91828d8f251538a86a684a1322b2466b",
+      "value": 1.0
+    },
+    {
+      "leaf_hash": "73bce7914e4f8271b43aba9a55519ced9841b60b486f9a1a2b2afc7d06c8a5a0",
+      "path": "/grounding/attribution_gap/summary/access_record_count",
+      "salt": "62b2d7c25d0a8c6f58eb9ccaf24f09f2be4e818efad40fba81bf9edcd8aad102",
+      "value": 6
+    },
+    {
+      "leaf_hash": "432d44f0eabf8bffe6b384f59ddea10aebc6e62a98d7cc44ace6e98e230d812e",
+      "path": "/grounding/attribution_gap/summary/accessed_source_count",
+      "salt": "0932a1bdbcd26d05701bcc74541a099ddee74d16990aa4242568d961529ea76a",
+      "value": 3
+    },
+    {
+      "leaf_hash": "25ef5d6ea411aaab3f1f4881c91a47964a2afc4860633c46bfe3f8a4177df8b9",
+      "path": "/grounding/attribution_gap/summary/allowed_accessed_source_count",
+      "salt": "da1e572a8776f28c0f9351402a44433cd8edb4bdcbdb04ec4dc1218c2d9fcf15",
+      "value": 3
+    },
+    {
+      "leaf_hash": "0df43743c8074a4dad571114606978728c1b42ea641294ac88be5a7f546d48e7",
+      "path": "/grounding/attribution_gap/summary/cited_without_access_count",
+      "salt": "154a3d76278094e1209ce56da20d07dcbc888ece1b9443e26b4befe5a005987f",
+      "value": 0
+    },
+    {
+      "leaf_hash": "8916415c37936163e526f78db3e4311c65cdef697c67382ad6162a4e16163bc0",
+      "path": "/grounding/attribution_gap/summary/consumed_without_credit_count",
+      "salt": "5915c9bd034deac3ee9275391d305786e20bf7d63bea8e76500f1a766e08bb94",
+      "value": 0
+    },
+    {
+      "leaf_hash": "5cdc64095ce7f6db51e23a7d3383cfa8f26aa722075c8d2db9c905b05fa9ec2f",
+      "path": "/grounding/attribution_gap/summary/credited_source_count",
+      "salt": "d9a368f04427953ae0c1915568d40498fd826ad2717207022250cc240a9de796",
+      "value": 3
+    },
+    {
+      "leaf_hash": "f576dfafc05ce3205fdf71b847a3c7d5ec4cf5eea2453294e93111309fa8cfc0",
+      "path": "/grounding/attribution_gap/summary/escrow_accounts",
+      "salt": "c527b54b82bb176b58d53d334694a53c85fcef3559078f81060c6437269c0f5e",
+      "value": []
+    },
+    {
+      "leaf_hash": "55f8953a869a7d9c7ba5cec1bf2772f046de5c6c886f079ab2704967bad1ad31",
+      "path": "/grounding/attribution_gap/summary/paid_hidden_count",
+      "salt": "832d92074cf198efb235293c5a42efd694917ccd45e1b94b6c6767be578fd4d5",
+      "value": 0
+    },
+    {
+      "leaf_hash": "d593ea228898f4883896e9bc12b62ab02147283fbd0369bd7362063e798412f5",
+      "path": "/grounding/attribution_gap/summary/paid_source_count",
+      "salt": "c5e70aa7ed12378a77370c0120b45bb41b1fbfdabe0ab28fc284bcd99d325f0d",
+      "value": 3
+    },
+    {
+      "leaf_hash": "2c529f6aca0918981cb0eba2da7a6903c9b1e0a7a6245f38b0a7cc80083c5606",
+      "path": "/grounding/attribution_gap/summary/policy_withheld_count",
+      "salt": "4dad0ace31a4b62a552fbaa7988f961924793d7740fce49501f146219e892c8a",
+      "value": 0
+    },
+    {
+      "leaf_hash": "b96d4af77b1753901ef7d563e15acbc5c19c2393e9d2558166df4af1c243da91",
+      "path": "/grounding/attribution_gap/summary/registry_withheld_count",
+      "salt": "95beda1a1d6fd521d20fd8689912808383ba60331882f76e68858de5391abb65",
+      "value": 0
+    },
+    {
+      "leaf_hash": "2fc3d7a0f0705b68fe54afc79a34212620c8c11ed1561fb16a28375c181cfcd2",
+      "path": "/grounding/attribution_gap/summary/visible_source_count",
+      "salt": "8ba0560928b8125b5c074c42a4e03e7f6ad55465e5e55c6c77e8a0cbb0600b76",
+      "value": 3
+    },
+    {
+      "leaf_hash": "6ab83b274f664763fea0bdb1448c6851c1088eaf572e6830845e9a41c4887f2f",
+      "path": "/grounding/attribution_gap/verdict",
+      "salt": "849ae4e743f351ca6a39059cfcde21d59487a3c0c47497aa99cc81eced9592cc",
+      "value": "closed"
+    },
+    {
+      "leaf_hash": "5f9ed22a31fc62cfbac96aefa058e482ba23ecb95018a5b7a3863e47ab62f37f",
+      "path": "/grounding/claims/0/chunk_id",
+      "salt": "9059e30b21e47b82535b9731d430241045c2ab4664ae0e96c0affa641f1bc7db",
+      "value": "arjun-provenance-ledger:c1"
+    },
+    {
+      "leaf_hash": "a5c2afef16ec672bb392f00331b21081880ed23bc41239cc0bf6cc1348094f0d",
+      "path": "/grounding/claims/0/claim",
+      "salt": "6f973a478283f2ee0289759fa92afbab03eeb309a6e01ba77cfb522eb5f9c934",
+      "value": "Every royalty bearing AI answer should have a provenance record."
+    },
+    {
+      "leaf_hash": "d037d85a8f697533e601e4ac1438913f6485cac81f453147f9ff122e37dee476",
+      "path": "/grounding/claims/0/evidence_end_char",
+      "salt": "6dc3c56fcc62a5933f2482916785a509ed489d1ca2b1f67fbf3b996f224c5173",
+      "value": 64
+    },
+    {
+      "leaf_hash": "4c649469d033d09cad1c1c91c97775ecf9005e9401c25ab22288c0e3233ce020",
+      "path": "/grounding/claims/0/evidence_span_hash",
+      "salt": "b5695358fd9fdc0521b37199849830625d5666453f1af6dc15fb4d9fa736796d",
+      "value": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e"
+    },
+    {
+      "leaf_hash": "b9d4cf2f039df2ff922afbfa7686229a5e42d2f6569cb2de27edfd0c3309c93d",
+      "path": "/grounding/claims/0/evidence_start_char",
+      "salt": "53fcad8990da081f8d985d43a390615c84cf5d9c13126534a4556b43dac2da85",
+      "value": 0
+    },
+    {
+      "leaf_hash": "1f4ba235b6b87cd945b7df66aa6bf49469c5255f73364bb3ed1d3c6d789d0a15",
+      "path": "/grounding/claims/0/source_label",
+      "salt": "a0bebc25e63b7f689ba7ca0b6005641b4192a967cdf957875420d542a039e141",
+      "value": "S1"
+    },
+    {
+      "leaf_hash": "1dff24592046113d076a9d1b2fd48be656f35d28cd46fec24c3aba6d89d014cc",
+      "path": "/grounding/claims/0/support_score",
+      "salt": "1a12bfd6639ae1ffa018103186910d81d8023d552e161ae3e12b98eb959aca55",
+      "value": 0.9
+    },
+    {
+      "leaf_hash": "c571b1fdeb091e9deece4f7a42bcd55b192177313c9ec4f55886a15f32086d6f",
+      "path": "/grounding/claims/0/supported",
+      "salt": "352bfbb6a0c401ca0f3d4a47f631e05fa31096af14957323c19f3deb936263d5",
+      "value": true
+    },
+    {
+      "leaf_hash": "b4a523507ad2a0b9545b5bde143705f125e0313e5eb17c21acf23c0b352b3604",
+      "path": "/grounding/claims/0/work_id",
+      "salt": "037b33ef947e1eef46d7e9de466b1cd3a9dd6abdb5a93c69f35b61bd9f9de9ce",
+      "value": "arjun-provenance-ledger"
+    },
+    {
+      "leaf_hash": "c3aeb053979dace2d1f54d956cf83450c5dc4669c0e3763eb0066ef3c40da93d",
+      "path": "/grounding/claims/1/chunk_id",
+      "salt": "b8ad24d5970f7a30c8e40ea6e85a022b9d077be205dffedf37d4992a3edd5e3b",
+      "value": "arjun-provenance-ledger:c1"
+    },
+    {
+      "leaf_hash": "657b5ef9447c9448457df43b10b7a8e679245860ce0e5eb5b9c538c2b2c0b6fb",
+      "path": "/grounding/claims/1/claim",
+      "salt": "c923c2b8808bf96068bc81d75b291239f7774a1dbce3fd43d305c3913a1fd3ea",
+      "value": "The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution."
+    },
+    {
+      "leaf_hash": "7dceb79be4f367ed22761ec775d970f91aff5e4dd3c2a3a7497d1e54a7b39e32",
+      "path": "/grounding/claims/1/evidence_end_char",
+      "salt": "6478c21ff8cbad1d46bf21e5cce7ebd74c80c9eb0f66cf95b36a1f126108ce1a",
+      "value": 244
+    },
+    {
+      "leaf_hash": "0240bdc096334afef530fd4ad4a56a96a69d8cf077c54e4e9e1e05961b4a5755",
+      "path": "/grounding/claims/1/evidence_span_hash",
+      "salt": "554034015a04555510fda1a9d52f9b01d467accab92358a73da7e16e01fb530e",
+      "value": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54"
+    },
+    {
+      "leaf_hash": "32f7f51e617064868b6a27407a53c9a0bf97f39d6505ef97c806809609573357",
+      "path": "/grounding/claims/1/evidence_start_char",
+      "salt": "e20ca897a2f3bd0d3567d8b471bcb1a290b29477cfb90e4f352359590a0b0375",
+      "value": 65
+    },
+    {
+      "leaf_hash": "2f2a8df1eb96f16e3a90aa28eaa88419503e40c2205f9d9cd495bcafb3e1ba2c",
+      "path": "/grounding/claims/1/source_label",
+      "salt": "dbfba424199a9a57c0098d14a912cd470b182b0a60984821e4999b0b8da93969",
+      "value": "S1"
+    },
+    {
+      "leaf_hash": "16c5d3c39d5f5cc5073edcc98a86fe04847ee07578c1a3d42eff66ba4b695a34",
+      "path": "/grounding/claims/1/support_score",
+      "salt": "c13e560f826f2ae0f289b7bf443c143c108ce88746fd15f9dd2d2b06ba648870",
+      "value": 0.9
+    },
+    {
+      "leaf_hash": "403f0d201b87468a11f48cbd292422484bd3f66a11209678e293d6efbd275daa",
+      "path": "/grounding/claims/1/supported",
+      "salt": "d9c141f08edada937ce373618eb61cfba82eda84cafe9f1a73fd555f1825c54a",
+      "value": true
+    },
+    {
+      "leaf_hash": "0614f54d2fc447093a9bea11fabe3299a9483abf40d7e3ce8117154870a10a03",
+      "path": "/grounding/claims/1/work_id",
+      "salt": "1c404c0691b8b72caf8511ccb60416603e2ea31094237c0bf3f6844107072a3d",
+      "value": "arjun-provenance-ledger"
+    },
+    {
+      "leaf_hash": "aaef684b47e4a92ebe74f0fc63bf097c26f113c084cab9ef5e4cc6463e5e804d",
+      "path": "/grounding/claims/2/chunk_id",
+      "salt": "4e0493cdf5f2ed19989d574a0fc9092b443a8ec50058873b9956eb7fc65b2a82",
+      "value": "lina-governance-disputes:c1"
+    },
+    {
+      "leaf_hash": "d4187ff6f61360f97eea4ce4b5780e9f99441988911455dd5ca056148112f3e0",
+      "path": "/grounding/claims/2/claim",
+      "salt": "fa85c33cb83321608a1763c9e16b0a05fb216229146bf702f4168adab3b9ffed",
+      "value": "Royalty systems need governance as much as scoring."
+    },
+    {
+      "leaf_hash": "8aeff228066ef9981face2c1f1d93ae3a43c55661a4ede0ba9538eec65c79f15",
+      "path": "/grounding/claims/2/evidence_end_char",
+      "salt": "59db8e27bd764ff1afd7ccec0c466315ac5fdbd5bb7d434b2313503424ab7bc2",
+      "value": 51
+    },
+    {
+      "leaf_hash": "8b40ae8a3e445f0b283ef713387042273ac7b4238ce8a9fd14fde4086ec7016b",
+      "path": "/grounding/claims/2/evidence_span_hash",
+      "salt": "fb3f15dd921602247c0ac53ff5480e7a9561289c57c9d2c3e82d96a2e085b885",
+      "value": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa"
+    },
+    {
+      "leaf_hash": "8f64373958123a9fa301bb6e6dfe599507642f8125a5d6f87675ad27d751211e",
+      "path": "/grounding/claims/2/evidence_start_char",
+      "salt": "95eed3f94b76ff564fc26e326dcf6497efe07a6817e467fe2bc9a8c429df485f",
+      "value": 0
+    },
+    {
+      "leaf_hash": "15efb09e314e1361f98ace9c4e24e7ecd608dd511ea43e878956b0f461cb34ad",
+      "path": "/grounding/claims/2/source_label",
+      "salt": "c813b05fda627d9eabbd4fda198e3cbaa46c191c72d640bc3cc5ae0bbe150e89",
+      "value": "S2"
+    },
+    {
+      "leaf_hash": "32e8e72c09ea7237215680796a34ac0eaba5d97a169d71e6de99673aa1b736a1",
+      "path": "/grounding/claims/2/support_score",
+      "salt": "7848aacd5aa5bf6647fcb61d7abcfc4a04a22c2a22b310d90634c0e948314ad9",
+      "value": 0.9
+    },
+    {
+      "leaf_hash": "e204e4c3df8250a0fbf020ce58502e2ef8dfe163e9ac217deb7428f1fd314510",
+      "path": "/grounding/claims/2/supported",
+      "salt": "fe49bfb4d6b97e2a77fceb661ee5c3462f47d9dd7b0654f72401ea707a2ece3d",
+      "value": true
+    },
+    {
+      "leaf_hash": "b42da6a54c4218b44d9cff876af6a23582bfcbcfc3be54b7da074e5e46221a1a",
+      "path": "/grounding/claims/2/work_id",
+      "salt": "4236d2762c455327fddd6db2d35f1bf1470161379fe3cc150a9b7293cbfa72e4",
+      "value": "lina-governance-disputes"
+    },
+    {
+      "leaf_hash": "9f875fe9f1cf5b1856d82e2f0cc5b6201d62e42fc00e2744cd00df7c1479b0b2",
+      "path": "/grounding/claims/3/chunk_id",
+      "salt": "acd34449f84281d8f34514044f39e44978a73ef8a2e28a2487a6daf74699f410",
+      "value": "lina-governance-disputes:c1"
+    },
+    {
+      "leaf_hash": "20bba796c2f285b71dd1a1d13c1bd4ee9256e952f8f5d4b44fc394cbdd0c170b",
+      "path": "/grounding/claims/3/claim",
+      "salt": "975ef819d3f6420d4141255dff819958133d95b98657bbeb4b2b3e0d5fe0d145",
+      "value": "Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process."
+    },
+    {
+      "leaf_hash": "9423aaf7845d181a6ec262fbf68dbcc637dc98ec859995e88a41d1dcc92de43a",
+      "path": "/grounding/claims/3/evidence_end_char",
+      "salt": "df1fd7d7dd62d7bf1b46f06ce22a3d34e7d5d690e1fae92956d95883222f5977",
+      "value": 164
+    },
+    {
+      "leaf_hash": "8c0a7f6a7f654ed63281347641cd9b89813a395b82063f4fc24324c0a1a09d58",
+      "path": "/grounding/claims/3/evidence_span_hash",
+      "salt": "84d83336b8f97be1e5fe3b69281b79ccad96b24ea730f9c2016bd9ed2ac3ffe9",
+      "value": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c"
+    },
+    {
+      "leaf_hash": "aaac6b34a4ff2380dc6d6b1213aa3068b9cce13de34f08f2e59de90edac95452",
+      "path": "/grounding/claims/3/evidence_start_char",
+      "salt": "aed08118b3677768c402f53bfa5206d4b8cdca96c69032d8da491ac88b6ff4d3",
+      "value": 52
+    },
+    {
+      "leaf_hash": "b675ca0fa380d1498e623c7552945da5d067a2635cf60026a155b8b38635e3d0",
+      "path": "/grounding/claims/3/source_label",
+      "salt": "d351d772c5e74ecddc9c33ccfcdeb30a1b303c42dbb54412c880ac576bee3ae5",
+      "value": "S2"
+    },
+    {
+      "leaf_hash": "c8454e23bcc5f9606eb344405cd01d7098a05126621244ef6632b1f4735f7136",
+      "path": "/grounding/claims/3/support_score",
+      "salt": "a35719d332dc6cf1369afd1982574251834cef0e4555a20aae9c5b925c544ffc",
+      "value": 0.9
+    },
+    {
+      "leaf_hash": "530ab2a3802e99af65f06f9d896f110f04cf42adb2490e91f5db62c1e74c236b",
+      "path": "/grounding/claims/3/supported",
+      "salt": "bf27c955688dca539a7aaf933b8dd0fd97e785920c12f5e9660e23d395ac191f",
+      "value": true
+    },
+    {
+      "leaf_hash": "17f2824df031d956fb7212bda4fc6a30efb2fcbda9b5ab632a903cb47ca631b5",
+      "path": "/grounding/claims/3/work_id",
+      "salt": "a27ec7fb0b2bde7c9e36ac89749198e28a9f564aadefa6439ce3afde77754852",
+      "value": "lina-governance-disputes"
+    },
+    {
+      "leaf_hash": "1427a2147c55dd666e8b53a74a01fec6feca6fcc47792cded80345e0ef63e6b2",
+      "path": "/grounding/claims/4/chunk_id",
+      "salt": "c260f5033e2d3ae69d857df4558e20d3ddac2750adabe36f3637274a87ee50cf",
+      "value": "maya-youtube-style-pool:c1"
+    },
+    {
+      "leaf_hash": "55145c158e661189f60b3fc7b83bbd5baeedd2a60e0ea3e998056db02d8adc77",
+      "path": "/grounding/claims/4/claim",
+      "salt": "771d0e8c70f800cd23faad89468cf0ecd222f7f90c76b368196fd330deb4a79c",
+      "value": "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage."
+    },
+    {
+      "leaf_hash": "def106cb46d172c2930eaabddfe9162fe5032f0b0a7e43e1a06fef4d9fc2154f",
+      "path": "/grounding/claims/4/evidence_end_char",
+      "salt": "ff3c56b49bf0227aafac23306f2f746db883b5cc4baddc2c1aa2e9b4d9e9332c",
+      "value": 136
+    },
+    {
+      "leaf_hash": "3fad7b24a01bc5570c17ff814abd02529550aaec2e2a94bbe6854c9caf361143",
+      "path": "/grounding/claims/4/evidence_span_hash",
+      "salt": "2d1fb1511edd3d4e3312acf8759947096a04d143a1577276e23ad9879e9cdf64",
+      "value": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce"
+    },
+    {
+      "leaf_hash": "82ebe4346ddc6a958f34acd93502a8854e14e04a33671c4822ba333734a7df17",
+      "path": "/grounding/claims/4/evidence_start_char",
+      "salt": "87f838f64de76a87426f92cfe5ae74ceb61fea89840698670c05cb6d17119247",
+      "value": 0
+    },
+    {
+      "leaf_hash": "7092acef4bfb39fab124d9c93f08be66e33b2b5f3f6cc04fafe2a9101425176e",
+      "path": "/grounding/claims/4/source_label",
+      "salt": "02c9ae88dd76fae97a3f8bd0505e18908c4f343fc17734b5f0a3369473390d90",
+      "value": "S3"
+    },
+    {
+      "leaf_hash": "233e21ac470bc9891d6683f9238df83505b17276e784cf82c68921341f0fe336",
+      "path": "/grounding/claims/4/support_score",
+      "salt": "afcda4ec94508b05a48b2c7657600dac698bb62f96641fc926a794da04ebb84e",
+      "value": 0.9
+    },
+    {
+      "leaf_hash": "26d07eb15e50440e0e926478addb1a0cf43c25c58d9c7af64b0bd6b9923e807d",
+      "path": "/grounding/claims/4/supported",
+      "salt": "382268e8247aaadbe857efcd2928e2551a0fabcb2d4279d26e5bdfd305cf0d84",
+      "value": true
+    },
+    {
+      "leaf_hash": "166423e32eb7d25cd877ec2cfda55bb7693183de80d7ab9d803a1c9e90dd2790",
+      "path": "/grounding/claims/4/work_id",
+      "salt": "970a115a2e54ee5e47f7514abc9f96fee7610c37fab0271aed9be875c03e6678",
+      "value": "maya-youtube-style-pool"
+    },
+    {
+      "leaf_hash": "c70a5e6d2cf045c434af55d6b5c5ae77faef33864841a2b4609ec9272c34edf7",
+      "path": "/grounding/claims/5/chunk_id",
+      "salt": "8b0002a6e369cae49e7a05868e5345f9caab5064fcd0a51853843baa6b6aa2ad",
+      "value": "maya-youtube-style-pool:c1"
+    },
+    {
+      "leaf_hash": "77bc9038f87cefab0d221c2ac7da7fdc6a0948b35d4ded2fe2611cde3d88c25e",
+      "path": "/grounding/claims/5/claim",
+      "salt": "19bf79f92d4eaf7434eeedb174a1f61b69201c190844c0f4e8a06d1cb5d42937",
+      "value": "Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue."
+    },
+    {
+      "leaf_hash": "790e46c329d2333882ee05834cd3cd7775cbf212ef10bb7c58d189746f10e7a9",
+      "path": "/grounding/claims/5/evidence_end_char",
+      "salt": "57f68075823c145da1961698a1f642e0364b61577361c4b24082a65355404020",
+      "value": 262
+    },
+    {
+      "leaf_hash": "d64b4a9be1a5a631915f926aacd7c9a24b9c5b460f3c1bbd74a9a771b173feee",
+      "path": "/grounding/claims/5/evidence_span_hash",
+      "salt": "b6f31105af0ed350516e091fcb1c858d760c4b143a5bf49e7f756c3dcf551816",
+      "value": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145"
+    },
+    {
+      "leaf_hash": "dba6414cd64dacca105c34d9ba0806774523a785f450ff885b7733a9992f964d",
+      "path": "/grounding/claims/5/evidence_start_char",
+      "salt": "780ddf565d651f316485d07f9acf4654ea237ada4a0079b27096525e4a5624ae",
+      "value": 137
+    },
+    {
+      "leaf_hash": "ba8948ea339d16c1fb939c9304c4e529030c4bdb469b710cbeef480f7acef488",
+      "path": "/grounding/claims/5/source_label",
+      "salt": "299061f9f0cfdf8f3e925c3c1ee5251cc7a402987d14b4c2b43be3f6fb7d8f11",
+      "value": "S3"
+    },
+    {
+      "leaf_hash": "6128e09fae0694786ae717e422450ceb0e8df9a771a6f2b8b0f8ee595845ea9a",
+      "path": "/grounding/claims/5/support_score",
+      "salt": "9a56ec97ac0cd9ee14806b1a61fa5f8416345be2e35969db837b2c3f0d8e4c06",
+      "value": 0.9
+    },
+    {
+      "leaf_hash": "83a573e18349678f4656aabe5cc234be13c3a0f7c2ca44d978e9a6c5c39376fc",
+      "path": "/grounding/claims/5/supported",
+      "salt": "024c6084f2377d5b7b06d7d1c256b9c10c0f5573b12d3efaf55e5a4b86d45aeb",
+      "value": true
+    },
+    {
+      "leaf_hash": "ba595cc3183e980e67d314f548aae3b75f68768299f4bb23cced2c7ef81aaab6",
+      "path": "/grounding/claims/5/work_id",
+      "salt": "1dd824292d15f08691a39f9df3be58091ef352d4595bb896d7bb40c5ae1cd3a5",
+      "value": "maya-youtube-style-pool"
+    },
+    {
+      "leaf_hash": "0f9dbc5276dbafaee4b8292dd0f3ebe8e9bfdb61bd0f99bbaa6bbd01c4a56b2c",
+      "path": "/grounding/quality/issues",
+      "salt": "aba1d15295754bf8e1b969a587d792fb87e20149b04cce3ca89290f7a772e4dc",
+      "value": []
+    },
+    {
+      "leaf_hash": "442167fec49f176acdeb77c6e843514d54777859b3fd29a7d6964829ecf4f4fa",
+      "path": "/grounding/quality/overall_score",
+      "salt": "023dfa98a3c4f9c9935826a61d93cc6e20f324e7b1242bc550a0040061c17ffd",
+      "value": 1.0
+    },
+    {
+      "leaf_hash": "39f84cedec97faf307bb0eecbf72f144f7638ad9047cc2c22f2b54845667e9f6",
+      "path": "/grounding/quality/quality_version",
+      "salt": "e51b601847fcd0c632ab593701c2c3438caf5ef70e7f2800c94258c18c55db74",
+      "value": "rdllm-grounding-quality/v1"
+    },
+    {
+      "leaf_hash": "49917901225a476ffc5f4f6e3c50e2b17022ce7734dc2fc66c8652a015c75b51",
+      "path": "/grounding/quality/scores/citation_integrity",
+      "salt": "729ed3a755361568f62e85811fb299a3bfda5344958887607c569add027f2fe7",
+      "value": 1.0
+    },
+    {
+      "leaf_hash": "a7e1393280b5110dc1e58f76623d3194a5804e6aa7d8ddd74478edb3be19c15d",
+      "path": "/grounding/quality/scores/evidence_relevance",
+      "salt": "382b652b9431100e0502a13fc1077fdca9cf062ef2546ec9c3fadd35a03788dc",
+      "value": 1.0
+    },
+    {
+      "leaf_hash": "bb7286b0e76ce18c891ae7b4027c91f1a75a98207bfca79600b67bb30e5d159e",
+      "path": "/grounding/quality/scores/fact_support",
+      "salt": "4d5a4b307b87e349c4ef4b62ae0d50b8bb6951fd99560c38a6638a47e804cabb",
+      "value": 1.0
+    },
+    {
+      "leaf_hash": "66bc6439a3c44045fcf3711c490a17b488c7f069f2c1466d415bbe18fd07acff",
+      "path": "/grounding/quality/scores/payout_alignment",
+      "salt": "15310c7a4bfec0b848864b921a35dba05aa2b60a78a87cb9698a7961e3db6ad4",
+      "value": 1.0
+    },
+    {
+      "leaf_hash": "53e3e8b809dc84b3f80a9862be401fae05d885ab776baf67e773ec1a5302ea08",
+      "path": "/grounding/quality/scores/policy_alignment",
+      "salt": "04c297fb2e161767f1735982df2ebfc5f4e96e14b06e9d61786a72d49444f790",
+      "value": 1.0
+    },
+    {
+      "leaf_hash": "bc979c818b3765372c4211984d04ded8e9be65ee15c777836d0b341aeb909189",
+      "path": "/grounding/quality/scores/source_accessibility",
+      "salt": "04e0cd6a9fdc4578b458d67ae761ae881a59df6b1f16f657cda2d300e507fb3a",
+      "value": 1.0
+    },
+    {
+      "leaf_hash": "0bbf4f4a0c5d47339de5a15d55946e7fa08b3808dbb2199abd882a099620d2df",
+      "path": "/grounding/quality/summary/claim_count",
+      "salt": "74e0c32d4306f383273c5b0236e2663ee860409207add4c0183d177654f0ae2e",
+      "value": 6
+    },
+    {
+      "leaf_hash": "518cc902d0129cdf61e1df161f76a933cc238751ffbe92d3ba5c76d636234518",
+      "path": "/grounding/quality/summary/footer_source_count",
+      "salt": "844d23d20a18267fe112dea8e03ef16495e7767d2fb2b63670cf5b0101f54b44",
+      "value": 3
+    },
+    {
+      "leaf_hash": "5619ec8afeb823e68cf322c792ab8f7b08763e0b1a942a82d94f51d8d1e69bdc",
+      "path": "/grounding/quality/summary/footer_span_hash_count",
+      "salt": "434107f1e8f607911d05fd977ed7ae7afe4ee40db1bf49b6333dc0a017b8fd4c",
+      "value": 6
+    },
+    {
+      "leaf_hash": "dc43af2866c113ccf481ec77760b7120abd8524f8712afd02539a0c7a9601c8c",
+      "path": "/grounding/quality/summary/source_count",
+      "salt": "48c0a9db65ab5471108c72f5d53fc4fefb301fcdd0577bb63cc845ec807a1cbb",
+      "value": 3
+    },
+    {
+      "leaf_hash": "e440fb02ede094e5912bc52138d3adb83921b4b971af41ca59f9170ba777625f",
+      "path": "/grounding/quality/summary/supported_claims",
+      "salt": "dc664798230dc8149cead10657b2f01bc3b997571dc4a3286ac5be98dc9e30d0",
+      "value": 6
+    },
+    {
+      "leaf_hash": "6b9d14a0ce48e07186fe840e226a5e0717f9dd740799af39122681ed7a91287d",
+      "path": "/grounding/quality/verdict",
+      "salt": "fb0b4817efb278b9e66bcc75395e7950dead40e8ea2da185b9a70f7ca7d1d17a",
+      "value": "verified"
+    },
+    {
+      "leaf_hash": "e12ce6c43f78ba7bec1f0fae67293af7c24f4134a209d36e3c2dbdf876ed8e14",
+      "path": "/grounding/report/coverage",
+      "salt": "b4ba102e281646b285f160b7ddde72f1109627e24265954b193746ba213516b2",
+      "value": 1.0
+    },
+    {
+      "leaf_hash": "b86b2644887adf0d6ba3ec7c3d2e10143cf005403fcf132b984deb15764a83cc",
+      "path": "/grounding/report/policy_denials",
+      "salt": "ff1142a5f91be3a1bb88b0dcd1c0f01ef339504e622a3c0f3bf296cf45d53b23",
+      "value": 0
+    },
+    {
+      "leaf_hash": "1342ca8cf8a164974fe4ad49364dc0edd182ed14ec27b14e701ee91e4b0604bc",
+      "path": "/grounding/report/policy_status",
+      "salt": "e660fe7dbf04e941bcd8cba4bdc8a07224fc971cf8550f195e3ed5da11b1051b",
+      "value": "allowed"
+    },
+    {
+      "leaf_hash": "8ed4b2b35c9ea24089b4964106206ae0613070492b91e53b4452070c82e3b880",
+      "path": "/grounding/report/registry_conflicts",
+      "salt": "197515789414516c7c63c59054bce0bd8cad9722ca7a640c58f6f58a3a9a52cf",
+      "value": 0
+    },
+    {
+      "leaf_hash": "fd8e2b540ff7757f5b3105149b970af3472021174f97eac5958a1b879290231a",
+      "path": "/grounding/report/registry_report_hash",
+      "salt": "bf983f7ffc7871a621ed05229e0a9b48945d651153ba291c5c2c922fc5c3f6e4",
+      "value": ""
+    },
+    {
+      "leaf_hash": "f4a4f484dd3c8849f1e6aa2277fcf7cf4e976f328b2d6eb1e9595e43e327bd05",
+      "path": "/grounding/report/registry_status",
+      "salt": "db3116e796638e433ddf2a6afe51c6887547a0a6a65dea0819cb0edaa6a98da7",
+      "value": "clear"
+    },
+    {
+      "leaf_hash": "c5a0a66dd688e72b8959d0b67813d7503e66d0b7adbb1d6de41795491f39250c",
+      "path": "/grounding/report/source_count",
+      "salt": "da9a67e6a78e8e4114db467e8280034e61ea32773276f4e91ac9ea013c175973",
+      "value": 3
+    },
+    {
+      "leaf_hash": "e08d05fa423583b005a1a4c778284a3f051b1abbd1a0e4ebb340b39ad58e8c2a",
+      "path": "/grounding/report/status",
+      "salt": "de5d476b49ef945b8bca012abd9eb2831818fc2f4dc32e1dceb58b013a013b21",
+      "value": "grounded"
+    },
+    {
+      "leaf_hash": "28c0b53588aa8b7697ef3a91a0984f9888ea2ba705f2b5829feed20c9200d64f",
+      "path": "/grounding/report/supported_claims",
+      "salt": "ad0292589bee90fc61b6e5a0994834c2842f6d3ae6dd08a8919d730a7dfa7782",
+      "value": 6
+    },
+    {
+      "leaf_hash": "ca567184c4eaf030ec453c6c8f9f5aa47da315ed649637e052965d3cba3af7f6",
+      "path": "/grounding/report/total_claims",
+      "salt": "2368adc12ca7472d6baf6f201407aa11fe99d90bd4ed2514b70e2905ca8bea1f",
+      "value": 6
+    },
+    {
+      "leaf_hash": "f6e5bff843b419853c62963b65c4fc897108ad8486727d0545e0cec3913741f7",
+      "path": "/grounding/report/unsupported_claims",
+      "salt": "c86be66f60b0d9820a79742dd464ad639e64bdb180e83f7001369c457e5d1b04",
+      "value": 0
+    },
+    {
+      "leaf_hash": "f309a8ee46574b92f50f74eae4c420dece8c7c910ee3a187329b0f48e618b7a4",
+      "path": "/grounding/sources/0/chunk_id",
+      "salt": "4175aa2611245bce9be97b5a65eee9562052f61c436c0cc73ae48ea5dda9ff9e",
+      "value": "arjun-provenance-ledger:c1"
+    },
+    {
+      "leaf_hash": "b2b62f55515d76c09ed7c228d7e85430114d104cfff1b82f23437b2ffad18b45",
+      "path": "/grounding/sources/0/content_hash",
+      "salt": "c1d54760883c566a57b71a98262b894e5b382bf5c78a60c6825f1b299984f263",
+      "value": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f"
+    },
+    {
+      "leaf_hash": "63cd543d77e4308c6b736da344dac30906d668d90d2f09ad8745621ce38f8e6a",
+      "path": "/grounding/sources/0/contribution_weight",
+      "salt": "76898cd73649b3d3a9deb71f4cf071d45241dfc4c80969ba2edbb08dfdbf5fa9",
+      "value": "0.329093"
+    },
+    {
+      "leaf_hash": "6a0eed7956c561ecc251f5f20fa80d9bc4934ca3eb21abbb05d0ac2fe6f299e4",
+      "path": "/grounding/sources/0/creator_id",
+      "salt": "36d7fcd8893adbaf06599c4ee5e9cbc42d5ea27c0735966c6403a243971d32ee",
+      "value": "arjun"
+    },
+    {
+      "leaf_hash": "919ebc8ae8d3e85dc6fe8e3a3c1b0dfe194e65609343c009711730c967223667",
+      "path": "/grounding/sources/0/label",
+      "salt": "a41a09b04d45ee585e2d37dca9045c6c113ded04d0912dd713b35d1939e96a02",
+      "value": "S1"
+    },
+    {
+      "leaf_hash": "09698919e1521f33281828455be50dd8a84eb16a9c667d5a8cc0af525b7de2d2",
+      "path": "/grounding/sources/0/source_uri",
+      "salt": "79a67cf48c56d10737140f5c15f6de9e28d0f3472b2951849861b12f15a71800",
+      "value": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1"
+    },
+    {
+      "leaf_hash": "1bfb13d5384e3b1911c85113c66187066fc6f6c057573afe1e91029f15f740bc",
+      "path": "/grounding/sources/0/work_id",
+      "salt": "e55911f7598b04a8cc88b956a2f2b87f589ed09e2660e7e4ab0bc98cad894d71",
+      "value": "arjun-provenance-ledger"
+    },
+    {
+      "leaf_hash": "79e44bca43d8b7c244d6f9cf4c830e80b520f92c8ad079d85c5a8d581ef5c7c5",
+      "path": "/grounding/sources/1/chunk_id",
+      "salt": "e51bc130e9b820209fa4b98016a52e5a971c771c307be8bb871335f89eb05e89",
+      "value": "lina-governance-disputes:c1"
+    },
+    {
+      "leaf_hash": "ba28fb2736c162b5af025f648808b883bf25376e71a27e45ca8c91e5d6c0236d",
+      "path": "/grounding/sources/1/content_hash",
+      "salt": "19fe58dd48a4e56923f2e35577d31934782d8db62d8607fb7b2d535b81be6824",
+      "value": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac"
+    },
+    {
+      "leaf_hash": "b748680f4b8e5a0cbc95609a47680453d690febdb4f7222c8d9cc1d743222571",
+      "path": "/grounding/sources/1/contribution_weight",
+      "salt": "a3a39af2dac17e5bd9bedc1607d66f1568ffd8257f0698eccd20cbb80b4609fc",
+      "value": "0.233687"
+    },
+    {
+      "leaf_hash": "2b4ffd6eeed8c80dcb0b56cc85eacae19fd4af481cb3dd7b3a71c22a086ce25b",
+      "path": "/grounding/sources/1/creator_id",
+      "salt": "4c116156cd58501aac17a82ba4f7b291a327729ee6eb5733fd366e78dc553e00",
+      "value": "lina"
+    },
+    {
+      "leaf_hash": "911ae8d80ddf4b112f2db6909aa8ba740fc286ea14382ac1a585a81877c13109",
+      "path": "/grounding/sources/1/label",
+      "salt": "d5c2ed0f4a791f6310189d4e21882cebe53d3e8aaef09897cf7aa7cc97ca0154",
+      "value": "S2"
+    },
+    {
+      "leaf_hash": "3782841c27aac1018279b1afa02e00fc5c2e62d55a754b6aebdb127f1d7db7e8",
+      "path": "/grounding/sources/1/source_uri",
+      "salt": "66f49818f5d6cf99892a2165bf7a58b7e512a471c8c637ed4e47294035a2a3fd",
+      "value": "registered://works/lina-governance-disputes#lina-governance-disputes:c1"
+    },
+    {
+      "leaf_hash": "6d3ebb67140a4aead01269c6f0eb9195b9aa119be5d77ee3e9aaa48cf62d0b16",
+      "path": "/grounding/sources/1/work_id",
+      "salt": "549e3a8770ece971dc192e8f02ac37dc5eb2585535e642072d39e327630de937",
+      "value": "lina-governance-disputes"
+    },
+    {
+      "leaf_hash": "3afb7f5aa8591129e89cee1addc4c1c276f746bd0dd48924f9df0e4c00bb6873",
+      "path": "/grounding/sources/2/chunk_id",
+      "salt": "202c4dcb1901e657d691660bc890af8424e17a8d9f602d81cb57755f07a30ad8",
+      "value": "maya-youtube-style-pool:c1"
+    },
+    {
+      "leaf_hash": "166698d624c895c64157c573e52aab5a3d990a85118498fddc52a2f5ac9961bf",
+      "path": "/grounding/sources/2/content_hash",
+      "salt": "ef973c208d8c5cc35044e933fead7c76d385c84494176d2740837888423d8239",
+      "value": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7"
+    },
+    {
+      "leaf_hash": "86b9f6102d86fcb53c17e56e0bba365bd5be729f6226d8028d45b364bfd2f3ff",
+      "path": "/grounding/sources/2/contribution_weight",
+      "salt": "f44d5dc7c677bb52a3d91d07786070b0ceaf4593db1061311aed74b19c66d7b2",
+      "value": "0.437220"
+    },
+    {
+      "leaf_hash": "d101a8a15e25196497c7793d216aa17bd51ff766b3e3cb0a1e6d802dfb793b0c",
+      "path": "/grounding/sources/2/creator_id",
+      "salt": "45c8c2beeed8d129ce4ef8e648c48d5698f7bdbf06112b889b6ab98a648b1f14",
+      "value": "maya"
+    },
+    {
+      "leaf_hash": "041793f4c8371a7bce06da17da4a668004b269472eb599dbb47cb96e1f8ed55b",
+      "path": "/grounding/sources/2/label",
+      "salt": "ec3e4bc1f6407ba848d4eceab601d50a392ce22b92d8d344f3fc1fac6b258b90",
+      "value": "S3"
+    },
+    {
+      "leaf_hash": "4b48fac408c6e3985f01ec2e6b84728d77fcf1eb2e3f2bd2681060c20f6a1e51",
+      "path": "/grounding/sources/2/source_uri",
+      "salt": "d04b3e2ca5c4e5111d1b5549405cef57426a699d8314283558793da8dc77ae3a",
+      "value": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1"
+    },
+    {
+      "leaf_hash": "e38e365c3dd52481309a73f568a1124d5defb8b31a7d45d3b228773a03778226",
+      "path": "/grounding/sources/2/work_id",
+      "salt": "8a9b6ecb8510f8138a7264fbb16ec13a219a360065217667b157b280d535dce8",
+      "value": "maya-youtube-style-pool"
+    },
+    {
+      "leaf_hash": "76da07e5b3eb32a314ba2c5a76599d3d2f7b0adc319255871be03320caff143e",
+      "path": "/issued_at",
+      "salt": "763e57a026e8854f2f53e239128fa9ff86c54a35d0e3c3967f852447a39ce3ed",
+      "value": "2026-05-30T08:45:58Z"
+    },
+    {
+      "leaf_hash": "2dfb4f4ab6f2dcdb449810e61fa9c553b067fe3d60207312d87f70e1afe78191",
+      "path": "/issuer",
+      "salt": "782ce10ead0219748d7def21802dcccc01c32f3d2b6947fb75da5b64eded745c",
+      "value": "rdllm-local-demo"
+    },
+    {
+      "leaf_hash": "a5a654a84c7f8efebd117bf53a393595f97252680b70041413589fad5a3435bb",
+      "path": "/model/id",
+      "salt": "8dbe3406f3e5f85c698b8dfd2cda7b2d0fce9cb7664ab09b6daafc68ec879c83",
+      "value": "model:rdllm-reference"
+    },
+    {
+      "leaf_hash": "f761d549262175407efc5d61ca012433ae6e05505727b887fae46f729de8a6fb",
+      "path": "/model/route_id",
+      "salt": "13ce5df0025db70da777657b054003137f8dc98ece23af29831b35fd3e256f60",
+      "value": "route:default"
+    },
+    {
+      "leaf_hash": "d35c551b5c678bf36ded8b522d317db7ee24f6cf2952066dcb128235e41d03ed",
+      "path": "/model/version",
+      "salt": "9498ff666266f62b8c84396c6df591ab2dcdc3d1a9c37d9a02c68d2ad5c0670f",
+      "value": "2026-05"
+    },
+    {
+      "leaf_hash": "7d7d1fc94699515dea178e4a78563719a2b8907d60d1400db8a41f92b6f1bfae",
+      "path": "/privacy/answer_disclosed",
+      "salt": "0886e461bcd71a5b6190afd946885479395260d7a59d440afe7e276316953308",
+      "value": false
+    },
+    {
+      "leaf_hash": "aba9b4bb726f94e88973ac8278d1b017ba9cf89264b6753c60c59c0fe92103b6",
+      "path": "/privacy/disclosure_version",
+      "salt": "26b646a1471fc82f4b79c9ae7f281c3d5c5a2132bb6f3c0382285c22f536b7fd",
+      "value": "rdllm-selective-disclosure/v1"
+    },
+    {
+      "leaf_hash": "1323bea9640f0e7278567cb6e30bc11fbb2d98096c14802b0095b8133c7ca673",
+      "path": "/privacy/prompt_disclosed",
+      "salt": "7a90f315e80abf841f2958f3a5e4646c9c767b3e0e6474d69ad146efb1f92fe4",
+      "value": false
+    },
+    {
+      "leaf_hash": "4d43dc9d332febd219d98f5212f721c5639b26c55a060ed14eb3b873215c76d3",
+      "path": "/privacy/selective_disclosure",
+      "salt": "ca754603c5d20ad7e1a8f5a765340f251a2e67534ae4f8d29859ce9a5cbeb068",
+      "value": "hash commitments expose prompt/output integrity without disclosing private prompts"
+    },
+    {
+      "leaf_hash": "897d83834927eb8825aed8f96c290dba724d17a26828f1e1264115fea3ae9196",
+      "path": "/privacy/source_quotes_disclosed",
+      "salt": "35d995b53f7b3b57214aff9b39f2e2a437b387ad63fe6303a66e7a4d646fc6d1",
+      "value": true
+    },
+    {
+      "leaf_hash": "8d2f890e322ac52e39a652db0178fb3f922924ab1a9d313a46cf0f8817bd7f5f",
+      "path": "/protocol_version",
+      "salt": "9bac3c8816446e7ab40fbc7a4c8eef936ae04cd13faef58bce2687992892f055",
+      "value": "rdllm-attribution-receipt/v1"
+    },
+    {
+      "leaf_hash": "de0448db9dafaf1e673c98db6ec506516a835c8e5e52661ff09f725409a74d58",
+      "path": "/registry/registry_conflicts",
+      "salt": "da996972fb795280137ab1006ab8fb4b1624f6aae2b6c7d86bb9a6a524ebc35e",
+      "value": 0
+    },
+    {
+      "leaf_hash": "88f9743629013e102e72c2e63a9cf771df64bdbc05ad69eecddb244ccc11114d",
+      "path": "/registry/registry_report_hash",
+      "salt": "1f318ff557933b08e2789246d5949073a7a95d6e10be0376d0574400522676a3",
+      "value": ""
+    },
+    {
+      "leaf_hash": "18f42d565436ac7fd4f2791422d1e4e4abc7f25d6db45a8d70fb9901646e5952",
+      "path": "/registry/registry_status",
+      "salt": "c0a11a2c9e130b5e3bb6be9eaf5b04023218590f08443a2512fdcaee503a81a0",
+      "value": "clear"
+    },
+    {
+      "leaf_hash": "ab8332e4cc72d74c52570258125ea5d0ffcfbdbd3b9a351808265bd5920d5067",
+      "path": "/rights/policy_denials",
+      "salt": "3013dd92d6ceca92fe243cedec30feebf09dc4448502112f1ea79a8cf7dd1cff",
+      "value": 0
+    },
+    {
+      "leaf_hash": "a4b27f168652c2845c7e02369549ed2b5912cd5b3e6fc252f59fe43a42f9fbdb",
+      "path": "/rights/policy_status",
+      "salt": "ae6588e27b9b39ea68639b6cf104a9c653cbb75b590dd2eedcfdbead995225c1",
+      "value": "allowed"
+    },
+    {
+      "leaf_hash": "b4f22a27b7f80b4202abbebd5f9d2ea72cae8c4867b1d160667bc027f2b81cc4",
+      "path": "/telemetry/claim_support_trace_hash",
+      "salt": "c5eebce4b15a43fbb9cb3fb73d7e37683765fc6a801f0f8c18fead72c6b3d596",
+      "value": "5405f1c9f37f039cf49a48a2705b45fc8c5f20e9603c43c8c682f9105b302111"
+    },
+    {
+      "leaf_hash": "e77e743e7b944383d35f5c1bfd820f26c7c40ca8b870de0a4fe9ce34376aa80a",
+      "path": "/telemetry/otel_semconv",
+      "salt": "4237c1a70d7ad5fd48582c78ecb77dc7fdfb68092b5cbe9105424cd2b55580cf",
+      "value": "https://opentelemetry.io/docs/specs/semconv/gen-ai/gen-ai-spans/"
+    },
+    {
+      "leaf_hash": "e1e520280fda08435eeaa658fef2b52d2a2e3793dcae549df67b985062c1fd05",
+      "path": "/telemetry/source_access_trace_hash",
+      "salt": "0a3a68fed6234164914fad08eabe13b577bde2fb5b3997db2e65c0fe095e4523",
+      "value": "9fa9e2e11fb8c52e2f21bf73de5261d0dadd0942445804abf9cd67745cb79ed8"
+    },
+    {
+      "leaf_hash": "b628464d4898fceca4c432db6546e8302ce57d12e8a0a97f85e2a6895a3582df",
+      "path": "/telemetry/source_reference_trace_hash",
+      "salt": "62a5626423ad0113003e23348ff807d9aa085a51c51a6d02a93f2661ef127e6f",
+      "value": "9e98b13608c99dd33c9101164e0e46ffe1ea54479c9c63bbf2588d4f43f6603e"
+    },
+    {
+      "leaf_hash": "1d41d3105090bb5ba9aa8214f5ad699455c34667871b660cddf1282138970f14",
+      "path": "/telemetry/trace_exchange_version",
+      "salt": "e9188e1ca9a9fc9bbfb363ae64cc9f7b0047c5926f8a6deb348355114180b075",
+      "value": "rdllm-trace-exchange/v1"
+    }
+  ],
+  "disclosure_version": "rdllm-selective-disclosure/v1",
+  "package_hash": "36ea54f3910042a87a4ede3487e00257c6b571aa8f5385a4397e68cdb62060f4",
+  "payload_disclosure_root": "083c14953a4fbdf37e7a0227a3f5cfc00885ba7b37302640b68b3748b3ea9b12",
+  "payload_hash": "024b2212edefcf8851af7d7e2e6269ea813df0cb2b3aa56e1f499897aae07771",
+  "public_receipt": {
+    "attribution_gap": {
+      "report_hash": "1d8d150f4dd3aaff60c47d543a8c2d25242b7b7543bc2c6589ec22baec7c0298",
+      "summary": {
+        "access_record_count": 6,
+        "accessed_source_count": 3,
+        "allowed_accessed_source_count": 3,
+        "cited_without_access_count": 0,
+        "consumed_without_credit_count": 0,
+        "credited_source_count": 3,
+        "escrow_accounts": [],
+        "paid_hidden_count": 0,
+        "paid_source_count": 3,
+        "policy_withheld_count": 0,
+        "registry_withheld_count": 0,
+        "visible_source_count": 3
+      },
+      "verdict": "closed"
+    },
+    "claim_support": [
+      {
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "claim": "Every royalty bearing AI answer should have a provenance record.",
+        "evidence_end_char": 64,
+        "evidence_span_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+        "evidence_start_char": 0,
+        "source_label": "S1",
+        "support_score": 0.9,
+        "supported": true,
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "claim": "The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.",
+        "evidence_end_char": 244,
+        "evidence_span_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+        "evidence_start_char": 65,
+        "source_label": "S1",
+        "support_score": 0.9,
+        "supported": true,
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "chunk_id": "lina-governance-disputes:c1",
+        "claim": "Royalty systems need governance as much as scoring.",
+        "evidence_end_char": 51,
+        "evidence_span_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+        "evidence_start_char": 0,
+        "source_label": "S2",
+        "support_score": 0.9,
+        "supported": true,
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "chunk_id": "lina-governance-disputes:c1",
+        "claim": "Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.",
+        "evidence_end_char": 164,
+        "evidence_span_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+        "evidence_start_char": 52,
+        "source_label": "S2",
+        "support_score": 0.9,
+        "supported": true,
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "claim": "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage.",
+        "evidence_end_char": 136,
+        "evidence_span_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+        "evidence_start_char": 0,
+        "source_label": "S3",
+        "support_score": 0.9,
+        "supported": true,
+        "work_id": "maya-youtube-style-pool"
+      },
+      {
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "claim": "Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.",
+        "evidence_end_char": 262,
+        "evidence_span_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+        "evidence_start_char": 137,
+        "source_label": "S3",
+        "support_score": 0.9,
+        "supported": true,
+        "work_id": "maya-youtube-style-pool"
+      }
+    ],
+    "event": {
+      "answer_hash": "9999f5ccce0ecac0fd8dc89b35fa20ca5ce9c93226edcb49522f15ee27090d6d",
+      "event_hash": "bc4d621873dfa3c670e50f94a211d1bd1d3687ccb2ee7853dd97e20af1798c13",
+      "event_id": "evt_bc4d621873dfa3c6",
+      "prompt_hash": "50ab8c101c89ff008713591e3270032cb19923a1e89f68b4315afb839e95d35e",
+      "rendered_output_hash": "e59741aa00aceaa5bfb4eabe429ad44d78fdbd961c67b24cde7b58234b00283e"
+    },
+    "grounding_quality": {
+      "issues": [],
+      "overall_score": 1.0,
+      "quality_version": "rdllm-grounding-quality/v1",
+      "scores": {
+        "citation_integrity": 1.0,
+        "evidence_relevance": 1.0,
+        "fact_support": 1.0,
+        "payout_alignment": 1.0,
+        "policy_alignment": 1.0,
+        "source_accessibility": 1.0
+      },
+      "summary": {
+        "claim_count": 6,
+        "footer_source_count": 3,
+        "footer_span_hash_count": 6,
+        "source_count": 3,
+        "supported_claims": 6
+      },
+      "verdict": "verified"
+    },
+    "grounding_report": {
+      "coverage": 1.0,
+      "policy_denials": 0,
+      "policy_status": "allowed",
+      "registry_conflicts": 0,
+      "registry_report_hash": "",
+      "registry_status": "clear",
+      "source_count": 3,
+      "status": "grounded",
+      "supported_claims": 6,
+      "total_claims": 6,
+      "unsupported_claims": 0
+    },
+    "issued_at": "2026-05-30T08:45:58Z",
+    "issuer": "rdllm-local-demo",
+    "model": {
+      "id": "model:rdllm-reference",
+      "route_id": "route:default",
+      "version": "2026-05"
+    },
+    "privacy": {
+      "answer_disclosed": false,
+      "disclosure_root": "083c14953a4fbdf37e7a0227a3f5cfc00885ba7b37302640b68b3748b3ea9b12",
+      "disclosure_version": "rdllm-selective-disclosure/v1",
+      "prompt_disclosed": false,
+      "selective_disclosure": "hash commitments expose prompt/output integrity without disclosing private prompts",
+      "source_quotes_disclosed": true
+    },
+    "protocol_version": "rdllm-attribution-receipt/v1",
+    "receipt_hash": "024b2212edefcf8851af7d7e2e6269ea813df0cb2b3aa56e1f499897aae07771",
+    "registry": {
+      "registry_conflicts": 0,
+      "registry_report_hash": "",
+      "registry_status": "clear"
+    },
+    "rights": {
+      "policy_denials": 0,
+      "policy_status": "allowed"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "9205d79ee6c9e725d3c4b87614b087e0975801a03189e90b1a0355e680cb3861"
+    },
+    "sources": [
+      {
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+        "contribution_weight": "0.329093",
+        "creator_id": "arjun",
+        "label": "S1",
+        "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "chunk_id": "lina-governance-disputes:c1",
+        "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+        "contribution_weight": "0.233687",
+        "creator_id": "lina",
+        "label": "S2",
+        "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+        "contribution_weight": "0.437220",
+        "creator_id": "maya",
+        "label": "S3",
+        "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "work_id": "maya-youtube-style-pool"
+      }
+    ],
+    "telemetry": {
+      "claim_support_trace_hash": "5405f1c9f37f039cf49a48a2705b45fc8c5f20e9603c43c8c682f9105b302111",
+      "otel_semconv": "https://opentelemetry.io/docs/specs/semconv/gen-ai/gen-ai-spans/",
+      "source_access_trace_hash": "9fa9e2e11fb8c52e2f21bf73de5261d0dadd0942445804abf9cd67745cb79ed8",
+      "source_reference_trace_hash": "9e98b13608c99dd33c9101164e0e46ffe1ea54479c9c63bbf2588d4f43f6603e",
+      "trace_exchange_version": "rdllm-trace-exchange/v1"
+    }
+  },
+  "receipt_hash": "024b2212edefcf8851af7d7e2e6269ea813df0cb2b3aa56e1f499897aae07771",
+  "redacted": [
+    {
+      "leaf_hash": "5a67d9a2de04f82fbc196802eda8ab5e8cfed9e8bd7ee9ee0d6855bee7ab83a0",
+      "path": "/economics/creator_pool"
+    },
+    {
+      "leaf_hash": "d0f4bd7832024d9a08c2973aa09915f62fe20cd636d3417be73859457c8da246",
+      "path": "/economics/creator_pool_rate"
+    },
+    {
+      "leaf_hash": "18c4f70d4352acf92eff81a3eb09f08e7357adc15eb5442e0a06a13eb85dd380",
+      "path": "/economics/gross_revenue"
+    },
+    {
+      "leaf_hash": "6ea0b954c52bb06188cd9592e177ec4ecd832ab727998579b6c0ea16e053bc1a",
+      "path": "/economics/shares/0/attribution_basis/citation"
+    },
+    {
+      "leaf_hash": "0585efe0edde6bd97100adbf904ad595fffd540e4dfeb561aa6999089193c5ea",
+      "path": "/economics/shares/0/attribution_basis/output_support"
+    },
+    {
+      "leaf_hash": "0e5a84dbc72a0bfe7c092417f41b249cc3cc5c83650e806592665eb09e8e57c3",
+      "path": "/economics/shares/0/attribution_basis/prompt_overlap"
+    },
+    {
+      "leaf_hash": "65c0c4a457c1194da2a5ea8fcd1779aef3d35743f49d5c167f5b616dbb545ec1",
+      "path": "/economics/shares/0/attribution_basis/retrieval"
+    },
+    {
+      "leaf_hash": "90018b82ad3ecfdcc1d79103aaa24d69d628e7316a1d00ab113134b851658f8c",
+      "path": "/economics/shares/0/attribution_basis/text_match"
+    },
+    {
+      "leaf_hash": "64de0e26f3f622d4075ddccf074b2e6d0ffb05ebe8bf5515d7505c59931caf1b",
+      "path": "/economics/shares/0/attribution_basis/training_value"
+    },
+    {
+      "leaf_hash": "c10c8bad11b706506d54151c760928e1d624bc26d2b0403aeb5d64e806a4b079",
+      "path": "/economics/shares/0/chunk_id"
+    },
+    {
+      "leaf_hash": "623f979c3552b7e8ed0fb32c6aa4d7845c61d61b7dc206676b18b30a4951b3db",
+      "path": "/economics/shares/0/citation_score"
+    },
+    {
+      "leaf_hash": "fd57666794af7832dc4a954e1cd1481e0530c572d634e46875320fc2a5b58878",
+      "path": "/economics/shares/0/content_hash"
+    },
+    {
+      "leaf_hash": "6544837e160c4cfb9d837a3be5a1b65e8789da61cfaf6eef769ac3579a27c3b0",
+      "path": "/economics/shares/0/contribution_weight"
+    },
+    {
+      "leaf_hash": "086883d27dbfca0cf8820bd2ebc8f787b2c19703213bc6621758b4be1b881c77",
+      "path": "/economics/shares/0/creator_id"
+    },
+    {
+      "leaf_hash": "f976570b238788d8b0047f4b23e39b48438f1b4ae4c4a39a30f12a1a279d4db1",
+      "path": "/economics/shares/0/data_value_prior"
+    },
+    {
+      "leaf_hash": "82f54ea05244ddb8daf04d18370f1ed0d38921409a7b690ea5820aa00531e40c",
+      "path": "/economics/shares/0/output_support"
+    },
+    {
+      "leaf_hash": "36c27cc381a1d3dc7e3efcbcac961d67a695b395d985ff1eb26a55d4a7ec5c70",
+      "path": "/economics/shares/0/payout"
+    },
+    {
+      "leaf_hash": "4c54e1b732fa9521df60753e4b7e87756cc7d13f3ac0230c77f743b855d5372a",
+      "path": "/economics/shares/0/query_relevance"
+    },
+    {
+      "leaf_hash": "887ea012c8454f6281625b9add42756fc00be8fcbb247b707a06809cb526f486",
+      "path": "/economics/shares/0/retrieval_score"
+    },
+    {
+      "leaf_hash": "9d7e24568ae4974195106095e62426c5795f6431d683b35e07203cf6246d0b1d",
+      "path": "/economics/shares/0/text_match_score"
+    },
+    {
+      "leaf_hash": "bd6dc1685d517fa5a645c4c73d0ee2b46acd483f75c8af9e5c5265c0861fb509",
+      "path": "/economics/shares/0/training_value_score"
+    },
+    {
+      "leaf_hash": "071c482d1dc5893d25f75b0cc0b9a255a3e5b4f083688f45aa61cd522a04d28c",
+      "path": "/economics/shares/0/work_id"
+    },
+    {
+      "leaf_hash": "5c0dbf056b1be054d53836499ca1abbc15a80df3907f7acd59f07bc6f8eaf471",
+      "path": "/economics/shares/1/attribution_basis/citation"
+    },
+    {
+      "leaf_hash": "648832a1ee9d4c37fa4753da77249a75418f106a2823cc369023f759e28101f3",
+      "path": "/economics/shares/1/attribution_basis/output_support"
+    },
+    {
+      "leaf_hash": "772362561d53a07b507cd83a28e0b239b1364d750dc4f4cdb740a4cb25c21e7f",
+      "path": "/economics/shares/1/attribution_basis/prompt_overlap"
+    },
+    {
+      "leaf_hash": "67cf930f8d8ee401bd41b1c5a7d52641911d74f19b1d2e3078857c9210a192fd",
+      "path": "/economics/shares/1/attribution_basis/retrieval"
+    },
+    {
+      "leaf_hash": "5f9200a78c5a58b0eedfa51b0b0ed5a90fa18458edf8850a68f8e27f38683e1c",
+      "path": "/economics/shares/1/attribution_basis/text_match"
+    },
+    {
+      "leaf_hash": "dea76c2d2765938f9e19a0640c1f66e28f2a2b67cbf63c7c1dcd8702cf6c163f",
+      "path": "/economics/shares/1/attribution_basis/training_value"
+    },
+    {
+      "leaf_hash": "e4cdd44eb2dfcc66d8fc6c40a32c203d1d343125de24c4000186401ece54b17b",
+      "path": "/economics/shares/1/chunk_id"
+    },
+    {
+      "leaf_hash": "7a9ca206d62144d33a7afcf7b69045ddcf17f0e7e06b34f67c0e60c4432d6453",
+      "path": "/economics/shares/1/citation_score"
+    },
+    {
+      "leaf_hash": "fe34e97e69930b82e5ecc354ecab84d7fe56ca1b647eaeff337b3d9332b42837",
+      "path": "/economics/shares/1/content_hash"
+    },
+    {
+      "leaf_hash": "a4906706d340a7793fb42cfb5fa12f7c2293c956e1d7ead9679123a159cf92e1",
+      "path": "/economics/shares/1/contribution_weight"
+    },
+    {
+      "leaf_hash": "9623095a56f85ed7f34bcef05fb713ec90b3bfc302f50698e6837a6d93de48ed",
+      "path": "/economics/shares/1/creator_id"
+    },
+    {
+      "leaf_hash": "e6c0d22288be0b92558f7b30cac161a269d75d9a76b6238176d75a557e26bf91",
+      "path": "/economics/shares/1/data_value_prior"
+    },
+    {
+      "leaf_hash": "49c3c2cc82a1ae085c195a1923138fddfa860200ea1a771bbf5c8fd690919adf",
+      "path": "/economics/shares/1/output_support"
+    },
+    {
+      "leaf_hash": "e096aeec6a3dc92b55641bd6254011684d784a33dcfabf0a8a4b8f83cec6ae98",
+      "path": "/economics/shares/1/payout"
+    },
+    {
+      "leaf_hash": "7e44430a7ec2666b35a1cba8c3ea3a40680d3a4297c96c4e74e4d67854d7e356",
+      "path": "/economics/shares/1/query_relevance"
+    },
+    {
+      "leaf_hash": "8896e1033b0c7b889f40b8b58c22b5b581b537fa1ac530621654223826667f49",
+      "path": "/economics/shares/1/retrieval_score"
+    },
+    {
+      "leaf_hash": "2768467fd7bbecb1279925e6c650001f3963fabd7e3ea15f81bd1e2a5a699ef5",
+      "path": "/economics/shares/1/text_match_score"
+    },
+    {
+      "leaf_hash": "0ce8edb548f124707f1f0ba1cb88b79f3ae6693a444d44c71c14c3fa5657f0b6",
+      "path": "/economics/shares/1/training_value_score"
+    },
+    {
+      "leaf_hash": "ba9fbf3ab5c6a0959a4e5a327c40d104587b4345ad1799553e99a1c647863623",
+      "path": "/economics/shares/1/work_id"
+    },
+    {
+      "leaf_hash": "fef1efcaa0b45d79022bd9c3fcbf461e286a4173b97eb2f8112b9d753724a988",
+      "path": "/economics/shares/2/attribution_basis/citation"
+    },
+    {
+      "leaf_hash": "0c12be0ec69dba9b65d88ce4a16966325bdd873ea6df1ac9232481626f7c577f",
+      "path": "/economics/shares/2/attribution_basis/output_support"
+    },
+    {
+      "leaf_hash": "523cf5fbf7b169faa6c5717a0999055dccf21e2dafac8a6c06e8fe3d1e3738d7",
+      "path": "/economics/shares/2/attribution_basis/prompt_overlap"
+    },
+    {
+      "leaf_hash": "02396717cc2012c78021d973dbaa7d6a4b79ea68f488a10b7023876ccd64c3ec",
+      "path": "/economics/shares/2/attribution_basis/retrieval"
+    },
+    {
+      "leaf_hash": "c8c2c74d6988ce62d53b4b13da3c46a60deabbceac4aa9d90494d07b6649ec4d",
+      "path": "/economics/shares/2/attribution_basis/text_match"
+    },
+    {
+      "leaf_hash": "0c78c72d2c37b3c2e7bf779842eebb3d54e111963eb969da6eef628df659b359",
+      "path": "/economics/shares/2/attribution_basis/training_value"
+    },
+    {
+      "leaf_hash": "9d08e8633297ac332c02cdeac9c798b81177b2b3ce244297b8bee4d3af16bf27",
+      "path": "/economics/shares/2/chunk_id"
+    },
+    {
+      "leaf_hash": "356a7564ce6d0236c60819d7b0e78123c12b3f61d4e12c928eb919e5ed761164",
+      "path": "/economics/shares/2/citation_score"
+    },
+    {
+      "leaf_hash": "a1d3385728b823ebf294990f1036ebc66c0898a228fd50b0bd4fe53a6fdc8f33",
+      "path": "/economics/shares/2/content_hash"
+    },
+    {
+      "leaf_hash": "ba267ea87b8e269ba737c9e6de5a13eb7bd80136a80800a987ef6abe26fb0da5",
+      "path": "/economics/shares/2/contribution_weight"
+    },
+    {
+      "leaf_hash": "4c071c6495a06fe9d6a199793ac265ff638bea4a4d153ab4fb84ee012849c37f",
+      "path": "/economics/shares/2/creator_id"
+    },
+    {
+      "leaf_hash": "8e4b4796d1957c635e98aef1bd8213f30135ade506bd08f671a351f9a6bd34f3",
+      "path": "/economics/shares/2/data_value_prior"
+    },
+    {
+      "leaf_hash": "eba3a5ce6ab51e67659989e1c37e9bdb07ef8b4ff8c1122ab9cb9c83dc19d5fe",
+      "path": "/economics/shares/2/output_support"
+    },
+    {
+      "leaf_hash": "ddeb7abb2c79aca45e4e547c150753e2eadd949524ae252995d71323ac42c042",
+      "path": "/economics/shares/2/payout"
+    },
+    {
+      "leaf_hash": "f4613f93efdfc0b846bc3471ad13a9149e8209edb41fd5f30f9e51c8d18325ce",
+      "path": "/economics/shares/2/query_relevance"
+    },
+    {
+      "leaf_hash": "d572383048d1979153ec6334cdba67537852c81e9d190882697a0e30179bbcf1",
+      "path": "/economics/shares/2/retrieval_score"
+    },
+    {
+      "leaf_hash": "2b8ef2b6685426532621d2cddc936e9515d21b24d097c5800689656332aa3cf4",
+      "path": "/economics/shares/2/text_match_score"
+    },
+    {
+      "leaf_hash": "1fb9a48f215b33008797fec316be08070ac2e293c5cb0097b9da39dbeb83fc39",
+      "path": "/economics/shares/2/training_value_score"
+    },
+    {
+      "leaf_hash": "30ab28220a68c29979244c3ce8e2d251ffc60ae671b0984a4e801e104e219e50",
+      "path": "/economics/shares/2/work_id"
+    },
+    {
+      "leaf_hash": "e522174a199822d56e86eab0e0f222a3cfb17f06324b1c0e4c517b67b78e291f",
+      "path": "/grounding/attribution_gap/accessed_sources/0/access_id"
+    },
+    {
+      "leaf_hash": "9f430fdbbc7341e0f1e257bef392ae3f44cbba22c76a45ded0772844d93d66e8",
+      "path": "/grounding/attribution_gap/accessed_sources/0/access_type"
+    },
+    {
+      "leaf_hash": "bdf7d93f7d9d2708c3c8a989dfcc6cb2e14eb9d9b509ffeedce3853b379bb98f",
+      "path": "/grounding/attribution_gap/accessed_sources/0/chunk_id"
+    },
+    {
+      "leaf_hash": "8fe995b7038e0ab640b2b09f6c09fba07c838b59de59b3f4dd752b6a0be6b888",
+      "path": "/grounding/attribution_gap/accessed_sources/0/content_hash"
+    },
+    {
+      "leaf_hash": "6d00d735022d214a975ce6a249e2bb4e4fa83356502e5c08aa9d7e5a0b9307e6",
+      "path": "/grounding/attribution_gap/accessed_sources/0/creator_id"
+    },
+    {
+      "leaf_hash": "7f206bb870adbedacbb22ca85a5260af94017a3715a6fe9cf3223e74237c75b9",
+      "path": "/grounding/attribution_gap/accessed_sources/0/decision_status"
+    },
+    {
+      "leaf_hash": "3ca2924e568cdaf26cee6e680dfe54952e1fa79a4a33f6f3f98301856960bf0c",
+      "path": "/grounding/attribution_gap/accessed_sources/0/policy_allowed"
+    },
+    {
+      "leaf_hash": "d37ab8d822623da46aeb6e09e0d1dc4f72c60d8bb8092e34754fe9a29e8efae0",
+      "path": "/grounding/attribution_gap/accessed_sources/0/rank"
+    },
+    {
+      "leaf_hash": "6cf475d4d3bdf902f02b787b00de6ce268c1d9739fea637d801acedba268c1de",
+      "path": "/grounding/attribution_gap/accessed_sources/0/registry_allowed"
+    },
+    {
+      "leaf_hash": "a6e399b5dd99b6150f8442a0a6a75979c94fdc2395d3a047aada7718ee36c55c",
+      "path": "/grounding/attribution_gap/accessed_sources/0/score"
+    },
+    {
+      "leaf_hash": "e3118541746bc07614cab08b9ebffb1596a10b5b79f090aa044a591a583ec74e",
+      "path": "/grounding/attribution_gap/accessed_sources/0/use"
+    },
+    {
+      "leaf_hash": "522ace9d40723267542eeea4a75c5e85912c66b4d8f849d74e87a7de30911a16",
+      "path": "/grounding/attribution_gap/accessed_sources/0/work_id"
+    },
+    {
+      "leaf_hash": "b84b5792c703bbe3437d0b1ebd73146a05058d0c717401bdca96117b60dd7489",
+      "path": "/grounding/attribution_gap/accessed_sources/1/access_id"
+    },
+    {
+      "leaf_hash": "fb1e70435ac584f4a790fd63abfcdb4767daffae032de043df9a1a6a72188cc5",
+      "path": "/grounding/attribution_gap/accessed_sources/1/access_type"
+    },
+    {
+      "leaf_hash": "0453ec82705d8e64e6772ef6051bb280f8952ea4518d45a71f0572ba8a472572",
+      "path": "/grounding/attribution_gap/accessed_sources/1/chunk_id"
+    },
+    {
+      "leaf_hash": "fbb01ae5d22b8f07120c3b07c31be33748f320d40f12a1ce919e4eaa05c4ba50",
+      "path": "/grounding/attribution_gap/accessed_sources/1/content_hash"
+    },
+    {
+      "leaf_hash": "4a61d7750bf2eba4e16c70de1c37cd66a92d9703fdb0fae3f108ce66b5706abc",
+      "path": "/grounding/attribution_gap/accessed_sources/1/creator_id"
+    },
+    {
+      "leaf_hash": "395ddb79009327172a5b15bb2884f9145276e8e95f90133c30584de7b213179e",
+      "path": "/grounding/attribution_gap/accessed_sources/1/decision_status"
+    },
+    {
+      "leaf_hash": "d8d0089e95be2afcb574a50c071944d6fad4944f8940c745a2e523fef90191c6",
+      "path": "/grounding/attribution_gap/accessed_sources/1/policy_allowed"
+    },
+    {
+      "leaf_hash": "05dd58065fb3062273a6c97b1b66b683787d978436882d15cdc6014ce9bc5f6f",
+      "path": "/grounding/attribution_gap/accessed_sources/1/rank"
+    },
+    {
+      "leaf_hash": "34057430b83488e9856a03c5dc79a698e0e635f9fb25f1227c5f6983c3330f57",
+      "path": "/grounding/attribution_gap/accessed_sources/1/registry_allowed"
+    },
+    {
+      "leaf_hash": "9a109b69de328bf602209dfbbddfbf06c4c2e487674ec257f707c860b6e9f6c4",
+      "path": "/grounding/attribution_gap/accessed_sources/1/score"
+    },
+    {
+      "leaf_hash": "0e2cc019fec43d9b535af1e2d06e4526e5915e9183885ab67fe0b97a9e6b1ca7",
+      "path": "/grounding/attribution_gap/accessed_sources/1/use"
+    },
+    {
+      "leaf_hash": "c4a69c8d7681916c8db51f34c5dcf052214e7dc8ddf6e94fd6377f87165c7edf",
+      "path": "/grounding/attribution_gap/accessed_sources/1/work_id"
+    },
+    {
+      "leaf_hash": "e0255b378d4f70df92cbc833e99c83c3c14461cb9379a52017101eb52bb8ec68",
+      "path": "/grounding/attribution_gap/accessed_sources/2/access_id"
+    },
+    {
+      "leaf_hash": "fa1e92374798c3f6ba1e152861a85e158d39615955d683cc66a2fe020fe09a8a",
+      "path": "/grounding/attribution_gap/accessed_sources/2/access_type"
+    },
+    {
+      "leaf_hash": "60effbd2a41b0635c0d60105bfb7dc8eb8e357eba900849c70d987697922b688",
+      "path": "/grounding/attribution_gap/accessed_sources/2/chunk_id"
+    },
+    {
+      "leaf_hash": "805bb629eacb141471c7a88de0ada08096798233efbcaa2bed387d8178e836f3",
+      "path": "/grounding/attribution_gap/accessed_sources/2/content_hash"
+    },
+    {
+      "leaf_hash": "e07e86cc715250b1d73acb6231491e16e1f1dbbdea7dc017f1c43f82421e2296",
+      "path": "/grounding/attribution_gap/accessed_sources/2/creator_id"
+    },
+    {
+      "leaf_hash": "f53f58efbda2be876dea7078d81dcc64c9bd70bf9abd606a312d3482f3ce08d1",
+      "path": "/grounding/attribution_gap/accessed_sources/2/decision_status"
+    },
+    {
+      "leaf_hash": "6b93a1ba4ec6c5eea70251ab999399548df069537d5adf8eb2aba3555d4bc905",
+      "path": "/grounding/attribution_gap/accessed_sources/2/policy_allowed"
+    },
+    {
+      "leaf_hash": "5773d33fcb91884689608657600bb66bc597557c8559c4f259a14fdd200243c4",
+      "path": "/grounding/attribution_gap/accessed_sources/2/rank"
+    },
+    {
+      "leaf_hash": "8596be1e68bbf3547b891ffc8273120b331722971832b7e536dd51ad7ab5cf8f",
+      "path": "/grounding/attribution_gap/accessed_sources/2/registry_allowed"
+    },
+    {
+      "leaf_hash": "b104dbf7d0d8a524ba12730724a48b2343429f1ebd0125f98a3e8adbaca00bc8",
+      "path": "/grounding/attribution_gap/accessed_sources/2/score"
+    },
+    {
+      "leaf_hash": "b1584e88bb37a6859eb962898f37b5029acdeb09c8a5e9aa13840b39fb662349",
+      "path": "/grounding/attribution_gap/accessed_sources/2/use"
+    },
+    {
+      "leaf_hash": "67d8bbd73352c0ca2cfdf8a6e83a1394a56f5ac25342db66724f4a00a4f6d10e",
+      "path": "/grounding/attribution_gap/accessed_sources/2/work_id"
+    },
+    {
+      "leaf_hash": "9fc8a7fc42953af20752e362e5b96ff90a3780958afcc8f3f03abf892d4a9df7",
+      "path": "/grounding/attribution_gap/accessed_sources/3/access_id"
+    },
+    {
+      "leaf_hash": "146851d731d9d551a3649ba05f043d8abafcee691b472241509039edc44205db",
+      "path": "/grounding/attribution_gap/accessed_sources/3/access_type"
+    },
+    {
+      "leaf_hash": "f085df5b30e2a1f371000c4b5915a5b5b73711e2a32bfcf8cba5bf0f2891b4fb",
+      "path": "/grounding/attribution_gap/accessed_sources/3/chunk_id"
+    },
+    {
+      "leaf_hash": "f3f19def6f0b86790d94fc67d2eaf95b2543fa17d7d6b65338f495600a5e0f98",
+      "path": "/grounding/attribution_gap/accessed_sources/3/content_hash"
+    },
+    {
+      "leaf_hash": "ff46aa7ea359815f1dc7aef2a4ff43e524da8cbab6bdaa8d1820ffc7f18323ce",
+      "path": "/grounding/attribution_gap/accessed_sources/3/creator_id"
+    },
+    {
+      "leaf_hash": "9feedf7c0b35155164570d0744200f5427e9177ac43a1346dd529d74ca764e06",
+      "path": "/grounding/attribution_gap/accessed_sources/3/decision_status"
+    },
+    {
+      "leaf_hash": "a74c456403e9c206683d6840ed74606427f88c7a6b4e2c1a48d560b2b2fd43df",
+      "path": "/grounding/attribution_gap/accessed_sources/3/policy_allowed"
+    },
+    {
+      "leaf_hash": "63abdac91598ace15597f412b3878934a6cbe4a61c8706c80db1dd1b45743127",
+      "path": "/grounding/attribution_gap/accessed_sources/3/rank"
+    },
+    {
+      "leaf_hash": "da5b3071dbc449f10a74cc0247240136c942890f0306a7961680f54d66ba0d8a",
+      "path": "/grounding/attribution_gap/accessed_sources/3/registry_allowed"
+    },
+    {
+      "leaf_hash": "7aaaff20814c9e7ab83dd0f6a91747a528aeb29ef0f2c7c5bfe97e0c2c6a0fef",
+      "path": "/grounding/attribution_gap/accessed_sources/3/score"
+    },
+    {
+      "leaf_hash": "9a6ac0c6f8f22a732e5a321ff4545e3928948fffd9a458704bf827221e2e13cf",
+      "path": "/grounding/attribution_gap/accessed_sources/3/use"
+    },
+    {
+      "leaf_hash": "73d0938e1ea43f1c4b471e89343ac07212e795bddc09818e7f7e4ce5426be934",
+      "path": "/grounding/attribution_gap/accessed_sources/3/work_id"
+    },
+    {
+      "leaf_hash": "5d29fddc82d0cd2a7258365c7814cf54aec973e6ed46acbd3a5f3092dac0f2f3",
+      "path": "/grounding/attribution_gap/accessed_sources/4/access_id"
+    },
+    {
+      "leaf_hash": "67826f6fd69b865103ed04206d225e83af7320045eea2953811d53b913a957c5",
+      "path": "/grounding/attribution_gap/accessed_sources/4/access_type"
+    },
+    {
+      "leaf_hash": "806ece7d68f29adf42952991168eb08fe6f34e11f1c108bab75ca8d3ba9aab04",
+      "path": "/grounding/attribution_gap/accessed_sources/4/chunk_id"
+    },
+    {
+      "leaf_hash": "8942b7da9227fd83951ceb1380b5940d87a07799c6b8fdcebf62eb14297d3378",
+      "path": "/grounding/attribution_gap/accessed_sources/4/content_hash"
+    },
+    {
+      "leaf_hash": "8af16450cb263eba09167fdc167c29d521358614208ca2aae6f6c2860838a4bd",
+      "path": "/grounding/attribution_gap/accessed_sources/4/creator_id"
+    },
+    {
+      "leaf_hash": "e5885a1e60e721110a1a53ac0656f6a91be1aeae876338b2eabae1dca02faa41",
+      "path": "/grounding/attribution_gap/accessed_sources/4/decision_status"
+    },
+    {
+      "leaf_hash": "6c0f125c9a51ae0c0159700af39f85ffc897f203f9d32baf72bcec393285954a",
+      "path": "/grounding/attribution_gap/accessed_sources/4/policy_allowed"
+    },
+    {
+      "leaf_hash": "97f9a244f19be15f8340342a95b1eef766dd6026165c7d15d63f2591fa17db54",
+      "path": "/grounding/attribution_gap/accessed_sources/4/rank"
+    },
+    {
+      "leaf_hash": "c970572dfdd8384f5726918568c16c65798244701599bd7bcfe9e934f3a01c71",
+      "path": "/grounding/attribution_gap/accessed_sources/4/registry_allowed"
+    },
+    {
+      "leaf_hash": "e92eb2a00bbec9abb2f9ea60365d424804b62234caef91e49cbf9538cd36787b",
+      "path": "/grounding/attribution_gap/accessed_sources/4/score"
+    },
+    {
+      "leaf_hash": "195d43013e2cfb1f5e7a58113b740aa863b76596a21965f19d090c17df6768fb",
+      "path": "/grounding/attribution_gap/accessed_sources/4/use"
+    },
+    {
+      "leaf_hash": "e24808ca82a62bed388cd81ba1dd764251ca2edc598371d582ddf6ea38093340",
+      "path": "/grounding/attribution_gap/accessed_sources/4/work_id"
+    },
+    {
+      "leaf_hash": "ceb92cd056b9e6bfac1c60834f3c0634aa0e5118c9fbfe26dd13880a28c40b76",
+      "path": "/grounding/attribution_gap/accessed_sources/5/access_id"
+    },
+    {
+      "leaf_hash": "0de38bff7e35f033e8cd738a74f0dd6bad09a558fa67f93cff58b1e826f0fcbf",
+      "path": "/grounding/attribution_gap/accessed_sources/5/access_type"
+    },
+    {
+      "leaf_hash": "111937827ae119dca8ba09c07a94afbb1d1921313d5bd7a66daa5b96f4f29a58",
+      "path": "/grounding/attribution_gap/accessed_sources/5/chunk_id"
+    },
+    {
+      "leaf_hash": "8042f5d08780f339a6b44665d5822da77daee91fb9bc5658308f8cf3fa871ee0",
+      "path": "/grounding/attribution_gap/accessed_sources/5/content_hash"
+    },
+    {
+      "leaf_hash": "47b59fabc035ade62c04a979688d9c62742d1576fc393a86570f0d020f21b0ce",
+      "path": "/grounding/attribution_gap/accessed_sources/5/creator_id"
+    },
+    {
+      "leaf_hash": "0dcbd3295de1b12774dd2160b6921b612ee6ad6d05493f38da2754b472c375a8",
+      "path": "/grounding/attribution_gap/accessed_sources/5/decision_status"
+    },
+    {
+      "leaf_hash": "cae7aba08fce42bcb62c5a56b46c76b06375c6ec90711d922ec28778177eb358",
+      "path": "/grounding/attribution_gap/accessed_sources/5/policy_allowed"
+    },
+    {
+      "leaf_hash": "011e81dfee31e34876a0884bc8281f34079e0b3575a3eec97194c083d9fef7c9",
+      "path": "/grounding/attribution_gap/accessed_sources/5/rank"
+    },
+    {
+      "leaf_hash": "619092e65dea6906f27b700ece7c3ce299e4270212e2b31af62f26f61bf5bace",
+      "path": "/grounding/attribution_gap/accessed_sources/5/registry_allowed"
+    },
+    {
+      "leaf_hash": "a04551436bcde92c7b566d4118ac784df9504aec26ff98c86818b9a14f26ef24",
+      "path": "/grounding/attribution_gap/accessed_sources/5/score"
+    },
+    {
+      "leaf_hash": "b757cd684656572e9560e19d08dd6be38df5c5ae3187b2c4b1f33e1553ffdb3e",
+      "path": "/grounding/attribution_gap/accessed_sources/5/use"
+    },
+    {
+      "leaf_hash": "c40783b4e30098af64a20e9256d843913114d3bd35c5fe6bb63bae53b55984d4",
+      "path": "/grounding/attribution_gap/accessed_sources/5/work_id"
+    },
+    {
+      "leaf_hash": "f873ddb0947ea7426205231568403602c4880424de6d133acfe824573205a549",
+      "path": "/grounding/attribution_gap/classifications/cited_without_access"
+    },
+    {
+      "leaf_hash": "75e3a1c871d6df57c3a12d3a4b25cf37cb6d63291ee11b284eb18f50a410b959",
+      "path": "/grounding/attribution_gap/classifications/consumed_without_credit"
+    },
+    {
+      "leaf_hash": "ce607e4be3d08bc937d389c53d3344ce6f4c56baf510024bfe975ba8364946aa",
+      "path": "/grounding/attribution_gap/classifications/paid_hidden"
+    },
+    {
+      "leaf_hash": "9615564bc271d3709feb226ff73bef6ab3427932d92d46e8148afdfa69eb10a7",
+      "path": "/grounding/attribution_gap/classifications/policy_withheld"
+    },
+    {
+      "leaf_hash": "1c1858216555091bff4340b4aa11063d942ee3468a4a68486679ce6dcaf4bbc3",
+      "path": "/grounding/attribution_gap/classifications/registry_withheld"
+    },
+    {
+      "leaf_hash": "bb972f368b34395c5d050c2c9fb5fdb9ac15f320db07b4b809f3b7b760492c27",
+      "path": "/grounding/attribution_gap/gap_version"
+    },
+    {
+      "leaf_hash": "bce97c5d2d3db1ee216b82ff2b00b32b74c8a8433d5a32242fab694943dd75bf",
+      "path": "/grounding/attribution_gap/grounding_status"
+    },
+    {
+      "leaf_hash": "139ea3b5797927a3315ed8ff76469276cc1a08c851e8a98428f006857aa4c220",
+      "path": "/grounding/attribution_gap/issues"
+    },
+    {
+      "leaf_hash": "6aa64fbc43d65aa83ae1a5032657da6d85d4cf5a938410574c09277985b78c16",
+      "path": "/grounding/attribution_gap/policy_status"
+    },
+    {
+      "leaf_hash": "de613a07617a265c6e424a6b92ed51ecc3a1443956e3b343e95d5ab8c3b3db28",
+      "path": "/grounding/attribution_gap/registry_status"
+    },
+    {
+      "leaf_hash": "96db66930750a18f3b6c07b40a736d31ffbcec84b92cfe02a13bd69ae88f8dae",
+      "path": "/grounding/claims/0/evidence_text"
+    },
+    {
+      "leaf_hash": "700f8e953c9221339de0eca32e82ce9292bbc84979d232e02535637b521fa293",
+      "path": "/grounding/claims/1/evidence_text"
+    },
+    {
+      "leaf_hash": "3d137a8319f82acbac03474f9d35966d2e21ba9651d4765cf20a24383bdecd76",
+      "path": "/grounding/claims/2/evidence_text"
+    },
+    {
+      "leaf_hash": "e14fcd67152cad2bd82a78d9195569cef6c5930955e7374731ecb1ebcf94b1b7",
+      "path": "/grounding/claims/3/evidence_text"
+    },
+    {
+      "leaf_hash": "0af3198a4abdca9063f4bae16f596d1b41ace22bbbf1f586eb60a44489524f19",
+      "path": "/grounding/claims/4/evidence_text"
+    },
+    {
+      "leaf_hash": "8b960cc434e18d0d2df6f435bff77a43b8cd2ebe25b3b71fe23651c367e33753",
+      "path": "/grounding/claims/5/evidence_text"
+    },
+    {
+      "leaf_hash": "a6dcc8e3ffe4a0e273c698ddc0ecb33461c1f9e162aeb7967217d631c8270518",
+      "path": "/grounding/source_accesses/0/access_id"
+    },
+    {
+      "leaf_hash": "ac7b12b8ff5d0b72dc1456598c61fc0283182972ee5f399f6b454e4fa436d3d8",
+      "path": "/grounding/source_accesses/0/access_type"
+    },
+    {
+      "leaf_hash": "80ed3f41a8451a7d5edbe95333ef554a47e97c04188f74097c659aac6651fde4",
+      "path": "/grounding/source_accesses/0/chunk_id"
+    },
+    {
+      "leaf_hash": "65fce9b748cd2d2ce1c6e0972eed268cdac5e89abb75ded62da6aa15c03d3e07",
+      "path": "/grounding/source_accesses/0/content_hash"
+    },
+    {
+      "leaf_hash": "e5fcea151d9e627ec55a8cc7ecdb0fcd5d4684415d1def063d1ec9c8728dea88",
+      "path": "/grounding/source_accesses/0/creator_id"
+    },
+    {
+      "leaf_hash": "a253bbc483676b2abc357117d3c3c28a94b335b9c5b97ca67770655e57b63bc2",
+      "path": "/grounding/source_accesses/0/decision_status"
+    },
+    {
+      "leaf_hash": "332b6b99214834c3f9947846ae10db0d94bd5da8506947b3597a828c51963bc3",
+      "path": "/grounding/source_accesses/0/matched_text_hash"
+    },
+    {
+      "leaf_hash": "14d0f18c43a0ae913ab8a43945c589a0fdccc6eac196984b55859367a9ec713e",
+      "path": "/grounding/source_accesses/0/policy_allowed"
+    },
+    {
+      "leaf_hash": "bcd99c7ad37c232b2d2c56f74e15f5c677df62946947f6738fd07a08208d99a1",
+      "path": "/grounding/source_accesses/0/rank"
+    },
+    {
+      "leaf_hash": "6ec43dad3876b063aae50382cd126e16a26e78ed4adb5b9716b40da2f7322b00",
+      "path": "/grounding/source_accesses/0/registry_allowed"
+    },
+    {
+      "leaf_hash": "e3e96ad09535b731138042143cda94043ad4304ea78c891befb7fce72218d308",
+      "path": "/grounding/source_accesses/0/score"
+    },
+    {
+      "leaf_hash": "5c7c84224373d9e4a61d00b943476c96ec0da552fa79ce331339bcd8e77f7180",
+      "path": "/grounding/source_accesses/0/source_uri"
+    },
+    {
+      "leaf_hash": "8289f47fc424c95e9fa55f00f0a5dad1267fdf793cc022b92277f2ba678db70a",
+      "path": "/grounding/source_accesses/0/title"
+    },
+    {
+      "leaf_hash": "c029f1df8f4b6cd9f9bd8116efe830660f43cd7d9b084873b1a54dc285f106c9",
+      "path": "/grounding/source_accesses/0/use"
+    },
+    {
+      "leaf_hash": "b5db12be046ddbde89d8613925287f72ab85754626139bc670e3999131a10f85",
+      "path": "/grounding/source_accesses/0/work_id"
+    },
+    {
+      "leaf_hash": "1e826a8109c124720b732004bddfbbad0023a2620d3ea01140a0e5bbdcfb634b",
+      "path": "/grounding/source_accesses/1/access_id"
+    },
+    {
+      "leaf_hash": "1db32f5c14872341f1c9ef46fb6d2958bbab0cbfb441ac82a95528a0e7328788",
+      "path": "/grounding/source_accesses/1/access_type"
+    },
+    {
+      "leaf_hash": "48902f823b2537b009d3009257e12a1cdb8c3ef4c8c6352a85c9b9f8168f87a0",
+      "path": "/grounding/source_accesses/1/chunk_id"
+    },
+    {
+      "leaf_hash": "bfdf3eed744bb98fe8ba06739bc4bd0d98fe2dbb4a3f117fdaa879c5f1ee61cf",
+      "path": "/grounding/source_accesses/1/content_hash"
+    },
+    {
+      "leaf_hash": "8d96e97e338ca74f5cc65e8b5f639031519ad772a5d18a96a7a6a1ab98a346bd",
+      "path": "/grounding/source_accesses/1/creator_id"
+    },
+    {
+      "leaf_hash": "4817933a0292dc0cea7fd0abdf2ca3a51430fbfac77172ead41c9623140cc525",
+      "path": "/grounding/source_accesses/1/decision_status"
+    },
+    {
+      "leaf_hash": "55f4b8e767a11e62df2448040a5815d6e956017b94a66b38b5b77c12401bd320",
+      "path": "/grounding/source_accesses/1/matched_text_hash"
+    },
+    {
+      "leaf_hash": "a5567b5f488b442601f7f0e3c9b883fac486c3f3baac21e505dfa118e34afa39",
+      "path": "/grounding/source_accesses/1/policy_allowed"
+    },
+    {
+      "leaf_hash": "a865426b716489c75ffc4706acfce4082147c12954f1cb479ab9599670c9821d",
+      "path": "/grounding/source_accesses/1/rank"
+    },
+    {
+      "leaf_hash": "0d0eb6ced1032bdd8c7b3b5325c182d948558faba72fe03ed4f5521ce0cfae74",
+      "path": "/grounding/source_accesses/1/registry_allowed"
+    },
+    {
+      "leaf_hash": "92217261993e422c1210da4e8b1792c36113739b3c2c6a2b23367162355159e9",
+      "path": "/grounding/source_accesses/1/score"
+    },
+    {
+      "leaf_hash": "6a104a5b38320a82302a2a706e2baebeb65cb1a90779245f9b0788f0b8055f50",
+      "path": "/grounding/source_accesses/1/source_uri"
+    },
+    {
+      "leaf_hash": "95d38802975ace42ac0e3078beddbc080ccb1282308ff5dd73f92324f0848503",
+      "path": "/grounding/source_accesses/1/title"
+    },
+    {
+      "leaf_hash": "5b720889fb6fe5901789998bc443534d96c6e609933f4ce2ab8c18f9a1b1b72b",
+      "path": "/grounding/source_accesses/1/use"
+    },
+    {
+      "leaf_hash": "cb87c2292b5e09500771632743c79abc7d1953156fa4e00bece47096ed094d92",
+      "path": "/grounding/source_accesses/1/work_id"
+    },
+    {
+      "leaf_hash": "2107b9de0cb4027f89f90ccc0d16e3735d48b5756c007f94e37627cde38891a8",
+      "path": "/grounding/source_accesses/2/access_id"
+    },
+    {
+      "leaf_hash": "5ba96fcd87f3ef9b41cdadcd39eb9e6bfd8a70d445803cdc4f04237afe547d0a",
+      "path": "/grounding/source_accesses/2/access_type"
+    },
+    {
+      "leaf_hash": "8c4387eb5dc45cfd4cfe5815c0063ea3e9a6dabfe1d4334c0318ea9cb8dc3875",
+      "path": "/grounding/source_accesses/2/chunk_id"
+    },
+    {
+      "leaf_hash": "722fc7eae6553e3bb556dd1416f479a6b07ef965484722563090caf6c1c377b6",
+      "path": "/grounding/source_accesses/2/content_hash"
+    },
+    {
+      "leaf_hash": "edf0da90e7829a50207eb6878143d7b60296b21497bf0cd0ce9eed39f7cd2e85",
+      "path": "/grounding/source_accesses/2/creator_id"
+    },
+    {
+      "leaf_hash": "8f106d0be18e73fe7ccf563dfecc4ce94966828ebbc1d3cbe863b991e2b7c15b",
+      "path": "/grounding/source_accesses/2/decision_status"
+    },
+    {
+      "leaf_hash": "10d1e84d5b854cf4d5fa7e15b761688a20c1242e97960f354306443774ed10cf",
+      "path": "/grounding/source_accesses/2/matched_text_hash"
+    },
+    {
+      "leaf_hash": "b99bce4f857b3a4735a8eef4109cf336a5f22e276a6c4692715e7ecae48c949c",
+      "path": "/grounding/source_accesses/2/policy_allowed"
+    },
+    {
+      "leaf_hash": "5cc7bb3a277186b879a073006e5dd3b7ccc6e05278a0b47a07c1e137d6473f29",
+      "path": "/grounding/source_accesses/2/rank"
+    },
+    {
+      "leaf_hash": "9ac43ca1b75c80fa4eb01ddf92b52af5e69a62af1d0d0699a22cc8ccb0f18870",
+      "path": "/grounding/source_accesses/2/registry_allowed"
+    },
+    {
+      "leaf_hash": "6432eb9eb115e3dfab5660361402ffd6aee13aab2334c11183fb777e012e952e",
+      "path": "/grounding/source_accesses/2/score"
+    },
+    {
+      "leaf_hash": "12df890c63a1b49b88fae9089400377af059892e0b29f7d066de2d8ed0c389a0",
+      "path": "/grounding/source_accesses/2/source_uri"
+    },
+    {
+      "leaf_hash": "6f3bb1f6b98b32262292bcdcd48e65607f38630817c2151099b0ebe47ee736f7",
+      "path": "/grounding/source_accesses/2/title"
+    },
+    {
+      "leaf_hash": "73db8375ce2b75dee7c5d50666305d7967364796afc2bc3623696ec6c50d7564",
+      "path": "/grounding/source_accesses/2/use"
+    },
+    {
+      "leaf_hash": "ddbf2c7d795f47aa1b152ddda4ae5501a36336199b03c5ac2eb51a888f2a7b7b",
+      "path": "/grounding/source_accesses/2/work_id"
+    },
+    {
+      "leaf_hash": "d2074c761f24f7c2de9e9f6843ac9bc0375b779c4039eb9843953ca497ff99b6",
+      "path": "/grounding/source_accesses/3/access_id"
+    },
+    {
+      "leaf_hash": "2d656820062de75009ae3f70be8584642d6f12e5c94cf14c92d44a4c89202085",
+      "path": "/grounding/source_accesses/3/access_type"
+    },
+    {
+      "leaf_hash": "96e8ab00c75fd1f1bf164030b32ba1457f145313fc953ae2bff12d3f42d2b70f",
+      "path": "/grounding/source_accesses/3/chunk_id"
+    },
+    {
+      "leaf_hash": "d1c778b3ccf243f8d85fe5e204b7f6d2066cfeb742574aba4566b2e1a1ce3dc4",
+      "path": "/grounding/source_accesses/3/content_hash"
+    },
+    {
+      "leaf_hash": "f90725332a4b75197eabcc427486c012194c56b7535f3b921856b6c7aab3edb2",
+      "path": "/grounding/source_accesses/3/creator_id"
+    },
+    {
+      "leaf_hash": "61000796b8b0febfa6e6bbd17482910a60fa138274ed709ef20f3615abfd4608",
+      "path": "/grounding/source_accesses/3/decision_status"
+    },
+    {
+      "leaf_hash": "fd93087d6d8f656ced421a57f22f68fa74f643941bd8848593d58111ade14325",
+      "path": "/grounding/source_accesses/3/matched_text_hash"
+    },
+    {
+      "leaf_hash": "158b2c481e7e2f2c23acd7ce285cc3290859956697f46c2cdca1d353bef45abd",
+      "path": "/grounding/source_accesses/3/policy_allowed"
+    },
+    {
+      "leaf_hash": "451a12ce8c4afd932e4c73a149ae10441a040667fccd658b46f4d3dc291edca0",
+      "path": "/grounding/source_accesses/3/rank"
+    },
+    {
+      "leaf_hash": "f8112db2bc135ddd6aff8c605c4cf33c16e38dc5bf7d64119b95cad952a3155b",
+      "path": "/grounding/source_accesses/3/registry_allowed"
+    },
+    {
+      "leaf_hash": "df58f24bb369ad88a3093c40d694a286bd228da20a021ff2b699823453eddddf",
+      "path": "/grounding/source_accesses/3/score"
+    },
+    {
+      "leaf_hash": "55a7ca246cb256bc0ae262322c0f543cdfc5f9e5ebf30f302e7ec6c526ce2b84",
+      "path": "/grounding/source_accesses/3/source_uri"
+    },
+    {
+      "leaf_hash": "aa402bd567c2883adf05b8e4fd2406c2f4c1e1a2abe2e11f708d351d12bebc87",
+      "path": "/grounding/source_accesses/3/title"
+    },
+    {
+      "leaf_hash": "7d68e648c72e355ee82285f99d6f42db20f3e6699bd88be932afbd1884b0b6ac",
+      "path": "/grounding/source_accesses/3/use"
+    },
+    {
+      "leaf_hash": "04f40be3cfb84442ef9de9951eae56674928e9941b79661ca46fcd464d9252b0",
+      "path": "/grounding/source_accesses/3/work_id"
+    },
+    {
+      "leaf_hash": "94c77fcf8ba927a16276332582a012a6925d80235403da1e7a63df2e996802f2",
+      "path": "/grounding/source_accesses/4/access_id"
+    },
+    {
+      "leaf_hash": "9ea5a94a58f2bd9a4a670f80be798cc1808bcfaf89cd58fb0402b47cab5642a4",
+      "path": "/grounding/source_accesses/4/access_type"
+    },
+    {
+      "leaf_hash": "9740219b50d8677fb32931250a5142eb00a5885c4502dc85e454b37a97519f58",
+      "path": "/grounding/source_accesses/4/chunk_id"
+    },
+    {
+      "leaf_hash": "bdfd387f8cd94cb75e3f7c83fbfb63a1ce94dca60dd9fd591b517f598eb43226",
+      "path": "/grounding/source_accesses/4/content_hash"
+    },
+    {
+      "leaf_hash": "a90ef2310947b85ee9dedc73ebd0c578857acd5c75e0f7b000013e4f668b7659",
+      "path": "/grounding/source_accesses/4/creator_id"
+    },
+    {
+      "leaf_hash": "6e5bfa5944ef13ad310600d383d6984f4951363fcee5aea79100c183e8fd2763",
+      "path": "/grounding/source_accesses/4/decision_status"
+    },
+    {
+      "leaf_hash": "a02b3f07358d3d4775985ca12ca7fd350db33d910e810ac5fd631009e6190d88",
+      "path": "/grounding/source_accesses/4/matched_text_hash"
+    },
+    {
+      "leaf_hash": "a314551dd425bdb44dd6155844290deb4f02b0bf14133eeb7595aafd76a4d41e",
+      "path": "/grounding/source_accesses/4/policy_allowed"
+    },
+    {
+      "leaf_hash": "27d0fcbdd33d9911b70b17df4ab7fdc656a11d768ef62f0f2aa50d56d8b7f011",
+      "path": "/grounding/source_accesses/4/rank"
+    },
+    {
+      "leaf_hash": "ceafdc4cb49a2324ffe16742a72a6429145044b9ca485b5da680451fe546614e",
+      "path": "/grounding/source_accesses/4/registry_allowed"
+    },
+    {
+      "leaf_hash": "27d8cc15af74bb6d920eccf42716888fec674015f0a9ff514f0fbbcc156a67d0",
+      "path": "/grounding/source_accesses/4/score"
+    },
+    {
+      "leaf_hash": "c07428fb0622944152ea13051d6225692d5d442ac89375954f1fec8d477c98f0",
+      "path": "/grounding/source_accesses/4/source_uri"
+    },
+    {
+      "leaf_hash": "bfb65b0bfb9f9fd8feb6b6f5b6d835289a374bded5262065d6f89e03c6ce3a04",
+      "path": "/grounding/source_accesses/4/title"
+    },
+    {
+      "leaf_hash": "95a36925c40c6aa2a56fde77308cffdd643636eb9f563829ecc081749a3aa93a",
+      "path": "/grounding/source_accesses/4/use"
+    },
+    {
+      "leaf_hash": "a345c6bccdc9c5e67cb22124204f3dea3173e9c47757ba53de5dd97b47aff819",
+      "path": "/grounding/source_accesses/4/work_id"
+    },
+    {
+      "leaf_hash": "6e6fab19bc41a1f6bb300cf00dbe8361080fb38ecec5a156826eb2fe57e2b955",
+      "path": "/grounding/source_accesses/5/access_id"
+    },
+    {
+      "leaf_hash": "14c68f147d3985eebc14452e1b321cd12e440c9b07ca83db80c6b44810fc3ade",
+      "path": "/grounding/source_accesses/5/access_type"
+    },
+    {
+      "leaf_hash": "f542a820c387eb1a0f840b909135ab8842cfdede98ec6e05752fedd4a534061d",
+      "path": "/grounding/source_accesses/5/chunk_id"
+    },
+    {
+      "leaf_hash": "d473adeb4bfada497092687a46a8c2f7a501a05f02f4336ca0b3bc57ae2bda0a",
+      "path": "/grounding/source_accesses/5/content_hash"
+    },
+    {
+      "leaf_hash": "77a2d6c8d7000cd2ee786f12ff3768bb1a7fe155da44af1d2ad1965d66f23ff3",
+      "path": "/grounding/source_accesses/5/creator_id"
+    },
+    {
+      "leaf_hash": "e1debd803abedd75042566570b82df668d9a700cd03d3623b21055daf9f406f5",
+      "path": "/grounding/source_accesses/5/decision_status"
+    },
+    {
+      "leaf_hash": "0d5bef143599b9608494ba92a28a2dda4935bb33063bb822bd9aae2bbf0e45e3",
+      "path": "/grounding/source_accesses/5/matched_text_hash"
+    },
+    {
+      "leaf_hash": "df91616db3ae643000022d913bcc25541c0debbe094ebba936e1ceec82e116d7",
+      "path": "/grounding/source_accesses/5/policy_allowed"
+    },
+    {
+      "leaf_hash": "14ad26338a5692048888617b64d62672770f667fa72c2535a2724b7b950cae9d",
+      "path": "/grounding/source_accesses/5/rank"
+    },
+    {
+      "leaf_hash": "445b87096887def833740ac7c113f0a9a7ea59339e25ba1eacd2f300437da5c4",
+      "path": "/grounding/source_accesses/5/registry_allowed"
+    },
+    {
+      "leaf_hash": "64598d4ce3ebc4a7a52fa5d6279822cd5d8e3b546f0bb2f05e9c6c7201b652f1",
+      "path": "/grounding/source_accesses/5/score"
+    },
+    {
+      "leaf_hash": "6e186e9fd8fc7dde012b9d712f4864a9ff7d320d7d23e591129f6841708f7026",
+      "path": "/grounding/source_accesses/5/source_uri"
+    },
+    {
+      "leaf_hash": "0d0156cc073e12d572bd31c57b36a1fb5cee5f3c9273350740bd09d9caa58cce",
+      "path": "/grounding/source_accesses/5/title"
+    },
+    {
+      "leaf_hash": "0a9bceb63f35d810b0e103df1c81471a4cb9dc7ea6286484ef8a4d1bf55b04b3",
+      "path": "/grounding/source_accesses/5/use"
+    },
+    {
+      "leaf_hash": "fbd8726aeec4a962826ffd78fdf118615c985af0cb297469c712a5834a744188",
+      "path": "/grounding/source_accesses/5/work_id"
+    },
+    {
+      "leaf_hash": "3d01a753fec50fcf5531847ca9356d12ebfe7c7abba9a7f0ad6c6932e5c5044a",
+      "path": "/grounding/sources/0/citation_score"
+    },
+    {
+      "leaf_hash": "0c366daa97e0bc697bb4ed1f533278feaecde954a211d465368471af8a6290b9",
+      "path": "/grounding/sources/0/creator_name"
+    },
+    {
+      "leaf_hash": "b54a68cb8201ba80a138a222302147d153c0d696b89b03f3e195d96329239e21",
+      "path": "/grounding/sources/0/evidence_span_hashes/0"
+    },
+    {
+      "leaf_hash": "af7d96c5102e7ae673dc0f35906eadd44d195c93b6c9544444110aacc33c103f",
+      "path": "/grounding/sources/0/evidence_span_hashes/1"
+    },
+    {
+      "leaf_hash": "5910740e4f51971f0ca336dd2ddd23731eff3dd14378be0833ec73e1422cf74d",
+      "path": "/grounding/sources/0/jurisdiction"
+    },
+    {
+      "leaf_hash": "5da56419d05871038f60e2b551a3836d731695d6c3282c50dd75cb67b3fd5127",
+      "path": "/grounding/sources/0/license"
+    },
+    {
+      "leaf_hash": "f1383a22a6c870bc0247b8d2b1e61c93ff7f15f34faa6f5cff21bf864bc9edc2",
+      "path": "/grounding/sources/0/license_uri"
+    },
+    {
+      "leaf_hash": "526654237474dc38a582647ea5622bd391fc6e77eca8e031b152ee80a3775392",
+      "path": "/grounding/sources/0/output_support"
+    },
+    {
+      "leaf_hash": "5691dc60b94f9cd5c732d93b22305cff1ae1e8540c25a8020e5af588ea800628",
+      "path": "/grounding/sources/0/payout"
+    },
+    {
+      "leaf_hash": "3a8175cd25f688244b7a830f5d01bd53adf282133280733ef6ea1fa0591937e7",
+      "path": "/grounding/sources/0/policy_id"
+    },
+    {
+      "leaf_hash": "9a872b7bafb02bf00c307d3406a8a066f78f4693a7df6740788cbf48edc8af78",
+      "path": "/grounding/sources/0/policy_use"
+    },
+    {
+      "leaf_hash": "daac18ccc10f1d0d6e6ae4d2abfd3d85b565dfad6403efa9a1dbb33df2b813be",
+      "path": "/grounding/sources/0/quote"
+    },
+    {
+      "leaf_hash": "486150e15ecc8f75739d7f2b7cfd4f4f58fdaa6b702df8f7cb3a2a5c478c34f9",
+      "path": "/grounding/sources/0/retrieval_score"
+    },
+    {
+      "leaf_hash": "bf8dd69d90a548dfa60dcf49c5ffcfad80bbc195816fec5187e04d1a7cef21e8",
+      "path": "/grounding/sources/0/text_match_score"
+    },
+    {
+      "leaf_hash": "14beb086723ef5b0e8e2a2002411935df2a3cdbf9071d0e35c7481f31aec5222",
+      "path": "/grounding/sources/0/title"
+    },
+    {
+      "leaf_hash": "dfba0a8265802cd093c953994c42a39b1a37f810fca864d0a595a937ec91f8ae",
+      "path": "/grounding/sources/1/citation_score"
+    },
+    {
+      "leaf_hash": "5fff1ceda3a953aaf3126d59122e971b95c4963230105b0f8e92f770e161adca",
+      "path": "/grounding/sources/1/creator_name"
+    },
+    {
+      "leaf_hash": "69bf993c94c646d2fbdd9ce1510578edeb309177d4ee4dcc2129038d502fea65",
+      "path": "/grounding/sources/1/evidence_span_hashes/0"
+    },
+    {
+      "leaf_hash": "ac3aa9aec2ae7961e48b12a14ea5a7096a559851e354b1a8bf8fe7335acf01be",
+      "path": "/grounding/sources/1/evidence_span_hashes/1"
+    },
+    {
+      "leaf_hash": "3eb7187b8f169ac52aad28a8158dd57175af8ee9945610a153dd993d96e5bda2",
+      "path": "/grounding/sources/1/jurisdiction"
+    },
+    {
+      "leaf_hash": "cab79bab9ac4ea1f20cab681b974cc70eae2afa6488138bc9c3276d749702a87",
+      "path": "/grounding/sources/1/license"
+    },
+    {
+      "leaf_hash": "2e6ecab7a3918b0bae8127f61cdbd761e0c14ea4062d361234e94c32d84eeff8",
+      "path": "/grounding/sources/1/license_uri"
+    },
+    {
+      "leaf_hash": "1b58c2fea3f8e711a3d39cff1ecfcbb592345f07f365bc50ca97540e56f23a04",
+      "path": "/grounding/sources/1/output_support"
+    },
+    {
+      "leaf_hash": "5bba7eb4b82fb586f2a042c81bd77eb49f00779688c262d00997255a952841a1",
+      "path": "/grounding/sources/1/payout"
+    },
+    {
+      "leaf_hash": "486823ded63706fc64fc852ce225405cc67da9f4ac8ba2ee49aa08840ad9cccf",
+      "path": "/grounding/sources/1/policy_id"
+    },
+    {
+      "leaf_hash": "e82e243fdb29475349a77c358bb2dae30bcd5257901623c93b338511ae60a55e",
+      "path": "/grounding/sources/1/policy_use"
+    },
+    {
+      "leaf_hash": "aa00df0d550fe48de2ca4928de018c7fcebb82e63713d70b2b6b12a7f770a20f",
+      "path": "/grounding/sources/1/quote"
+    },
+    {
+      "leaf_hash": "c4891e292bc30a020694ab7be76d95378ac17c1931ba23cd08c2431f442b5873",
+      "path": "/grounding/sources/1/retrieval_score"
+    },
+    {
+      "leaf_hash": "5a9fb75efe81f0be96d48aa365b524a74f1e2e58031c64f9cf7c63c74e3c37ef",
+      "path": "/grounding/sources/1/text_match_score"
+    },
+    {
+      "leaf_hash": "2a5cd1e86094b7576e43cd249af1550d9d491cbfc636b57befb06e8c1ce4daee",
+      "path": "/grounding/sources/1/title"
+    },
+    {
+      "leaf_hash": "d87bf187c65723e2968af0c9be3e6506687943a0c9429de132d2380ec9073bac",
+      "path": "/grounding/sources/2/citation_score"
+    },
+    {
+      "leaf_hash": "37f451afc16e6ce0764cddc651eee89d7494cf3d33cca87cfd435f8f947d611e",
+      "path": "/grounding/sources/2/creator_name"
+    },
+    {
+      "leaf_hash": "35bc876a3d8f46eca3069fb1989e9df9a3837f7e7cde70fcec147f2d06545903",
+      "path": "/grounding/sources/2/evidence_span_hashes/0"
+    },
+    {
+      "leaf_hash": "fb666e203fd4735ec25070718ddb9801c0606db6533b2951a977f795ad6b0911",
+      "path": "/grounding/sources/2/evidence_span_hashes/1"
+    },
+    {
+      "leaf_hash": "56a597c78a06dd074eb590b0e28c3dca35b2e690a1bbbf480193850ecedf0901",
+      "path": "/grounding/sources/2/jurisdiction"
+    },
+    {
+      "leaf_hash": "901a188cce9f2316440f3a77244433957bd4e6716705f5ab179fb437c66ff20b",
+      "path": "/grounding/sources/2/license"
+    },
+    {
+      "leaf_hash": "deef3674139eb7892f799a555815cc0fe9778a2e3e90558024f042e992c6b90a",
+      "path": "/grounding/sources/2/license_uri"
+    },
+    {
+      "leaf_hash": "d7e763c85b3d65c3fa565f8b69d568fef95a204e5750655d5e1ff13353d73e30",
+      "path": "/grounding/sources/2/output_support"
+    },
+    {
+      "leaf_hash": "ad79af3bdb85bb506b7e880a964db4166cdfb2f6174366a1ec79c0009895eddd",
+      "path": "/grounding/sources/2/payout"
+    },
+    {
+      "leaf_hash": "c612a1f98859df0f0fc249d9de48b1e8108b432b37d82ee6cfb548aef640c0b9",
+      "path": "/grounding/sources/2/policy_id"
+    },
+    {
+      "leaf_hash": "275a95c860841cfa3d25ce9bf6256e3042e6850cd84c6da672f8e50df165c8db",
+      "path": "/grounding/sources/2/policy_use"
+    },
+    {
+      "leaf_hash": "0c63fcc80303aad541e225c12d0e02d7d0cab45e30c4e7dea62866a7b3bae1e7",
+      "path": "/grounding/sources/2/quote"
+    },
+    {
+      "leaf_hash": "b7198a5603df36a8804ff50e8fb6904e9df7ee6fa59be25e2bb53cd90eb836e4",
+      "path": "/grounding/sources/2/retrieval_score"
+    },
+    {
+      "leaf_hash": "dae53e27cf28bf89d52b609cd9816a5ef73b83d3ed03d8b755e7142d9500b8ff",
+      "path": "/grounding/sources/2/text_match_score"
+    },
+    {
+      "leaf_hash": "01f03003288ddfa0e8aca3b96e9c3d78f9938ae0f7672cc9022fdb0f662aa46b",
+      "path": "/grounding/sources/2/title"
+    },
+    {
+      "leaf_hash": "d952f4e126af0686a74098546e41ed6c1881e55be2ee88c8ce958bbe16149d96",
+      "path": "/registry/decisions"
+    },
+    {
+      "leaf_hash": "1bc046ea0237bf76956814f4e70f1df6adc6cb154b8a53bf2ebd1387d3016ecb",
+      "path": "/rights/decisions/0/actual_creator_pool_rate"
+    },
+    {
+      "leaf_hash": "490c93f9efcddedb21ba523de41c892a560d00fe8e0db68584a01e896154cce7",
+      "path": "/rights/decisions/0/allowed"
+    },
+    {
+      "leaf_hash": "ad2848aed8c090721a733cee43a215c4adb69cb4f3f6e134de4801b8616fa090",
+      "path": "/rights/decisions/0/chunk_id"
+    },
+    {
+      "leaf_hash": "51c49abf7fb3909fff5f3c142647c58e5f52be6c5b5f5329557c1d8bca30388a",
+      "path": "/rights/decisions/0/content_hash"
+    },
+    {
+      "leaf_hash": "34b996825fece05f39f2765a910a6c3e63e6957669725201038b270cc15ba63f",
+      "path": "/rights/decisions/0/jurisdiction"
+    },
+    {
+      "leaf_hash": "e623ba87a617f4ccecba471c325ff98d9ca051128e94b83b741b93a035565765",
+      "path": "/rights/decisions/0/license"
+    },
+    {
+      "leaf_hash": "b0c22d3b451cf792f370e063cf51d2da8a8e0f63e1cde0a58ac1c21ad908b42c",
+      "path": "/rights/decisions/0/license_uri"
+    },
+    {
+      "leaf_hash": "1f0ff0ac6421596957140b32c5e9697b88ac3f20aabafbe44e24d82fcc9b47db",
+      "path": "/rights/decisions/0/minimum_creator_pool_rate"
+    },
+    {
+      "leaf_hash": "af3ec771e011357ebd8e6a15876e36a37174a035ce38d6280fbf9fd4c516157d",
+      "path": "/rights/decisions/0/policy_id"
+    },
+    {
+      "leaf_hash": "3564ab661e9d50106853c20dc6d4b7500a7b267f265bfbca6c7d701ea09f07d4",
+      "path": "/rights/decisions/0/reasons/0"
+    },
+    {
+      "leaf_hash": "34201f276bba07d0c8faaf2bd1dbdfd00cd40d9380f51f83ed13660e4173c8ca",
+      "path": "/rights/decisions/0/source_uri"
+    },
+    {
+      "leaf_hash": "e88a24589af8250ff52c05895ed7dd30de33cf68f718dfd06803f908afacf8a7",
+      "path": "/rights/decisions/0/target_id"
+    },
+    {
+      "leaf_hash": "cb66428545c11e8c456e2f53fb37849a3912e0580e9de9e235ffb3c6224948ff",
+      "path": "/rights/decisions/0/target_type"
+    },
+    {
+      "leaf_hash": "9da938840d83fa8a096fc02802575f7bcc5d0d58a77950ce3ea4e85d5cbd5bd4",
+      "path": "/rights/decisions/0/text_match_score"
+    },
+    {
+      "leaf_hash": "3622d5e9d52377c9c85868f3ed34a36ca1490837d54c932e4c3c4ebae0ece9af",
+      "path": "/rights/decisions/0/use"
+    },
+    {
+      "leaf_hash": "453b25777fd7fe4fff12d4be5e9e5547c9abe5cccc2e5610a6ee632749f99fc3",
+      "path": "/rights/decisions/0/work_id"
+    },
+    {
+      "leaf_hash": "661068b9c0c06855d153c5fc2d213bf8c5e660345bcacc2ede7ce13cb5050e96",
+      "path": "/rights/decisions/1/actual_creator_pool_rate"
+    },
+    {
+      "leaf_hash": "115920ad015610cf7d1041e0bea858b33b0ce86b6c7cfb5a765274549fceeab7",
+      "path": "/rights/decisions/1/allowed"
+    },
+    {
+      "leaf_hash": "56ed57933b260f84f866a53df15a9e070e3986ecc0b400515546e37529451853",
+      "path": "/rights/decisions/1/chunk_id"
+    },
+    {
+      "leaf_hash": "8947fd5d7d79d858ff89599d36ed6e91093618e54f99db20fe6c56547599a36f",
+      "path": "/rights/decisions/1/content_hash"
+    },
+    {
+      "leaf_hash": "7eb27666b3489715ff41897b5e96053eafa0ec6602bd91d1892fc1dd6ea366e5",
+      "path": "/rights/decisions/1/jurisdiction"
+    },
+    {
+      "leaf_hash": "a1d177136c7a58f2b24b297582f7650a7f3456ee0262c09360774035a5ec458d",
+      "path": "/rights/decisions/1/license"
+    },
+    {
+      "leaf_hash": "a621ebcd9ef377d550066708fc8c333fb4d01a7120da81c60bc9566aa0efabb4",
+      "path": "/rights/decisions/1/license_uri"
+    },
+    {
+      "leaf_hash": "c00b824d6bec671f546fc02781f23b2df5af64572752e5353edc5ff6882943c9",
+      "path": "/rights/decisions/1/minimum_creator_pool_rate"
+    },
+    {
+      "leaf_hash": "af8e8a1a6af13b5c361473c003ec523ad59f8b788ce46770f3406746f7b4ce59",
+      "path": "/rights/decisions/1/policy_id"
+    },
+    {
+      "leaf_hash": "8ce9dd23eed3f63290169170b9b9d6f064d1e73c592cb05bdb043d6902f27d0a",
+      "path": "/rights/decisions/1/reasons/0"
+    },
+    {
+      "leaf_hash": "0faaf2b13f895e27a3ba9d9f7f010e4448a4394b60df955c396fd7f82066543a",
+      "path": "/rights/decisions/1/source_uri"
+    },
+    {
+      "leaf_hash": "b0bf878123292620850576846b2d67e9a11b19f5946433c97cb314bc40cc95aa",
+      "path": "/rights/decisions/1/target_id"
+    },
+    {
+      "leaf_hash": "46a0bdeb224f454abb218ff2924331f6690277e8e22dc6b47a87295a2aa1c35c",
+      "path": "/rights/decisions/1/target_type"
+    },
+    {
+      "leaf_hash": "89fc2481cef94ab3b566e91878dcf440bbafa51978114dcaf0ed2853ed1899eb",
+      "path": "/rights/decisions/1/use"
+    },
+    {
+      "leaf_hash": "23ceac5390cc124beebc1a8c0e16783590be24fcddfd51de4a30f6a522062785",
+      "path": "/rights/decisions/1/work_id"
+    },
+    {
+      "leaf_hash": "95bc1996f5de60e4eac90653c3bdb87cd9926c9ae84b674a93ae32fa0b100515",
+      "path": "/rights/decisions/2/actual_creator_pool_rate"
+    },
+    {
+      "leaf_hash": "8637f2d1e70c0cbfd06fad1a856ae6826d2df438d34140ffe68f7463dd4fcba1",
+      "path": "/rights/decisions/2/allowed"
+    },
+    {
+      "leaf_hash": "bf47bb7c4dfd3b71a14c20def96de103946cfc66460c5bb4efd1cfe48c6a1199",
+      "path": "/rights/decisions/2/chunk_id"
+    },
+    {
+      "leaf_hash": "1a24e5d9ba080f17c1261623f1285c192ba05c03aa157f1b5f66afb9a7ded319",
+      "path": "/rights/decisions/2/content_hash"
+    },
+    {
+      "leaf_hash": "b701a58135852bc47a7030ad39e103eb518686e777f9e42f8ce786ac11e41928",
+      "path": "/rights/decisions/2/jurisdiction"
+    },
+    {
+      "leaf_hash": "bea4e8c15c59a82a1e83879372933cfa7128c008113a4b04ed584a3f0b20c3ef",
+      "path": "/rights/decisions/2/license"
+    },
+    {
+      "leaf_hash": "0a3ce76fc55eb58b97fb023e5237e27011355f38a06013d9b04f6b1e68abaa5e",
+      "path": "/rights/decisions/2/license_uri"
+    },
+    {
+      "leaf_hash": "775d9db2f0c7d309086877c526568ec0deb57fdd730d415679621dc0d85aa831",
+      "path": "/rights/decisions/2/minimum_creator_pool_rate"
+    },
+    {
+      "leaf_hash": "1d027a9b94b293c8f862dd64d5db92fe4946bd4b71d8a0366b329f99b2aa0bf5",
+      "path": "/rights/decisions/2/policy_id"
+    },
+    {
+      "leaf_hash": "6c0fc3b948dabee20901383a4eebcf7922a787c17e40ad975367c43da9517382",
+      "path": "/rights/decisions/2/reasons/0"
+    },
+    {
+      "leaf_hash": "2658551fe36f8988640a03fb583d9af8d75141b280f7836f049f5b4c89a61fdf",
+      "path": "/rights/decisions/2/source_uri"
+    },
+    {
+      "leaf_hash": "ec486db24cbafbf4174d6306f16b402b3ffcdd88f0157d94e81168894f8d2b5f",
+      "path": "/rights/decisions/2/target_id"
+    },
+    {
+      "leaf_hash": "bc858dd7a5b48bb78a5ff2e7a2b9cb24ce73f7e395056bc55b3244caf75142b3",
+      "path": "/rights/decisions/2/target_type"
+    },
+    {
+      "leaf_hash": "02d3795bab056f725369127c5fffe7682f1c1402b501bef6955e55f3f9b3a50f",
+      "path": "/rights/decisions/2/text_match_score"
+    },
+    {
+      "leaf_hash": "9d90d7303aa8d1149a55e63722c0ac30e90b884960381ba67b98b8059e233af3",
+      "path": "/rights/decisions/2/use"
+    },
+    {
+      "leaf_hash": "644b42301bff75ee922bb5b35084bbc233e00d524c0dc567189cf02101e557c6",
+      "path": "/rights/decisions/2/work_id"
+    },
+    {
+      "leaf_hash": "9071362d4340ef765e09eaa8f31342c95c7edb350321015ef34132e0e1b1e301",
+      "path": "/rights/decisions/3/actual_creator_pool_rate"
+    },
+    {
+      "leaf_hash": "90d9d2f9bd1474d56163898fb4b997933f0ac90ca8d67845dffc9004b3cd2cf7",
+      "path": "/rights/decisions/3/allowed"
+    },
+    {
+      "leaf_hash": "747dd7b8d8630305980d573579e4fa4602c2b87e96c20efbda29b6e537accc48",
+      "path": "/rights/decisions/3/chunk_id"
+    },
+    {
+      "leaf_hash": "e7bd7ccc8035dcd6c75c3225653fecbb73edd508264864d5941e47b0a37c4fe4",
+      "path": "/rights/decisions/3/content_hash"
+    },
+    {
+      "leaf_hash": "1bd168548ba2f5558fda4c60bcbd4e42c4eb94459439fa5f40073d3d558e02d8",
+      "path": "/rights/decisions/3/jurisdiction"
+    },
+    {
+      "leaf_hash": "6334b4bf3edff4f93eaf66ce0e1beb0960bb104e5de9db72e77947d120ee8259",
+      "path": "/rights/decisions/3/license"
+    },
+    {
+      "leaf_hash": "cb6930ca90224a203ecaf8257331eca7d7481d9c6916b6cf0228354b1fd5b1e3",
+      "path": "/rights/decisions/3/license_uri"
+    },
+    {
+      "leaf_hash": "ebaed1c6977e10dae57bffcd1effaa5bd6ad9fee59310999fcb6448054a1635b",
+      "path": "/rights/decisions/3/minimum_creator_pool_rate"
+    },
+    {
+      "leaf_hash": "b3aeef990ea7e2e13364465d4b88d8c98aa2bf46d16f9ae370b55f18220007a0",
+      "path": "/rights/decisions/3/policy_id"
+    },
+    {
+      "leaf_hash": "36b55178b986b08820e1c81983c69cebd87a5ded59370fb76dee2a40e63aa2d5",
+      "path": "/rights/decisions/3/reasons/0"
+    },
+    {
+      "leaf_hash": "fd89a59f90a32bbcaf5cecb808f64dce03801ce9b410c6ed769e788471ed706c",
+      "path": "/rights/decisions/3/source_uri"
+    },
+    {
+      "leaf_hash": "cac3e8e54395083f61a31c7c2a8c66659cc941874925b274c534f354f2dadfc8",
+      "path": "/rights/decisions/3/target_id"
+    },
+    {
+      "leaf_hash": "9abfd723b5eeb1e62df770710e85c598a76a58ebad27bb32385ce9f4e70579c6",
+      "path": "/rights/decisions/3/target_type"
+    },
+    {
+      "leaf_hash": "ce0566df73a792e9b6da82874d55e9f12d3ad54c3154dee753b67a46f7e0fbcf",
+      "path": "/rights/decisions/3/use"
+    },
+    {
+      "leaf_hash": "283f7764092296c0b887772140c2d7c4cff8e7bc1b66a73c967abf6d14aee464",
+      "path": "/rights/decisions/3/work_id"
+    },
+    {
+      "leaf_hash": "a1fd102c93db9eb2167de76f212f81be0bb966ff6525e150f67a4dbaaa815925",
+      "path": "/rights/decisions/4/actual_creator_pool_rate"
+    },
+    {
+      "leaf_hash": "7a96bffd088fbb255b78d544f9ddecfbcabe46bcd4462a0953bbff94f15360b0",
+      "path": "/rights/decisions/4/allowed"
+    },
+    {
+      "leaf_hash": "f2476368fc900ed10477bab41155076579a6607ef79f7c17b501d10522ca744e",
+      "path": "/rights/decisions/4/chunk_id"
+    },
+    {
+      "leaf_hash": "64e2d004d208cc82b0dc9e86d097e3b1131912448771ffda0418bb2315517500",
+      "path": "/rights/decisions/4/content_hash"
+    },
+    {
+      "leaf_hash": "9efed253bc08b3db33fd64b9c3ae58442c9171554a13e3691224f759c73871e9",
+      "path": "/rights/decisions/4/jurisdiction"
+    },
+    {
+      "leaf_hash": "f84d9b7006cfa55afdeae675f6d5c0248373c73e375a535cc769b701eb7e67d2",
+      "path": "/rights/decisions/4/license"
+    },
+    {
+      "leaf_hash": "908ff9f4d6e570c30ce87758558004fd6435036c3fe85b19236e265552a7b4cb",
+      "path": "/rights/decisions/4/license_uri"
+    },
+    {
+      "leaf_hash": "58be29273a3e98a1e51a47d5b6e6a9deb68d894e99d18441e657520e8ba5ba34",
+      "path": "/rights/decisions/4/minimum_creator_pool_rate"
+    },
+    {
+      "leaf_hash": "61c3461c7b40cad3a789f10e9925a339bc0478f76b1e0ab2c9bc18899c0c9a10",
+      "path": "/rights/decisions/4/policy_id"
+    },
+    {
+      "leaf_hash": "fe5ac28f344e1db7cc277c049ec7618c33cfd72bcaac7d659e5b6464e7ae338b",
+      "path": "/rights/decisions/4/reasons/0"
+    },
+    {
+      "leaf_hash": "f7d3b85b057ddf1009f5e6ed40ee6ae8c2476805aebd0923e9824076d32c867f",
+      "path": "/rights/decisions/4/source_uri"
+    },
+    {
+      "leaf_hash": "4090de4154f2760bf97953f09dc769d048ca9013f18e47b3e7b4740d6d872ccb",
+      "path": "/rights/decisions/4/target_id"
+    },
+    {
+      "leaf_hash": "04a81ca09426fe072691a1e9ae0b12a58981bd6d138fa8d82fffe1c875ee1a97",
+      "path": "/rights/decisions/4/target_type"
+    },
+    {
+      "leaf_hash": "35982f2c254a8a30f4e03c0f291eaa4a24715729ad79e0763d0cac2018c6c1ed",
+      "path": "/rights/decisions/4/text_match_score"
+    },
+    {
+      "leaf_hash": "c8a3d0778908fd2eb4b9401cbe94cd55b6654ee9deb303ef1a93e76aa06d3667",
+      "path": "/rights/decisions/4/use"
+    },
+    {
+      "leaf_hash": "a5f62b67451bfc851eb2f30314902a4d55f432de43a4466a232ff11f2ac2cf06",
+      "path": "/rights/decisions/4/work_id"
+    },
+    {
+      "leaf_hash": "6ae6c2aa0d3bf824ce429d459afcbc087989f6c4de279c1c0c98efa60d58ac3f",
+      "path": "/rights/decisions/5/actual_creator_pool_rate"
+    },
+    {
+      "leaf_hash": "842d8a8a778f028e1c1be0b09b5ce09f7c5351e758df60dd17058509a7c86a67",
+      "path": "/rights/decisions/5/allowed"
+    },
+    {
+      "leaf_hash": "fd61c09b6eaaafba48611e974f80172058d2624da64c3582d0acbf460e03df4e",
+      "path": "/rights/decisions/5/chunk_id"
+    },
+    {
+      "leaf_hash": "926daa83b1d9ce6b5b5c9e441d3094cb3f82f1d6999477773805b9455b53670b",
+      "path": "/rights/decisions/5/content_hash"
+    },
+    {
+      "leaf_hash": "79acfe338de50d6b15fcd241d99a788524bdd59b6c22de2f5f2bb604da55eadb",
+      "path": "/rights/decisions/5/jurisdiction"
+    },
+    {
+      "leaf_hash": "e9efbd90a58d3f4fd6480fb25a311ac8e5e97a8ac8cf3e8d4657848772c95202",
+      "path": "/rights/decisions/5/license"
+    },
+    {
+      "leaf_hash": "2800bb8e1968dadf62e396f30eef270f23335bb26ea2efb75bbf044402f28af7",
+      "path": "/rights/decisions/5/license_uri"
+    },
+    {
+      "leaf_hash": "13c2468e7715afe8c77706bd87c84ccea9b9cb62a8fa0b2e321583bddb8682d5",
+      "path": "/rights/decisions/5/minimum_creator_pool_rate"
+    },
+    {
+      "leaf_hash": "a8e274d664b735a5f274ffe4c24ce6f276f3a1b2978ab9903f38c0a8a084c0e0",
+      "path": "/rights/decisions/5/policy_id"
+    },
+    {
+      "leaf_hash": "f1d3423cad9015d58f05d3815b14a59393770c63d0adabeb640766df476fa064",
+      "path": "/rights/decisions/5/reasons/0"
+    },
+    {
+      "leaf_hash": "0eacd50ec1f3f1a122f5b24ffc1f1fec56b1ca6fc274391ce6fc7d1b4fe5397f",
+      "path": "/rights/decisions/5/source_uri"
+    },
+    {
+      "leaf_hash": "a0297fd66fe909c1fa78aaadfa4d58c81ceb585498d7e64637666e8a31455f83",
+      "path": "/rights/decisions/5/target_id"
+    },
+    {
+      "leaf_hash": "79314fee1cb3308ac16a7742c40ab1c5d9c2b83c1874481b8eb58832ff7345cf",
+      "path": "/rights/decisions/5/target_type"
+    },
+    {
+      "leaf_hash": "524c35b23837e663fbd2b9bf6cc71f91d0c3281dd96b949dbf7e52761bc7e74c",
+      "path": "/rights/decisions/5/use"
+    },
+    {
+      "leaf_hash": "51d0ea1348d9868aadca1d0f5eb84c7e95946d1bea0ad96b6b1e8ba330e7b860",
+      "path": "/rights/decisions/5/work_id"
+    }
+  ],
+  "summary": {
+    "disclosed_path_count": 146,
+    "redacted_categories": {
+      "claim_evidence_text": 6,
+      "economics": 60,
+      "other": 125,
+      "rights_decisions": 93,
+      "source_accesses": 90,
+      "source_quotes": 3
+    },
+    "redacted_path_count": 377
+  }
+}

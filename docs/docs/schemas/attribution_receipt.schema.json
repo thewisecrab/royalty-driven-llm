@@ -1,0 +1,339 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/attribution_receipt.schema.json",
+  "title": "RDLLM Attribution Receipt",
+  "type": "object",
+  "required": ["receipt_hash", "payload", "signature"],
+  "properties": {
+    "receipt_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "payload": {
+      "type": "object",
+      "required": [
+        "protocol_version",
+        "issuer",
+        "issued_at",
+        "model",
+        "event",
+        "grounding",
+        "rights",
+        "registry",
+        "telemetry",
+        "economics",
+        "privacy"
+      ],
+      "properties": {
+        "protocol_version": {
+          "const": "rdllm-attribution-receipt/v1"
+        },
+        "issuer": {
+          "type": "string"
+        },
+        "issued_at": {
+          "type": "string"
+        },
+        "model": {
+          "type": "object",
+          "required": ["id", "version", "route_id"],
+          "properties": {
+            "id": { "type": "string" },
+            "version": { "type": "string" },
+            "route_id": { "type": "string" }
+          }
+        },
+        "event": {
+          "type": "object",
+          "required": [
+            "event_id",
+            "event_hash",
+            "prompt_hash",
+            "answer_hash",
+            "rendered_output_hash"
+          ],
+          "properties": {
+            "event_id": { "type": "string" },
+            "event_hash": { "type": "string" },
+            "prompt_hash": { "type": "string" },
+            "answer_hash": { "type": "string" },
+            "rendered_output_hash": { "type": "string" }
+          }
+        },
+        "grounding": {
+          "type": "object",
+          "required": [
+            "report",
+            "quality",
+            "attribution_gap",
+            "source_accesses",
+            "sources",
+            "claims"
+          ],
+          "properties": {
+            "report": { "type": "object" },
+            "quality": {
+              "type": "object",
+              "required": ["quality_version", "verdict", "overall_score", "scores", "summary", "issues"],
+              "properties": {
+                "quality_version": {
+                  "const": "rdllm-grounding-quality/v1"
+                },
+                "verdict": {
+                  "enum": ["verified", "warning", "failed", "unattributed", "blocked_by_policy", "blocked_by_registry"]
+                },
+                "overall_score": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "scores": { "type": "object" },
+                "summary": { "type": "object" },
+                "issues": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              }
+            },
+            "attribution_gap": {
+              "type": "object",
+              "required": [
+                "gap_version",
+                "verdict",
+                "summary",
+                "scores",
+                "classifications",
+                "accessed_sources",
+                "issues",
+                "report_hash"
+              ],
+              "properties": {
+                "gap_version": {
+                  "const": "rdllm-attribution-gap/v1"
+                },
+                "verdict": {
+                  "enum": ["closed", "open_gap", "escrowed", "unattributed"]
+                },
+                "summary": { "type": "object" },
+                "scores": { "type": "object" },
+                "classifications": { "type": "object" },
+                "accessed_sources": { "type": "array" },
+                "issues": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "report_hash": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "additionalProperties": true
+            },
+            "source_accesses": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "access_id",
+                  "access_type",
+                  "use",
+                  "chunk_id",
+                  "work_id",
+                  "creator_id",
+                  "content_hash",
+                  "score",
+                  "rank",
+                  "policy_allowed",
+                  "registry_allowed",
+                  "decision_status"
+                ],
+                "properties": {
+                  "access_id": { "type": "string" },
+                  "access_type": { "enum": ["retrieval", "text_match"] },
+                  "use": { "type": "string" },
+                  "chunk_id": { "type": "string" },
+                  "work_id": { "type": "string" },
+                  "creator_id": { "type": "string" },
+                  "content_hash": { "type": "string" },
+                  "score": { "type": "number" },
+                  "rank": { "type": "integer" },
+                  "policy_allowed": { "type": "boolean" },
+                  "registry_allowed": { "type": "boolean" },
+                  "decision_status": { "type": "string" }
+                },
+                "additionalProperties": true
+              }
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "label",
+                  "creator_id",
+                  "work_id",
+                  "chunk_id",
+                  "source_uri",
+                  "content_hash",
+                  "contribution_weight",
+                  "evidence_span_hashes"
+                ],
+                "properties": {
+                  "label": { "type": "string" },
+                  "creator_id": { "type": "string" },
+                  "work_id": { "type": "string" },
+                  "chunk_id": { "type": "string" },
+                  "source_uri": { "type": "string" },
+                  "content_hash": { "type": "string" },
+                  "contribution_weight": { "type": ["string", "number"] },
+                  "evidence_span_hashes": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "claims": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "claim",
+                  "source_label",
+                  "support_score",
+                  "supported",
+                  "work_id",
+                  "chunk_id",
+                  "evidence_text",
+                  "evidence_span_hash",
+                  "evidence_start_char",
+                  "evidence_end_char"
+                ],
+                "properties": {
+                  "claim": { "type": "string" },
+                  "source_label": { "type": "string" },
+                  "support_score": { "type": "number" },
+                  "supported": { "type": "boolean" },
+                  "work_id": { "type": "string" },
+                  "chunk_id": { "type": "string" },
+                  "evidence_text": { "type": "string" },
+                  "evidence_span_hash": { "type": "string" },
+                  "evidence_start_char": { "type": "integer" },
+                  "evidence_end_char": { "type": "integer" }
+                }
+              }
+            }
+          }
+        },
+        "rights": {
+          "type": "object",
+          "required": ["policy_status", "policy_denials", "decisions"],
+          "properties": {
+            "policy_status": { "type": "string" },
+            "policy_denials": { "type": "integer" },
+            "decisions": { "type": "array" }
+          }
+        },
+        "registry": {
+          "type": "object",
+          "required": [
+            "registry_status",
+            "registry_conflicts",
+            "registry_report_hash",
+            "decisions"
+          ],
+          "properties": {
+            "registry_status": { "enum": ["clear", "disputed"] },
+            "registry_conflicts": { "type": "integer" },
+            "registry_report_hash": { "type": "string" },
+            "decisions": { "type": "array" }
+          }
+        },
+        "telemetry": {
+          "type": "object",
+          "required": [
+            "trace_exchange_version",
+            "otel_semconv",
+            "source_access_trace_hash",
+            "source_reference_trace_hash",
+            "claim_support_trace_hash"
+          ],
+          "properties": {
+            "trace_exchange_version": {
+              "const": "rdllm-trace-exchange/v1"
+            },
+            "otel_semconv": {
+              "type": "string"
+            },
+            "source_access_trace_hash": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "source_reference_trace_hash": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "claim_support_trace_hash": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "economics": {
+          "type": "object",
+          "required": ["gross_revenue", "creator_pool_rate", "creator_pool", "shares"],
+          "properties": {
+            "gross_revenue": { "type": "string" },
+            "creator_pool_rate": { "type": "string" },
+            "creator_pool": { "type": "string" },
+            "shares": { "type": "array" }
+          }
+        },
+        "privacy": {
+          "type": "object",
+          "required": [
+            "prompt_disclosed",
+            "answer_disclosed",
+            "source_quotes_disclosed",
+            "selective_disclosure",
+            "disclosure_version",
+            "disclosure_root",
+            "disclosure_salts"
+          ],
+          "properties": {
+            "prompt_disclosed": { "type": "boolean" },
+            "answer_disclosed": { "type": "boolean" },
+            "source_quotes_disclosed": { "type": "boolean" },
+            "selective_disclosure": { "type": "string" },
+            "disclosure_version": {
+              "const": "rdllm-selective-disclosure/v1"
+            },
+            "disclosure_root": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "disclosure_salts": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "properties": {
+        "algorithm": { "type": "string" },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      }
+    }
+  }
+}

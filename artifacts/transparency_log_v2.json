@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "index": 0,
+      "payload_hash": "04fe4f9f51367947668a8ca3fe3b74aa03e31a9bd3408d22f85bcf64a10bf552",
+      "receipt_envelope_hash": "8940119cc1a9b3b8b77d9d214938dfc675b227d2dc85cfdd6747b56517e4d280",
+      "receipt_hash": "04fe4f9f51367947668a8ca3fe3b74aa03e31a9bd3408d22f85bcf64a10bf552"
+    }
+  ],
+  "log_version": "rdllm-transparency-log/v1",
+  "root": "04fe4f9f51367947668a8ca3fe3b74aa03e31a9bd3408d22f85bcf64a10bf552",
+  "tree_size": 1
+}

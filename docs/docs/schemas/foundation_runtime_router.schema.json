@@ -1,0 +1,263 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/foundation_runtime_router.schema.json",
+  "title": "RDLLM Foundation Runtime Router",
+  "type": "object",
+  "required": [
+    "runtime_router_version",
+    "issuer",
+    "created_at",
+    "routing_policy",
+    "artifact_bindings",
+    "candidate_route_bindings",
+    "selected_route_binding",
+    "normalized_universal_contract",
+    "router_decision",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "foundation_runtime_router_hash",
+    "signature"
+  ],
+  "properties": {
+    "runtime_router_version": {
+      "const": "rdllm-foundation-runtime-router/v1"
+    },
+    "issuer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "routing_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "minimum_route_attribution_level",
+        "required_provider_families",
+        "selected_route_id",
+        "selection_policy",
+        "on_unverified_route",
+        "on_fallback_route_failure",
+        "raw_router_payload_disclosure_allowed"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-foundation-runtime-router-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L128" },
+        "minimum_input_level": { "const": "RDLLM-L127" },
+        "minimum_route_attribution_level": { "type": "string" },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "selected_route_id": { "type": "string" },
+        "selection_policy": { "type": "string" },
+        "on_unverified_route": { "const": "block_display" },
+        "on_fallback_route_failure": { "const": "block_display" },
+        "raw_router_payload_disclosure_allowed": { "const": false }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "present",
+          "declared_hash",
+          "hash_reproducible",
+          "artifact_type"
+        ],
+        "properties": {
+          "present": { "type": "boolean" },
+          "declared_hash": { "type": "string" },
+          "hash_reproducible": { "type": "boolean" },
+          "artifact_type": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "candidate_route_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "route_id",
+          "provider_family",
+          "route_hash"
+        ],
+        "properties": {
+          "route_id": { "type": "string" },
+          "provider_family": { "type": "string" },
+          "route_hash": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "selected_route_binding": {
+      "type": "object",
+      "required": [
+        "route_id",
+        "provider_id",
+        "provider_family",
+        "native_api_version",
+        "native_model",
+        "foundation_runtime_adapter_hash",
+        "route_decision_hash"
+      ],
+      "additionalProperties": true
+    },
+    "normalized_universal_contract": {
+      "type": "object",
+      "required": [
+        "profile",
+        "foundation_runtime_adapter_hash",
+        "foundation_provider_conformance_hash",
+        "composite_foundation_adapter_hash",
+        "foundation_profile_hash",
+        "discovery_manifest_hash",
+        "response_envelope_hash",
+        "source_footer_delivery_hash",
+        "citation_url_health_hash"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-universal-foundation-runtime-routing/v1" },
+        "foundation_runtime_adapter_hash": { "type": "string" },
+        "foundation_provider_conformance_hash": { "type": "string" },
+        "composite_foundation_adapter_hash": { "type": "string" },
+        "foundation_profile_hash": { "type": "string" },
+        "discovery_manifest_hash": { "type": "string" },
+        "response_envelope_hash": { "type": "string" },
+        "source_footer_delivery_hash": { "type": "string" },
+        "citation_url_health_hash": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "router_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "release_authorized",
+        "selected_route_id",
+        "selected_provider_family",
+        "failed_checks",
+        "failure_modes",
+        "safe_output_policy"
+      ],
+      "properties": {
+        "decision": {
+          "enum": [ "release", "block_display" ]
+        },
+        "release_authorized": { "type": "boolean" },
+        "selected_route_id": { "type": "string" },
+        "selected_provider_family": { "type": "string" },
+        "failed_checks": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "safe_output_policy": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [ "foundation_runtime_router" ],
+      "additionalProperties": { "type": "string" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_router_payload_disclosed",
+        "raw_native_response_disclosed",
+        "raw_prompt_text_disclosed",
+        "raw_source_text_disclosed",
+        "hash_only_candidate_routes"
+      ],
+      "properties": {
+        "raw_router_payload_disclosed": { "const": false },
+        "raw_native_response_disclosed": { "const": false },
+        "raw_prompt_text_disclosed": { "const": false },
+        "raw_source_text_disclosed": { "const": false },
+        "hash_only_candidate_routes": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "candidate_route_count",
+        "required_provider_family_count",
+        "covered_provider_family_count",
+        "selected_provider_family",
+        "failed_check_count",
+        "router_release_authorized",
+        "fail_closed_router_supported",
+        "universal_foundation_routing_supported",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": {
+          "enum": [ "released", "blocked" ]
+        },
+        "target_certification_level": { "const": "RDLLM-L128" },
+        "minimum_input_level": { "const": "RDLLM-L127" },
+        "candidate_route_count": { "type": "integer", "minimum": 0 },
+        "required_provider_family_count": { "type": "integer", "minimum": 0 },
+        "covered_provider_family_count": { "type": "integer", "minimum": 0 },
+        "selected_provider_family": { "type": "string" },
+        "failed_check_count": { "type": "integer", "minimum": 0 },
+        "failure_mode_count": { "type": "integer", "minimum": 0 },
+        "router_release_authorized": { "type": "boolean" },
+        "fail_closed_router_supported": { "type": "boolean" },
+        "universal_foundation_routing_supported": { "type": "boolean" },
+        "privacy_preserved": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "foundation_runtime_router_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "properties": {
+        "algorithm": { "type": "string" },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

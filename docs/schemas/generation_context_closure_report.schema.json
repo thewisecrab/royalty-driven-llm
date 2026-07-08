@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/generation_context_closure_report.schema.json",
+  "title": "RDLLM Generation Context Closure Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "event",
+    "artifact_bindings",
+    "context_blocks",
+    "claim_context_rows",
+    "summary",
+    "commitments",
+    "schemas",
+    "privacy",
+    "issues",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-generation-context-closure-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": { "type": "object" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "answer_hash",
+        "trace_hash"
+      ],
+      "properties": {
+        "event_id": { "type": "string" },
+        "event_hash": { "type": "string" },
+        "rendered_output_hash": { "type": "string" },
+        "answer_hash": { "type": "string" },
+        "trace_hash": { "type": "string" }
+      }
+    },
+    "artifact_bindings": { "type": "object" },
+    "context_blocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "context_block_id",
+          "block_index",
+          "source_access_id",
+          "source_access_span_id",
+          "chunk_id",
+          "work_id",
+          "creator_id",
+          "content_hash",
+          "access_type",
+          "use",
+          "decision_status",
+          "policy_allowed",
+          "registry_allowed",
+          "context_text_hash",
+          "included_claim_hashes",
+          "included_evidence_span_hashes",
+          "context_block_hash"
+        ]
+      }
+    },
+    "claim_context_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_index",
+          "claim_hash",
+          "source_label",
+          "chunk_id",
+          "work_id",
+          "content_hash",
+          "evidence_span_hash",
+          "matched_context_block_id",
+          "matched_source_access_id",
+          "source_access_in_trace",
+          "retrieval_context_allowed",
+          "evidence_span_in_context",
+          "answer_surface_covered",
+          "context_closed",
+          "claim_context_hash"
+        ]
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "context_block_count",
+        "supported_claim_count",
+        "context_closed_claim_count",
+        "missing_context_claim_count",
+        "all_supported_claims_in_generation_context",
+        "issue_count"
+      ],
+      "properties": {
+        "status": { "type": "string" },
+        "target_certification_level": { "const": "RDLLM-L60" },
+        "context_block_count": { "type": "integer" },
+        "supported_claim_count": { "type": "integer" },
+        "context_closed_claim_count": { "type": "integer" },
+        "missing_context_claim_count": { "type": "integer" },
+        "all_supported_claims_in_generation_context": { "type": "boolean" },
+        "issue_count": { "type": "integer" }
+      }
+    },
+    "commitments": { "type": "object" },
+    "schemas": { "type": "object" },
+    "privacy": { "type": "object" },
+    "issues": { "type": "array", "items": { "type": "string" } },
+    "report_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

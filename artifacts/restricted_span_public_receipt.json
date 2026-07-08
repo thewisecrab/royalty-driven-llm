@@ -1,0 +1,38 @@
+{
+  "event": {
+    "answer_hash": "2ddb9718d4c702437c9aefd16babe47c42e38dd87ac0d56280b75d063e91e3d5",
+    "event_hash": "7c6f6519bd37775664e0906d286c7e3cf3c6c3f4dbd5ca5b1fc98c7782106a9e",
+    "event_id": "evt_7c6f6519bd377756",
+    "prompt_hash": "9b60743eb560fd0a449d3805c2e5b2f980775091d4f55f78e645c692be019e9c",
+    "rendered_output_hash": "4baf904873bfdef2bc9ac560c01146e64602bab7445f5e06538b3989b3a9db4e"
+  },
+  "grounding_report": {
+    "coverage": 0.0,
+    "policy_denials": 1,
+    "policy_status": "blocked",
+    "source_count": 0,
+    "status": "rights_blocked",
+    "supported_claims": 0,
+    "total_claims": 1,
+    "unsupported_claims": 1
+  },
+  "issued_at": "2026-05-29T17:17:54Z",
+  "issuer": "rdllm-local-demo",
+  "model": {
+    "id": "model:unspecified",
+    "route_id": "route:default",
+    "version": "unknown"
+  },
+  "protocol_version": "rdllm-attribution-receipt/v1",
+  "receipt_hash": "77d83e0833c093b1eca619aedeb256c695f9e221366051d2ed69effb9e432509",
+  "rights": {
+    "policy_denials": 1,
+    "policy_status": "blocked"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "051e6660733d9d2f8b012856af33f3ecf60f06e8d7e12191619fd908dd13acc9"
+  },
+  "sources": []
+}

@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_runtime_route_binding_contract.schema.json",
+  "title": "RDLLM Universal Runtime Route Binding Contract",
+  "type": "object",
+  "required": [
+    "universal_runtime_route_binding_contract_version",
+    "schema",
+    "policy",
+    "well_known",
+    "production_invocation_admission_binding",
+    "provider_catalog_coverage_binding",
+    "runtime_binding_stage_rows",
+    "runtime_model_field_rows",
+    "runtime_surface_rows",
+    "runtime_route_binding_rows",
+    "negative_runtime_rows",
+    "evidence_roots",
+    "checks",
+    "runtime_route_binding_decision",
+    "coverage",
+    "privacy",
+    "summary",
+    "universal_runtime_route_binding_contract_hash"
+  ],
+  "properties": {
+    "universal_runtime_route_binding_contract_version": {
+      "const": "rdllm-universal-runtime-route-binding-contract/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_runtime_route_binding_contract.schema.json"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_production_invocation_level",
+        "minimum_provider_catalog_coverage_level",
+        "runtime_model_must_match_catalog_covered_route",
+        "provider_response_model_echo_required",
+        "alias_and_fallback_changes_fail_closed",
+        "source_footer_route_binding_required",
+        "settlement_meter_route_binding_required"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-runtime-route-binding-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L179" },
+        "minimum_production_invocation_level": { "const": "RDLLM-L170" },
+        "minimum_provider_catalog_coverage_level": { "const": "RDLLM-L178" },
+        "runtime_model_must_match_catalog_covered_route": { "const": true },
+        "provider_response_model_echo_required": { "const": true },
+        "alias_and_fallback_changes_fail_closed": { "const": true },
+        "source_footer_route_binding_required": { "const": true },
+        "settlement_meter_route_binding_required": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-runtime-route-binding-contract.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-runtime-route-binding-contract/v1"
+        }
+      },
+      "additionalProperties": true
+    },
+    "production_invocation_admission_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 64 },
+        "payload_hash": { "type": "string", "minLength": 64 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L170" }
+      },
+      "additionalProperties": true
+    },
+    "provider_catalog_coverage_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level",
+        "catalog_covered_route_count"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 64 },
+        "payload_hash": { "type": "string", "minLength": 64 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L178" },
+        "catalog_covered_route_count": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": true
+    },
+    "runtime_binding_stage_rows": {
+      "type": "object",
+      "minProperties": 12
+    },
+    "runtime_model_field_rows": {
+      "type": "object",
+      "minProperties": 14
+    },
+    "runtime_surface_rows": {
+      "type": "object",
+      "minProperties": 14
+    },
+    "runtime_route_binding_rows": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "negative_runtime_rows": {
+      "type": "object",
+      "minProperties": 18
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "production_invocation_admission_bound",
+        "production_invocation_admission_l170_ready",
+        "provider_catalog_coverage_bound",
+        "provider_catalog_coverage_l178_ready",
+        "runtime_binding_stage_rows_complete",
+        "runtime_model_field_rows_complete",
+        "runtime_surface_rows_complete",
+        "all_catalog_routes_have_runtime_binding",
+        "negative_runtime_fixtures_reject",
+        "contract_signed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "runtime_route_binding_decision": {
+      "type": "object",
+      "required": [
+        "universal_runtime_route_binding_ready",
+        "live_model_invocation_allowed",
+        "response_release_allowed",
+        "source_footer_reliance_allowed",
+        "creator_settlement_allowed",
+        "runtime_alias_or_fallback_without_binding_blocked",
+        "uncataloged_runtime_model_blocked"
+      ],
+      "properties": {
+        "universal_runtime_route_binding_ready": { "const": true },
+        "live_model_invocation_allowed": { "const": true },
+        "response_release_allowed": { "const": true },
+        "source_footer_reliance_allowed": { "const": true },
+        "creator_settlement_allowed": { "const": true },
+        "runtime_alias_or_fallback_without_binding_blocked": { "const": true },
+        "uncataloged_runtime_model_blocked": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payloads_excluded",
+        "private_prompts_excluded",
+        "private_outputs_excluded",
+        "private_provider_payloads_excluded",
+        "public_contract_uses_hashes_and_route_metadata"
+      ],
+      "properties": {
+        "private_payloads_excluded": { "const": true },
+        "private_prompts_excluded": { "const": true },
+        "private_outputs_excluded": { "const": true },
+        "private_provider_payloads_excluded": { "const": true },
+        "public_contract_uses_hashes_and_route_metadata": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_production_invocation_level",
+        "minimum_provider_catalog_coverage_level",
+        "runtime_binding_stage_count",
+        "ready_runtime_binding_stage_count",
+        "runtime_model_field_count",
+        "ready_runtime_model_field_count",
+        "runtime_surface_count",
+        "ready_runtime_surface_count",
+        "catalog_covered_route_count",
+        "ready_runtime_route_binding_count",
+        "negative_runtime_failure_count",
+        "ready_negative_runtime_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_runtime_route_binding_contract"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L179" },
+        "minimum_production_invocation_level": { "const": "RDLLM-L170" },
+        "minimum_provider_catalog_coverage_level": { "const": "RDLLM-L178" },
+        "runtime_binding_stage_count": { "const": 12 },
+        "ready_runtime_binding_stage_count": { "const": 12 },
+        "runtime_model_field_count": { "const": 14 },
+        "ready_runtime_model_field_count": { "const": 14 },
+        "runtime_surface_count": { "const": 14 },
+        "ready_runtime_surface_count": { "const": 14 },
+        "catalog_covered_route_count": { "type": "integer", "minimum": 1 },
+        "ready_runtime_route_binding_count": { "type": "integer", "minimum": 1 },
+        "negative_runtime_failure_count": { "const": 18 },
+        "ready_negative_runtime_failure_count": { "const": 18 },
+        "failure_mode_count": { "const": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_runtime_route_binding_contract": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "universal_runtime_route_binding_contract_hash": {
+      "type": "string",
+      "minLength": 64
+    }
+  },
+  "additionalProperties": true
+}

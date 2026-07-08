@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/source_origin_lineage.schema.json",
+  "title": "RDLLM Source Origin Lineage",
+  "type": "object",
+  "required": [
+    "lineage_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "source_origin_rows",
+    "upstream_royalty_rows",
+    "footer_display",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "privacy",
+    "schemas",
+    "summary",
+    "source_origin_lineage_hash",
+    "signature"
+  ],
+  "properties": {
+    "lineage_version": {
+      "const": "rdllm-source-origin-lineage/v1"
+    },
+    "issuer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "target_certification_level",
+        "minimum_input_level",
+        "synthetic_sources_require_upstream_lineage",
+        "origin_review_escrow_required"
+      ],
+      "properties": {
+        "target_certification_level": {
+          "const": "RDLLM-L121"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L120"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "source_origin_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "work_id",
+          "chunk_id",
+          "origin_class",
+          "lineage_status",
+          "settlement_action",
+          "source_origin_row_hash"
+        ],
+        "properties": {
+          "origin_class": {
+            "enum": [
+              "human_original",
+              "synthetic_with_lineage",
+              "synthetic_unattributed",
+              "unknown"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "upstream_royalty_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_label",
+          "upstream_creator_id",
+          "upstream_work_id",
+          "upstream_share",
+          "upstream_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "footer_display": {
+      "type": "object",
+      "required": [
+        "profile",
+        "line_count",
+        "origin_lines",
+        "source_origin_root",
+        "upstream_lineage_root",
+        "footer_hash"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "required": [
+        "failed_checks",
+        "unknown_origin_source_labels",
+        "synthetic_unattributed_source_labels",
+        "origin_review_escrow_source_labels"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "source_origin_root",
+        "upstream_lineage_root",
+        "footer_display_hash",
+        "artifact_binding_root",
+        "schema"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "origin_labels_disclosed",
+        "raw_prompt_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_claim_text_disclosed",
+        "raw_evidence_text_disclosed",
+        "raw_source_text_disclosed",
+        "payment_account_disclosed"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "source_origin_lineage"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "visible_source_count",
+        "human_original_source_count",
+        "direct_payout_source_count",
+        "origin_review_escrow_source_count",
+        "upstream_royalty_row_count",
+        "failed_check_count"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "ready",
+            "failed"
+          ]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L121"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L120"
+        }
+      },
+      "additionalProperties": true
+    },
+    "source_origin_lineage_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

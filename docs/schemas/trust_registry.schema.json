@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/trust_registry.schema.json",
+  "title": "RDLLM Trust Registry",
+  "type": "object",
+  "required": [
+    "registry_version",
+    "issuer",
+    "created_at",
+    "trust_profile",
+    "principals",
+    "revoked_keys",
+    "key_rotations",
+    "artifact_bindings",
+    "witness_bindings",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "trust_registry_hash",
+    "signature"
+  ],
+  "properties": {
+    "registry_version": {
+      "const": "rdllm-trust-registry/v1"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "trust_profile": {
+      "type": "object",
+      "required": [
+        "profile",
+        "key_format",
+        "production_mapping",
+        "raw_key_material_disallowed",
+        "revocation_checked",
+        "rotation_checked",
+        "witness_keys_bound"
+      ],
+      "additionalProperties": true
+    },
+    "principals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "principal_id",
+          "role",
+          "key_id",
+          "key_type",
+          "key_hash",
+          "status",
+          "allowed_signature_algorithms",
+          "public_key_material_disclosed",
+          "entry_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "revoked_keys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "principal_id",
+          "role",
+          "key_id",
+          "key_hash",
+          "status",
+          "entry_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "key_rotations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "principal_id",
+          "role",
+          "previous_key_hash",
+          "new_key_hash",
+          "new_key_active",
+          "rotation_changes_key",
+          "rotation_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "artifact_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "artifact_type",
+          "issuer",
+          "signature_algorithm",
+          "signature_present",
+          "declared_hash",
+          "payload_hash",
+          "signature_verified",
+          "signer_registered",
+          "revoked_key_used",
+          "binding_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "witness_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "witness_id",
+          "subject_hash",
+          "monitor_hash",
+          "checkpoint_hash",
+          "witness_registered",
+          "witness_key_hash",
+          "witness_key_hash_matches",
+          "witness_signature_valid",
+          "attestation_hash_valid",
+          "revoked_key_used",
+          "binding_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "principals_present",
+        "key_ids_unique",
+        "artifact_signers_registered",
+        "artifact_signatures_verified",
+        "witness_keys_registered",
+        "witness_signatures_verified",
+        "revoked_keys_not_used",
+        "rotations_link_active_new_keys",
+        "private_key_material_absent"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "principal_root",
+        "revoked_key_root",
+        "rotation_root",
+        "artifact_binding_root",
+        "witness_binding_root",
+        "schema"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "principal_count",
+        "revoked_key_count",
+        "rotation_count",
+        "artifact_binding_count",
+        "witness_binding_count",
+        "failed_check_count",
+        "private_input_field_count"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_key_material_disclosed",
+        "signing_secrets_disclosed",
+        "private_prompt_or_source_text_disclosed",
+        "customer_or_payment_text_disclosed",
+        "registry_uses_key_hashes_and_artifact_hashes"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "trust_registry_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

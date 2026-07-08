@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/attribution_exchange.schema.json",
+  "title": "RDLLM Attribution Exchange Manifest",
+  "type": "object",
+  "required": [
+    "exchange_version",
+    "issuer",
+    "created_at",
+    "provider",
+    "exchange_contract",
+    "imported_artifacts",
+    "public_source_footers",
+    "schemas",
+    "verification_matrix",
+    "interoperability",
+    "commitments",
+    "readiness_checks",
+    "summary",
+    "privacy",
+    "exchange_hash",
+    "signature"
+  ],
+  "properties": {
+    "exchange_version": {
+      "const": "rdllm-attribution-exchange/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "provider": {
+      "type": "object",
+      "required": ["id", "model_id", "model_version"],
+      "additionalProperties": true
+    },
+    "exchange_contract": {
+      "type": "object",
+      "required": [
+        "profile",
+        "well_known_path",
+        "minimum_upstream_certification_level",
+        "required_response_format",
+        "required_imported_artifacts",
+        "downstream_relay_rules"
+      ],
+      "additionalProperties": true
+    },
+    "imported_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "artifact_type",
+          "schema",
+          "well_known_path",
+          "required",
+          "portable",
+          "declared_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "entry_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "public_source_footers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["input_id", "footer_status", "footer_text_hash", "sources"],
+        "additionalProperties": true
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "attribution_receipt",
+        "answer_provenance_card",
+        "source_verification_report",
+        "response_envelope",
+        "provider_attribution_card",
+        "lineage_report",
+        "provenance_evaluation_report",
+        "counterfactual_influence_report",
+        "media_attribution_report",
+        "model_signal_attribution_report",
+        "rights_remediation_report",
+        "semantic_text_attribution_report",
+        "creator_license_contract",
+        "attribution_exchange",
+        "conformance_vector_pack",
+        "federation_handshake",
+        "attribution_capsule",
+        "response_release_gate",
+        "proof_carrying_response",
+        "serving_gateway_report",
+        "streaming_attribution_manifest",
+        "assurance_bundle",
+        "certification_report",
+        "integration_profile",
+        "discovery_manifest"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "verification_matrix": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["check", "artifact", "passed", "status", "row_hash"],
+        "additionalProperties": true
+      }
+    },
+    "interoperability": {
+      "type": "object",
+      "required": [
+        "supported_consumers",
+        "source_footer_relay_supported",
+        "hash_only_import_supported",
+        "escrow_relay_supported",
+        "creator_license_contract_relay_supported",
+        "downstream_extension_supported"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "imported_artifact_root",
+        "source_footer_root",
+        "verification_matrix_root",
+        "schema_root",
+        "provider_card_hash",
+        "certification_report_hash",
+        "integration_profile_hash",
+        "discovery_manifest_hash",
+        "response_envelope_hash",
+        "assurance_bundle_hash",
+        "semantic_text_attribution_report_hash",
+        "creator_license_contract_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "readiness_checks": {
+      "type": "object",
+      "required": [
+        "all_required_artifacts_imported",
+        "verification_matrix_passed",
+        "source_footers_portable",
+        "privacy_promises_preserved",
+        "exchange_schema_declared",
+        "offline_verifier_declared"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "cross_provider_ready",
+        "artifact_count",
+        "required_artifact_count",
+        "source_footer_count",
+        "schema_count",
+        "verification_check_count",
+        "verification_passed",
+        "minimum_upstream_certification_level",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "artifact_payloads_embedded",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "matched_text_disclosed",
+        "exchange_uses_hashes_footers_and_contract_metadata"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "exchange_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

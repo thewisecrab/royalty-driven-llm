@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/operator_acceptance_verification.schema.json",
+  "title": "RDLLM Operator Acceptance Verification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "errors",
+    "acceptance_status",
+    "production_acceptance_decision",
+    "traffic_decision",
+    "recorded_acceptance_report_hash",
+    "computed_acceptance_report_hash"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-operator-acceptance-verification/v1"
+    },
+    "status": {
+      "enum": ["passed", "failed"]
+    },
+    "errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "acceptance_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "production_acceptance_decision": {
+      "enum": ["allow", "block", "unknown"]
+    },
+    "traffic_decision": {
+      "enum": ["allow", "block", "unknown"]
+    },
+    "recorded_acceptance_report_hash": {
+      "$ref": "#/$defs/hash64_or_empty"
+    },
+    "computed_acceptance_report_hash": {
+      "$ref": "#/$defs/hash64_or_empty"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "passed" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "maxItems": 0 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "failed" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "minItems": 1 }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "hash64_or_empty": {
+      "type": "string",
+      "pattern": "^$|^[0-9a-f]{64}$"
+    }
+  }
+}

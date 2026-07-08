@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rdllm/schemas/certification_report.schema.json",
+  "title": "RDLLM Certification Report",
+  "type": "object",
+  "required": [
+    "certification_version",
+    "suite",
+    "issued_at",
+    "implementation",
+    "summary",
+    "levels",
+    "cases",
+    "report_hash"
+  ],
+  "properties": {
+    "certification_version": {
+      "const": "rdllm-certification/v1"
+    },
+    "suite": {
+      "const": "rdllm-reference-conformance"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "implementation": {
+      "type": "object",
+      "required": [
+        "engine",
+        "jurisdiction",
+        "creator_pool_rate",
+        "top_k",
+        "corpus",
+        "restricted_corpus"
+      ],
+      "properties": {
+        "engine": {
+          "type": "string"
+        },
+        "jurisdiction": {
+          "type": "string"
+        },
+        "creator_pool_rate": {
+          "type": "string"
+        },
+        "top_k": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "corpus": {
+          "type": "string"
+        },
+        "restricted_corpus": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "case_count",
+        "passed",
+        "failed",
+        "score",
+        "highest_level"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["passed", "failed"]
+        },
+        "case_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "passed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "highest_level": {
+          "type": "string",
+          "pattern": "^RDLLM-L([0-9]|[1-9][0-9]|1[0-7][0-9]|18[0-6])$"
+        }
+      },
+      "additionalProperties": true
+    },
+    "levels": {
+      "type": "object",
+      "patternProperties": {
+        "^RDLLM-L([0-9]|[1-9][0-9]|1[0-7][0-9]|18[0-6])$": {
+          "type": "object",
+          "required": ["passed", "description", "requires"],
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "description": {
+              "type": "string"
+            },
+            "requires": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "status", "checks", "artifacts", "errors"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "enum": ["passed", "failed"]
+          },
+          "checks": {
+            "type": "object"
+          },
+          "artifacts": {
+            "type": "object"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "report_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": true
+}

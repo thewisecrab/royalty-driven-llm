@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/selective_disclosure_package.schema.json",
+  "title": "RDLLM Selective Disclosure Package",
+  "type": "object",
+  "required": [
+    "disclosure_version",
+    "receipt_hash",
+    "payload_hash",
+    "payload_disclosure_root",
+    "commitment_scheme",
+    "public_receipt",
+    "disclosed",
+    "redacted",
+    "summary",
+    "package_hash"
+  ],
+  "properties": {
+    "disclosure_version": {
+      "const": "rdllm-selective-disclosure/v1"
+    },
+    "receipt_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "payload_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "payload_disclosure_root": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "commitment_scheme": {
+      "type": "string"
+    },
+    "public_receipt": {
+      "type": "object",
+      "required": [
+        "receipt_hash",
+        "protocol_version",
+        "issuer",
+        "issued_at",
+        "model",
+        "event",
+        "telemetry",
+        "grounding_report",
+        "grounding_quality",
+        "attribution_gap",
+        "rights",
+        "registry",
+        "sources",
+        "claim_support",
+        "privacy",
+        "signature"
+      ],
+      "properties": {
+        "receipt_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "protocol_version": {
+          "const": "rdllm-attribution-receipt/v1"
+        },
+        "model": { "type": "object" },
+        "event": { "type": "object" },
+        "telemetry": { "type": "object" },
+        "grounding_report": { "type": "object" },
+        "grounding_quality": { "type": "object" },
+        "attribution_gap": { "type": "object" },
+        "rights": { "type": "object" },
+        "registry": { "type": "object" },
+        "sources": { "type": "array" },
+        "claim_support": { "type": "array" },
+        "privacy": {
+          "type": "object",
+          "required": [
+            "selective_disclosure",
+            "disclosure_version",
+            "disclosure_root"
+          ],
+          "properties": {
+            "selective_disclosure": { "type": "string" },
+            "disclosure_version": {
+              "const": "rdllm-selective-disclosure/v1"
+            },
+            "disclosure_root": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "signature": { "type": "object" }
+      },
+      "additionalProperties": true
+    },
+    "disclosed": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "value", "salt", "leaf_hash"],
+        "properties": {
+          "path": { "type": "string" },
+          "salt": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "leaf_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "redacted": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "leaf_hash"],
+        "properties": {
+          "path": { "type": "string" },
+          "leaf_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "disclosed_path_count",
+        "redacted_path_count",
+        "redacted_categories"
+      ],
+      "properties": {
+        "disclosed_path_count": { "type": "integer", "minimum": 0 },
+        "redacted_path_count": { "type": "integer", "minimum": 0 },
+        "redacted_categories": { "type": "object" }
+      },
+      "additionalProperties": true
+    },
+    "package_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": true
+}

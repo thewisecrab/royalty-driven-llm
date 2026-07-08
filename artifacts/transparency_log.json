@@ -1,0 +1,19 @@
+{
+  "entries": [
+    {
+      "index": 0,
+      "payload_hash": "7ef41a3a1bfec56cb00fa6c463a0c717330490ceffd119bab9c5d7de2a480bd1",
+      "receipt_envelope_hash": "a07887c6853b5bfb864aad6f38a871ffae890065f4bf681c939e791b87c294e8",
+      "receipt_hash": "7ef41a3a1bfec56cb00fa6c463a0c717330490ceffd119bab9c5d7de2a480bd1"
+    },
+    {
+      "index": 1,
+      "payload_hash": "83bb4d1d2ee3dc8c67a6d82168de5bc28478af20fd1fe9809058f244350f394f",
+      "receipt_envelope_hash": "9a8036565b5a6bdd5eb68f5be1731ccc712ea801feb5bce6bfcae722e9a90250",
+      "receipt_hash": "83bb4d1d2ee3dc8c67a6d82168de5bc28478af20fd1fe9809058f244350f394f"
+    }
+  ],
+  "log_version": "rdllm-transparency-log/v1",
+  "root": "737087c27a08a15c9706916f3753aa2dab81faa845661feb8eaf9fb3e10abe56",
+  "tree_size": 2
+}

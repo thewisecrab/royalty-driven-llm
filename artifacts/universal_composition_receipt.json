@@ -1,0 +1,280 @@
+{
+  "artifact_bindings": {
+    "composite_foundation_adapter": {
+      "artifact_type": "rdllm-composite-foundation-adapter/v1",
+      "declared_hash": "6656bbf9c9129bfe19120e2a2655d979890e87e457dd722280ea1c5d85e75864",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "discovery_manifest": {
+      "artifact_type": "",
+      "declared_hash": "",
+      "hash_reproducible": false,
+      "present": false
+    },
+    "foundation_provider_conformance": {
+      "artifact_type": "rdllm-foundation-provider-conformance/v1",
+      "declared_hash": "db1fdda0749269946a8f5b65b2c86bcd42c54250e3c8a919a984f3558a2fad2f",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "foundation_runtime_router": {
+      "artifact_type": "rdllm-foundation-runtime-router/v1",
+      "declared_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "response_envelope": {
+      "artifact_type": "rdllm-response-envelope/v1",
+      "declared_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "source_footer_delivery": {
+      "artifact_type": "",
+      "declared_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+      "hash_reproducible": true,
+      "present": true
+    }
+  },
+  "checks": {
+    "artifact_hashes_reproducible": true,
+    "composition_plan_hash_reproducible": true,
+    "deployment_attestations_released_l129": true,
+    "each_segment_has_single_matching_deployment_attestation": true,
+    "final_response_binds_response_envelope": true,
+    "private_text_not_disclosed": true,
+    "provider_weights_conserve_unit": true,
+    "segment_claims_and_sources_declared": true,
+    "segment_count_positive": true,
+    "segment_hashes_present": true,
+    "segment_ids_unique": true,
+    "segment_provider_families_supported_by_composite_adapter": true,
+    "segment_provider_families_supported_by_conformance": true,
+    "segment_root_matches_plan": true,
+    "source_footer_delivery_bound": true,
+    "telemetry_spans_bind_segments": true
+  },
+  "commitments": {
+    "composition_plan_hash": "21c1ac841d4c6b84adaf9c5ae3f8746b4cf32bd7d3672bbe932b3d17f83a3bdd",
+    "deployment_attestation_root": "4f6f15a08009db3dfc4d6bf354e6d27d76b06d87592a2f572bef3bbbf26ff186",
+    "final_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+    "provider_segment_root": "d7eef94175a4aaf6c346828b3f9084a2cfabb9f948a6ef8964b9374656bb47d3",
+    "schema": "docs/schemas/universal_composition_receipt.schema.json",
+    "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+    "telemetry_span_root": "78586449b055a783310913a38605216cce6bb93379b5f47910d9e24cf9331a66"
+  },
+  "composition_decision": {
+    "decision": "release",
+    "failed_checks": [],
+    "failure_modes": [],
+    "release_authorized": true,
+    "safe_output_policy": "emit_universal_attributed_composite_answer"
+  },
+  "composition_plan": {
+    "composition_id": "composition:artifact:universal-foundation",
+    "composition_mode": "provider_segment_merge",
+    "computed_composition_plan_hash": "21c1ac841d4c6b84adaf9c5ae3f8746b4cf32bd7d3672bbe932b3d17f83a3bdd",
+    "computed_segment_root": "d7eef94175a4aaf6c346828b3f9084a2cfabb9f948a6ef8964b9374656bb47d3",
+    "declared_composition_plan_hash": "21c1ac841d4c6b84adaf9c5ae3f8746b4cf32bd7d3672bbe932b3d17f83a3bdd",
+    "declared_segment_root": "d7eef94175a4aaf6c346828b3f9084a2cfabb9f948a6ef8964b9374656bb47d3",
+    "final_rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+    "final_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+    "merge_policy": "hash_bound_segment_merge",
+    "provider_families": [
+      "anthropic_messages",
+      "openai_responses"
+    ],
+    "segment_count": 2,
+    "segment_ids": [
+      "segment:artifact:openai_responses",
+      "segment:artifact:anthropic_messages"
+    ],
+    "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737"
+  },
+  "composition_policy": {
+    "minimum_input_level": "RDLLM-L129",
+    "minimum_segment_level": "RDLLM-L129",
+    "on_merge_hash_mismatch": "block_display",
+    "on_source_footer_gap": "block_display",
+    "on_unattested_segment": "block_display",
+    "profile": "rdllm-universal-composition-policy/v1",
+    "provider_segment_attestation_required": true,
+    "provider_weight_conservation_required": true,
+    "raw_composition_payload_disclosure_allowed": false,
+    "source_footer_preservation_required": true,
+    "target_certification_level": "RDLLM-L130",
+    "telemetry_span_binding_required": true
+  },
+  "composition_receipt_version": "rdllm-universal-composition-receipt/v1",
+  "coverage_gaps": {
+    "duplicate_segment_ids": [],
+    "failed_checks": [],
+    "failure_modes": [],
+    "provider_families": [
+      "anthropic_messages",
+      "openai_responses"
+    ],
+    "segment_ids_without_matching_attestation": []
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "deployment_attestation_rows": [
+    {
+      "api_boundary_attestation_hash": "c917760b05df8bb949b2450ff91e3d360427694f095c37090dfc2bba6aed6148",
+      "deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+      "deployment_attestation_row_hash": "1dbfe14b24cdbd4ed92f431f2c9f4029676d2159242ffc692fe910b6563f9cbc",
+      "deployment_id": "deployment:artifact-foundation-runtime",
+      "deployment_release_authorized": true,
+      "display_order": 1,
+      "hash_reproducible": true,
+      "native_model": "openai:responses-compatible",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_response_id": "runtime_rdllm_reference_response",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+      "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "statement_hash": "de2de816bac68e305587680a01aa1be2b0167ce14662b8589d1599cf9d280bd4",
+      "status": "released",
+      "target_certification_level": "RDLLM-L129"
+    },
+    {
+      "api_boundary_attestation_hash": "f66376175d73a6ac7c2d0d5b132bc2e45c9c00a26407a15811fcc8ee19ba86cd",
+      "deployment_attestation_hash": "6eb45534e8d7ee3fc5c84b2fde3b909aacf3bb329420e86e9855bb1742cf6fb6",
+      "deployment_attestation_row_hash": "dd6e004d8003a9b1f36116313576b653cb02d6e5d7e47520831e67fcadc859de",
+      "deployment_id": "deployment:artifact-anthropic-composition",
+      "deployment_release_authorized": true,
+      "display_order": 2,
+      "hash_reproducible": true,
+      "native_model": "anthropic:messages-compatible",
+      "native_output_hash": "a3bf2e241bf9f3f6d053742d3e83b1f880e36d7e04411e976185e5d9d668e4cb",
+      "native_response_id": "msg_artifact_universal_composition_anthropic",
+      "provider_family": "anthropic_messages",
+      "provider_id": "provider:anthropic-messages",
+      "request_projection_hash": "875a26cd2bc94372efac7b0328d5cf3cd3d40e9d4104cf5441a0550c4811c64c",
+      "response_binding_hash": "0ae2101cc1f09ab00adc9b374adf83b534cab3f68cab4f49b4b0bd8c15fde979",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "statement_hash": "889b6dd730247d9e6f7d903537e5795224be6490da078b353965feeb09ab0a6e",
+      "status": "released",
+      "target_certification_level": "RDLLM-L129"
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "hash_only_segment_commitments": true,
+    "raw_answer_text_disclosed": false,
+    "raw_composition_payload_disclosed": false,
+    "raw_prompt_text_disclosed": false,
+    "raw_provider_response_disclosed": false,
+    "raw_source_text_disclosed": false
+  },
+  "provider_segments": [
+    {
+      "claim_ids": [
+        "claim:artifact-composition:1"
+      ],
+      "deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+      "deployment_id": "deployment:artifact-foundation-runtime",
+      "display_order": 1,
+      "merge_input_hash": "11f50b6dab2d19283772d8019acefd4a6df43b78368fc32b51adbae22d368d6f",
+      "merge_output_span_hash": "321d1f20c0113c6ea80d1dcc89aea682b692c2af30046d7ed77ad3246530858f",
+      "native_model": "openai:responses-compatible",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_response_id": "runtime_rdllm_reference_response",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "provider_weight": "0.620000",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "segment_hash": "47309d3a2a4d03984fbb8135cfbe2a4386f7cd2273be46b790e56871922ac510",
+      "segment_id": "segment:artifact:openai_responses",
+      "segment_role": "synthesis_part",
+      "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+      "source_labels": [
+        "C1"
+      ]
+    },
+    {
+      "claim_ids": [
+        "claim:artifact-composition:2"
+      ],
+      "deployment_attestation_hash": "6eb45534e8d7ee3fc5c84b2fde3b909aacf3bb329420e86e9855bb1742cf6fb6",
+      "deployment_id": "deployment:artifact-anthropic-composition",
+      "display_order": 2,
+      "merge_input_hash": "43eb90d7818d04d218c2b332df037dd6ea6dfeac06d97e6df8f27a827b3170b1",
+      "merge_output_span_hash": "c19929d2f99d1a2c877d1234ea468593d27f0ba68bf54068adf3e96eb485fca6",
+      "native_model": "anthropic:messages-compatible",
+      "native_output_hash": "a3bf2e241bf9f3f6d053742d3e83b1f880e36d7e04411e976185e5d9d668e4cb",
+      "native_response_id": "msg_artifact_universal_composition_anthropic",
+      "provider_family": "anthropic_messages",
+      "provider_id": "provider:anthropic-messages",
+      "provider_weight": "0.380000",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "segment_hash": "a444435ea48469cca65da5b3ad7bdd8b0957585ec3bdc09e8d72492c10d75c48",
+      "segment_id": "segment:artifact:anthropic_messages",
+      "segment_role": "synthesis_part",
+      "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+      "source_labels": [
+        "C2"
+      ]
+    }
+  ],
+  "schemas": {
+    "composite_foundation_adapter": "docs/schemas/composite_foundation_adapter.schema.json",
+    "foundation_model_deployment_attestation": "docs/schemas/foundation_model_deployment_attestation.schema.json",
+    "foundation_provider_conformance": "docs/schemas/foundation_provider_conformance.schema.json",
+    "response_envelope": "docs/schemas/response_envelope.schema.json",
+    "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json",
+    "universal_composition_receipt": "docs/schemas/universal_composition_receipt.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "a2557dec7dd47aaba1d7308f62ae1361b23f83dcf69ce3fd3e28e70a377eb854"
+  },
+  "summary": {
+    "composite_answer_release_authorized": true,
+    "composition_id": "composition:artifact:universal-foundation",
+    "deployment_attestation_count": 2,
+    "failed_check_count": 0,
+    "failure_mode_count": 0,
+    "minimum_input_level": "RDLLM-L129",
+    "privacy_preserved": true,
+    "provider_family_count": 2,
+    "provider_segment_count": 2,
+    "source_footer_obligations_preserved": true,
+    "status": "released",
+    "target_certification_level": "RDLLM-L130",
+    "telemetry_bound": true,
+    "universal_multi_provider_composition_supported": true
+  },
+  "telemetry_span_bindings": [
+    {
+      "display_order": 1,
+      "gen_ai_operation": "chat",
+      "native_response_id": "runtime_rdllm_reference_response",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "segment_id": "segment:artifact:openai_responses",
+      "span_id_hash": "ce5ab5bfcaa3d8708f4b9162b9713b069560692d44f2d447bee8c5172a042637",
+      "span_kind": "CLIENT",
+      "telemetry_span_hash": "e41fa7f55a9892a9cfc4b07b35f9924deed683edc6a924be56d30e9afe177623",
+      "trace_id_hash": "b025e9063309b36b70e0f254a4a0419bec25621c591d3c8af62d6d78c361db7e"
+    },
+    {
+      "display_order": 2,
+      "gen_ai_operation": "chat",
+      "native_response_id": "msg_artifact_universal_composition_anthropic",
+      "provider_family": "anthropic_messages",
+      "provider_id": "provider:anthropic-messages",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "segment_id": "segment:artifact:anthropic_messages",
+      "span_id_hash": "116ea589174801ecd129dea92067d9f93337b5d04e6366cf4c855adfd6ebabfb",
+      "span_kind": "CLIENT",
+      "telemetry_span_hash": "56eabc43ff9667214cf3dcb0ad4284bf0a95793369db84d1cb0522640c634d57",
+      "trace_id_hash": "efc0de4998e594c77e1b7df3deae0ba886cc42eb71d0c07eada1a4dd3140b634"
+    }
+  ],
+  "universal_composition_receipt_hash": "1a7f07d1b8ed7aa665531a4678f15e4ffe69a0d8f8f472bb459d361b3af46f07"
+}

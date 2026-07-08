@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/evidence_region_binding_report.schema.json",
+  "title": "RDLLM Evidence Region Binding Report",
+  "type": "object",
+  "required": [
+    "version",
+    "issued_at",
+    "issuer",
+    "case",
+    "policy",
+    "artifact_bindings",
+    "source_region_rows",
+    "claim_region_rows",
+    "wrong_region_control_rows",
+    "coverage",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "binding_report_hash",
+    "signature"
+  ],
+  "properties": {
+    "version": {
+      "const": "rdllm-evidence-region-binding/v1"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "case": {
+      "type": "object",
+      "required": ["case_id", "status"],
+      "properties": {
+        "case_id": {
+          "type": "string"
+        },
+        "status": {
+          "enum": ["ready", "needs_review"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "require_public_location",
+        "require_region_hash",
+        "require_wrong_region_controls",
+        "require_all_rendered_claim_spans_bound",
+        "require_all_footer_span_prefixes_bound",
+        "require_rendered_audit_ready",
+        "require_claim_source_report_ready",
+        "minimum_region_coverage"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "response_envelope_hash",
+        "rendered_attribution_audit_hash",
+        "claim_source_attribution_report_hash",
+        "citation_footer_contract_hash"
+      ],
+      "additionalProperties": true
+    },
+    "source_region_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "source_label",
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "content_hash",
+          "source_version_hash",
+          "region_id",
+          "region_type",
+          "location_hash",
+          "region_text_hash",
+          "public_location",
+          "region_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "claim_region_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_index",
+          "source_label",
+          "source_id",
+          "evidence_span_prefix",
+          "region_id",
+          "checks",
+          "verified",
+          "link_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "wrong_region_control_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "control_id",
+          "expected_rejected",
+          "would_bind_if_accepted",
+          "rejected",
+          "control_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "rendered_claim_span_count",
+        "bound_rendered_claim_span_count",
+        "rendered_claim_region_coverage",
+        "footer_span_prefix_count",
+        "bound_footer_span_prefix_count",
+        "footer_span_region_coverage"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "response_envelope_hash_reproducible",
+        "rendered_attribution_audit_hash_reproducible",
+        "claim_source_attribution_hash_reproducible",
+        "citation_footer_contract_hash_reproducible",
+        "rendered_attribution_audit_ready",
+        "claim_source_report_ready",
+        "citation_footer_contract_verified",
+        "source_snapshots_have_content_hashes",
+        "region_hashes_reproducible",
+        "every_region_has_public_location",
+        "all_claim_region_links_verified",
+        "every_rendered_claim_span_bound",
+        "every_footer_span_prefix_bound",
+        "minimum_region_coverage_met",
+        "minimum_footer_span_coverage_met",
+        "wrong_region_controls_rejected",
+        "source_labels_have_region_rows",
+        "private_text_not_disclosed"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "evidence_region_binding_report",
+        "response_envelope",
+        "rendered_attribution_audit",
+        "claim_source_attribution_report",
+        "citation_footer_contract"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "source_region_count",
+        "claim_region_link_count",
+        "wrong_region_control_count",
+        "rendered_claim_span_count",
+        "bound_rendered_claim_span_count",
+        "rendered_claim_region_coverage",
+        "footer_span_region_coverage",
+        "failed_check_count",
+        "public_location_binding_supported",
+        "anti_wrong_region_controls_passed",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["ready", "needs_review"]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L97"
+        }
+      },
+      "additionalProperties": true
+    },
+    "binding_report_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

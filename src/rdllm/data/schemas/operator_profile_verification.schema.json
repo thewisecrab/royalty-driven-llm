@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/operator_profile_verification.schema.json",
+  "title": "RDLLM Operator Profile Verification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "errors",
+    "schema_status",
+    "verification_status",
+    "profile",
+    "readiness_report"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-operator-profile-verification/v1"
+    },
+    "status": {
+      "enum": ["ready", "blocked"]
+    },
+    "errors": {
+      "$ref": "#/$defs/error_array"
+    },
+    "schema_status": {
+      "enum": ["passed", "failed"]
+    },
+    "verification_status": {
+      "enum": ["passed", "failed"]
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "readiness_report": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "profile_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "report_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "template_resource": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "ready" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "maxItems": 0 },
+          "schema_status": { "const": "passed" },
+          "verification_status": { "const": "passed" },
+          "profile": {
+            "properties": {
+              "schema": { "const": "rdllm-production-readiness-profile/v1" }
+            },
+            "required": ["schema"]
+          },
+          "readiness_report": {
+            "properties": {
+              "schema": { "const": "rdllm-production-readiness-report/v1" }
+            },
+            "required": ["schema"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "blocked" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "minItems": 1 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "schema_status": { "const": "failed" }
+        },
+        "required": ["schema_status"]
+      },
+      "then": {
+        "properties": {
+          "status": { "const": "blocked" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "verification_status": { "const": "failed" }
+        },
+        "required": ["verification_status"]
+      },
+      "then": {
+        "properties": {
+          "status": { "const": "blocked" }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "error_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

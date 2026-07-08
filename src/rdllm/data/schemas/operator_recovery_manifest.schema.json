@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/operator_recovery_manifest.schema.json",
+  "title": "RDLLM Operator Recovery Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "generated_at",
+    "root",
+    "summary",
+    "files",
+    "errors"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-operator-recovery-manifest/v1"
+    },
+    "status": {
+      "enum": ["ready", "blocked"]
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file_count",
+        "total_bytes",
+        "default_scope_included",
+        "operator_include_count",
+        "operator_include_dir_count"
+      ],
+      "properties": {
+        "file_count": { "type": "integer", "minimum": 0 },
+        "total_bytes": { "type": "integer", "minimum": 0 },
+        "default_scope_included": { "type": "boolean" },
+        "operator_include_count": { "type": "integer", "minimum": 0 },
+        "operator_include_dir_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "size_bytes", "sha256"],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!/).+"
+          },
+          "size_bytes": { "type": "integer", "minimum": 0 },
+          "sha256": { "$ref": "#/$defs/hash64" }
+        }
+      }
+    },
+    "errors": {
+      "$ref": "#/$defs/error_array"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "ready" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "files": { "minItems": 1 },
+          "errors": { "maxItems": 0 }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "hash64": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "error_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

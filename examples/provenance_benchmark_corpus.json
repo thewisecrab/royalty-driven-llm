@@ -1,0 +1,70 @@
+{
+  "creators": [
+    {
+      "creator_id": "ada",
+      "name": "Ada Ledger",
+      "payout_account": "acct_ada"
+    },
+    {
+      "creator_id": "ben",
+      "name": "Ben Rights",
+      "payout_account": "acct_ben"
+    },
+    {
+      "creator_id": "cyra",
+      "name": "Cyra Decoy",
+      "payout_account": "acct_cyra"
+    },
+    {
+      "creator_id": "dina",
+      "name": "Dina Summary",
+      "payout_account": "acct_dina"
+    }
+  ],
+  "works": [
+    {
+      "work_id": "ledger-proof-source",
+      "creator_id": "ada",
+      "title": "Ledger Proof Source",
+      "license": "royalty-bearing",
+      "data_value_prior": 1.2,
+      "source_uri": "https://example.test/ledger-proof-source",
+      "content": "A reliable attribution ledger records source identifiers, content hashes, retrieval scores, payout weights, event hashes, and replayable audit data so a royalty event can be independently verified."
+    },
+    {
+      "work_id": "consent-market-source",
+      "creator_id": "ben",
+      "title": "Consent Market Source",
+      "license": "royalty-bearing",
+      "data_value_prior": 1.0,
+      "source_uri": "https://example.test/consent-market-source",
+      "content": "An AI licensing market needs consent controls, license terms, dispute windows, duplicate claim handling, and appeal processes so creators can manage permitted use and challenge weak attribution."
+    },
+    {
+      "work_id": "ledger-dashboard-decoy",
+      "creator_id": "cyra",
+      "title": "Ledger Dashboard Decoy",
+      "license": "royalty-bearing",
+      "data_value_prior": 0.8,
+      "source_uri": "https://example.test/ledger-dashboard-decoy",
+      "content": "A product dashboard may display source identifiers and content hashes for user convenience, but it does not record payout weights, event hashes, or replayable audit data for royalty settlement."
+    },
+    {
+      "work_id": "derived-ledger-summary",
+      "creator_id": "dina",
+      "title": "Derived Ledger Summary",
+      "license": "royalty-bearing",
+      "data_value_prior": 1.0,
+      "source_uri": "https://example.test/derived-ledger-summary",
+      "derived_from": [
+        {
+          "work_id": "ledger-proof-source",
+          "weight": 1.0,
+          "relation": "summary_of",
+          "source_uri": "https://example.test/ledger-proof-source"
+        }
+      ],
+      "content": "Derived ledger summary: attribution reports preserve source identifiers, content hashes, event hashes, and payout weights from the original ledger proof."
+    }
+  ]
+}

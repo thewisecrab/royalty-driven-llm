@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/provenance_evaluation_report.schema.json",
+  "title": "RDLLM Provenance Evaluation Report",
+  "type": "object",
+  "required": [
+    "evaluation_version",
+    "issuer",
+    "created_at",
+    "provider",
+    "benchmark",
+    "summary",
+    "cases",
+    "evidence_roots",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "evaluation_version": {
+      "const": "rdllm-provenance-evaluation/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "provider": {
+      "type": "object",
+      "required": ["id", "model_id", "model_version"],
+      "additionalProperties": true
+    },
+    "benchmark": {
+      "type": "object",
+      "required": ["profile", "case_count", "case_root", "coverage"],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "case_count",
+        "passed",
+        "failed",
+        "score",
+        "mean_expected_recall",
+        "mean_paid_source_precision",
+        "top1_accuracy",
+        "decoy_resistance_rate",
+        "escrow_accuracy",
+        "grounding_verified_rate"
+      ],
+      "additionalProperties": true
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "case_id",
+          "scenario",
+          "case_input",
+          "event",
+          "ranked_sources",
+          "checks",
+          "metrics",
+          "audit_errors",
+          "errors",
+          "status"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "event_hash_root",
+        "ranked_source_root",
+        "case_result_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "claim_evidence_text_disclosed",
+        "benchmark_inputs_disclosed_as_hashes"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

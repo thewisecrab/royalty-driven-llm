@@ -1,0 +1,139 @@
+{
+  "artifact_bindings": {
+    "model_lineage_attribution_hash": "93dfb78a8335e3709eaa1a6b4265b542faf2cd2171188ab68084f2051b07c0c7",
+    "model_lineage_attribution_hash_reproducible": true,
+    "private_reasoning_attribution_hash": "e66553a238d95638b4fec18cbe48a41bfc28193aef82509a5dd150a247de5a0e",
+    "private_reasoning_attribution_hash_reproducible": true,
+    "royalty_obligation_root": "e8fc26bad93fdf9fb9e4ec0623524188268f18703c29c99ad5127edafcb30a5b",
+    "signal_input_hash": "e315c2e70fac9b04689167fd859537aa0b96714807749ea6ecdc34c758c4844a",
+    "signal_row_root": "3579a0f1cc33b11a4d84b913aa3ceb291fbacc59059583a81bc48b8cfb7cbe22"
+  },
+  "case": {
+    "case_id": "artifact:post-training-signal-provenance",
+    "status": "ready"
+  },
+  "checks": {
+    "annotator_or_verifier_attestations_present": true,
+    "artifact_hashes_reproducible": true,
+    "model_lineage_attribution_verified": true,
+    "post_training_policy_is_fail_closed": true,
+    "post_training_signal_rows_present": true,
+    "private_reasoning_attribution_verified": true,
+    "raw_signal_text_not_disclosed": true,
+    "signal_royalty_obligations_cover_sources": true,
+    "signal_source_labels_bound_to_upstream_provenance": true,
+    "signal_source_labels_declared": true,
+    "signals_bind_upstream_artifacts": true,
+    "signals_have_license_terms": true,
+    "signals_have_payload_reward_and_update_commitments": true,
+    "synthetic_signal_inputs_disclosed": true
+  },
+  "issued_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "post_training_policy": {
+    "policy_hash": "c74250e0205ba0b72c7baa9f08bd466e8be3d45a0e832ed41463dee052dbaad3",
+    "policy_id": "policy:post-training-signal-carry-forward",
+    "requires_annotator_or_verifier_attestation": true,
+    "requires_model_lineage_settlement": true,
+    "requires_no_raw_signal_text": true,
+    "requires_reward_commitments": true,
+    "requires_royalty_carry_forward": true,
+    "requires_signal_lineage": true,
+    "requires_source_carry_forward": true,
+    "requires_synthetic_disclosure": true
+  },
+  "post_training_signal_provenance_hash": "79af8dda5184b1c370938453cfd7f4dde9f61f7ad0a86d0bbd1b29f77cbe7b1f",
+  "post_training_signals": [
+    {
+      "annotator_attestation_hash": "8df3e8e1291fd1192909d833c9fd4d47b20b93bfb348dde273b95e81b2a796ac",
+      "creator_ids": [
+        "arjun"
+      ],
+      "escrow_if_unattributed": true,
+      "input_artifact_hashes": [
+        "93dfb78a8335e3709eaa1a6b4265b542faf2cd2171188ab68084f2051b07c0c7",
+        "e66553a238d95638b4fec18cbe48a41bfc28193aef82509a5dd150a247de5a0e"
+      ],
+      "license_terms_hash": "52918c478d4c3fef5bc0a0d0f82aa3e82e4c2bbcccaeeae667ddeccdbf164f05",
+      "post_training_stage": "alignment",
+      "raw_signal_text_disclosed": false,
+      "reward_commitment_hash": "44e13d230ae36197de9f8033edef4389c7630b28dcf7b77e5248acb56be22829",
+      "reward_model_id_hash": "cbd56eafb0c46ced486f22eaa9361655e029e46cbec61e39be92a59b7fa35ae1",
+      "sequence": 1,
+      "signal_id": "signal:artifact:rlhf-preference:001",
+      "signal_payload_hash": "f842583584d25e21d1136e7bb149bf692fbdbaa1e291626b6ea21fb2c1ec57a4",
+      "signal_row_hash": "d4f468018c3ceb7718164ec9785e586eef478875287b0503ffcf48c0b4599b33",
+      "signal_type": "rlhf_preference",
+      "source_labels": [
+        "S1"
+      ],
+      "synthetic_disclosed": true,
+      "synthetic_input": true,
+      "update_commitment_hash": "edae3c4e187dfb25f8d708822a24c0ddf03a6064c76fdfa4b0ca0e281e9d2719",
+      "used_for_update": true,
+      "verifier_id_hash": "d42cdaaf0c817a6fe4fb35203bf77cdb04e3d9228e4fe3ce1ea3bc69542cd219",
+      "work_ids": [
+        "arjun-provenance-ledger"
+      ]
+    }
+  ],
+  "post_training_system": {
+    "minimum_model_lineage_level": "RDLLM-L91",
+    "minimum_private_reasoning_level": "RDLLM-L107",
+    "model_id": "model:rdllm-reference-aligned",
+    "model_version": "2026-06",
+    "provider": "provider:rdllm-reference",
+    "run_id": "posttrain:artifact:rdllm-reference:001",
+    "stage": "rlhf_alignment"
+  },
+  "privacy": {
+    "answer_text_disclosed": false,
+    "feedback_text_disclosed": false,
+    "payment_data_disclosed": false,
+    "prompt_text_disclosed": false,
+    "raw_signal_text_disclosed": false,
+    "receipt_uses_hashes_labels_and_commitments": true,
+    "reward_explanation_disclosed": false,
+    "source_text_disclosed": false
+  },
+  "royalty_obligations": [
+    {
+      "basis": "post_training_signal_influence",
+      "creator_id": "arjun",
+      "obligation_hash": "0d40f444a1663e213d269aa19d6d28ec543c15bd89c25ebd0ecb37aebb49e627",
+      "royalty_row_hash": "b0d9902b00997aed281b1fa9cd1bc7b856e3371141dc9b050af22474df9e907f",
+      "settlement_state": "direct",
+      "share": "1.0",
+      "source_label": "S1",
+      "work_id": "arjun-provenance-ledger"
+    }
+  ],
+  "schemas": {
+    "model_lineage_attribution_report": "docs/schemas/model_lineage_attribution_report.schema.json",
+    "post_training_signal_provenance": "docs/schemas/post_training_signal_provenance.schema.json",
+    "private_reasoning_attribution": "docs/schemas/private_reasoning_attribution.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "eed63f8ce6437a0d17e1c6fb5bae52e1f7d3a6df2c64880293b4238457f7d6ec"
+  },
+  "summary": {
+    "failed_check_count": 0,
+    "minimum_model_lineage_level": "RDLLM-L91",
+    "minimum_private_reasoning_level": "RDLLM-L107",
+    "post_training_signal_provenance_ready": true,
+    "privacy_preserved": true,
+    "royalty_obligation_count": 1,
+    "signal_count": 1,
+    "source_label_count": 1,
+    "status": "ready",
+    "synthetic_signal_count": 1,
+    "target_certification_level": "RDLLM-L108"
+  },
+  "verification_errors": {
+    "model_lineage_attribution": 0,
+    "private_reasoning_attribution": 0
+  },
+  "version": "rdllm-post-training-signal-provenance/v1"
+}

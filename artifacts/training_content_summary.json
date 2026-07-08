@@ -1,0 +1,206 @@
+{
+  "certification": {
+    "highest_level": "RDLLM-L142",
+    "report_hash": "e7659048a11bb6cf43fed950fb0e8e56e635a60536a947887d319e9e53677552",
+    "status": "passed"
+  },
+  "commitments": {
+    "certification_report_hash": "e7659048a11bb6cf43fed950fb0e8e56e635a60536a947887d319e9e53677552",
+    "content_hash_root": "6a574168c63d95e10ea2c51c052f4bcf1eaabdcab678705d33bf682c2be5235a",
+    "policy_root": "e441c4cf6e287bb0f1022a0056cc96b57bc11923e0e543e1c0b0f7decdb9a3f5",
+    "provider_card_hash": "617f1371cd6583d472ace3791da0afe6398fcfb77e12e12627575fc9b3e21451",
+    "training_value_root": "f2b095f258979a66f7f0b410c1ab0f629e8b0aae5088beec6b23e8734ca962a1",
+    "work_root": "ff314391f6301f742aedb83ccc1898428012154d419a07d27f60c2477c6b12cd"
+  },
+  "created_at": "2026-06-02T01:10:52Z",
+  "issuer": "rdllm-local-demo",
+  "limitations": [
+    "reference summary covers registered training corpus, not web-scale unregistered training data",
+    "training influence is represented by deterministic training-value priors, not provider hidden states",
+    "public summary does not disclose private work text"
+  ],
+  "privacy": {
+    "answer_text_disclosed": false,
+    "chunk_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "public_summary_uses_counts_and_hash_roots": true,
+    "work_text_disclosed": false
+  },
+  "provider": {
+    "id": "provider:unspecified",
+    "model_id": "model:unspecified",
+    "model_version": "unknown",
+    "training_stage": "reference_corpus"
+  },
+  "provider_card": {
+    "card_hash": "617f1371cd6583d472ace3791da0afe6398fcfb77e12e12627575fc9b3e21451",
+    "highest_level": "RDLLM-L142"
+  },
+  "rights_policy": {
+    "copyright_policy": "respect machine-readable allowed uses, prohibited uses, revocation, attribution duties, and royalty duties",
+    "minimum_creator_pool_rate_enforced": true,
+    "revoked_works_excluded": true,
+    "rights_checked_before_training": true,
+    "tdm_rights_signal": "rights metadata is expressed separately from provenance credentials"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "f48beab932b3f979f516ab83f1e03ed93b377ed67ff68b2332aad862a00fff45"
+  },
+  "summary_hash": "3f0a740782b9f8506b8244b81446d54bf0b7f4be49938be568d373a2344582cb",
+  "summary_version": "rdllm-training-content-summary/v1",
+  "template_alignment": {
+    "croissant_1_1_usage_policy": true,
+    "eu_ai_act_article_53_training_summary": true,
+    "odrl_rights_policy": true,
+    "public_summary_uses_categories_and_hash_roots": true,
+    "spdx_3_ai_dataset_bom": true
+  },
+  "training_content": {
+    "aggregate": {
+      "allowed_use_counts": {
+        "display": 3,
+        "external_attribution": 3,
+        "generation": 3,
+        "quote": 3,
+        "retrieval": 3,
+        "training": 3
+      },
+      "attribution_required_work_count": 3,
+      "chunk_count": 3,
+      "creator_count": 3,
+      "license_counts": {
+        "royalty-bearing": 3
+      },
+      "prohibited_use_counts": {},
+      "revoked_work_count": 0,
+      "royalty_required_work_count": 3,
+      "source_category_counts": {
+        "registered_creator_text": 3
+      },
+      "training_allowed_work_count": 3,
+      "training_blocked_work_count": 0,
+      "training_rights_coverage": 1.0,
+      "work_count": 3
+    },
+    "cohorts": [
+      {
+        "allowed_uses": [
+          "training",
+          "retrieval",
+          "generation",
+          "display",
+          "quote",
+          "external_attribution"
+        ],
+        "chunk_count": 1,
+        "chunk_hash_root": "4e89b4fab301dd86a537dc87e3132b69e0ef734af3a6d46c5343b2e6213d6983",
+        "content_category": "registered_creator_text",
+        "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+        "content_modality": "text",
+        "creator_id": "arjun",
+        "derived_from": [],
+        "has_upstream_lineage": false,
+        "jurisdictions": [
+          "GLOBAL"
+        ],
+        "license": "royalty-bearing",
+        "license_uri": "",
+        "minimum_creator_pool_rate": 0.0,
+        "policy_id": "policy:arjun-provenance-ledger",
+        "prohibited_uses": [],
+        "requires_attribution": true,
+        "requires_royalty": true,
+        "revoked": false,
+        "revoked_at": "",
+        "source_uri": "registered://works/arjun-provenance-ledger",
+        "training_allowed": true,
+        "training_policy_reasons": [
+          "permit:training"
+        ],
+        "training_value_root": "5089ed01b9cb3f2b364b572771007455ade7c58aa969057a079a9ed28ab8bff9",
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "allowed_uses": [
+          "training",
+          "retrieval",
+          "generation",
+          "display",
+          "quote",
+          "external_attribution"
+        ],
+        "chunk_count": 1,
+        "chunk_hash_root": "2a360a87e44ec4a467083af6cef4d8847e733e184fe67ee391b82d49afb25a8a",
+        "content_category": "registered_creator_text",
+        "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+        "content_modality": "text",
+        "creator_id": "lina",
+        "derived_from": [],
+        "has_upstream_lineage": false,
+        "jurisdictions": [
+          "GLOBAL"
+        ],
+        "license": "royalty-bearing",
+        "license_uri": "",
+        "minimum_creator_pool_rate": 0.0,
+        "policy_id": "policy:lina-governance-disputes",
+        "prohibited_uses": [],
+        "requires_attribution": true,
+        "requires_royalty": true,
+        "revoked": false,
+        "revoked_at": "",
+        "source_uri": "registered://works/lina-governance-disputes",
+        "training_allowed": true,
+        "training_policy_reasons": [
+          "permit:training"
+        ],
+        "training_value_root": "f91ad52bd01af7c3d9aa67790cf2f39197b9c76b6bc9afbb0dfc4c00518b3ed2",
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "allowed_uses": [
+          "training",
+          "retrieval",
+          "generation",
+          "display",
+          "quote",
+          "external_attribution"
+        ],
+        "chunk_count": 1,
+        "chunk_hash_root": "b72eb7be55ee2b2203af97193b7883979fce9a652dfad9ccef6ffca8323b8b27",
+        "content_category": "registered_creator_text",
+        "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+        "content_modality": "text",
+        "creator_id": "maya",
+        "derived_from": [],
+        "has_upstream_lineage": false,
+        "jurisdictions": [
+          "GLOBAL"
+        ],
+        "license": "royalty-bearing",
+        "license_uri": "",
+        "minimum_creator_pool_rate": 0.0,
+        "policy_id": "policy:maya-youtube-style-pool",
+        "prohibited_uses": [],
+        "requires_attribution": true,
+        "requires_royalty": true,
+        "revoked": false,
+        "revoked_at": "",
+        "source_uri": "registered://works/maya-youtube-style-pool",
+        "training_allowed": true,
+        "training_policy_reasons": [
+          "permit:training"
+        ],
+        "training_value_root": "68c4851b1ca59158789fdf4256ca33372be4ee789019ea03a3652e678b57cc20",
+        "work_id": "maya-youtube-style-pool"
+      }
+    ],
+    "modalities": {
+      "text": 3
+    },
+    "source_scope": "registered_creator_works",
+    "training_stage": "reference_corpus"
+  }
+}

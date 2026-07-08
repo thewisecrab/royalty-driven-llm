@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_grounded_reliance_contract.schema.json",
+  "title": "RDLLM Universal Grounded Reliance Contract",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "grounded_reliance_version",
+    "issuer",
+    "created_at",
+    "grounded_reliance_policy",
+    "artifact_bindings",
+    "reliance_claim_rows",
+    "source_footer_reliance_rows",
+    "settlement_reliance_rows",
+    "standard_control_rows",
+    "failure_case_rows",
+    "evidence_commitments",
+    "checks",
+    "reliance_decision",
+    "verifier_commands",
+    "standards_controls",
+    "privacy",
+    "summary",
+    "universal_grounded_reliance_contract_hash"
+  ],
+  "properties": {
+    "grounded_reliance_version": {
+      "const": "rdllm-universal-grounded-reliance-contract/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "grounded_reliance_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_witness_level",
+        "well_known_path",
+        "required_core_artifacts",
+        "required_reliance_claims",
+        "required_footer_surfaces",
+        "required_settlement_scopes",
+        "required_standard_controls",
+        "required_failure_cases"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L154" },
+        "minimum_witness_level": { "const": "RDLLM-L153" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-grounded-reliance-contract.json"
+        },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_reliance_claims": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_footer_surfaces": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_settlement_scopes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_standard_controls": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_failure_cases": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["artifact_count", "artifact_binding_root", "bindings"]
+    },
+    "reliance_claim_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "evidence_hash",
+          "confidence_label",
+          "maximum_allowed_label",
+          "ready",
+          "reliance_claim_row_hash"
+        ]
+      }
+    },
+    "source_footer_reliance_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "surface",
+          "surface_artifact_hash",
+          "renderer_hash",
+          "visible_to_user",
+          "machine_readable",
+          "ready",
+          "source_footer_reliance_row_hash"
+        ]
+      }
+    },
+    "settlement_reliance_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "settlement_scope",
+          "allocation_report_hash",
+          "finance_attestation_hash",
+          "witness_quorum_hash",
+          "ready",
+          "settlement_reliance_row_hash"
+        ]
+      }
+    },
+    "standard_control_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "control",
+          "control_evidence_hash",
+          "verifier_command",
+          "ready",
+          "standard_control_row_hash"
+        ]
+      }
+    },
+    "failure_case_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "case_id",
+          "fixture_hash",
+          "verifier_command",
+          "expected_block",
+          "observed_block",
+          "ready",
+          "failure_case_row_hash"
+        ]
+      }
+    },
+    "evidence_commitments": { "type": "object" },
+    "checks": { "type": "object" },
+    "reliance_decision": {
+      "type": "object",
+      "required": [
+        "grounded_reliance_contract_authorized",
+        "source_footer_reliance_allowed",
+        "creator_settlement_reliance_allowed",
+        "customer_procurement_reliance_allowed",
+        "regulator_export_reliance_allowed",
+        "unsupported_reliance_claim_allowed",
+        "unverified_source_footer_allowed",
+        "posthoc_citation_substitution_allowed",
+        "unwitnessed_settlement_reliance_allowed",
+        "failure_modes"
+      ],
+      "properties": {
+        "unsupported_reliance_claim_allowed": { "const": false },
+        "unverified_source_footer_allowed": { "const": false },
+        "posthoc_citation_substitution_allowed": { "const": false },
+        "unwitnessed_settlement_reliance_allowed": { "const": false },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "verifier_commands": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "standards_controls": { "type": "object" },
+    "privacy": {
+      "type": "object",
+      "properties": {
+        "hash_count_label_and_root_only_reliance_commitments": { "const": true }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_witness_level",
+        "failed_check_count",
+        "reliance_claim_count",
+        "source_footer_surface_count",
+        "settlement_scope_count",
+        "offline_verification_supported",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L154" },
+        "minimum_witness_level": { "const": "RDLLM-L153" },
+        "offline_verification_supported": { "const": true }
+      }
+    },
+    "universal_grounded_reliance_contract_hash": { "type": "string" },
+    "signature": { "type": "string" }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "revenue_sources": [
+    {
+      "source_id": "revenue:subscription:demo",
+      "source_type": "subscription_pool",
+      "period_start": "2026-05-01",
+      "period_end": "2026-05-31",
+      "currency": "USD",
+      "gross_revenue": "0.750000",
+      "allocation_basis": "ledger_gross_revenue",
+      "subscription_pool_hash": "5f8f6f8aefb550b2eaf7826ac2d8fe70ef7c2591ea04a4ce814c96a06d404f2a",
+      "billing_record_hash": "7ee8a3be6da62a7f326a4a56c055982c2cbb91e3c4de69749d880bf89f7053a7"
+    },
+    {
+      "source_id": "revenue:api-meter:demo",
+      "source_type": "api_metering",
+      "period_start": "2026-05-01",
+      "period_end": "2026-05-31",
+      "currency": "USD",
+      "gross_revenue": "0.250000",
+      "allocation_basis": "ledger_gross_revenue",
+      "meter_event_root": "712e0bd665fb84ef7a3643c770c5c5784f551d034610425ccdf985a93b16f5ff",
+      "invoice_hash": "4bca3af7d73da8fffd6ff9d47b321e0f6cad9e832fbb53a7f6bc0cb0a6ba0ab0"
+    }
+  ]
+}

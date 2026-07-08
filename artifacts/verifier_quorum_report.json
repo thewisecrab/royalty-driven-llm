@@ -1,0 +1,267 @@
+{
+  "artifact_bindings": {
+    "artifact_binding_root": "6ef98611e1f657a22c6f88866dab17ecf88eba88375a1ac8639d599c23d077f3",
+    "artifact_count": 4,
+    "artifact_hashes_reproducible": true,
+    "attribution_consensus_report_hash": "42e4eb97b47a238a111f6feade0ab62e72dae98285be0619e84a45e36a44331a",
+    "bindings": [
+      {
+        "artifact_type": "rdllm-attribution-consensus-report/v1",
+        "binding_hash": "4b86670bb748618c65b594f6084ed8f0bd3e068efdcb8ba43d3241a54886ef6f",
+        "declared_hash": "42e4eb97b47a238a111f6feade0ab62e72dae98285be0619e84a45e36a44331a",
+        "hash_reproducible": true,
+        "name": "attribution_consensus_report",
+        "payload_hash": "744333c5bedaf59a8594446e4a2d508deeeabd88e41ed5a1899e5936c35378b5"
+      },
+      {
+        "artifact_type": "rdllm-certification/v1",
+        "binding_hash": "82d0e8ea094a3eae73d6501abbddc172d0ad29d064425b01f77a95e3dd10b0d3",
+        "declared_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+        "hash_reproducible": true,
+        "name": "certification_report",
+        "payload_hash": "c90d268a46ee16f3059c1597b1524eebf002393cae74ec2d4a74f273c5fc3495"
+      },
+      {
+        "artifact_type": "rdllm-integration-profile/v1",
+        "binding_hash": "6d085298df3e1f5432e532ce9be159053f9e31162e0bd3b4cf1b65b7172197d2",
+        "declared_hash": "ce0c5fe1085f700dc54137f30861d1b5319e322b9a2d027c7902afbc4822cb98",
+        "hash_reproducible": true,
+        "name": "integration_profile",
+        "payload_hash": "9d287f6629beeaef95a42d7c1adfe4edb70de52fa5dfcae5994544c2b0b3a15b"
+      },
+      {
+        "artifact_type": "rdllm-provider-attribution-card/v1",
+        "binding_hash": "6b544856630eef88c31960a89a7de570fc879ad431c0979b15e9f2a3e829794a",
+        "declared_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+        "hash_reproducible": true,
+        "name": "provider_attribution_card",
+        "payload_hash": "4b5559fda1ff496ff9c85b4fd9c264963da95f686ca32f4bde0cc337cc1d0d48"
+      }
+    ],
+    "certification_report_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+    "integration_profile_hash": "ce0c5fe1085f700dc54137f30861d1b5319e322b9a2d027c7902afbc4822cb98",
+    "provider_card_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6"
+  },
+  "artifact_status": {
+    "attribution_consensus_ready": true,
+    "attribution_consensus_target_l70": true,
+    "certification_level_at_least_l70": true,
+    "certification_passed": true,
+    "consensus_creator_pool_conserved": true,
+    "integration_declares_verifier_quorum_schema": true,
+    "integration_declares_verifier_quorum_surface": true,
+    "integration_profile_ready": true,
+    "provider_declares_consensus_surface": true,
+    "provider_declares_verifier_quorum_channel": true,
+    "provider_declares_verifier_quorum_surface": true
+  },
+  "checks": {
+    "accepted_verifier_quorum_met": true,
+    "artifact_hashes_reproducible": true,
+    "attribution_consensus_ready": true,
+    "attribution_consensus_target_l70": true,
+    "certification_level_at_least_l70": true,
+    "creator_pool_conserved_or_escrowed": true,
+    "direct_settlement_requires_verifier_quorum": true,
+    "independent_organization_quorum_met": true,
+    "integration_profile_ready": true,
+    "no_rejecting_or_disputing_verifiers": true,
+    "provider_declares_verifier_quorum": true,
+    "public_report_has_no_private_field_names": true,
+    "public_report_uses_no_private_text_fields": true,
+    "required_artifacts_bound": true,
+    "verifier_rows_sign_same_artifact_root": true,
+    "verifier_signatures_valid": true
+  },
+  "commitments": {
+    "accepted_organization_root": "ac1d27a66216cd810eec4d795e7071150687c14f4475e6554756829bb070654d",
+    "accepted_verifier_root": "e3c3d30fbbc7a9d381a21ab7cdb45b4cc74b7d2e0b7d6268fdffa29f8f6363c9",
+    "artifact_binding_root": "6ef98611e1f657a22c6f88866dab17ecf88eba88375a1ac8639d599c23d077f3",
+    "disagreement_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "schema": "docs/schemas/verifier_quorum_report.schema.json",
+    "settlement_row_root": "16608ea3aeba65d2b7c08619f6c8bd37e7299508ee11ed5b4fd3f185db33c83c",
+    "verifier_attestation_root": "3dda5fb996b34fa9774e32f67b5fd5fb985daeb89be588458628f5ab780ee6b2"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "disagreement_rows": [],
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "minimum_independent_organizations": 2,
+    "minimum_quorum": 3,
+    "profile": "rdllm-independent-verifier-quorum-policy/v1",
+    "rejected_or_disputed_route": "verifier_quorum_escrow",
+    "required_verdict": "accepted",
+    "required_verifier_checks": [
+      "artifact_hashes_replayed",
+      "attribution_consensus_ready",
+      "attribution_consensus_target_l70",
+      "consensus_creator_pool_conserved",
+      "provider_declares_consensus_and_verifier_surfaces",
+      "certification_level_at_least_l70",
+      "integration_profile_ready"
+    ],
+    "target_certification_level": "RDLLM-L71"
+  },
+  "privacy": {
+    "private_finance_payload_disclosed": false,
+    "private_prompt_disclosed": false,
+    "private_response_disclosed": false,
+    "private_source_text_disclosed": false,
+    "report_uses_hashes_signatures_and_decisions": true,
+    "verifier_private_notes_disclosed": false
+  },
+  "report_hash": "7508368fe050b5633ac149e7be5b1fb9789d2cfcd76772a3745d1f672386a723",
+  "report_version": "rdllm-verifier-quorum-report/v1",
+  "schemas": {
+    "attribution_consensus_report": "docs/schemas/attribution_consensus_report.schema.json",
+    "certification_report": "docs/schemas/certification_report.schema.json",
+    "integration_profile": "docs/schemas/integration_profile.schema.json",
+    "provider_attribution_card": "docs/schemas/provider_attribution_card.schema.json",
+    "verifier_quorum_report": "docs/schemas/verifier_quorum_report.schema.json"
+  },
+  "settlement_gate": {
+    "accepted_verifier_count": 3,
+    "decision": "direct_settlement_ready",
+    "direct_settlement_ready": true,
+    "escrow_reasons": [],
+    "independent_organization_count": 3,
+    "invalid_verifier_count": 0,
+    "rejected_or_disputed_verifier_count": 0
+  },
+  "settlement_rows": [
+    {
+      "consensus_decision": "accepted",
+      "consensus_payout": "0.183527",
+      "contribution_weight": 0.33368545,
+      "creator_id": "arjun",
+      "escrow_amount": "0.000000",
+      "payout": "0.183527",
+      "settlement_decision": "accepted",
+      "settlement_row_hash": "3342e38187b32f7fae6a110ab2616f4b1be7c28e303a8290b22940b479a7b701",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "consensus_decision": "accepted",
+      "consensus_payout": "0.182706",
+      "contribution_weight": 0.33219273,
+      "creator_id": "lina",
+      "escrow_amount": "0.000000",
+      "payout": "0.182706",
+      "settlement_decision": "accepted",
+      "settlement_row_hash": "49a1bda27bf7e28528cad79c1166fbf049ffd46252f695921ff7d7ed72ec587c",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "consensus_decision": "accepted",
+      "consensus_payout": "0.183767",
+      "contribution_weight": 0.33412182,
+      "creator_id": "maya",
+      "escrow_amount": "0.000000",
+      "payout": "0.183767",
+      "settlement_decision": "accepted",
+      "settlement_row_hash": "a647fd4096fdb01ef020d1bbff1558bbada0f59c40ea492cd414cd0dd3f3930c",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "01c8479589749b36e50ab431aa9cfd3ecf104263c77266b1f48d21396eb75c75"
+  },
+  "summary": {
+    "accepted_verifier_count": 3,
+    "creator_pool_conserved_or_escrowed": true,
+    "direct_settlement_ready": true,
+    "disagreement_count": 0,
+    "escrow_total": "0.000000",
+    "independent_organization_count": 3,
+    "minimum_independent_organizations": 2,
+    "minimum_quorum": 3,
+    "offline_verification_supported": true,
+    "payout_total": "0.550000",
+    "settlement_decision": "direct_settlement_ready",
+    "settlement_row_count": 3,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L71"
+  },
+  "verifier_rows": [
+    {
+      "artifact_binding_root": "6ef98611e1f657a22c6f88866dab17ecf88eba88375a1ac8639d599c23d077f3",
+      "artifact_count": 4,
+      "attestation_hash": "b3592a84cc7771c7e4ec08e269795f9f0e2dabf59abacf8b2d23f3c073ad0c60",
+      "checks": {
+        "artifact_hashes_replayed": true,
+        "attribution_consensus_ready": true,
+        "attribution_consensus_target_l70": true,
+        "certification_level_at_least_l70": true,
+        "consensus_creator_pool_conserved": true,
+        "integration_profile_ready": true,
+        "provider_declares_consensus_and_verifier_surfaces": true
+      },
+      "notes_hash": "",
+      "observed_at": "2026-05-31T00:00:00Z",
+      "organization_id": "org:verifier_alpha",
+      "policy": "rdllm-independent-verifier-quorum-policy/v1",
+      "replay_verdict": "accepted",
+      "role": "independent_attribution_verifier",
+      "signature": "bb1282606718db1e74db4585471df8365147c7b6c1e0d9a6b2a8706f276a4dd0",
+      "signature_algorithm": "HMAC-SHA256",
+      "target_certification_level": "RDLLM-L71",
+      "trust_tier": "independent",
+      "verifier_id": "verifier_alpha",
+      "verifier_key_hash": "58ab22bce6215a1b2def70665829abec426ba099b00cfd88a45d69725022b0a1"
+    },
+    {
+      "artifact_binding_root": "6ef98611e1f657a22c6f88866dab17ecf88eba88375a1ac8639d599c23d077f3",
+      "artifact_count": 4,
+      "attestation_hash": "12dc8a9b4a6d3984a6519b0e5f4a1b66cda7f26984a6772e650580772e441314",
+      "checks": {
+        "artifact_hashes_replayed": true,
+        "attribution_consensus_ready": true,
+        "attribution_consensus_target_l70": true,
+        "certification_level_at_least_l70": true,
+        "consensus_creator_pool_conserved": true,
+        "integration_profile_ready": true,
+        "provider_declares_consensus_and_verifier_surfaces": true
+      },
+      "notes_hash": "",
+      "observed_at": "2026-05-31T00:00:00Z",
+      "organization_id": "org:verifier_beta",
+      "policy": "rdllm-independent-verifier-quorum-policy/v1",
+      "replay_verdict": "accepted",
+      "role": "independent_attribution_verifier",
+      "signature": "af29eba54fb565f47cb7bb237728217684abe8d9185d45f17ec00061150c21a5",
+      "signature_algorithm": "HMAC-SHA256",
+      "target_certification_level": "RDLLM-L71",
+      "trust_tier": "independent",
+      "verifier_id": "verifier_beta",
+      "verifier_key_hash": "e37d348b62b3de614e02f1078c8bfb5ea7299745d466b35d9c5a08b1e886309a"
+    },
+    {
+      "artifact_binding_root": "6ef98611e1f657a22c6f88866dab17ecf88eba88375a1ac8639d599c23d077f3",
+      "artifact_count": 4,
+      "attestation_hash": "575e66f88470084b0a25e2e8c6372d952f9f6b72a1df65054f2d4bb59a6718cb",
+      "checks": {
+        "artifact_hashes_replayed": true,
+        "attribution_consensus_ready": true,
+        "attribution_consensus_target_l70": true,
+        "certification_level_at_least_l70": true,
+        "consensus_creator_pool_conserved": true,
+        "integration_profile_ready": true,
+        "provider_declares_consensus_and_verifier_surfaces": true
+      },
+      "notes_hash": "",
+      "observed_at": "2026-05-31T00:00:00Z",
+      "organization_id": "org:verifier_gamma",
+      "policy": "rdllm-independent-verifier-quorum-policy/v1",
+      "replay_verdict": "accepted",
+      "role": "independent_attribution_verifier",
+      "signature": "9871fe3a0632e4b7c611b8b5c84bb2f71d83fa8e3374b9f2346e45e2598d6781",
+      "signature_algorithm": "HMAC-SHA256",
+      "target_certification_level": "RDLLM-L71",
+      "trust_tier": "independent",
+      "verifier_id": "verifier_gamma",
+      "verifier_key_hash": "344e89078ca9441abedd96bf008e450b24420c445a3baffb698c68937ba87a1b"
+    }
+  ]
+}

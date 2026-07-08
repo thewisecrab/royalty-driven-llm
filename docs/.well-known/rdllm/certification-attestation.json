@@ -1,0 +1,73 @@
+{
+  "attestation_hash": "77299f33de4f5dd1a498bf3bebfc07d7c410353e8f0e7a9cfa31913a56c212ed",
+  "attestation_version": "rdllm-certification-attestation/v1",
+  "certification_summary": {
+    "case_count": 187,
+    "failed": 0,
+    "highest_level": "RDLLM-L186",
+    "passed": 187,
+    "score": 1.0,
+    "status": "passed"
+  },
+  "certifier": {
+    "id": "certifier:rdllm-reference",
+    "policy": "rdllm-public-conformance-attestation/v1",
+    "role": "certification_authority"
+  },
+  "checks": {
+    "all_cases_passed": true,
+    "case_count_matches_case_status_rows": true,
+    "case_status_root_bound": true,
+    "certification_report_hash_reproducible": true,
+    "certification_report_passed": true,
+    "failed_case_root_empty": true,
+    "highest_level_at_least_l51": true,
+    "private_field_names_absent": true,
+    "private_report_payload_not_embedded": true,
+    "schema_declared": true
+  },
+  "commitments": {
+    "case_status_root": "f4d9e54651c38f1fc1cd092127cd7b054fe831c4b1b23ddc8dbcf541c4f5887e",
+    "certification_report_hash": "dc1e7090d04e2ab7240ea7675cc965f789d31c5d7518d0e18a5a7f35f60631ec",
+    "failed_case_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "implementation_hash": "90aa4de31ffc5c5c422e424e937f63f86ecea3e687b36918bf97c28b28ed7a39",
+    "levels_root": "b842624f792dcaeec60f1a2261d3369183e59e8597f671fac1693487eb4b392e",
+    "minimum_attestable_level": "RDLLM-L51",
+    "schema": "docs/schemas/certification_attestation.schema.json",
+    "summary_hash": "4f8a99e7ba4028506c7fc2c0ed23441bb77b29d4899d9498d9c91b2d2f81af40"
+  },
+  "created_at": "2026-06-03T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "attestation_uses_hashes_and_case_status_roots": true,
+    "case_artifacts_embedded": false,
+    "certification_report_payload_embedded": false,
+    "customer_or_payment_text_disclosed": false,
+    "private_prompt_or_source_text_disclosed": false
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "0f1e4772c8476f7af14247699d87773039f5bdba148aeab58f56feec720c280c"
+  },
+  "subject": {
+    "case_status_root": "f4d9e54651c38f1fc1cd092127cd7b054fe831c4b1b23ddc8dbcf541c4f5887e",
+    "case_status_row_count": 187,
+    "certification_report_hash": "dc1e7090d04e2ab7240ea7675cc965f789d31c5d7518d0e18a5a7f35f60631ec",
+    "certification_version": "rdllm-certification/v1",
+    "implementation_hash": "90aa4de31ffc5c5c422e424e937f63f86ecea3e687b36918bf97c28b28ed7a39",
+    "issued_at": "2026-05-29T00:00:00Z",
+    "levels_root": "b842624f792dcaeec60f1a2261d3369183e59e8597f671fac1693487eb4b392e",
+    "suite": "rdllm-reference-conformance",
+    "target_provider": "provider:unspecified"
+  },
+  "summary": {
+    "attested_case_count": 187,
+    "attested_highest_level": "RDLLM-L186",
+    "failed_check_count": 0,
+    "private_input_field_count": 0,
+    "status": "attested",
+    "target_certification_level": "RDLLM-L52"
+  },
+  "valid_until": ""
+}

@@ -1,0 +1,196 @@
+{
+  "attribution_gap": {
+    "report_hash": "1d8d150f4dd3aaff60c47d543a8c2d25242b7b7543bc2c6589ec22baec7c0298",
+    "summary": {
+      "access_record_count": 6,
+      "accessed_source_count": 3,
+      "allowed_accessed_source_count": 3,
+      "cited_without_access_count": 0,
+      "consumed_without_credit_count": 0,
+      "credited_source_count": 3,
+      "escrow_accounts": [],
+      "paid_hidden_count": 0,
+      "paid_source_count": 3,
+      "policy_withheld_count": 0,
+      "registry_withheld_count": 0,
+      "visible_source_count": 3
+    },
+    "verdict": "closed"
+  },
+  "claim_support": [
+    {
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "claim": "Every royalty bearing AI answer should have a provenance record.",
+      "evidence_end_char": 64,
+      "evidence_span_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+      "evidence_start_char": 0,
+      "source_label": "S1",
+      "support_score": 0.9,
+      "supported": true,
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "claim": "The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.",
+      "evidence_end_char": 244,
+      "evidence_span_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+      "evidence_start_char": 65,
+      "source_label": "S1",
+      "support_score": 0.9,
+      "supported": true,
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_id": "lina-governance-disputes:c1",
+      "claim": "Royalty systems need governance as much as scoring.",
+      "evidence_end_char": 51,
+      "evidence_span_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+      "evidence_start_char": 0,
+      "source_label": "S2",
+      "support_score": 0.9,
+      "supported": true,
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunk_id": "lina-governance-disputes:c1",
+      "claim": "Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.",
+      "evidence_end_char": 164,
+      "evidence_span_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+      "evidence_start_char": 52,
+      "source_label": "S2",
+      "support_score": 0.9,
+      "supported": true,
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "claim": "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage.",
+      "evidence_end_char": 136,
+      "evidence_span_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+      "evidence_start_char": 0,
+      "source_label": "S3",
+      "support_score": 0.9,
+      "supported": true,
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "claim": "Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.",
+      "evidence_end_char": 262,
+      "evidence_span_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+      "evidence_start_char": 137,
+      "source_label": "S3",
+      "support_score": 0.9,
+      "supported": true,
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "event": {
+    "answer_hash": "283203d79fe9f38a76f38927a84e9d964d9be2ed9f9e88274461757e7af4fde4",
+    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
+    "event_id": "evt_b560c62bb49a73d0",
+    "prompt_hash": "50ab8c101c89ff008713591e3270032cb19923a1e89f68b4315afb839e95d35e",
+    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c"
+  },
+  "grounding_quality": {
+    "issues": [],
+    "overall_score": 1.0,
+    "quality_version": "rdllm-grounding-quality/v1",
+    "scores": {
+      "citation_integrity": 1.0,
+      "evidence_relevance": 1.0,
+      "fact_support": 1.0,
+      "payout_alignment": 1.0,
+      "policy_alignment": 1.0,
+      "source_accessibility": 1.0
+    },
+    "summary": {
+      "claim_count": 6,
+      "footer_source_count": 3,
+      "footer_span_hash_count": 6,
+      "source_count": 3,
+      "supported_claims": 6
+    },
+    "verdict": "verified"
+  },
+  "grounding_report": {
+    "coverage": 1.0,
+    "policy_denials": 0,
+    "policy_status": "allowed",
+    "registry_conflicts": 0,
+    "registry_report_hash": "",
+    "registry_status": "clear",
+    "source_count": 3,
+    "status": "grounded",
+    "supported_claims": 6,
+    "total_claims": 6,
+    "unsupported_claims": 0
+  },
+  "issued_at": "2026-07-01T15:03:38Z",
+  "issuer": "rdllm-local-demo",
+  "model": {
+    "id": "rdllm-reference-model",
+    "route_id": "route:default",
+    "version": "2026-06"
+  },
+  "privacy": {
+    "answer_disclosed": false,
+    "disclosure_root": "c2a9bde5851c2cdd21741191e688384631d72890d32b7b39c9037f7bb0ecddc4",
+    "disclosure_version": "rdllm-selective-disclosure/v1",
+    "prompt_disclosed": false,
+    "selective_disclosure": "hash commitments expose prompt/output integrity without disclosing private prompts",
+    "source_quotes_disclosed": true
+  },
+  "protocol_version": "rdllm-attribution-receipt/v1",
+  "receipt_hash": "3631d59bc8ef8de9f82ffc9ebd278b73c7fd7cc2f30d9629b5a636181241660c",
+  "registry": {
+    "registry_conflicts": 0,
+    "registry_report_hash": "",
+    "registry_status": "clear"
+  },
+  "rights": {
+    "policy_denials": 0,
+    "policy_status": "allowed"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "68030ed08f46be29ea9086ca7b4c942187a0f0b6f0d072f20d1804f158ddb5ce"
+  },
+  "sources": [
+    {
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "contribution_weight": "0.327662",
+      "creator_id": "arjun",
+      "label": "S1",
+      "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_id": "lina-governance-disputes:c1",
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "contribution_weight": "0.234013",
+      "creator_id": "lina",
+      "label": "S2",
+      "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "contribution_weight": "0.438325",
+      "creator_id": "maya",
+      "label": "S3",
+      "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "telemetry": {
+    "claim_support_trace_hash": "5405f1c9f37f039cf49a48a2705b45fc8c5f20e9603c43c8c682f9105b302111",
+    "otel_semconv": "https://opentelemetry.io/docs/specs/semconv/gen-ai/gen-ai-spans/",
+    "source_access_trace_hash": "9fa9e2e11fb8c52e2f21bf73de5261d0dadd0942445804abf9cd67745cb79ed8",
+    "source_reference_trace_hash": "4d6c865cbc19c9be93203d7266d5f006f8a87348b1bd79930d4d5a12e6fae957",
+    "trace_exchange_version": "rdllm-trace-exchange/v1"
+  }
+}

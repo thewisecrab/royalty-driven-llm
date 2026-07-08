@@ -1,0 +1,89 @@
+{
+  "schema": "rdllm-production-readiness-profile/v1",
+  "deployment": {
+    "deployment_id": "rdllm-open-production-baseline",
+    "operator_name": "RDLLM open-source operator",
+    "operator_type": "public_sector",
+    "environment": "public_sector_production",
+    "tenancy_model": "multi_tenant",
+    "deployment_region_policy": "Operator-defined regional deployment policy with data residency controls for regulated users."
+  },
+  "public_surfaces": {
+    "discovery_manifest_url": "/.well-known/rdllm.json",
+    "provider_attribution_card_url": "/.well-known/rdllm/provider-attribution-card.json",
+    "public_schema_base_url": "/docs/schemas/",
+    "transparency_log_url": "/.well-known/rdllm/transparency-log.json",
+    "security_contact": "GitHub Security Advisory or operator security contact",
+    "license_url": "LICENSE"
+  },
+  "runtime_controls": {
+    "auth_required": true,
+    "rate_limits_enabled": true,
+    "tenant_isolation_enabled": true,
+    "abuse_monitoring_enabled": true,
+    "fail_closed_on_unknown_provider_state": true,
+    "source_footer_required": true,
+    "response_envelope_required": true,
+    "streaming_emission_gate_required": true,
+    "provider_route_allowlist_required": true,
+    "no_raw_prompt_publication": true
+  },
+  "security_controls": {
+    "secrets_externalized": true,
+    "dependency_update_policy": true,
+    "ci_required": true,
+    "supply_chain_provenance_required": true,
+    "vulnerability_reporting_path": true,
+    "audit_log_immutability": true,
+    "backup_restore_tested": true,
+    "incident_response_runbook": true,
+    "privacy_redaction_public_surfaces": true,
+    "admin_actions_audited": true
+  },
+  "evidence_controls": {
+    "claim_source_verification_required": true,
+    "source_rationale_required": true,
+    "footer_copy_export_preservation": true,
+    "proof_pack_publication_required": true,
+    "public_discovery_manifest_required": true,
+    "third_party_audit_supported": true,
+    "negative_fixture_replay_required": true,
+    "model_response_state_normalization_required": true
+  },
+  "governance_controls": {
+    "creator_onboarding_policy": true,
+    "rights_registry_required": true,
+    "duplicate_claim_dispute_process": true,
+    "dispute_escrow_required": true,
+    "human_review_for_conflicts": true,
+    "appeals_process": true,
+    "consent_revocation_process": true,
+    "terms_publication_required": true
+  },
+  "settlement_controls": {
+    "settlement_mode": "processor_attested",
+    "direct_payout_enabled": true,
+    "external_payment_processor_attestation_required": true,
+    "minimum_creator_pool_rate": 0.01,
+    "escrow_for_unattributed_enabled": true,
+    "raw_payment_accounts_never_public": true,
+    "payout_reconciliation_required": true,
+    "settlement_report_required": true,
+    "processor_attestation_or_instruction_only": true,
+    "tax_and_legal_operator_responsibility_accepted": true
+  },
+  "public_sector_controls": {
+    "procurement_evidence_export_enabled": true,
+    "records_retention_policy_defined": true,
+    "accessibility_review_required": true,
+    "data_residency_policy_defined": true,
+    "public_interest_review_policy_defined": true
+  },
+  "operations_slo": {
+    "revocation_propagation_sla_hours": 24,
+    "incident_triage_sla_hours": 24,
+    "footer_verification_latency_budget_ms": 2000,
+    "transparency_publication_sla_minutes": 60,
+    "backup_restore_test_interval_days": 90
+  }
+}

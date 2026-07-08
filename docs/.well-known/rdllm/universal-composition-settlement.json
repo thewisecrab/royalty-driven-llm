@@ -1,0 +1,475 @@
+{
+  "aggregate_recipient_rows": [
+    {
+      "aggregate_recipient_row_hash": "48b181521f03b54068151b7a28a67df954f343e6c20dba90d101f0eef6798db2",
+      "chunk_ids": [
+        "unresolved-artifact-source:c1"
+      ],
+      "claim_ids": [
+        "claim:artifact-composition:1"
+      ],
+      "currency": "USD",
+      "obligation_count": 1,
+      "recipient_creator_id": "unknown_creator_escrow",
+      "recipient_kind": "escrow",
+      "segment_ids": [
+        "segment:artifact:openai_responses"
+      ],
+      "settlement_status": "escrow",
+      "source_labels": [
+        "C1"
+      ],
+      "total_payout": "0.085250",
+      "work_id": "unresolved-artifact-source"
+    },
+    {
+      "aggregate_recipient_row_hash": "0d13e110d9b8836cd0cc59ecb97d56386b6e7a1d545927e942ad5666a95ea21c",
+      "chunk_ids": [
+        "arjun-provenance-ledger:c1"
+      ],
+      "claim_ids": [
+        "claim:artifact-composition:2"
+      ],
+      "currency": "USD",
+      "obligation_count": 1,
+      "recipient_creator_id": "arjun",
+      "recipient_kind": "creator",
+      "segment_ids": [
+        "segment:artifact:anthropic_messages"
+      ],
+      "settlement_status": "payable",
+      "source_labels": [
+        "C2"
+      ],
+      "total_payout": "0.209000",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "aggregate_recipient_row_hash": "1083d89ee8b320c33d2d54393f05bd66b44cc8ba3827066bf53370e7b9daacb0",
+      "chunk_ids": [
+        "maya-youtube-style-pool:c1"
+      ],
+      "claim_ids": [
+        "claim:artifact-composition:1"
+      ],
+      "currency": "USD",
+      "obligation_count": 1,
+      "recipient_creator_id": "maya",
+      "recipient_kind": "creator",
+      "segment_ids": [
+        "segment:artifact:openai_responses"
+      ],
+      "settlement_status": "payable",
+      "source_labels": [
+        "C1"
+      ],
+      "total_payout": "0.255750",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "artifact_bindings": {
+    "clearinghouse_report": {
+      "artifact_type": "rdllm-clearinghouse-report/v1",
+      "declared_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+      "hash_reproducible": true,
+      "present": true,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L43"
+    },
+    "revenue_allocation_report": {
+      "artifact_type": "rdllm-revenue-allocation-report/v1",
+      "declared_hash": "d927e86b83c754197b4c9f28cf00828bff8b29289e9b5a0cc49d7604761d1cd3",
+      "hash_reproducible": true,
+      "present": true,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L46"
+    },
+    "universal_composition_receipt": {
+      "artifact_type": "rdllm-universal-composition-receipt/v1",
+      "declared_hash": "1a7f07d1b8ed7aa665531a4678f15e4ffe69a0d8f8f472bb459d361b3af46f07",
+      "hash_reproducible": true,
+      "present": true,
+      "status": "released",
+      "target_certification_level": "RDLLM-L130"
+    }
+  },
+  "checks": {
+    "aggregate_rows_conserve_creator_obligations": true,
+    "clearinghouse_ready_if_present": true,
+    "creator_obligations_conserve_segment_pools": true,
+    "creator_pool_matches_revenue_basis": true,
+    "l130_composition_receipt_hash_reproducible": true,
+    "l130_composition_receipt_released": true,
+    "no_duplicate_creator_obligations": true,
+    "private_text_not_disclosed": true,
+    "provider_segment_rows_cover_l130_segments": true,
+    "provider_weights_conserve_unit": true,
+    "revenue_allocation_ready_if_present": true,
+    "revenue_basis_present": true,
+    "segment_pools_conserve_creator_pool": true,
+    "settlement_currency_matches_revenue": true,
+    "settlement_statuses_explicit": true,
+    "source_entitlement_rows_cover_segments": true,
+    "source_entitlement_weights_conserve_each_segment": true,
+    "source_entitlements_reference_l130_claims_and_sources": true,
+    "source_footer_binding_preserved": true,
+    "unresolved_or_disputed_sources_not_paid": true
+  },
+  "commitments": {
+    "aggregate_recipient_root": "12a4c7dda5e64c6946e591fe11470ec3e110e6cee28c9c2a22de3e72c940b41e",
+    "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+    "composition_binding_hash": "5ce3d05f8b9f70bff22f7e3300e96e147c7a28e8252c15eb6e1bb72a197c8c61",
+    "creator_obligation_root": "ac417626b5950293818c2483ad68703651582637af5d4fe90c1195318d612a76",
+    "escrow_root": "b9b2f7d23ef09b4d283cf4f25cf2a8956270706f8caf9a075993a2b1ed455f5d",
+    "held_root": "2e1cfa82b035c26cbbbdae632cea070514eb8b773f616aaeaf668e2f0be8f10d",
+    "payable_root": "baa1edf3ba24c44464fe0ea4e922a3c46cd29473863f813956860f2a94bc2ee8",
+    "provider_segment_root": "d7eef94175a4aaf6c346828b3f9084a2cfabb9f948a6ef8964b9374656bb47d3",
+    "revenue_allocation_report_hash": "d927e86b83c754197b4c9f28cf00828bff8b29289e9b5a0cc49d7604761d1cd3",
+    "revenue_binding_hash": "e2d272d944a2e62d7826031c0758e656e2ed6a95dca8734b59c7105441f1ef04",
+    "schema": "docs/schemas/universal_composition_settlement.schema.json",
+    "segment_settlement_root": "91f409f09db2ef6360548f58db7d94921fce11a96396af0e53715915e0301ebc",
+    "source_entitlement_root": "1d9d8adf7c51f0cd1541f0e5005f93518142ebd5789209cde4e834926725e234",
+    "universal_composition_receipt_hash": "1a7f07d1b8ed7aa665531a4678f15e4ffe69a0d8f8f472bb459d361b3af46f07"
+  },
+  "composition_binding": {
+    "composition_binding_hash": "5ce3d05f8b9f70bff22f7e3300e96e147c7a28e8252c15eb6e1bb72a197c8c61",
+    "composition_id": "composition:artifact:universal-foundation",
+    "composition_status": "released",
+    "composition_target_level": "RDLLM-L130",
+    "deployment_attestation_root": "4f6f15a08009db3dfc4d6bf354e6d27d76b06d87592a2f572bef3bbbf26ff186",
+    "final_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+    "provider_families": [
+      "anthropic_messages",
+      "openai_responses"
+    ],
+    "provider_segment_count": 2,
+    "provider_segment_root": "d7eef94175a4aaf6c346828b3f9084a2cfabb9f948a6ef8964b9374656bb47d3",
+    "segment_ids": [
+      "segment:artifact:openai_responses",
+      "segment:artifact:anthropic_messages"
+    ],
+    "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+    "telemetry_span_root": "78586449b055a783310913a38605216cce6bb93379b5f47910d9e24cf9331a66",
+    "universal_composition_receipt_hash": "1a7f07d1b8ed7aa665531a4678f15e4ffe69a0d8f8f472bb459d361b3af46f07"
+  },
+  "coverage_gaps": {
+    "duplicate_obligation_keys": [],
+    "entitlement_weight_sums_by_segment": {
+      "segment:artifact:anthropic_messages": "1.000000",
+      "segment:artifact:openai_responses": "1.000000"
+    },
+    "failed_checks": [],
+    "failure_modes": [],
+    "missing_segment_entitlements": [],
+    "unknown_claim_references": [],
+    "unknown_source_references": []
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "creator_obligation_rows": [
+    {
+      "allocation_weight": "1.000000",
+      "basis": "l131_composition_segment_source_settlement",
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "claim_id": "claim:artifact-composition:2",
+      "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+      "composition_id": "composition:artifact:universal-foundation",
+      "content_hash": "2eaf0f182ac00e69b63d586ea551398675caad8d4adbf6406ae876878a06f58d",
+      "creator_obligation_hash": "738dff9cc64f25d8be7151646965693f668de8cbef8e658b54951b3dbd2e21e0",
+      "currency": "USD",
+      "deployment_attestation_hash": "6eb45534e8d7ee3fc5c84b2fde3b909aacf3bb329420e86e9855bb1742cf6fb6",
+      "display_order": 3,
+      "hold_reason": "",
+      "obligation_index_within_segment": 1,
+      "obligation_key": "6735d193466b8023496cbdf35b713f9c04015ff103404ecc190c9c19233ba3d5",
+      "payout": "0.209000",
+      "provider_family": "anthropic_messages",
+      "provider_id": "provider:anthropic-messages",
+      "recipient_creator_id": "arjun",
+      "recipient_kind": "creator",
+      "revenue_allocation_report_hash": "d927e86b83c754197b4c9f28cf00828bff8b29289e9b5a0cc49d7604761d1cd3",
+      "rights_status": "licensed",
+      "segment_hash": "a444435ea48469cca65da5b3ad7bdd8b0957585ec3bdc09e8d72492c10d75c48",
+      "segment_id": "segment:artifact:anthropic_messages",
+      "segment_pool": "0.209000",
+      "segment_settlement_row_hash": "1ccde7bd08bc6bb375de488273e714b9f92ed8bf5f88629df0bc6b81fb7dc4fa",
+      "settlement_row_type": "creator_obligation",
+      "settlement_status": "payable",
+      "source_entitlement_hash": "cc89b9157c57eb6da5ed6d25844e287eae2f03f9d62b46191eb495adcb9a7f38",
+      "source_label": "C2",
+      "universal_composition_receipt_hash": "1a7f07d1b8ed7aa665531a4678f15e4ffe69a0d8f8f472bb459d361b3af46f07",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "allocation_weight": "0.750000",
+      "basis": "l131_composition_segment_source_settlement",
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "claim_id": "claim:artifact-composition:1",
+      "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+      "composition_id": "composition:artifact:universal-foundation",
+      "content_hash": "c41dfbd10095b8014795d9c2e63b22380378208e0bdb55ac74b7b9310095cea6",
+      "creator_obligation_hash": "a23fba7398b045aa2d61de52977a006f236dfc2ff5e169d66fe6b07c974b035e",
+      "currency": "USD",
+      "deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+      "display_order": 1,
+      "hold_reason": "",
+      "obligation_index_within_segment": 1,
+      "obligation_key": "95c935891d540e9e4401561ff501a78d5fac0d84c3280eb88b75ef070be73ea2",
+      "payout": "0.255750",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "recipient_creator_id": "maya",
+      "recipient_kind": "creator",
+      "revenue_allocation_report_hash": "d927e86b83c754197b4c9f28cf00828bff8b29289e9b5a0cc49d7604761d1cd3",
+      "rights_status": "licensed",
+      "segment_hash": "47309d3a2a4d03984fbb8135cfbe2a4386f7cd2273be46b790e56871922ac510",
+      "segment_id": "segment:artifact:openai_responses",
+      "segment_pool": "0.341000",
+      "segment_settlement_row_hash": "04ea6710521abe8a79743b476d1dea5611df0ab0da7f160198747f568fc1c5cf",
+      "settlement_row_type": "creator_obligation",
+      "settlement_status": "payable",
+      "source_entitlement_hash": "5e9c2dee79f5f38bf33a53ef9d6598ea3c2a55fa427d9bf017efbaa0acdfc1e8",
+      "source_label": "C1",
+      "universal_composition_receipt_hash": "1a7f07d1b8ed7aa665531a4678f15e4ffe69a0d8f8f472bb459d361b3af46f07",
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "allocation_weight": "0.250000",
+      "basis": "l131_composition_segment_source_settlement",
+      "chunk_id": "unresolved-artifact-source:c1",
+      "claim_id": "claim:artifact-composition:1",
+      "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+      "composition_id": "composition:artifact:universal-foundation",
+      "content_hash": "52e590e6307dd00f4098d552f38b0b1d5c55dcd7bb160d6acb6bfb91f32d1246",
+      "creator_obligation_hash": "b9b2f7d23ef09b4d283cf4f25cf2a8956270706f8caf9a075993a2b1ed455f5d",
+      "currency": "USD",
+      "deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+      "display_order": 2,
+      "hold_reason": "unresolved_source_rights",
+      "obligation_index_within_segment": 2,
+      "obligation_key": "dc6979159ec34ed2a3e0430487904513ed78b8807aa5b367d368b10bbe6f6e1d",
+      "payout": "0.085250",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "recipient_creator_id": "unknown_creator_escrow",
+      "recipient_kind": "escrow",
+      "revenue_allocation_report_hash": "d927e86b83c754197b4c9f28cf00828bff8b29289e9b5a0cc49d7604761d1cd3",
+      "rights_status": "unresolved",
+      "segment_hash": "47309d3a2a4d03984fbb8135cfbe2a4386f7cd2273be46b790e56871922ac510",
+      "segment_id": "segment:artifact:openai_responses",
+      "segment_pool": "0.341000",
+      "segment_settlement_row_hash": "04ea6710521abe8a79743b476d1dea5611df0ab0da7f160198747f568fc1c5cf",
+      "settlement_row_type": "creator_obligation",
+      "settlement_status": "escrow",
+      "source_entitlement_hash": "cdde9905010415aa678c8c54bc3362bf9be647588cfed6674f8563f903cd526b",
+      "source_label": "C1",
+      "universal_composition_receipt_hash": "1a7f07d1b8ed7aa665531a4678f15e4ffe69a0d8f8f472bb459d361b3af46f07",
+      "work_id": "unresolved-artifact-source"
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "raw_answer_text_disclosed": false,
+    "raw_billing_records_disclosed": false,
+    "raw_prompt_text_disclosed": false,
+    "raw_provider_response_disclosed": false,
+    "raw_source_text_disclosed": false,
+    "settlement_uses_hashes_ids_and_totals": true
+  },
+  "provider_segment_settlement_rows": [
+    {
+      "basis": "l130_provider_weight",
+      "claim_ids": [
+        "claim:artifact-composition:1"
+      ],
+      "creator_pool": "0.550000",
+      "currency": "USD",
+      "deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+      "deployment_id": "deployment:artifact-foundation-runtime",
+      "display_order": 1,
+      "native_model": "openai:responses-compatible",
+      "native_response_id": "runtime_rdllm_reference_response",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "provider_weight": "0.620000",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "segment_hash": "47309d3a2a4d03984fbb8135cfbe2a4386f7cd2273be46b790e56871922ac510",
+      "segment_id": "segment:artifact:openai_responses",
+      "segment_pool": "0.341000",
+      "segment_settlement_row_hash": "04ea6710521abe8a79743b476d1dea5611df0ab0da7f160198747f568fc1c5cf",
+      "settlement_row_type": "provider_segment_pool",
+      "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+      "source_labels": [
+        "C1"
+      ]
+    },
+    {
+      "basis": "l130_provider_weight",
+      "claim_ids": [
+        "claim:artifact-composition:2"
+      ],
+      "creator_pool": "0.550000",
+      "currency": "USD",
+      "deployment_attestation_hash": "6eb45534e8d7ee3fc5c84b2fde3b909aacf3bb329420e86e9855bb1742cf6fb6",
+      "deployment_id": "deployment:artifact-anthropic-composition",
+      "display_order": 2,
+      "native_model": "anthropic:messages-compatible",
+      "native_response_id": "msg_artifact_universal_composition_anthropic",
+      "provider_family": "anthropic_messages",
+      "provider_id": "provider:anthropic-messages",
+      "provider_weight": "0.380000",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "segment_hash": "a444435ea48469cca65da5b3ad7bdd8b0957585ec3bdc09e8d72492c10d75c48",
+      "segment_id": "segment:artifact:anthropic_messages",
+      "segment_pool": "0.209000",
+      "segment_settlement_row_hash": "1ccde7bd08bc6bb375de488273e714b9f92ed8bf5f88629df0bc6b81fb7dc4fa",
+      "settlement_row_type": "provider_segment_pool",
+      "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+      "source_labels": [
+        "C2"
+      ]
+    }
+  ],
+  "revenue_binding": {
+    "creator_pool": "0.550000",
+    "creator_pool_rate": "0.55",
+    "currency": "USD",
+    "event_allocation_root": "89505cf7e50d490183ecc07e2ff954713fda1cbbbc67e5ed3ae2b28576798d57",
+    "expected_creator_pool": "0.550000",
+    "gross_revenue": "1.000000",
+    "revenue_allocation_report_hash": "d927e86b83c754197b4c9f28cf00828bff8b29289e9b5a0cc49d7604761d1cd3",
+    "revenue_allocation_status": "ready",
+    "revenue_allocation_target_level": "RDLLM-L46",
+    "revenue_binding_hash": "e2d272d944a2e62d7826031c0758e656e2ed6a95dca8734b59c7105441f1ef04",
+    "revenue_event_count": 1,
+    "revenue_source_count": 2,
+    "revenue_source_root": "0280b8dd21ff6938d35863be023d2b9a625f9f54f677ffe3d35b878ef4392134"
+  },
+  "schemas": {
+    "clearinghouse_report": "docs/schemas/clearinghouse_report.schema.json",
+    "revenue_allocation_report": "docs/schemas/revenue_allocation_report.schema.json",
+    "universal_composition_receipt": "docs/schemas/universal_composition_receipt.schema.json",
+    "universal_composition_settlement": "docs/schemas/universal_composition_settlement.schema.json"
+  },
+  "settlement_decision": {
+    "decision": "release_settlement",
+    "failed_checks": [],
+    "failure_modes": [],
+    "safe_output_policy": "publish_composition_settlement_rows",
+    "settlement_authorized": true
+  },
+  "settlement_policy": {
+    "creator_pool": "0.550000",
+    "creator_pool_rate": "0.55",
+    "currency": "USD",
+    "gross_revenue": "1.000000",
+    "minimum_input_level": "RDLLM-L130",
+    "on_disputed_rights": "hold",
+    "on_missing_source_entitlement": "block_settlement",
+    "on_pool_mismatch": "block_settlement",
+    "on_unresolved_rights": "escrow",
+    "profile": "rdllm-universal-composition-settlement-policy/v1",
+    "raw_answer_text_disclosure_allowed": false,
+    "raw_billing_records_disclosure_allowed": false,
+    "requires_explicit_source_entitlements": true,
+    "requires_l130_release": true,
+    "requires_revenue_conservation": true,
+    "requires_source_footer_binding": true,
+    "rounding": "0.000001",
+    "segment_weight_source": "l130_provider_weight",
+    "source_entitlement_weight_source": "l131_source_entitlement_weight",
+    "target_certification_level": "RDLLM-L131"
+  },
+  "settlement_version": "rdllm-universal-composition-settlement/v1",
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "bb3ba1cd1435dbdeafefd7218f5523916a9deee1f1deaba08e32293e8481e160"
+  },
+  "source_entitlement_rows": [
+    {
+      "allocation_weight": "1.000000",
+      "basis": "segment_source_entitlement",
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "claim_id": "claim:artifact-composition:2",
+      "content_hash": "2eaf0f182ac00e69b63d586ea551398675caad8d4adbf6406ae876878a06f58d",
+      "deployment_attestation_hash": "6eb45534e8d7ee3fc5c84b2fde3b909aacf3bb329420e86e9855bb1742cf6fb6",
+      "display_order": 3,
+      "hold_reason": "",
+      "provider_family": "anthropic_messages",
+      "provider_id": "provider:anthropic-messages",
+      "recipient_creator_id": "arjun",
+      "recipient_kind": "creator",
+      "rights_status": "licensed",
+      "segment_id": "segment:artifact:anthropic_messages",
+      "settlement_status": "payable",
+      "source_entitlement_hash": "cc89b9157c57eb6da5ed6d25844e287eae2f03f9d62b46191eb495adcb9a7f38",
+      "source_label": "C2",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "allocation_weight": "0.750000",
+      "basis": "segment_source_entitlement",
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "claim_id": "claim:artifact-composition:1",
+      "content_hash": "c41dfbd10095b8014795d9c2e63b22380378208e0bdb55ac74b7b9310095cea6",
+      "deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+      "display_order": 1,
+      "hold_reason": "",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "recipient_creator_id": "maya",
+      "recipient_kind": "creator",
+      "rights_status": "licensed",
+      "segment_id": "segment:artifact:openai_responses",
+      "settlement_status": "payable",
+      "source_entitlement_hash": "5e9c2dee79f5f38bf33a53ef9d6598ea3c2a55fa427d9bf017efbaa0acdfc1e8",
+      "source_label": "C1",
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "allocation_weight": "0.250000",
+      "basis": "segment_source_entitlement",
+      "chunk_id": "unresolved-artifact-source:c1",
+      "claim_id": "claim:artifact-composition:1",
+      "content_hash": "52e590e6307dd00f4098d552f38b0b1d5c55dcd7bb160d6acb6bfb91f32d1246",
+      "deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+      "display_order": 2,
+      "hold_reason": "unresolved_source_rights",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "recipient_creator_id": "unknown_creator_escrow",
+      "recipient_kind": "escrow",
+      "rights_status": "unresolved",
+      "segment_id": "segment:artifact:openai_responses",
+      "settlement_status": "escrow",
+      "source_entitlement_hash": "cdde9905010415aa678c8c54bc3362bf9be647588cfed6674f8563f903cd526b",
+      "source_label": "C1",
+      "work_id": "unresolved-artifact-source"
+    }
+  ],
+  "summary": {
+    "aggregate_recipient_count": 3,
+    "composition_id": "composition:artifact:universal-foundation",
+    "composition_settlement_authorized": true,
+    "creator_obligation_count": 3,
+    "creator_pool": "0.550000",
+    "currency": "USD",
+    "double_payment_prevented": true,
+    "escrow_total": "0.085250",
+    "failed_check_count": 0,
+    "failure_mode_count": 0,
+    "gross_revenue": "1.000000",
+    "held_total": "0.000000",
+    "minimum_input_level": "RDLLM-L130",
+    "payable_total": "0.464750",
+    "privacy_preserved": true,
+    "provider_segment_count": 2,
+    "settled_total": "0.550000",
+    "source_entitlement_count": 3,
+    "source_footer_binding_preserved": true,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L131",
+    "unresolved_sources_escrowed_or_held": true
+  },
+  "universal_composition_settlement_hash": "891ec7d627a812a0b26fea27e2a4fe68759aee39251b7660fd3a92334c29002a"
+}

@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/creator_license_contract.schema.json",
+  "title": "RDLLM Creator License Contract",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "issuer",
+    "created_at",
+    "effective_at",
+    "provider",
+    "profile",
+    "creator_commitments",
+    "terms",
+    "commitments",
+    "enforcement",
+    "schemas",
+    "summary",
+    "privacy",
+    "contract_hash",
+    "signature"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "rdllm-creator-license-contract/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "effective_at": { "type": "string" },
+    "provider": { "type": "string" },
+    "profile": {
+      "type": "object",
+      "required": [
+        "profile_id",
+        "rights_standard",
+        "dataset_metadata_standard",
+        "bom_standard",
+        "provenance_standard"
+      ],
+      "additionalProperties": true
+    },
+    "creator_commitments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "creator_name",
+          "payout_account_hash",
+          "payout_account_disclosed"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "terms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "term_id",
+          "work_id",
+          "creator_id",
+          "creator_name",
+          "title",
+          "title_hash",
+          "content_hash",
+          "source_uri",
+          "license",
+          "policy_id",
+          "allowed_uses",
+          "prohibited_uses",
+          "jurisdictions",
+          "requires_attribution",
+          "requires_royalty",
+          "minimum_creator_pool_rate",
+          "revoked",
+          "consent_status",
+          "payout_account_hash",
+          "work_text_disclosed",
+          "payout_account_disclosed",
+          "duties",
+          "standards",
+          "term_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "creator_root",
+        "term_root",
+        "content_hash_root",
+        "policy_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "enforcement": {
+      "type": "object",
+      "required": [
+        "license_terms_must_precede_use",
+        "policy_engine_must_enforce_allowed_uses",
+        "minimum_creator_pool_rate_must_be_met",
+        "revoked_works_denied_for_future_use",
+        "unlicensed_traced_use_routes_to_rights_conflict_escrow",
+        "proof_pack_required_for_public_answers"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["creator_license_contract"],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "creator_count",
+        "work_count",
+        "term_count",
+        "active_term_count",
+        "revoked_term_count",
+        "minimum_creator_pool_rate_max",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "work_text_disclosed",
+        "payout_account_disclosed",
+        "contract_uses_content_hashes",
+        "contract_uses_payout_account_hashes"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "contract_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

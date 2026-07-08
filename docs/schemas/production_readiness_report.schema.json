@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/production_readiness_report.schema.json",
+  "title": "RDLLM Production Readiness Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "profile_hash",
+    "summary",
+    "control_rows",
+    "blocked_controls"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-production-readiness-report/v1"
+    },
+    "profile_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "deployment_id",
+        "operator_type",
+        "settlement_mode",
+        "direct_payout_enabled",
+        "payment_processor_attested",
+        "ready_control_count",
+        "blocked_control_count",
+        "total_control_count",
+        "production_grade_claim_allowed",
+        "direct_creator_settlement_allowed",
+        "public_sector_use_supported"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["ready", "blocked"]
+        },
+        "deployment_id": {
+          "type": ["string", "null"]
+        },
+        "operator_type": {
+          "type": ["string", "null"]
+        },
+        "settlement_mode": {
+          "type": ["string", "null"],
+          "enum": [
+            "processor_attested",
+            "instruction_only",
+            "escrow_only",
+            null
+          ]
+        },
+        "direct_payout_enabled": {
+          "type": ["boolean", "null"]
+        },
+        "payment_processor_attested": {
+          "type": ["boolean", "null"]
+        },
+        "ready_control_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "blocked_control_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total_control_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "production_grade_claim_allowed": {
+          "type": "boolean"
+        },
+        "direct_creator_settlement_allowed": {
+          "type": "boolean"
+        },
+        "public_sector_use_supported": {
+          "type": "boolean"
+        }
+      }
+    },
+    "control_rows": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "control_id",
+          "category",
+          "status",
+          "requirement",
+          "evidence"
+        ],
+        "properties": {
+          "control_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": ["ready", "blocked"]
+          },
+          "requirement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {}
+        }
+      }
+    },
+    "blocked_controls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["control_id", "requirement", "evidence"],
+        "properties": {
+          "control_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "requirement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {}
+        }
+      }
+    }
+  }
+}

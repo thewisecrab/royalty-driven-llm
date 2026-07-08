@@ -1,0 +1,247 @@
+{
+  "attestation_rows": [
+    {
+      "attestation_hash": "9d0e72b8faf094c132bff5b6eb53b7727ebc3aebd77241eda259c63fd51e8e3d",
+      "attestation_id": "attest_arjun_provenance_verified_001",
+      "claim_type": "registry_verified",
+      "creator_id": "arjun",
+      "evidence_hash": "3769f3a69dcc09217d8e38bf169e8ac88fa988dfb7d4daf09c7eefa7714f94d9",
+      "evidence_uri_present": true,
+      "issued_at": "2026-05-29T00:00:00Z",
+      "issuer": "issuer:rdllm-registry",
+      "row_hash": "613943b8e33be0c1c5c00a1e8d8356b0cbdde81c8348dce8b714df84d8f8d02a",
+      "signature_hash": "3ec99c85f15182261cf272398f404af933bb759afcc8acabced7358e7c2b7f94",
+      "signature_verified": true,
+      "status": "active",
+      "trusted_issuer": true,
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "attestation_hash": "fcbee504fe522da1b97f27069c836d38488b798c273a57e3023f950ac286e877",
+      "attestation_id": "attest_copycat_provenance_self_001",
+      "claim_type": "self_asserted",
+      "creator_id": "copycat",
+      "evidence_hash": "f2270ae8ef855d55b512a227c3f5455bc26a94a3196976dff988a393ceb9cc99",
+      "evidence_uri_present": true,
+      "issued_at": "2026-05-29T00:01:00Z",
+      "issuer": "issuer:untrusted-self-registry",
+      "row_hash": "8341062d4b76a0c1365a2ed1a064dc94cc1584d084b4a46cb0bdc8941eb9b5cd",
+      "signature_hash": "0ce15f04c7e3902e2e48ade9b5a250d8cf932c87a92c90260819e40c72300013",
+      "signature_verified": true,
+      "status": "active",
+      "trusted_issuer": false,
+      "work_id": "copycat-provenance-ledger"
+    },
+    {
+      "attestation_hash": "278deb1bfbda7cd1d0985fabe9b9cc9833eb2824490e43318140dd4d94214e40",
+      "attestation_id": "attest_maya_usage_pool_verified_001",
+      "claim_type": "registry_verified",
+      "creator_id": "maya",
+      "evidence_hash": "b5252784167a745d73b14444de1d68c88cc1aff6d484b3ee750d272e81dd2c1e",
+      "evidence_uri_present": true,
+      "issued_at": "2026-05-29T00:00:00Z",
+      "issuer": "issuer:rdllm-registry",
+      "row_hash": "f7c8a5f36f34aa7b6616d6d95c5d0a0c4821dd7286ea67581cc5ad184d820bf8",
+      "signature_hash": "74e74d7df58123358af550af29f71cd5cbffcb3f41cd8358eeb50964df4ebf9e",
+      "signature_verified": true,
+      "status": "active",
+      "trusted_issuer": true,
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "claim_rows": [
+    {
+      "attestation_ids": [
+        "attest_arjun_provenance_verified_001"
+      ],
+      "confidence_score": 1.0,
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "creator_id": "arjun",
+      "decision": "duplicate_claim_escrow",
+      "duplicate_conflict_count": 1,
+      "evidence_hash_count": 1,
+      "reason": "duplicate or near-duplicate ownership conflict is still open",
+      "release_recommendation": "hold_for_registry_resolution",
+      "row_hash": "6e15d79afb0391584c70e9f42b7853891d0d1520a7c0456be4786940a5c93bd7",
+      "source_uri_hash": "007bd45afb10a75d550998ae9de236d5fe5b7d481b17b5f5743712d1abdcd1ed",
+      "title_hash": "bd7e52e1f8409358f7b1fd6b04874617d1bbaa14a2205d68a9babd3c1735e13d",
+      "trusted_attestation_count": 1,
+      "verified_signature_count": 1,
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "attestation_ids": [
+        "attest_copycat_provenance_self_001"
+      ],
+      "confidence_score": 0.65,
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "creator_id": "copycat",
+      "decision": "duplicate_claim_escrow",
+      "duplicate_conflict_count": 1,
+      "evidence_hash_count": 1,
+      "reason": "duplicate or near-duplicate ownership conflict is still open",
+      "release_recommendation": "hold_for_registry_resolution",
+      "row_hash": "e4ed3a8e4de4a0b92c8e4a655c684adf2eb37400955c59adc55ddc26e9849fca",
+      "source_uri_hash": "0150366ef630c373ac3dfebd106297643f6bccc76a1bdea9689f53355ffe4f5f",
+      "title_hash": "db51fdcff21d4a8abd4564270afd79f0c057d49051f6461e9649442f24a51311",
+      "trusted_attestation_count": 0,
+      "verified_signature_count": 0,
+      "work_id": "copycat-provenance-ledger"
+    },
+    {
+      "attestation_ids": [],
+      "confidence_score": 0.0,
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "creator_id": "lina",
+      "decision": "unverified_claim_escrow",
+      "duplicate_conflict_count": 0,
+      "evidence_hash_count": 0,
+      "reason": "no trusted verifiable ownership attestation",
+      "release_recommendation": "hold_for_claim_review",
+      "row_hash": "bad52b80807d2491abb6644fa785ba4300602203b704734ecd0dc5e41fa0262f",
+      "source_uri_hash": "729014abbee402153758a10b5017d83d529f83ea679315d658b3f2b93eae92f6",
+      "title_hash": "66125b1b2829bed8ddd5576b0156ad6eaafc612e1dede78432cafcb8cb42dc5a",
+      "trusted_attestation_count": 0,
+      "verified_signature_count": 0,
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "attestation_ids": [
+        "attest_maya_usage_pool_verified_001"
+      ],
+      "confidence_score": 1.0,
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "creator_id": "maya",
+      "decision": "direct_settlement_allowed",
+      "duplicate_conflict_count": 0,
+      "evidence_hash_count": 1,
+      "reason": "trusted active ownership attestation verifies above threshold",
+      "release_recommendation": "allow_settlement",
+      "row_hash": "34ca1a8a3d4818833d8a79424b34e07ca82ebc5ea6109016d39fec28a9007690",
+      "source_uri_hash": "912c4c60c58cf12cbb41a11fb6f20e7696d990653840cc759340c1bd86da4266",
+      "title_hash": "39093cc41eb52cdc1465230b9e6a61c9f9fc33c36ceba6ef1ebedfd6416db31d",
+      "trusted_attestation_count": 1,
+      "verified_signature_count": 1,
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "commitments": {
+    "attestation_root": "4f4bed38054b377d15b86dd22188cb1b13f27462a846982f3a7ed4316b47f5e3",
+    "claim_root": "a1e75f881bfbbdc44b216028d32ae53b90a1d52825cf30c8903c1f42c99abe85",
+    "conflict_root": "237971f10e215c8c2b0cb0e6aebca7003014bc6a4c69173e2079e21de93678fe",
+    "escrow_root": "6e69f48428445be0158e7836e233b5c6167ec72a5d650a1feb12181a48c48220",
+    "work_root": "14b457fdadc3e1aa049e2570ec93d74c78cae0eedb4c36da6b51bb60483c9d40"
+  },
+  "created_at": "2026-05-30T17:59:24Z",
+  "escrow_rows": [
+    {
+      "confidence_score": 1.0,
+      "creator_id": "arjun",
+      "decision": "duplicate_claim_escrow",
+      "escrow_account": "registry_duplicate_claim_escrow",
+      "escrow_hash": "b2a8c9d03eebf11f601e950db6b459e72cca6da1644bde3a5d2162b2e2d41453",
+      "reason": "duplicate or near-duplicate ownership conflict is still open",
+      "release_recommendation": "hold_for_registry_resolution",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "confidence_score": 0.65,
+      "creator_id": "copycat",
+      "decision": "duplicate_claim_escrow",
+      "escrow_account": "registry_duplicate_claim_escrow",
+      "escrow_hash": "c82903bbfd104ee1f3727b9394fef8caee7982de7ab97ed917a42094f14cddb6",
+      "reason": "duplicate or near-duplicate ownership conflict is still open",
+      "release_recommendation": "hold_for_registry_resolution",
+      "work_id": "copycat-provenance-ledger"
+    },
+    {
+      "confidence_score": 0.0,
+      "creator_id": "lina",
+      "decision": "unverified_claim_escrow",
+      "escrow_account": "ownership_claim_review_escrow",
+      "escrow_hash": "465b35f73b01560ff3c61ad6129cbd3a1547512eee6d93f5e91e59ac67c2d544",
+      "reason": "no trusted verifiable ownership attestation",
+      "release_recommendation": "hold_for_claim_review",
+      "work_id": "lina-governance-disputes"
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "direct_settlement_requires_verified_signature": true,
+    "direct_settlement_threshold": 0.75,
+    "duplicate_claims_route_to_escrow": true,
+    "duplicate_threshold": 0.92,
+    "issuer_key_root": "86d19a3db6886cf08da46156c39cf8122042cfbd50480b010c6f38e370b21ba9",
+    "profile": "rdllm-claim-verification-policy/v1",
+    "review_threshold": 0.4,
+    "trusted_issuer_root": "8a78250508f76c315f455c491048b309c90b28661e2c6a27413046b66bcdff88",
+    "trusted_issuers": [
+      "issuer:rdllm-registry"
+    ],
+    "unverified_claims_route_to_escrow": true
+  },
+  "privacy": {
+    "payout_accounts_disclosed": false,
+    "raw_attestation_signatures_disclosed": false,
+    "raw_issuer_keys_disclosed": false,
+    "report_uses_hashes_claim_metadata_and_escrow_decisions": true,
+    "work_text_disclosed": false
+  },
+  "registry": {
+    "conflicts": [
+      {
+        "conflict_id": "conf_451172c810c96d60",
+        "conflict_type": "duplicate_content",
+        "content_hashes": [
+          "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f"
+        ],
+        "creator_ids": [
+          "arjun",
+          "copycat"
+        ],
+        "resolution": "",
+        "score": 1.0,
+        "status": "open",
+        "work_ids": [
+          "arjun-provenance-ledger",
+          "copycat-provenance-ledger"
+        ]
+      }
+    ],
+    "registry_report_version": "rdllm-claim-registry/v1",
+    "report_hash": "155755f56367bb12abaaf54082e79c3f3c827153e8df4a9d25b74598542439b6",
+    "summary": {
+      "attestation_count": 3,
+      "conflicted_work_count": 2,
+      "duplicate_threshold": 0.92,
+      "open_conflict_count": 1,
+      "work_count": 4
+    }
+  },
+  "report_hash": "33a03101ced8590011808c970ae303b24781939c1fc0e5f9466faa9913375bb2",
+  "report_version": "rdllm-claim-verification-report/v1",
+  "schemas": {
+    "claim_verification_report": "docs/schemas/claim_verification_report.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "7777ffefb7ebc3b7d27c132bb3bda20808753ddfc3a2609e261bfb46c17220d0"
+  },
+  "summary": {
+    "all_direct_rows_have_verified_attestations": true,
+    "attestation_count": 3,
+    "direct_settlement_work_count": 1,
+    "duplicate_claims_route_to_escrow": true,
+    "duplicate_conflict_count": 1,
+    "escrow_row_count": 3,
+    "review_or_escrow_work_count": 3,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L54",
+    "trusted_issuer_count": 1,
+    "unverified_claims_route_to_escrow": true,
+    "verified_attestation_count": 3,
+    "work_count": 4
+  }
+}

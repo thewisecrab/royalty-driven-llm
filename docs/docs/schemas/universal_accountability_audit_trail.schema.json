@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_accountability_audit_trail.schema.json",
+  "title": "RDLLM Universal Accountability Audit Trail",
+  "type": "object",
+  "required": [
+    "audit_trail_version",
+    "issuer",
+    "created_at",
+    "accountability_audit_policy",
+    "artifact_bindings",
+    "audit_event_rows",
+    "governance_record_rows",
+    "integrity_control_rows",
+    "failure_case_rows",
+    "evidence_commitments",
+    "checks",
+    "actor_role_coverage",
+    "audit_decision",
+    "verifier_commands",
+    "research_controls",
+    "privacy",
+    "summary",
+    "universal_accountability_audit_trail_hash"
+  ],
+  "properties": {
+    "audit_trail_version": {
+      "const": "rdllm-universal-accountability-audit-trail/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "accountability_audit_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_provider_wire_level",
+        "minimum_claim_provenance_level",
+        "minimum_runtime_level",
+        "minimum_authority_level",
+        "well_known_path"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-accountability-audit-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L152" },
+        "minimum_provider_wire_level": { "const": "RDLLM-L151" },
+        "minimum_claim_provenance_level": { "const": "RDLLM-L150" },
+        "minimum_runtime_level": { "const": "RDLLM-L149" },
+        "minimum_authority_level": { "const": "RDLLM-L145" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-accountability-audit-trail.json"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": { "type": "object" },
+    "audit_event_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "event_type",
+          "event_sequence",
+          "previous_event_hash",
+          "expected_previous_event_hash",
+          "actor_role",
+          "policy_version_hash",
+          "authority_receipt_hash",
+          "l151_protocol_hash",
+          "l150_envelope_hash",
+          "ready",
+          "audit_event_row_hash"
+        ],
+        "properties": {
+          "event_type": { "type": "string" },
+          "event_sequence": { "type": "integer" },
+          "previous_event_hash": { "type": "string" },
+          "expected_previous_event_hash": { "type": "string" },
+          "actor_role": { "type": "string" },
+          "policy_version_hash": { "type": "string" },
+          "authority_receipt_hash": { "type": "string" },
+          "l151_protocol_hash": { "type": "string" },
+          "l150_envelope_hash": { "type": "string" },
+          "ready": { "type": "boolean" },
+          "audit_event_row_hash": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "governance_record_rows": { "type": "array" },
+    "integrity_control_rows": { "type": "array" },
+    "failure_case_rows": { "type": "array" },
+    "evidence_commitments": { "type": "object" },
+    "checks": { "type": "object" },
+    "actor_role_coverage": { "type": "object" },
+    "audit_decision": {
+      "type": "object",
+      "required": [
+        "universal_accountability_audit_authorized",
+        "provider_use_allowed",
+        "app_builder_integration_allowed",
+        "auditor_export_allowed",
+        "direct_creator_settlement_allowed",
+        "unverifiable_trace_allowed",
+        "failure_modes"
+      ],
+      "properties": {
+        "universal_accountability_audit_authorized": { "type": "boolean" },
+        "provider_use_allowed": { "type": "boolean" },
+        "app_builder_integration_allowed": { "type": "boolean" },
+        "auditor_export_allowed": { "type": "boolean" },
+        "direct_creator_settlement_allowed": { "type": "boolean" },
+        "unverifiable_trace_allowed": { "const": false },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "verifier_commands": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "research_controls": { "type": "object" },
+    "privacy": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_provider_wire_level",
+        "minimum_claim_provenance_level",
+        "minimum_runtime_level",
+        "minimum_authority_level",
+        "audit_event_count",
+        "actor_role_count",
+        "governance_record_count",
+        "integrity_control_count",
+        "failure_case_count",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L152" },
+        "minimum_provider_wire_level": { "const": "RDLLM-L151" },
+        "minimum_claim_provenance_level": { "const": "RDLLM-L150" },
+        "minimum_runtime_level": { "const": "RDLLM-L149" },
+        "minimum_authority_level": { "const": "RDLLM-L145" },
+        "audit_event_count": { "type": "integer" },
+        "actor_role_count": { "type": "integer" },
+        "governance_record_count": { "type": "integer" },
+        "integrity_control_count": { "type": "integer" },
+        "failure_case_count": { "type": "integer" },
+        "privacy_preserved": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "universal_accountability_audit_trail_hash": { "type": "string" },
+    "signature": { "type": ["string", "object"] }
+  },
+  "additionalProperties": true
+}

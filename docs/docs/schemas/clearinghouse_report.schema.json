@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/clearinghouse_report.schema.json",
+  "title": "RDLLM Clearinghouse Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "settlement_policy",
+    "input_artifact_rows",
+    "normalized_obligations",
+    "payable_rows",
+    "escrow_rows",
+    "held_rows",
+    "duplicate_rows",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-clearinghouse-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "settlement_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "settlement_currency",
+        "input_artifacts",
+        "duplicate_policy",
+        "escrow_policy",
+        "minimum_provider_certification_level",
+        "clearinghouse_target_level"
+      ],
+      "additionalProperties": true
+    },
+    "input_artifact_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "artifact_index",
+          "artifact_ref",
+          "artifact_type",
+          "provider_id",
+          "declared_hash",
+          "artifact_hash_reproducible",
+          "artifact_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "normalized_obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "origin_type",
+          "origin_artifact_ref",
+          "origin_hash",
+          "origin_provider_id",
+          "recipient_creator_id",
+          "recipient_kind",
+          "work_id",
+          "chunk_id",
+          "basis",
+          "currency",
+          "payout",
+          "settlement_status",
+          "obligation_key",
+          "normalized_obligation_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "payable_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "recipient_creator_id",
+          "recipient_kind",
+          "work_id",
+          "currency",
+          "total_payout",
+          "obligation_count",
+          "settlement_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "escrow_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "recipient_creator_id",
+          "recipient_kind",
+          "work_id",
+          "currency",
+          "total_payout",
+          "obligation_count",
+          "settlement_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "held_rows": {
+      "type": "array",
+      "items": { "type": "object", "additionalProperties": true }
+    },
+    "duplicate_rows": {
+      "type": "array",
+      "items": { "type": "object", "additionalProperties": true }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "input_artifact_hashes_reproducible",
+        "transitive_reports_ready",
+        "duplicates_are_held_not_paid",
+        "no_duplicate_obligations_paid_twice",
+        "payable_rows_conserve_payable_obligations",
+        "escrow_rows_conserve_escrow_obligations",
+        "all_obligations_accounted_for",
+        "no_private_text_disclosed"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "input_artifact_root",
+        "normalized_obligation_root",
+        "payable_root",
+        "escrow_root",
+        "held_root",
+        "duplicate_root",
+        "policy_hash"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "statement_count",
+        "transitive_report_count",
+        "input_artifact_count",
+        "normalized_obligation_count",
+        "payable_obligation_count",
+        "escrow_obligation_count",
+        "held_obligation_count",
+        "duplicate_count",
+        "gross_obligation_total",
+        "payable_total",
+        "escrow_total",
+        "held_total",
+        "accounted_total",
+        "settlement_currency",
+        "double_payment_prevented"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "copied_output_text_disclosed",
+        "clearing_uses_hashes_totals_and_source_ids"
+      ],
+      "additionalProperties": true
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

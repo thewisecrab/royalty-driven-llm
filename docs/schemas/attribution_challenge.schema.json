@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/attribution_challenge.schema.json",
+  "title": "RDLLM Attribution Challenge Report",
+  "type": "object",
+  "required": [
+    "challenge_version",
+    "issuer",
+    "created_at",
+    "challenge_id",
+    "event",
+    "claimant",
+    "claim",
+    "evaluation",
+    "remedy",
+    "commitments",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "challenge_version": {
+      "const": "rdllm-attribution-challenge/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "challenge_id": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": ["event_id", "event_hash", "statement_hash"],
+      "properties": {
+        "event_id": { "type": "string" },
+        "event_hash": { "type": "string" },
+        "statement_hash": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "claimant": {
+      "type": "object",
+      "required": [
+        "claimant_id",
+        "creator_id",
+        "work_id",
+        "chunk_id",
+        "source_uri",
+        "content_hash"
+      ],
+      "properties": {
+        "claimant_id": { "type": "string" },
+        "creator_id": { "type": "string" },
+        "work_id": { "type": "string" },
+        "chunk_id": { "type": "string" },
+        "title": { "type": "string" },
+        "source_uri": { "type": "string" },
+        "content_hash": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "claim": {
+      "type": "object",
+      "required": ["reason", "accept_threshold", "submitted_content_hash"],
+      "properties": {
+        "reason": { "type": "string" },
+        "accept_threshold": { "type": "number", "minimum": 0, "maximum": 1 },
+        "submitted_content_hash": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "evaluation": {
+      "type": "object",
+      "required": [
+        "score",
+        "exact_score",
+        "ngram_score",
+        "longest_sequence_tokens",
+        "matched_text_hash",
+        "already_visible",
+        "already_paid",
+        "already_accessed",
+        "already_credited",
+        "licensed_for_generation",
+        "verdict",
+        "issues"
+      ],
+      "properties": {
+        "score": { "type": "number", "minimum": 0 },
+        "exact_score": { "type": "number", "minimum": 0 },
+        "ngram_score": { "type": "number", "minimum": 0 },
+        "longest_sequence_tokens": { "type": "integer", "minimum": 0 },
+        "matched_text_hash": { "type": "string" },
+        "already_visible": { "type": "boolean" },
+        "already_paid": { "type": "boolean" },
+        "already_accessed": { "type": "boolean" },
+        "already_credited": { "type": "boolean" },
+        "licensed_for_generation": { "type": "boolean" },
+        "verdict": {
+          "enum": ["accepted", "accepted_escrow", "already_credited", "rejected"]
+        },
+        "issues": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "remedy": {
+      "type": "object",
+      "required": [
+        "status",
+        "account",
+        "adjustment_amount",
+        "adjustment_basis",
+        "original_creator_pool",
+        "does_not_rewrite_event"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["pay_claimant", "escrow_unlicensed", "no_action"]
+        },
+        "account": { "type": "string" },
+        "adjustment_amount": { "type": "string" },
+        "adjustment_basis": { "type": "string" },
+        "original_creator_pool": { "type": "string" },
+        "does_not_rewrite_event": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "event_hash",
+        "statement_hash",
+        "challenged_content_hash",
+        "source_access_root",
+        "source_reference_root",
+        "share_root",
+        "claim_support_root"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_disclosed",
+        "answer_disclosed",
+        "source_text_disclosed",
+        "matched_text_disclosed",
+        "matched_text_hash_only"
+      ],
+      "additionalProperties": true
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

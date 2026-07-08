@@ -1,0 +1,23 @@
+{
+  "inputs": [
+    {
+      "content_hash": "sha256:rdllm-image-canyon-mural-v1",
+      "descriptor": "generated image echoes sunlit desert mural with turquoise river and red mesa",
+      "input_id": "input_visual_generation_001",
+      "media_type": "image",
+      "perceptual_hash": "1111000011110000111100001111000011110000111100001111000011110001"
+    },
+    {
+      "descriptor": "bright brass loop with brushed snare and walking bass motif",
+      "input_id": "input_audio_generation_001",
+      "media_type": "audio",
+      "perceptual_hash": "1010101010101010101010101010101010101010101010101010101010101010"
+    },
+    {
+      "descriptor": "fast city traffic drone footage neon skyline highway night",
+      "input_id": "input_video_generation_001",
+      "media_type": "video",
+      "perceptual_hash": "1111111111111111111111111111111111111111111111111111111111111111"
+    }
+  ]
+}

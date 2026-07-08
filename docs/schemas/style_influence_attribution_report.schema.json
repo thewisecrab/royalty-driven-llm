@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/style_influence_attribution_report.schema.json",
+  "title": "RDLLM Style Influence Attribution Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "event",
+    "policy",
+    "economics",
+    "style_outputs",
+    "style_profiles",
+    "style_attribution",
+    "footer",
+    "royalty_shares",
+    "commitments",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-style-influence-attribution/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "prompt_hash",
+        "output_hash",
+        "model_id",
+        "model_version",
+        "declared_style_profile_ids",
+        "declared_style_creator_ids"
+      ],
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "supported_modalities",
+        "creator_pool_rate",
+        "accept_threshold",
+        "min_style_margin",
+        "min_anti_margin",
+        "max_content_overlap",
+        "blend_window",
+        "accepted_decision",
+        "copy_overlap_decision",
+        "license_block_decision",
+        "unattributed_decision"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-style-influence-attribution-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L90" }
+      },
+      "additionalProperties": true
+    },
+    "economics": {
+      "type": "object",
+      "required": [
+        "gross_revenue",
+        "creator_pool",
+        "payout_total",
+        "escrow_total"
+      ],
+      "additionalProperties": true
+    },
+    "style_outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "output_id",
+          "modality",
+          "output_hash",
+          "style_feature_commitment",
+          "policy_use",
+          "gross_revenue",
+          "output_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "style_profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "profile_id",
+          "work_id",
+          "creator_id",
+          "title",
+          "source_uri",
+          "modality",
+          "profile_role",
+          "license_status",
+          "license_term_hash",
+          "style_feature_commitment",
+          "example_count",
+          "profile_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "style_attribution": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "output_id",
+          "profile_id",
+          "work_id",
+          "creator_id",
+          "style_similarity",
+          "declared_intent_score",
+          "content_overlap_score",
+          "license_allowed",
+          "decision_score",
+          "style_margin",
+          "anti_style_margin",
+          "decision",
+          "style_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "footer": {
+      "type": "object",
+      "required": [
+        "style_footer_rows",
+        "style_footer_count",
+        "footer_hash"
+      ],
+      "additionalProperties": true
+    },
+    "royalty_shares": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "output_id",
+          "creator_id",
+          "work_id",
+          "profile_id",
+          "decision",
+          "payout",
+          "escrow_payout",
+          "contribution_weight",
+          "share_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "style_input_root",
+        "output_root",
+        "profile_root",
+        "style_attribution_root",
+        "footer_root",
+        "share_root",
+        "policy_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "style_credit_requires_license",
+        "style_credit_requires_threshold",
+        "style_credit_requires_margin",
+        "style_credit_separated_from_anti_style",
+        "copy_overlap_routes_away_from_style_payout",
+        "anti_style_profiles_rejected",
+        "accepted_styles_have_footer_rows",
+        "creator_pool_conserved",
+        "public_report_does_not_embed_private_style_text"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["style_influence_attribution_report"],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "output_count",
+        "style_profile_count",
+        "style_row_count",
+        "accepted_style_count",
+        "style_footer_count",
+        "anti_style_rejection_count",
+        "copy_overlap_rejection_count",
+        "license_block_count",
+        "creator_pool_conserved",
+        "footer_hash"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L90" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "output_text_disclosed",
+        "style_example_text_disclosed",
+        "raw_style_descriptor_disclosed",
+        "feature_vectors_disclosed",
+        "report_uses_hashes_scores_and_public_profile_metadata"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

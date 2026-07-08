@@ -1,0 +1,32 @@
+{
+  "finance_records": [
+    {
+      "finance_record_id": "finrec:stripe:sub:2026-05:001",
+      "revenue_source_id": "revenue:subscription:demo",
+      "external_system": "stripe",
+      "record_type": "subscription_invoice",
+      "period_start": "2026-05-01",
+      "period_end": "2026-05-31",
+      "currency": "USD",
+      "gross_revenue": "0.750000",
+      "record_hash": "sha256:subscription-invoice-export-row-001",
+      "customer_id_hash": "sha256:customer-commitment-001",
+      "invoice_hash": "sha256:invoice-commitment-001",
+      "export_batch_hash": "sha256:stripe-export-batch-2026-05"
+    },
+    {
+      "finance_record_id": "finrec:api:meter:2026-05:001",
+      "revenue_source_id": "revenue:api-meter:demo",
+      "external_system": "api_gateway_metering",
+      "record_type": "metered_api_usage",
+      "period_start": "2026-05-01",
+      "period_end": "2026-05-31",
+      "currency": "USD",
+      "gross_revenue": "0.250000",
+      "record_hash": "sha256:api-metering-export-row-001",
+      "meter_event_root": "sha256:api-meter-event-root-2026-05",
+      "invoice_hash": "sha256:api-invoice-commitment-001",
+      "export_batch_hash": "sha256:api-metering-export-batch-2026-05"
+    }
+  ]
+}

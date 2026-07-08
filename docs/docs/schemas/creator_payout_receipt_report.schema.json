@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/creator_payout_receipt_report.schema.json",
+  "title": "RDLLM Creator Payout Receipt Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "receipt_policy",
+    "creator_payout_rows",
+    "creator_escrow_rows",
+    "creator_hold_rows",
+    "creator_total_rows",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "schemas",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-creator-payout-receipt-report/v1" },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "receipt_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "creator_visible_statuses",
+        "raw_payment_accounts_forbidden",
+        "raw_prompt_output_source_text_forbidden",
+        "per_creator_verification_supported"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L79" },
+        "minimum_input_level": { "const": "RDLLM-L78" }
+      },
+      "additionalProperties": true
+    },
+    "creator_payout_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_receipt_id",
+          "recipient_creator_id",
+          "work_id",
+          "chunk_ids",
+          "origin_hashes",
+          "clearinghouse_report_hash",
+          "clearinghouse_settlement_row_hash",
+          "clearinghouse_row_present",
+          "remittance_report_hash",
+          "payment_instruction_id",
+          "instruction_row_hash",
+          "payout_account_hash",
+          "payout_account_disclosed",
+          "end_to_end_id",
+          "currency",
+          "instructed_amount",
+          "executed_amount",
+          "execution_status",
+          "execution_row_hash",
+          "processor_id",
+          "processor_record_hash",
+          "processor_record_row_hash",
+          "settlement_batch_hash",
+          "rail_attestation_row_hash",
+          "rail_batch_coverage_row_hash",
+          "rail_signature_valid",
+          "rail_batch_signed",
+          "creator_visible_status",
+          "creator_receipt_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "creator_escrow_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_receipt_id",
+          "recipient_creator_id",
+          "currency",
+          "escrow_amount",
+          "executed_amount",
+          "escrow_instruction_id",
+          "execution_status",
+          "execution_row_hash",
+          "rail_signature_valid",
+          "rail_batch_signed",
+          "creator_visible_status",
+          "creator_escrow_receipt_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "creator_hold_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_receipt_id",
+          "recipient_creator_id",
+          "currency",
+          "held_amount",
+          "hold_reason",
+          "hold_status",
+          "hold_row_hash",
+          "creator_visible_status",
+          "creator_hold_receipt_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "creator_total_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "recipient_creator_id",
+          "currency",
+          "amount",
+          "work_count",
+          "work_ids_root",
+          "creator_total_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "clearinghouse_report_ready",
+        "remittance_report_ready",
+        "payment_execution_report_ready",
+        "payment_rail_attestation_ready",
+        "input_hashes_reproducible",
+        "remittance_binds_clearinghouse",
+        "payment_execution_binds_remittance",
+        "payment_rail_binds_execution",
+        "all_payment_instructions_have_creator_receipts",
+        "all_payout_receipts_bind_clearinghouse_rows",
+        "all_payout_receipts_bind_execution_rows",
+        "all_payout_receipts_bind_signed_rail_batches",
+        "creator_payout_totals_match_execution",
+        "creator_escrow_totals_match_execution",
+        "creator_hold_totals_match_execution",
+        "payout_accounts_not_disclosed",
+        "private_creator_receipt_fields_absent"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "clearinghouse_report_hash",
+        "remittance_report_hash",
+        "payment_execution_report_hash",
+        "payment_rail_attestation_hash",
+        "creator_payout_root",
+        "creator_escrow_root",
+        "creator_hold_root",
+        "creator_total_root"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "creator_count",
+        "creator_payout_receipt_count",
+        "creator_escrow_receipt_count",
+        "creator_hold_receipt_count",
+        "creator_payout_total",
+        "creator_escrow_total",
+        "creator_hold_total",
+        "creator_visible_payouts_verified"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L79" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "raw_payment_accounts_disclosed",
+        "raw_processor_records_disclosed",
+        "customer_or_tax_records_disclosed",
+        "uses_payout_account_hashes",
+        "uses_source_and_settlement_hashes"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "creator_payout_receipt_report",
+        "clearinghouse_report",
+        "remittance_report",
+        "payment_execution_report",
+        "payment_rail_attestation"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

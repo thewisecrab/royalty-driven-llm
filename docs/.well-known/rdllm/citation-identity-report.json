@@ -1,0 +1,383 @@
+{
+  "canonical_footers": [
+    {
+      "canonical_identifier_hash": "906f326e2965b3e6188c4d84081615e45ab39b28c50834e366887c6305bef061",
+      "canonical_identifier_type": "url",
+      "canonical_title_hash": "bd7e52e1f8409358f7b1fd6b04874617d1bbaa14a2205d68a9babd3c1735e13d",
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "citation_id": "cite_1",
+      "claim_ids": [
+        "claim_1",
+        "claim_2"
+      ],
+      "creator_id": "arjun",
+      "footer_row_hash": "705b4d875f0e47afd7baaf4fe0adbe6af4b5376cec07ec0ce14c04b5c949b26a",
+      "footer_text": "Provenance Ledgers for AI Outputs (registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1, 2026); identity=verified; claims=2; uri=registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+      "identity_status": "verified",
+      "label": "S1",
+      "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "canonical_identifier_hash": "24cc2ad5de9d3169cc26a2b81e4b2edcadcc3f7bbd8a44ee8ea9758767bd33cb",
+      "canonical_identifier_type": "url",
+      "canonical_title_hash": "66125b1b2829bed8ddd5576b0156ad6eaafc612e1dede78432cafcb8cb42dc5a",
+      "chunk_id": "lina-governance-disputes:c1",
+      "citation_id": "cite_2",
+      "claim_ids": [
+        "claim_3",
+        "claim_4"
+      ],
+      "creator_id": "lina",
+      "footer_row_hash": "a838d2628b8d307e592051e51c73688ec74d10fc070397379b75d97faefb294d",
+      "footer_text": "Creator Governance for AI Licensing (registered://works/lina-governance-disputes#lina-governance-disputes:c1, 2026); identity=verified; claims=2; uri=registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+      "identity_status": "verified",
+      "label": "S2",
+      "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "canonical_identifier_hash": "51f4e6564be7328d6f832bd5d96e3537c51881faeb891a22c0f16599004bfa45",
+      "canonical_identifier_type": "url",
+      "canonical_title_hash": "39093cc41eb52cdc1465230b9e6a61c9f9fc33c36ceba6ef1ebedfd6416db31d",
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "citation_id": "cite_3",
+      "claim_ids": [
+        "claim_5",
+        "claim_6"
+      ],
+      "creator_id": "maya",
+      "footer_row_hash": "9b42b5f4a60140b94fa776e2d817a187e652a660c78ae88ae7621f073d1d90b8",
+      "footer_text": "Usage Pools for Creator Platforms (registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1, 2026); identity=verified; claims=2; uri=registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+      "identity_status": "verified",
+      "label": "S3",
+      "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "checks": {
+    "claim_support_required_for_footer": true,
+    "creator_pool_conserved": true,
+    "every_citation_row_resolved_or_escrowed": true,
+    "fabricated_citations_blocked": true,
+    "identifier_metadata_mismatches_blocked": true,
+    "public_rows_do_not_embed_private_text": true,
+    "rejected_citations_route_to_escrow": true,
+    "verified_citations_have_canonical_footer": true
+  },
+  "citation_rows": [
+    {
+      "canonical_footer": {
+        "canonical_identifier": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "canonical_identifier_type": "url",
+        "display_text": "Provenance Ledgers for AI Outputs (registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1, 2026); identity=verified; claims=1; uri=registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "title": "Provenance Ledgers for AI Outputs",
+        "year": "2026"
+      },
+      "canonical_identifier_hash": "906f326e2965b3e6188c4d84081615e45ab39b28c50834e366887c6305bef061",
+      "canonical_identifier_type": "url",
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "citation_id": "cite_1",
+      "claim_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+      "claim_id": "claim_1",
+      "creator_id": "arjun",
+      "decision": "accepted",
+      "declared_identifier_hash": "286778f4d3e79056787416eaa9800156b79af21bfe03e3907bb54f368ea3c2ec",
+      "declared_identifier_type": "source_uri",
+      "identity_status": "verified",
+      "metadata_scores": {
+        "author_overlap": 1.0,
+        "claim_support": 1.0,
+        "decision_score": 1.0,
+        "identifier_match": 1.0,
+        "title_similarity": 1.0,
+        "year_match": 1.0
+      },
+      "rank": 1,
+      "resolved_authority_id_hash": "ff02c0c59705d323a7e504313b473065bfd8053c1acda794704d5769d553e500",
+      "row_hash": "f4052799fbffff38832292768a56630f60123c5d7b295d5fa93ddac6050179e5",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "canonical_footer": {
+        "canonical_identifier": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "canonical_identifier_type": "url",
+        "display_text": "Provenance Ledgers for AI Outputs (registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1, 2026); identity=verified; claims=1; uri=registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "title": "Provenance Ledgers for AI Outputs",
+        "year": "2026"
+      },
+      "canonical_identifier_hash": "906f326e2965b3e6188c4d84081615e45ab39b28c50834e366887c6305bef061",
+      "canonical_identifier_type": "url",
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "citation_id": "cite_1",
+      "claim_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+      "claim_id": "claim_2",
+      "creator_id": "arjun",
+      "decision": "accepted",
+      "declared_identifier_hash": "286778f4d3e79056787416eaa9800156b79af21bfe03e3907bb54f368ea3c2ec",
+      "declared_identifier_type": "source_uri",
+      "identity_status": "verified",
+      "metadata_scores": {
+        "author_overlap": 1.0,
+        "claim_support": 1.0,
+        "decision_score": 1.0,
+        "identifier_match": 1.0,
+        "title_similarity": 1.0,
+        "year_match": 1.0
+      },
+      "rank": 2,
+      "resolved_authority_id_hash": "ff02c0c59705d323a7e504313b473065bfd8053c1acda794704d5769d553e500",
+      "row_hash": "259f9a09fe7d7615ef859ef3dbb3d0b2f42f51e6e251bf53ceda57b21efa5bd4",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "canonical_footer": {
+        "canonical_identifier": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "canonical_identifier_type": "url",
+        "display_text": "Creator Governance for AI Licensing (registered://works/lina-governance-disputes#lina-governance-disputes:c1, 2026); identity=verified; claims=1; uri=registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "title": "Creator Governance for AI Licensing",
+        "year": "2026"
+      },
+      "canonical_identifier_hash": "24cc2ad5de9d3169cc26a2b81e4b2edcadcc3f7bbd8a44ee8ea9758767bd33cb",
+      "canonical_identifier_type": "url",
+      "chunk_id": "lina-governance-disputes:c1",
+      "citation_id": "cite_2",
+      "claim_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+      "claim_id": "claim_3",
+      "creator_id": "lina",
+      "decision": "accepted",
+      "declared_identifier_hash": "68bbddc0ffd4cd9ed842a6fdfdca45fa73a15455569d6284392dbb7ec818e4fd",
+      "declared_identifier_type": "source_uri",
+      "identity_status": "verified",
+      "metadata_scores": {
+        "author_overlap": 1.0,
+        "claim_support": 1.0,
+        "decision_score": 1.0,
+        "identifier_match": 1.0,
+        "title_similarity": 1.0,
+        "year_match": 1.0
+      },
+      "rank": 3,
+      "resolved_authority_id_hash": "9e57670e767cb5032ff4999f2e52bd8022c4a945f96932a4d1cec2ffb07c227e",
+      "row_hash": "0acafb596dadb09096a121d3f0ba15431e5e535f2256a90c9ceb611e967b38db",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "canonical_footer": {
+        "canonical_identifier": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "canonical_identifier_type": "url",
+        "display_text": "Creator Governance for AI Licensing (registered://works/lina-governance-disputes#lina-governance-disputes:c1, 2026); identity=verified; claims=1; uri=registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "title": "Creator Governance for AI Licensing",
+        "year": "2026"
+      },
+      "canonical_identifier_hash": "24cc2ad5de9d3169cc26a2b81e4b2edcadcc3f7bbd8a44ee8ea9758767bd33cb",
+      "canonical_identifier_type": "url",
+      "chunk_id": "lina-governance-disputes:c1",
+      "citation_id": "cite_2",
+      "claim_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+      "claim_id": "claim_4",
+      "creator_id": "lina",
+      "decision": "accepted",
+      "declared_identifier_hash": "68bbddc0ffd4cd9ed842a6fdfdca45fa73a15455569d6284392dbb7ec818e4fd",
+      "declared_identifier_type": "source_uri",
+      "identity_status": "verified",
+      "metadata_scores": {
+        "author_overlap": 1.0,
+        "claim_support": 1.0,
+        "decision_score": 1.0,
+        "identifier_match": 1.0,
+        "title_similarity": 1.0,
+        "year_match": 1.0
+      },
+      "rank": 4,
+      "resolved_authority_id_hash": "9e57670e767cb5032ff4999f2e52bd8022c4a945f96932a4d1cec2ffb07c227e",
+      "row_hash": "fe38eb992a3b39e6cb013bc9ae622716cc1d40ac1a21ca3db60b8c6a4e9a702d",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "canonical_footer": {
+        "canonical_identifier": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "canonical_identifier_type": "url",
+        "display_text": "Usage Pools for Creator Platforms (registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1, 2026); identity=verified; claims=1; uri=registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "title": "Usage Pools for Creator Platforms",
+        "year": "2026"
+      },
+      "canonical_identifier_hash": "51f4e6564be7328d6f832bd5d96e3537c51881faeb891a22c0f16599004bfa45",
+      "canonical_identifier_type": "url",
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "citation_id": "cite_3",
+      "claim_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+      "claim_id": "claim_5",
+      "creator_id": "maya",
+      "decision": "accepted",
+      "declared_identifier_hash": "5b4d3bbbc63ca411369803028106e5e0df5c4592ea6e6a99e7a9918842351c0e",
+      "declared_identifier_type": "source_uri",
+      "identity_status": "verified",
+      "metadata_scores": {
+        "author_overlap": 1.0,
+        "claim_support": 1.0,
+        "decision_score": 1.0,
+        "identifier_match": 1.0,
+        "title_similarity": 1.0,
+        "year_match": 1.0
+      },
+      "rank": 5,
+      "resolved_authority_id_hash": "10eb423e6811a34a1fa7c1f639946ad6686bc9a740e1608ea4380f39fa67135f",
+      "row_hash": "e8fa5d8dbfc9fae9e85aee35b7714507d2c0703c4ed6c672ed9fe2b15dedd226",
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "canonical_footer": {
+        "canonical_identifier": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "canonical_identifier_type": "url",
+        "display_text": "Usage Pools for Creator Platforms (registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1, 2026); identity=verified; claims=1; uri=registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "title": "Usage Pools for Creator Platforms",
+        "year": "2026"
+      },
+      "canonical_identifier_hash": "51f4e6564be7328d6f832bd5d96e3537c51881faeb891a22c0f16599004bfa45",
+      "canonical_identifier_type": "url",
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "citation_id": "cite_3",
+      "claim_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+      "claim_id": "claim_6",
+      "creator_id": "maya",
+      "decision": "accepted",
+      "declared_identifier_hash": "5b4d3bbbc63ca411369803028106e5e0df5c4592ea6e6a99e7a9918842351c0e",
+      "declared_identifier_type": "source_uri",
+      "identity_status": "verified",
+      "metadata_scores": {
+        "author_overlap": 1.0,
+        "claim_support": 1.0,
+        "decision_score": 1.0,
+        "identifier_match": 1.0,
+        "title_similarity": 1.0,
+        "year_match": 1.0
+      },
+      "rank": 6,
+      "resolved_authority_id_hash": "10eb423e6811a34a1fa7c1f639946ad6686bc9a740e1608ea4380f39fa67135f",
+      "row_hash": "caf05389269f2b96cddc8286e9fc26a7331aad8a76527f91076a5557ce8c69c7",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "commitments": {
+    "authority_record_root": "e8d7e8e69b5f3c8d4f1d56a91db0b929e940732020c484cea38b4c6d586d1557",
+    "canonical_footer_root": "ca5409a55038da0efb6f8534a62ed503f80d89aef4d581cda1d58e818518a476",
+    "citation_identity_input_root": "7d732ec0373609e61804e62801dc010d58aadb9c93a3e96a473cd78c48343760",
+    "citation_row_root": "ee3b4e561ab71b88cf281b4714d163a2fbf99f71d7f15888b388185f461f69a0",
+    "share_root": "5820303274a1670ff3942bb2848b9221a684de8f76209c2d3605cd30cc3142a5"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "economics": {
+    "creator_pool": "0.550000",
+    "escrow_total": "0.000000",
+    "gross_revenue": "1.000000",
+    "payout_total": "0.550000"
+  },
+  "event": {
+    "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+    "event_id": "evt_1ed43e106d466249",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05",
+    "prompt_hash": "3ff9b4d52e3ba4909f885835c6d362c80d35db9cafec55166ee62a73722aa7c6",
+    "response_hash": "069df2b36f4c12ee438a0edb55cc944c675fb5f3802cb70592907f047916ac51"
+  },
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "accept_threshold": 0.72,
+    "accepted_statuses": [
+      "minor_metadata_drift",
+      "verified"
+    ],
+    "creator_pool_rate": "0.55",
+    "fabricated_or_swapped_citations_cannot_enter_footer": true,
+    "min_author_overlap": 0.5,
+    "min_claim_support": 0.55,
+    "min_title_similarity": 0.72,
+    "profile": "rdllm-citation-identity-policy/v1",
+    "rejected_decision": "citation_identity_escrow",
+    "target_certification_level": "RDLLM-L69"
+  },
+  "privacy": {
+    "authority_content_disclosed": false,
+    "claim_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "report_uses_hashes_scores_and_canonical_public_metadata": true,
+    "response_text_disclosed": false,
+    "source_excerpt_disclosed": false
+  },
+  "report_hash": "e6ffd26a8f0760f4e9c223b0ca8319a27ed45ac4d8fed0e758d30c301509ecfc",
+  "report_version": "rdllm-citation-identity-report/v1",
+  "royalty_shares": [
+    {
+      "citation_ids": [
+        "cite_1"
+      ],
+      "claim_ids": [
+        "claim_1",
+        "claim_2"
+      ],
+      "contribution_weight": 0.33333455,
+      "creator_id": "arjun",
+      "decision": "accepted",
+      "payout": "0.183334",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "citation_ids": [
+        "cite_2"
+      ],
+      "claim_ids": [
+        "claim_3",
+        "claim_4"
+      ],
+      "contribution_weight": 0.33333455,
+      "creator_id": "lina",
+      "decision": "accepted",
+      "payout": "0.183334",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "citation_ids": [
+        "cite_3"
+      ],
+      "claim_ids": [
+        "claim_5",
+        "claim_6"
+      ],
+      "contribution_weight": 0.33333091,
+      "creator_id": "maya",
+      "decision": "accepted",
+      "payout": "0.183332",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "schemas": {
+    "citation_identity_report": "docs/schemas/citation_identity_report.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "10ec66d978837b4109e91a1846df2e1680ed5921d418fb973da50d7a2f5763c1"
+  },
+  "summary": {
+    "authority_record_count": 3,
+    "canonical_footer_count": 3,
+    "citation_count": 3,
+    "citation_row_count": 6,
+    "claim_support_failure_count": 0,
+    "creator_pool_conserved": true,
+    "escrow_citation_row_count": 0,
+    "fabricated_citation_count": 0,
+    "metadata_mismatch_count": 0,
+    "offline_verification_supported": true,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L69",
+    "verified_citation_row_count": 6
+  }
+}

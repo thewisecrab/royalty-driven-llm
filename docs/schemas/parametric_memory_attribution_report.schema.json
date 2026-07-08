@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/parametric_memory_attribution_report.schema.json",
+  "title": "RDLLM Parametric Memory Attribution Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "created_at",
+    "issuer",
+    "event",
+    "policy",
+    "training_summary_binding",
+    "model_signal_binding",
+    "probe_commitments",
+    "sources",
+    "claims",
+    "source_training",
+    "parametric_attribution",
+    "claim_attribution",
+    "footer",
+    "economics",
+    "checks",
+    "schemas",
+    "summary",
+    "report_hash"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-parametric-memory-attribution/v1" },
+    "created_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": ["event_id", "event_hash", "prompt_hash", "response_hash"],
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "min_support",
+        "min_memory",
+        "min_influence",
+        "min_anti_margin"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-parametric-memory-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L89" },
+        "min_support": { "type": "number", "minimum": 0, "maximum": 1 },
+        "min_memory": { "type": "number", "minimum": 0, "maximum": 1 },
+        "min_influence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "min_anti_margin": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": true
+    },
+    "training_summary_binding": {
+      "type": "object",
+      "required": [
+        "summary_hash",
+        "summary_version",
+        "provider_id",
+        "model_id",
+        "model_version",
+        "training_stage",
+        "cohort_count",
+        "cohort_root"
+      ],
+      "additionalProperties": true
+    },
+    "model_signal_binding": {
+      "type": "object",
+      "required": [
+        "report_hash",
+        "report_version",
+        "status",
+        "signal_count",
+        "accepted_signal_count",
+        "signal_row_root"
+      ],
+      "additionalProperties": true
+    },
+    "probe_commitments": {
+      "type": "object",
+      "required": ["probe_count", "probe_hashes", "probe_root"],
+      "additionalProperties": true
+    },
+    "sources": { "type": "array", "items": { "type": "object" } },
+    "claims": { "type": "array", "items": { "type": "object" } },
+    "source_training": { "type": "array", "items": { "type": "object" } },
+    "parametric_attribution": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "source_id",
+          "work_id",
+          "creator_id",
+          "source_role",
+          "training_summary_member",
+          "training_allowed",
+          "content_hash_matches_training_summary",
+          "support_score",
+          "memory_recall_score",
+          "influence_probe_score",
+          "model_signal_score",
+          "anti_source_margin",
+          "current_context_contaminated",
+          "attribution_score",
+          "decision",
+          "accepted",
+          "failure_reasons"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "claim_attribution": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_hash",
+          "accepted_source_ids",
+          "rejected_source_ids",
+          "parametric_source_count",
+          "status",
+          "total_attribution_score"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "footer": {
+      "type": "object",
+      "required": ["footer_hash", "source_rows", "claim_rows", "source_row_count"],
+      "additionalProperties": true
+    },
+    "economics": {
+      "type": "object",
+      "required": [
+        "gross_revenue",
+        "creator_pool_rate",
+        "creator_pool",
+        "per_claim_pool",
+        "source_payouts",
+        "creator_payouts",
+        "escrow",
+        "total_paid",
+        "pool_conserved"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "all_parametric_claims_attributed",
+        "training_summary_bound",
+        "model_signal_or_probe_influence_bound",
+        "accepted_sources_in_training_summary",
+        "accepted_sources_training_allowed",
+        "anti_documents_rejected",
+        "no_current_context_contamination",
+        "creator_pool_conserved",
+        "no_raw_private_text"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["parametric_memory_attribution_report"],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "claim_count",
+        "parametric_grounded_claim_count",
+        "escrow_claim_count",
+        "source_count",
+        "accepted_source_count",
+        "rejected_source_count",
+        "anti_document_rejection_count",
+        "context_contamination_rejection_count",
+        "training_summary_miss_count",
+        "probe_count",
+        "footer_hash"
+      ],
+      "additionalProperties": true
+    },
+    "report_hash": { "type": "string" },
+    "signature": { "type": "string" }
+  },
+  "additionalProperties": true
+}

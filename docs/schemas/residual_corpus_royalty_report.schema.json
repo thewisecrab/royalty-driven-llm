@@ -1,0 +1,271 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/residual_corpus_royalty_report.schema.json",
+  "title": "RDLLM Residual Corpus Royalty Report",
+  "type": "object",
+  "required": [
+    "version",
+    "issued_at",
+    "issuer",
+    "case",
+    "policy",
+    "scope",
+    "evidence_artifacts",
+    "model_usage_revenue_rows",
+    "training_corpus_rows",
+    "valuation_rows",
+    "creator_residual_share_rows",
+    "direct_attribution_settlement_rows",
+    "payable_rows",
+    "escrow_rows",
+    "creator_residual_receipts",
+    "accounting",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "version": {
+      "const": "rdllm-residual-corpus-royalty-report/v1"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "case": {
+      "type": "object",
+      "required": ["case_id", "status"],
+      "properties": {
+        "case_id": {
+          "type": "string"
+        },
+        "status": {
+          "enum": ["ready", "needs_review"]
+        },
+        "period_start": {
+          "type": "string"
+        },
+        "period_end": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "currency",
+        "creator_pool_rate",
+        "residual_pool_rate",
+        "minimum_confidence_score",
+        "minimum_valuation_score",
+        "max_single_creator_share",
+        "valuation_method_family",
+        "residual_pool_separate_from_direct_attribution"
+      ],
+      "additionalProperties": true
+    },
+    "scope": {
+      "type": "object",
+      "required": [
+        "visible_answer_attribution_surface",
+        "residual_training_value_surface",
+        "does_not_replace_user_visible_citations",
+        "does_not_double_count_direct_answer_attribution",
+        "only_settles_diffuse_licensed_training_corpus_value"
+      ],
+      "properties": {
+        "visible_answer_attribution_surface": {
+          "type": "string"
+        },
+        "residual_training_value_surface": {
+          "type": "string"
+        },
+        "does_not_replace_user_visible_citations": {
+          "const": true
+        },
+        "does_not_double_count_direct_answer_attribution": {
+          "const": true
+        },
+        "only_settles_diffuse_licensed_training_corpus_value": {
+          "const": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "evidence_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "model_usage_revenue_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "revenue_id",
+          "source_type",
+          "currency",
+          "amount",
+          "revenue_source_hash",
+          "revenue_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "training_corpus_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "work_id",
+          "creator_id",
+          "content_hash",
+          "training_allowed",
+          "requires_royalty",
+          "cohort_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "valuation_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "valuation_id",
+          "work_id",
+          "creator_id",
+          "valuation_method",
+          "valuation_score",
+          "confidence_score",
+          "valuation_evidence_hash",
+          "eligible_for_residual_royalty",
+          "valuation_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "creator_residual_share_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "eligible_work_count",
+          "raw_share_total",
+          "bounded_share_total",
+          "max_single_creator_share",
+          "creator_residual_share_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "direct_attribution_settlement_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "payable_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "escrow_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "creator_residual_receipts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "accounting": {
+      "type": "object",
+      "required": [
+        "model_usage_revenue_total",
+        "creator_pool_rate",
+        "residual_pool_rate",
+        "residual_corpus_pool",
+        "payable_total",
+        "escrow_total",
+        "direct_attribution_total_excluded"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "training_summary_hash_reproducible",
+        "creator_license_contract_hash_reproducible",
+        "revenue_rows_hash_bound",
+        "valuation_rows_cover_training_summary",
+        "valuation_evidence_hashes_present",
+        "rights_policy_enforced",
+        "unlicensed_or_weak_value_escrowed",
+        "max_single_creator_share_enforced",
+        "residual_pool_conserved",
+        "direct_attribution_not_double_counted",
+        "creator_receipts_created",
+        "private_text_not_disclosed"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["residual_corpus_royalty_report"]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "residual_corpus_pool",
+        "payable_total",
+        "escrow_total",
+        "creator_pool_conserved",
+        "direct_attribution_separated"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["ready", "needs_review"]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L95"
+        },
+        "creator_pool_conserved": {
+          "type": "boolean"
+        },
+        "direct_attribution_separated": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "report_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

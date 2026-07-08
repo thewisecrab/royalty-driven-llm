@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/interop_bundle.schema.json",
+  "title": "RDLLM Interoperability Bundle",
+  "type": "object",
+  "required": [
+    "interop_version",
+    "receipt_hash",
+    "receipt_credential",
+    "receipt_prov_graph",
+    "trace_exchange",
+    "bundle_hash"
+  ],
+  "properties": {
+    "interop_version": {
+      "const": "rdllm-interop/v1"
+    },
+    "receipt_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "settlement_report_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "receipt_credential": {
+      "type": "object",
+      "required": [
+        "@context",
+        "id",
+        "type",
+        "issuer",
+        "validFrom",
+        "credentialSubject",
+        "evidence",
+        "proof"
+      ],
+      "properties": {
+        "@context": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "type": {
+          "type": "array",
+          "contains": { "const": "RDLLMAttributionReceiptCredential" }
+        },
+        "credentialSubject": {
+          "type": "object",
+          "required": [
+            "receiptHash",
+            "eventHash",
+            "promptHash",
+            "answerHash",
+            "renderedOutputHash",
+            "attributionGapVerdict",
+            "sourceCount",
+            "sourceAccessCount",
+            "claimCount",
+            "disclosureVersion",
+            "disclosureRoot",
+            "traceExchangeVersion",
+            "sourceAccessTraceHash",
+            "sourceReferenceTraceHash",
+            "claimSupportTraceHash",
+            "shareCommitment",
+            "sourceCommitment",
+            "sourceAccessCommitment",
+            "claimCommitment",
+            "attributionGapCommitment",
+            "rightsCommitment",
+            "registryCommitment"
+          ]
+        },
+        "proof": {
+          "type": "object",
+          "required": [
+            "type",
+            "cryptosuite",
+            "created",
+            "verificationMethod",
+            "proofPurpose",
+            "proofValue"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "receipt_prov_graph": {
+      "type": "object",
+      "required": [
+        "@context",
+        "type",
+        "id",
+        "receipt_hash",
+        "event_hash",
+        "entities",
+        "activities",
+        "agents",
+        "relations",
+        "graph_hash"
+      ],
+      "properties": {
+        "type": { "const": "RDLLMProvenanceGraph" },
+        "entities": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "activities": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "agents": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "relations": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "graph_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "additionalProperties": true
+    },
+    "trace_exchange": {
+      "$ref": "trace_exchange.schema.json"
+    },
+    "settlement_credential": {
+      "type": "object",
+      "required": [
+        "@context",
+        "id",
+        "type",
+        "issuer",
+        "credentialSubject",
+        "proof"
+      ],
+      "properties": {
+        "type": {
+          "type": "array",
+          "contains": { "const": "RDLLMEscrowSettlementCredential" }
+        },
+        "credentialSubject": {
+          "type": "object",
+          "required": [
+            "reportHash",
+            "sourceLedgerHash",
+            "settlementStatus",
+            "resolutionId",
+            "conflictId",
+            "registryReportHash",
+            "totalReleased",
+            "releaseCount",
+            "releaseCommitment",
+            "releaseBalancesCommitment",
+            "balancesAfterCommitment",
+            "resolutionCommitment"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "bundle_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": true
+}

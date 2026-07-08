@@ -1,0 +1,84 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "royalty-driven-llm"
+version = "1.0.0"
+description = "Provider-neutral attribution, source-footer, royalty-settlement, and service boundary for LLM outputs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "RDLLM contributors" }
+]
+keywords = [
+  "ai-attribution",
+  "llm",
+  "royalties",
+  "source-citations",
+  "provenance",
+  "model-providers",
+  "creator-economy"
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Legal Industry",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2",
+  "jsonschema>=4.22",
+]
+
+[project.urls]
+Homepage = "https://github.com/thewisecrab/royalty-driven-llm"
+Documentation = "https://thewisecrab.github.io/royalty-driven-llm/"
+Issues = "https://github.com/thewisecrab/royalty-driven-llm/issues"
+Source = "https://github.com/thewisecrab/royalty-driven-llm"
+
+[project.scripts]
+rdllm = "rdllm.cli:main"
+rdllm-first-run = "rdllm.first_run:main"
+rdllm-operator-acceptance = "rdllm.operator_acceptance:main"
+rdllm-operator-acceptance-matrix = "rdllm.operator_acceptance_matrix:main"
+rdllm-operator-bootstrap = "rdllm.operator_bootstrap:main"
+rdllm-operator-doctor = "rdllm.operator_doctor:main"
+rdllm-operator-launch-gate = "rdllm.operator_launch_gate:main"
+rdllm-operator-profile = "rdllm.operator_profile:main"
+rdllm-operator-recovery = "rdllm.operator_recovery:main"
+rdllm-operator-support-bundle = "rdllm.operator_support_bundle:main"
+rdllm-production-readiness-verify = "rdllm.production_readiness:main"
+rdllm-service-audit-verify = "rdllm.service_audit_verifier:main"
+rdllm-service-config = "rdllm.service_config:main"
+rdllm-service-response-verify = "rdllm.service_response_verifier:main"
+rdllm-source-footer-verify = "rdllm.source_footer_verifier:main"
+rdllm-service = "rdllm.service:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"rdllm.data" = [
+  "*.json",
+  "production_profiles/*.json",
+  "reference_artifacts/*.json",
+  "schemas/*.json",
+  "service_configs/*.json",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

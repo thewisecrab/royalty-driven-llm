@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/citation_identity_report.schema.json",
+  "title": "RDLLM Citation Identity Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "event",
+    "policy",
+    "economics",
+    "citation_rows",
+    "canonical_footers",
+    "royalty_shares",
+    "commitments",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-citation-identity-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "prompt_hash",
+        "response_hash",
+        "model_id",
+        "model_version"
+      ],
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "creator_pool_rate",
+        "accept_threshold",
+        "min_title_similarity",
+        "min_author_overlap",
+        "min_claim_support",
+        "accepted_statuses",
+        "rejected_decision",
+        "fabricated_or_swapped_citations_cannot_enter_footer"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-citation-identity-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L69" }
+      },
+      "additionalProperties": true
+    },
+    "economics": {
+      "type": "object",
+      "required": [
+        "gross_revenue",
+        "creator_pool",
+        "payout_total",
+        "escrow_total"
+      ],
+      "additionalProperties": true
+    },
+    "citation_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_hash",
+          "citation_id",
+          "work_id",
+          "chunk_id",
+          "creator_id",
+          "declared_identifier_type",
+          "declared_identifier_hash",
+          "resolved_authority_id_hash",
+          "canonical_identifier_type",
+          "canonical_identifier_hash",
+          "metadata_scores",
+          "identity_status",
+          "decision",
+          "rank",
+          "row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "canonical_footers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "work_id",
+          "chunk_id",
+          "creator_id",
+          "citation_id",
+          "claim_ids",
+          "canonical_identifier_type",
+          "canonical_identifier_hash",
+          "canonical_title_hash",
+          "source_uri",
+          "identity_status",
+          "footer_text",
+          "footer_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "royalty_shares": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "work_id",
+          "citation_ids",
+          "claim_ids",
+          "decision",
+          "payout",
+          "contribution_weight"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "citation_identity_input_root",
+        "authority_record_root",
+        "citation_row_root",
+        "canonical_footer_root",
+        "share_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "every_citation_row_resolved_or_escrowed",
+        "fabricated_citations_blocked",
+        "identifier_metadata_mismatches_blocked",
+        "claim_support_required_for_footer",
+        "verified_citations_have_canonical_footer",
+        "rejected_citations_route_to_escrow",
+        "creator_pool_conserved",
+        "public_rows_do_not_embed_private_text"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["citation_identity_report"],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "citation_count",
+        "authority_record_count",
+        "citation_row_count",
+        "verified_citation_row_count",
+        "escrow_citation_row_count",
+        "canonical_footer_count",
+        "fabricated_citation_count",
+        "metadata_mismatch_count",
+        "claim_support_failure_count",
+        "creator_pool_conserved",
+        "offline_verification_supported"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L69" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "response_text_disclosed",
+        "claim_text_disclosed",
+        "source_excerpt_disclosed",
+        "authority_content_disclosed",
+        "report_uses_hashes_scores_and_canonical_public_metadata"
+      ],
+      "additionalProperties": true
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

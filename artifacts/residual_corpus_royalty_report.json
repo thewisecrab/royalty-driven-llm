@@ -1,0 +1,334 @@
+{
+  "accounting": {
+    "creator_pool_rate": "0.55",
+    "direct_attribution_total_excluded": "0.550000",
+    "escrow_total": "0.110000",
+    "model_usage_revenue_total": "10.000000",
+    "payable_total": "0.440000",
+    "residual_corpus_pool": "0.550000",
+    "residual_pool_rate": "0.10"
+  },
+  "case": {
+    "case_id": "case:rdllm-residual-corpus-royalty:001",
+    "period_end": "2026-05-31",
+    "period_start": "2026-05-01",
+    "status": "ready"
+  },
+  "checks": {
+    "creator_license_contract_hash_reproducible": true,
+    "creator_receipts_created": true,
+    "direct_attribution_not_double_counted": true,
+    "max_single_creator_share_enforced": true,
+    "private_text_not_disclosed": true,
+    "residual_pool_conserved": true,
+    "revenue_rows_hash_bound": true,
+    "rights_policy_enforced": true,
+    "training_summary_hash_reproducible": true,
+    "unlicensed_or_weak_value_escrowed": true,
+    "valuation_evidence_hashes_present": true,
+    "valuation_rows_cover_training_summary": true
+  },
+  "creator_residual_receipts": [
+    {
+      "amount": "0.165000",
+      "basis": "diffuse_training_corpus_residual_royalty",
+      "currency": "USD",
+      "receipt_hash": "c0d15165999021d089610a603be476e6eef6dc6850499a099c569d9a373b8587",
+      "receipt_id": "residual-corpus-royalty-receipt:1",
+      "recipient_creator_id": "maya",
+      "settlement_row_hash": "19601fab3cf42cd1a2daca49d28f043916cd2aff9e735445e287daa41146540c",
+      "valuation_row_hash": "86c58b129a0c176843c4a355b7431676ad488a59824ff33ddfaf67a86a4b51c0",
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "amount": "0.275000",
+      "basis": "diffuse_training_corpus_residual_royalty",
+      "currency": "USD",
+      "receipt_hash": "6587a968b88873c72933149f53833528db14d662e972bcbdce96c4ee0538f7db",
+      "receipt_id": "residual-corpus-royalty-receipt:2",
+      "recipient_creator_id": "arjun",
+      "settlement_row_hash": "c8d9d142aa16347da4e78b684fa0d38127fb89e0f20b1775c5da308244427c05",
+      "valuation_row_hash": "f9cdf85ad83bc4af6df5f76cd031c40e0ac4149c0a2d572a47bdbcf6ef566cda",
+      "work_id": "arjun-provenance-ledger"
+    }
+  ],
+  "creator_residual_share_rows": [
+    {
+      "bounded_share_total": "0.50000000",
+      "creator_id": "arjun",
+      "creator_residual_share_hash": "a9481fd3bd9335775d6ad33b39a96e246936de640250a7469f48cc176d5a3b4d",
+      "creator_share_capped": false,
+      "eligible_work_count": 1,
+      "max_single_creator_share": "0.50000000",
+      "raw_share_total": "0.50000000",
+      "valuation_score_total": "0.50000000"
+    },
+    {
+      "bounded_share_total": "0.30000000",
+      "creator_id": "maya",
+      "creator_residual_share_hash": "7b0cbe57d5ef893acd2860c2ab7f19513aeb794b8bc513388f93b76768768323",
+      "creator_share_capped": false,
+      "eligible_work_count": 1,
+      "max_single_creator_share": "0.50000000",
+      "raw_share_total": "0.30000000",
+      "valuation_score_total": "0.30000000"
+    }
+  ],
+  "direct_attribution_settlement_rows": [
+    {
+      "amount": "0.550000",
+      "direct_row_hash": "d38dbc95900689d3d2ad0d0f7cd34b544f2b2c84f6167cae28aea238b908bd35",
+      "excluded_from_residual_pool": true,
+      "settlement_row_hash": "5c0f430752d904859123b16bf8b340e26e29d947ef7a431b7bb58f2e8f43227e",
+      "source_report_hash": "e202528da6f08a3f1060cfa7d65966a3ee13612c9400595033f45475aa5f7d71"
+    }
+  ],
+  "escrow_rows": [
+    {
+      "amount": "0.110000",
+      "currency": "USD",
+      "escrow_id": "escrow:residual-corpus:1",
+      "escrow_row_hash": "f1dab565770380601bbaf89ed9e5071448cc13f03c8e8bdf4ef44565d6230b94",
+      "ineligibility_reasons": [
+        "valuation_confidence_below_threshold"
+      ],
+      "reason": "residual_corpus_valuation_not_payable",
+      "recipient_creator_id": "lina",
+      "valuation_row_hash": "995a8bc813e158b08720132178db516e985800d4610470a75db835aae24de562",
+      "work_id": "lina-governance-disputes"
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "artifact_hash": "96d7b568363adf49f46b0cb6c2d36bcdc4482371f7a8c136825fcb3a52133ab7",
+      "artifact_row_hash": "eea1cf3aefde4f52abb2cc251c0ffb99b7739b3fd8d17104ba85dd45bc44aad7",
+      "artifact_type": "rdllm-training-content-summary/v1",
+      "hash_reproducible": true,
+      "highest_level": "",
+      "name": "training_content_summary",
+      "payload_hash": "96d7b568363adf49f46b0cb6c2d36bcdc4482371f7a8c136825fcb3a52133ab7",
+      "status": ""
+    },
+    {
+      "artifact_hash": "b72a02031cb195f1899bdec74f511d38b390d7d03e68409c567e1e3724e2fe08",
+      "artifact_row_hash": "b4fbb9510cb6e881991519027b0c33348321dbed7cc62ed25d7d0470081fa8f7",
+      "artifact_type": "rdllm-creator-license-contract/v1",
+      "hash_reproducible": true,
+      "highest_level": "RDLLM-L38",
+      "name": "creator_license_contract",
+      "payload_hash": "b72a02031cb195f1899bdec74f511d38b390d7d03e68409c567e1e3724e2fe08",
+      "status": "ready"
+    }
+  ],
+  "issued_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "model_usage_revenue_rows": [
+    {
+      "amount": "10.000000",
+      "currency": "USD",
+      "period_end": "2026-05-31",
+      "period_start": "2026-05-01",
+      "revenue_id": "revenue:rdllm-model-usage:2026-05",
+      "revenue_row_hash": "9448c47e311a27d4af42933769ec3fd82fe3e0d9db8324708c704d7509c1648b",
+      "revenue_source_hash": "e51b7c04725ab2fec902d91ab27c02b8e94d9481dcbfb198867b1ad41a90f039",
+      "source_type": "subscription_api_and_enterprise_usage"
+    }
+  ],
+  "payable_rows": [
+    {
+      "amount": "0.165000",
+      "basis": "licensed_training_corpus_residual_value",
+      "bounded_share": "0.30000000",
+      "cohort_row_hash": "87c64eaf418bf3c1a742041614dd4e9fb3d58a385d19db8fff73aef1b61459de",
+      "currency": "USD",
+      "license_term_hash": "de302176c9eccd11587c84a39617633e839230c34772a704d23bf437e39b0b2a",
+      "payable_id": "payable:residual-corpus:1",
+      "payable_row_hash": "19601fab3cf42cd1a2daca49d28f043916cd2aff9e735445e287daa41146540c",
+      "payout_account_hash": "093ef537c9af164c23f6868280281b5be3bbc058642bd017153126dc407fda1e",
+      "raw_share": "0.30000000",
+      "recipient_creator_id": "maya",
+      "valuation_method": "dynamic_local_shapley",
+      "valuation_row_hash": "86c58b129a0c176843c4a355b7431676ad488a59824ff33ddfaf67a86a4b51c0",
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "amount": "0.275000",
+      "basis": "licensed_training_corpus_residual_value",
+      "bounded_share": "0.50000000",
+      "cohort_row_hash": "b0808d91a75bbb19d5b3a88a5ab687699e3cd0d700a1085ab6921b1b45c9eebe",
+      "currency": "USD",
+      "license_term_hash": "cbcb535107e8bdeb9f9c64a7325e4b4c9e46c5f3c36740bbd42c3fc524bc8dd1",
+      "payable_id": "payable:residual-corpus:2",
+      "payable_row_hash": "c8d9d142aa16347da4e78b684fa0d38127fb89e0f20b1775c5da308244427c05",
+      "payout_account_hash": "36046f2f9ba53892df7e7815fe5e2f5c5635908722ff258bdb6798aaca33f993",
+      "raw_share": "0.50000000",
+      "recipient_creator_id": "arjun",
+      "valuation_method": "dynamic_local_shapley",
+      "valuation_row_hash": "f9cdf85ad83bc4af6df5f76cd031c40e0ac4149c0a2d572a47bdbcf6ef566cda",
+      "work_id": "arjun-provenance-ledger"
+    }
+  ],
+  "policy": {
+    "creator_pool_rate": "0.55",
+    "currency": "USD",
+    "max_single_creator_share": "0.50",
+    "minimum_confidence_score": "0.50",
+    "minimum_valuation_score": "0.000001",
+    "residual_pool_rate": "0.10",
+    "residual_pool_separate_from_direct_attribution": true,
+    "valuation_method_family": "dynamic_local_shapley"
+  },
+  "privacy": {
+    "public_report_uses_hash_commitments": true,
+    "raw_customer_records_disclosed": false,
+    "raw_output_disclosed": false,
+    "raw_payment_details_disclosed": false,
+    "raw_prompt_disclosed": false,
+    "raw_training_text_disclosed": false
+  },
+  "report_hash": "b26138feb51ab43c814136e1c386e324661ed9aafa37d94a53fc025b0e9961f1",
+  "schemas": {
+    "residual_corpus_royalty_report": "docs/schemas/residual_corpus_royalty_report.schema.json"
+  },
+  "scope": {
+    "does_not_double_count_direct_answer_attribution": true,
+    "does_not_replace_user_visible_citations": true,
+    "only_settles_diffuse_licensed_training_corpus_value": true,
+    "residual_training_value_surface": "residual-corpus-royalty",
+    "visible_answer_attribution_surface": "source-confidence, citation-footer, rendered-attribution-audit, claim-source-attribution, semantic-text-attribution"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "88f4612d98cb238a4c0e040d9c99fbb5272f6a62294f1ae70ec05e69d0347813"
+  },
+  "summary": {
+    "creator_count": 2,
+    "creator_pool_conserved": true,
+    "creator_residual_receipt_count": 2,
+    "direct_attribution_separated": true,
+    "eligible_valuation_row_count": 2,
+    "escrow_total": "0.110000",
+    "escrow_valuation_row_count": 1,
+    "model_usage_revenue_total": "10.000000",
+    "payable_count": 2,
+    "payable_total": "0.440000",
+    "residual_corpus_pool": "0.550000",
+    "residual_pool_conserved": true,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L95",
+    "valuation_row_count": 3
+  },
+  "training_corpus_rows": [
+    {
+      "chunk_count": 1,
+      "chunk_hash_root": "4e89b4fab301dd86a537dc87e3132b69e0ef734af3a6d46c5343b2e6213d6983",
+      "cohort_id": "arjun-provenance-ledger",
+      "cohort_row_hash": "b0808d91a75bbb19d5b3a88a5ab687699e3cd0d700a1085ab6921b1b45c9eebe",
+      "content_category": "registered_creator_text",
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "content_modality": "text",
+      "creator_id": "arjun",
+      "license": "royalty-bearing",
+      "requires_attribution": true,
+      "requires_royalty": true,
+      "revoked": false,
+      "source_uri_hash": "834d95131fe0ceddd9eaffd42ff6fef782b515d052c5f259513015fb02c92e0f",
+      "training_allowed": true,
+      "training_value_root": "5089ed01b9cb3f2b364b572771007455ade7c58aa969057a079a9ed28ab8bff9",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_count": 1,
+      "chunk_hash_root": "2a360a87e44ec4a467083af6cef4d8847e733e184fe67ee391b82d49afb25a8a",
+      "cohort_id": "lina-governance-disputes",
+      "cohort_row_hash": "9c7c312a1d49a38ce2ece1c9a9567897b47cac180223746a745a6f29fad4ec02",
+      "content_category": "registered_creator_text",
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "content_modality": "text",
+      "creator_id": "lina",
+      "license": "royalty-bearing",
+      "requires_attribution": true,
+      "requires_royalty": true,
+      "revoked": false,
+      "source_uri_hash": "cffb4df1166921cd4cf689543be6e380c9bbb16e1decc82c1c5eb933056623bd",
+      "training_allowed": true,
+      "training_value_root": "f91ad52bd01af7c3d9aa67790cf2f39197b9c76b6bc9afbb0dfc4c00518b3ed2",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunk_count": 1,
+      "chunk_hash_root": "b72eb7be55ee2b2203af97193b7883979fce9a652dfad9ccef6ffca8323b8b27",
+      "cohort_id": "maya-youtube-style-pool",
+      "cohort_row_hash": "87c64eaf418bf3c1a742041614dd4e9fb3d58a385d19db8fff73aef1b61459de",
+      "content_category": "registered_creator_text",
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "content_modality": "text",
+      "creator_id": "maya",
+      "license": "royalty-bearing",
+      "requires_attribution": true,
+      "requires_royalty": true,
+      "revoked": false,
+      "source_uri_hash": "60350d3cced0e66d831ec1f019c6ceebd17308f15c031e8cf7c02490690b8d56",
+      "training_allowed": true,
+      "training_value_root": "68c4851b1ca59158789fdf4256ca33372be4ee789019ea03a3652e678b57cc20",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "valuation_rows": [
+    {
+      "cohort_row_hash": "b0808d91a75bbb19d5b3a88a5ab687699e3cd0d700a1085ab6921b1b45c9eebe",
+      "confidence_score": "0.95000000",
+      "creator_id": "arjun",
+      "eligible_for_residual_royalty": true,
+      "ineligibility_reasons": [],
+      "license_term_hash": "cbcb535107e8bdeb9f9c64a7325e4b4c9e46c5f3c36740bbd42c3fc524bc8dd1",
+      "payout_account_hash": "36046f2f9ba53892df7e7815fe5e2f5c5635908722ff258bdb6798aaca33f993",
+      "training_value_root": "5089ed01b9cb3f2b364b572771007455ade7c58aa969057a079a9ed28ab8bff9",
+      "valuation_evidence_hash": "c844097b157bb155886060907428522dd1e25a2e4da38ecee1b3c7656f5a621e",
+      "valuation_id": "valuation:arjun:residual:2026-05",
+      "valuation_matrix_cell_hash": "53881eda171d06d6e85caa35e85746cbd35f4c3ee887b1c6614713d0f1c53556",
+      "valuation_method": "dynamic_local_shapley",
+      "valuation_row_hash": "f9cdf85ad83bc4af6df5f76cd031c40e0ac4149c0a2d572a47bdbcf6ef566cda",
+      "valuation_score": "0.50000000",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "cohort_row_hash": "87c64eaf418bf3c1a742041614dd4e9fb3d58a385d19db8fff73aef1b61459de",
+      "confidence_score": "0.90000000",
+      "creator_id": "maya",
+      "eligible_for_residual_royalty": true,
+      "ineligibility_reasons": [],
+      "license_term_hash": "de302176c9eccd11587c84a39617633e839230c34772a704d23bf437e39b0b2a",
+      "payout_account_hash": "093ef537c9af164c23f6868280281b5be3bbc058642bd017153126dc407fda1e",
+      "training_value_root": "68c4851b1ca59158789fdf4256ca33372be4ee789019ea03a3652e678b57cc20",
+      "valuation_evidence_hash": "c6d0a4a78d675bf686a6c8e3edbf9a872ba6dd65c8fe0cfa301f1966012e9ff2",
+      "valuation_id": "valuation:maya:residual:2026-05",
+      "valuation_matrix_cell_hash": "d17b5dfa9731bc1374dcde24d5b3bcf5e97cf1c72592d005949fd2db524251d4",
+      "valuation_method": "dynamic_local_shapley",
+      "valuation_row_hash": "86c58b129a0c176843c4a355b7431676ad488a59824ff33ddfaf67a86a4b51c0",
+      "valuation_score": "0.30000000",
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "cohort_row_hash": "9c7c312a1d49a38ce2ece1c9a9567897b47cac180223746a745a6f29fad4ec02",
+      "confidence_score": "0.20000000",
+      "creator_id": "lina",
+      "eligible_for_residual_royalty": false,
+      "ineligibility_reasons": [
+        "valuation_confidence_below_threshold"
+      ],
+      "license_term_hash": "9a704be10d700f08f46f97990c6efdf946312817343eb70317143ce60a140df0",
+      "payout_account_hash": "e40e0e769e8810ddee05459d531a117078b5d3c0df0838ecc0d527d8ae9efb24",
+      "training_value_root": "f91ad52bd01af7c3d9aa67790cf2f39197b9c76b6bc9afbb0dfc4c00518b3ed2",
+      "valuation_evidence_hash": "40c44686760e6758dcb281713915bec19770a711d1be5c87b1b16af2e840f737",
+      "valuation_id": "valuation:lina:residual:2026-05",
+      "valuation_matrix_cell_hash": "b8626a89cabddba5a3b67a67de179bfc36bba5b4e25b83db66b6b6a6931faa8a",
+      "valuation_method": "leave_one_out_influence",
+      "valuation_row_hash": "995a8bc813e158b08720132178db516e985800d4610470a75db835aae24de562",
+      "valuation_score": "0.20000000",
+      "work_id": "lina-governance-disputes"
+    }
+  ],
+  "version": "rdllm-residual-corpus-royalty-report/v1"
+}

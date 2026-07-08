@@ -1,0 +1,383 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_production_invocation_admission.schema.json",
+  "title": "Universal Production Invocation Admission",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "universal_production_invocation_admission_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "provider_conformance_receipt_binding",
+    "provider_admission_rows",
+    "admission_gate_rows",
+    "negative_admission_rows",
+    "evidence_roots",
+    "checks",
+    "admission_decision",
+    "admission_coverage",
+    "privacy",
+    "summary",
+    "universal_production_invocation_admission_hash"
+  ],
+  "properties": {
+    "universal_production_invocation_admission_version": {
+      "const": "rdllm-universal-production-invocation-admission/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_production_invocation_admission.schema.json"
+    },
+    "created_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_provider_conformance_level",
+        "per_invocation_admission_required",
+        "l169_receipt_required",
+        "live_drift_check_required",
+        "telemetry_span_required_before_provider_call",
+        "source_footer_gate_required_before_response_release",
+        "settlement_hold_required_until_footer_release",
+        "private_payloads_forbidden_in_public_admission"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-production-invocation-admission-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L170" },
+        "minimum_provider_conformance_level": { "const": "RDLLM-L169" },
+        "per_invocation_admission_required": { "const": true },
+        "l169_receipt_required": { "const": true },
+        "live_drift_check_required": { "const": true },
+        "telemetry_span_required_before_provider_call": { "const": true },
+        "source_footer_gate_required_before_response_release": { "const": true },
+        "settlement_hold_required_until_footer_release": { "const": true },
+        "private_payloads_forbidden_in_public_admission": { "const": true }
+      }
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-production-invocation-admission.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-production-invocation-admission/v1"
+        }
+      }
+    },
+    "provider_conformance_receipt_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 32 },
+        "payload_hash": { "type": "string", "minLength": 32 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L169" }
+      }
+    },
+    "provider_admission_rows": {
+      "type": "object",
+      "required": [
+        "openai_responses",
+        "anthropic_messages",
+        "google_gemini_generate_content",
+        "google_vertex_ai",
+        "meta_llama_stack",
+        "mistral_chat",
+        "cohere_chat",
+        "xai_grok",
+        "deepseek_chat",
+        "azure_openai",
+        "aws_bedrock",
+        "openrouter_compatible",
+        "local_open_weight_runtime",
+        "enterprise_gateway_proxy",
+        "rag_native_provider",
+        "mcp_agent_tool_runtime"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/providerAdmissionRow" }
+    },
+    "admission_gate_rows": {
+      "type": "object",
+      "required": [
+        "preflight_admission_token",
+        "provider_route_resolution",
+        "model_alias_resolution",
+        "tenant_auth_scope",
+        "retrieval_source_gate",
+        "tool_mcp_authorization",
+        "streaming_chunk_gate",
+        "response_footer_gate",
+        "copy_export_gate",
+        "settlement_meter_gate",
+        "revocation_gate",
+        "telemetry_trace_gate",
+        "auditor_witness_gate",
+        "public_status_gate"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/admissionGateRow" }
+    },
+    "negative_admission_rows": {
+      "type": "object",
+      "required": [
+        "missing_l169_conformance_receipt",
+        "stale_l169_conformance_receipt",
+        "provider_family_mismatch",
+        "route_not_in_l168_matrix",
+        "model_alias_drift",
+        "missing_negotiated_contract",
+        "missing_invocation_guard",
+        "telemetry_span_missing",
+        "source_footer_gate_missing",
+        "settlement_meter_unbound",
+        "revocation_snapshot_stale",
+        "streaming_chunk_without_admission",
+        "tool_call_without_scope",
+        "cache_reuse_without_admission",
+        "private_payload_leak"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/negativeAdmissionRow" }
+    },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "provider_admission_root",
+        "admission_gate_root",
+        "invocation_surface_root",
+        "negative_admission_root"
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "provider_conformance_receipt_bound",
+        "provider_conformance_receipt_l169_ready",
+        "provider_admission_rows_complete",
+        "admission_gate_rows_complete",
+        "provider_invocation_surface_coverage_complete",
+        "negative_admission_fixtures_reject",
+        "production_invocation_admission_signed"
+      ]
+    },
+    "admission_decision": {
+      "type": "object",
+      "required": [
+        "production_invocation_admission_ready",
+        "live_provider_invocation_allowed",
+        "response_release_allowed",
+        "source_footer_reliance_allowed",
+        "tool_mcp_execution_allowed",
+        "retrieval_grounding_allowed",
+        "settlement_metering_allowed",
+        "provider_procurement_reliance_allowed",
+        "unadmitted_provider_routes_blocked",
+        "failure_modes"
+      ],
+      "properties": {
+        "production_invocation_admission_ready": { "const": true },
+        "live_provider_invocation_allowed": { "const": true },
+        "response_release_allowed": { "const": true },
+        "source_footer_reliance_allowed": { "const": true },
+        "tool_mcp_execution_allowed": { "const": true },
+        "retrieval_grounding_allowed": { "const": true },
+        "settlement_metering_allowed": { "const": true },
+        "provider_procurement_reliance_allowed": { "const": true },
+        "unadmitted_provider_routes_blocked": { "const": true },
+        "failure_modes": { "type": "array", "maxItems": 0 }
+      }
+    },
+    "admission_coverage": {
+      "type": "object",
+      "required": [
+        "required_provider_family_count",
+        "ready_provider_admission_count",
+        "required_admission_gate_count",
+        "ready_admission_gate_count",
+        "required_invocation_surface_count",
+        "provider_surface_coverage",
+        "admission_gate_coverage"
+      ],
+      "properties": {
+        "required_provider_family_count": { "const": 16 },
+        "ready_provider_admission_count": { "const": 16 },
+        "required_admission_gate_count": { "const": 14 },
+        "ready_admission_gate_count": { "const": 14 },
+        "required_invocation_surface_count": { "const": 15 }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payload_fields",
+        "private_strings_absent",
+        "private_payloads_excluded"
+      ],
+      "properties": {
+        "private_payload_fields": { "type": "array", "maxItems": 0 },
+        "private_strings_absent": { "const": true },
+        "private_payloads_excluded": { "const": true }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_provider_conformance_level",
+        "provider_family_count",
+        "ready_provider_admission_count",
+        "admission_gate_count",
+        "ready_admission_gate_count",
+        "invocation_surface_count",
+        "negative_admission_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_production_invocation_admission"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L170" },
+        "minimum_provider_conformance_level": { "const": "RDLLM-L169" },
+        "provider_family_count": { "const": 16 },
+        "ready_provider_admission_count": { "const": 16 },
+        "admission_gate_count": { "const": 14 },
+        "ready_admission_gate_count": { "const": 14 },
+        "invocation_surface_count": { "const": 15 },
+        "negative_admission_failure_count": { "const": 15 },
+        "failure_mode_count": { "const": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_production_invocation_admission": { "const": true }
+      }
+    },
+    "universal_production_invocation_admission_hash": {
+      "type": "string",
+      "minLength": 32
+    },
+    "signature": { "type": "object" }
+  },
+  "$defs": {
+    "admissionGateRow": {
+      "type": "object",
+      "required": [
+        "gate_hash",
+        "policy_hash",
+        "evidence_hash",
+        "verifier_hash",
+        "configured",
+        "enforced",
+        "l169_bound",
+        "telemetry_bound",
+        "fail_closed",
+        "public_or_auditor_accessible"
+      ],
+      "properties": {
+        "gate_hash": { "type": "string", "minLength": 32 },
+        "policy_hash": { "type": "string", "minLength": 32 },
+        "evidence_hash": { "type": "string", "minLength": 32 },
+        "verifier_hash": { "type": "string", "minLength": 32 },
+        "configured": { "const": true },
+        "enforced": { "const": true },
+        "l169_bound": { "const": true },
+        "telemetry_bound": { "const": true },
+        "fail_closed": { "const": true },
+        "public_or_auditor_accessible": { "const": true }
+      }
+    },
+    "providerAdmissionRow": {
+      "type": "object",
+      "required": [
+        "admission_token_hash",
+        "provider_route_hash",
+        "model_alias_hash",
+        "tenant_scope_hash",
+        "l169_receipt_hash",
+        "l168_matrix_hash",
+        "negotiated_contract_hash",
+        "invocation_guard_hash",
+        "drift_sentinel_hash",
+        "telemetry_span_hash",
+        "source_footer_gate_hash",
+        "settlement_meter_hash",
+        "revocation_snapshot_hash",
+        "admission_decision_hash",
+        "verifier_hash",
+        "invocation_surfaces",
+        "provider_identity_matched",
+        "route_in_l168_matrix",
+        "l169_receipt_bound",
+        "l169_receipt_fresh",
+        "drift_sentinel_green",
+        "negotiated_contract_bound",
+        "invocation_guard_bound",
+        "telemetry_span_opened",
+        "source_footer_gate_bound",
+        "settlement_hold_until_footer",
+        "revocation_checked",
+        "all_invocation_surfaces_admitted",
+        "fail_closed",
+        "private_payloads_excluded"
+      ],
+      "properties": {
+        "invocation_surfaces": { "type": "object" },
+        "provider_identity_matched": { "const": true },
+        "route_in_l168_matrix": { "const": true },
+        "l169_receipt_bound": { "const": true },
+        "l169_receipt_fresh": { "const": true },
+        "drift_sentinel_green": { "const": true },
+        "negotiated_contract_bound": { "const": true },
+        "invocation_guard_bound": { "const": true },
+        "telemetry_span_opened": { "const": true },
+        "source_footer_gate_bound": { "const": true },
+        "settlement_hold_until_footer": { "const": true },
+        "revocation_checked": { "const": true },
+        "all_invocation_surfaces_admitted": { "const": true },
+        "fail_closed": { "const": true },
+        "private_payloads_excluded": { "const": true }
+      }
+    },
+    "negativeAdmissionRow": {
+      "type": "object",
+      "required": [
+        "fixture_hash",
+        "expected_reject",
+        "observed_reject",
+        "admission_token_denied",
+        "provider_invocation_blocked",
+        "response_release_blocked",
+        "source_footer_reliance_blocked",
+        "tool_mcp_execution_blocked",
+        "settlement_held",
+        "public_status_marked_failed"
+      ],
+      "properties": {
+        "fixture_hash": { "type": "string", "minLength": 32 },
+        "expected_reject": { "const": true },
+        "observed_reject": { "const": true },
+        "admission_token_denied": { "const": true },
+        "provider_invocation_blocked": { "const": true },
+        "response_release_blocked": { "const": true },
+        "source_footer_reliance_blocked": { "const": true },
+        "tool_mcp_execution_blocked": { "const": true },
+        "settlement_held": { "const": true },
+        "public_status_marked_failed": { "const": true }
+      }
+    }
+  }
+}

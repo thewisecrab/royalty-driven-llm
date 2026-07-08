@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/operator_acceptance_matrix.schema.json",
+  "title": "RDLLM Operator Acceptance Matrix",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "errors",
+    "summary",
+    "rows",
+    "matrix_report_hash"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-operator-acceptance-matrix/v1"
+    },
+    "status": {
+      "enum": ["passed", "failed"]
+    },
+    "errors": {
+      "$ref": "#/$defs/error_array"
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "operator_template_count",
+        "passed_count",
+        "failed_count",
+        "operator_templates",
+        "settlement_modes",
+        "direct_settlement_template_count",
+        "no_direct_settlement_template_count",
+        "public_sector_template_count",
+        "production_acceptance_allowed_count",
+        "copied_display_verified_count",
+        "runtime_checked",
+        "output_dir"
+      ],
+      "properties": {
+        "operator_template_count": { "type": "integer", "minimum": 0 },
+        "passed_count": { "type": "integer", "minimum": 0 },
+        "failed_count": { "type": "integer", "minimum": 0 },
+        "operator_templates": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/operator_template" },
+          "uniqueItems": true
+        },
+        "settlement_modes": {
+          "type": "array",
+          "items": {
+            "enum": ["escrow_only", "instruction_only", "processor_attested"]
+          },
+          "uniqueItems": true
+        },
+        "direct_settlement_template_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "no_direct_settlement_template_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "public_sector_template_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "production_acceptance_allowed_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "copied_display_verified_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "runtime_checked": { "type": "boolean" },
+        "output_dir": { "type": "string", "minLength": 1 }
+      }
+    },
+    "rows": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/matrix_row" }
+    },
+    "matrix_report_hash": {
+      "$ref": "#/$defs/hash64"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "passed" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "maxItems": 0 },
+          "summary": {
+            "properties": {
+              "operator_template_count": { "const": 5 },
+              "passed_count": { "const": 5 },
+              "failed_count": { "const": 0 },
+              "direct_settlement_template_count": { "minimum": 1 },
+              "no_direct_settlement_template_count": { "minimum": 1 },
+              "public_sector_template_count": { "minimum": 2 },
+              "production_acceptance_allowed_count": { "const": 5 },
+              "copied_display_verified_count": { "const": 5 }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "failed" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "minItems": 1 }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "error_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "hash64": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "hash64_or_empty": {
+      "type": "string",
+      "pattern": "^$|^[0-9a-f]{64}$"
+    },
+    "operator_template": {
+      "enum": ["company", "government", "individual", "institution", "public_sector"]
+    },
+    "matrix_row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "operator_template",
+        "status",
+        "errors",
+        "output_dir",
+        "acceptance_report_path",
+        "response_path",
+        "display_text_path",
+        "audit_log_path",
+        "recovery_manifest_path",
+        "acceptance_status",
+        "acceptance_verification_status",
+        "production_acceptance_decision",
+        "traffic_decision",
+        "operator_type",
+        "settlement_mode",
+        "production_grade_claim_allowed",
+        "direct_creator_settlement_allowed",
+        "public_sector_use_supported",
+        "response_production_display_ready",
+        "response_display_text_status",
+        "response_display_text_hash",
+        "source_grounding_acceptance_status",
+        "audit_response_binding_status",
+        "recovery_verification_status",
+        "acceptance_report_hash"
+      ],
+      "properties": {
+        "operator_template": { "$ref": "#/$defs/operator_template" },
+        "status": { "enum": ["passed", "failed"] },
+        "errors": { "$ref": "#/$defs/error_array" },
+        "output_dir": { "type": "string" },
+        "acceptance_report_path": { "type": "string" },
+        "response_path": { "type": "string" },
+        "display_text_path": { "type": "string" },
+        "audit_log_path": { "type": "string" },
+        "recovery_manifest_path": { "type": "string" },
+        "acceptance_status": { "type": "string" },
+        "acceptance_verification_status": { "type": "string" },
+        "production_acceptance_decision": {
+          "enum": ["allow", "block", "unknown"]
+        },
+        "traffic_decision": {
+          "enum": ["allow", "block", "unknown"]
+        },
+        "operator_type": { "type": "string" },
+        "settlement_mode": { "type": "string" },
+        "production_grade_claim_allowed": { "type": "boolean" },
+        "direct_creator_settlement_allowed": { "type": "boolean" },
+        "public_sector_use_supported": { "type": "boolean" },
+        "response_production_display_ready": { "type": "boolean" },
+        "response_display_text_status": { "type": "string" },
+        "response_display_text_hash": { "$ref": "#/$defs/hash64_or_empty" },
+        "source_grounding_acceptance_status": { "type": "string" },
+        "audit_response_binding_status": { "type": "string" },
+        "recovery_verification_status": { "type": "string" },
+        "acceptance_report_hash": { "$ref": "#/$defs/hash64_or_empty" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": { "const": "passed" }
+            },
+            "required": ["status"]
+          },
+          "then": {
+            "properties": {
+              "errors": { "maxItems": 0 },
+              "acceptance_status": { "const": "ready" },
+              "acceptance_verification_status": { "const": "passed" },
+              "production_acceptance_decision": { "const": "allow" },
+              "traffic_decision": { "const": "allow" },
+              "production_grade_claim_allowed": { "const": true },
+              "response_production_display_ready": { "const": true },
+              "response_display_text_status": { "const": "passed" },
+              "response_display_text_hash": { "$ref": "#/$defs/hash64" },
+              "source_grounding_acceptance_status": { "const": "passed" },
+              "audit_response_binding_status": { "const": "passed" },
+              "recovery_verification_status": { "const": "passed" },
+              "acceptance_report_hash": { "$ref": "#/$defs/hash64" }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": { "const": "failed" }
+            },
+            "required": ["status"]
+          },
+          "then": {
+            "properties": {
+              "errors": { "minItems": 1 }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

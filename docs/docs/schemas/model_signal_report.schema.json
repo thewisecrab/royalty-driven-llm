@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/model_signal_report.schema.json",
+  "title": "RDLLM Model Signal Attribution Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "event",
+    "attribution_contract",
+    "policy",
+    "economics",
+    "signal_rows",
+    "royalty_shares",
+    "commitments",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-model-signal-attribution/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "prompt_hash",
+        "output_hash",
+        "model_id",
+        "model_version"
+      ],
+      "additionalProperties": true
+    },
+    "attribution_contract": {
+      "type": "object",
+      "required": [
+        "contract_version",
+        "claim",
+        "explained_output",
+        "eligible_features",
+        "feature_granularity",
+        "generative_process",
+        "attributed_score",
+        "held_fixed",
+        "excluded_features"
+      ],
+      "properties": {
+        "contract_version": { "const": "rdllm-attribution-contract/v1" },
+        "claim": { "type": "string" },
+        "explained_output": { "type": "string" },
+        "eligible_features": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "feature_granularity": { "type": "string" },
+        "generative_process": { "type": "string" },
+        "attributed_score": { "type": "string" },
+        "held_fixed": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "excluded_features": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "public_claim_limit": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "accept_threshold",
+        "creator_pool_rate",
+        "signal_weights",
+        "accepted_decision",
+        "rejected_decision"
+      ],
+      "additionalProperties": true
+    },
+    "economics": {
+      "type": "object",
+      "required": [
+        "gross_revenue",
+        "creator_pool",
+        "payout_total",
+        "escrow_total"
+      ],
+      "additionalProperties": true
+    },
+    "signal_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "signal_id",
+          "work_id",
+          "creator_id",
+          "content_hash",
+          "signal_scores",
+          "decision_score",
+          "decision",
+          "signal_commitment",
+          "rank"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "royalty_shares": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "work_id",
+          "signal_ids",
+          "payout",
+          "contribution_weight"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "model_signal_input_root",
+        "signal_row_root",
+        "share_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "signal_count",
+        "accepted_signal_count",
+        "escrow_signal_count",
+        "creator_count",
+        "work_count",
+        "creator_pool_conserved",
+        "model_internal_signal_attribution"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_hidden_states_disclosed",
+        "raw_token_logits_disclosed",
+        "raw_private_trace_disclosed",
+        "prompt_text_disclosed",
+        "output_text_disclosed",
+        "report_uses_commitments_scores_and_source_ids"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

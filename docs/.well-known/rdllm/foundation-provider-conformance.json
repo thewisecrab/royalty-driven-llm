@@ -1,0 +1,890 @@
+{
+  "artifact_bindings": {
+    "citation_url_health": {
+      "artifact_type": "rdllm-citation-url-health/v1",
+      "declared_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "composite_foundation_adapter": {
+      "artifact_type": "rdllm-composite-foundation-adapter/v1",
+      "declared_hash": "6656bbf9c9129bfe19120e2a2655d979890e87e457dd722280ea1c5d85e75864",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "conformance_vector_pack": {
+      "artifact_type": "",
+      "declared_hash": "",
+      "hash_reproducible": true,
+      "present": false
+    },
+    "discovery_manifest": {
+      "artifact_type": "rdllm-discovery-manifest/v1",
+      "declared_hash": "ef30383461749d41f25c23439b7fa299dd10e267eeed8cd3978fe438bc911600",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "foundation_api_profile": {
+      "artifact_type": "rdllm-foundation-attribution-profile/v1",
+      "declared_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "integration_profile": {
+      "artifact_type": "rdllm-integration-profile/v1",
+      "declared_hash": "ce0c5fe1085f700dc54137f30861d1b5319e322b9a2d027c7902afbc4822cb98",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "provider_attribution_card": {
+      "artifact_type": "rdllm-provider-attribution-card/v1",
+      "declared_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "source_footer_delivery": {
+      "artifact_type": "rdllm-source-footer-delivery/v1",
+      "declared_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+      "hash_reproducible": true,
+      "present": true
+    }
+  },
+  "checks": {
+    "artifact_hashes_reproducible": true,
+    "claim_support_footer_bound": true,
+    "composite_adapter_ready_l125": true,
+    "conformance_row_hashes_present": true,
+    "fail_closed_policy_declared": true,
+    "negative_fixtures_cover_fail_closed_modes": true,
+    "official_documentation_declared": true,
+    "parametric_memory_fallback_bound": true,
+    "positive_fixtures_cover_required_capabilities": true,
+    "private_text_not_disclosed": true,
+    "provider_rows_backed_by_composite_adapter": true,
+    "provider_rows_cover_required_provider_families": true,
+    "required_capabilities_declared": true,
+    "required_rdllm_artifacts_supported": true,
+    "streaming_tool_and_citation_modes_bound": true,
+    "structured_proof_fields_bound": true
+  },
+  "commitments": {
+    "artifact_binding_root": "e971da1d84ec21faaf55ad170931c79f3cc38e8f1e640a4875fdd78e2f649670",
+    "capability_root": "eb51fe9d680a2bf6392f681979d46d8f099218c4fcfcf268f14628db90010be8",
+    "negative_fixture_root": "b7f5e6484fccbbccc39ec803d798235bac7ed2fedec6cf1a7d29b78d2ba49c91",
+    "provider_conformance_row_root": "59f6e2b7027658a24fb1930378fcb44bddb90429ade1e19c24aff3e94eb713b7",
+    "provider_family_root": "681dae02d82eeecd6f28c211938726c48488901d4d8030af211b7a72817dd8eb",
+    "schema": "docs/schemas/foundation_provider_conformance.schema.json"
+  },
+  "conformance_matrix": {
+    "adoption_target": "provider-public-attribution-conformance",
+    "negative_fixture_root": "25a052e1cd4e455c1e1e7f992c466e1f2882223046c5619342a9202fc840f01f",
+    "positive_fixture_root": "a32dd5a6647ec73c345c7ec961bb20c616a410708a2a09b0b522e21340f6066d",
+    "profile": "rdllm-universal-foundation-provider-conformance/v1",
+    "provider_families": [
+      "amazon_bedrock_converse",
+      "anthropic_messages",
+      "azure_openai_responses",
+      "cohere_chat",
+      "google_gemini",
+      "meta_llama",
+      "mistral_chat",
+      "openai_compatible_chat",
+      "openai_responses",
+      "xai_grok"
+    ],
+    "required_capabilities": [
+      "citation_or_grounding",
+      "claim_support_footer",
+      "fail_closed_errors",
+      "parametric_memory_fallback",
+      "streaming_response",
+      "structured_proof_fields",
+      "sync_response",
+      "tool_calling",
+      "url_health_binding"
+    ],
+    "required_negative_fixtures": [
+      "missing_required_header",
+      "native_output_hash_mismatch",
+      "private_text_leak",
+      "stream_final_hash_drift",
+      "unsupported_claim_footer",
+      "unverified_citation_url"
+    ],
+    "required_provider_families": [
+      "amazon_bedrock_converse",
+      "anthropic_messages",
+      "azure_openai_responses",
+      "cohere_chat",
+      "google_gemini",
+      "meta_llama",
+      "mistral_chat",
+      "openai_compatible_chat",
+      "openai_responses",
+      "xai_grok"
+    ],
+    "row_root": "59f6e2b7027658a24fb1930378fcb44bddb90429ade1e19c24aff3e94eb713b7"
+  },
+  "conformance_version": "rdllm-foundation-provider-conformance/v1",
+  "coverage_gaps": {
+    "failed_checks": [],
+    "missing_provider_families": [],
+    "providers_missing_adapter_backing": [],
+    "providers_missing_capabilities": [],
+    "providers_missing_fail_closed_policy": [],
+    "providers_missing_negative_fixtures": [],
+    "providers_missing_official_docs": [],
+    "providers_missing_positive_fixtures": []
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "foundation_provider_conformance_hash": "db1fdda0749269946a8f5b65b2c86bcd42c54250e3c8a919a984f3558a2fad2f",
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "adapter_row_backing_required": true,
+    "claim_support_and_footer_required": true,
+    "fail_closed_on_conformance_failure": true,
+    "hash_only_fixture_commitments_required": true,
+    "minimum_input_level": "RDLLM-L125",
+    "official_documentation_required": true,
+    "parametric_memory_fallback_required": true,
+    "profile": "rdllm-foundation-provider-conformance-policy/v1",
+    "raw_prompt_or_source_text_disclosure_allowed": false,
+    "required_capabilities": [
+      "sync_response",
+      "streaming_response",
+      "tool_calling",
+      "citation_or_grounding",
+      "url_health_binding",
+      "structured_proof_fields",
+      "claim_support_footer",
+      "parametric_memory_fallback",
+      "fail_closed_errors"
+    ],
+    "required_negative_fixtures": [
+      "missing_required_header",
+      "native_output_hash_mismatch",
+      "unverified_citation_url",
+      "unsupported_claim_footer",
+      "stream_final_hash_drift",
+      "private_text_leak"
+    ],
+    "required_provider_families": [
+      "openai_responses",
+      "anthropic_messages",
+      "google_gemini",
+      "meta_llama",
+      "mistral_chat",
+      "cohere_chat",
+      "xai_grok",
+      "amazon_bedrock_converse",
+      "azure_openai_responses",
+      "openai_compatible_chat"
+    ],
+    "required_rdllm_artifacts": [
+      "response_envelope",
+      "source_footer_delivery",
+      "citation_url_health",
+      "foundation_api_profile",
+      "composite_foundation_adapter"
+    ],
+    "target_certification_level": "RDLLM-L126"
+  },
+  "privacy": {
+    "hash_only_fixture_commitments": true,
+    "raw_answer_text_disclosed": false,
+    "raw_fixture_payloads_disclosed": false,
+    "raw_prompt_text_disclosed": false,
+    "raw_source_text_disclosed": false
+  },
+  "provider_conformance_rows": [
+    {
+      "adapter_row_hash_matches_composite": true,
+      "capabilities": {
+        "citation_or_grounding": true,
+        "claim_support_footer": true,
+        "fail_closed_errors": true,
+        "parametric_memory_fallback": true,
+        "streaming_response": true,
+        "structured_proof_fields": true,
+        "sync_response": true,
+        "tool_calling": true,
+        "url_health_binding": true
+      },
+      "capability_coverage_count": 9,
+      "certification_profile": "rdllm-provider-attribution-conformance/v1",
+      "conformance_vector_pack_hash": "",
+      "display_order": 1,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "missing_required_header": "block_display",
+        "native_output_hash_mismatch": "block_display",
+        "private_text_leak": "block_display",
+        "stream_final_hash_drift": "block_display",
+        "unsupported_claim_footer": "block_display",
+        "unverified_citation_url": "block_display"
+      },
+      "foundation_provider_conformance_row_hash": "484a8dcc68b42483469227979d33ab9b1d6bb326e2623c5048808abdf9ef1c9f",
+      "native_api_version": "responses/v1",
+      "native_model": "openai:responses-compatible",
+      "negative_fixture_coverage_count": 6,
+      "negative_fixture_hashes": {
+        "missing_required_header": "150768dbd55e62f9f376fd97713573ceebf0a1fcfcf6e91f388dda9765fa68ea",
+        "native_output_hash_mismatch": "d4360ea59ec55979937fed2b3498f6268b9a904478a5de19862fd6718d3c64a3",
+        "private_text_leak": "f45b9c77144f8c35e132e88dc51fdf1d45332bece84a04ba46ff92ecd0acdac7",
+        "stream_final_hash_drift": "5a2accc3ff4b2c4afa16ae9137e7a1077b9a3aaf2d1927e0da12f809f6aa3d83",
+        "unsupported_claim_footer": "359a29a9b067c93c1963862340fefab4aebd57494f6cd1f0a1d96576078542ba",
+        "unverified_citation_url": "6b1ab2275a2055877d43a8fd7e24c229c422b4deeade0b23876f3368d9d57337"
+      },
+      "official_documentation_refs": [
+        "https://platform.openai.com/docs/api-reference/responses"
+      ],
+      "positive_fixture_coverage_count": 9,
+      "positive_fixture_hashes": {
+        "citation_or_grounding": "81a07411f21c18e6e26b26eefbdd7bead51e7c7fad44027c8063405585ef42d0",
+        "claim_support_footer": "a70650d44129dccd122c675c00b7a0642cc0f3a2c9dd60f3c55cbfe02129276a",
+        "fail_closed_errors": "da550f6a6e8e1dc9d4a46a92f4949ebe8755573ea49ad26a5cc8b662cd24ac41",
+        "parametric_memory_fallback": "49966641944ed849856a7ee899615db6ba84458c30c9d53946618fc8a5e46929",
+        "streaming_response": "8a53041fc9645781b14386ee45e654c24352eea465df5f35a621054cc40d0a03",
+        "structured_proof_fields": "82946647d6284aa0cd1d6e68505eab400fe8b9a5ef8ff6fa48bad1e23d93ecd5",
+        "sync_response": "f690fa3c35bb83e521eb8f47860bf3d7c881e8762fd839a758394978aa3e6295",
+        "tool_calling": "f984c8553018a9ffe71512c802261e295ec32188884b77e396cd72eb4c0e30f4",
+        "url_health_binding": "d84b02fc3ac79466d9285b747ae350d301acb2ee09529e205d6bd9fbdb987187"
+      },
+      "provider_adapter_row_hash": "823a04465f4e1b49e57e15f52f6779de3fbeb79c215d1e6f96e528148a92b8be",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "rdllm_artifacts_supported": [
+        "response_envelope",
+        "source_footer_delivery",
+        "citation_url_health",
+        "foundation_api_profile",
+        "composite_foundation_adapter",
+        "claim_source_attribution_report",
+        "parametric_memory_attribution_report"
+      ]
+    },
+    {
+      "adapter_row_hash_matches_composite": true,
+      "capabilities": {
+        "citation_or_grounding": true,
+        "claim_support_footer": true,
+        "fail_closed_errors": true,
+        "parametric_memory_fallback": true,
+        "streaming_response": true,
+        "structured_proof_fields": true,
+        "sync_response": true,
+        "tool_calling": true,
+        "url_health_binding": true
+      },
+      "capability_coverage_count": 9,
+      "certification_profile": "rdllm-provider-attribution-conformance/v1",
+      "conformance_vector_pack_hash": "",
+      "display_order": 2,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "missing_required_header": "block_display",
+        "native_output_hash_mismatch": "block_display",
+        "private_text_leak": "block_display",
+        "stream_final_hash_drift": "block_display",
+        "unsupported_claim_footer": "block_display",
+        "unverified_citation_url": "block_display"
+      },
+      "foundation_provider_conformance_row_hash": "3feee62d5008d7a867f77aa5965d88cd89e716d4aca00539a136af113dcdae93",
+      "native_api_version": "messages/v1",
+      "native_model": "anthropic:messages-compatible",
+      "negative_fixture_coverage_count": 6,
+      "negative_fixture_hashes": {
+        "missing_required_header": "264b7c3c6a72feb5f790285c1256befedb1e25719dec6842e39e8881d805b5da",
+        "native_output_hash_mismatch": "9c564e369c4ff83d9a66053253e92d42238936b85c7f8a7baa67110682c4d3f1",
+        "private_text_leak": "7d19163482b8e154aa4a5d1c373dbecd7234bafcd485050e32e91f2235cee330",
+        "stream_final_hash_drift": "198a275f905e5fbec19668b2227526d6a3e083b146b92ef3d66e3d0fa1a97a7a",
+        "unsupported_claim_footer": "f6c27916445fc741f3ef52525ad2e787d4bde1ba662bc4b683df15f08a5727b1",
+        "unverified_citation_url": "4b62c14ab42348402de98718133f3286accc06b7387c3a998cbd9343f4db7da8"
+      },
+      "official_documentation_refs": [
+        "https://docs.anthropic.com/en/api/messages"
+      ],
+      "positive_fixture_coverage_count": 9,
+      "positive_fixture_hashes": {
+        "citation_or_grounding": "11e81d8f160f74e7bcd733c3a6eaacfc912e1cff441e6d25bdbae0d2c184737d",
+        "claim_support_footer": "af47c6933c6d033c8ff6a8d9376552e63d1bee14b4c2d5162c02db00427f2fef",
+        "fail_closed_errors": "032172b3653466f4248bd114cf269594d550ee3878c2a933476786b2263dd073",
+        "parametric_memory_fallback": "79ac13d6b398fc37f4e1c79086a51949dd4c8e5e581ea94a5cd9e50ea8ce5138",
+        "streaming_response": "8128339aff065ae9b4d2243834365123946ba3dbbc331fff597d314fa37e94f2",
+        "structured_proof_fields": "bb1707174ec03e28bb5d74032f00e96c5508b1373c40fb897c6a0e7640d2798b",
+        "sync_response": "db9c605595953bdf44753ff1f1d1204380075541cc5f3f4c3d6d8842db4dd8d4",
+        "tool_calling": "b59d38d526591747c261edcee57bb82bccd9dc720c00c94d27e2750e27c890ae",
+        "url_health_binding": "d612392693abb9dc2737fd9576d8c75972c2e85bd909214808e808b90eb17941"
+      },
+      "provider_adapter_row_hash": "caebd2c7215d84c40b79f767c5aff42c95f2e90d99d511d6f9edc779a858b1a7",
+      "provider_family": "anthropic_messages",
+      "provider_id": "provider:anthropic-messages",
+      "rdllm_artifacts_supported": [
+        "response_envelope",
+        "source_footer_delivery",
+        "citation_url_health",
+        "foundation_api_profile",
+        "composite_foundation_adapter",
+        "claim_source_attribution_report",
+        "parametric_memory_attribution_report"
+      ]
+    },
+    {
+      "adapter_row_hash_matches_composite": true,
+      "capabilities": {
+        "citation_or_grounding": true,
+        "claim_support_footer": true,
+        "fail_closed_errors": true,
+        "parametric_memory_fallback": true,
+        "streaming_response": true,
+        "structured_proof_fields": true,
+        "sync_response": true,
+        "tool_calling": true,
+        "url_health_binding": true
+      },
+      "capability_coverage_count": 9,
+      "certification_profile": "rdllm-provider-attribution-conformance/v1",
+      "conformance_vector_pack_hash": "",
+      "display_order": 3,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "missing_required_header": "block_display",
+        "native_output_hash_mismatch": "block_display",
+        "private_text_leak": "block_display",
+        "stream_final_hash_drift": "block_display",
+        "unsupported_claim_footer": "block_display",
+        "unverified_citation_url": "block_display"
+      },
+      "foundation_provider_conformance_row_hash": "9086bdb8895735bc975078b8161cd1e80cbe6bee5038f543eb01436375288153",
+      "native_api_version": "generate-content/v1",
+      "native_model": "google:gemini-compatible",
+      "negative_fixture_coverage_count": 6,
+      "negative_fixture_hashes": {
+        "missing_required_header": "1441fd25e6116316f713813208bf92d0f78487ff94b5310e995d6209db00fb57",
+        "native_output_hash_mismatch": "9521fccf83c68bf6ae8fe536b2295d2e698d167404a0c11db8c8abbed9240dde",
+        "private_text_leak": "dcf571f4627ca52aaca0081bc27eba0d4949ac1f48c8980fa478159210bfcc8f",
+        "stream_final_hash_drift": "7121d36562ac9d9da15fac113186509472260d65e6c356254077a5aca2f2d470",
+        "unsupported_claim_footer": "5235a4fd881fabc96e35f654c9e36897a34e2c211b8293278a1cfb48b20531e1",
+        "unverified_citation_url": "2dc19f7df2f5cd84b4242a945085730c54a364695a00ce5d5e3bfb553a61c054"
+      },
+      "official_documentation_refs": [
+        "https://ai.google.dev/gemini-api/docs"
+      ],
+      "positive_fixture_coverage_count": 9,
+      "positive_fixture_hashes": {
+        "citation_or_grounding": "5a0eece10e006577b6e70b897583d9d5c9c623b00974855eeded9bf65b99fa16",
+        "claim_support_footer": "93e1ac39027111fd84d69c7b5e5fa96d13f161933af94d8becc683f2a3c99714",
+        "fail_closed_errors": "c6b93dd28d5452e55f2b439bbee8a6fb6fddbb137d932c0faff86c4d09c22967",
+        "parametric_memory_fallback": "94c9536d0461e808d9cfb110d41cc844bcfd55f9eadb5b496841b09c6f639e35",
+        "streaming_response": "1641952aa49db6b9a5fc8c3c3b30d426e12983125777a96f5b5e81b3a4927cb9",
+        "structured_proof_fields": "9c5ad8d359351a7228416b6c6a0dab84b457431bc98c74154726a02fd48eef1a",
+        "sync_response": "9a1ed453ef60bf01458a65e4c5e80cff7a45a13c4acead26145c2bfb896f3bf2",
+        "tool_calling": "423fc3ba19253154cd6f498ac1710ea9f1eedc16cc22a76a4a7c57f93b7ac05e",
+        "url_health_binding": "5b12913d76acd1629d9c4c6eaa7b9d3b6efd22ea7a2e116e8e2e43b9c6b59522"
+      },
+      "provider_adapter_row_hash": "205da1833b68232c81c3da8c42ac95b4fc01d42a45cf90103fe738cbda2313fa",
+      "provider_family": "google_gemini",
+      "provider_id": "provider:google-gemini",
+      "rdllm_artifacts_supported": [
+        "response_envelope",
+        "source_footer_delivery",
+        "citation_url_health",
+        "foundation_api_profile",
+        "composite_foundation_adapter",
+        "claim_source_attribution_report",
+        "parametric_memory_attribution_report"
+      ]
+    },
+    {
+      "adapter_row_hash_matches_composite": true,
+      "capabilities": {
+        "citation_or_grounding": true,
+        "claim_support_footer": true,
+        "fail_closed_errors": true,
+        "parametric_memory_fallback": true,
+        "streaming_response": true,
+        "structured_proof_fields": true,
+        "sync_response": true,
+        "tool_calling": true,
+        "url_health_binding": true
+      },
+      "capability_coverage_count": 9,
+      "certification_profile": "rdllm-provider-attribution-conformance/v1",
+      "conformance_vector_pack_hash": "",
+      "display_order": 4,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "missing_required_header": "block_display",
+        "native_output_hash_mismatch": "block_display",
+        "private_text_leak": "block_display",
+        "stream_final_hash_drift": "block_display",
+        "unsupported_claim_footer": "block_display",
+        "unverified_citation_url": "block_display"
+      },
+      "foundation_provider_conformance_row_hash": "008233bd2ed402c312d2b9e8bc826ae9609d15cb153b571324033fddb4a44fcd",
+      "native_api_version": "chat-completions/v1",
+      "native_model": "meta:llama-openai-compatible",
+      "negative_fixture_coverage_count": 6,
+      "negative_fixture_hashes": {
+        "missing_required_header": "43216d2049f999db6bb9c91a6fc2a6ec79c32be44a28afe4c44cbb20c49ba7ab",
+        "native_output_hash_mismatch": "cd0b52830c40c032a544e8f4162fb9e77e198cc53f191b1e843f05efdac0632c",
+        "private_text_leak": "d6b776daaaa34a8e9bc7d0c810f85a277c231b31c0a16fe109dc4f66f003b655",
+        "stream_final_hash_drift": "dfc6f79f33632d348c0d98581a8ab1870e29a19c1a003d8c2004b17810c2dd65",
+        "unsupported_claim_footer": "137f4aedf5bd0cfad04e391c85b5951409123ec61a54d54377fa33afaaaf24f5",
+        "unverified_citation_url": "c600fc296f0614b36335de00859684316c8cd00df720dc8a84ee0e2789aa08d6"
+      },
+      "official_documentation_refs": [
+        "https://llama-stack.readthedocs.io/"
+      ],
+      "positive_fixture_coverage_count": 9,
+      "positive_fixture_hashes": {
+        "citation_or_grounding": "69537334d17f90ff48e92dcf1dbcfb7c59d4351f28cd8dde63b6cd9574e1b9c4",
+        "claim_support_footer": "3464b9a16595115be1d6803f1e75ade07e71089771a72150fd95578cd39cf920",
+        "fail_closed_errors": "c7ebcfae6cb4a7c303ecc31b1765c2340c17a43741d7d977d6aefd2961503fdb",
+        "parametric_memory_fallback": "f1ed1f6eb859e1c8509c733b94382222ce99101f63828ec9f1382925bf74ac67",
+        "streaming_response": "f5ec00a26416573d2f4f844f19eeade87db5aff3022235100abe306db48ffa33",
+        "structured_proof_fields": "f552643739054ce691bb21023ca66cde8bd41098f5b899c57e1dece366b22e7b",
+        "sync_response": "4b6f24672af5b428184e973e71b384471db7f21c6aed6b1491ea5cdb67996a71",
+        "tool_calling": "65ade945e9400063e333673024018d511905728b793ae088eb57064e899a990b",
+        "url_health_binding": "c77d5b97921db5d11d6347c410299591742fbc5777bb5c72b9afe84bd36cd4bb"
+      },
+      "provider_adapter_row_hash": "cf00c8aca4aa11b92b0c11adf6409a2a25e45988e003e62b46dd7c2373f74b46",
+      "provider_family": "meta_llama",
+      "provider_id": "provider:meta-llama-openai-compatible",
+      "rdllm_artifacts_supported": [
+        "response_envelope",
+        "source_footer_delivery",
+        "citation_url_health",
+        "foundation_api_profile",
+        "composite_foundation_adapter",
+        "claim_source_attribution_report",
+        "parametric_memory_attribution_report"
+      ]
+    },
+    {
+      "adapter_row_hash_matches_composite": true,
+      "capabilities": {
+        "citation_or_grounding": true,
+        "claim_support_footer": true,
+        "fail_closed_errors": true,
+        "parametric_memory_fallback": true,
+        "streaming_response": true,
+        "structured_proof_fields": true,
+        "sync_response": true,
+        "tool_calling": true,
+        "url_health_binding": true
+      },
+      "capability_coverage_count": 9,
+      "certification_profile": "rdllm-provider-attribution-conformance/v1",
+      "conformance_vector_pack_hash": "",
+      "display_order": 5,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "missing_required_header": "block_display",
+        "native_output_hash_mismatch": "block_display",
+        "private_text_leak": "block_display",
+        "stream_final_hash_drift": "block_display",
+        "unsupported_claim_footer": "block_display",
+        "unverified_citation_url": "block_display"
+      },
+      "foundation_provider_conformance_row_hash": "12ab6db9cf7269601a6d5630b389bf0793cf4c110ef9194dd984273ec964df46",
+      "native_api_version": "chat/v1",
+      "native_model": "mistral:chat-compatible",
+      "negative_fixture_coverage_count": 6,
+      "negative_fixture_hashes": {
+        "missing_required_header": "a0a43c2d8526ea345cb9974ae660b8f59fe258d416405a48d747f0036342b8db",
+        "native_output_hash_mismatch": "8b8c9b15130a9125bf8e9b13aecbe80a7de7bd59c4f9415b339b25c0e920b4ca",
+        "private_text_leak": "d0c69f39df20e0f9bb95bef02786f8bd51a63a08c82d66fb80172a95bc6b7361",
+        "stream_final_hash_drift": "e819753cc978a36497dfeecb23ce8e8788da5db34468b4c4cf18ed67de362522",
+        "unsupported_claim_footer": "19cd86e414ed97d7a100684b5e9582d4d0e27be3892254d2c4b9499248cc92d0",
+        "unverified_citation_url": "17c0ab3cfc52fc99f6107db6db5f618f3999a2946d5534e3391a508d9360bd2b"
+      },
+      "official_documentation_refs": [
+        "https://docs.mistral.ai/api/"
+      ],
+      "positive_fixture_coverage_count": 9,
+      "positive_fixture_hashes": {
+        "citation_or_grounding": "15351a678ac18a61970a23b760a8caa5f1254dd15f8c0fdfb83d58e983df5898",
+        "claim_support_footer": "99c25f488f315e1f371271faa31b1b2add40f2a62587a3bd3a205f1a824d9fe4",
+        "fail_closed_errors": "294c4529c9b9d757b4f60025c00c942c45b7f69f584a46ea1bdd06200739e8c4",
+        "parametric_memory_fallback": "b27b03b249448737fe79f69dfb529b7f86c9dd7ea4678e5c77dfaf16bcb7acf8",
+        "streaming_response": "be3748961fb3adf9828d62d09aca60bce5779ddb120c4cfd81a776697303a1a9",
+        "structured_proof_fields": "8d4107ae7f4f112354ff401bf1308f03d9343ed02b75d3a1de5811864994d7d1",
+        "sync_response": "76326c128f4c75293b67bbad5b56dd6076d72b03b01ad5ff81befe6d3ac18543",
+        "tool_calling": "ac92ff163113474bb85597d24c3c7e80415f53aa7357b56efbfac459c03f0a37",
+        "url_health_binding": "ea09e2d767682a048c82f60825e6ce7e7256412d9507c685009a49a91dfeb50a"
+      },
+      "provider_adapter_row_hash": "cd5dedd74a4d45c07535360fa672c37bd08794b4971d086c5bdcf4cc2afa6024",
+      "provider_family": "mistral_chat",
+      "provider_id": "provider:mistral-chat",
+      "rdllm_artifacts_supported": [
+        "response_envelope",
+        "source_footer_delivery",
+        "citation_url_health",
+        "foundation_api_profile",
+        "composite_foundation_adapter",
+        "claim_source_attribution_report",
+        "parametric_memory_attribution_report"
+      ]
+    },
+    {
+      "adapter_row_hash_matches_composite": true,
+      "capabilities": {
+        "citation_or_grounding": true,
+        "claim_support_footer": true,
+        "fail_closed_errors": true,
+        "parametric_memory_fallback": true,
+        "streaming_response": true,
+        "structured_proof_fields": true,
+        "sync_response": true,
+        "tool_calling": true,
+        "url_health_binding": true
+      },
+      "capability_coverage_count": 9,
+      "certification_profile": "rdllm-provider-attribution-conformance/v1",
+      "conformance_vector_pack_hash": "",
+      "display_order": 6,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "missing_required_header": "block_display",
+        "native_output_hash_mismatch": "block_display",
+        "private_text_leak": "block_display",
+        "stream_final_hash_drift": "block_display",
+        "unsupported_claim_footer": "block_display",
+        "unverified_citation_url": "block_display"
+      },
+      "foundation_provider_conformance_row_hash": "418bc9c18902a5dd454f59098b31686ee781585eab35987f0c5263d5975d86be",
+      "native_api_version": "chat/v2",
+      "native_model": "cohere:chat-compatible",
+      "negative_fixture_coverage_count": 6,
+      "negative_fixture_hashes": {
+        "missing_required_header": "127848b8eb609577543ca7fd1321ad0b5d457b8a1b6b539643a2cff23e8318de",
+        "native_output_hash_mismatch": "b8506feacb1e022cddb3852e8546b36374a5b0022aca83cd4874b9c5f1a7f69d",
+        "private_text_leak": "3de393f5904e1f9bf01921093abab690e917e7f069a807c3440d78eb41842b59",
+        "stream_final_hash_drift": "3986c8ceec0d7357d3e8b3d8bca4cf016c1f742c5d550cf2ce36bb3ca30b7587",
+        "unsupported_claim_footer": "7f92a5b31bce3fe21c7a7ee51c265c8f81079a3dd3a37e7740301338d7a55b73",
+        "unverified_citation_url": "32727e9731079de883b2bcf742450da4983fdddafdfd08e3242b4f03574440a6"
+      },
+      "official_documentation_refs": [
+        "https://docs.cohere.com/reference/chat"
+      ],
+      "positive_fixture_coverage_count": 9,
+      "positive_fixture_hashes": {
+        "citation_or_grounding": "d5f6b0fec3028b03366c9677b8f1630c3779fa8a6e3c580bec759506b2102949",
+        "claim_support_footer": "60cf7e031c428c9008278fddb555cab03be6b0e2f2c69c0b6d8b4a9edfb7be79",
+        "fail_closed_errors": "b1d81f0830e1a3f34486cf090babe2d85f062b407fce3fa95f345e589b5b8a0e",
+        "parametric_memory_fallback": "53c113e4b4115c1f2daf0ab1ca30cefebe7f76b41e5a0d996318d3c32341475a",
+        "streaming_response": "8e050008bc1a9a0445c21eab2ee2d3f289f9251b98370075a6ab940a0ef5755a",
+        "structured_proof_fields": "303312063e321a95a8e12f4a65742790fe213e1367fd7484d54d1e9e8234fe88",
+        "sync_response": "1dadc011d54ba2283576178d629ddac10419ccb5279837775615ad3f9ed2d80f",
+        "tool_calling": "3348b7340f1e02b41c6ffcf61a6d090fbdb73ad06cd35614575cf3738478560d",
+        "url_health_binding": "d2f9410a37bf8be3ab1c0d5bba63871405f2e4d0c7ba3a7c8378ce202b5c0f4c"
+      },
+      "provider_adapter_row_hash": "4491924d84cc4cd7978d5a6bd0bb4a344c3b67bab6d9b6e3972bc5248b95ee86",
+      "provider_family": "cohere_chat",
+      "provider_id": "provider:cohere-chat",
+      "rdllm_artifacts_supported": [
+        "response_envelope",
+        "source_footer_delivery",
+        "citation_url_health",
+        "foundation_api_profile",
+        "composite_foundation_adapter",
+        "claim_source_attribution_report",
+        "parametric_memory_attribution_report"
+      ]
+    },
+    {
+      "adapter_row_hash_matches_composite": true,
+      "capabilities": {
+        "citation_or_grounding": true,
+        "claim_support_footer": true,
+        "fail_closed_errors": true,
+        "parametric_memory_fallback": true,
+        "streaming_response": true,
+        "structured_proof_fields": true,
+        "sync_response": true,
+        "tool_calling": true,
+        "url_health_binding": true
+      },
+      "capability_coverage_count": 9,
+      "certification_profile": "rdllm-provider-attribution-conformance/v1",
+      "conformance_vector_pack_hash": "",
+      "display_order": 7,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "missing_required_header": "block_display",
+        "native_output_hash_mismatch": "block_display",
+        "private_text_leak": "block_display",
+        "stream_final_hash_drift": "block_display",
+        "unsupported_claim_footer": "block_display",
+        "unverified_citation_url": "block_display"
+      },
+      "foundation_provider_conformance_row_hash": "8ba3eb102654738e04f73a0226751b487875fa7f1956a4172d895d8020fe1c8d",
+      "native_api_version": "chat-completions/v1",
+      "native_model": "xai:grok-compatible",
+      "negative_fixture_coverage_count": 6,
+      "negative_fixture_hashes": {
+        "missing_required_header": "0c340f26b16a017cb0318ef84d9ea722f990b2f80c8c094f4ac241a226a0f204",
+        "native_output_hash_mismatch": "64320ab38e94d1174c13c2ee369b9989f5f3e385a15463e36274009bf6b59331",
+        "private_text_leak": "fd79f9f08b101463e5cf6f8b8c115f64f3499c514378f24fe884ce8353987471",
+        "stream_final_hash_drift": "923f8457b058d33a8ff03c0e1e2e523a9ac93c6bec5cddc9876a47a54958ae4a",
+        "unsupported_claim_footer": "a28a3afb4631dc7777915db62911b722a4dc4125e92c24c5745d2bacebb5a6f0",
+        "unverified_citation_url": "10f1b8de106ab200c3bb888b9536e1dd3ae134f24bd54b6995e8535c87f83935"
+      },
+      "official_documentation_refs": [
+        "https://docs.x.ai/docs/api-reference"
+      ],
+      "positive_fixture_coverage_count": 9,
+      "positive_fixture_hashes": {
+        "citation_or_grounding": "c7d2f99ef30527fa84ffc58d550eacd8377d0c2fe22f748392eb5758fa53fe87",
+        "claim_support_footer": "86bed306d968842c790e9c9b9d3c6afa827a6f899757612ab38b970ae86c8a86",
+        "fail_closed_errors": "bd9e4fe4b1decd40504fbcee8408f709a8284258a1814e5f087bc66d5d53876a",
+        "parametric_memory_fallback": "f31f7d9ad9926fbdde8d99028e2929678df28c328d9d7093d7ab4b4db1055817",
+        "streaming_response": "d0c6ca39db778522a6b3339439d980ce1ad6ae9b95f29364bcfed9fb40404151",
+        "structured_proof_fields": "f7f1293ab019bb16be1d4bdd19592d2555f21142c9e2e5abef2c3c4251cf74af",
+        "sync_response": "46faa08bd225e36c47e64b23b204d005829ad7c4ad7ce18adc33f82a00778264",
+        "tool_calling": "c46dcbfb12448c1546f9f8529365bda44f0fb9ed38456c7604757ee51c410ec5",
+        "url_health_binding": "cbbe5f872c480174e059417b581305c9227401ad90e07c239bcff060a55d7f18"
+      },
+      "provider_adapter_row_hash": "b0474f10b21945ac0062f7d268e728d9d1208216e8b0931815e61e7c203a63e9",
+      "provider_family": "xai_grok",
+      "provider_id": "provider:xai-grok",
+      "rdllm_artifacts_supported": [
+        "response_envelope",
+        "source_footer_delivery",
+        "citation_url_health",
+        "foundation_api_profile",
+        "composite_foundation_adapter",
+        "claim_source_attribution_report",
+        "parametric_memory_attribution_report"
+      ]
+    },
+    {
+      "adapter_row_hash_matches_composite": true,
+      "capabilities": {
+        "citation_or_grounding": true,
+        "claim_support_footer": true,
+        "fail_closed_errors": true,
+        "parametric_memory_fallback": true,
+        "streaming_response": true,
+        "structured_proof_fields": true,
+        "sync_response": true,
+        "tool_calling": true,
+        "url_health_binding": true
+      },
+      "capability_coverage_count": 9,
+      "certification_profile": "rdllm-provider-attribution-conformance/v1",
+      "conformance_vector_pack_hash": "",
+      "display_order": 8,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "missing_required_header": "block_display",
+        "native_output_hash_mismatch": "block_display",
+        "private_text_leak": "block_display",
+        "stream_final_hash_drift": "block_display",
+        "unsupported_claim_footer": "block_display",
+        "unverified_citation_url": "block_display"
+      },
+      "foundation_provider_conformance_row_hash": "63c05cb630f511eb1a809b0de31b6d6012bd95c714205c2e77efd2a6385e1e19",
+      "native_api_version": "converse/v1",
+      "native_model": "aws:bedrock-converse-compatible",
+      "negative_fixture_coverage_count": 6,
+      "negative_fixture_hashes": {
+        "missing_required_header": "e3bacc34dcd5e4ded23d1f49541d65a6f1b890668409e4b6fb42ae134681eb08",
+        "native_output_hash_mismatch": "4ca7949badfd488efa727a79e180c85940bf515bc181a5af0b72f693046c4e2b",
+        "private_text_leak": "3fbf579e463e6762c2d90bbc6dd701df5d94660185506b9e821ec485039b747b",
+        "stream_final_hash_drift": "d7c7a2ef74e303207acfa469b205ece92b655ce0833f6a5c5e7c32c01c14dc9b",
+        "unsupported_claim_footer": "e3fcf72d8504ecff4e1a97f229a58970c2722ee4ae32a47a506f4c377c4901ee",
+        "unverified_citation_url": "2300303979a5f18765a3f7cdaec61ee3400ab0f1292104e19d81845df2e9e091"
+      },
+      "official_documentation_refs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html"
+      ],
+      "positive_fixture_coverage_count": 9,
+      "positive_fixture_hashes": {
+        "citation_or_grounding": "901c2867eab2dfa589ecc5dc8c615786c3dad8c7c536086b2a55b41566abd589",
+        "claim_support_footer": "75c2999d316205efe987d8f02162a23bb7e9be3341853e3aaee110925892bf74",
+        "fail_closed_errors": "3d754f655c1154b419178e25ebecc6b7d209328f8fc5098f379837abc57c4c1a",
+        "parametric_memory_fallback": "3cb1fc8a5bbf06b0f50db389a5af35ca6b442ccf386b8ac259e0aa9506bc183b",
+        "streaming_response": "08499b1eb72e0d2a9b2c7498d4adffef004886cb9fe4bdd262d9fe4c0cbc6992",
+        "structured_proof_fields": "423af5f166248f1d11ebee89cd836d2b640c09d74814cc8e4ef0418dd2bf14e4",
+        "sync_response": "d626773236802440bff16ec353f02bc6a159ad7c9503ca9a77d81dc4f4697a36",
+        "tool_calling": "71f955574bed88a090f0b06b36a55b7c304053ea3e495253b4936aa96b25874b",
+        "url_health_binding": "4498a4c7c680b60e0099d11b5e013158d9f439133e2b37900d74c04f0499a103"
+      },
+      "provider_adapter_row_hash": "a9c903c9a42fe560e35e78d5378a8a781b5580fefa886c0847f242c85d2e2db5",
+      "provider_family": "amazon_bedrock_converse",
+      "provider_id": "provider:amazon-bedrock-converse",
+      "rdllm_artifacts_supported": [
+        "response_envelope",
+        "source_footer_delivery",
+        "citation_url_health",
+        "foundation_api_profile",
+        "composite_foundation_adapter",
+        "claim_source_attribution_report",
+        "parametric_memory_attribution_report"
+      ]
+    },
+    {
+      "adapter_row_hash_matches_composite": true,
+      "capabilities": {
+        "citation_or_grounding": true,
+        "claim_support_footer": true,
+        "fail_closed_errors": true,
+        "parametric_memory_fallback": true,
+        "streaming_response": true,
+        "structured_proof_fields": true,
+        "sync_response": true,
+        "tool_calling": true,
+        "url_health_binding": true
+      },
+      "capability_coverage_count": 9,
+      "certification_profile": "rdllm-provider-attribution-conformance/v1",
+      "conformance_vector_pack_hash": "",
+      "display_order": 9,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "missing_required_header": "block_display",
+        "native_output_hash_mismatch": "block_display",
+        "private_text_leak": "block_display",
+        "stream_final_hash_drift": "block_display",
+        "unsupported_claim_footer": "block_display",
+        "unverified_citation_url": "block_display"
+      },
+      "foundation_provider_conformance_row_hash": "869266d6dc51b146c98f442242b4225e745c263f31ba786b3dd4e19cfaaa9d36",
+      "native_api_version": "responses/v1",
+      "native_model": "azure-openai:responses-compatible",
+      "negative_fixture_coverage_count": 6,
+      "negative_fixture_hashes": {
+        "missing_required_header": "cb23c2007e58d0d1226c62028775d5dc6fbb6b3d5e55c02841b0b2092d3d530e",
+        "native_output_hash_mismatch": "6397a79cb8b906bf47b7193f50553107f7852a1977761d2a58c4d955b996149b",
+        "private_text_leak": "1a8b897b4c23e72e4aed0813901e3f050a507d2ba23c314f06fa4e3ca6fcfda1",
+        "stream_final_hash_drift": "0f8ee2a1f661d29bd4cc078fa7bde8e9775fb11e0410052c5fcb8ed584828b5f",
+        "unsupported_claim_footer": "fca87e8576a2428abba5b65baf687c2f403207d00e4a52d48600503f258fb6d3",
+        "unverified_citation_url": "ebe864fad0ce850e902a32654fe74c4f0d935de369f09eda46dfb0a631c70971"
+      },
+      "official_documentation_refs": [
+        "https://learn.microsoft.com/azure/ai-services/openai/how-to/responses"
+      ],
+      "positive_fixture_coverage_count": 9,
+      "positive_fixture_hashes": {
+        "citation_or_grounding": "df8a3780dc5255c62e1cf19c70c81d8d8e88103b9f9611af373e006106c45826",
+        "claim_support_footer": "b52f65799898b6dbb5c7a117e42c230aaa647d80d9527d6b82314761a9333107",
+        "fail_closed_errors": "44cc52020e5c3b48926df6c35a99f6a69f2d49ad12b6e3651dc3251c343bebf9",
+        "parametric_memory_fallback": "eecb2ccec72328ab44cae80c5423a89a2981f0d326b73df069c5d9483d533010",
+        "streaming_response": "08d28326056c2539bc9824654d3aa58dbfcc2257ef6453574e3060d1db3ef098",
+        "structured_proof_fields": "bede2ae44e38998704bb5b26109c86d5c1c850137ed1b3be2af42a5df6f49578",
+        "sync_response": "522a492d87f0cd4f221ae2ed53e8997a3255d6e68e6001e8395eb0080f83bb4f",
+        "tool_calling": "1af678e3c0bbb052d9d7c05c4da879ab24d2c8ad975c526096453d54abe262cf",
+        "url_health_binding": "4823e5cd201a82c129733c532d2fe472e729e6189cc51ad37cadcd1bbad162c4"
+      },
+      "provider_adapter_row_hash": "25308ab5279b151e6c2c2b1cafdb44b5d333fd53311f604bf9f187a040bf3548",
+      "provider_family": "azure_openai_responses",
+      "provider_id": "provider:azure-openai-responses",
+      "rdllm_artifacts_supported": [
+        "response_envelope",
+        "source_footer_delivery",
+        "citation_url_health",
+        "foundation_api_profile",
+        "composite_foundation_adapter",
+        "claim_source_attribution_report",
+        "parametric_memory_attribution_report"
+      ]
+    },
+    {
+      "adapter_row_hash_matches_composite": true,
+      "capabilities": {
+        "citation_or_grounding": true,
+        "claim_support_footer": true,
+        "fail_closed_errors": true,
+        "parametric_memory_fallback": true,
+        "streaming_response": true,
+        "structured_proof_fields": true,
+        "sync_response": true,
+        "tool_calling": true,
+        "url_health_binding": true
+      },
+      "capability_coverage_count": 9,
+      "certification_profile": "rdllm-provider-attribution-conformance/v1",
+      "conformance_vector_pack_hash": "",
+      "display_order": 10,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "missing_required_header": "block_display",
+        "native_output_hash_mismatch": "block_display",
+        "private_text_leak": "block_display",
+        "stream_final_hash_drift": "block_display",
+        "unsupported_claim_footer": "block_display",
+        "unverified_citation_url": "block_display"
+      },
+      "foundation_provider_conformance_row_hash": "50d35fbe50ee1514605ebfdf8cc02f3fdbb1cbd5f6b87fe6260d7b26b9897e3c",
+      "native_api_version": "chat-completions/v1",
+      "native_model": "openai-compatible:chat",
+      "negative_fixture_coverage_count": 6,
+      "negative_fixture_hashes": {
+        "missing_required_header": "7181d017554b884171f41ab4853e3db5d1b551518421f7edcc9682b679304824",
+        "native_output_hash_mismatch": "94d9bbdad94f33d4ec3d121dd335602c86b1ed9b64826ae1275fbecbb1dd48b6",
+        "private_text_leak": "5843c1f07cde328afbc87200455469f7052c4ebaae0bccf718e04d1726ac4d48",
+        "stream_final_hash_drift": "5cbf261c0c3259c2bbf0d054aab759de86762c886ca2329dbb5e114ff1ac82ea",
+        "unsupported_claim_footer": "515342adbbcd058e3362bafd8fa02e786dfa062f641512c88164af7a8db17a81",
+        "unverified_citation_url": "d8a6c25e761d13c734b78981913a82e05e97292d41a0c1d360bad9f40e4a84a4"
+      },
+      "official_documentation_refs": [
+        "https://platform.openai.com/docs/api-reference/chat"
+      ],
+      "positive_fixture_coverage_count": 9,
+      "positive_fixture_hashes": {
+        "citation_or_grounding": "8216e19fa3f975de630b0da9aa4f22dfe34965b4b723b921d92ea62568b4e98c",
+        "claim_support_footer": "e71a0d7730dad5d8312d5b9c15963e20d3ce216d56c8da562dada61bd5e3a5ee",
+        "fail_closed_errors": "d18f07a398713a0b5be9451a3afcc94664524373e8ed46144b503fc969927f45",
+        "parametric_memory_fallback": "1c3ac1fa31f60bd7d76c4c8ec764b8ebdf73555ace8b866a7fab46b2b8debd26",
+        "streaming_response": "81cb50b6ccd8b8609b2f02e195e0fe19b47a53b3b444bf26db964586adb4b314",
+        "structured_proof_fields": "7cfcf9019c5caa2a3d6b3598a8a769c19fa084b769fd9cc30262b38c01bf4252",
+        "sync_response": "916bbdaeeab70e9cef77e6cee9e77db97b4f994b44b3a4c44b9fe6dba49babdc",
+        "tool_calling": "4e181d7fcc4a172a0ba9e72693debc7ecb82bac0b80cb4202e6429bf9c5bd838",
+        "url_health_binding": "c15e3af836f7a875e0d862c5eb9eacf4fff9a819f96f8fc53e077f1babd8d5ca"
+      },
+      "provider_adapter_row_hash": "b7395858c1dc64d3cbd4835b17d83475d681808e87f79562be09be54c432d685",
+      "provider_family": "openai_compatible_chat",
+      "provider_id": "provider:openai-compatible-chat",
+      "rdllm_artifacts_supported": [
+        "response_envelope",
+        "source_footer_delivery",
+        "citation_url_health",
+        "foundation_api_profile",
+        "composite_foundation_adapter",
+        "claim_source_attribution_report",
+        "parametric_memory_attribution_report"
+      ]
+    }
+  ],
+  "schemas": {
+    "citation_url_health": "docs/schemas/citation_url_health.schema.json",
+    "composite_foundation_adapter": "docs/schemas/composite_foundation_adapter.schema.json",
+    "foundation_api_profile": "docs/schemas/foundation_attribution_profile.schema.json",
+    "foundation_provider_conformance": "docs/schemas/foundation_provider_conformance.schema.json",
+    "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "1d36fccb76ce87b756e9e8e360dd18d1747ac6f8f0599d5e533c9c7765971bfb"
+  },
+  "summary": {
+    "covered_provider_family_count": 10,
+    "fail_closed_conformance_supported": true,
+    "failed_check_count": 0,
+    "grounded_footer_attribution_supported": true,
+    "hash_only_conformance_fixtures_supported": true,
+    "minimum_input_level": "RDLLM-L125",
+    "parametric_memory_fallback_supported": true,
+    "privacy_preserved": true,
+    "provider_conformance_row_count": 10,
+    "required_capability_count": 9,
+    "required_negative_fixture_count": 6,
+    "required_provider_family_count": 10,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L126",
+    "universal_provider_conformance_supported": true
+  }
+}

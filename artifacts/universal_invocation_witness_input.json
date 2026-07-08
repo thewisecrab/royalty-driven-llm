@@ -1,0 +1,258 @@
+{
+  "independent_witness_events": [
+    {
+      "egress_event_id": "egress:artifact:l135",
+      "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+      "independent": true,
+      "invocation_id": "invoke:demo:l133",
+      "meter_event_id": "meter:demo:l134",
+      "observed_at": "2026-06-02T00:00:02Z",
+      "organization_id": "org:artifact:a",
+      "provider_receipt_id": "provider-receipt:artifact:l135",
+      "replay_verdict": "accepted",
+      "request_id": "req:demo:l133",
+      "saw_egress_event": true,
+      "saw_l134_coverage": true,
+      "saw_provider_receipt": true,
+      "trust_tier": "independent",
+      "witness_event_id": "witness:artifact:l135:a",
+      "witness_id": "witness:artifact:a",
+      "witness_secret": "witness-secret:artifact:a"
+    },
+    {
+      "egress_event_id": "egress:artifact:l135",
+      "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+      "independent": true,
+      "invocation_id": "invoke:demo:l133",
+      "meter_event_id": "meter:demo:l134",
+      "observed_at": "2026-06-02T00:00:02Z",
+      "organization_id": "org:artifact:b",
+      "provider_receipt_id": "provider-receipt:artifact:l135",
+      "replay_verdict": "accepted",
+      "request_id": "req:demo:l133",
+      "saw_egress_event": true,
+      "saw_l134_coverage": true,
+      "saw_provider_receipt": true,
+      "trust_tier": "independent",
+      "witness_event_id": "witness:artifact:l135:b",
+      "witness_id": "witness:artifact:b",
+      "witness_secret": "witness-secret:artifact:b"
+    }
+  ],
+  "network_egress_events": [
+    {
+      "allowed_by_gateway": true,
+      "destination_endpoint_hash": "f8186a0d30d7b86ca39de16282055786b62340f80c88db8a717c0228eacb0e42",
+      "egress_event_id": "egress:artifact:l135",
+      "egress_policy_id": "egress-policy:artifact:l135",
+      "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+      "invocation_id": "invoke:demo:l133",
+      "native_model": "openai:responses-compatible",
+      "observed_at": "2026-06-02T00:00:01Z",
+      "observed_by_independent_collector": true,
+      "observer_id": "observer:artifact:l135",
+      "provider_family": "openai_responses",
+      "request_id": "req:demo:l133",
+      "route_id": "route:openai_responses"
+    }
+  ],
+  "private_strings": [
+    "private artifact l135 raw prompt"
+  ],
+  "provider_signed_receipts": [
+    {
+      "billed_units": "1",
+      "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+      "invocation_id": "invoke:demo:l133",
+      "issued_at": "2026-06-02T00:00:00Z",
+      "meter_event_id": "meter:demo:l134",
+      "native_model": "openai:responses-compatible",
+      "provider_account_hash": "e0e0b2617e93bffe5b5b43accc66d0c838cabcdb4c15524306bc1479a09bbff6",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "provider_receipt_id": "provider-receipt:artifact:l135",
+      "provider_secret": "provider-secret:artifact:l135",
+      "provider_usage_hash": "071e44de106f116ba2276e63631c2989e6251d3f4cf344495b3386ee90c26845",
+      "request_id": "req:demo:l133",
+      "route_id": "route:openai_responses",
+      "usage_units": "1"
+    }
+  ],
+  "universal_invocation_coverage": {
+    "checks": {
+      "creator_pool_not_missing": true,
+      "every_guard_has_metered_call": true,
+      "every_metered_call_has_guard": true,
+      "gateway_log_present": true,
+      "gross_revenue_conserved": true,
+      "guard_hashes_reproducible": true,
+      "guards_ready_l133": true,
+      "invoice_rows_match_meter_log": true,
+      "invoice_rows_present": true,
+      "meter_gateway_guard_fields_match": true,
+      "meter_log_present": true,
+      "one_gateway_event_per_invocation": true,
+      "one_guard_per_invocation": true,
+      "one_meter_event_per_invocation": true,
+      "private_text_not_disclosed": true,
+      "required_guard_artifacts_present": true,
+      "response_envelope_bound_for_all_calls": true,
+      "source_footer_required_for_all_calls": true
+    },
+    "commitments": {
+      "gateway_log_root": "b66ce9cf38ee20c8dc423ea0408976202a53cdb274b4c68f7bee81cd58170f90",
+      "guard_binding_root": "543ea4f4f634236c79d11971562488acead4e21ed57463f0739cd455f90bce00",
+      "invoice_row_root": "1861b785ab609bcf665c9e45922107e2a0d047f72dbea7d69e2a09752638bdd8",
+      "meter_log_root": "722fe100af1e8808b55a6fd430e8316af2c406ebb585fc534683932114e3665b",
+      "reconciliation_root": "d4729038afe5ea374792acea1cefc12f8a42554957c042debbbd10701394c5d2"
+    },
+    "coverage_decision": {
+      "coverage_complete": true,
+      "decision": "certify_coverage",
+      "failed_checks": [],
+      "failure_modes": [],
+      "safe_call_policy": "every_native_provider_call_requires_one_l133_guard"
+    },
+    "coverage_policy": {
+      "minimum_input_level": "RDLLM-L133",
+      "on_duplicate_guard": "block_deployment_coverage",
+      "on_meter_gateway_drift": "block_deployment_coverage",
+      "on_private_text_leak": "block_publication",
+      "on_revenue_mismatch": "block_settlement_release",
+      "on_unguarded_native_call": "block_deployment_coverage",
+      "profile": "rdllm-universal-invocation-coverage-policy/v1",
+      "require_gateway_log": true,
+      "require_invoice_rows": true,
+      "require_response_envelope_for_all_calls": true,
+      "require_source_footer_for_all_calls": true,
+      "strict_guard_to_meter_reconciliation": true,
+      "strict_meter_to_guard_reconciliation": true,
+      "target_certification_level": "RDLLM-L134"
+    },
+    "coverage_version": "rdllm-universal-invocation-coverage/v1",
+    "created_at": "2026-06-01T21:34:16Z",
+    "gateway_rows": [
+      {
+        "gateway_event_id": "gateway:demo:l134",
+        "gateway_hash": "1df6d65a61f860ca2652bbf69a26174f9caf11e734a21f9699b11ac1bf255cd6",
+        "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+        "invocation_id": "invoke:demo:l133",
+        "native_provider_call_allowed": true,
+        "preflight_authorized": true,
+        "request_id": "req:demo:l133",
+        "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+        "source_footer_required": true
+      }
+    ],
+    "guard_bindings": [
+      {
+        "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+        "hash_reproducible": true,
+        "invocation_id": "invoke:demo:l133",
+        "native_model": "openai:responses-compatible",
+        "native_provider_call_allowed": true,
+        "preflight_authorized": true,
+        "provider_family": "openai_responses",
+        "request_id": "req:demo:l133",
+        "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+        "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+        "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "route_id": "route:openai_responses",
+        "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+        "source_footer_required": true,
+        "status": "ready",
+        "target_level": "RDLLM-L133"
+      }
+    ],
+    "invoice_rows": [
+      {
+        "billed_units": "1",
+        "creator_pool": "0.550000",
+        "gross_revenue": "1.000000",
+        "invocation_id": "invoke:demo:l133",
+        "invoice_hash": "f460fb476843b200637926572fccff61812d5171956cf0e48b53fff75802741f",
+        "invoice_row_id": "invoice:demo:l134",
+        "meter_event_id": "meter:demo:l134",
+        "provider_family": "openai_responses"
+      }
+    ],
+    "issuer": "rdllm-local-demo",
+    "meter_rows": [
+      {
+        "billed_units": "1",
+        "creator_pool": "0.550000",
+        "gross_revenue": "1.000000",
+        "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+        "invocation_id": "invoke:demo:l133",
+        "meter_event_id": "meter:demo:l134",
+        "meter_hash": "653c7f2d92a741db9390763d9ad89ed200ced8f260fa28d484bab09592924c99",
+        "native_model": "openai:responses-compatible",
+        "native_provider_call_observed": "true",
+        "provider_family": "openai_responses",
+        "request_id": "req:demo:l133",
+        "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+        "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+        "route_id": "route:openai_responses"
+      }
+    ],
+    "privacy": {
+      "meter_gateway_invoice_rows_are_hash_and_id_only": true,
+      "private_strings_absent": true,
+      "private_text_fields_excluded": true,
+      "raw_prompts_outputs_sources_excluded": true
+    },
+    "reconciliation": {
+      "creator_pool_total": "0.550000",
+      "duplicate_gateway_event_ids": [],
+      "duplicate_gateway_invocations": [],
+      "duplicate_guard_invocations": [],
+      "duplicate_invoice_meter_ids": [],
+      "duplicate_invoice_row_ids": [],
+      "duplicate_meter_event_ids": [],
+      "duplicate_meter_invocations": [],
+      "field_mismatches": [],
+      "invoice_gross_revenue_total": "1.000000",
+      "matched_invocations": [
+        {
+          "creator_pool": "0.550000",
+          "gateway_event_id": "gateway:demo:l134",
+          "gross_revenue": "1.000000",
+          "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+          "invocation_id": "invoke:demo:l133",
+          "invoice_row_id": "invoice:demo:l134",
+          "meter_event_id": "meter:demo:l134"
+        }
+      ],
+      "meter_gross_revenue_total": "1.000000",
+      "missing_gateway_invocations": [],
+      "missing_invoice_meter_ids": [],
+      "orphan_invoice_meter_ids": [],
+      "unmatched_guard_invocations": [],
+      "unmatched_meter_invocations": []
+    },
+    "schemas": {
+      "universal_invocation_coverage": "docs/schemas/universal_invocation_coverage.schema.json",
+      "universal_invocation_guard": "docs/schemas/universal_invocation_guard.schema.json"
+    },
+    "signature": "d2a6e792840b9cd2d2a5cde6f9f9b7e638eb868e8140d17f647f64a932af66e9",
+    "summary": {
+      "coverage_complete": true,
+      "creator_pool_total": "0.550000",
+      "duplicate_guard_count": 0,
+      "failed_check_count": 0,
+      "failure_mode_count": 0,
+      "field_mismatch_count": 0,
+      "gross_revenue_total": "1.000000",
+      "guarded_call_count": 1,
+      "matched_call_count": 1,
+      "metered_call_count": 1,
+      "minimum_input_level": "RDLLM-L133",
+      "orphan_guard_count": 0,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L134",
+      "uncovered_call_count": 0
+    },
+    "universal_invocation_coverage_hash": "1834caa22034427625bbdaec3bbda5dff28d22f92284e3f51f16aed673d00193"
+  }
+}

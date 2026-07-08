@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/creator_attribution_audit_federation_transparency.schema.json",
+  "title": "RDLLM Creator Attribution Audit Federation Transparency Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "transparency_log_bindings",
+    "federation_subject_rows",
+    "log_snapshot_rows",
+    "append_only_consistency_rows",
+    "split_view_conflict_rows",
+    "required_subject_rows",
+    "checks",
+    "commitments",
+    "schemas",
+    "summary",
+    "privacy",
+    "creator_attribution_audit_federation_transparency_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-creator-attribution-audit-federation-transparency/v1"
+    },
+    "issuer": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "requires_federation_report_inclusion",
+        "requires_participant_index_inclusion",
+        "requires_append_only_consistency",
+        "requires_split_view_absence",
+        "requires_query_equivocation_absence"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-creator-audit-federation-transparency-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L112" },
+        "minimum_input_level": { "const": "RDLLM-L111" },
+        "requires_federation_report_inclusion": { "const": true },
+        "requires_participant_index_inclusion": { "const": true },
+        "requires_append_only_consistency": { "const": true },
+        "requires_split_view_absence": { "const": true },
+        "requires_query_equivocation_absence": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "creator_attribution_audit_federation_hash",
+        "creator_attribution_audit_federation_payload_hash",
+        "creator_attribution_audit_federation_hash_reproducible",
+        "query_hash",
+        "provider_set_hash"
+      ],
+      "additionalProperties": true
+    },
+    "transparency_log_bindings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "federation_subject_rows": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "log_snapshot_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "append_only_consistency_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "split_view_conflict_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "required_subject_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "creator_audit_federation_shape_valid",
+        "creator_audit_federation_hash_reproducible",
+        "creator_audit_federation_ready",
+        "creator_audit_federation_target_l111",
+        "creator_audit_federation_has_no_identity_conflicts",
+        "required_subjects_declared",
+        "transparency_logs_present",
+        "transparency_log_versions_supported",
+        "transparency_tree_sizes_match",
+        "transparency_roots_reproducible",
+        "transparency_entries_sequential",
+        "transparency_entry_hashes_reproducible",
+        "transparency_entries_have_required_hashes",
+        "append_only_prefix_consistency",
+        "split_view_and_query_equivocation_absent",
+        "required_subjects_in_latest_log",
+        "required_subject_inclusion_proofs_valid",
+        "required_subject_payload_hashes_match",
+        "required_subject_entry_types_match",
+        "public_report_has_no_private_field_names"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "federation_subject_root",
+        "log_snapshot_root",
+        "append_only_consistency_root",
+        "split_view_conflict_root",
+        "required_subject_root",
+        "transparency_log_binding_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "creator_attribution_audit_federation_transparency",
+        "creator_attribution_audit_federation",
+        "creator_attribution_audit_index"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "creator_audit_federation_transparency_included",
+        "subject_count",
+        "required_subject_count",
+        "missing_subject_count",
+        "transparency_log_count",
+        "latest_tree_size",
+        "append_only_violation_count",
+        "split_view_conflict_count"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L112" },
+        "minimum_input_level": { "const": "RDLLM-L111" },
+        "creator_audit_federation_transparency_included": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "query_terms_disclosed",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "notice_text_disclosed",
+        "license_text_disclosed",
+        "stores_hashes_log_roots_inclusion_proofs_and_counts_not_text"
+      ],
+      "additionalProperties": true
+    },
+    "creator_attribution_audit_federation_transparency_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "hashRow": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

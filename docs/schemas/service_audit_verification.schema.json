@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/service_audit_verification.schema.json",
+  "title": "RDLLM Service Audit Verification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "errors",
+    "entry_count",
+    "ready_entry_count",
+    "blocked_entry_count",
+    "audit_error_total",
+    "source_count_total",
+    "first_entry_hash",
+    "last_entry_hash",
+    "first_event_hash",
+    "last_event_hash",
+    "first_source_footer_hash",
+    "last_source_footer_hash",
+    "first_display_hash",
+    "last_display_hash"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-service-audit-verification/v1"
+    },
+    "status": {
+      "enum": ["passed", "failed"]
+    },
+    "errors": {
+      "$ref": "#/$defs/error_array"
+    },
+    "entry_count": { "type": "integer", "minimum": 0 },
+    "ready_entry_count": { "type": "integer", "minimum": 0 },
+    "blocked_entry_count": { "type": "integer", "minimum": 0 },
+    "audit_error_total": { "type": "integer", "minimum": 0 },
+    "source_count_total": { "type": "integer", "minimum": 0 },
+    "first_entry_hash": { "$ref": "#/$defs/hash64_or_empty" },
+    "last_entry_hash": { "$ref": "#/$defs/hash64_or_empty" },
+    "first_event_hash": { "$ref": "#/$defs/hash64_or_empty" },
+    "last_event_hash": { "$ref": "#/$defs/hash64_or_empty" },
+    "first_source_footer_hash": { "$ref": "#/$defs/hash64_or_empty" },
+    "last_source_footer_hash": { "$ref": "#/$defs/hash64_or_empty" },
+    "first_display_hash": { "$ref": "#/$defs/hash64_or_empty" },
+    "last_display_hash": { "$ref": "#/$defs/hash64_or_empty" }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "passed" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "maxItems": 0 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "failed" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "minItems": 1 }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "error_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "hash64_or_empty": {
+      "type": "string",
+      "pattern": "^$|^[0-9a-f]{64}$"
+    }
+  }
+}

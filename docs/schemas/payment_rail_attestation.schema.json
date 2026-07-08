@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/payment_rail_attestation.schema.json",
+  "title": "RDLLM Payment Rail Attestation",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "rail_policy",
+    "required_processor_rows",
+    "processor_attestation_rows",
+    "batch_coverage_rows",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "schemas",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-payment-rail-attestation/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "rail_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "processor_roles_allowed",
+        "external_processor_signature_required",
+        "trust_registry_required",
+        "raw_payment_records_forbidden"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L78" },
+        "minimum_input_level": { "const": "RDLLM-L77" }
+      },
+      "additionalProperties": true
+    },
+    "required_processor_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "processor_id",
+          "registered",
+          "entry_hash",
+          "required_processor_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "processor_attestation_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "attestation_id",
+          "processor_id",
+          "processor_role",
+          "record_type",
+          "settlement_batch_hash",
+          "payment_execution_report_hash",
+          "registered_processor",
+          "processor_key_active",
+          "processor_role_allowed",
+          "signature_algorithm",
+          "signature_issuer",
+          "signature_present",
+          "signature_valid",
+          "attestation_hash_reproducible",
+          "payment_execution_report_hash_match",
+          "expected_batch_present",
+          "record_hashes_match",
+          "record_row_hashes_match",
+          "record_count_match",
+          "currency_match",
+          "settled_total_match",
+          "settlement_status_match",
+          "raw_processor_records_disclosed",
+          "attestation_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "batch_coverage_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "processor_id",
+          "settlement_batch_hash",
+          "record_type",
+          "processor_record_count",
+          "processor_record_root",
+          "signed_processor_attestation_present",
+          "coverage_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "payment_execution_report_ready",
+        "payment_execution_report_hash_reproducible",
+        "trust_registry_ready",
+        "trust_registry_hash_reproducible",
+        "all_required_processors_registered",
+        "all_processor_attestations_registered",
+        "all_processor_roles_allowed",
+        "all_processor_attestation_hashes_reproducible",
+        "all_processor_signatures_valid",
+        "all_processor_attestations_bind_payment_execution_report",
+        "all_processor_record_hashes_match_execution_report",
+        "all_processor_totals_match_execution_report",
+        "all_execution_batches_have_signed_processor_attestations",
+        "no_duplicate_or_unmatched_execution_records",
+        "private_payment_rail_fields_absent"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "payment_execution_report_hash",
+        "trust_registry_hash",
+        "required_processor_root",
+        "processor_attestation_root",
+        "batch_coverage_root",
+        "processor_attestation_input_root"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "required_processor_count",
+        "processor_attestation_count",
+        "covered_batch_count",
+        "required_batch_count",
+        "signed_external_payment_rail_attested"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L78" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "raw_processor_records_disclosed",
+        "raw_payout_accounts_disclosed",
+        "raw_customer_or_tax_records_disclosed",
+        "uses_processor_record_hashes",
+        "uses_payment_rail_signatures"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "payment_rail_attestation",
+        "payment_execution_report",
+        "trust_registry"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

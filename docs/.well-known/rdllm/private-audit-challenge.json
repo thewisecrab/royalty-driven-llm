@@ -1,0 +1,146 @@
+{
+  "audit_challenge": {
+    "auditor_id": "auditor:example",
+    "challenge_binding_hash": "57257751989c7dfd1553a19a0adc3ed8dc01fb8d57f0ad94555ef7497dfe98ee",
+    "challenge_nonce": "challenge:example:2026-05-29",
+    "requested_path_root": "47e4e7d73703cfb61c7b067da5d369104ea21fe7d3e9d948f7d2c312f6c799a0",
+    "requested_paths": [
+      "/economics/shares/0/payout",
+      "/grounding/claims/0/evidence_text",
+      "/grounding/source_accesses/0/access_id",
+      "/rights/decisions/0/allowed"
+    ]
+  },
+  "audit_version": "rdllm-private-audit-challenge/v1",
+  "challenge_rows": [
+    {
+      "audit_row_hash": "68af1f3ea4881c2c91efdc3cd3fd00fd569cf8d34971a836175179142d39596a",
+      "category": "royalty_economics",
+      "checks": {
+        "commitment_nonce_bound": true,
+        "package_leaf_matches_private_leaf": true,
+        "path_present_in_package": true,
+        "path_present_in_private_receipt": true,
+        "private_value_disclosed_in_report": false
+      },
+      "disclosure_status": "redacted",
+      "leaf_hash": "36c27cc381a1d3dc7e3efcbcac961d67a695b395d985ff1eb26a55d4a7ec5c70",
+      "opening_commitment": "2d7c420e769eeaf4dd006824933ec2ce446ee1bbf4c4abfd48567a431b4f5bbd",
+      "path": "/economics/shares/0/payout",
+      "private_path": true,
+      "salt_hash": "5d05a4a3321460511f7852f38db364f7b94122259be7d37954b9ee9b08e5f8fc",
+      "value_hash": "f138257f0a73cf65a1aaaa317294ee8bbd1758e21096c8edb5955d73d4814976"
+    },
+    {
+      "audit_row_hash": "da0269d62758751176f26a26910e119b40a394c84e3c8fca9b63f8034430ebef",
+      "category": "claim_private_text",
+      "checks": {
+        "commitment_nonce_bound": true,
+        "package_leaf_matches_private_leaf": true,
+        "path_present_in_package": true,
+        "path_present_in_private_receipt": true,
+        "private_value_disclosed_in_report": false
+      },
+      "disclosure_status": "redacted",
+      "leaf_hash": "96db66930750a18f3b6c07b40a736d31ffbcec84b92cfe02a13bd69ae88f8dae",
+      "opening_commitment": "fe1df15432d42b80f5e2929c64f25da5ea94ea908c8f3174208edbc62686610f",
+      "path": "/grounding/claims/0/evidence_text",
+      "private_path": true,
+      "salt_hash": "d6a471c3fd286cdc9fc65f906968373eb9e8cbf993f693fb854b0f59244df3ad",
+      "value_hash": "57dbec4ac81ca74dfb960358a41e326b50ec207647f156b53bf1a82fdc23fd01"
+    },
+    {
+      "audit_row_hash": "463d2cda0e8dcc969e9fdf90248bf4ad2a02a73a586b943c3dbc7486f87024d6",
+      "category": "source_access_telemetry",
+      "checks": {
+        "commitment_nonce_bound": true,
+        "package_leaf_matches_private_leaf": true,
+        "path_present_in_package": true,
+        "path_present_in_private_receipt": true,
+        "private_value_disclosed_in_report": false
+      },
+      "disclosure_status": "redacted",
+      "leaf_hash": "a6dcc8e3ffe4a0e273c698ddc0ecb33461c1f9e162aeb7967217d631c8270518",
+      "opening_commitment": "845d907f9c119c8bde356ed1777918f2db614dc96239e88b04f152a01f7c5842",
+      "path": "/grounding/source_accesses/0/access_id",
+      "private_path": true,
+      "salt_hash": "fde102fc830915261d9aff6f542b6fdc3950baabdf34e723fc147a60521a0659",
+      "value_hash": "2cc2ef9b501a2f3f1ee5a4c6dda39715b01eb74fd6dc84ed7a6407beddedc242"
+    },
+    {
+      "audit_row_hash": "31cf0953bcfe191ad40562ca5c3bb95dc0472fc123f9f06e469c4a9ce3d321ce",
+      "category": "rights_decision",
+      "checks": {
+        "commitment_nonce_bound": true,
+        "package_leaf_matches_private_leaf": true,
+        "path_present_in_package": true,
+        "path_present_in_private_receipt": true,
+        "private_value_disclosed_in_report": false
+      },
+      "disclosure_status": "redacted",
+      "leaf_hash": "490c93f9efcddedb21ba523de41c892a560d00fe8e0db68584a01e896154cce7",
+      "opening_commitment": "b1c2820bcc95769ad533ec1c915edc26f1e876b11054032e0c56bf07170ac5df",
+      "path": "/rights/decisions/0/allowed",
+      "private_path": true,
+      "salt_hash": "71fd6efdeccd902c89fa5e2c12c1b0456e521ef619795c05277337389fe793a6",
+      "value_hash": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+    }
+  ],
+  "commitments": {
+    "challenge_row_root": "5b6673b6278615911beabce50d888d1f0e791bbb4837dd4383b65dc474052d63",
+    "package_hash": "36ea54f3910042a87a4ede3487e00257c6b571aa8f5385a4397e68cdb62060f4",
+    "payload_disclosure_root": "083c14953a4fbdf37e7a0227a3f5cfc00885ba7b37302640b68b3748b3ea9b12",
+    "receipt_hash": "024b2212edefcf8851af7d7e2e6269ea813df0cb2b3aa56e1f499897aae07771",
+    "requested_path_root": "47e4e7d73703cfb61c7b067da5d369104ea21fe7d3e9d948f7d2c312f6c799a0"
+  },
+  "created_at": "2026-05-30T10:42:45Z",
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "auditor_nonce_required": true,
+    "paths_named_but_values_hidden": true,
+    "private_answer_text_disclosed": false,
+    "private_economics_disclosed": false,
+    "private_payout_accounts_disclosed": false,
+    "private_prompt_text_disclosed": false,
+    "private_salts_disclosed": false,
+    "private_source_text_disclosed": false,
+    "private_values_disclosed": false
+  },
+  "report_hash": "51491b3f6787efa58dd9c01e2c95091a644c6a652bbcbf03a9e0ae226b75cf85",
+  "schemas": {
+    "attribution_receipt": "docs/schemas/attribution_receipt.schema.json",
+    "private_audit_challenge": "docs/schemas/private_audit_challenge.schema.json",
+    "selective_disclosure_package": "docs/schemas/selective_disclosure_package.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "68cf4bc2b0c2cf138e1c24e535e12964f821a1ee077617b507375706d62ba490"
+  },
+  "subject": {
+    "payload_disclosure_root": "083c14953a4fbdf37e7a0227a3f5cfc00885ba7b37302640b68b3748b3ea9b12",
+    "payload_hash": "024b2212edefcf8851af7d7e2e6269ea813df0cb2b3aa56e1f499897aae07771",
+    "public_receipt_hash": "e8f79eee0db590b2b2b2ed16086af0b7dd812f72dcb6398514357dc43e7d29d4",
+    "receipt_hash": "024b2212edefcf8851af7d7e2e6269ea813df0cb2b3aa56e1f499897aae07771",
+    "selective_disclosure_package_hash": "36ea54f3910042a87a4ede3487e00257c6b571aa8f5385a4397e68cdb62060f4"
+  },
+  "summary": {
+    "disclosed_path_count": 0,
+    "missing_path_count": 0,
+    "private_audit_supported": true,
+    "public_report_discloses_only_hashes_categories_and_status": true,
+    "redacted_path_count": 4,
+    "requested_path_count": 4,
+    "status": "verified"
+  },
+  "verification": {
+    "all_opening_commitments_nonce_bound": true,
+    "all_package_leaves_match_private_receipt": true,
+    "all_requested_paths_committed": true,
+    "all_requested_paths_opened_from_private_receipt": true,
+    "challenge_rows_hash_reproducible": true,
+    "no_private_values_disclosed": true,
+    "private_receipt_opened_by_authorized_verifier": true,
+    "selective_disclosure_package_verified": true
+  }
+}

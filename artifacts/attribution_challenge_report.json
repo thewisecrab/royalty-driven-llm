@@ -1,0 +1,69 @@
+{
+  "challenge_id": "chl_3a5a72cc6d2a2176",
+  "challenge_version": "rdllm-attribution-challenge/v1",
+  "claim": {
+    "accept_threshold": 0.2,
+    "reason": "missing_attribution",
+    "submitted_content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f"
+  },
+  "claimant": {
+    "chunk_id": "arjun-provenance-ledger:c1",
+    "claimant_id": "arjun",
+    "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+    "creator_id": "arjun",
+    "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+    "title": "Provenance Ledgers for AI Outputs",
+    "work_id": "arjun-provenance-ledger"
+  },
+  "commitments": {
+    "challenged_content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+    "claim_support_root": "5405f1c9f37f039cf49a48a2705b45fc8c5f20e9603c43c8c682f9105b302111",
+    "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+    "share_root": "dad60e231e4b0b78ecb711f51a332f42d8cf80d8d7e4f15afa8a2eded29dadd7",
+    "source_access_root": "9a585e20f993e8459f624551c8530f197912d3a7b79b2fc695962d0c19001d40",
+    "source_reference_root": "d259ae4a9a16ee41ccf8a5a46822b255e1a12c3ced83d77d5806dc31b9115a91",
+    "statement_hash": "59e6ce3e465c2192b9816828919d267dab5d9384ca9fa4313cb1ef2b8eb43030"
+  },
+  "created_at": "2026-05-30T12:34:42Z",
+  "evaluation": {
+    "already_accessed": true,
+    "already_credited": true,
+    "already_paid": true,
+    "already_visible": true,
+    "exact_score": 0.57446809,
+    "issues": [],
+    "licensed_for_generation": true,
+    "longest_sequence_tokens": 27,
+    "matched_text_hash": "3ffb9009179a1678190afaff564a002d9dbbb646b295fc24a0d62dab013e0f5b",
+    "ngram_score": 0.53488372,
+    "score": 0.9,
+    "verdict": "already_credited"
+  },
+  "event": {
+    "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+    "event_id": "evt_1ed43e106d466249",
+    "statement_hash": "59e6ce3e465c2192b9816828919d267dab5d9384ca9fa4313cb1ef2b8eb43030"
+  },
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "answer_disclosed": false,
+    "matched_text_disclosed": false,
+    "matched_text_hash_only": true,
+    "prompt_disclosed": false,
+    "source_text_disclosed": false
+  },
+  "remedy": {
+    "account": "",
+    "adjustment_amount": "0.000000",
+    "adjustment_basis": "creator_pool_times_match_score",
+    "does_not_rewrite_event": true,
+    "original_creator_pool": "0.550000",
+    "status": "no_action"
+  },
+  "report_hash": "4549e118d4867b034cd419bdd21dba247408472432ab7f06bed4cc2502084c9c",
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "e4161df7555821b486f8433e1bcb004bc2f1baab6ca816b10a768b7e8bf6ca70"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "commitments": {
+    "match_root": "55fa1e103978cd97107fb9bafcc8707b31b9af38599e4cfc9bf08f0ed54ad374",
+    "media_corpus_root": "687631a14dbb9b90f5d59a045322a4a5c6421b708449253b575a56109ed6ff56",
+    "share_root": "5757ff4d5686a5eaaf7fe9a0f93cfa9cca42d38b2bd58f1a293edff647adac99",
+    "submitted_media_root": "fcf924c36436df35beabd26e666453dfad33b7337bf4d0dc0822a47ed8565c02"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "economics": {
+    "creator_pool": "0.550000",
+    "escrow_total": "0.000000",
+    "gross_revenue": "1.000000",
+    "item_pool": "0.550000",
+    "payout_total": "0.550000"
+  },
+  "issuer": "rdllm-local-demo",
+  "matches": [
+    {
+      "decision": {
+        "accept_threshold": 0.65,
+        "best_asset_id": "media:maya-style-card",
+        "best_creator_id": "maya",
+        "decision_score": 0.865625,
+        "escrow_payout": "0.000000",
+        "payout": "0.550000",
+        "status": "matched"
+      },
+      "descriptor_hash": "02f92f007ce0b5da9061328734f1cbd3fda2e2f905c3df4b0f1f0a0fa81e4dfd",
+      "input_hash": "90e3ae11f428d40708488c30f415cef46b99f51c96d906c27d2237b31c241566",
+      "input_id": "media-output:maya-style-card",
+      "match_hash": "302e9e9b3a21dbedb2b267ec81c04a1446adb6d9a68cdc3fc91b0e17646edf8a",
+      "media_type": "image",
+      "perceptual_hash_commitment": "a9b1c38f09b59d84560ade7667a0e23e4fb5ecdfe7df46500df8ab734c0d3eb6",
+      "ranked_candidates": [
+        {
+          "asset_id": "media:maya-style-card",
+          "content_hash": "e6bc296e35b3f4c88c5f0a4dc0e61627c25ebf630767815c58d0c68a67258b83",
+          "creator_id": "maya",
+          "creator_name": "Maya",
+          "decision_score": 0.865625,
+          "descriptor_similarity": 1.0,
+          "exact_hash_match": false,
+          "media_type": "image",
+          "perceptual_similarity": 0.9375,
+          "rank": 1,
+          "source_uri": "registered://media/maya-style-card",
+          "title": "Maya Style Card"
+        }
+      ]
+    }
+  ],
+  "policy": {
+    "accept_threshold": 0.65,
+    "creator_pool_rate": "0.55",
+    "matching_signals": [
+      "content_hash",
+      "perceptual_hash",
+      "descriptor_similarity"
+    ],
+    "profile": "rdllm-media-attribution-policy/v1",
+    "supported_media_types": [
+      "image",
+      "audio",
+      "video",
+      "3d",
+      "text"
+    ]
+  },
+  "privacy": {
+    "perceptual_hash_disclosed": false,
+    "raw_descriptor_disclosed": false,
+    "raw_media_disclosed": false,
+    "report_uses_hashes_scores_and_asset_ids": true
+  },
+  "report_hash": "348172e384e2b30e4f418ecfc0cfd5d93e95da4ede6693d28856b6dc4c542493",
+  "report_version": "rdllm-media-attribution/v1",
+  "royalty_shares": [
+    {
+      "asset_id": "media:maya-style-card",
+      "contribution_weight": 1.0,
+      "creator_id": "maya",
+      "input_ids": [
+        "media-output:maya-style-card"
+      ],
+      "payout": "0.550000"
+    }
+  ],
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "76f49883ef54016060205b8912cebf1385786645fda5d94eddfdacdea80cde72"
+  },
+  "summary": {
+    "asset_count": 1,
+    "creator_count": 1,
+    "creator_pool_conserved": true,
+    "escrow_count": 0,
+    "input_count": 1,
+    "matched_count": 1,
+    "media_type_counts": {
+      "image": 1
+    },
+    "multimodal_source_attribution": true,
+    "status": "ready"
+  }
+}

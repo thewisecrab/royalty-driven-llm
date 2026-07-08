@@ -1,0 +1,239 @@
+{
+  "attestation_hash": "a3ad01f575c9bf4064f8b1b6df10841eb94e7d69e20c54b4dfd98794972c3d3c",
+  "attestation_version": "rdllm-third-party-audit-attestation/v1",
+  "audit_scope": {
+    "audit_period_end": "",
+    "audit_period_start": "",
+    "auditor_id": "auditor:rdllm-reference",
+    "auditor_must_be_independent_of_provider": true,
+    "auditor_name": "RDLLM Reference Auditor",
+    "minimum_input_level": "RDLLM-L44",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05",
+    "profile": "rdllm-independent-audit/v1",
+    "provider_id": "provider:rdllm-reference",
+    "provider_self_attestation_only": false,
+    "target_certification_level": "RDLLM-L45",
+    "verifier_id": "rdllm-reference-verifier"
+  },
+  "audited_artifacts": [
+    {
+      "artifact_row_hash": "145b034ddb2dbbd3641b26c6c3d8782936e007ca1f175355bf9fcc6a6e8f288d",
+      "artifact_type": "rdllm-assurance-bundle/v1",
+      "declared_hash": "0b3ef2d4bee5e797d907f02588283e64bf7c0c27a1f2b8840fa761d56fed910d",
+      "hash_reproducible": true,
+      "name": "assurance_bundle",
+      "payload_hash": "e8d93e580546e04f694f3d0ba9e2ca582ce85a03c6d747921c4f6668ff5a42d1"
+    },
+    {
+      "artifact_row_hash": "f2bf774b9a2d82359d83c531d04bff3149525693b7d5a2d17338d7334a07dbc2",
+      "artifact_type": "rdllm-certification-attestation/v1",
+      "declared_hash": "fb5e0f6fc9101992e5936f275d0c38a201712adca0d1d087db9c3457994627cd",
+      "hash_reproducible": true,
+      "name": "certification_attestation",
+      "payload_hash": "1b4a14f06ed01be7ac97e4e00b38b199cf1867d26e9135754f30a1c2cc82b7e6"
+    },
+    {
+      "artifact_row_hash": "c8b4718167c1728749fbcbb7c14e1e5bcee122e3cc2e163c69d7053aa4a6ddd7",
+      "artifact_type": "rdllm-certification/v1",
+      "declared_hash": "d44183119934b900f44a9f14886c406744c8ff6c984c9bb659e3ba0a7c204825",
+      "hash_reproducible": true,
+      "name": "certification_report",
+      "payload_hash": "a1dbf4b984ed9dd03cd166b9448001f9bec24da750a6c86f5e4437fb5f741019"
+    },
+    {
+      "artifact_row_hash": "47a4e54c26ffece0a11ea96f1b7cd7dbbe133ca3f996a7796dfc1d9327898ef2",
+      "artifact_type": "rdllm-citation-footer-contract/v1",
+      "declared_hash": "b18a8cc93a4974ead44bf84e5a76f2b0f00b2fc0d588ec9b5e32b6ea188450eb",
+      "hash_reproducible": true,
+      "name": "citation_footer_contract",
+      "payload_hash": "9ab1f26752cc0edda1ab7ba231d4a98d29ada822396806d2169ee33195823af3"
+    },
+    {
+      "artifact_row_hash": "300045aed42af559a2b788be4b976eedf31c2b2dd29965bbc032301f44f38345",
+      "artifact_type": "rdllm-clearinghouse-report/v1",
+      "declared_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+      "hash_reproducible": true,
+      "name": "clearinghouse_report",
+      "payload_hash": "f85db8c74621f255d16cb54f5eca7ac9291191e859415e119d25241c6370f194"
+    },
+    {
+      "artifact_row_hash": "e998300e15a4aaf6c4ca37a037e0810fb45aa349f55d1aad781e54024cca201e",
+      "artifact_type": "rdllm-discovery-manifest/v1",
+      "declared_hash": "1865d8c8b003fbca014a93dd9a0f93e4f3adaa3040df72c84c81986729d29f28",
+      "hash_reproducible": true,
+      "name": "discovery_manifest",
+      "payload_hash": "75f24d43dada87eee09646eb9e3695a9ccbc02acb9bae00a1ddd82c1d4a57293"
+    },
+    {
+      "artifact_row_hash": "bcd643e123afd08502d593942c71afc0a8e900b6ff25352dfe3bf3755d2be627",
+      "artifact_type": "rdllm-integration-profile/v1",
+      "declared_hash": "abc9ba6d9d373672b184da11e1700133da966a25b2aeb560dd9d97a9f3ef44d5",
+      "hash_reproducible": true,
+      "name": "integration_profile",
+      "payload_hash": "b900f10c800b7fa029835047190a5c9cfb3112517aed6fac82641aa88ad2f175"
+    },
+    {
+      "artifact_row_hash": "723b21d4da5f497324f4ca665a9da572109d37f8e1bef63001692221a039524b",
+      "artifact_type": "rdllm-payment-execution-report/v1",
+      "declared_hash": "0f4d22a4d9c94e8d26366ae7828e28316b6b29159bcb845aedf9cb8ed68b87be",
+      "hash_reproducible": true,
+      "name": "payment_execution_report",
+      "payload_hash": "2002037cf836ed11f97a496df32ae56acd969d21a9ea19861635beaff71b53f6"
+    },
+    {
+      "artifact_row_hash": "0df5e35682d0982e7eddfa598035cdf4c76621ef7ea8fc8a0d4287ee79ab0c58",
+      "artifact_type": "rdllm-provider-attribution-card/v1",
+      "declared_hash": "50ec4fbeaf300cef3ed4b65b9257421e6eb18d5e3bf827f0c23a57b35962cd1a",
+      "hash_reproducible": true,
+      "name": "provider_attribution_card",
+      "payload_hash": "ee35c53c13cbaf173da00d3522b6d6d6c492f51da98cba0d8710c6eb1c068924"
+    },
+    {
+      "artifact_row_hash": "11888d2ae59974e90561f77586552c37d4e307229a8fd180a7abe3b729b2308f",
+      "artifact_type": "rdllm-remittance-report/v1",
+      "declared_hash": "cf0452556b8b35f5317a3fbb6b8f0f391c8ae90bc331f3a9274e7b3e690cdd28",
+      "hash_reproducible": true,
+      "name": "remittance_report",
+      "payload_hash": "6a576727c78a633fdba5ac4b98011e61128da167b05b862489c1c6b4614a79f9"
+    },
+    {
+      "artifact_row_hash": "ba84c4dc1006b14b492e4e9751a1b862418a54eaef3b0f75eac5e6729bc9412e",
+      "artifact_type": "rdllm-response-envelope/v1",
+      "declared_hash": "42c786a49606592171004e139b08497e665e6d698cd2d188cda06332884dadf7",
+      "hash_reproducible": true,
+      "name": "response_envelope",
+      "payload_hash": "7b89b236c921d30f67d9cf4d5b9654a7f8190d30ae51212fd56c1b5a01e1137c"
+    },
+    {
+      "artifact_row_hash": "03d618db8dbab51e0e4b2dc84ec33b0d7db3fd34d3aa49a2827c7ac02c632055",
+      "artifact_type": "rdllm-source-confidence-report/v1",
+      "declared_hash": "e5b8a300ca61aa2afc07afc5e37ed246d51bd4435cc76a9859a7ccb39d991265",
+      "hash_reproducible": true,
+      "name": "source_confidence_report",
+      "payload_hash": "fafe784c4506a808b7370ab623c2b057aae6b0f3b5a967285915bece3c07cee6"
+    }
+  ],
+  "commitments": {
+    "artifact_root": "9caeb3317a74f52aac58b4baf38b6844dca08b5a5ead6cdfd1868a500de979b0",
+    "assurance_bundle_hash": "0b3ef2d4bee5e797d907f02588283e64bf7c0c27a1f2b8840fa761d56fed910d",
+    "assurance_bundle_root": "60dcb728a938e0e2a63b7ba12f9be993d505758cf56c2cfff68962a54f6d48d7",
+    "audit_scope_hash": "397a4c948a60b74725479433ef9d98e42bf829891af8f9c696b4340988ce5d60",
+    "certification_attestation_hash": "fb5e0f6fc9101992e5936f275d0c38a201712adca0d1d087db9c3457994627cd",
+    "certification_report_hash": "d44183119934b900f44a9f14886c406744c8ff6c984c9bb659e3ba0a7c204825",
+    "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+    "discovery_manifest_hash": "1865d8c8b003fbca014a93dd9a0f93e4f3adaa3040df72c84c81986729d29f28",
+    "finance_ledger_attestation_hash": "",
+    "integration_profile_hash": "abc9ba6d9d373672b184da11e1700133da966a25b2aeb560dd9d97a9f3ef44d5",
+    "payment_execution_report_hash": "0f4d22a4d9c94e8d26366ae7828e28316b6b29159bcb845aedf9cb8ed68b87be",
+    "provider_card_hash": "50ec4fbeaf300cef3ed4b65b9257421e6eb18d5e3bf827f0c23a57b35962cd1a",
+    "readiness_root": "e1bec6d2d70ea38a40311e4dcd16c9f169eecf2c08e5f2cb3436a470e5f13957",
+    "remittance_report_hash": "cf0452556b8b35f5317a3fbb6b8f0f391c8ae90bc331f3a9274e7b3e690cdd28",
+    "response_envelope_hash": "42c786a49606592171004e139b08497e665e6d698cd2d188cda06332884dadf7",
+    "revenue_allocation_report_hash": ""
+  },
+  "created_at": "2026-05-31T09:53:54Z",
+  "issuer": "auditor:rdllm-reference",
+  "privacy": {
+    "answer_text_disclosed": false,
+    "artifact_payloads_embedded": false,
+    "attestation_uses_hashes_statuses_and_counts": true,
+    "claim_evidence_text_disclosed": false,
+    "payout_account_disclosed": false,
+    "prompt_text_disclosed": false,
+    "source_text_disclosed": false
+  },
+  "readiness_checks": {
+    "artifact_hashes_reproducible": true,
+    "assurance_bundle_includes_required_artifact_types": true,
+    "assurance_bundle_public_replay_verified": true,
+    "auditor_identity_separate_from_provider": true,
+    "certification_passed_l44_or_better": true,
+    "citation_footer_contract_verified": true,
+    "citation_footer_public_replay_verified": true,
+    "clearinghouse_ready_and_duplicate_safe": true,
+    "discovery_catalogs_required_provider_artifacts": true,
+    "discovery_manifest_public_replay_verified": true,
+    "discovery_manifest_ready": true,
+    "finance_ledger_attestation_optional_or_ready": true,
+    "integration_profile_public_replay_verified": true,
+    "integration_profile_ready": true,
+    "payment_execution_optional_or_matches_remittance_total": true,
+    "payment_execution_optional_or_ready": true,
+    "payment_execution_public_replay_optional_or_verified": true,
+    "private_fields_absent": true,
+    "provider_card_bound_to_certification": true,
+    "provider_declares_audit_attestation_surface": true,
+    "remittance_matches_clearinghouse_accounted_total": true,
+    "remittance_public_replay_verified": true,
+    "remittance_ready_instruction_only": true,
+    "response_envelope_public_replay_verified": true,
+    "response_envelope_verified": true,
+    "revenue_allocation_optional_or_ready": true,
+    "source_confidence_public_replay_verified": true,
+    "source_confidence_verified_without_suppression": true
+  },
+  "schemas": {
+    "assurance_bundle": "docs/schemas/assurance_bundle.schema.json",
+    "audit_attestation": "docs/schemas/audit_attestation.schema.json",
+    "certification_attestation": "docs/schemas/certification_attestation.schema.json",
+    "certification_report": "docs/schemas/certification_report.schema.json",
+    "clearinghouse_report": "docs/schemas/clearinghouse_report.schema.json",
+    "discovery_manifest": "docs/schemas/discovery_manifest.schema.json",
+    "finance_ledger_attestation": "docs/schemas/finance_ledger_attestation.schema.json",
+    "integration_profile": "docs/schemas/integration_profile.schema.json",
+    "payment_execution_report": "docs/schemas/payment_execution_report.schema.json",
+    "provider_attribution_card": "docs/schemas/provider_attribution_card.schema.json",
+    "remittance_report": "docs/schemas/remittance_report.schema.json",
+    "response_envelope": "docs/schemas/response_envelope.schema.json",
+    "revenue_allocation_report": "docs/schemas/revenue_allocation_report.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "auditor:rdllm-reference",
+    "value": "7593156623df53f2f0c4e08ec7145179c4c456bc5558e9ea893bf327bbdee6e4"
+  },
+  "summary": {
+    "audited_artifact_count": 12,
+    "failed_check_count": 0,
+    "highest_provider_level": "RDLLM-L77",
+    "independent_audit_supported": true,
+    "passed_check_count": 28,
+    "payment_execution_audited": true,
+    "provider_self_attestation_only": false,
+    "status": "attested",
+    "target_certification_level": "RDLLM-L45"
+  },
+  "verifier_contract": {
+    "minimum_required_artifact_count": 12,
+    "offline_replay_required": true,
+    "reference_verifier_id": "rdllm-reference-verifier",
+    "required_cli_verifiers": [
+      "verify-provider-card",
+      "verify-certification-attestation",
+      "verify-integration-profile",
+      "verify-discovery-manifest",
+      "verify-assurance-bundle",
+      "verify-response-envelope",
+      "verify-source-confidence-report",
+      "verify-citation-footer-contract",
+      "verify-clearinghouse-report",
+      "verify-remittance-report",
+      "verify-audit-attestation",
+      "verify-revenue-allocation-report",
+      "verify-finance-ledger-attestation",
+      "verify-payment-execution-report"
+    ],
+    "required_negative_controls": [
+      "stale_certification_hash",
+      "stale_certification_attestation_hash",
+      "missing_assurance_artifact",
+      "response_hash_drift",
+      "footer_suppression",
+      "remittance_amount_drift",
+      "revenue_allocation_amount_drift",
+      "finance_ledger_amount_drift",
+      "payment_execution_amount_drift"
+    ]
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/agent_tool_attribution_ledger.schema.json",
+  "title": "RDLLM Agent Tool Attribution Ledger",
+  "type": "object",
+  "required": [
+    "tool_ledger_version",
+    "issuer",
+    "created_at",
+    "event",
+    "tool_policy",
+    "tool_calls",
+    "embedded_artifacts",
+    "artifact_bindings",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "tool_ledger_hash",
+    "signature"
+  ],
+  "properties": {
+    "tool_ledger_version": {
+      "const": "rdllm-agent-tool-attribution-ledger/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "trace_event_id",
+        "trace_event_hash",
+        "trace_hash",
+        "proof_response_hash"
+      ],
+      "additionalProperties": true
+    },
+    "tool_policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "minimum_conversation_level",
+        "tool_observations_must_bind_trace_spans",
+        "visible_sources_must_bind_tool_observations",
+        "supported_claims_must_bind_tool_observations",
+        "tool_obligations_must_reach_conversation_ledger",
+        "raw_tool_outputs_must_not_be_publicly_embedded"
+      ],
+      "additionalProperties": true
+    },
+    "tool_calls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "tool_call_index",
+          "tool_call_id",
+          "tool_type",
+          "tool_name",
+          "tool_span_id",
+          "parent_generation_span_id",
+          "input_commitment_hash",
+          "observation_hash",
+          "source_access_id",
+          "source_chunk_id",
+          "source_work_id",
+          "source_creator_id",
+          "source_uri_hash",
+          "content_hash",
+          "decision_status",
+          "visible_source_label",
+          "source_entry_hash",
+          "source_obligation_hash",
+          "claim_indexes",
+          "claim_hashes",
+          "evidence_span_hashes",
+          "support_relation",
+          "tool_trace_span_bound",
+          "tool_output_has_visible_source_row",
+          "tool_output_has_claim_support",
+          "tool_output_has_obligation",
+          "tool_obligation_in_conversation_ledger",
+          "raw_tool_output_text_embedded",
+          "row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "embedded_artifacts": {
+      "type": "object",
+      "required": [
+        "proof_carrying_response",
+        "trace_exchange",
+        "conversation_attribution_ledger"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "proof_response_hash",
+        "trace_exchange_hash",
+        "conversation_ledger_hash",
+        "tool_row_root",
+        "tool_observation_root",
+        "source_obligation_root",
+        "claim_support_root"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "proof_carrying_response_verified",
+        "trace_exchange_hash_verified",
+        "conversation_ledger_verified",
+        "trace_event_matches_proof_response",
+        "tool_rows_cover_trace_source_access_spans",
+        "tool_rows_cover_visible_answer_sources",
+        "tool_rows_cover_supported_claims",
+        "tool_observations_bind_source_obligations",
+        "tool_obligations_bound_to_conversation_ledger",
+        "tool_observations_have_claim_support_or_candidate_status",
+        "provider_declares_agent_tool_surface",
+        "certification_meets_tool_minimum",
+        "tool_ledger_rows_do_not_embed_private_or_raw_tool_text"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "agent_tool_attribution_ledger",
+        "proof_carrying_response",
+        "trace_exchange",
+        "conversation_attribution_ledger"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_conversation_level",
+        "tool_call_count",
+        "visible_source_count",
+        "claim_count",
+        "tool_row_root",
+        "source_obligation_root",
+        "passed_check_count",
+        "check_count",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed_by_tool_rows",
+        "raw_model_output_text_disclosed_by_tool_rows",
+        "raw_tool_output_text_disclosed_by_tool_rows",
+        "tool_inputs_are_hash_commitments",
+        "tool_outputs_are_observation_hashes_and_source_metadata"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "tool_ledger_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

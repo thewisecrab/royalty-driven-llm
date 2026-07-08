@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/attribution_dispute_adjudication_report.schema.json",
+  "title": "RDLLM Attribution Dispute Adjudication Report",
+  "type": "object",
+  "required": [
+    "version",
+    "issued_at",
+    "issuer",
+    "case",
+    "policy",
+    "appeal",
+    "claimant_rows",
+    "respondent_rows",
+    "evidence_rows",
+    "verifier_vote_rows",
+    "decision_rows",
+    "adjudicated_footer_rows",
+    "escrow",
+    "settlement_release_rows",
+    "escrow_freeze_rows",
+    "slash_rows",
+    "bounty_rows",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "version": {
+      "const": "rdllm-attribution-dispute-adjudication-report/v1"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "case": {
+      "type": "object",
+      "required": [
+        "case_id",
+        "status",
+        "subject",
+        "attribution_contract"
+      ],
+      "properties": {
+        "case_id": {
+          "type": "string"
+        },
+        "case_type": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "ready",
+            "appeal_pending",
+            "needs_review"
+          ]
+        },
+        "subject": {
+          "type": "object"
+        },
+        "attribution_contract": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object"
+    },
+    "appeal": {
+      "type": "object",
+      "required": [
+        "state",
+        "appeal_filed"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "closed",
+            "appeal_pending"
+          ]
+        },
+        "appeal_filed": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "claimant_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "respondent_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "evidence_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "verifier_vote_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "decision_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "adjudicated_footer_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "escrow": {
+      "type": "object",
+      "required": [
+        "amount",
+        "released_total",
+        "frozen_total"
+      ]
+    },
+    "settlement_release_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "escrow_freeze_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "slash_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "bounty_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "attribution_dispute_adjudication_report"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "creator_pool_conserved"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "ready",
+            "appeal_pending",
+            "needs_review"
+          ]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L93"
+        },
+        "creator_pool_conserved": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "report_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

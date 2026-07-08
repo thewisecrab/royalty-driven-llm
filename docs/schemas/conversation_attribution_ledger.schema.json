@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/conversation_attribution_ledger.schema.json",
+  "title": "RDLLM Conversation Attribution Ledger",
+  "type": "object",
+  "required": [
+    "conversation_ledger_version",
+    "issuer",
+    "created_at",
+    "conversation_context",
+    "continuity_policy",
+    "conversation_turns",
+    "embedded_artifacts",
+    "artifact_bindings",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "conversation_ledger_hash",
+    "signature"
+  ],
+  "properties": {
+    "conversation_ledger_version": {
+      "const": "rdllm-conversation-attribution-ledger/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "conversation_context": {
+      "type": "object",
+      "required": [
+        "conversation_id",
+        "conversation_id_hash",
+        "session_state_id",
+        "session_state_hash",
+        "provider",
+        "model_id",
+        "model_version",
+        "route_id",
+        "turn_count",
+        "state_transport"
+      ],
+      "additionalProperties": true
+    },
+    "continuity_policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "minimum_streaming_level",
+        "dependent_turns_inherit_parent_source_obligations",
+        "all_non_initial_turns_depend_on_immediate_prior_turn",
+        "inherited_obligations_must_be_visible_in_current_footer",
+        "streaming_manifest_required_for_each_turn",
+        "proof_gateway_and_stream_must_verify_before_continuation"
+      ],
+      "additionalProperties": true
+    },
+    "conversation_turns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "turn_index",
+          "turn_id",
+          "depends_on_turn_ids",
+          "parent_turn_chain_hashes",
+          "previous_turn_chain_hash",
+          "proof_response_hash",
+          "gateway_report_hash",
+          "streaming_manifest_hash",
+          "public_output_hash",
+          "gateway_delivered_output_hash",
+          "source_footer_hash",
+          "source_count",
+          "visible_source_rows",
+          "active_obligation_hashes",
+          "inherited_obligation_hashes",
+          "propagated_obligation_hashes",
+          "missing_inherited_obligation_hashes",
+          "continuing_obligation_hashes",
+          "turn_chain_hash",
+          "row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "embedded_artifacts": {
+      "type": "object",
+      "required": ["turns"],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "proof_response_hashes",
+        "gateway_report_hashes",
+        "streaming_manifest_hashes",
+        "turn_row_root",
+        "turn_chain_root",
+        "final_turn_chain_hash",
+        "source_obligation_root"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "conversation_has_multiple_turns",
+        "proof_carrying_responses_verified",
+        "serving_gateway_reports_verified",
+        "streaming_manifests_verified",
+        "proof_hashes_match_turn_rows",
+        "gateway_hashes_match_turn_rows",
+        "streaming_hashes_match_turn_rows",
+        "turn_chain_contiguous",
+        "turn_row_hashes_replay",
+        "parent_turns_precede_children",
+        "all_non_initial_turns_depend_on_prior_turn",
+        "inherited_source_obligations_propagated",
+        "visible_footers_cover_active_sources",
+        "visible_footers_cover_inherited_sources",
+        "provider_declares_conversation_surface",
+        "certification_meets_conversation_minimum",
+        "ledger_rows_do_not_disclose_prompt_or_raw_output_fields"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "conversation_attribution_ledger",
+        "proof_carrying_response",
+        "serving_gateway_report",
+        "streaming_attribution_manifest"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_streaming_level",
+        "conversation_id_hash",
+        "turn_count",
+        "unique_source_obligation_count",
+        "final_turn_chain_hash",
+        "source_obligation_root",
+        "passed_check_count",
+        "check_count",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed_by_ledger_rows",
+        "raw_model_output_text_disclosed_by_ledger_rows",
+        "source_text_disclosed_by_ledger_rows",
+        "public_outputs_remain_inside_embedded_proof_responses",
+        "source_obligations_are_hash_and_metadata_commitments"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "conversation_ledger_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

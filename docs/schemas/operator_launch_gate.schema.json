@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/operator_launch_gate.schema.json",
+  "title": "RDLLM Operator Launch Gate Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "errors",
+    "summary",
+    "profile",
+    "service_config",
+    "bootstrap_verification",
+    "response_verification",
+    "support_bundle"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-operator-launch-gate/v1"
+    },
+    "status": {
+      "enum": ["ready", "blocked"]
+    },
+    "errors": {
+      "$ref": "#/$defs/error_array"
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile_status",
+        "service_config_status",
+        "service_runtime_status",
+        "bootstrap_verification_status",
+        "response_verification_status",
+        "display_text_status",
+        "support_bundle_status",
+        "production_grade_claim_allowed",
+        "direct_creator_settlement_allowed",
+        "public_sector_use_supported",
+        "traffic_decision",
+        "response_required",
+        "display_text_required",
+        "runtime_checked"
+      ],
+      "properties": {
+        "profile_status": { "type": "string", "minLength": 1 },
+        "service_config_status": { "type": "string", "minLength": 1 },
+        "service_runtime_status": { "type": "string", "minLength": 1 },
+        "bootstrap_verification_status": { "type": "string", "minLength": 1 },
+        "response_verification_status": { "type": "string", "minLength": 1 },
+        "display_text_status": {
+          "enum": ["not_checked", "passed", "failed"]
+        },
+        "support_bundle_status": { "type": "string", "minLength": 1 },
+        "production_grade_claim_allowed": { "type": "boolean" },
+        "direct_creator_settlement_allowed": { "type": "boolean" },
+        "public_sector_use_supported": { "type": "boolean" },
+        "traffic_decision": { "enum": ["allow", "block"] },
+        "response_required": { "type": "boolean" },
+        "display_text_required": { "type": "boolean" },
+        "runtime_checked": { "type": "boolean" }
+      }
+    },
+    "profile": {
+      "$ref": "#/$defs/profile_section"
+    },
+    "service_config": {
+      "$ref": "#/$defs/service_config_section"
+    },
+    "bootstrap_verification": {
+      "$ref": "#/$defs/status_section"
+    },
+    "response_verification": {
+      "$ref": "#/$defs/response_verification"
+    },
+    "support_bundle": {
+      "$ref": "#/$defs/support_bundle_section"
+    }
+  },
+  "$defs": {
+    "hash64_or_empty": {
+      "type": "string",
+      "pattern": "^$|^[0-9a-f]{64}$"
+    },
+    "error_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "status_section": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["status", "errors"],
+      "properties": {
+        "status": { "type": "string", "minLength": 1 },
+        "errors": { "$ref": "#/$defs/error_array" }
+      }
+    },
+    "profile_section": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "status",
+        "errors",
+        "summary",
+        "blocked_controls",
+        "profile_hash"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "errors": { "$ref": "#/$defs/error_array" },
+        "summary": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": [
+            "profile_status",
+            "production_grade_claim_allowed",
+            "direct_creator_settlement_allowed",
+            "public_sector_use_supported",
+            "ready_control_count",
+            "blocked_control_count"
+          ],
+          "properties": {
+            "profile_status": { "type": "string", "minLength": 1 },
+            "operator_type": { "type": ["string", "null"] },
+            "settlement_mode": { "type": ["string", "null"] },
+            "production_grade_claim_allowed": { "type": "boolean" },
+            "direct_creator_settlement_allowed": { "type": "boolean" },
+            "public_sector_use_supported": { "type": "boolean" },
+            "ready_control_count": { "type": "integer", "minimum": 0 },
+            "blocked_control_count": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "blocked_controls": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "profile_hash": { "$ref": "#/$defs/hash64_or_empty" }
+      }
+    },
+    "service_config_section": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "status",
+        "errors",
+        "schema_status",
+        "runtime_status",
+        "public_summary"
+      ],
+      "properties": {
+        "status": { "type": "string", "minLength": 1 },
+        "errors": { "$ref": "#/$defs/error_array" },
+        "schema_status": { "type": "string", "minLength": 1 },
+        "runtime_status": { "type": "string", "minLength": 1 },
+        "public_summary": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": [
+            "schema",
+            "auth_mode",
+            "auth_configured",
+            "rate_limit_configured",
+            "artifact_count",
+            "provider_count",
+            "corpus_configured",
+            "audit_log_configured"
+          ],
+          "properties": {
+            "schema": { "type": "string" },
+            "auth_mode": { "type": "string" },
+            "auth_configured": { "type": "boolean" },
+            "rate_limit_configured": { "type": "boolean" },
+            "artifact_count": { "type": "integer", "minimum": 0 },
+            "provider_count": { "type": "integer", "minimum": 0 },
+            "corpus_configured": { "type": "boolean" },
+            "audit_log_configured": { "type": "boolean" }
+          }
+        }
+      }
+    },
+    "response_verification": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "schema",
+        "status",
+        "errors",
+        "event_id",
+        "event_hash",
+        "footer_hash",
+        "display_hash",
+        "display_text_status",
+        "display_text_hash",
+        "display_text_path",
+        "source_count",
+        "claim_count",
+        "response_status",
+        "production_display_ready",
+        "grounding_verdict",
+        "attribution_gap_verdict"
+      ],
+      "properties": {
+        "schema": { "const": "rdllm-service-response-verification/v1" },
+        "status": { "type": "string", "minLength": 1 },
+        "errors": { "$ref": "#/$defs/error_array" },
+        "event_id": { "type": "string" },
+        "event_hash": { "$ref": "#/$defs/hash64_or_empty" },
+        "footer_hash": { "$ref": "#/$defs/hash64_or_empty" },
+        "display_hash": { "$ref": "#/$defs/hash64_or_empty" },
+        "display_text_status": {
+          "enum": ["not_checked", "passed", "failed"]
+        },
+        "display_text_hash": { "$ref": "#/$defs/hash64_or_empty" },
+        "display_text_path": { "type": "string" },
+        "source_count": { "type": "integer", "minimum": 0 },
+        "claim_count": { "type": "integer", "minimum": 0 },
+        "response_status": { "type": "string", "minLength": 1 },
+        "production_display_ready": { "type": "boolean" },
+        "grounding_verdict": { "type": "string" },
+        "attribution_gap_verdict": { "type": "string" }
+      }
+    },
+    "support_bundle_section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "errors", "written"],
+      "properties": {
+        "status": { "type": "string", "minLength": 1 },
+        "errors": { "$ref": "#/$defs/error_array" },
+        "written": { "type": "boolean" }
+      }
+    }
+  }
+}

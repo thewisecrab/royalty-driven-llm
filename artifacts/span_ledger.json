@@ -1,0 +1,443 @@
+{
+  "balances": {
+    "arjun": "0.183682",
+    "lina": "0.125703",
+    "maya": "0.240615"
+  },
+  "events": [
+    {
+      "answer_text": "Royalty-aware answer:\nFor the prompt 'How should AI prove attribution?', the strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]",
+      "claim_support": [
+        {
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "claim": "Every royalty bearing AI answer should have a provenance record.",
+          "evidence_end_char": 64,
+          "evidence_span_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+          "evidence_start_char": 0,
+          "evidence_text": "Every royalty bearing AI answer should have a provenance record.",
+          "source_label": "S1",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "claim": "The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.",
+          "evidence_end_char": 244,
+          "evidence_span_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+          "evidence_start_char": 65,
+          "evidence_text": "The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.",
+          "source_label": "S1",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "chunk_id": "lina-governance-disputes:c1",
+          "claim": "Royalty systems need governance as much as scoring.",
+          "evidence_end_char": 51,
+          "evidence_span_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+          "evidence_start_char": 0,
+          "evidence_text": "Royalty systems need governance as much as scoring.",
+          "source_label": "S2",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "chunk_id": "lina-governance-disputes:c1",
+          "claim": "Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.",
+          "evidence_end_char": 164,
+          "evidence_span_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+          "evidence_start_char": 52,
+          "evidence_text": "Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.",
+          "source_label": "S2",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "claim": "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage.",
+          "evidence_end_char": 136,
+          "evidence_span_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+          "evidence_start_char": 0,
+          "evidence_text": "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage.",
+          "source_label": "S3",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "maya-youtube-style-pool"
+        },
+        {
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "claim": "Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.",
+          "evidence_end_char": 262,
+          "evidence_span_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+          "evidence_start_char": 137,
+          "evidence_text": "Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.",
+          "source_label": "S3",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "maya-youtube-style-pool"
+        }
+      ],
+      "creator_pool": "0.550000",
+      "creator_pool_rate": "0.55",
+      "event_hash": "e4c485a119b35bfb9ad1e9340ba186a4020db2540774e6b8fcd713c39cb1997f",
+      "event_id": "evt_e4c485a119b35bfb",
+      "gross_revenue": "1.000000",
+      "grounding_report": {
+        "coverage": 1.0,
+        "policy_denials": 0,
+        "policy_status": "allowed",
+        "source_count": 3,
+        "status": "grounded",
+        "supported_claims": 6,
+        "total_claims": 6,
+        "unsupported_claims": 0
+      },
+      "output": "Royalty-aware answer:\nFor the prompt 'How should AI prove attribution?', the strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]\n\nSources\n[S1] Provenance Ledgers for AI Outputs - Arjun Rao; chunk=arjun-provenance-ledger:c1; uri=registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1; support=0.303; text_match=0.900; hash=e94efa6d9bb3.\n    Evidence: span_hashes=399e7ff82b80,6ea90fbdd0fb. Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.\n[S2] Creator Governance for AI Licensing - Lina Park; chunk=lina-governance-disputes:c1; uri=registered://works/lina-governance-disputes#lina-governance-disputes:c1; support=0.204; text_match=0.633; hash=2e332f176133.\n    Evidence: span_hashes=71e11e089ebe,82b19c7059e7. Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.\n[S3] Usage Pools for Creator Platforms - Maya Sen; chunk=maya-youtube-style-pool:c1; uri=registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1; support=0.333; text_match=0.933; hash=6029417218e9.\n    Evidence: span_hashes=28528b6fc0db,a9ed8431a259. A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.\nGrounding: 6/6 claims supported; status=grounded.\nClaim Evidence\n[C1] S1; span=399e7ff82b80; chars=0-64.\n[C2] S1; span=6ea90fbdd0fb; chars=65-244.\n[C3] S2; span=71e11e089ebe; chars=0-51.\n[C4] S2; span=82b19c7059e7; chars=52-164.\n[C5] S3; span=28528b6fc0db; chars=0-136.\n[C6] S3; span=a9ed8431a259; chars=137-262.",
+      "policy_decisions": [
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:arjun-provenance-ledger",
+          "reasons": [
+            "permit:generation"
+          ],
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "target_id": "arjun-provenance-ledger:c1",
+          "target_type": "chunk",
+          "text_match_score": 0.9,
+          "use": "generation",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:arjun-provenance-ledger",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "target_id": "arjun-provenance-ledger:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "lina-governance-disputes:c1",
+          "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:lina-governance-disputes",
+          "reasons": [
+            "permit:generation"
+          ],
+          "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+          "target_id": "lina-governance-disputes:c1",
+          "target_type": "chunk",
+          "text_match_score": 0.63333333,
+          "use": "generation",
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "lina-governance-disputes:c1",
+          "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:lina-governance-disputes",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+          "target_id": "lina-governance-disputes:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:maya-youtube-style-pool",
+          "reasons": [
+            "permit:generation"
+          ],
+          "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+          "target_id": "maya-youtube-style-pool:c1",
+          "target_type": "chunk",
+          "text_match_score": 0.93333333,
+          "use": "generation",
+          "work_id": "maya-youtube-style-pool"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:maya-youtube-style-pool",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+          "target_id": "maya-youtube-style-pool:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "maya-youtube-style-pool"
+        }
+      ],
+      "prompt": "How should AI prove attribution?",
+      "retrieval_hits": [
+        {
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "arjun",
+          "rank": 1,
+          "score": 0.35438998,
+          "title": "Provenance Ledgers for AI Outputs",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "chunk_id": "lina-governance-disputes:c1",
+          "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+          "creator_id": "lina",
+          "rank": 2,
+          "score": 0.04959596,
+          "title": "Creator Governance for AI Licensing",
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+          "creator_id": "maya",
+          "rank": 3,
+          "score": 0.04504011,
+          "title": "Usage Pools for Creator Platforms",
+          "work_id": "maya-youtube-style-pool"
+        }
+      ],
+      "royalty_shares": [
+        {
+          "attribution_basis": {
+            "citation": 1.0,
+            "output_support": 0.30337079,
+            "prompt_overlap": 0.1,
+            "retrieval": 0.35438998,
+            "text_match": 0.9,
+            "training_value": 0.9221343
+          },
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "citation_score": 1.0,
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "contribution_weight": "0.333968",
+          "creator_id": "arjun",
+          "data_value_prior": 1.1,
+          "output_support": 0.30337079,
+          "payout": "0.183682",
+          "query_relevance": 0.1,
+          "retrieval_score": 0.35438998,
+          "text_match_score": 0.9,
+          "training_value_score": 0.9221343,
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "attribution_basis": {
+            "citation": 1.0,
+            "output_support": 0.20408163,
+            "prompt_overlap": 0.02222222,
+            "retrieval": 0.04959596,
+            "text_match": 0.63333333,
+            "training_value": 0.90441756
+          },
+          "chunk_id": "lina-governance-disputes:c1",
+          "citation_score": 1.0,
+          "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+          "contribution_weight": "0.228551",
+          "creator_id": "lina",
+          "data_value_prior": 1.0,
+          "output_support": 0.20408163,
+          "payout": "0.125703",
+          "query_relevance": 0.02222222,
+          "retrieval_score": 0.04959596,
+          "text_match_score": 0.63333333,
+          "training_value_score": 0.90441756,
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "attribution_basis": {
+            "citation": 1.0,
+            "output_support": 0.33333333,
+            "prompt_overlap": 0.02325581,
+            "retrieval": 0.04504011,
+            "text_match": 0.93333333,
+            "training_value": 1.25727853
+          },
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "citation_score": 1.0,
+          "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+          "contribution_weight": "0.437481",
+          "creator_id": "maya",
+          "data_value_prior": 1.0,
+          "output_support": 0.33333333,
+          "payout": "0.240615",
+          "query_relevance": 0.02325581,
+          "retrieval_score": 0.04504011,
+          "text_match_score": 0.93333333,
+          "training_value_score": 1.25727853,
+          "work_id": "maya-youtube-style-pool"
+        }
+      ],
+      "source_references": [
+        {
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "citation_score": 1.0,
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "contribution_weight": "0.333968",
+          "creator_id": "arjun",
+          "creator_name": "Arjun Rao",
+          "evidence_span_hashes": [
+            "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+            "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54"
+          ],
+          "jurisdiction": "GLOBAL",
+          "label": "S1",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "output_support": 0.30337079,
+          "payout": "0.183682",
+          "policy_id": "policy:arjun-provenance-ledger",
+          "policy_use": "generation",
+          "quote": "Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.",
+          "retrieval_score": 0.35438998,
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "text_match_score": 0.9,
+          "title": "Provenance Ledgers for AI Outputs",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "chunk_id": "lina-governance-disputes:c1",
+          "citation_score": 1.0,
+          "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+          "contribution_weight": "0.228551",
+          "creator_id": "lina",
+          "creator_name": "Lina Park",
+          "evidence_span_hashes": [
+            "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+            "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c"
+          ],
+          "jurisdiction": "GLOBAL",
+          "label": "S2",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "output_support": 0.20408163,
+          "payout": "0.125703",
+          "policy_id": "policy:lina-governance-disputes",
+          "policy_use": "generation",
+          "quote": "Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.",
+          "retrieval_score": 0.04959596,
+          "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+          "text_match_score": 0.63333333,
+          "title": "Creator Governance for AI Licensing",
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "citation_score": 1.0,
+          "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+          "contribution_weight": "0.437481",
+          "creator_id": "maya",
+          "creator_name": "Maya Sen",
+          "evidence_span_hashes": [
+            "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+            "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145"
+          ],
+          "jurisdiction": "GLOBAL",
+          "label": "S3",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "output_support": 0.33333333,
+          "payout": "0.240615",
+          "policy_id": "policy:maya-youtube-style-pool",
+          "policy_use": "generation",
+          "quote": "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.",
+          "retrieval_score": 0.04504011,
+          "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+          "text_match_score": 0.93333333,
+          "title": "Usage Pools for Creator Platforms",
+          "work_id": "maya-youtube-style-pool"
+        }
+      ],
+      "text_matches": [
+        {
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+          "creator_id": "maya",
+          "exact_score": 0.62222222,
+          "longest_sequence_tokens": 28,
+          "matched_text": "creator platform reserve fixed share revenue contributors distribute creator pool according measurable usage video platforms often views watch time eligibility rules policy compliance decide which creators share revenue",
+          "ngram_score": 0.58536585,
+          "rank": 1,
+          "score": 0.93333333,
+          "title": "Usage Pools for Creator Platforms",
+          "work_id": "maya-youtube-style-pool"
+        },
+        {
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "arjun",
+          "exact_score": 0.57446809,
+          "longest_sequence_tokens": 27,
+          "matched_text": "every royalty bearing ai answer should provenance record record should include source identifiers content hashes retrieval scores output citations payout weights event hash allows auditors replay attribution",
+          "ngram_score": 0.53488372,
+          "rank": 2,
+          "score": 0.9,
+          "title": "Provenance Ledgers for AI Outputs",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "chunk_id": "lina-governance-disputes:c1",
+          "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+          "creator_id": "lina",
+          "exact_score": 0.44186047,
+          "longest_sequence_tokens": 19,
+          "matched_text": "royalty systems need governance much scoring creators need consent controls license terms dispute windows duplicate claim handling appeal process",
+          "ngram_score": 0.38461538,
+          "rank": 3,
+          "score": 0.63333333,
+          "title": "Creator Governance for AI Licensing",
+          "work_id": "lina-governance-disputes"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+include README.md
+include LICENSE
+include CONTRIBUTING.md
+include SECURITY.md
+include CODE_OF_CONDUCT.md
+include CHANGELOG.md
+include CITATION.cff
+include Dockerfile
+include compose.yaml
+include .dockerignore
+include .env.example
+recursive-include docs *.md *.html
+recursive-include docs/schemas *.json
+recursive-include deploy *.md *.json *.yaml
+recursive-include examples *.json
+recursive-include paper *.md *.bib
+recursive-include src/rdllm/data *.json
+recursive-include tests *.py
+recursive-include tools *.py
+prune artifacts
+prune dist
+prune build
+global-exclude __pycache__ *.py[cod] .DS_Store

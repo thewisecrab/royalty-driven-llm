@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_invocation_coverage.schema.json",
+  "title": "RDLLM Universal Invocation Coverage",
+  "type": "object",
+  "required": [
+    "coverage_version",
+    "issuer",
+    "created_at",
+    "coverage_policy",
+    "guard_bindings",
+    "meter_rows",
+    "gateway_rows",
+    "invoice_rows",
+    "reconciliation",
+    "coverage_decision",
+    "checks",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_invocation_coverage_hash",
+    "signature"
+  ],
+  "properties": {
+    "coverage_version": {
+      "const": "rdllm-universal-invocation-coverage/v1"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "coverage_policy": {
+      "type": "object"
+    },
+    "guard_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "guard_hash",
+          "hash_reproducible",
+          "status",
+          "target_level",
+          "invocation_id",
+          "request_id",
+          "provider_family",
+          "route_id",
+          "request_projection_hash",
+          "response_binding_hash"
+        ]
+      }
+    },
+    "meter_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "meter_event_id",
+          "invocation_id",
+          "request_id",
+          "provider_family",
+          "route_id",
+          "gross_revenue",
+          "creator_pool"
+        ]
+      }
+    },
+    "gateway_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "gateway_event_id",
+          "invocation_id",
+          "request_id",
+          "guard_hash",
+          "preflight_authorized",
+          "native_provider_call_allowed",
+          "source_footer_required"
+        ]
+      }
+    },
+    "invoice_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "invoice_row_id",
+          "meter_event_id",
+          "invocation_id",
+          "provider_family",
+          "gross_revenue"
+        ]
+      }
+    },
+    "reconciliation": {
+      "type": "object",
+      "required": [
+        "matched_invocations",
+        "unmatched_meter_invocations",
+        "unmatched_guard_invocations",
+        "field_mismatches",
+        "meter_gross_revenue_total",
+        "invoice_gross_revenue_total",
+        "creator_pool_total"
+      ]
+    },
+    "coverage_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "coverage_complete",
+        "failed_checks",
+        "failure_modes",
+        "safe_call_policy"
+      ],
+      "properties": {
+        "decision": {
+          "enum": [
+            "certify_coverage",
+            "block_deployment_coverage"
+          ]
+        }
+      }
+    },
+    "checks": {
+      "type": "object"
+    },
+    "commitments": {
+      "type": "object"
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "universal_invocation_coverage",
+        "universal_invocation_guard"
+      ]
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "metered_call_count",
+        "guarded_call_count",
+        "uncovered_call_count",
+        "coverage_complete"
+      ],
+      "properties": {
+        "target_certification_level": {
+          "const": "RDLLM-L134"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L133"
+        }
+      }
+    },
+    "universal_invocation_coverage_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

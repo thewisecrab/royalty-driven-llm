@@ -1,0 +1,279 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/foundation_runtime_adapter.schema.json",
+  "title": "RDLLM Foundation Runtime Adapter",
+  "type": "object",
+  "required": [
+    "runtime_adapter_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "native_response_observation",
+    "adapter_binding",
+    "conformance_binding",
+    "normalized_rdllm_contract",
+    "runtime_decision",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "foundation_runtime_adapter_hash",
+    "signature"
+  ],
+  "properties": {
+    "runtime_adapter_version": {
+      "const": "rdllm-foundation-runtime-adapter/v1"
+    },
+    "issuer": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "minimum_attribution_level",
+        "required_negative_modes",
+        "on_runtime_adapter_failure",
+        "native_response_payload_disclosure_allowed",
+        "raw_prompt_or_source_text_disclosure_allowed"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-foundation-runtime-adapter-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L127" },
+        "minimum_input_level": { "const": "RDLLM-L126" },
+        "minimum_attribution_level": { "type": "string" },
+        "required_negative_modes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "on_runtime_adapter_failure": { "const": "block_display" },
+        "native_response_payload_disclosure_allowed": { "const": false },
+        "raw_prompt_or_source_text_disclosure_allowed": { "const": false }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "present",
+          "declared_hash",
+          "hash_reproducible",
+          "artifact_type"
+        ],
+        "properties": {
+          "present": { "type": "boolean" },
+          "declared_hash": { "type": "string" },
+          "hash_reproducible": { "type": "boolean" },
+          "artifact_type": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "native_response_observation": {
+      "type": "object",
+      "required": [
+        "provider_id",
+        "provider_family",
+        "native_api_version",
+        "native_response_id",
+        "native_model",
+        "native_status",
+        "native_output_hash",
+        "headers",
+        "json_proof_hashes",
+        "citation_path_observations",
+        "tool_path_observations",
+        "stream_final_event_hashes",
+        "claim_support_footer_hash",
+        "runtime_observation_hash"
+      ],
+      "properties": {
+        "provider_id": { "type": "string" },
+        "provider_family": { "type": "string" },
+        "native_api_version": { "type": "string" },
+        "native_response_id": { "type": "string" },
+        "native_model": { "type": "string" },
+        "native_status": { "type": "string" },
+        "native_created_at": { "type": "string" },
+        "native_output_hash": { "type": "string" },
+        "headers": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "json_proof_hashes": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "citation_path_observations": {
+          "type": "object",
+          "additionalProperties": { "type": "boolean" }
+        },
+        "tool_path_observations": {
+          "type": "object",
+          "additionalProperties": { "type": "boolean" }
+        },
+        "stream_final_event_hashes": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "claim_support_footer_hash": { "type": "string" },
+        "runtime_observation_hash": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "adapter_binding": {
+      "type": "object",
+      "required": [
+        "provider_adapter_row_hash",
+        "provider_family",
+        "native_output_path",
+        "citation_mapping_paths",
+        "tool_mapping_paths"
+      ],
+      "additionalProperties": true
+    },
+    "conformance_binding": {
+      "type": "object",
+      "required": [
+        "foundation_provider_conformance_row_hash",
+        "provider_adapter_row_hash",
+        "capabilities",
+        "negative_fixture_hashes"
+      ],
+      "additionalProperties": true
+    },
+    "normalized_rdllm_contract": {
+      "type": "object",
+      "required": [
+        "profile",
+        "response_envelope_hash",
+        "rendered_output_hash",
+        "source_footer_delivery_hash",
+        "citation_url_health_hash",
+        "foundation_profile_hash",
+        "foundation_provider_conformance_hash",
+        "native_output_hash"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-native-response-runtime-normalization/v1" },
+        "response_envelope_hash": { "type": "string" },
+        "rendered_output_hash": { "type": "string" },
+        "source_footer_delivery_hash": { "type": "string" },
+        "citation_url_health_hash": { "type": "string" },
+        "foundation_profile_hash": { "type": "string" },
+        "foundation_provider_conformance_hash": { "type": "string" },
+        "native_output_hash": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "runtime_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "release_authorized",
+        "failure_modes",
+        "failed_checks",
+        "safe_output_policy"
+      ],
+      "properties": {
+        "decision": { "enum": [ "release", "block_display" ] },
+        "release_authorized": { "type": "boolean" },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "failed_checks": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "safe_output_policy": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [ "foundation_runtime_adapter" ],
+      "additionalProperties": { "type": "string" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_native_response_disclosed",
+        "raw_prompt_text_disclosed",
+        "raw_source_text_disclosed",
+        "raw_answer_text_disclosed",
+        "hash_only_native_response_observation"
+      ],
+      "properties": {
+        "raw_native_response_disclosed": { "const": false },
+        "raw_prompt_text_disclosed": { "const": false },
+        "raw_source_text_disclosed": { "const": false },
+        "raw_answer_text_disclosed": { "const": false },
+        "hash_only_native_response_observation": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "provider_family",
+        "provider_id",
+        "failed_check_count",
+        "runtime_release_authorized",
+        "fail_closed_runtime_adapter_supported",
+        "native_response_normalized_to_rdllm",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": [ "released", "blocked" ] },
+        "target_certification_level": { "const": "RDLLM-L127" },
+        "minimum_input_level": { "const": "RDLLM-L126" },
+        "provider_family": { "type": "string" },
+        "provider_id": { "type": "string" },
+        "failed_check_count": { "type": "integer", "minimum": 0 },
+        "failure_mode_count": { "type": "integer", "minimum": 0 },
+        "runtime_release_authorized": { "type": "boolean" },
+        "fail_closed_runtime_adapter_supported": { "type": "boolean" },
+        "native_response_normalized_to_rdllm": { "type": "boolean" },
+        "privacy_preserved": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "foundation_runtime_adapter_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signature": {
+      "type": "object",
+      "required": [ "algorithm", "issuer", "value" ],
+      "properties": {
+        "algorithm": { "type": "string" },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/citation_url_health.schema.json",
+  "title": "RDLLM Citation URL Health Report",
+  "type": "object",
+  "required": [
+    "url_health_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "footer_url_health_display",
+    "citation_url_health_rows",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "citation_url_health_hash",
+    "signature"
+  ],
+  "properties": {
+    "url_health_version": {
+      "const": "rdllm-citation-url-health/v1"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "every_locator_requires_url_health",
+        "live_or_archived_required",
+        "fabricated_url_blocked",
+        "resolver_evidence_required",
+        "accepted_health_statuses",
+        "rejected_health_statuses",
+        "raw_http_body_disclosure_allowed",
+        "raw_source_text_disclosure_allowed"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "evidence_locator_manifest"
+      ],
+      "additionalProperties": true
+    },
+    "footer_url_health_display": {
+      "type": "object",
+      "required": [
+        "profile",
+        "health_line_count",
+        "health_lines",
+        "health_root"
+      ],
+      "additionalProperties": true
+    },
+    "citation_url_health_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "display_order",
+          "source_label",
+          "claim_hash",
+          "evidence_span_prefix",
+          "locator_url",
+          "declared_locator_url",
+          "final_url",
+          "health_status",
+          "http_status",
+          "checked_at",
+          "archival_snapshot_uri",
+          "archival_snapshot_hash",
+          "resolver_evidence_hash",
+          "url_scheme",
+          "live_resolved",
+          "content_addressed",
+          "archived_snapshot_available",
+          "accepted_health_status",
+          "rejected_health_status",
+          "locator_url_matches",
+          "locator_row_hash",
+          "declared_locator_row_hash",
+          "locator_hash_bound",
+          "durable_resolver_evidence_bound",
+          "live_or_archived_or_content_addressed",
+          "hallucination_classification",
+          "direct_publication_allowed",
+          "display_line",
+          "citation_url_health_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "required": [
+        "failed_checks",
+        "missing_health_claim_keys",
+        "fabricated_or_never_seen_claim_hashes",
+        "unverified_claim_hashes",
+        "unarchived_unresolved_claim_hashes",
+        "locator_url_mismatch_claim_hashes"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "artifact_binding_root",
+        "url_health_root",
+        "footer_url_health_display_hash",
+        "schema"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "citation_url_health",
+        "evidence_locator_manifest"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_http_body_disclosed",
+        "raw_source_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_claim_text_disclosed",
+        "raw_prompt_text_disclosed",
+        "public_locator_urls_disclosed",
+        "resolver_evidence_hashes_disclosed",
+        "archival_snapshot_hashes_disclosed"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "locator_count",
+        "health_row_count",
+        "live_url_count",
+        "archived_only_url_count",
+        "content_addressed_url_count",
+        "fabricated_or_never_seen_url_count",
+        "unverified_url_count",
+        "failed_check_count",
+        "url_hallucination_guard_supported",
+        "link_rot_snapshot_fallback_supported",
+        "resolver_evidence_supported",
+        "privacy_preserved"
+      ],
+      "additionalProperties": true
+    },
+    "citation_url_health_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

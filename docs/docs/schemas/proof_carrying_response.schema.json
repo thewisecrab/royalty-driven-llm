@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/proof_carrying_response.schema.json",
+  "title": "RDLLM Proof-Carrying Response",
+  "type": "object",
+  "required": [
+    "proof_response_version",
+    "issuer",
+    "created_at",
+    "display",
+    "embedded_artifacts",
+    "artifact_bindings",
+    "delivery_policy",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "proof_response_hash",
+    "signature"
+  ],
+  "properties": {
+    "proof_response_version": {
+      "const": "rdllm-proof-carrying-response/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "display": {
+      "type": "object",
+      "required": [
+        "delivery_status",
+        "release_decision",
+        "rendered_output",
+        "attribution_footer",
+        "copied_output",
+        "rendered_output_hash",
+        "copied_output_hash",
+        "capsule_marker_present",
+        "blocked_notice"
+      ],
+      "properties": {
+        "delivery_status": { "enum": ["released", "blocked"] },
+        "release_decision": { "enum": ["emit", "hold_for_revision"] },
+        "rendered_output": { "type": "string" },
+        "attribution_footer": { "type": "string" },
+        "copied_output": { "type": "string" },
+        "rendered_output_hash": { "type": "string" },
+        "copied_output_hash": { "type": "string" },
+        "capsule_marker_present": { "type": "boolean" },
+        "blocked_notice": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "embedded_artifacts": {
+      "type": "object",
+      "required": [
+        "response_envelope",
+        "attribution_capsule",
+        "release_gate",
+        "creator_license_contract",
+        "provider_attribution_card",
+        "certification_report"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "response_envelope_hash",
+        "attribution_capsule_hash",
+        "release_gate_hash",
+        "creator_license_contract_hash",
+        "provider_card_hash",
+        "certification_report_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "delivery_policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "minimum_release_gate_level",
+        "on_gate_failure",
+        "released_output_requires_capsule_marker",
+        "released_output_requires_gate_decision_emit"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "release_gate_verified",
+        "release_gate_decision_emit",
+        "response_envelope_shape_valid",
+        "response_envelope_verified",
+        "attribution_capsule_shape_valid",
+        "creator_license_contract_shape_valid",
+        "provider_card_shape_valid",
+        "displayed_output_matches_envelope",
+        "displayed_output_hash_matches_payload",
+        "copied_output_hash_matches_payload",
+        "capsule_marker_attached_when_released",
+        "capsule_delivery_contract_matches_display",
+        "provider_declares_proof_carrying_surface",
+        "certification_meets_response_minimum",
+        "blocked_response_suppresses_original_output",
+        "private_source_text_not_disclosed_by_boundary"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "proof_carrying_response",
+        "response_release_gate",
+        "response_envelope",
+        "attribution_capsule",
+        "creator_license_contract",
+        "provider_attribution_card",
+        "certification_report"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "decision",
+        "target_certification_level",
+        "minimum_release_gate_level",
+        "release_gate_hash",
+        "displayed_output_hash",
+        "passed_check_count",
+        "check_count",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "rendered_output_disclosed_when_released",
+        "original_output_suppressed_when_blocked",
+        "prompt_text_disclosed",
+        "source_text_disclosed",
+        "matched_text_disclosed",
+        "hidden_state_disclosed",
+        "boundary_uses_public_answer_and_hash_only_proofs"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "proof_response_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

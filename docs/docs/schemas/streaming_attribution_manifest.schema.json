@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/streaming_attribution_manifest.schema.json",
+  "title": "RDLLM Streaming Attribution Manifest",
+  "type": "object",
+  "required": [
+    "streaming_manifest_version",
+    "issuer",
+    "created_at",
+    "stream_context",
+    "streaming_policy",
+    "stream_timing",
+    "stream_commitments",
+    "stream_chunks",
+    "embedded_artifacts",
+    "artifact_bindings",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "streaming_manifest_hash",
+    "signature"
+  ],
+  "properties": {
+    "streaming_manifest_version": {
+      "const": "rdllm-streaming-attribution-manifest/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "stream_context": {
+      "type": "object",
+      "required": [
+        "request_id",
+        "provider",
+        "model_id",
+        "model_version",
+        "route_id",
+        "stream_transport",
+        "streamed_output_hash"
+      ],
+      "additionalProperties": true
+    },
+    "streaming_policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "minimum_gateway_level",
+        "chunking_mode",
+        "chunk_size",
+        "chunks_must_reconstruct_gateway_output",
+        "chunk_text_must_not_be_embedded",
+        "chunk_lengths_are_public_commitments",
+        "proof_and_gateway_must_verify_before_first_chunk",
+        "final_stream_must_include_attribution_footer"
+      ],
+      "additionalProperties": true
+    },
+    "stream_timing": {
+      "type": "object",
+      "required": [
+        "proof_verified_at",
+        "gateway_verified_at",
+        "stream_started_at",
+        "stream_completed_at",
+        "clock_source",
+        "proof_verification_precedes_first_chunk"
+      ],
+      "additionalProperties": true
+    },
+    "stream_commitments": {
+      "type": "object",
+      "required": [
+        "genesis_hash",
+        "chunk_count",
+        "chunk_row_root",
+        "chunk_chain_root",
+        "final_chain_hash",
+        "stream_reconstruction_hash",
+        "proof_display_copied_output_hash",
+        "gateway_delivered_output_hash"
+      ],
+      "additionalProperties": true
+    },
+    "stream_chunks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "chunk_index",
+          "stream_phase",
+          "char_start",
+          "char_end",
+          "char_length",
+          "byte_length",
+          "chunk_hash",
+          "previous_chain_hash",
+          "contains_footer_bytes",
+          "contains_final_byte",
+          "chain_hash",
+          "row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "embedded_artifacts": {
+      "type": "object",
+      "required": ["proof_carrying_response", "serving_gateway_report"],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "proof_response_hash",
+        "gateway_report_hash",
+        "response_envelope_hash",
+        "attribution_capsule_hash",
+        "release_gate_hash",
+        "provider_card_hash",
+        "certification_report_hash",
+        "stream_output_hash",
+        "gateway_delivered_output_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "proof_carrying_response_verified",
+        "serving_gateway_report_verified",
+        "gateway_binds_same_proof_response",
+        "certification_meets_streaming_minimum",
+        "provider_declares_streaming_surface",
+        "chunks_reconstruct_proof_display",
+        "chunks_reconstruct_gateway_egress_hash",
+        "chunk_chain_contiguous",
+        "chunk_hashes_replay_from_public_output",
+        "final_chain_hash_bound",
+        "deterministic_chunking_policy_honored",
+        "released_stream_contains_capsule_marker",
+        "footer_visible_by_stream_completion",
+        "proof_verification_precedes_first_chunk",
+        "stream_manifest_does_not_disclose_prompt_or_raw_output_fields"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "streaming_attribution_manifest",
+        "proof_carrying_response",
+        "serving_gateway_report"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_gateway_level",
+        "proof_response_hash",
+        "gateway_report_hash",
+        "streamed_output_hash",
+        "chunk_count",
+        "final_chain_hash",
+        "passed_check_count",
+        "check_count",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "raw_model_output_text_disclosed",
+        "chunk_text_disclosed",
+        "chunk_rows_use_lengths_and_hashes_only",
+        "public_output_reconstructable_from_embedded_proof_response",
+        "source_text_disclosed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "streaming_manifest_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,219 @@
+{
+  "checks": {
+    "answer_card_sources_bound_to_envelope": true,
+    "capsule_hash_reproducible": true,
+    "capsule_subject_hash_matches_commitment": true,
+    "copied_output_body_matches_upstream_subject": true,
+    "copied_output_marker_present": true,
+    "downstream_pool_conserved": true,
+    "no_private_text_disclosed": true,
+    "original_sources_survive_downstream_reuse": true,
+    "response_envelope_hash_reproducible": true,
+    "response_output_hash_matches_capsule_subject": true,
+    "source_entry_hashes_reproducible": true,
+    "transitive_pool_conserved": true,
+    "upstream_source_rows_present": true
+  },
+  "commitments": {
+    "copied_input_hash": "8f193e48d0cb7945d0ce84bb0cad698429f18bc0c618a841d0dbe7a56f6ae5a7",
+    "downstream_event_hash": "95c0529d8cf276349f6b1710e12389f38710801fcfda0fafa722b5b5bdfeca13",
+    "downstream_event_replay_hash": "0b42b5d5e952e91a55152b44a89d9f4b2becec512010c6b5ead843781f06bf4f",
+    "obligation_root": "f5da43d56ae3692a752ff04bfe0c26fff118e9bc33ac8388fd80b7cf4cd36405",
+    "policy_hash": "f5906d5f28c8a2ed08d2a52f85a67208d627880a7a3fa01fde66731bdcf3dcad",
+    "upstream_capsule_hash": "5bd4753a683a4a11982fa16544c284182a34e43cbfda8456164c0f24cd167d22",
+    "upstream_response_envelope_hash": "c1ddfb45d3947513d9e25a67e2a064963444c6b0e72e82787f1179056399cf4a",
+    "upstream_source_root": "6b1b08d5d7770754682bf7a375e8db30be175aaf21719c8e3bce9fa0eb471082"
+  },
+  "created_at": "2026-05-31T03:41:43Z",
+  "downstream": {
+    "answer_hash": "f0b11a0b9f6c791f24bfea4e963926a352ffe5ee8878fa9dcbbe45f8b0630739",
+    "copied_body_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+    "copied_input_hash": "8f193e48d0cb7945d0ce84bb0cad698429f18bc0c618a841d0dbe7a56f6ae5a7",
+    "copied_marker_hash": "80cc9420aa1d3e0ac94fd1de50528661913f9295baef9dd64b4cdc4bc9091190",
+    "copied_marker_type": "text_footer",
+    "creator_pool": "0.55",
+    "event_hash": "95c0529d8cf276349f6b1710e12389f38710801fcfda0fafa722b5b5bdfeca13",
+    "event_id": "evt_95c0529d8cf27634",
+    "event_replay_hash": "0b42b5d5e952e91a55152b44a89d9f4b2becec512010c6b5ead843781f06bf4f",
+    "prompt_hash": "e158845d0f8fab4c063e80fb050f75b76d1337bf73346246c58e276922668432",
+    "rendered_output_hash": "6bdf20ff734ba6acb0187c9a5333ba0560cfe090857dacb019152d62f93d9f37"
+  },
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "copied_output_text_disclosed": false,
+    "downstream_output_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "report_uses_hashes_capsules_and_source_ids": true,
+    "source_text_disclosed": false,
+    "upstream_answer_text_disclosed": false
+  },
+  "report_hash": "0ce6943e4b0d29b0f5f2ba07ea2274435edabd61767e1d60ab3c32a87d247bc6",
+  "report_version": "rdllm-transitive-attribution-report/v1",
+  "residual_settlement": {
+    "creator_pool": "0.55",
+    "downstream_provider_must_settle_residual_locally": true,
+    "policy": "downstream_local_sources_or_unattributed_escrow",
+    "residual_pool": "0.16",
+    "transitive_pool": "0.39"
+  },
+  "settlement_obligations": [
+    {
+      "basis": "copied_upstream_rdllm_output_used_downstream",
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "downstream_event_hash": "95c0529d8cf276349f6b1710e12389f38710801fcfda0fafa722b5b5bdfeca13",
+      "obligation_hash": "916fb419484ffbfacfd3d0fc853506b818c24e29c77d2f387753dc1bfc6f91b1",
+      "obligation_id": "transitive:evt_95c0529d8cf27634:1",
+      "payout": "0.13",
+      "recipient_creator_id": "arjun",
+      "recipient_creator_name": "Arjun Rao",
+      "share_of_transitive_pool": "0.33396800",
+      "source_label": "S1",
+      "source_row_hash": "78bfc4d4a7d663d49bcd9bbcd5f525ebcea3ea0241d4b32c22c05a232c4bf827",
+      "upstream_capsule_hash": "5bd4753a683a4a11982fa16544c284182a34e43cbfda8456164c0f24cd167d22",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "basis": "copied_upstream_rdllm_output_used_downstream",
+      "chunk_id": "lina-governance-disputes:c1",
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "downstream_event_hash": "95c0529d8cf276349f6b1710e12389f38710801fcfda0fafa722b5b5bdfeca13",
+      "obligation_hash": "079651618daff4e2a5ce267e31779dbabcb5b6e1625443526149ac9506310672",
+      "obligation_id": "transitive:evt_95c0529d8cf27634:2",
+      "payout": "0.09",
+      "recipient_creator_id": "lina",
+      "recipient_creator_name": "Lina Park",
+      "share_of_transitive_pool": "0.22855100",
+      "source_label": "S2",
+      "source_row_hash": "7486d0e86e674be29a74f1cd94dad10b890b9bce49b24504588c5e2f33eecaf0",
+      "upstream_capsule_hash": "5bd4753a683a4a11982fa16544c284182a34e43cbfda8456164c0f24cd167d22",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "basis": "copied_upstream_rdllm_output_used_downstream",
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "downstream_event_hash": "95c0529d8cf276349f6b1710e12389f38710801fcfda0fafa722b5b5bdfeca13",
+      "obligation_hash": "e611b1f0cbb025e02b234e9a1ce84d9300d8cf533e222fcb8f3b5e8a9d2b5ebf",
+      "obligation_id": "transitive:evt_95c0529d8cf27634:3",
+      "payout": "0.17",
+      "recipient_creator_id": "maya",
+      "recipient_creator_name": "Maya Sen",
+      "share_of_transitive_pool": "0.43748100",
+      "source_label": "S3",
+      "source_row_hash": "99830e68f49c92194d2a8864f001f638f6caf3c6313b81ff839ec6967845aca5",
+      "upstream_capsule_hash": "5bd4753a683a4a11982fa16544c284182a34e43cbfda8456164c0f24cd167d22",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "214168ef064b309599f436863684cd1f67830a40036a367faddcb439f2175118"
+  },
+  "summary": {
+    "anti_laundering_enforced": true,
+    "downstream_creator_pool": "0.55",
+    "minimum_upstream_level": "RDLLM-L34",
+    "payout_conserved": true,
+    "residual_pool": "0.16",
+    "status": "ready",
+    "target_certification_level": "RDLLM-L42",
+    "transitive_obligation_count": 3,
+    "transitive_pool": "0.39",
+    "upstream_source_count": 3
+  },
+  "transitive_policy": {
+    "copied_body_hash_required": true,
+    "copied_marker_required": true,
+    "original_sources_survive_derivative_use": true,
+    "pass_through_rate": "0.70",
+    "profile": "rdllm-transitive-attribution/v1",
+    "residual_policy": "downstream_local_sources_or_unattributed_escrow",
+    "transitive_trigger": "downstream_input_contains_verified_rdllm_capsule_marker",
+    "wrapper_credit_cannot_extinguish_upstream_sources": true
+  },
+  "upstream": {
+    "answer_card_hash": "04ee0bbb8a4d6becad29af370925e8de757bdccd6eb93f6ae2020b561c0a48bf",
+    "answer_card_source_root": "914272d859bb03d9791d1fdb94e9e8c50e6075b484aa2d718e405469d9aedd36",
+    "capsule_hash": "5bd4753a683a4a11982fa16544c284182a34e43cbfda8456164c0f24cd167d22",
+    "capsule_id": "rdllm-cap-3bec109de7c25427695f32d2",
+    "capsule_subject_hash": "ebdb13e677eea09872e41ad5a417bab99f8b7cced88e1bafb3ff2a2e63a89e15",
+    "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+    "event_id": "evt_1ed43e106d466249",
+    "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+    "response_envelope_hash": "c1ddfb45d3947513d9e25a67e2a064963444c6b0e72e82787f1179056399cf4a",
+    "source_count": 3
+  },
+  "upstream_source_rows": [
+    {
+      "answer_card_source_entry_hash": "a150c2ed99906ad6ffcf0b4aad1dff84e424fd278226f354de595e8cdfc97b4e",
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "creator_id": "arjun",
+      "creator_name": "Arjun Rao",
+      "evidence_span_hashes": [
+        "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+        "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54"
+      ],
+      "label": "S1",
+      "license": "royalty-bearing",
+      "normalized_weight": "0.33396800",
+      "retrieval_score": 0.35438998,
+      "source_index": 1,
+      "source_row_hash": "78bfc4d4a7d663d49bcd9bbcd5f525ebcea3ea0241d4b32c22c05a232c4bf827",
+      "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+      "support_score": 0.30337079,
+      "text_match_score": 0.9,
+      "title": "Provenance Ledgers for AI Outputs",
+      "upstream_contribution_weight": "0.333968",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "answer_card_source_entry_hash": "7b3cece26e6fe21f375f086d87837685007c202c80df6f877a5ab1fd7f6001b0",
+      "chunk_id": "lina-governance-disputes:c1",
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "creator_id": "lina",
+      "creator_name": "Lina Park",
+      "evidence_span_hashes": [
+        "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+        "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c"
+      ],
+      "label": "S2",
+      "license": "royalty-bearing",
+      "normalized_weight": "0.22855100",
+      "retrieval_score": 0.04959596,
+      "source_index": 2,
+      "source_row_hash": "7486d0e86e674be29a74f1cd94dad10b890b9bce49b24504588c5e2f33eecaf0",
+      "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+      "support_score": 0.20408163,
+      "text_match_score": 0.63333333,
+      "title": "Creator Governance for AI Licensing",
+      "upstream_contribution_weight": "0.228551",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "answer_card_source_entry_hash": "1b87f8dee3ffc920c04f639fe6c1720541e60624bd6d1cfe9c30054ade540a6b",
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "creator_id": "maya",
+      "creator_name": "Maya Sen",
+      "evidence_span_hashes": [
+        "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+        "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145"
+      ],
+      "label": "S3",
+      "license": "royalty-bearing",
+      "normalized_weight": "0.43748100",
+      "retrieval_score": 0.04504011,
+      "source_index": 3,
+      "source_row_hash": "99830e68f49c92194d2a8864f001f638f6caf3c6313b81ff839ec6967845aca5",
+      "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+      "support_score": 0.33333333,
+      "text_match_score": 0.93333333,
+      "title": "Usage Pools for Creator Platforms",
+      "upstream_contribution_weight": "0.437481",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ]
+}

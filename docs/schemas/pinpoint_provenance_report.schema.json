@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/pinpoint_provenance_report.schema.json",
+  "title": "RDLLM Pinpoint Provenance Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "event",
+    "policy",
+    "economics",
+    "claim_rows",
+    "candidate_rows",
+    "source_footers",
+    "royalty_shares",
+    "commitments",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-pinpoint-provenance-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "prompt_hash",
+        "response_hash",
+        "model_id",
+        "model_version"
+      ],
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "creator_pool_rate",
+        "accept_threshold",
+        "min_support_margin",
+        "min_critical_fact_recall",
+        "accepted_decision",
+        "ambiguous_decision",
+        "anti_document_decision",
+        "topical_similarity_alone_is_insufficient"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-pinpoint-provenance-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L68" }
+      },
+      "additionalProperties": true
+    },
+    "economics": {
+      "type": "object",
+      "required": [
+        "gross_revenue",
+        "creator_pool",
+        "payout_total",
+        "escrow_total"
+      ],
+      "additionalProperties": true
+    },
+    "claim_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_hash",
+          "top_document_id",
+          "top_work_id",
+          "top_content_hash",
+          "top_decision_score",
+          "support_margin",
+          "required_evidence_phrase_hashes",
+          "decision",
+          "anti_document_rejected"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "candidate_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_hash",
+          "document_id",
+          "work_id",
+          "chunk_id",
+          "creator_id",
+          "content_hash",
+          "document_role",
+          "candidate_relation",
+          "scores",
+          "feature_commitment",
+          "rank",
+          "support_margin",
+          "decision",
+          "row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "source_footers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_hash",
+          "label",
+          "work_id",
+          "chunk_id",
+          "creator_id",
+          "content_hash",
+          "footer_text_hash",
+          "footer_text_preview"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "royalty_shares": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "work_id",
+          "chunk_id",
+          "claim_ids",
+          "decision",
+          "payout",
+          "contribution_weight"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "pinpoint_input_root",
+        "claim_root",
+        "candidate_row_root",
+        "source_footer_root",
+        "share_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "candidate_rows_rank_every_claim",
+        "accepted_claims_have_visible_source_footer",
+        "anti_documents_never_accepted",
+        "accepted_sources_meet_threshold_and_margin",
+        "unattributed_claims_route_to_escrow",
+        "creator_pool_conserved",
+        "public_rows_do_not_embed_private_text"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["pinpoint_provenance_report"],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "claim_count",
+        "candidate_document_count",
+        "candidate_row_count",
+        "accepted_claim_count",
+        "escrow_claim_count",
+        "anti_document_rejected_count",
+        "source_footer_count",
+        "creator_pool_conserved",
+        "pinpoint_provenance",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "response_text_disclosed",
+        "claim_text_disclosed",
+        "source_text_disclosed",
+        "critical_evidence_phrases_disclosed",
+        "public_report_uses_hashes_scores_and_source_ids"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

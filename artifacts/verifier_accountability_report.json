@@ -1,0 +1,329 @@
+{
+  "accepted_verifier_rows": [
+    {
+      "artifact_binding_root": "6ef98611e1f657a22c6f88866dab17ecf88eba88375a1ac8639d599c23d077f3",
+      "attestation_hash": "b3592a84cc7771c7e4ec08e269795f9f0e2dabf59abacf8b2d23f3c073ad0c60",
+      "organization_id": "org:verifier_alpha",
+      "replay_verdict": "accepted",
+      "role": "independent_attribution_verifier",
+      "trust_tier": "independent",
+      "verifier_id": "verifier_alpha",
+      "verifier_key_hash": "58ab22bce6215a1b2def70665829abec426ba099b00cfd88a45d69725022b0a1"
+    },
+    {
+      "artifact_binding_root": "6ef98611e1f657a22c6f88866dab17ecf88eba88375a1ac8639d599c23d077f3",
+      "attestation_hash": "12dc8a9b4a6d3984a6519b0e5f4a1b66cda7f26984a6772e650580772e441314",
+      "organization_id": "org:verifier_beta",
+      "replay_verdict": "accepted",
+      "role": "independent_attribution_verifier",
+      "trust_tier": "independent",
+      "verifier_id": "verifier_beta",
+      "verifier_key_hash": "e37d348b62b3de614e02f1078c8bfb5ea7299745d466b35d9c5a08b1e886309a"
+    },
+    {
+      "artifact_binding_root": "6ef98611e1f657a22c6f88866dab17ecf88eba88375a1ac8639d599c23d077f3",
+      "attestation_hash": "575e66f88470084b0a25e2e8c6372d952f9f6b72a1df65054f2d4bb59a6718cb",
+      "organization_id": "org:verifier_gamma",
+      "replay_verdict": "accepted",
+      "role": "independent_attribution_verifier",
+      "trust_tier": "independent",
+      "verifier_id": "verifier_gamma",
+      "verifier_key_hash": "344e89078ca9441abedd96bf008e450b24420c445a3baffb698c68937ba87a1b"
+    }
+  ],
+  "artifact_bindings": {
+    "artifact_binding_root": "86a19013a109eef6827a8ca085eaf39ecc42e0a504dc8ca156a2fd3414913559",
+    "artifact_count": 4,
+    "artifact_hashes_reproducible": true,
+    "bindings": [
+      {
+        "artifact_type": "rdllm-certification/v1",
+        "binding_hash": "82d0e8ea094a3eae73d6501abbddc172d0ad29d064425b01f77a95e3dd10b0d3",
+        "declared_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+        "hash_reproducible": true,
+        "name": "certification_report",
+        "payload_hash": "c90d268a46ee16f3059c1597b1524eebf002393cae74ec2d4a74f273c5fc3495"
+      },
+      {
+        "artifact_type": "rdllm-provider-attribution-card/v1",
+        "binding_hash": "6b544856630eef88c31960a89a7de570fc879ad431c0979b15e9f2a3e829794a",
+        "declared_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+        "hash_reproducible": true,
+        "name": "provider_attribution_card",
+        "payload_hash": "4b5559fda1ff496ff9c85b4fd9c264963da95f686ca32f4bde0cc337cc1d0d48"
+      },
+      {
+        "artifact_type": "rdllm-trust-registry/v1",
+        "binding_hash": "77648cec54655b358ea0c73cdf1e52df8a8005595b32378a67dfb389343c8dc9",
+        "declared_hash": "ca4bf6639b80b98dd0dffcf7b67855a0a9717e22ceca6576df57e0c029346974",
+        "hash_reproducible": true,
+        "name": "trust_registry",
+        "payload_hash": "13b69e349e4e0d309d4ee9af06382b4f8e0a1328d39b33bbfd0d5ab66cb65fc0"
+      },
+      {
+        "artifact_type": "rdllm-verifier-quorum-report/v1",
+        "binding_hash": "eace85b98db22fcf45bd37885ec7fda04a5b1364cdc106dc0d7a07a3f12dd022",
+        "declared_hash": "7508368fe050b5633ac149e7be5b1fb9789d2cfcd76772a3745d1f672386a723",
+        "hash_reproducible": true,
+        "name": "verifier_quorum_report",
+        "payload_hash": "edd0edce896c920c57e798193eeff8ce371cc8d631bc44be1f07b094b7bb7060"
+      }
+    ],
+    "certification_report_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+    "provider_card_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+    "trust_registry_hash": "ca4bf6639b80b98dd0dffcf7b67855a0a9717e22ceca6576df57e0c029346974",
+    "verifier_quorum_report_hash": "7508368fe050b5633ac149e7be5b1fb9789d2cfcd76772a3745d1f672386a723"
+  },
+  "bond_rows": [
+    {
+      "active": true,
+      "bond_amount": "1000.000000",
+      "bond_currency": "USD",
+      "bond_escrow_account_hash": "83b579a985c1489b2261038651c1c845affd03c3ee825661a62ffca0547c8971",
+      "bond_id": "d5324bc6dc2d1a3893d952ce",
+      "bond_row_hash": "abe5b5399c367a61e9b7e78ad32816ce34bbca0e128d5a58c2e0efe37844b2ce",
+      "conflict_disclosure_hash": "dfe5e51c5d7352ac11c83e9f3b7f724f758e1498779fe72c4148b70c4c2725c6",
+      "conflict_status": "none_declared",
+      "duties": [
+        "replay_public_artifact_hashes",
+        "verify_citation_footer_and_claim_support",
+        "verify_consensus_payout_conservation",
+        "disclose_conflicts",
+        "accept_slashing_for_bad_or_conflicted_attestation"
+      ],
+      "organization_id": "org:verifier_alpha",
+      "slashable": true,
+      "valid_from": "2026-05-31T00:00:00Z",
+      "valid_until": "9999-12-31T23:59:59Z",
+      "verifier_id": "verifier_alpha"
+    },
+    {
+      "active": true,
+      "bond_amount": "1000.000000",
+      "bond_currency": "USD",
+      "bond_escrow_account_hash": "a38b57c4701d7d0a562e19ae1b939054b20eb3ce0ce85107c094cce4d272a6f5",
+      "bond_id": "5b7f38520a586897caa01493",
+      "bond_row_hash": "aca98b31e9d826c082a45c9dc95b729c27750ab006309bd280e0035be2c9fa88",
+      "conflict_disclosure_hash": "86ba676205921135792d59d2eb94ac5726a1f5311bd7dad865ff65bc83310da8",
+      "conflict_status": "none_declared",
+      "duties": [
+        "replay_public_artifact_hashes",
+        "verify_citation_footer_and_claim_support",
+        "verify_consensus_payout_conservation",
+        "disclose_conflicts",
+        "accept_slashing_for_bad_or_conflicted_attestation"
+      ],
+      "organization_id": "org:verifier_beta",
+      "slashable": true,
+      "valid_from": "2026-05-31T00:00:00Z",
+      "valid_until": "9999-12-31T23:59:59Z",
+      "verifier_id": "verifier_beta"
+    },
+    {
+      "active": true,
+      "bond_amount": "1000.000000",
+      "bond_currency": "USD",
+      "bond_escrow_account_hash": "9fccc95489d7280e99125e84d722a76702d59fe6abf1536356a98dff84a2c5df",
+      "bond_id": "76cfddfee866d1c01fbb0481",
+      "bond_row_hash": "caf0f6dc47d4a42ace3238092521c957f814d424ed24673d3c36ab2468c52e0e",
+      "conflict_disclosure_hash": "2331a55bf39836b05989150133a738e1aaed076d1616ff550c3ff63cc7af2867",
+      "conflict_status": "none_declared",
+      "duties": [
+        "replay_public_artifact_hashes",
+        "verify_citation_footer_and_claim_support",
+        "verify_consensus_payout_conservation",
+        "disclose_conflicts",
+        "accept_slashing_for_bad_or_conflicted_attestation"
+      ],
+      "organization_id": "org:verifier_gamma",
+      "slashable": true,
+      "valid_from": "2026-05-31T00:00:00Z",
+      "valid_until": "9999-12-31T23:59:59Z",
+      "verifier_id": "verifier_gamma"
+    }
+  ],
+  "challenge_rows": [],
+  "checks": {
+    "accepted_verifier_key_hashes_match_registry": true,
+    "accepted_verifiers_have_active_bonds": true,
+    "accepted_verifiers_have_active_registry_entries": true,
+    "artifact_hashes_reproducible": true,
+    "bond_coverage_meets_policy": true,
+    "bond_rows_are_slashable": true,
+    "certification_level_at_least_l71": true,
+    "conflict_disclosures_present": true,
+    "creator_pool_conserved_or_escrowed": true,
+    "no_blocking_conflicts": true,
+    "no_open_accountability_challenges": true,
+    "provider_declares_bonded_verifier_accountability_channel": true,
+    "provider_declares_verifier_accountability_surface": true,
+    "public_report_has_no_private_field_names": true,
+    "registry_keys_not_revoked": true,
+    "trust_registry_ready": true,
+    "verifier_quorum_ready": true,
+    "verifier_quorum_target_l71": true
+  },
+  "commitments": {
+    "accepted_verifier_root": "a2af808476d436e1f8eb1d802de3e1434f1c772dd87d4f5fbc0878051b6a02d5",
+    "artifact_binding_root": "86a19013a109eef6827a8ca085eaf39ecc42e0a504dc8ca156a2fd3414913559",
+    "bond_row_root": "b2cf1baf968e07625b8d65553474e6a5459e13543650de0e2b20b8b25b5b77b2",
+    "challenge_row_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "registry_row_root": "db91c7d4bab0d5304e6bb06975a623270863b8e3c9e526f62075573b0064cd79",
+    "schema": "docs/schemas/verifier_accountability_report.schema.json",
+    "settlement_row_root": "67b5953cebbef2ab03556be37339dcac7e5ed6330514d4203a62b81c17082d48",
+    "slashing_evidence_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "bond_currency": "USD",
+    "direct_settlement_requires": [
+      "accepted_verifier_quorum",
+      "active_trust_registry_entries",
+      "non_revoked_verifier_keys",
+      "active_slashable_bonds",
+      "conflict_disclosures",
+      "no_open_accountability_challenges"
+    ],
+    "failure_route": "bonded_verifier_accountability_escrow",
+    "minimum_bond_amount": "1000.000000",
+    "profile": "rdllm-bonded-verifier-accountability-policy/v1",
+    "target_certification_level": "RDLLM-L72"
+  },
+  "privacy": {
+    "private_finance_payload_disclosed": false,
+    "private_prompt_disclosed": false,
+    "private_response_disclosed": false,
+    "private_source_text_disclosed": false,
+    "raw_bond_account_disclosed": false,
+    "report_uses_hashes_bonds_conflict_status_and_challenge_status": true,
+    "verifier_private_notes_disclosed": false
+  },
+  "registry_rows": [
+    {
+      "key_hash_matches_verifier_attestation": true,
+      "key_id": "59ffd249308c3a47bd6a9dc3",
+      "registry_key_hash": "44469572953e569a43631a41b405657c9a8a58c5943be4b1b027895e731611b2",
+      "registry_row_hash": "303af707a6a41115d5c82a9bf42c47ea122772c82f92e9bd6a8e9142c24ba289",
+      "revoked_key_used": false,
+      "role": "independent_attribution_verifier",
+      "status": "active",
+      "verifier_id": "verifier_alpha",
+      "verifier_key_hash": "58ab22bce6215a1b2def70665829abec426ba099b00cfd88a45d69725022b0a1"
+    },
+    {
+      "key_hash_matches_verifier_attestation": true,
+      "key_id": "6afb7ec86fe2503c2c990f24",
+      "registry_key_hash": "c4399a7edad1ebae068c32193237bec6f03648c26e43c2a321d81f287407cc27",
+      "registry_row_hash": "446f4a7b61891e305ff62a3bf0bf7011776bc8635af38f4f01592483ec50b953",
+      "revoked_key_used": false,
+      "role": "independent_attribution_verifier",
+      "status": "active",
+      "verifier_id": "verifier_beta",
+      "verifier_key_hash": "e37d348b62b3de614e02f1078c8bfb5ea7299745d466b35d9c5a08b1e886309a"
+    },
+    {
+      "key_hash_matches_verifier_attestation": true,
+      "key_id": "baec4dade9c6e4e5684932bf",
+      "registry_key_hash": "2f72a6bd695bc61f37d3082a347c2416dedd4a5690a670ec37d530ad121190e0",
+      "registry_row_hash": "a1fc1a8fae8b04467f487f6d92b38df83c1224de01b15d48cba6cbb3773b5d36",
+      "revoked_key_used": false,
+      "role": "independent_attribution_verifier",
+      "status": "active",
+      "verifier_id": "verifier_gamma",
+      "verifier_key_hash": "344e89078ca9441abedd96bf008e450b24420c445a3baffb698c68937ba87a1b"
+    }
+  ],
+  "report_hash": "c31b04a05c53c3ec29f1e3d1c2075dbfbb31baf1923048ae77102e62b5887b74",
+  "report_version": "rdllm-verifier-accountability-report/v1",
+  "schemas": {
+    "certification_report": "docs/schemas/certification_report.schema.json",
+    "provider_attribution_card": "docs/schemas/provider_attribution_card.schema.json",
+    "trust_registry": "docs/schemas/trust_registry.schema.json",
+    "verifier_accountability_report": "docs/schemas/verifier_accountability_report.schema.json",
+    "verifier_quorum_report": "docs/schemas/verifier_quorum_report.schema.json"
+  },
+  "settlement_gate": {
+    "accepted_verifier_count": 3,
+    "blocking_challenge_count": 0,
+    "blocking_conflict_count": 0,
+    "bonded_verifier_count": 3,
+    "decision": "bonded_verifier_settlement_ready",
+    "direct_settlement_ready": true,
+    "escrow_reasons": [],
+    "registry_verified_verifier_count": 3
+  },
+  "settlement_rows": [
+    {
+      "consensus_payout": "0.183527",
+      "contribution_weight": 0.33368545,
+      "creator_id": "arjun",
+      "escrow_amount": "0.000000",
+      "payout": "0.183527",
+      "prior_settlement_decision": "accepted",
+      "settlement_decision": "accepted",
+      "settlement_row_hash": "6a124fbfb9fd4996d44b777dc8122d5731f5102e48fc79dd8d426d93a4fc4747",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "consensus_payout": "0.182706",
+      "contribution_weight": 0.33219273,
+      "creator_id": "lina",
+      "escrow_amount": "0.000000",
+      "payout": "0.182706",
+      "prior_settlement_decision": "accepted",
+      "settlement_decision": "accepted",
+      "settlement_row_hash": "f12a7e309789b7840d9c8d8adce8b2d500e50be7b98142dfc5138e9ad558ac13",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "consensus_payout": "0.183767",
+      "contribution_weight": 0.33412182,
+      "creator_id": "maya",
+      "escrow_amount": "0.000000",
+      "payout": "0.183767",
+      "prior_settlement_decision": "accepted",
+      "settlement_decision": "accepted",
+      "settlement_row_hash": "92abc36ee96af65678942635dbb4ac1f3d57fe482d516b7b549eb9bbd6ee19bb",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "ed2f7c71a3273ca6e1ed14f4bb4c446fbed6b7278af4c3297f2fa07ef84dc6f2"
+  },
+  "slashing_evidence_rows": [],
+  "slashing_policy": {
+    "evidence_required": [
+      "verifier_attestation_hash",
+      "registry_row_hash",
+      "bond_row_hash",
+      "challenge_evidence_hash"
+    ],
+    "slashable_events": [
+      "bad_artifact_replay_attestation",
+      "undisclosed_conflict_of_interest",
+      "revoked_or_unregistered_key_use",
+      "accepted_challenge_against_verifier_attestation"
+    ],
+    "slashing_evidence_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "summary": {
+    "accepted_verifier_count": 3,
+    "blocking_challenge_count": 0,
+    "blocking_conflict_count": 0,
+    "bonded_verifier_count": 3,
+    "creator_pool_conserved_or_escrowed": true,
+    "direct_settlement_ready": true,
+    "escrow_total": "0.000000",
+    "minimum_bond_amount": "1000.000000",
+    "offline_verification_supported": true,
+    "payout_total": "0.550000",
+    "registry_verified_verifier_count": 3,
+    "settlement_decision": "bonded_verifier_settlement_ready",
+    "settlement_row_count": 3,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L72"
+  }
+}

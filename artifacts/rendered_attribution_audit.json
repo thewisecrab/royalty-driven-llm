@@ -1,0 +1,238 @@
+{
+  "artifact_bindings": {
+    "answer_claim_coverage_report_hash": "8be08f72cc541cc50a5b36934e91d9e59fa38053d110d29ee38417f31a93e7cd",
+    "citation_footer_contract_hash": "d2e0a8dbef31224c19d9c524d8136f168931d9f5d4ccf54bbda96b809bddbcde",
+    "counterevidence_report_hash": "39099b484747a1a7906d43e115189cf58e865c59bb8760723135bc937032e18e",
+    "evidence_sufficiency_report_hash": "1df3e15a419f98daaf385d3d9e403ef0f1aa9266a2e82b9b314f1f392460f570",
+    "response_envelope_hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243",
+    "source_availability_report_hash": "6f3d0af1dfc20e5d743ace20bf629c1ca853719e1dc6f29959957cb7064afd85"
+  },
+  "audit_policy": {
+    "every_claim_span_must_bind_coverage_and_footer": true,
+    "every_footer_source_must_explain_source_selection": true,
+    "every_inline_source_marker_must_bind_footer_source": true,
+    "minimum_input_level": "RDLLM-L79",
+    "parser": "deterministic-regex-markdown-source-footer-v1",
+    "profile": "rdllm-rendered-markdown-attribution-audit/v1",
+    "raw_answer_text_forbidden": true,
+    "raw_source_text_forbidden": true,
+    "target_certification_level": "RDLLM-L80"
+  },
+  "checks": {
+    "all_footer_rows_explain_source_selection": true,
+    "all_footer_rows_have_uri_and_content_hash": true,
+    "answer_claim_coverage_verified": true,
+    "body_citations_match_response_labels": true,
+    "citation_footer_contract_verified": true,
+    "claim_evidence_rows_bind_footer_spans": true,
+    "claim_evidence_rows_cover_answer_claims": true,
+    "counterevidence_adjudicated": true,
+    "evidence_sufficiency_verified": true,
+    "footer_sources_match_body_citations": true,
+    "footer_sources_match_contract_sources": true,
+    "input_hashes_reproducible": true,
+    "markdown_claim_evidence_section_present": true,
+    "markdown_parser_has_no_warnings": true,
+    "markdown_sources_section_present": true,
+    "rendered_output_hash_matches_response": true,
+    "source_availability_verified": true
+  },
+  "created_at": "2026-06-03T00:00:00Z",
+  "displayed_response": {
+    "answer_body_hash": "befabf3b7c0577698f3cea605015fd3ee9e8433951414dadf59deaa62cba43c3",
+    "claim_evidence_hash": "d2584558ebe048a47e7bc678d9b6e7e662cd06b109230d3c0c9a71773ef12577",
+    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
+    "event_id": "evt_b560c62bb49a73d0",
+    "line_count": 21,
+    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+    "source_footer_hash": "507e3d58f2bdca217d5b9305e77775d0a7a52b546753a839393d76c8eaf9849c"
+  },
+  "issuer": "rdllm-local-demo",
+  "parsed_markdown": {
+    "body_source_label_root": "ca9bd69fb924f20108fc78fa2add7b70858bd43d8d963fd5a2cab41db2a05302",
+    "claim_evidence_rows": [
+      {
+        "claim_evidence_line_hash": "6d69eada4342de196dd770d02023ec99440634c70c6b07ec1e20a365949c2155",
+        "claim_evidence_row_hash": "6767644332f7e3d7b1aeb65ccbfc1364a66065205eee6b0c715d343f3660b81c",
+        "claim_hash_prefix": "399e7ff82b80",
+        "claim_index": 1,
+        "end_char": 64,
+        "evidence_span_prefix": "399e7ff82b80",
+        "source_label": "S1",
+        "start_char": 0,
+        "support": "0.900"
+      },
+      {
+        "claim_evidence_line_hash": "302f9f4483dcde454cd475b891424f1d4f4a0b8feabdadf485c2f55e9b562289",
+        "claim_evidence_row_hash": "a3d9644c6fdafbae1a4c0ed8dbf509422dc734365e17b3c510e44878107c9d82",
+        "claim_hash_prefix": "6ea90fbdd0fb",
+        "claim_index": 2,
+        "end_char": 244,
+        "evidence_span_prefix": "6ea90fbdd0fb",
+        "source_label": "S1",
+        "start_char": 65,
+        "support": "0.900"
+      },
+      {
+        "claim_evidence_line_hash": "7b82a41b7ba347910227dcb1c652d72fee677b55f6c25a5be19adebb81b58362",
+        "claim_evidence_row_hash": "558fd5cadbabf4b73630ab5e4f99947d715ffa4ec0168cb335915d18434853fd",
+        "claim_hash_prefix": "71e11e089ebe",
+        "claim_index": 3,
+        "end_char": 51,
+        "evidence_span_prefix": "71e11e089ebe",
+        "source_label": "S2",
+        "start_char": 0,
+        "support": "0.900"
+      },
+      {
+        "claim_evidence_line_hash": "9fd9af95b3e87e9b8ed0dfd567b9efb6ee003667da8490ab166ccd3b2fa079e2",
+        "claim_evidence_row_hash": "323ddfbdaf8047d2e377a3010da64afbad9d36f54d951b81778070e968753d0d",
+        "claim_hash_prefix": "82b19c7059e7",
+        "claim_index": 4,
+        "end_char": 164,
+        "evidence_span_prefix": "82b19c7059e7",
+        "source_label": "S2",
+        "start_char": 52,
+        "support": "0.900"
+      },
+      {
+        "claim_evidence_line_hash": "19b9d12b6681ed260d29dfb9289e84e02ffb4fc7418348a7a4d7e49f5a49c02c",
+        "claim_evidence_row_hash": "047dd2b03c189905f4c92570e57d28fbecbb0a72f3b0314fad3e25a4a3876ae9",
+        "claim_hash_prefix": "28528b6fc0db",
+        "claim_index": 5,
+        "end_char": 136,
+        "evidence_span_prefix": "28528b6fc0db",
+        "source_label": "S3",
+        "start_char": 0,
+        "support": "0.900"
+      },
+      {
+        "claim_evidence_line_hash": "f911af3e1d543f0ac16ccb5433789f5bb46621ceada92afcd79043cb0ef31e85",
+        "claim_evidence_row_hash": "10f672dec4ab44b9533f0cf60bf5b9180aa55172685ff31c28eb8991245df318",
+        "claim_hash_prefix": "a9ed8431a259",
+        "claim_index": 6,
+        "end_char": 262,
+        "evidence_span_prefix": "a9ed8431a259",
+        "source_label": "S3",
+        "start_char": 137,
+        "support": "0.900"
+      }
+    ],
+    "claim_span_root": "adfcf93fb87bcae632fbc99c941c2437649c0d5105bc7dffbc37435d4218f081",
+    "footer_source_label_root": "ca9bd69fb924f20108fc78fa2add7b70858bd43d8d963fd5a2cab41db2a05302",
+    "parse_warning_hashes": [],
+    "source_footer_rows": [
+      {
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "claim_count": 2,
+        "confidence_level": "verified",
+        "content_hash_prefix": "e94efa6d9bb3",
+        "evidence_span_prefixes": [
+          "399e7ff82b80",
+          "6ea90fbdd0fb"
+        ],
+        "footer_line_hash": "777c1e6d21857687f797e1bb374bcad8ee5086d40d7dcd64ede2066022216e87",
+        "label": "S1",
+        "payout_present": true,
+        "source_footer_row_hash": "b5c2956828d6c5cf42979ea180cafd4c9dde9f147378012efc8aa530b29c96b7",
+        "source_rationale_code": "verified_claim_support_identity_rights_royalty",
+        "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "support": "0.295",
+        "text_match": "0.900",
+        "title_hash": "016bad0ee92f5f2a0e24dae8f804657d47dc41859f7d4d36765f6e11a58e47cb"
+      },
+      {
+        "chunk_id": "lina-governance-disputes:c1",
+        "claim_count": 2,
+        "confidence_level": "verified",
+        "content_hash_prefix": "2e332f176133",
+        "evidence_span_prefixes": [
+          "71e11e089ebe",
+          "82b19c7059e7"
+        ],
+        "footer_line_hash": "e0b5800962d48a5aedc89cb0b54c859604f4c0b34688a4f318ad18577aef5dec",
+        "label": "S2",
+        "payout_present": true,
+        "source_footer_row_hash": "053403752bcf2c966c527f9333b0ad70ef102833cf21c99ed85fa1fd4720cee8",
+        "source_rationale_code": "verified_claim_support_identity_rights_royalty",
+        "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "support": "0.208",
+        "text_match": "0.633",
+        "title_hash": "81cec26857b6a90d34b018d993f06c8ffe59c88070dd02721a866b57f90c9d78"
+      },
+      {
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "claim_count": 2,
+        "confidence_level": "verified",
+        "content_hash_prefix": "6029417218e9",
+        "evidence_span_prefixes": [
+          "28528b6fc0db",
+          "a9ed8431a259"
+        ],
+        "footer_line_hash": "463c08b7fe57e602b177cdf3411a3f224d5964b6ee8ce914cbdce3e1458b3759",
+        "label": "S3",
+        "payout_present": true,
+        "source_footer_row_hash": "cf6d6ecd67290cb73f13ff71e6ce5f5423bce82d853cdd5964a222d242124078",
+        "source_rationale_code": "verified_claim_support_identity_rights_royalty",
+        "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "support": "0.341",
+        "text_match": "0.933",
+        "title_hash": "117f96444d93d0ac32ce0e70c76a114e429460e240276731b3df0703cd2f4a76"
+      }
+    ],
+    "source_marker_rows": [
+      {
+        "body_occurrence_count": 1,
+        "first_body_line_hash": "9716e61f06bc18b1f8449115068c45ca720886d6efb264df3147990c581bdafb",
+        "label": "S1",
+        "marker_row_hash": "69a9fa778a0d03b4fb08777c32b47d460ea2adfb35d41d345fea948060f8435b"
+      },
+      {
+        "body_occurrence_count": 1,
+        "first_body_line_hash": "d3408ce1eede9410a51794124f8c03ca7c5215827100117fd244bdb6f3f35f87",
+        "label": "S2",
+        "marker_row_hash": "e9d2d5a94170ca3a3d166a3470715cfc1a771eb8f28a1b3b0a58bef1c3254e93"
+      },
+      {
+        "body_occurrence_count": 1,
+        "first_body_line_hash": "f962eb64c4f71fb7dbc1659c7129d5c3d9a237810d7e808e80d42f03b5a8e830",
+        "label": "S3",
+        "marker_row_hash": "9e19cfedb430d2f9b629e71bae5d1dda1c56ee1edf9aeecc85c3258ca58e0d50"
+      }
+    ]
+  },
+  "privacy": {
+    "answer_text_disclosed": false,
+    "claim_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "source_text_disclosed": false,
+    "stores_line_hashes_not_lines": true,
+    "stores_source_metadata_not_source_text": true
+  },
+  "report_hash": "d4fdacd0d3bd033953f956991bc9bd6cf062d4bca76312c3c1d3581f15d24deb",
+  "report_version": "rdllm-rendered-attribution-audit/v1",
+  "schemas": {
+    "answer_claim_coverage_report": "docs/schemas/answer_claim_coverage_report.schema.json",
+    "citation_footer_contract": "docs/schemas/citation_footer_contract.schema.json",
+    "counterevidence_report": "docs/schemas/counterevidence_report.schema.json",
+    "evidence_sufficiency_report": "docs/schemas/evidence_sufficiency_report.schema.json",
+    "rendered_attribution_audit": "docs/schemas/rendered_attribution_audit.schema.json",
+    "response_envelope": "docs/schemas/response_envelope.schema.json",
+    "source_availability_report": "docs/schemas/source_availability_report.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "b0fb7c5e5c5b09e82a8a39d0a641ef3129c942962d86ba94fca23eb2fbe536fe"
+  },
+  "summary": {
+    "body_citation_label_count": 3,
+    "claim_evidence_row_count": 6,
+    "covered_claim_pair_count": 6,
+    "footer_source_count": 3,
+    "parse_warning_count": 0,
+    "rendered_markdown_attribution_verified": true,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L80"
+  }
+}

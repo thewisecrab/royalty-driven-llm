@@ -1,0 +1,222 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/live_emission_witness.schema.json",
+  "title": "RDLLM Live Emission Witness Report",
+  "type": "object",
+  "required": [
+    "witness_version",
+    "issuer",
+    "created_at",
+    "witness_policy",
+    "artifact_bindings",
+    "preflight_subject",
+    "completion_subject",
+    "chunk_subject_rows",
+    "witness_attestations",
+    "witness_quorum",
+    "checks",
+    "summary",
+    "privacy",
+    "schemas",
+    "live_witness_hash",
+    "signature"
+  ],
+  "properties": {
+    "witness_version": { "const": "rdllm-live-emission-witness/v1" },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "witness_policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_input_level",
+        "required_quorum",
+        "minimum_independent_organizations",
+        "preflight_quorum_required_before_first_chunk",
+        "completion_quorum_required_after_final_chain",
+        "raw_chunk_text_forbidden"
+      ],
+      "properties": {
+        "policy_version": { "const": "rdllm-live-emission-witness-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L84" },
+        "minimum_input_level": { "const": "RDLLM-L83" },
+        "required_quorum": { "type": "integer", "minimum": 1 },
+        "minimum_independent_organizations": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "emission_evidence_enforcement_hash",
+        "streaming_attribution_manifest_hash",
+        "proof_response_hash",
+        "gateway_report_hash",
+        "final_chain_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "preflight_subject": {
+      "type": "object",
+      "required": [
+        "subject_type",
+        "emission_evidence_enforcement_hash",
+        "streaming_manifest_hash",
+        "response_envelope_hash",
+        "answer_claim_coverage_report_hash",
+        "evidence_locked_generation_hash",
+        "proof_response_hash",
+        "gateway_report_hash",
+        "lock_created_at",
+        "generation_started_at",
+        "stream_started_at",
+        "support_required_unit_count",
+        "authorized_emission_unit_count",
+        "emission_unit_root",
+        "subject_hash"
+      ],
+      "additionalProperties": true
+    },
+    "completion_subject": {
+      "type": "object",
+      "required": [
+        "subject_type",
+        "emission_evidence_enforcement_hash",
+        "streaming_manifest_hash",
+        "streamed_output_hash",
+        "final_chain_hash",
+        "chunk_count",
+        "stream_completed_at",
+        "chunk_subject_root",
+        "chunk_row_root",
+        "subject_hash"
+      ],
+      "additionalProperties": true
+    },
+    "chunk_subject_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "chunk_index",
+          "stream_phase",
+          "char_start",
+          "char_end",
+          "char_length",
+          "byte_length",
+          "chunk_hash",
+          "chunk_row_hash",
+          "chain_hash",
+          "previous_chain_hash",
+          "emission_evidence_enforcement_hash",
+          "streaming_manifest_hash",
+          "chunk_admission_requires_witness_quorum",
+          "chunk_subject_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "witness_attestations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "phase",
+          "witness_id",
+          "organization_id",
+          "role",
+          "trust_tier",
+          "observed_at",
+          "policy",
+          "target_certification_level",
+          "subject_hash",
+          "emission_evidence_enforcement_hash",
+          "streaming_manifest_hash",
+          "replay_verdict",
+          "checks",
+          "witness_key_hash",
+          "signature_algorithm",
+          "signature",
+          "attestation_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "witness_quorum": {
+      "type": "object",
+      "required": ["preflight", "completion"],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "emission_evidence_enforcement_ready",
+        "streaming_manifest_committed",
+        "streaming_manifest_hash_matches_l83",
+        "final_chain_hash_matches_l83",
+        "chunk_subjects_cover_stream_chunks",
+        "preflight_witness_quorum_met",
+        "preflight_organization_quorum_met",
+        "completion_witness_quorum_met",
+        "completion_organization_quorum_met",
+        "no_witness_disagreement",
+        "all_attestation_signatures_valid",
+        "input_hashes_reproducible",
+        "private_input_fields_absent"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "witness_count",
+        "required_quorum",
+        "minimum_independent_organizations",
+        "preflight_accepted_witness_count",
+        "completion_accepted_witness_count",
+        "chunk_subject_count",
+        "final_chain_hash",
+        "live_emission_witnessed"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L84" },
+        "minimum_input_level": { "const": "RDLLM-L83" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "context_text_disclosed",
+        "prompt_text_disclosed",
+        "claim_text_disclosed",
+        "stream_chunk_text_disclosed",
+        "stores_hashes_ids_counts_signatures_and_booleans_not_text"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "live_emission_witness",
+        "emission_evidence_enforcement",
+        "streaming_attribution_manifest"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "live_witness_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

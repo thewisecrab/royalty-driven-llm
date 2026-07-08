@@ -1,0 +1,76 @@
+{
+  "attribution_gap": {
+    "accessed_sources": [
+      {
+        "access_id": "srcacc_6a37c3a39fc6e0aa",
+        "access_type": "retrieval",
+        "chunk_id": "reserved-text:c1",
+        "content_hash": "1e126c1db288369d58ab6b52bac1c6438b03fb614e19ef347470fb5dc810e295",
+        "creator_id": "owner",
+        "decision_status": "allowed",
+        "policy_allowed": true,
+        "rank": 1,
+        "registry_allowed": true,
+        "score": 0.39223227,
+        "use": "retrieval",
+        "work_id": "reserved-text"
+      },
+      {
+        "access_id": "srcacc_7b7fd3d86fdf0096",
+        "access_type": "text_match",
+        "chunk_id": "reserved-text:c1",
+        "content_hash": "1e126c1db288369d58ab6b52bac1c6438b03fb614e19ef347470fb5dc810e295",
+        "creator_id": "owner",
+        "decision_status": "blocked_by_policy",
+        "policy_allowed": false,
+        "rank": 1,
+        "registry_allowed": true,
+        "score": 1.0,
+        "use": "generation",
+        "work_id": "reserved-text"
+      }
+    ],
+    "classifications": {
+      "cited_without_access": [],
+      "consumed_without_credit": [],
+      "paid_hidden": [],
+      "policy_withheld": [
+        "reserved-text:c1"
+      ],
+      "registry_withheld": []
+    },
+    "gap_version": "rdllm-attribution-gap/v1",
+    "grounding_status": "rights_blocked",
+    "issues": [],
+    "policy_status": "blocked",
+    "registry_status": "clear",
+    "report_hash": "dd92b532d35a42daf53be3fed8c749d1b4e9f949798d6b4c25638aecdc8798fe",
+    "scores": {
+      "allowed_credit_coverage": null,
+      "attribution_gap_rate": 0.0,
+      "citation_efficiency": 0.0,
+      "credit_efficiency": 1.0,
+      "payout_visibility": null
+    },
+    "summary": {
+      "access_record_count": 2,
+      "accessed_source_count": 1,
+      "allowed_accessed_source_count": 0,
+      "cited_without_access_count": 0,
+      "consumed_without_credit_count": 0,
+      "credited_source_count": 1,
+      "escrow_accounts": [
+        "rights_conflict_escrow"
+      ],
+      "paid_hidden_count": 0,
+      "paid_source_count": 0,
+      "policy_withheld_count": 1,
+      "registry_withheld_count": 0,
+      "visible_source_count": 0
+    },
+    "verdict": "escrowed"
+  },
+  "audit_errors": [],
+  "event_hash": "ba500959cce35f395b22f84b36454684258582da7ea26913c1e39aa553b27f4f",
+  "event_id": "evt_ba500959cce35f39"
+}

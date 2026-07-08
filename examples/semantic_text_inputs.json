@@ -1,0 +1,16 @@
+{
+  "outputs": [
+    {
+      "input_id": "semantic_consent_market_001",
+      "prompt": "How should an AI licensing market protect creators?",
+      "output": "A creator licensing exchange should let artists authorize use, choose license terms, dispute duplicate owner claims, and ask for appeal when attribution is weak.",
+      "gross_revenue": "1.00"
+    },
+    {
+      "input_id": "semantic_unmatched_001",
+      "prompt": "What did the observation satellite see?",
+      "output": "The satellite detected a cold methane plume above a distant moon and mapped its seasonal movement.",
+      "gross_revenue": "1.00"
+    }
+  ]
+}

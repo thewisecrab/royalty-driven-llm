@@ -1,0 +1,221 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/grounded_source_footer.schema.json",
+  "title": "RDLLM Grounded Source Footer",
+  "type": "object",
+  "required": [
+    "version",
+    "issued_at",
+    "issuer",
+    "case",
+    "artifact_bindings",
+    "footer_display",
+    "footer_rows",
+    "claim_rows",
+    "proof_rows",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "grounded_source_footer_hash",
+    "signature"
+  ],
+  "properties": {
+    "version": {
+      "const": "rdllm-grounded-source-footer/v1"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "case": {
+      "type": "object",
+      "required": ["case_id", "status"],
+      "properties": {
+        "case_id": {
+          "type": "string"
+        },
+        "status": {
+          "enum": ["ready", "needs_review"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "citation_footer_contract_hash",
+        "rendered_attribution_audit_hash",
+        "source_confidence_report_hash",
+        "source_availability_report_hash",
+        "evidence_region_binding_report_hash",
+        "citation_reliance_receipt_hash",
+        "license_transaction_receipt_hash",
+        "citation_footer_contract_hash_reproducible",
+        "rendered_attribution_audit_hash_reproducible",
+        "source_confidence_report_hash_reproducible",
+        "source_availability_report_hash_reproducible",
+        "evidence_region_binding_report_hash_reproducible",
+        "citation_reliance_receipt_hash_reproducible",
+        "license_transaction_receipt_hash_reproducible"
+      ],
+      "additionalProperties": true
+    },
+    "footer_display": {
+      "type": "object",
+      "required": [
+        "profile",
+        "footer_hash",
+        "source_line_count",
+        "claim_line_count",
+        "source_label_order"
+      ],
+      "additionalProperties": true
+    },
+    "footer_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "display_order",
+          "label",
+          "display_label",
+          "title",
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "confidence_level",
+          "confidence_score",
+          "supported_claim_count",
+          "source_rationale",
+          "source_rationale_hash",
+          "rendered_in_footer",
+          "source_confidence_verified",
+          "source_available",
+          "claim_span_coverage",
+          "citation_reliance_covered",
+          "license_transaction_covered",
+          "footer_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "claim_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_index",
+          "claim_hash",
+          "source_label",
+          "display_anchor",
+          "evidence_span_prefix",
+          "confidence_level",
+          "rendered_claim_evidence_present",
+          "region_id",
+          "region_verified",
+          "public_location",
+          "location_hash",
+          "region_hash",
+          "claim_footer_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "proof_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "work_id",
+          "source_uri",
+          "claim_count",
+          "proof_hashes",
+          "verification_endpoint",
+          "well_known_path",
+          "verifier_command",
+          "proof_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "artifact_hashes_reproducible",
+        "visible_footer_source_count_positive",
+        "rendered_footer_matches_contract",
+        "source_confidence_verified",
+        "source_availability_inspectable",
+        "claim_regions_publicly_bound",
+        "footer_claims_have_source_rows",
+        "footer_rows_have_claims",
+        "citation_reliance_covers_visible_sources",
+        "license_transactions_cover_visible_sources",
+        "footer_rows_explain_source_selection",
+        "proof_handles_present",
+        "private_text_not_disclosed"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "grounded_source_footer",
+        "citation_footer_contract",
+        "rendered_attribution_audit",
+        "source_confidence_report",
+        "source_availability_report",
+        "evidence_region_binding_report",
+        "citation_reliance_receipt",
+        "license_transaction_receipt"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "visible_source_count",
+        "claim_row_count",
+        "proof_row_count",
+        "verified_source_count",
+        "public_region_bound_claim_count",
+        "failed_check_count",
+        "user_grounded_footer_supported",
+        "footer_hallucination_resistance_supported",
+        "license_aware_footer_supported",
+        "source_selection_rationale_supported",
+        "source_rationale_count",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["ready", "needs_review"]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L102"
+        }
+      },
+      "additionalProperties": true
+    },
+    "grounded_source_footer_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

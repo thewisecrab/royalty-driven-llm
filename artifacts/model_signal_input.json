@@ -1,0 +1,33 @@
+{
+  "creators": [
+    {
+      "creator_id": "arjun",
+      "name": "Arjun Rao"
+    }
+  ],
+  "event": {
+    "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+    "event_id": "evt_1ed43e106d466249",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05",
+    "output_text": "Royalty-aware answer:\nFor the prompt 'How should AI prove attribution?', the strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]",
+    "prompt_text": "How should AI prove attribution?"
+  },
+  "signals": [
+    {
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "creator_id": "arjun",
+      "signal_id": "signal:arjun-provenance-ledger",
+      "signals": {
+        "activation_similarity": 0.82,
+        "attention_mass": 0.71,
+        "gradient_influence": 0.74,
+        "logprob_delta": 0.86,
+        "memorization_score": 0.65
+      },
+      "source_uri": "registered://works/arjun-provenance-ledger",
+      "title": "Provenance Ledgers for AI Outputs",
+      "work_id": "arjun-provenance-ledger"
+    }
+  ]
+}

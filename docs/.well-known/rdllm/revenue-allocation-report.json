@@ -1,0 +1,171 @@
+{
+  "allocation_policy": {
+    "allocation_mode": "ledger_gross_revenue",
+    "canonical_basis": "ledger_gross_revenue",
+    "currency": "USD",
+    "event_order": "event_id_ascending",
+    "policy_id": "revenue-allocation:ledger-gross",
+    "raw_customer_records_forbidden": true,
+    "requires_ledger_event_gross_match": true,
+    "requires_source_revenue_conservation": true,
+    "rounding": "0.000001",
+    "target_certification_level": "RDLLM-L46"
+  },
+  "checks": {
+    "allocation_mode_supported": true,
+    "creator_pool_conserved_from_allocated_revenue": true,
+    "ledger_events_present": true,
+    "ledger_gross_revenue_matches_allocations": true,
+    "no_duplicate_event_rows": true,
+    "private_billing_fields_absent_from_input": true,
+    "private_billing_fields_absent_from_report": true,
+    "receipt_hashes_bind_events": true,
+    "revenue_source_rows_hash_bound": true,
+    "revenue_sources_present": true,
+    "single_currency_report": true,
+    "source_revenue_conserved_to_event_allocations": true
+  },
+  "commitments": {
+    "allocated_gross_revenue_total": "1.000000",
+    "allocation_policy_hash": "2e77f5af27a8eee364d9333aa6c7f34a1e51d8013152517cb0a3b49f0a27b9fe",
+    "creator_pool_total": "0.550000",
+    "event_allocation_root": "89505cf7e50d490183ecc07e2ff954713fda1cbbbc67e5ed3ae2b28576798d57",
+    "gross_revenue_total": "1.000000",
+    "ledger_gross_revenue_total": "1.000000",
+    "ledger_hash": "594fe2b60c121e1678897cc0957c3bc7e1c0904e3d6096fa0b4fa6c83e775222",
+    "receipt_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "revenue_source_root": "0280b8dd21ff6938d35863be023d2b9a625f9f54f677ffe3d35b878ef4392134"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "event_allocation_rows": [
+    {
+      "allocated_gross_revenue": "1.000000",
+      "allocation_basis": "ledger_gross_revenue",
+      "allocation_row_hash": "6ad0e053b38b889efac046483c258f161249ff0413e67e909d7fd73172080cf0",
+      "basis_weight": "1.00000000",
+      "canonical_basis": "ledger_gross_revenue",
+      "creator_pool_matches_allocation": true,
+      "creator_pool_rate": "0.55",
+      "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+      "event_id": "evt_1ed43e106d466249",
+      "expected_creator_pool": "0.550000",
+      "gross_revenue_matches_ledger": true,
+      "ledger_creator_pool": "0.550000",
+      "ledger_gross_revenue": "1.000000",
+      "receipt_event_hash": "",
+      "receipt_hash": "",
+      "revenue_source_count": 2,
+      "revenue_source_ids": [
+        "revenue:api-meter:demo",
+        "revenue:subscription:demo"
+      ],
+      "royalty_share_root": "dad60e231e4b0b78ecb711f51a332f42d8cf80d8d7e4f15afa8a2eded29dadd7",
+      "source_allocations": [
+        {
+          "allocation_basis": "ledger_gross_revenue",
+          "currency": "USD",
+          "gross_revenue": "0.250000",
+          "source_id": "revenue:api-meter:demo",
+          "source_row_hash": "5edcccf587b05070032090d43dc541add91f7bf204ae0161e269ce532d790a33",
+          "source_type": "api_metering"
+        },
+        {
+          "allocation_basis": "ledger_gross_revenue",
+          "currency": "USD",
+          "gross_revenue": "0.750000",
+          "source_id": "revenue:subscription:demo",
+          "source_row_hash": "db0fd274833ae28b9b97b19a1ea5bdcc5aa88e469560e4e231d3d6363f860966",
+          "source_type": "subscription_pool"
+        }
+      ],
+      "usage_metrics": {
+        "event_count": 1,
+        "output_character_count": 804,
+        "output_token_count": 118,
+        "prompt_token_count": 5,
+        "request_count": 1,
+        "source_access_count": 6,
+        "supported_claim_count": 6,
+        "total_token_count": 123,
+        "visible_source_count": 3
+      }
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "answer_text_disclosed": false,
+    "event_rows_use_hashes_and_aggregate_metrics": true,
+    "invoice_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "raw_billing_records_disclosed": false,
+    "raw_customer_account_disclosed": false,
+    "source_text_disclosed": false,
+    "uses_account_invoice_and_meter_hashes": true
+  },
+  "receipt_rollups": [],
+  "report_hash": "d927e86b83c754197b4c9f28cf00828bff8b29289e9b5a0cc49d7604761d1cd3",
+  "report_version": "rdllm-revenue-allocation-report/v1",
+  "revenue_sources": [
+    {
+      "allocation_basis": "ledger_gross_revenue",
+      "currency": "USD",
+      "gross_revenue": "0.250000",
+      "invoice_text_disclosed": false,
+      "period_end": "2026-05-31",
+      "period_start": "2026-05-01",
+      "raw_account_disclosed": false,
+      "raw_billing_record_disclosed": false,
+      "source_hashes": {
+        "invoice_hash": "ffa23e6b894338b00e0793c0bc4504c21a7f4616d5238f8f2f3c10734db5484f",
+        "meter_event_root": "0ff1d862b195dc79c2574dfe0ff7e02b0a3030d2ab5c990979a5f3548e44f202"
+      },
+      "source_id": "revenue:api-meter:demo",
+      "source_row_hash": "5edcccf587b05070032090d43dc541add91f7bf204ae0161e269ce532d790a33",
+      "source_type": "api_metering"
+    },
+    {
+      "allocation_basis": "ledger_gross_revenue",
+      "currency": "USD",
+      "gross_revenue": "0.750000",
+      "invoice_text_disclosed": false,
+      "period_end": "2026-05-31",
+      "period_start": "2026-05-01",
+      "raw_account_disclosed": false,
+      "raw_billing_record_disclosed": false,
+      "source_hashes": {
+        "billing_record_hash": "ed9bf4887e415e570bf13f375ef50acf0c7a1835e92e671568efb60244eaf35b",
+        "subscription_pool_hash": "a72ba7aec381dd8b0655577218c6f7d1788b3972878b1d49c806e9d0392739ed"
+      },
+      "source_id": "revenue:subscription:demo",
+      "source_row_hash": "db0fd274833ae28b9b97b19a1ea5bdcc5aa88e469560e4e231d3d6363f860966",
+      "source_type": "subscription_pool"
+    }
+  ],
+  "schemas": {
+    "attribution_receipt": "docs/schemas/attribution_receipt.schema.json",
+    "revenue_allocation_report": "docs/schemas/revenue_allocation_report.schema.json",
+    "royalty_statement": "docs/schemas/royalty_statement.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "fb410b23de82d0598e6b26b8bbcbfed45e1dd3bf772d2d16da86d4a8ee0eaba3"
+  },
+  "summary": {
+    "allocated_gross_revenue_total": "1.000000",
+    "allocation_mode": "ledger_gross_revenue",
+    "creator_pool_total": "0.550000",
+    "currency": "USD",
+    "event_count": 1,
+    "expected_creator_pool_total": "0.550000",
+    "gross_revenue_total": "1.000000",
+    "ledger_gross_revenue_total": "1.000000",
+    "private_input_field_paths": [],
+    "private_report_field_paths": [],
+    "receipt_count": 0,
+    "revenue_source_count": 2,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L46",
+    "unallocated_revenue_total": "0.000000"
+  }
+}

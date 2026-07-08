@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/verifier_quorum_report.schema.json",
+  "title": "RDLLM Independent Verifier Quorum Report",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "artifact_status",
+    "verifier_rows",
+    "disagreement_rows",
+    "settlement_gate",
+    "settlement_rows",
+    "commitments",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-verifier-quorum-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_quorum",
+        "minimum_independent_organizations",
+        "required_verdict",
+        "rejected_or_disputed_route",
+        "required_verifier_checks"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-independent-verifier-quorum-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L71" },
+        "minimum_quorum": { "type": "integer", "minimum": 1 },
+        "minimum_independent_organizations": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "required_verdict": { "const": "accepted" }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "artifact_count",
+        "artifact_binding_root",
+        "artifact_hashes_reproducible",
+        "attribution_consensus_report_hash",
+        "provider_card_hash",
+        "certification_report_hash",
+        "integration_profile_hash",
+        "bindings"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_status": {
+      "type": "object",
+      "required": [
+        "attribution_consensus_ready",
+        "attribution_consensus_target_l70",
+        "consensus_creator_pool_conserved",
+        "provider_declares_verifier_quorum_surface",
+        "provider_declares_verifier_quorum_channel",
+        "certification_level_at_least_l70",
+        "integration_profile_ready"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "verifier_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "verifier_id",
+          "organization_id",
+          "role",
+          "trust_tier",
+          "observed_at",
+          "replay_verdict",
+          "artifact_binding_root",
+          "artifact_count",
+          "checks",
+          "verifier_key_hash",
+          "signature_algorithm",
+          "signature",
+          "attestation_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "settlement_gate": {
+      "type": "object",
+      "required": [
+        "decision",
+        "direct_settlement_ready",
+        "escrow_reasons",
+        "accepted_verifier_count",
+        "independent_organization_count"
+      ],
+      "additionalProperties": true
+    },
+    "settlement_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "work_id",
+          "consensus_decision",
+          "settlement_decision",
+          "payout",
+          "escrow_amount",
+          "settlement_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "required_artifacts_bound",
+        "artifact_hashes_reproducible",
+        "attribution_consensus_ready",
+        "attribution_consensus_target_l70",
+        "provider_declares_verifier_quorum",
+        "certification_level_at_least_l70",
+        "integration_profile_ready",
+        "verifier_rows_sign_same_artifact_root",
+        "verifier_signatures_valid",
+        "accepted_verifier_quorum_met",
+        "independent_organization_quorum_met",
+        "no_rejecting_or_disputing_verifiers",
+        "direct_settlement_requires_verifier_quorum",
+        "creator_pool_conserved_or_escrowed",
+        "public_report_has_no_private_field_names",
+        "public_report_uses_no_private_text_fields"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["verifier_quorum_report"],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "accepted_verifier_count",
+        "minimum_quorum",
+        "independent_organization_count",
+        "minimum_independent_organizations",
+        "settlement_decision",
+        "direct_settlement_ready",
+        "settlement_row_count",
+        "creator_pool_conserved_or_escrowed",
+        "offline_verification_supported"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "escrow"] },
+        "target_certification_level": { "const": "RDLLM-L71" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_prompt_disclosed",
+        "private_response_disclosed",
+        "private_source_text_disclosed",
+        "private_finance_payload_disclosed",
+        "verifier_private_notes_disclosed",
+        "report_uses_hashes_signatures_and_decisions"
+      ],
+      "additionalProperties": true
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  }
+}

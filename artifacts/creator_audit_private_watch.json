@@ -1,0 +1,168 @@
+{
+  "checks": {
+    "all_observation_tokens_have_valid_inclusion": true,
+    "l113_monitor_has_no_conflicts": true,
+    "l113_monitor_hash_reproducible": true,
+    "l113_monitor_ready": true,
+    "l113_monitor_shape_valid": true,
+    "observation_tokens_present": true,
+    "private_strings_absent": true,
+    "public_report_has_no_private_field_names": true,
+    "query_tokens_present": true,
+    "raw_identifiers_absent": true,
+    "tokens_unique": true,
+    "watch_key_commitment_present": true,
+    "watch_secret_present": true
+  },
+  "commitments": {
+    "monitor_binding_hash": "76d2136086705457aedf65cbd88b46d102b1cd8c93f4b23b90be4bb92621b54a",
+    "observation_token_root": "9c64d9b9c6ce8ffb74c70e3be0f2f7a5095bc98bde021ba804469669977a920d",
+    "query_token_root": "03a67826ef443bb808c554cef7048d08f97bf98bcc2d6a75c5f710ee5f3ce4cf",
+    "schema": "docs/schemas/creator_audit_private_watch.schema.json"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "creator_audit_private_watch_hash": "46459b8dfbd40168718ccb1e5427ba9b5087072dd8715bcef81d7b1979d9e6ea",
+  "issuer": "rdllm-local-demo",
+  "monitor_binding": {
+    "append_only_violation_count": 0,
+    "conflict_count": 0,
+    "matching_observation_count": 4,
+    "monitor_binding_hash": "76d2136086705457aedf65cbd88b46d102b1cd8c93f4b23b90be4bb92621b54a",
+    "monitor_hash": "8602e3189a02854b79cefc705377901ee7716a1ab21a8890cf4b0ec58d073cd6",
+    "monitor_hash_reproducible": true,
+    "monitor_payload_hash": "d382722262562e4dd6ad48fc31ae4bc26d8a90f3c643f290bde4a893742340ec",
+    "monitor_status": "ready",
+    "monitor_target_level": "RDLLM-L113",
+    "monitor_version": "rdllm-creator-audit-transparency-monitor/v1",
+    "new_observation_count": 4,
+    "provider_set_identifier_count": 1,
+    "query_identifier_count": 1
+  },
+  "observation_token_rows": [
+    {
+      "inclusion_proof_valid": true,
+      "new_observation": true,
+      "sequence": 0,
+      "token_row_hash": "b46134c447231b88f9b2459a763070e6e90d81892d0d9386485f3034a7fbcb61",
+      "watch_token": "45860b1419e4be9c99bdcd637f3dfc5a780d4d56283e448458ec0ff16129e407"
+    },
+    {
+      "inclusion_proof_valid": true,
+      "new_observation": true,
+      "sequence": 1,
+      "token_row_hash": "32f116a3e96bbbd4475990ba89ea6c753fca54212089c0eda2c9811c817e5731",
+      "watch_token": "24dacc3176a2a47a92f0525a874cb3ab18d1c5857a248a133262af38de85258a"
+    },
+    {
+      "inclusion_proof_valid": true,
+      "new_observation": true,
+      "sequence": 2,
+      "token_row_hash": "1f942e23b56fe3f759ed14b68ee49f4ed505a5bb741cc331e7fd87064628b8ea",
+      "watch_token": "4e75020dfe5b7f534a5d882a7cd97f3741bab433efea5d85305b21a03c335a57"
+    },
+    {
+      "inclusion_proof_valid": true,
+      "new_observation": true,
+      "sequence": 3,
+      "token_row_hash": "8e5c9a5f38f98393e0ba5f4fd10569d870dc0fd4fbfa9d83062e5fe0998edb41",
+      "watch_token": "9d94f14acb95fe83f1494a4f6e3bb5ab8b5a9e7c7dfd7da9eb48bbe4c9127925"
+    }
+  ],
+  "policy": {
+    "minimum_input_level": "RDLLM-L113",
+    "oprf_upgrade_path": "RFC9497 VOPRF or POPRF",
+    "profile": "rdllm-creator-audit-private-watch-policy/v1",
+    "raw_query_identifiers_prohibited": true,
+    "raw_subject_identifiers_prohibited": true,
+    "requires_keyed_watch_tokens": true,
+    "requires_l113_monitor": true,
+    "requires_private_watch_secret": true,
+    "target_certification_level": "RDLLM-L114"
+  },
+  "privacy": {
+    "answer_text_disclosed": false,
+    "license_text_disclosed": false,
+    "notice_text_disclosed": false,
+    "payment_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "provider_ids_disclosed": false,
+    "public_artifact_uses_keyed_tokens_counts_roots_and_monitor_hashes": true,
+    "source_text_disclosed": false,
+    "stable_query_identifiers_disclosed": false,
+    "stable_subject_identifiers_disclosed": false,
+    "watch_secret_disclosed": false
+  },
+  "query_token_rows": [
+    {
+      "token_index": 0,
+      "token_row_hash": "e6da3d63186414e4e4e8009f29c7fb681252545856331ee846749f5420f47dc0",
+      "token_type": "expected-federation",
+      "watch_token": "2d8866e6aa2e00a0f5880f37312a396bf078aa8bb54d89754f5f08e28450acc6"
+    },
+    {
+      "token_index": 1,
+      "token_row_hash": "1504be5bb63892581aa6ae6b39ac042e558ad4f6eab5218c04f1bd3bb1030953",
+      "token_type": "expected-participant-index",
+      "watch_token": "350eca3fe6d6e854e554ece5b0818ef297d149251067e83bb4c47c7fda98bf16"
+    },
+    {
+      "token_index": 0,
+      "token_row_hash": "8a02cdd84b538e1ed0e81b7a195f018d58df319190295e1bcac96d4f95d811cc",
+      "token_type": "expected-participant-index",
+      "watch_token": "6d497a31e58ee55264303106cab510893db7aef86a7fad2785d666ea6f0e0591"
+    },
+    {
+      "token_index": 1,
+      "token_row_hash": "5cf98bc1095907c47e3b2258356ddce151f06260e40e81126bf595ebc1d91af7",
+      "token_type": "expected-provider",
+      "watch_token": "1c91cc6c52570e75c9319b92ffcdd2207de1205c4a8a55398f4896560501abca"
+    },
+    {
+      "token_index": 0,
+      "token_row_hash": "d6c5f978f823f006d1b1322123ab82a3a7eb564f45cf0b3a23afb64ca03d5b2d",
+      "token_type": "expected-provider",
+      "watch_token": "f376536b61a003a96c7a5da6634fc5dfe8ed677b0782822461fb23ad19eef9f6"
+    },
+    {
+      "token_index": 0,
+      "token_row_hash": "6d4d91e1389ca8d9f4a32086e76fd990713930bfdb4d47297a213ca579a49a86",
+      "token_type": "provider-set",
+      "watch_token": "4dc70a8a097411a0f5a38eec119a189c4e8143eb90001b581a3bd444474bd9c0"
+    },
+    {
+      "token_index": 0,
+      "token_row_hash": "c8b0e6fa5eaf2ca9a7ef9239fe1846b057b73f2e68c3d2a679375a38c3512a2c",
+      "token_type": "query",
+      "watch_token": "3631ede0bb949d6869d749da05860926e8f24e59e476ac59ed94136754e6ebc7"
+    }
+  ],
+  "schemas": {
+    "creator_audit_private_watch": "docs/schemas/creator_audit_private_watch.schema.json",
+    "creator_audit_transparency_monitor": "docs/schemas/creator_audit_transparency_monitor.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "5e969a2f061938c62b32193191bc9c45d67dd69889bb6032eeb327467de7461e"
+  },
+  "summary": {
+    "conflict_count": 0,
+    "matching_observation_count": 4,
+    "minimum_input_level": "RDLLM-L113",
+    "monitor_status": "ready",
+    "new_observation_token_count": 4,
+    "observation_token_count": 4,
+    "query_token_count": 7,
+    "raw_identifier_count_checked": 19,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L114"
+  },
+  "watch_binding": {
+    "recommended_production_scheme": "RFC9497 VOPRF/POPRF",
+    "token_scheme": "rdllm-hmac-watch-token/v1",
+    "watch_context_hash": "40301502ca4e439ac20296ea02b9471d1d04fba545d6bf742d8585221a0d2025",
+    "watch_id_hash": "8d4d197ac9fa217f74dd183c491ec5e8a4eed93f24eafa5b46aae04c5b28fae9",
+    "watch_key_hash": "cb43bb650c7361ba4984aad810d5e6379c4a450c3b137dca0d4006af82918a97"
+  },
+  "watch_version": "rdllm-creator-audit-private-watch/v1"
+}

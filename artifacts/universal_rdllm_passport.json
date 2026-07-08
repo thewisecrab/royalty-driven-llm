@@ -1,0 +1,1179 @@
+{
+  "adoption_surface_rows": [
+    {
+      "adoption_surface_row_hash": "bcaac86d6c9bff80e0bf25412aad80b931d92a14722689235117e6b0a2ec2ef0",
+      "discovery_catalog_published": true,
+      "discovery_path": "/.well-known/rdllm/assurance-bundle.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "provider_evidence_channel_declared": false,
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "assurance_bundle",
+      "well_known_path": "/.well-known/rdllm/assurance-bundle.json"
+    },
+    {
+      "adoption_surface_row_hash": "77a2a0619e55332df8cfe1c5ab63c72cccb3921be4ce4b0d4430f7aea0caf456",
+      "discovery_catalog_published": false,
+      "discovery_path": "/.well-known/rdllm/composite-foundation-adapter.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "provider_evidence_channel_declared": true,
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "composite_foundation_adapter",
+      "well_known_path": "/.well-known/rdllm/composite-foundation-adapter.json"
+    },
+    {
+      "adoption_surface_row_hash": "80d1211a5bd513b468568aa7055ff9826c07ad222908856bfb19bcb3def56ce1",
+      "discovery_catalog_published": false,
+      "discovery_path": "/.well-known/rdllm.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "provider_evidence_channel_declared": false,
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "discovery_manifest",
+      "well_known_path": "/.well-known/rdllm.json"
+    },
+    {
+      "adoption_surface_row_hash": "8dcb07320b27e2e0eafe73a16193234c1f77766c0f7ef84434e4fe6aae6de66f",
+      "discovery_catalog_published": false,
+      "discovery_path": "/.well-known/rdllm/foundation-provider-conformance.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "provider_evidence_channel_declared": true,
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "foundation_provider_conformance",
+      "well_known_path": "/.well-known/rdllm/foundation-provider-conformance.json"
+    },
+    {
+      "adoption_surface_row_hash": "63a9811ce7df95d675bcbe85a94db4b81e28a5fe558a86e0797ffabefa13750f",
+      "discovery_catalog_published": true,
+      "discovery_path": "/.well-known/rdllm/integration-profile.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "provider_evidence_channel_declared": false,
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "integration_profile",
+      "well_known_path": "/.well-known/rdllm/integration-profile.json"
+    },
+    {
+      "adoption_surface_row_hash": "b40b678243961e5d670209fd36225d30a86f9665fe37a5d037ae094e66a0bfd8",
+      "discovery_catalog_published": false,
+      "discovery_path": "/.well-known/rdllm/proof-dependency-graph.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "provider_evidence_channel_declared": true,
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "proof_dependency_graph",
+      "well_known_path": "/.well-known/rdllm/proof-dependency-graph.json"
+    },
+    {
+      "adoption_surface_row_hash": "f35fc30d4750f5b0567af07936c652ea5e9f6fe31832678ec5e80a7ff6270299",
+      "discovery_catalog_published": true,
+      "discovery_path": "/.well-known/rdllm/provider-attribution-card.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "provider_evidence_channel_declared": false,
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "provider_attribution_card",
+      "well_known_path": "/.well-known/rdllm/provider-attribution-card.json"
+    },
+    {
+      "adoption_surface_row_hash": "33783030e2c18d5331a0bb2b2e36ecb56dee192a3ef3fb771212bbdc0f03f27b",
+      "discovery_catalog_published": true,
+      "discovery_path": "/.well-known/rdllm/universal-content-credential.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "provider_evidence_channel_declared": true,
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "universal_content_credential",
+      "well_known_path": "/.well-known/rdllm/universal-content-credential.json"
+    },
+    {
+      "adoption_surface_row_hash": "a16505a3e9c40c3ce80c70d027021223af49537db768d4e9d310e4fd9116dc07",
+      "discovery_catalog_published": false,
+      "discovery_path": "/.well-known/rdllm/universal-foundation-model-contract.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "provider_evidence_channel_declared": true,
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "universal_foundation_model_contract",
+      "well_known_path": "/.well-known/rdllm/universal-foundation-model-contract.json"
+    },
+    {
+      "adoption_surface_row_hash": "e31ed3896a91626cc54dc0b526f2438d4a1170c6d7aaab6be4291b35837cca43",
+      "discovery_catalog_published": false,
+      "discovery_path": "/.well-known/rdllm/universal-invocation-coverage.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "provider_evidence_channel_declared": true,
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "universal_invocation_coverage",
+      "well_known_path": "/.well-known/rdllm/universal-invocation-coverage.json"
+    },
+    {
+      "adoption_surface_row_hash": "afb6993d380192bc5b8315f61f6e00ce5854e69ce0904dfc5ca167d26df3c79d",
+      "discovery_catalog_published": false,
+      "discovery_path": "/.well-known/rdllm/universal-invocation-guard.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "provider_evidence_channel_declared": true,
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "universal_invocation_guard",
+      "well_known_path": "/.well-known/rdllm/universal-invocation-guard.json"
+    },
+    {
+      "adoption_surface_row_hash": "6d6410dfa444e251af1d3fb076eb4286f9f60d5ceba93eafde100c1ffce583e4",
+      "discovery_catalog_published": false,
+      "discovery_path": "/.well-known/rdllm/universal-invocation-witness.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "provider_evidence_channel_declared": true,
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "universal_invocation_witness",
+      "well_known_path": "/.well-known/rdllm/universal-invocation-witness.json"
+    },
+    {
+      "adoption_surface_row_hash": "c7dc6ebfc9387629934a0675213891f67035b63c274f4f6a95fc2051fd563d82",
+      "discovery_catalog_published": false,
+      "discovery_path": "/.well-known/rdllm/universal-rdllm-passport.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "provider_evidence_channel_declared": true,
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "universal_rdllm_passport",
+      "well_known_path": "/.well-known/rdllm/universal-rdllm-passport.json"
+    }
+  ],
+  "artifact_bindings": {
+    "artifact_binding_root": "2c692d7d7b49b711616b3684fbe2d63502a6e5cdeb2d2a83aed24d8448f5ad6b",
+    "artifact_count": 20,
+    "bindings": [
+      {
+        "artifact_binding_hash": "7604f49cb5c81392309b5755fce1da167d1daa5678cfc8d31d95047823e7d48d",
+        "declared_hash": "d5c49b4aebe0b012145dc3f2ca7b7def44393b683f025298ee11d2c98090cb37",
+        "hash_reproducible": true,
+        "name": "certification_report",
+        "payload_hash": "181b00b608b3a29f36b87550f896402f624a879da8395877bb057df095ba86d1",
+        "present": true,
+        "status": "passed",
+        "target_level": "RDLLM-L139",
+        "version": "rdllm-certification/v1"
+      },
+      {
+        "artifact_binding_hash": "9f00a3e3790d79a95e2ea85575f1e25262411c62f7f7c72e172774cafc453d0e",
+        "declared_hash": "17fbe2e6d04c174d2a152f38ff27952838f3d2744bdbb6c3eb11a2eb98f17648",
+        "hash_reproducible": true,
+        "name": "certification_attestation",
+        "payload_hash": "80ff00d72cc5ab41aaacef7d3e844a1c450c44b4f1a21bba4f64fab01fbd6767",
+        "present": true,
+        "status": "attested",
+        "target_level": "RDLLM-L52",
+        "version": "rdllm-certification-attestation/v1"
+      },
+      {
+        "artifact_binding_hash": "a0ab9fa7c90f8127425e1a2bad399e1552cf3d7bca486b50f4066ebf90fddaff",
+        "declared_hash": "1d387850f5affb058814f41daea8890eeebeee3abbd5dcfa224fa2d84464d196",
+        "hash_reproducible": true,
+        "name": "provider_attribution_card",
+        "payload_hash": "5a9d6183aa02fea6861e2ea8c98cd8f46163ab3c98264563055917468c94df58",
+        "present": true,
+        "status": "",
+        "target_level": "",
+        "version": "rdllm-provider-attribution-card/v1"
+      },
+      {
+        "artifact_binding_hash": "ab43d4f637412c7c9ae69397dbebaa61908f125c88a3dce717f039990d9563fe",
+        "declared_hash": "822fd2d90b04f944293395827aa92d1cecf96e069d18d2c253d7ce1276ea2355",
+        "hash_reproducible": true,
+        "name": "training_content_summary",
+        "payload_hash": "dd7427379f6a62baac31e6bb3bb7a3b1782919675e3eb27e31e33116b8a70655",
+        "present": true,
+        "status": "",
+        "target_level": "",
+        "version": "rdllm-training-content-summary/v1"
+      },
+      {
+        "artifact_binding_hash": "50895af7b1c0f69f323180b9552e10f2a98bd25452a6acfe2bb40e7fe7acbd7a",
+        "declared_hash": "e7a0c893355e17a2448052a106de7ebf294754f4a377429a7376367e73088566",
+        "hash_reproducible": true,
+        "name": "integration_profile",
+        "payload_hash": "46c85002370b8f2914ff1370fb5261613c6de4c8f554787c899add1cfd060dc5",
+        "present": true,
+        "status": "ready",
+        "target_level": "",
+        "version": "rdllm-integration-profile/v1"
+      },
+      {
+        "artifact_binding_hash": "fc0c37c3bbf4dd3155f10af1c627999111461915d7a3220be40a8d5dfb03b3a5",
+        "declared_hash": "f458f403884f2d62654a853061785ff9c765c6806407f4ac97c14aa763b87690",
+        "hash_reproducible": true,
+        "name": "discovery_manifest",
+        "payload_hash": "2628d2de2dd90580c8067a1d0bf963212a768e2b2f01ad25c8c91ea8d902a2e4",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L139",
+        "version": "rdllm-discovery-manifest/v1"
+      },
+      {
+        "artifact_binding_hash": "2b5f7bc1a07ee7749082cc94d1a8acfadf16eb232265cb9580ca5e00eb5b81d4",
+        "declared_hash": "ab5ac503ea171f6c6b46116fc153b3f5a83bb2e06f4b16ece86bcedc343014e4",
+        "hash_reproducible": true,
+        "name": "assurance_bundle",
+        "payload_hash": "e087ea8023a43f5817b5d4b1e406820c3320ca576bef6f7c63461bcf5c9149b7",
+        "present": true,
+        "status": "",
+        "target_level": "",
+        "version": "rdllm-assurance-bundle/v1"
+      },
+      {
+        "artifact_binding_hash": "81a5f849d340df1338e9001bec4d2d07e4b4183f657646c06c0ef688a5ebeac0",
+        "declared_hash": "bd68db5cf5ed314fa9c827cc4094074c5b03220d9081be86b7e574b42340f010",
+        "hash_reproducible": true,
+        "name": "proof_dependency_graph",
+        "payload_hash": "0fc93fed6a3e63bc726a3d2118e31c743a5b6faf46754c71f7c3e26be4db9d77",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L139",
+        "version": "rdllm-proof-dependency-graph/v1"
+      },
+      {
+        "artifact_binding_hash": "c4170d0975a8b74ebe951c6a6df67a763bd7e7d239fe109805a67e712c5e09c1",
+        "declared_hash": "6656bbf9c9129bfe19120e2a2655d979890e87e457dd722280ea1c5d85e75864",
+        "hash_reproducible": true,
+        "name": "composite_foundation_adapter",
+        "payload_hash": "236c48bd276f72e82b66e73d9e862415a712e2a11549db6d99e48fb7facd2cce",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L125",
+        "version": "rdllm-composite-foundation-adapter/v1"
+      },
+      {
+        "artifact_binding_hash": "4be4dc1a12b3f6d00ecd05b24d7889a573ec8ead4698ae91e78f0e54fa5f6836",
+        "declared_hash": "db1fdda0749269946a8f5b65b2c86bcd42c54250e3c8a919a984f3558a2fad2f",
+        "hash_reproducible": true,
+        "name": "foundation_provider_conformance",
+        "payload_hash": "5a3c261ad0658e3109a36132bbae59d641b556161616abe2a1487a2ce3a36c00",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L126",
+        "version": "rdllm-foundation-provider-conformance/v1"
+      },
+      {
+        "artifact_binding_hash": "bf6309bd35b3e565114cb7fe217d6b0951c4610e9b4f496f68fc251f32a035d4",
+        "declared_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+        "hash_reproducible": true,
+        "name": "foundation_runtime_adapter",
+        "payload_hash": "6d0b65304db8a76cf8450c166aad41bc95366142a6b596aa9a39e6c50ea8b3ff",
+        "present": true,
+        "status": "released",
+        "target_level": "RDLLM-L127",
+        "version": "rdllm-foundation-runtime-adapter/v1"
+      },
+      {
+        "artifact_binding_hash": "da39e5ce0ce58c05b494347945ba84b0e37460765630c99abbd81c2108b5a950",
+        "declared_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+        "hash_reproducible": true,
+        "name": "foundation_runtime_router",
+        "payload_hash": "e5e580b7bc0162694b5beae61cc84bace39af97053231074e12727b0a503b0a4",
+        "present": true,
+        "status": "released",
+        "target_level": "RDLLM-L128",
+        "version": "rdllm-foundation-runtime-router/v1"
+      },
+      {
+        "artifact_binding_hash": "3d0171e49faad7796f1c978ef6a8ed027a4e2961acdcf3c26a7f13f193c8c4c4",
+        "declared_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+        "hash_reproducible": true,
+        "name": "foundation_model_deployment_attestation",
+        "payload_hash": "d090f8544dc8bf7e79e15760915ea48bc1e0d1da5131b16dc506bc8c2cc223c6",
+        "present": true,
+        "status": "released",
+        "target_level": "RDLLM-L129",
+        "version": "rdllm-foundation-model-deployment-attestation/v1"
+      },
+      {
+        "artifact_binding_hash": "9432fa0e4d4847e8fb0e8e7f05c68aa7262f0e2ac186a7659508d0f96b9a03a2",
+        "declared_hash": "1a7f07d1b8ed7aa665531a4678f15e4ffe69a0d8f8f472bb459d361b3af46f07",
+        "hash_reproducible": true,
+        "name": "universal_composition_receipt",
+        "payload_hash": "77351d9ec800e1d7de099c6a249fc90b4b8663cb01141b43b8cbd35f189ec08a",
+        "present": true,
+        "status": "released",
+        "target_level": "RDLLM-L130",
+        "version": "rdllm-universal-composition-receipt/v1"
+      },
+      {
+        "artifact_binding_hash": "e67e7b286e296e54013a59f1fb69b6af3b604dc5435f1e7b83d2c82f67b987ca",
+        "declared_hash": "891ec7d627a812a0b26fea27e2a4fe68759aee39251b7660fd3a92334c29002a",
+        "hash_reproducible": true,
+        "name": "universal_composition_settlement",
+        "payload_hash": "42e06dbd52746bf9a509450e0bcdfdade0cb1f8a0d437c7dd3d98134489611a1",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L131",
+        "version": "rdllm-universal-composition-settlement/v1"
+      },
+      {
+        "artifact_binding_hash": "e75f5c31002f6417a0524b9c3628281708e8a0daa8615dd43717c41c7aeae037",
+        "declared_hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44",
+        "hash_reproducible": true,
+        "name": "universal_foundation_model_contract",
+        "payload_hash": "49d976afd68011625db26bf61124e9c77e1b044feb674ece54294e018121ad47",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L132",
+        "version": "rdllm-universal-foundation-model-contract/v1"
+      },
+      {
+        "artifact_binding_hash": "e99ac661cae8c4bd67fba720e7243b13224126757d6eb76a4651dbff20878dc1",
+        "declared_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+        "hash_reproducible": true,
+        "name": "universal_invocation_guard",
+        "payload_hash": "588b39591f2eaa1ed7c0681919416a376cc360426629810a5d688dac19ab31b3",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L133",
+        "version": "rdllm-universal-invocation-guard/v1"
+      },
+      {
+        "artifact_binding_hash": "71b7f69dfb419a489e93f97b762924e6fe47d0fd60ea803a35d68cee2d09937b",
+        "declared_hash": "1834caa22034427625bbdaec3bbda5dff28d22f92284e3f51f16aed673d00193",
+        "hash_reproducible": true,
+        "name": "universal_invocation_coverage",
+        "payload_hash": "9a7275fb998f6f96d1d2fb44456393343383f3e26939245ed2c21a8fdb59387a",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L134",
+        "version": "rdllm-universal-invocation-coverage/v1"
+      },
+      {
+        "artifact_binding_hash": "1dc3a43c5a7117cbf9e5f961ba0c79211ea876e8c68c6b3c7956e606e0879276",
+        "declared_hash": "e57fba2de0499a538d367dc61ae777569c52cf0944f7053bd91eaeadec49a382",
+        "hash_reproducible": true,
+        "name": "universal_invocation_witness",
+        "payload_hash": "24c287a23e117313d0f3d259d4ebf61766d35bc19b7d7c1b24fceab439071861",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L135",
+        "version": "rdllm-universal-invocation-witness/v1"
+      },
+      {
+        "artifact_binding_hash": "7fe5a610309e630d49a407f4af9c2f6a2b9ada9f17291d85f43933b45635943c",
+        "declared_hash": "1d0a36eb68a0f71f34ae61e5e94f6f5d53fed85562d1b93e110e58b021ba8c37",
+        "hash_reproducible": true,
+        "name": "universal_content_credential",
+        "payload_hash": "9d87b67e94da42125785d7de87543fa79e452597510a06bb5a3af6e03a68e100",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L136",
+        "version": "rdllm-universal-content-credential/v1"
+      }
+    ]
+  },
+  "checks": {
+    "artifact_hashes_reproducible": true,
+    "assurance_bundle_includes_l136_chain": true,
+    "certification_attests_l136_report": true,
+    "certification_level_at_least_l136": true,
+    "composition_and_settlement_ready": true,
+    "content_credential_binds_sources_payouts_and_invocations": true,
+    "discovery_manifest_exposes_passport_path": true,
+    "discovery_manifest_publishes_l136_or_better": true,
+    "foundation_adapter_conformance_and_contract_ready": true,
+    "integration_profile_declares_passport_surface": true,
+    "invocation_guard_coverage_witness_ready": true,
+    "offline_verification_supported": true,
+    "private_strings_absent": true,
+    "proof_dependency_graph_ready_and_acyclic": true,
+    "provider_card_declares_passport": true,
+    "provider_families_cover_required_set": true,
+    "public_adoption_surfaces_published": true,
+    "public_report_has_no_private_field_names": true,
+    "public_verifier_commands_declared": true,
+    "required_core_artifacts_present": true,
+    "research_controls_mapped_to_mechanism": true,
+    "runtime_chain_released": true,
+    "universal_content_credential_ready_l136": true
+  },
+  "commitments": {
+    "adoption_surface_root": "f07a9e8906d61a5c91d15181362d93fe31aa0d60da032171fe99764d86c80e10",
+    "artifact_binding_root": "2c692d7d7b49b711616b3684fbe2d63502a6e5cdeb2d2a83aed24d8448f5ad6b",
+    "assurance_bundle_hash": "ab5ac503ea171f6c6b46116fc153b3f5a83bb2e06f4b16ece86bcedc343014e4",
+    "core_proof_root": "2fd4332282743aa05d5f8bf10a056ee3254800f0befd511562dbd419bf095825",
+    "passport_commitment_hash": "94c0017b5d5a0cb5f83c0da4fa1765ca664ecc5caed762ea84169ecc6a38ec5a",
+    "proof_dependency_graph_hash": "bd68db5cf5ed314fa9c827cc4094074c5b03220d9081be86b7e574b42340f010",
+    "provider_family_root": "4373f18be5d03df8a0bced509d02c6f80ee95faa62d0b86e5ebd2dd3b7674fe9",
+    "research_alignment_root": "c2e69b436f0c8f04aa4c83c4103c185ef42376bcb5ec248895b43c422d72f9a6",
+    "universal_content_credential_hash": "1d0a36eb68a0f71f34ae61e5e94f6f5d53fed85562d1b93e110e58b021ba8c37",
+    "universal_foundation_model_contract_hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44",
+    "verifier_command_root": "cbf94e0a32477974842e1313ccdb125421e07cd176c5ccec556d338f00d6ae42"
+  },
+  "core_proof_rows": [
+    {
+      "core_proof_row_hash": "96b4e75cac9ae3f3b29573d047fdcf6642f084ed1ffa1af9fc1af80cdd87bc7f",
+      "declared_hash": "d5c49b4aebe0b012145dc3f2ca7b7def44393b683f025298ee11d2c98090cb37",
+      "hash_reproducible": true,
+      "name": "certification_report",
+      "present": true,
+      "status": "passed",
+      "target_level": "RDLLM-L139"
+    },
+    {
+      "core_proof_row_hash": "ee2515dd92e88718614c21214040776e4ff4abd20756dbb9440d3f0cdf99d41f",
+      "declared_hash": "17fbe2e6d04c174d2a152f38ff27952838f3d2744bdbb6c3eb11a2eb98f17648",
+      "hash_reproducible": true,
+      "name": "certification_attestation",
+      "present": true,
+      "status": "attested",
+      "target_level": "RDLLM-L52"
+    },
+    {
+      "core_proof_row_hash": "14eaca578041b2fe04388f48282768f2395def5a61d9da73d1208058e516bb3e",
+      "declared_hash": "1d387850f5affb058814f41daea8890eeebeee3abbd5dcfa224fa2d84464d196",
+      "hash_reproducible": true,
+      "name": "provider_attribution_card",
+      "present": true,
+      "status": "",
+      "target_level": ""
+    },
+    {
+      "core_proof_row_hash": "8ac77d8aa362c79a537f6db3e80588d26cedaa4a144f602fe4273d627043c901",
+      "declared_hash": "822fd2d90b04f944293395827aa92d1cecf96e069d18d2c253d7ce1276ea2355",
+      "hash_reproducible": true,
+      "name": "training_content_summary",
+      "present": true,
+      "status": "",
+      "target_level": ""
+    },
+    {
+      "core_proof_row_hash": "90e0f7232451b85a507a4ca9c6e980e14929a591b91308124446434425575ca3",
+      "declared_hash": "e7a0c893355e17a2448052a106de7ebf294754f4a377429a7376367e73088566",
+      "hash_reproducible": true,
+      "name": "integration_profile",
+      "present": true,
+      "status": "ready",
+      "target_level": ""
+    },
+    {
+      "core_proof_row_hash": "c74d658e717026b1109094c119ec04b429888fdb5c2786ec226faa89517b0782",
+      "declared_hash": "f458f403884f2d62654a853061785ff9c765c6806407f4ac97c14aa763b87690",
+      "hash_reproducible": true,
+      "name": "discovery_manifest",
+      "present": true,
+      "status": "ready",
+      "target_level": "RDLLM-L139"
+    },
+    {
+      "core_proof_row_hash": "54a5f3abe17e9dea8a1ef5654ba8c49fd52acb26758837fa24544a7b0bf8e3f6",
+      "declared_hash": "ab5ac503ea171f6c6b46116fc153b3f5a83bb2e06f4b16ece86bcedc343014e4",
+      "hash_reproducible": true,
+      "name": "assurance_bundle",
+      "present": true,
+      "status": "",
+      "target_level": ""
+    },
+    {
+      "core_proof_row_hash": "dd9939bace2dfcd24ad9e4d2590b9a56e9a0cf972617df3d33c902e9e3dd4030",
+      "declared_hash": "bd68db5cf5ed314fa9c827cc4094074c5b03220d9081be86b7e574b42340f010",
+      "hash_reproducible": true,
+      "name": "proof_dependency_graph",
+      "present": true,
+      "status": "ready",
+      "target_level": "RDLLM-L139"
+    },
+    {
+      "core_proof_row_hash": "0dced9632b134138bc33d4b926ff367763c7f6072970af3b9f6b8e74e05c8f2d",
+      "declared_hash": "6656bbf9c9129bfe19120e2a2655d979890e87e457dd722280ea1c5d85e75864",
+      "hash_reproducible": true,
+      "name": "composite_foundation_adapter",
+      "present": true,
+      "status": "ready",
+      "target_level": "RDLLM-L125"
+    },
+    {
+      "core_proof_row_hash": "0b14aaef50a5d953f5af1eec4570fcda6db247b98c15fef2f8cd94d5fea42cde",
+      "declared_hash": "db1fdda0749269946a8f5b65b2c86bcd42c54250e3c8a919a984f3558a2fad2f",
+      "hash_reproducible": true,
+      "name": "foundation_provider_conformance",
+      "present": true,
+      "status": "ready",
+      "target_level": "RDLLM-L126"
+    },
+    {
+      "core_proof_row_hash": "99d44f4b8e2320bacc76e4ea36f2c15a042af7a8e1eeded819c570f45361a3ff",
+      "declared_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+      "hash_reproducible": true,
+      "name": "foundation_runtime_adapter",
+      "present": true,
+      "status": "released",
+      "target_level": "RDLLM-L127"
+    },
+    {
+      "core_proof_row_hash": "f54ca1ec05fdb874fb6782f3d2b27d0ad7916f106170cbe3634a9152a97dcf5d",
+      "declared_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+      "hash_reproducible": true,
+      "name": "foundation_runtime_router",
+      "present": true,
+      "status": "released",
+      "target_level": "RDLLM-L128"
+    },
+    {
+      "core_proof_row_hash": "173f6d8f5cf33d45b01ed7268f0f1345ac79fc5e0436407b3bd06d7ec9c93f86",
+      "declared_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+      "hash_reproducible": true,
+      "name": "foundation_model_deployment_attestation",
+      "present": true,
+      "status": "released",
+      "target_level": "RDLLM-L129"
+    },
+    {
+      "core_proof_row_hash": "810d8c04a23ed43d036e230fdcad7c4f8505d11ff8ce149a99ffe595b4d892cd",
+      "declared_hash": "1a7f07d1b8ed7aa665531a4678f15e4ffe69a0d8f8f472bb459d361b3af46f07",
+      "hash_reproducible": true,
+      "name": "universal_composition_receipt",
+      "present": true,
+      "status": "released",
+      "target_level": "RDLLM-L130"
+    },
+    {
+      "core_proof_row_hash": "2b1449666805018beec9667e1e39c88468f83e77baa0deef1734c542d9234d5d",
+      "declared_hash": "891ec7d627a812a0b26fea27e2a4fe68759aee39251b7660fd3a92334c29002a",
+      "hash_reproducible": true,
+      "name": "universal_composition_settlement",
+      "present": true,
+      "status": "ready",
+      "target_level": "RDLLM-L131"
+    },
+    {
+      "core_proof_row_hash": "01466c87c6c7a95e4373a35b301cbb25f486b1b0bf6948fdfa50c38e9ebd7c5d",
+      "declared_hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44",
+      "hash_reproducible": true,
+      "name": "universal_foundation_model_contract",
+      "present": true,
+      "status": "ready",
+      "target_level": "RDLLM-L132"
+    },
+    {
+      "core_proof_row_hash": "6f362884ef07768a6090f5b7ca2e94a8afaea94496a420a139a6fdf9ee5c39a7",
+      "declared_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+      "hash_reproducible": true,
+      "name": "universal_invocation_guard",
+      "present": true,
+      "status": "ready",
+      "target_level": "RDLLM-L133"
+    },
+    {
+      "core_proof_row_hash": "87ae3ff455a978db1a7f5f205c9733aad82756f5d48c8d97aae5d8fe91bd4bd1",
+      "declared_hash": "1834caa22034427625bbdaec3bbda5dff28d22f92284e3f51f16aed673d00193",
+      "hash_reproducible": true,
+      "name": "universal_invocation_coverage",
+      "present": true,
+      "status": "ready",
+      "target_level": "RDLLM-L134"
+    },
+    {
+      "core_proof_row_hash": "24d735c176f1066cef6f818b847aae8b082b1e02d98ab7aa71ade96121b83cdc",
+      "declared_hash": "e57fba2de0499a538d367dc61ae777569c52cf0944f7053bd91eaeadec49a382",
+      "hash_reproducible": true,
+      "name": "universal_invocation_witness",
+      "present": true,
+      "status": "ready",
+      "target_level": "RDLLM-L135"
+    },
+    {
+      "core_proof_row_hash": "49c4c2efe92cb0ad4231a1bfaa7e3d9a237ef957de6df636bfec0afaf048dc60",
+      "declared_hash": "1d0a36eb68a0f71f34ae61e5e94f6f5d53fed85562d1b93e110e58b021ba8c37",
+      "hash_reproducible": true,
+      "name": "universal_content_credential",
+      "present": true,
+      "status": "ready",
+      "target_level": "RDLLM-L136"
+    }
+  ],
+  "created_at": "2026-06-01T23:45:17Z",
+  "interoperability_profile": {
+    "c2pa_compatible_content_credentials": true,
+    "content_credential_path": "/.well-known/rdllm/universal-content-credential.json",
+    "mcp_resource_compatible_public_paths": true,
+    "offline_verification_supported": true,
+    "opentelemetry_genai_trace_binding": true,
+    "profile": "rdllm-universal-interoperability-profile/v1",
+    "provider_family_count": 10,
+    "scitt_statement_subject_compatible_hashes": true,
+    "supported_provider_families": [
+      "amazon_bedrock_converse",
+      "anthropic_messages",
+      "azure_openai_responses",
+      "cohere_chat",
+      "google_gemini",
+      "meta_llama",
+      "mistral_chat",
+      "openai_compatible_chat",
+      "openai_responses",
+      "xai_grok"
+    ],
+    "w3c_verifiable_credential_compatible_signatures": true,
+    "well_known_discovery_path": "/.well-known/rdllm.json",
+    "well_known_passport_path": "/.well-known/rdllm/universal-rdllm-passport.json"
+  },
+  "issuer": "rdllm-local-demo",
+  "passport_decision": {
+    "decision": "publish_universal_rdllm_passport",
+    "failed_checks": [],
+    "failure_modes": [],
+    "release_authorized": true,
+    "safe_output_policy": "emit_l137_passport_and_source_footer"
+  },
+  "passport_policy": {
+    "minimum_input_level": "RDLLM-L136",
+    "on_missing_l136_content_credential": "block_passport_publication",
+    "on_missing_provider_family": "block_passport_publication",
+    "on_missing_public_surface": "block_passport_publication",
+    "on_private_text_leak": "block_publication",
+    "on_unverifiable_artifact_hash": "block_passport_publication",
+    "profile": "rdllm-universal-passport-policy/v1",
+    "required_core_artifacts": [
+      "certification_report",
+      "certification_attestation",
+      "provider_attribution_card",
+      "training_content_summary",
+      "integration_profile",
+      "discovery_manifest",
+      "assurance_bundle",
+      "proof_dependency_graph",
+      "composite_foundation_adapter",
+      "foundation_provider_conformance",
+      "foundation_runtime_adapter",
+      "foundation_runtime_router",
+      "foundation_model_deployment_attestation",
+      "universal_composition_receipt",
+      "universal_composition_settlement",
+      "universal_foundation_model_contract",
+      "universal_invocation_guard",
+      "universal_invocation_coverage",
+      "universal_invocation_witness",
+      "universal_content_credential"
+    ],
+    "required_provider_families": [
+      "openai_responses",
+      "anthropic_messages",
+      "google_gemini",
+      "meta_llama",
+      "mistral_chat",
+      "cohere_chat",
+      "xai_grok",
+      "amazon_bedrock_converse",
+      "azure_openai_responses",
+      "openai_compatible_chat"
+    ],
+    "required_public_surfaces": [
+      "provider_attribution_card",
+      "integration_profile",
+      "discovery_manifest",
+      "assurance_bundle",
+      "proof_dependency_graph",
+      "composite_foundation_adapter",
+      "foundation_provider_conformance",
+      "universal_foundation_model_contract",
+      "universal_invocation_guard",
+      "universal_invocation_coverage",
+      "universal_invocation_witness",
+      "universal_content_credential",
+      "universal_rdllm_passport"
+    ],
+    "required_verifier_commands": [
+      "verify-certification-attestation",
+      "verify-integration-profile",
+      "verify-discovery-manifest",
+      "verify-assurance-bundle",
+      "verify-proof-dependency-graph",
+      "verify-composite-foundation-adapter",
+      "verify-foundation-provider-conformance",
+      "verify-foundation-runtime-adapter",
+      "verify-foundation-runtime-router",
+      "verify-foundation-model-deployment-attestation",
+      "verify-universal-composition-receipt",
+      "verify-universal-composition-settlement",
+      "verify-universal-foundation-model-contract",
+      "verify-universal-invocation-guard",
+      "verify-universal-invocation-coverage",
+      "verify-universal-invocation-witness",
+      "verify-universal-content-credential",
+      "verify-universal-rdllm-passport"
+    ],
+    "target_certification_level": "RDLLM-L137"
+  },
+  "passport_version": "rdllm-universal-rdllm-passport/v1",
+  "privacy": {
+    "hash_only_provider_and_creator_bindings": true,
+    "private_field_findings": [],
+    "private_payment_details_disclosed": false,
+    "private_strings_absent": true,
+    "raw_output_text_disclosed": false,
+    "raw_prompt_text_disclosed": false,
+    "raw_source_text_disclosed": false
+  },
+  "provider_family_rows": [
+    {
+      "capability_count": 9,
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "foundation_provider_conformance_row_hash": "63c05cb630f511eb1a809b0de31b6d6012bd95c714205c2e77efd2a6385e1e19",
+      "native_api_version": "converse/v1",
+      "native_model_hash": "c03c5918c54d399baa484271d69f3a91b01cc39d10958f8ddaf812abab3152a6",
+      "negative_fixture_count": 6,
+      "official_documentation_refs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html"
+      ],
+      "passport_provider_family_row_hash": "bfb584c5553ee44049d2f8cce9849025f8c35ce11c940b6ff0f0eca97deabfa4",
+      "provider_adapter_row_hash": "a9c903c9a42fe560e35e78d5378a8a781b5580fefa886c0847f242c85d2e2db5",
+      "provider_family": "amazon_bedrock_converse",
+      "provider_id": "provider:amazon-bedrock-converse",
+      "route_hash": "1f66ede4a0bce79e97fa9cd391fa7ff7582d843f087dfed4ebf168345bc4067d",
+      "universal_provider_contract_row_hash": "6c58d50b073dde3609a952f9231a4d6b3b57e5dd1139e0b0565281f917666b4b"
+    },
+    {
+      "capability_count": 9,
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "foundation_provider_conformance_row_hash": "3feee62d5008d7a867f77aa5965d88cd89e716d4aca00539a136af113dcdae93",
+      "native_api_version": "messages/v1",
+      "native_model_hash": "99aadc20f810f5b4a305b938cb969966bfe693181f9b2d22329cce37caf5aad9",
+      "negative_fixture_count": 6,
+      "official_documentation_refs": [
+        "https://docs.anthropic.com/en/api/messages"
+      ],
+      "passport_provider_family_row_hash": "f3aeb3b3b9e7763dc97d945ca04af210d675d017f9e85b3804407f54d843de38",
+      "provider_adapter_row_hash": "caebd2c7215d84c40b79f767c5aff42c95f2e90d99d511d6f9edc779a858b1a7",
+      "provider_family": "anthropic_messages",
+      "provider_id": "provider:anthropic-messages",
+      "route_hash": "cd1bfa0defc793cfc0fd03a69b42c2b5162888445bc851f833aad9139ecbe561",
+      "universal_provider_contract_row_hash": "c7398a3a971308c8e62190c0b82b2a5f2af1ec4c12353e7517b70ef9900c388d"
+    },
+    {
+      "capability_count": 9,
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "foundation_provider_conformance_row_hash": "869266d6dc51b146c98f442242b4225e745c263f31ba786b3dd4e19cfaaa9d36",
+      "native_api_version": "responses/v1",
+      "native_model_hash": "6edd1757761c326b4eefa992fda9976fd0c464610fa48d57f2297d6d26a0e64a",
+      "negative_fixture_count": 6,
+      "official_documentation_refs": [
+        "https://learn.microsoft.com/azure/ai-services/openai/how-to/responses"
+      ],
+      "passport_provider_family_row_hash": "6c3c7e1669690292cfd322addd9db8cce97cdb4ef19d64de2bbe537b932ed86f",
+      "provider_adapter_row_hash": "25308ab5279b151e6c2c2b1cafdb44b5d333fd53311f604bf9f187a040bf3548",
+      "provider_family": "azure_openai_responses",
+      "provider_id": "provider:azure-openai-responses",
+      "route_hash": "30cb39bdd22f00c838bb28ae9cd7eaf8c741456ff7dfd68d3909922f5a89e4ee",
+      "universal_provider_contract_row_hash": "6b61546234be34e30e93c3d5295208d708ec35a2926a3c28d050f27987f689f2"
+    },
+    {
+      "capability_count": 9,
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "foundation_provider_conformance_row_hash": "418bc9c18902a5dd454f59098b31686ee781585eab35987f0c5263d5975d86be",
+      "native_api_version": "chat/v2",
+      "native_model_hash": "e0c85a8990650150c7442cfe338eb912d7134b315fbec9d45b5e5adb574a90bd",
+      "negative_fixture_count": 6,
+      "official_documentation_refs": [
+        "https://docs.cohere.com/reference/chat"
+      ],
+      "passport_provider_family_row_hash": "3c35dfad947c776e2f1af8ab0e5daf8c617219edfc2fd5eedf8237a5bf3cf544",
+      "provider_adapter_row_hash": "4491924d84cc4cd7978d5a6bd0bb4a344c3b67bab6d9b6e3972bc5248b95ee86",
+      "provider_family": "cohere_chat",
+      "provider_id": "provider:cohere-chat",
+      "route_hash": "4937fc6ec6e38e6f5ba756446ef44ed720e87edade89c1e3f2bc90fe692a4072",
+      "universal_provider_contract_row_hash": "c7ecde76afa2f44a10c9a54fa113c5301ff3ef06eeaa05edff66994b3981faa0"
+    },
+    {
+      "capability_count": 9,
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "foundation_provider_conformance_row_hash": "9086bdb8895735bc975078b8161cd1e80cbe6bee5038f543eb01436375288153",
+      "native_api_version": "generate-content/v1",
+      "native_model_hash": "248142108a43b1ee3ae76f9d87937f5b2217fb1adbeee4c533db6708cf81ee44",
+      "negative_fixture_count": 6,
+      "official_documentation_refs": [
+        "https://ai.google.dev/gemini-api/docs"
+      ],
+      "passport_provider_family_row_hash": "aa18e69201190ac0ac0a0c6ac77488a6588e76d3e37761be1cecf0a187890b89",
+      "provider_adapter_row_hash": "205da1833b68232c81c3da8c42ac95b4fc01d42a45cf90103fe738cbda2313fa",
+      "provider_family": "google_gemini",
+      "provider_id": "provider:google-gemini",
+      "route_hash": "d8c2484ebcb95abb6fa09c7d669f21b2a3702dff4d91897d463623eb46cee4f3",
+      "universal_provider_contract_row_hash": "7d606b9a5fede1b79310d6fc1b09a0c3143913f71b9d939fe0fa02269fd20716"
+    },
+    {
+      "capability_count": 9,
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "foundation_provider_conformance_row_hash": "008233bd2ed402c312d2b9e8bc826ae9609d15cb153b571324033fddb4a44fcd",
+      "native_api_version": "chat-completions/v1",
+      "native_model_hash": "94cbf5b849a9eb85e96cfa7da5e8e5d4c2c52271e311b405c33f35d1e07c950b",
+      "negative_fixture_count": 6,
+      "official_documentation_refs": [
+        "https://llama-stack.readthedocs.io/"
+      ],
+      "passport_provider_family_row_hash": "f064ac2b144aeab2108c377dd0a245c7da614892453266e401d4fa1f5c0905b5",
+      "provider_adapter_row_hash": "cf00c8aca4aa11b92b0c11adf6409a2a25e45988e003e62b46dd7c2373f74b46",
+      "provider_family": "meta_llama",
+      "provider_id": "provider:meta-llama-openai-compatible",
+      "route_hash": "ef023c00e320069d35a09c90d8414468cfd38bd0b988a4f944cc89aaaf638c98",
+      "universal_provider_contract_row_hash": "2a3fb26b85a6b7ca5f382afa10ced100e915c2f711c5cbd614af300bfe8d2816"
+    },
+    {
+      "capability_count": 9,
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "foundation_provider_conformance_row_hash": "12ab6db9cf7269601a6d5630b389bf0793cf4c110ef9194dd984273ec964df46",
+      "native_api_version": "chat/v1",
+      "native_model_hash": "ae206c6dfa4f9a14ce4b3afae1ccbb794a86b66ea0ecce66406a16731bfd8393",
+      "negative_fixture_count": 6,
+      "official_documentation_refs": [
+        "https://docs.mistral.ai/api/"
+      ],
+      "passport_provider_family_row_hash": "12be5e05b012e375385a41de49f6c44393c5636875df7d18939342f86302799c",
+      "provider_adapter_row_hash": "cd5dedd74a4d45c07535360fa672c37bd08794b4971d086c5bdcf4cc2afa6024",
+      "provider_family": "mistral_chat",
+      "provider_id": "provider:mistral-chat",
+      "route_hash": "7eb3b6c4ddba96797a576627f0779f90a5779a96f8a73dff0ede05ef4066a29b",
+      "universal_provider_contract_row_hash": "5764f7ff5b194f934fb6c2bfb6347924b49253d28ce4fcb65d46197a4466c828"
+    },
+    {
+      "capability_count": 9,
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "foundation_provider_conformance_row_hash": "50d35fbe50ee1514605ebfdf8cc02f3fdbb1cbd5f6b87fe6260d7b26b9897e3c",
+      "native_api_version": "chat-completions/v1",
+      "native_model_hash": "96b136b9775e6f4e17f7d17750aea14bd8d5d50473425b1fa0940a66476fca89",
+      "negative_fixture_count": 6,
+      "official_documentation_refs": [
+        "https://platform.openai.com/docs/api-reference/chat"
+      ],
+      "passport_provider_family_row_hash": "7d381dd31c8de4a838803b259d5361d5a1d6084c755fd68e0157b01b0e42e4a7",
+      "provider_adapter_row_hash": "b7395858c1dc64d3cbd4835b17d83475d681808e87f79562be09be54c432d685",
+      "provider_family": "openai_compatible_chat",
+      "provider_id": "provider:openai-compatible-chat",
+      "route_hash": "a39911028c9bfdd22e7d9564ec7dd48d9637c2fa4afc09aee15edf1c7817b2fb",
+      "universal_provider_contract_row_hash": "6fc1a785887baf1145fde4da0fcacc62a006ac8f9024eb5da06b4b8feecd68bf"
+    },
+    {
+      "capability_count": 9,
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "foundation_provider_conformance_row_hash": "484a8dcc68b42483469227979d33ab9b1d6bb326e2623c5048808abdf9ef1c9f",
+      "native_api_version": "responses/v1",
+      "native_model_hash": "98317ebe3ea68c0a80fb97a23916c12b7eeccb490c38b53385f9da67d2ff2ad6",
+      "negative_fixture_count": 6,
+      "official_documentation_refs": [
+        "https://platform.openai.com/docs/api-reference/responses"
+      ],
+      "passport_provider_family_row_hash": "cb5c02b92c28ef118cc73aa69c2dce09f419fc2fef4c039ba1b8e4edf61ab7cc",
+      "provider_adapter_row_hash": "823a04465f4e1b49e57e15f52f6779de3fbeb79c215d1e6f96e528148a92b8be",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "route_hash": "4fd6b1dc9e06f8de19aee36808309f06fb94a784d8535131b8e71a9075b70bcb",
+      "universal_provider_contract_row_hash": "3d501a4b1d36941435ecbb19f627781e55666dbab80b9f9aaaf15ab897229ad1"
+    },
+    {
+      "capability_count": 9,
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "foundation_provider_conformance_row_hash": "8ba3eb102654738e04f73a0226751b487875fa7f1956a4172d895d8020fe1c8d",
+      "native_api_version": "chat-completions/v1",
+      "native_model_hash": "ef280ccdcea57bbaf16d758c5afe7581fdf1f46f8435429d631df3df779e4bd9",
+      "negative_fixture_count": 6,
+      "official_documentation_refs": [
+        "https://docs.x.ai/docs/api-reference"
+      ],
+      "passport_provider_family_row_hash": "897d4a63fd6b27cfb22f1e0346be509bae31f6996a9026976b0928889467943e",
+      "provider_adapter_row_hash": "b0474f10b21945ac0062f7d268e728d9d1208216e8b0931815e61e7c203a63e9",
+      "provider_family": "xai_grok",
+      "provider_id": "provider:xai-grok",
+      "route_hash": "0e990f3fa241e3111e3d1e6e6182b9f347c9460eb560a976a7b10896632e4892",
+      "universal_provider_contract_row_hash": "ab56b5f8affd3543abe57eabd7a364c23e8f98b9f720fd6e10ef21de1245ce59"
+    }
+  ],
+  "research_alignment_rows": [
+    {
+      "control": "unified evidence-based text generation taxonomy",
+      "passport_binding": "source footers, claim coverage, and answer provenance are required core proofs",
+      "reference_id": "arxiv:2508.15396",
+      "reference_url": "https://arxiv.org/abs/2508.15396",
+      "research_alignment_row_hash": "29468086ea17f1280a65b29e90968ff9c2fd7e1a3a4d569988e7fedb7d6c9dea"
+    },
+    {
+      "control": "document-level source attribution under redundancy and synergy",
+      "passport_binding": "provider passport binds attribution rows and payout rows instead of only final citations",
+      "reference_id": "arxiv:2507.04480",
+      "reference_url": "https://arxiv.org/abs/2507.04480",
+      "research_alignment_row_hash": "f95766e38e2071c3448e73b6fa6340995f9c2955e1673f4630388d8e3613bc9c"
+    },
+    {
+      "control": "citation attribution alignment",
+      "passport_binding": "visible citation/source footers must be backed by replayable evidence and URL health",
+      "reference_id": "arxiv:2510.17853",
+      "reference_url": "https://arxiv.org/abs/2510.17853",
+      "research_alignment_row_hash": "06c6effcd95254c659952008ca60cc21a670bb8817584f22ce26b9318c40381f"
+    },
+    {
+      "control": "pinpoint provenance and anti-document robustness",
+      "passport_binding": "training-memory, pinpoint provenance, and L136 content credential proofs are hash-bound",
+      "reference_id": "arxiv:2605.05687",
+      "reference_url": "https://arxiv.org/abs/2605.05687",
+      "research_alignment_row_hash": "703804b989c8f2ab9dd8d0eced47cfeb91e19872d1e5c1b19618c41a73eeae78"
+    },
+    {
+      "control": "content credential validation and durable asset provenance",
+      "passport_binding": "L136 content credential is required and points to public RDLLM verification surfaces",
+      "reference_id": "c2pa:2.2",
+      "reference_url": "https://spec.c2pa.org/specifications/specifications/2.2/specs/C2PA_Specification.html",
+      "research_alignment_row_hash": "801122d301ae7ed9540b1b0be9e7536a443dc8bfb2d9046f34f304e417d1c144"
+    },
+    {
+      "control": "cryptographic integrity for portable constrained documents",
+      "passport_binding": "passport, credential, graph, and bundle hashes are replayed without network dependency",
+      "reference_id": "w3c:vc-data-integrity-1.0",
+      "reference_url": "https://www.w3.org/TR/vc-data-integrity/",
+      "research_alignment_row_hash": "fb2b107f56e973f2b2058c9c48827fee35dc74c2fd9ed6f0877395307dccd709"
+    },
+    {
+      "control": "GenAI trace interoperability",
+      "passport_binding": "runtime, invocation coverage, and witness proofs bind provider calls to public traces",
+      "reference_id": "opentelemetry:gen-ai-semconv",
+      "reference_url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+      "research_alignment_row_hash": "8fa3c4199a8d83ca60b8fe9f23c1d237b1377192053b2dc04591a0d8bd08f6bf"
+    },
+    {
+      "control": "composable context, resources, tools, and host integrations",
+      "passport_binding": "provider-neutral public surfaces and verifier commands are exposed as one integration entry point",
+      "reference_id": "mcp:2025-06-18",
+      "reference_url": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "research_alignment_row_hash": "5833e52f36c85ef3bdf4a67b2fb984fc5e2b366d84bf6412859d35d406d9ff0c"
+    }
+  ],
+  "schemas": {
+    "assurance_bundle": "docs/schemas/assurance_bundle.schema.json",
+    "discovery_manifest": "docs/schemas/discovery_manifest.schema.json",
+    "integration_profile": "docs/schemas/integration_profile.schema.json",
+    "proof_dependency_graph": "docs/schemas/proof_dependency_graph.schema.json",
+    "universal_content_credential": "docs/schemas/universal_content_credential.schema.json",
+    "universal_foundation_model_contract": "docs/schemas/universal_foundation_model_contract.schema.json",
+    "universal_rdllm_passport": "docs/schemas/universal_rdllm_passport.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "f38e10677a57416e175dc2d72fcb7f9165d39fbb72f5967f69411c5071cb208e"
+  },
+  "summary": {
+    "assurance_bundle_hash": "ab5ac503ea171f6c6b46116fc153b3f5a83bb2e06f4b16ece86bcedc343014e4",
+    "core_artifact_count": 20,
+    "covered_provider_family_count": 10,
+    "failed_check_count": 0,
+    "failure_mode_count": 0,
+    "minimum_input_level": "RDLLM-L136",
+    "offline_verification_supported": true,
+    "passport_commitment_hash": "94c0017b5d5a0cb5f83c0da4fa1765ca664ecc5caed762ea84169ecc6a38ec5a",
+    "privacy_preserved": true,
+    "proof_dependency_graph_hash": "bd68db5cf5ed314fa9c827cc4094074c5b03220d9081be86b7e574b42340f010",
+    "provider_family_count": 10,
+    "public_surface_count": 13,
+    "required_provider_family_count": 10,
+    "research_control_count": 8,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L137",
+    "universal_content_credential_hash": "1d0a36eb68a0f71f34ae61e5e94f6f5d53fed85562d1b93e110e58b021ba8c37",
+    "universal_foundation_model_contract_hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44",
+    "verifier_command_count": 18
+  },
+  "universal_rdllm_passport_hash": "27dd6b91be5eeb66d7721deeeb2946477f688ef4b0f095caf5b689ffea300dcc",
+  "verifier_command_rows": [
+    {
+      "command": "verify-assurance-bundle",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "c052f89857766fc8e310f86e84b18b41c17c2a818a78ce0460d357bdc8498454"
+    },
+    {
+      "command": "verify-certification-attestation",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "842250f50cbee17e159749e5445db3a48cedb64e7a308a07aedba1623c792e59"
+    },
+    {
+      "command": "verify-composite-foundation-adapter",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "0f762d88e213a23e22d155102b4df3659b3d4c4bbdfe59b83405a50fa6a7b460"
+    },
+    {
+      "command": "verify-discovery-manifest",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "8ffcf25af59538b594e9d66a2da1c95557a89f8f41689cb9c565a573bc8e41e9"
+    },
+    {
+      "command": "verify-foundation-model-deployment-attestation",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "fe72eea9d2b54c4be7162e1239957a8a5c7bb65bb0b924d5779e0200f4ea817f"
+    },
+    {
+      "command": "verify-foundation-provider-conformance",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "e9ed0e77148fb2cb04e52bf8baefc052622703d9a7a89946a9a66a0af9d2c1e1"
+    },
+    {
+      "command": "verify-foundation-runtime-adapter",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "885008178ebf51689eb9069687eed9d12bcf6f9df896e73658f919cff148bd27"
+    },
+    {
+      "command": "verify-foundation-runtime-router",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "2227842d1caaae6df683587a7dd54b640832254227d7bc44cacb17a0ba3bc98a"
+    },
+    {
+      "command": "verify-integration-profile",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "e191e04c693b153a365f3f5d055f07ba60235f3f34e313aaf45626e2d42b5ad3"
+    },
+    {
+      "command": "verify-proof-dependency-graph",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "621aaba379fb146e2358d399902ee115ad57e7b03ed4fbf263af54a8827817bb"
+    },
+    {
+      "command": "verify-universal-composition-receipt",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "9cb4e17b3d04bdee332272627af4f37c709ffc2b52f36b395c18df5df7aa2630"
+    },
+    {
+      "command": "verify-universal-composition-settlement",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "d3191e9348ee2c56fadb193dc5bdabe90774be772d9e18dab98e450f1772f075"
+    },
+    {
+      "command": "verify-universal-content-credential",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "58f4d76ccbee2db0f0ba0ef78f74347a759685fc142ce6efd34512d93c76a881"
+    },
+    {
+      "command": "verify-universal-foundation-model-contract",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "bfec03142539f24d062e123c9a7a93a24b7a4bc97ee29cbf3f27039cdcb11877"
+    },
+    {
+      "command": "verify-universal-invocation-coverage",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "4bc0457ab257bd9a28939b561d8a30f84568cefab1acc146c0273e2ef73f8476"
+    },
+    {
+      "command": "verify-universal-invocation-guard",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "28d88f6ffdba1f6ded0f1464c0fac42d5c4924aa4886066810e6fa885a996f01"
+    },
+    {
+      "command": "verify-universal-invocation-witness",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "1a295069a0e447d1ec1498072d044c6e3ae2bffa1cdc00704cb750424f111a7b"
+    },
+    {
+      "command": "verify-universal-rdllm-passport",
+      "declared_by_integration_profile": true,
+      "offline_replay_command": true,
+      "required": true,
+      "verifier_command_row_hash": "090b88f4b72e3da9f0fe1e87db6210ebac4af69648c926fa345546647d8c9986"
+    }
+  ]
+}

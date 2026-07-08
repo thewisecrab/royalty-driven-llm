@@ -1,0 +1,236 @@
+{
+  "checks": {
+    "all_payment_instructions_have_creator_receipts": true,
+    "all_payout_receipts_bind_clearinghouse_rows": true,
+    "all_payout_receipts_bind_execution_rows": true,
+    "all_payout_receipts_bind_signed_rail_batches": true,
+    "clearinghouse_report_ready": true,
+    "creator_escrow_totals_match_execution": true,
+    "creator_hold_totals_match_execution": true,
+    "creator_payout_totals_match_execution": true,
+    "input_hashes_reproducible": true,
+    "payment_execution_binds_remittance": true,
+    "payment_execution_report_ready": true,
+    "payment_rail_attestation_ready": true,
+    "payment_rail_binds_execution": true,
+    "payout_accounts_not_disclosed": true,
+    "private_creator_receipt_fields_absent": true,
+    "remittance_binds_clearinghouse": true,
+    "remittance_report_ready": true
+  },
+  "commitments": {
+    "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+    "creator_escrow_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "creator_hold_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "creator_payout_root": "b9d8455c98d8ade3c28c856abce15d4bb3afd162f9c4514742d994bac82662ac",
+    "creator_total_root": "2788b8a09c2c893c5c3142b0a339d50e20a7437550f56912a558533a26633f5c",
+    "payment_execution_report_hash": "0f4d22a4d9c94e8d26366ae7828e28316b6b29159bcb845aedf9cb8ed68b87be",
+    "payment_rail_attestation_hash": "ad4033937b1270860a4dc9c336e9ae23107153af17480af32bb748ff464c7a01",
+    "remittance_report_hash": "cf0452556b8b35f5317a3fbb6b8f0f391c8ae90bc331f3a9274e7b3e690cdd28"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "creator_escrow_rows": [],
+  "creator_hold_rows": [],
+  "creator_payout_rows": [
+    {
+      "chunk_ids": [
+        "arjun-provenance-ledger:c1"
+      ],
+      "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+      "clearinghouse_row_present": true,
+      "clearinghouse_settlement_row_hash": "018f77d8ce822986016db519dc00cf4b16b76571ae4b2e18a8fcb2bda1db0d87",
+      "creator_receipt_id": "210efeb6caa8c602177f8aa13ca4b17072a9b0f58f81370012552eacefb0a3b4",
+      "creator_receipt_row_hash": "b3b1c97f4870d6b6406d59e0257c8ad129e6c6fcdaa915d97810a9bf9b9721d8",
+      "creator_visible_status": "paid_verified",
+      "currency": "USD",
+      "end_to_end_id": "RDLLM-4349aee8d2d7413ee95cc7355b29a",
+      "executed_amount": "0.183682",
+      "execution_row_hash": "91428ffb290667e578de37921f9fcaf97464bc83e562cba48f519afef01b549d",
+      "execution_status": "settled_verified",
+      "instructed_amount": "0.183682",
+      "instruction_row_hash": "e8d31fc4234e3a7a2476e4aaae4de6b303849f70e1ce6b8326e5aa7d9b77b340",
+      "license_status": "active",
+      "license_term_hash": "cbcb535107e8bdeb9f9c64a7325e4b4c9e46c5f3c36740bbd42c3fc524bc8dd1",
+      "origin_hashes": [
+        "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42"
+      ],
+      "payment_instruction_id": "4349aee8d2d7413ee95cc7355b29a3320a63605dd127a387fa017ace062d8c38",
+      "payout_account_disclosed": false,
+      "payout_account_hash": "36046f2f9ba53892df7e7815fe5e2f5c5635908722ff258bdb6798aaca33f993",
+      "processor_id": "processor:rdllm-reference-ach",
+      "processor_record_hash": "1a2b8afb217c70f5c36c7c8cfacace33ba4aa94dfe4e2cff2028028e30da317f",
+      "processor_record_row_hash": "1f3cc588cb9411d02d0f3baac7295810f3f8f10780a655f485358da8c8ffb6f6",
+      "rail_attestation_row_hash": "1e0c922aa3ea6b0b773770a91f596208b2fd1b194db97e4507b45b26cfebed01",
+      "rail_batch_coverage_row_hash": "df730b3f23423246b777351f4c828cda16d7874fde750cc044c86fb48400beb1",
+      "rail_batch_signed": true,
+      "rail_signature_valid": true,
+      "recipient_creator_id": "arjun",
+      "recipient_creator_name": "Arjun Rao",
+      "recipient_kind": "creator",
+      "remittance_report_hash": "cf0452556b8b35f5317a3fbb6b8f0f391c8ae90bc331f3a9274e7b3e690cdd28",
+      "settled_at": "2026-05-31T00:00:00Z",
+      "settlement_batch_hash": "0203e5726136a5dd64c12d622945f579fb83c74b9355489000986d1f4806cd64",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_ids": [
+        "lina-governance-disputes:c1"
+      ],
+      "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+      "clearinghouse_row_present": true,
+      "clearinghouse_settlement_row_hash": "00c6fe28f3be74304e5c95a081614caf5be61dc4088ef07ed920ef2b0767ea70",
+      "creator_receipt_id": "80b71c7f74ec8e14ac68b20ddc34bd27ca64bd42f9c40397d7dac5d5bd584be6",
+      "creator_receipt_row_hash": "5417794dd1893b76fc0235aeb28bed8718128ab8186b8475e6eddfa5b2360d02",
+      "creator_visible_status": "paid_verified",
+      "currency": "USD",
+      "end_to_end_id": "RDLLM-aeebfbc8deb5684735cb631bc46a2",
+      "executed_amount": "0.125703",
+      "execution_row_hash": "2175443219a8d822f99fdbbb26bec99d18d463b37df680ff1c331b32a9e0670d",
+      "execution_status": "settled_verified",
+      "instructed_amount": "0.125703",
+      "instruction_row_hash": "cad5a7eea457dc73d4414d99f62d3c83fd26bd9c204594991c0f886ba61ccf6f",
+      "license_status": "active",
+      "license_term_hash": "9a704be10d700f08f46f97990c6efdf946312817343eb70317143ce60a140df0",
+      "origin_hashes": [
+        "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42"
+      ],
+      "payment_instruction_id": "aeebfbc8deb5684735cb631bc46a204f77c2aec11b5087d0efbdd3dd4b99813b",
+      "payout_account_disclosed": false,
+      "payout_account_hash": "e40e0e769e8810ddee05459d531a117078b5d3c0df0838ecc0d527d8ae9efb24",
+      "processor_id": "processor:rdllm-reference-ach",
+      "processor_record_hash": "e9aab6ef2b7f5cc32bf389afd7bff1d1da7dd7e6967a6e393b32161a9835d80b",
+      "processor_record_row_hash": "7cde28030793f6b652beb997e7491762564512377e131764ec6066fc27b81a18",
+      "rail_attestation_row_hash": "1e0c922aa3ea6b0b773770a91f596208b2fd1b194db97e4507b45b26cfebed01",
+      "rail_batch_coverage_row_hash": "df730b3f23423246b777351f4c828cda16d7874fde750cc044c86fb48400beb1",
+      "rail_batch_signed": true,
+      "rail_signature_valid": true,
+      "recipient_creator_id": "lina",
+      "recipient_creator_name": "Lina Park",
+      "recipient_kind": "creator",
+      "remittance_report_hash": "cf0452556b8b35f5317a3fbb6b8f0f391c8ae90bc331f3a9274e7b3e690cdd28",
+      "settled_at": "2026-05-31T00:00:00Z",
+      "settlement_batch_hash": "0203e5726136a5dd64c12d622945f579fb83c74b9355489000986d1f4806cd64",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunk_ids": [
+        "maya-youtube-style-pool:c1"
+      ],
+      "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+      "clearinghouse_row_present": true,
+      "clearinghouse_settlement_row_hash": "91941eac964e45bce7068b559761f632cb05014061ff89aa104ea830459df8a3",
+      "creator_receipt_id": "1d1e7044b3e312e274fbdd782166c16e94e37592c0f07773e743f2616e225e2f",
+      "creator_receipt_row_hash": "91f5c204d9bba68ff714769dabf4bb5e216537026beafea7c0e9b118ba2f65c9",
+      "creator_visible_status": "paid_verified",
+      "currency": "USD",
+      "end_to_end_id": "RDLLM-aec86cb4615425ad5074de5614193",
+      "executed_amount": "0.240615",
+      "execution_row_hash": "00f03efa0db24eafd955ca57c1b012ee8061560acdc36ffeef019ad5a3bed8c4",
+      "execution_status": "settled_verified",
+      "instructed_amount": "0.240615",
+      "instruction_row_hash": "a64e748c25559c676b9e18d09e25088cd2fcb4ae5191acb4d4e3a70e4a184907",
+      "license_status": "active",
+      "license_term_hash": "de302176c9eccd11587c84a39617633e839230c34772a704d23bf437e39b0b2a",
+      "origin_hashes": [
+        "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42"
+      ],
+      "payment_instruction_id": "aec86cb4615425ad5074de56141939e4f874e0cc9bae0632b01bfb6c5713f180",
+      "payout_account_disclosed": false,
+      "payout_account_hash": "093ef537c9af164c23f6868280281b5be3bbc058642bd017153126dc407fda1e",
+      "processor_id": "processor:rdllm-reference-ach",
+      "processor_record_hash": "f0a280e3d724d6048d962c2b23144e556b650e32add2d6456b23261dca5d9d92",
+      "processor_record_row_hash": "27d81f6842337df547c4ac532ebae399c9e68f6bb5e4490db3c8c8dd6b94dcee",
+      "rail_attestation_row_hash": "1e0c922aa3ea6b0b773770a91f596208b2fd1b194db97e4507b45b26cfebed01",
+      "rail_batch_coverage_row_hash": "df730b3f23423246b777351f4c828cda16d7874fde750cc044c86fb48400beb1",
+      "rail_batch_signed": true,
+      "rail_signature_valid": true,
+      "recipient_creator_id": "maya",
+      "recipient_creator_name": "Maya Sen",
+      "recipient_kind": "creator",
+      "remittance_report_hash": "cf0452556b8b35f5317a3fbb6b8f0f391c8ae90bc331f3a9274e7b3e690cdd28",
+      "settled_at": "2026-05-31T00:00:00Z",
+      "settlement_batch_hash": "0203e5726136a5dd64c12d622945f579fb83c74b9355489000986d1f4806cd64",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "creator_total_rows": [
+    {
+      "amount": "0.183682",
+      "creator_total_row_hash": "ae0e99a76c15ba36d22f6f3d9acf7469fac7a529d3cc0f05e092f3d63dbb6a6b",
+      "currency": "USD",
+      "recipient_creator_id": "arjun",
+      "recipient_creator_name": "Arjun Rao",
+      "work_count": 1,
+      "work_ids_root": "a20cc7d7dea2214d0d15bc58cf4f037574ff3e85a34da5e69d049bc180677981"
+    },
+    {
+      "amount": "0.125703",
+      "creator_total_row_hash": "94b8b9a9696d37646a78d94b3f1db51384d9e6dae382a7d8c8aab50c42375890",
+      "currency": "USD",
+      "recipient_creator_id": "lina",
+      "recipient_creator_name": "Lina Park",
+      "work_count": 1,
+      "work_ids_root": "f8678c53d062d0cb00647c2d30412928db14923a53274fcdba73c507ccb815e3"
+    },
+    {
+      "amount": "0.240615",
+      "creator_total_row_hash": "403339baa236b35b4695a85a1acce8dc0deb4f8a8c048e8f0ec9525af05dd48c",
+      "currency": "USD",
+      "recipient_creator_id": "maya",
+      "recipient_creator_name": "Maya Sen",
+      "work_count": 1,
+      "work_ids_root": "e44e5054803fa08b54d54485f928e9adb3cdbc3f7da69e57740aa8748eed9fa1"
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "answer_text_disclosed": false,
+    "customer_or_tax_records_disclosed": false,
+    "prompt_text_disclosed": false,
+    "raw_payment_accounts_disclosed": false,
+    "raw_processor_records_disclosed": false,
+    "source_text_disclosed": false,
+    "uses_payout_account_hashes": true,
+    "uses_source_and_settlement_hashes": true
+  },
+  "receipt_policy": {
+    "creator_visible_statuses": [
+      "paid_verified",
+      "escrowed_verified",
+      "held_not_paid",
+      "not_verified"
+    ],
+    "minimum_input_level": "RDLLM-L78",
+    "per_creator_verification_supported": true,
+    "profile": "rdllm-creator-facing-payout-receipts/v1",
+    "raw_payment_accounts_forbidden": true,
+    "raw_prompt_output_source_text_forbidden": true,
+    "target_certification_level": "RDLLM-L79"
+  },
+  "report_hash": "49f52d43acad7944e8d1960270372a4c87e729c07a1b5d59f0af094de9774786",
+  "report_version": "rdllm-creator-payout-receipt-report/v1",
+  "schemas": {
+    "clearinghouse_report": "docs/schemas/clearinghouse_report.schema.json",
+    "creator_payout_receipt_report": "docs/schemas/creator_payout_receipt_report.schema.json",
+    "payment_execution_report": "docs/schemas/payment_execution_report.schema.json",
+    "payment_rail_attestation": "docs/schemas/payment_rail_attestation.schema.json",
+    "remittance_report": "docs/schemas/remittance_report.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "24f648c3550bf7dc72f595e6ac957157c1de22cc6b1040594b609961649a01d4"
+  },
+  "summary": {
+    "creator_count": 3,
+    "creator_escrow_receipt_count": 0,
+    "creator_escrow_total": "0.000000",
+    "creator_hold_receipt_count": 0,
+    "creator_hold_total": "0.000000",
+    "creator_payout_receipt_count": 3,
+    "creator_payout_total": "0.550000",
+    "creator_visible_payouts_verified": true,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L79"
+  }
+}

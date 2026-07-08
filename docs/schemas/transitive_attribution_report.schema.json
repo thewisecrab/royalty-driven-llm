@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/transitive_attribution_report.schema.json",
+  "title": "RDLLM Transitive Attribution Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "upstream",
+    "downstream",
+    "transitive_policy",
+    "upstream_source_rows",
+    "settlement_obligations",
+    "residual_settlement",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-transitive-attribution-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "upstream": {
+      "type": "object",
+      "required": [
+        "capsule_id",
+        "capsule_hash",
+        "response_envelope_hash",
+        "rendered_output_hash",
+        "answer_card_source_root",
+        "source_count"
+      ],
+      "additionalProperties": true
+    },
+    "downstream": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "event_replay_hash",
+        "prompt_hash",
+        "answer_hash",
+        "rendered_output_hash",
+        "copied_input_hash",
+        "creator_pool"
+      ],
+      "additionalProperties": true
+    },
+    "transitive_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "pass_through_rate",
+        "transitive_trigger",
+        "residual_policy",
+        "original_sources_survive_derivative_use",
+        "wrapper_credit_cannot_extinguish_upstream_sources",
+        "copied_marker_required",
+        "copied_body_hash_required"
+      ],
+      "additionalProperties": true
+    },
+    "upstream_source_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "creator_id",
+          "work_id",
+          "chunk_id",
+          "content_hash",
+          "upstream_contribution_weight",
+          "normalized_weight",
+          "answer_card_source_entry_hash",
+          "source_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "settlement_obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "obligation_id",
+          "recipient_creator_id",
+          "work_id",
+          "chunk_id",
+          "source_row_hash",
+          "share_of_transitive_pool",
+          "payout",
+          "upstream_capsule_hash",
+          "downstream_event_hash",
+          "obligation_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "residual_settlement": {
+      "type": "object",
+      "required": [
+        "policy",
+        "creator_pool",
+        "transitive_pool",
+        "residual_pool",
+        "downstream_provider_must_settle_residual_locally"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "capsule_hash_reproducible",
+        "capsule_subject_hash_matches_commitment",
+        "response_envelope_hash_reproducible",
+        "response_output_hash_matches_capsule_subject",
+        "answer_card_sources_bound_to_envelope",
+        "source_entry_hashes_reproducible",
+        "copied_output_marker_present",
+        "copied_output_body_matches_upstream_subject",
+        "upstream_source_rows_present",
+        "transitive_pool_conserved",
+        "downstream_pool_conserved",
+        "original_sources_survive_downstream_reuse",
+        "no_private_text_disclosed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "upstream_capsule_hash",
+        "upstream_response_envelope_hash",
+        "downstream_event_hash",
+        "downstream_event_replay_hash",
+        "copied_input_hash",
+        "upstream_source_root",
+        "obligation_root",
+        "policy_hash"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_upstream_level",
+        "upstream_source_count",
+        "transitive_obligation_count",
+        "downstream_creator_pool",
+        "transitive_pool",
+        "residual_pool",
+        "payout_conserved",
+        "anti_laundering_enforced"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "downstream_output_text_disclosed",
+        "upstream_answer_text_disclosed",
+        "source_text_disclosed",
+        "copied_output_text_disclosed",
+        "report_uses_hashes_capsules_and_source_ids"
+      ],
+      "additionalProperties": true
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "attestation_hash": "71b5b958ef3c687b5e72701f85b7788908ca3c7bf37586db97784850036c2c98",
+    "attestation_id": "processor-batch:1",
+    "attestation_version": "rdllm-processor-batch-attestation/v1",
+    "created_at": "2026-05-31T00:00:00Z",
+    "currency": "USD",
+    "payment_execution_report_hash": "0f4d22a4d9c94e8d26366ae7828e28316b6b29159bcb845aedf9cb8ed68b87be",
+    "processor_id": "processor:rdllm-reference-ach",
+    "processor_record_hashes": [
+      "1a2b8afb217c70f5c36c7c8cfacace33ba4aa94dfe4e2cff2028028e30da317f",
+      "e9aab6ef2b7f5cc32bf389afd7bff1d1da7dd7e6967a6e393b32161a9835d80b",
+      "f0a280e3d724d6048d962c2b23144e556b650e32add2d6456b23261dca5d9d92"
+    ],
+    "processor_record_row_hashes": [
+      "1f3cc588cb9411d02d0f3baac7295810f3f8f10780a655f485358da8c8ffb6f6",
+      "27d81f6842337df547c4ac532ebae399c9e68f6bb5e4490db3c8c8dd6b94dcee",
+      "7cde28030793f6b652beb997e7491762564512377e131764ec6066fc27b81a18"
+    ],
+    "processor_role": "payment_processor",
+    "raw_processor_records_disclosed": false,
+    "record_count": 3,
+    "record_type": "payment_settlement",
+    "settled_total": "0.550000",
+    "settlement_batch_hash": "0203e5726136a5dd64c12d622945f579fb83c74b9355489000986d1f4806cd64",
+    "settlement_status": "settled",
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "processor:rdllm-reference-ach",
+      "value": "be8622f6b6820f6ebd26677bfd91e2b3925baf820e282f056986cb416df3a412"
+    }
+  }
+]

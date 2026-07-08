@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/warranted_source_footer.schema.json",
+  "title": "RDLLM Warranted Source Footer",
+  "type": "object",
+  "required": [
+    "footer_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "source_rows",
+    "claim_warrant_rows",
+    "footer_display",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "privacy",
+    "schemas",
+    "summary",
+    "warranted_source_footer_hash",
+    "signature"
+  ],
+  "properties": {
+    "footer_version": {
+      "const": "rdllm-warranted-source-footer/v1"
+    },
+    "issuer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "target_certification_level",
+        "minimum_input_level",
+        "required_axes",
+        "verified_footer_requires_visible_warrant_label"
+      ],
+      "properties": {
+        "target_certification_level": {
+          "const": "RDLLM-L120"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L119"
+        },
+        "required_axes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "source_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "title",
+          "source_uri",
+          "confidence_level",
+          "warranted_source_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "claim_warrant_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "visible_claim_key",
+          "claim_index",
+          "source_label",
+          "claim_hash",
+          "evidence_span_prefix",
+          "covered_by_force_row",
+          "calibrated",
+          "warrant_status",
+          "axis_rows",
+          "display_text",
+          "claim_warrant_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "footer_display": {
+      "type": "object",
+      "required": [
+        "profile",
+        "line_count",
+        "warrant_lines",
+        "visible_claim_key_root",
+        "claim_warrant_root",
+        "footer_hash"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "required": [
+        "failed_checks",
+        "uncovered_visible_claim_keys",
+        "uncalibrated_visible_claim_keys"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "source_row_root",
+        "claim_warrant_root",
+        "footer_display_hash",
+        "artifact_binding_root",
+        "schema"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "footer_warrant_labels_disclosed",
+        "raw_prompt_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_claim_text_disclosed",
+        "raw_evidence_text_disclosed",
+        "raw_source_text_disclosed",
+        "payment_account_disclosed"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "warranted_source_footer"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "visible_source_count",
+        "visible_claim_count",
+        "calibrated_visible_claim_count",
+        "uncovered_visible_claim_count",
+        "uncalibrated_visible_claim_count",
+        "warrant_line_count",
+        "failed_check_count"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "ready",
+            "failed"
+          ]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L120"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L119"
+        }
+      },
+      "additionalProperties": true
+    },
+    "warranted_source_footer_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

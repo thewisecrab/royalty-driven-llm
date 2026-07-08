@@ -1,0 +1,263 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_provider_catalog_coverage_contract.schema.json",
+  "title": "RDLLM Universal Provider Catalog Coverage Contract",
+  "type": "object",
+  "required": [
+    "universal_provider_catalog_coverage_contract_version",
+    "schema",
+    "policy",
+    "well_known",
+    "model_provider_registry_binding",
+    "source_footer_enforcement_binding",
+    "catalog_channel_rows",
+    "normalization_field_rows",
+    "catalog_snapshot_rows",
+    "discovered_model_rows",
+    "registry_route_coverage_rows",
+    "coverage_decision_classes",
+    "negative_catalog_rows",
+    "evidence_roots",
+    "checks",
+    "catalog_coverage_decision",
+    "coverage",
+    "privacy",
+    "summary",
+    "universal_provider_catalog_coverage_contract_hash"
+  ],
+  "properties": {
+    "universal_provider_catalog_coverage_contract_version": {
+      "const": "rdllm-universal-provider-catalog-coverage-contract/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_provider_catalog_coverage_contract.schema.json"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_model_provider_registry_level",
+        "minimum_source_footer_enforcement_level",
+        "provider_catalogs_must_be_exhaustively_normalized",
+        "every_discovered_model_must_be_admitted_or_blocked",
+        "declared_routes_must_be_catalog_covered_or_exempted",
+        "unknown_catalog_entries_fail_closed",
+        "catalog_coverage_required_before_universal_provider_claim"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-provider-catalog-coverage-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L178" },
+        "minimum_model_provider_registry_level": { "const": "RDLLM-L176" },
+        "minimum_source_footer_enforcement_level": { "const": "RDLLM-L177" },
+        "provider_catalogs_must_be_exhaustively_normalized": { "const": true },
+        "every_discovered_model_must_be_admitted_or_blocked": { "const": true },
+        "declared_routes_must_be_catalog_covered_or_exempted": { "const": true },
+        "unknown_catalog_entries_fail_closed": { "const": true },
+        "catalog_coverage_required_before_universal_provider_claim": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-provider-catalog-coverage-contract.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-provider-catalog-coverage-contract/v1"
+        }
+      },
+      "additionalProperties": true
+    },
+    "model_provider_registry_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level",
+        "declared_model_route_count"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 64 },
+        "payload_hash": { "type": "string", "minLength": 64 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L176" },
+        "declared_model_route_count": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": true
+    },
+    "source_footer_enforcement_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level",
+        "route_enforcement_count"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 64 },
+        "payload_hash": { "type": "string", "minLength": 64 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L177" },
+        "route_enforcement_count": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": true
+    },
+    "catalog_channel_rows": {
+      "type": "object",
+      "minProperties": 12
+    },
+    "normalization_field_rows": {
+      "type": "object",
+      "minProperties": 16
+    },
+    "catalog_snapshot_rows": {
+      "type": "object",
+      "minProperties": 12
+    },
+    "discovered_model_rows": {
+      "type": "array",
+      "minItems": 1
+    },
+    "registry_route_coverage_rows": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "coverage_decision_classes": {
+      "type": "array",
+      "minItems": 8,
+      "contains": { "const": "admitted_registered_route" }
+    },
+    "negative_catalog_rows": {
+      "type": "object",
+      "minProperties": 18
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "model_provider_registry_bound",
+        "model_provider_registry_l176_ready",
+        "source_footer_enforcement_contract_bound",
+        "source_footer_enforcement_contract_l177_ready",
+        "catalog_channel_rows_complete",
+        "normalization_field_rows_complete",
+        "catalog_snapshot_rows_complete",
+        "discovered_catalog_entries_present",
+        "discovered_catalog_entries_exhaustive",
+        "all_l176_routes_catalog_covered",
+        "negative_catalog_fixtures_reject",
+        "contract_signed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "catalog_coverage_decision": {
+      "type": "object",
+      "required": [
+        "universal_provider_catalog_coverage_ready",
+        "universal_provider_claim_allowed",
+        "catalog_exhaustiveness_attested",
+        "new_model_admission_allowed",
+        "unknown_catalog_models_blocked",
+        "declared_routes_without_catalog_coverage_blocked",
+        "source_footer_reliance_allowed",
+        "creator_settlement_allowed"
+      ],
+      "properties": {
+        "universal_provider_catalog_coverage_ready": { "const": true },
+        "universal_provider_claim_allowed": { "const": true },
+        "catalog_exhaustiveness_attested": { "const": true },
+        "new_model_admission_allowed": { "const": true },
+        "unknown_catalog_models_blocked": { "const": true },
+        "declared_routes_without_catalog_coverage_blocked": { "const": true },
+        "source_footer_reliance_allowed": { "const": true },
+        "creator_settlement_allowed": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payloads_excluded",
+        "private_prompts_excluded",
+        "private_outputs_excluded",
+        "private_catalog_exports_excluded",
+        "public_contract_uses_hashes_and_metadata"
+      ],
+      "properties": {
+        "private_payloads_excluded": { "const": true },
+        "private_prompts_excluded": { "const": true },
+        "private_outputs_excluded": { "const": true },
+        "private_catalog_exports_excluded": { "const": true },
+        "public_contract_uses_hashes_and_metadata": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_model_provider_registry_level",
+        "minimum_source_footer_enforcement_level",
+        "catalog_channel_count",
+        "ready_catalog_channel_count",
+        "normalization_field_count",
+        "ready_normalization_field_count",
+        "catalog_snapshot_count",
+        "ready_catalog_snapshot_count",
+        "discovered_model_count",
+        "ready_discovered_model_count",
+        "declared_model_route_count",
+        "catalog_covered_route_count",
+        "coverage_decision_count",
+        "negative_catalog_failure_count",
+        "ready_negative_catalog_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_provider_catalog_coverage_contract"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L178" },
+        "minimum_model_provider_registry_level": { "const": "RDLLM-L176" },
+        "minimum_source_footer_enforcement_level": { "const": "RDLLM-L177" },
+        "catalog_channel_count": { "const": 12 },
+        "ready_catalog_channel_count": { "const": 12 },
+        "normalization_field_count": { "const": 16 },
+        "ready_normalization_field_count": { "const": 16 },
+        "catalog_snapshot_count": { "const": 12 },
+        "ready_catalog_snapshot_count": { "const": 12 },
+        "discovered_model_count": { "type": "integer", "minimum": 1 },
+        "ready_discovered_model_count": { "type": "integer", "minimum": 1 },
+        "declared_model_route_count": { "type": "integer", "minimum": 1 },
+        "catalog_covered_route_count": { "type": "integer", "minimum": 1 },
+        "coverage_decision_count": { "const": 8 },
+        "negative_catalog_failure_count": { "const": 18 },
+        "ready_negative_catalog_failure_count": { "const": 18 },
+        "failure_mode_count": { "const": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_provider_catalog_coverage_contract": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "universal_provider_catalog_coverage_contract_hash": {
+      "type": "string",
+      "minLength": 64
+    }
+  },
+  "additionalProperties": true
+}

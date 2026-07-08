@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/evidence_locked_generation.schema.json",
+  "title": "RDLLM Evidence Locked Generation Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "lock_policy",
+    "generation_window",
+    "response",
+    "artifact_bindings",
+    "evidence_lock_rows",
+    "checks",
+    "summary",
+    "privacy",
+    "schemas",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-evidence-locked-generation/v1" },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "lock_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "pre_generation_lock_required",
+        "post_hoc_citation_rationalization_blocked",
+        "raw_answer_text_forbidden",
+        "raw_source_text_forbidden",
+        "raw_context_text_forbidden"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-evidence-locked-generation-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L82" },
+        "minimum_input_level": { "const": "RDLLM-L81" },
+        "pre_generation_lock_required": { "type": "boolean" },
+        "post_hoc_citation_rationalization_blocked": { "type": "boolean" },
+        "raw_answer_text_forbidden": { "type": "boolean" },
+        "raw_source_text_forbidden": { "type": "boolean" },
+        "raw_context_text_forbidden": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "generation_window": {
+      "type": "object",
+      "required": [
+        "lock_created_at",
+        "generation_started_at",
+        "lock_root",
+        "lock_count"
+      ],
+      "properties": {
+        "lock_created_at": { "type": "string" },
+        "generation_started_at": { "type": "string" },
+        "lock_root": { "type": "string" },
+        "lock_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": true
+    },
+    "response": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "source_labels"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "response_envelope_hash",
+        "answer_claim_coverage_report_hash",
+        "generation_context_closure_report_hash",
+        "citation_footer_contract_hash",
+        "rendered_attribution_audit_hash",
+        "training_memory_provenance_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "evidence_lock_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "unit_index",
+          "unit_hash",
+          "unit_text_hash",
+          "claim_index",
+          "claim_hash",
+          "source_label",
+          "evidence_span_prefix",
+          "matched_context_block_id",
+          "matched_source_access_id",
+          "work_id",
+          "chunk_id",
+          "content_hash",
+          "context_closed",
+          "retrieval_context_allowed",
+          "answer_surface_covered",
+          "footer_source_visible",
+          "footer_evidence_prefix_bound",
+          "body_source_marker_visible",
+          "rendered_claim_evidence_bound",
+          "context_evidence_prefix_bound",
+          "lock_satisfied",
+          "lock_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "lock_created_before_generation",
+        "response_envelope_verified",
+        "rendered_output_hash_matches_coverage",
+        "rendered_output_hash_matches_audit",
+        "answer_claim_coverage_verified",
+        "generation_context_closure_verified",
+        "citation_footer_contract_verified",
+        "rendered_attribution_audit_ready",
+        "training_memory_provenance_ready",
+        "every_support_required_unit_locked",
+        "every_footer_source_has_lock",
+        "input_hashes_reproducible"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "support_required_unit_count",
+        "evidence_lock_count",
+        "satisfied_lock_count",
+        "footer_source_count",
+        "locked_footer_source_count",
+        "post_hoc_rationalization_blocked"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L82" },
+        "support_required_unit_count": { "type": "integer", "minimum": 0 },
+        "evidence_lock_count": { "type": "integer", "minimum": 0 },
+        "satisfied_lock_count": { "type": "integer", "minimum": 0 },
+        "footer_source_count": { "type": "integer", "minimum": 0 },
+        "locked_footer_source_count": { "type": "integer", "minimum": 0 },
+        "post_hoc_rationalization_blocked": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "context_text_disclosed",
+        "prompt_text_disclosed",
+        "claim_text_disclosed",
+        "stores_hashes_ids_and_counts_not_text"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "evidence_locked_generation",
+        "response_envelope",
+        "answer_claim_coverage_report",
+        "generation_context_closure_report",
+        "citation_footer_contract",
+        "rendered_attribution_audit",
+        "training_memory_provenance"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

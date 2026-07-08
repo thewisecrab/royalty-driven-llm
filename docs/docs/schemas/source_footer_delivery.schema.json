@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/source_footer_delivery.schema.json",
+  "title": "RDLLM Source Footer Delivery Receipt",
+  "type": "object",
+  "required": [
+    "version",
+    "issued_at",
+    "issuer",
+    "case",
+    "artifact_bindings",
+    "delivery_subject",
+    "source_delivery_rows",
+    "claim_delivery_rows",
+    "delivery_metadata",
+    "verification_errors",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "source_footer_delivery_hash",
+    "signature"
+  ],
+  "properties": {
+    "version": {
+      "const": "rdllm-source-footer-delivery/v1"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "case": {
+      "type": "object",
+      "required": ["case_id", "status"],
+      "properties": {
+        "case_id": {
+          "type": "string"
+        },
+        "status": {
+          "enum": ["ready", "needs_review"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "grounded_source_footer_hash",
+        "response_envelope_hash",
+        "proof_carrying_response_hash",
+        "serving_gateway_report_hash",
+        "grounded_source_footer_hash_reproducible",
+        "response_envelope_hash_reproducible",
+        "proof_carrying_response_hash_reproducible",
+        "serving_gateway_report_hash_reproducible",
+        "grounded_footer_contract_hash",
+        "response_envelope_citation_footer_contract_hash"
+      ],
+      "additionalProperties": true
+    },
+    "delivery_subject": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "copied_output_hash",
+        "delivered_output_hash",
+        "grounded_source_footer_hash"
+      ],
+      "additionalProperties": true
+    },
+    "source_delivery_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "display_label",
+          "title",
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "footer_row_hash",
+          "proof_row_hash",
+          "label_visible_in_rendered_output",
+          "title_visible_in_rendered_output",
+          "uri_visible_in_rendered_output",
+          "label_visible_in_delivered_output",
+          "source_rationale_hash",
+          "source_delivery_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "claim_delivery_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_index",
+          "claim_hash",
+          "source_label",
+          "evidence_span_prefix",
+          "region_id",
+          "region_hash",
+          "span_visible_in_rendered_output",
+          "span_visible_in_delivered_output",
+          "public_region_bound",
+          "claim_delivery_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "delivery_metadata": {
+      "type": "object",
+      "required": [
+        "profile",
+        "grounded_source_footer_hash",
+        "source_footer_delivery_well_known_path",
+        "grounded_source_footer_well_known_path",
+        "verifier_command",
+        "grounded_footer_verifier_command",
+        "proof_response_hash",
+        "gateway_report_hash",
+        "delivered_output_hash",
+        "source_label_order",
+        "source_delivery_row_hashes",
+        "source_rationale_hashes",
+        "claim_delivery_row_hashes",
+        "proof_row_hashes",
+        "metadata_hash"
+      ],
+      "additionalProperties": true
+    },
+    "verification_errors": {
+      "type": "object",
+      "required": [
+        "response_envelope_error_count",
+        "proof_carrying_response_error_count",
+        "serving_gateway_error_count"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "artifact_hashes_reproducible",
+        "grounded_source_footer_ready_l102",
+        "response_envelope_verified",
+        "proof_carrying_response_verified",
+        "serving_gateway_verified",
+        "proof_response_embeds_response_envelope",
+        "gateway_served_proof_response",
+        "delivered_output_matches_gateway",
+        "rendered_output_matches_envelope",
+        "copied_output_contains_rendered_answer",
+        "delivered_output_contains_copied_output",
+        "grounded_footer_matches_response_contract",
+        "all_grounded_sources_visible_in_rendered_output",
+        "all_grounded_sources_visible_in_delivered_output",
+        "all_grounded_claim_spans_visible",
+        "response_source_labels_match_grounded_footer",
+        "delivery_metadata_contains_verifier_handles",
+        "delivery_rows_carry_source_rationale",
+        "private_text_not_disclosed"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "source_footer_delivery",
+        "grounded_source_footer",
+        "response_envelope",
+        "proof_carrying_response",
+        "serving_gateway_report"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "visible_source_count",
+        "delivered_source_count",
+        "claim_span_count",
+        "delivered_claim_span_count",
+        "failed_check_count",
+        "grounded_footer_delivery_enforced",
+        "client_verifier_handles_present",
+        "source_selection_rationale_delivered",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["ready", "needs_review"]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L103"
+        }
+      },
+      "additionalProperties": true
+    },
+    "source_footer_delivery_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

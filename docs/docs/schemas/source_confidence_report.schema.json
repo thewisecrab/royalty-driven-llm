@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/source_confidence_report.schema.json",
+  "title": "RDLLM Source Confidence Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "event",
+    "artifact_status",
+    "sources",
+    "claims",
+    "footer",
+    "hallucination_taxonomy",
+    "commitments",
+    "summary",
+    "schemas",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-source-confidence-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "answer_card_hash",
+        "source_verification_report_hash",
+        "creator_license_contract_hash"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_status": {
+      "type": "object",
+      "required": [
+        "answer_card_hash_reproducible",
+        "source_verification_hash_reproducible",
+        "source_verification_status_verified",
+        "creator_license_contract_verified",
+        "creator_license_contract_errors"
+      ],
+      "additionalProperties": true
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "title",
+          "creator_id",
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "content_hash",
+          "content_hash_prefix",
+          "confidence_score",
+          "confidence_level",
+          "checks",
+          "source_confidence_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_index",
+          "claim_hash",
+          "source_label",
+          "work_id",
+          "chunk_id",
+          "support_score",
+          "evidence_span_hash",
+          "evidence_span_prefix",
+          "confidence_score",
+          "confidence_level",
+          "checks",
+          "claim_confidence_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "footer": {
+      "type": "object",
+      "required": ["profile", "rows", "row_count"],
+      "additionalProperties": true
+    },
+    "hallucination_taxonomy": {
+      "type": "object",
+      "required": [
+        "fabricated_source_count",
+        "metadata_mismatch_count",
+        "hash_mismatch_count",
+        "footer_omission_count",
+        "attribution_suppression_count",
+        "license_gap_count",
+        "unsupported_claim_count",
+        "evidence_span_gap_count",
+        "failed_source_count",
+        "failed_claim_count"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "source_confidence_root",
+        "claim_confidence_root",
+        "footer_confidence_root",
+        "taxonomy_hash",
+        "answer_card_hash",
+        "source_verification_report_hash",
+        "creator_license_contract_hash"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "source_count",
+        "claim_count",
+        "verified_source_count",
+        "verified_claim_count",
+        "minimum_source_confidence",
+        "minimum_claim_confidence",
+        "average_source_confidence",
+        "average_claim_confidence",
+        "support_score_floor",
+        "hallucination_issue_count",
+        "public_footer_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "source_confidence_report",
+        "answer_provenance_card",
+        "source_verification_report",
+        "creator_license_contract"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "source_quote_text_disclosed",
+        "claim_text_disclosed",
+        "claim_evidence_text_disclosed",
+        "payout_account_disclosed",
+        "report_uses_hashes_metadata_booleans_and_scores"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

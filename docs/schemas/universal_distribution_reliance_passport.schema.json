@@ -1,0 +1,422 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_distribution_reliance_passport.schema.json",
+  "title": "Universal Distribution Reliance Passport",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "universal_distribution_reliance_passport_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "source_grounded_response_binding",
+    "content_credential_binding",
+    "distribution_surface_rows",
+    "portable_binding_rows",
+    "status_channel_rows",
+    "negative_distribution_rows",
+    "evidence_roots",
+    "checks",
+    "distribution_reliance_decision",
+    "distribution_coverage",
+    "privacy",
+    "summary",
+    "universal_distribution_reliance_passport_hash"
+  ],
+  "properties": {
+    "universal_distribution_reliance_passport_version": {
+      "const": "rdllm-universal-distribution-reliance-passport/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_distribution_reliance_passport.schema.json"
+    },
+    "created_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_source_grounded_response_level",
+        "minimum_content_credential_level",
+        "source_footer_must_survive_distribution",
+        "status_resolver_required_for_third_party_reliance",
+        "content_credential_required_for_exported_artifacts",
+        "downstream_reuse_meter_required",
+        "settlement_obligation_carry_forward_required",
+        "private_payloads_forbidden_in_public_passport"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-distribution-reliance-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L172" },
+        "minimum_source_grounded_response_level": { "const": "RDLLM-L171" },
+        "minimum_content_credential_level": { "const": "RDLLM-L136" },
+        "source_footer_must_survive_distribution": { "const": true },
+        "status_resolver_required_for_third_party_reliance": { "const": true },
+        "content_credential_required_for_exported_artifacts": { "const": true },
+        "downstream_reuse_meter_required": { "const": true },
+        "settlement_obligation_carry_forward_required": { "const": true },
+        "private_payloads_forbidden_in_public_passport": { "const": true }
+      }
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-distribution-reliance-passport.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-distribution-reliance-passport/v1"
+        }
+      }
+    },
+    "source_grounded_response_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 32 },
+        "payload_hash": { "type": "string", "minLength": 32 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L171" }
+      }
+    },
+    "content_credential_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 32 },
+        "payload_hash": { "type": "string", "minLength": 32 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L136" }
+      }
+    },
+    "distribution_surface_rows": {
+      "type": "object",
+      "required": [
+        "clipboard_copy",
+        "markdown_export",
+        "html_export",
+        "pdf_export",
+        "image_screenshot",
+        "c2pa_content_credential",
+        "api_relay",
+        "web_embed",
+        "email_share",
+        "social_share",
+        "downstream_rag_ingestion",
+        "marketplace_dataset_export"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/distributionSurfaceRow" }
+    },
+    "portable_binding_rows": {
+      "type": "object",
+      "required": [
+        "l171_receipt_hash",
+        "visible_footer_hash",
+        "source_locator_manifest_hash",
+        "content_credential_hash",
+        "status_resolver_hash",
+        "revocation_snapshot_hash",
+        "reuse_meter_hash",
+        "copy_export_meter_hash",
+        "downstream_reuse_meter_hash",
+        "settlement_carry_forward_hash",
+        "auditor_export_hash"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/portableBindingRow" }
+    },
+    "status_channel_rows": {
+      "type": "object",
+      "required": [
+        "well_known_status_resolver",
+        "content_credential_manifest",
+        "source_locator_resolver",
+        "citation_url_health_resolver",
+        "revocation_and_correction_feed",
+        "creator_settlement_status_api",
+        "independent_audit_export"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/statusChannelRow" }
+    },
+    "negative_distribution_rows": {
+      "type": "object",
+      "required": [
+        "missing_l171_receipt",
+        "stale_l171_receipt",
+        "footer_stripped_on_copy",
+        "citation_locator_removed",
+        "content_credential_missing",
+        "status_resolver_unreachable",
+        "revocation_snapshot_stale",
+        "downstream_reuse_unmetered",
+        "settlement_obligation_dropped",
+        "credential_manifest_mismatch",
+        "screenshot_without_source_overlay",
+        "pdf_export_without_footer",
+        "api_relay_without_receipt",
+        "marketplace_export_without_license",
+        "private_payload_leak"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/negativeDistributionRow" }
+    },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "distribution_surface_root",
+        "portable_binding_root",
+        "status_channel_root",
+        "negative_distribution_root"
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "source_grounded_response_receipt_bound",
+        "source_grounded_response_receipt_l171_ready",
+        "content_credential_bound",
+        "content_credential_ready",
+        "distribution_surface_rows_complete",
+        "portable_binding_rows_complete",
+        "status_channel_rows_complete",
+        "negative_distribution_fixtures_reject",
+        "distribution_reliance_passport_signed"
+      ]
+    },
+    "distribution_reliance_decision": {
+      "type": "object",
+      "required": [
+        "distribution_reliance_ready",
+        "copy_distribution_allowed",
+        "export_distribution_allowed",
+        "third_party_reliance_allowed",
+        "api_relay_allowed",
+        "downstream_rag_ingestion_allowed",
+        "content_credential_export_allowed",
+        "settlement_carry_forward_allowed",
+        "stripped_outputs_blocked",
+        "failure_modes"
+      ],
+      "properties": {
+        "distribution_reliance_ready": { "const": true },
+        "copy_distribution_allowed": { "const": true },
+        "export_distribution_allowed": { "const": true },
+        "third_party_reliance_allowed": { "const": true },
+        "api_relay_allowed": { "const": true },
+        "downstream_rag_ingestion_allowed": { "const": true },
+        "content_credential_export_allowed": { "const": true },
+        "settlement_carry_forward_allowed": { "const": true },
+        "stripped_outputs_blocked": { "const": true },
+        "failure_modes": { "type": "array", "maxItems": 0 }
+      }
+    },
+    "distribution_coverage": {
+      "type": "object",
+      "required": [
+        "required_distribution_surface_count",
+        "ready_distribution_surface_count",
+        "required_portable_binding_count",
+        "ready_portable_binding_count",
+        "required_status_channel_count",
+        "ready_status_channel_count"
+      ],
+      "properties": {
+        "required_distribution_surface_count": { "const": 12 },
+        "ready_distribution_surface_count": { "const": 12 },
+        "required_portable_binding_count": { "const": 11 },
+        "ready_portable_binding_count": { "const": 11 },
+        "required_status_channel_count": { "const": 7 },
+        "ready_status_channel_count": { "const": 7 }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payload_fields",
+        "private_strings_absent",
+        "private_payloads_excluded"
+      ],
+      "properties": {
+        "private_payload_fields": { "type": "array", "maxItems": 0 },
+        "private_strings_absent": { "const": true },
+        "private_payloads_excluded": { "const": true }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_source_grounded_response_level",
+        "minimum_content_credential_level",
+        "distribution_surface_count",
+        "ready_distribution_surface_count",
+        "portable_binding_count",
+        "ready_portable_binding_count",
+        "status_channel_count",
+        "ready_status_channel_count",
+        "negative_distribution_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_distribution_reliance_passport"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L172" },
+        "minimum_source_grounded_response_level": { "const": "RDLLM-L171" },
+        "minimum_content_credential_level": { "const": "RDLLM-L136" },
+        "distribution_surface_count": { "const": 12 },
+        "ready_distribution_surface_count": { "const": 12 },
+        "portable_binding_count": { "const": 11 },
+        "ready_portable_binding_count": { "const": 11 },
+        "status_channel_count": { "const": 7 },
+        "ready_status_channel_count": { "const": 7 },
+        "negative_distribution_failure_count": { "const": 15 },
+        "failure_mode_count": { "const": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_distribution_reliance_passport": { "const": true }
+      }
+    },
+    "universal_distribution_reliance_passport_hash": {
+      "type": "string",
+      "minLength": 32
+    },
+    "signature": { "type": "object" }
+  },
+  "$defs": {
+    "distributionSurfaceRow": {
+      "type": "object",
+      "required": [
+        "distribution_surface_hash",
+        "artifact_body_hash",
+        "l171_receipt_hash",
+        "visible_footer_hash",
+        "source_locator_manifest_hash",
+        "status_resolver_hash",
+        "content_credential_hash",
+        "reuse_meter_hash",
+        "settlement_carry_forward_hash",
+        "verifier_hash",
+        "surface_exported",
+        "attribution_visible_or_embedded",
+        "l171_receipt_bound",
+        "source_locators_preserved",
+        "status_resolver_reachable",
+        "revocation_checked",
+        "reuse_metered",
+        "settlement_obligation_preserved",
+        "fail_closed_if_stripped",
+        "no_private_payloads"
+      ],
+      "properties": {
+        "surface_exported": { "const": true },
+        "attribution_visible_or_embedded": { "const": true },
+        "l171_receipt_bound": { "const": true },
+        "source_locators_preserved": { "const": true },
+        "status_resolver_reachable": { "const": true },
+        "revocation_checked": { "const": true },
+        "reuse_metered": { "const": true },
+        "settlement_obligation_preserved": { "const": true },
+        "fail_closed_if_stripped": { "const": true },
+        "no_private_payloads": { "const": true }
+      }
+    },
+    "portableBindingRow": {
+      "type": "object",
+      "required": [
+        "binding_hash",
+        "subject_hash",
+        "l171_receipt_hash",
+        "binding_target_hash",
+        "proof_graph_hash",
+        "resolver_hash",
+        "verifier_hash",
+        "publicly_verifiable",
+        "tamper_evident",
+        "survives_copy_or_transform",
+        "resolves_to_current_status",
+        "binds_settlement_obligation",
+        "no_private_payloads"
+      ],
+      "properties": {
+        "publicly_verifiable": { "const": true },
+        "tamper_evident": { "const": true },
+        "survives_copy_or_transform": { "const": true },
+        "resolves_to_current_status": { "const": true },
+        "binds_settlement_obligation": { "const": true },
+        "no_private_payloads": { "const": true }
+      }
+    },
+    "statusChannelRow": {
+      "type": "object",
+      "required": [
+        "channel_hash",
+        "endpoint_hash",
+        "discovery_manifest_hash",
+        "last_observed_root_hash",
+        "verifier_hash",
+        "endpoint_published",
+        "current_status_resolves",
+        "revocation_status_included",
+        "correction_status_included",
+        "settlement_status_included",
+        "no_split_view_observed",
+        "no_private_payloads"
+      ],
+      "properties": {
+        "endpoint_published": { "const": true },
+        "current_status_resolves": { "const": true },
+        "revocation_status_included": { "const": true },
+        "correction_status_included": { "const": true },
+        "settlement_status_included": { "const": true },
+        "no_split_view_observed": { "const": true },
+        "no_private_payloads": { "const": true }
+      }
+    },
+    "negativeDistributionRow": {
+      "type": "object",
+      "required": [
+        "fixture_hash",
+        "expected_reject",
+        "observed_reject",
+        "distribution_blocked",
+        "third_party_reliance_blocked",
+        "downstream_reuse_blocked",
+        "settlement_carry_forward_held",
+        "public_status_marked_failed"
+      ],
+      "properties": {
+        "fixture_hash": { "type": "string", "minLength": 32 },
+        "expected_reject": { "const": true },
+        "observed_reject": { "const": true },
+        "distribution_blocked": { "const": true },
+        "third_party_reliance_blocked": { "const": true },
+        "downstream_reuse_blocked": { "const": true },
+        "settlement_carry_forward_held": { "const": true },
+        "public_status_marked_failed": { "const": true }
+      }
+    }
+  }
+}

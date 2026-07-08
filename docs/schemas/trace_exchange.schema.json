@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/trace_exchange.schema.json",
+  "title": "RDLLM Trace Exchange",
+  "type": "object",
+  "required": [
+    "trace_exchange_version",
+    "schema_url",
+    "otel_semconv",
+    "trace_id",
+    "event_id",
+    "event_hash",
+    "provider",
+    "summary",
+    "spans",
+    "trace_hash"
+  ],
+  "properties": {
+    "trace_exchange_version": {
+      "const": "rdllm-trace-exchange/v1"
+    },
+    "schema_url": {
+      "type": "string"
+    },
+    "otel_semconv": {
+      "type": "string"
+    },
+    "trace_id": {
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "event_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "receipt_hash": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "object",
+      "required": ["name", "model_id", "model_version", "route_id"],
+      "properties": {
+        "name": { "type": "string" },
+        "model_id": { "type": "string" },
+        "model_version": { "type": "string" },
+        "route_id": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "source_access_count",
+        "visible_source_count",
+        "claim_count",
+        "attribution_gap_verdict",
+        "source_access_trace_hash",
+        "source_reference_trace_hash",
+        "claim_support_trace_hash"
+      ],
+      "properties": {
+        "source_access_count": { "type": "integer", "minimum": 0 },
+        "visible_source_count": { "type": "integer", "minimum": 0 },
+        "claim_count": { "type": "integer", "minimum": 0 },
+        "attribution_gap_verdict": { "type": "string" },
+        "source_access_trace_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_reference_trace_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "claim_support_trace_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "additionalProperties": true
+    },
+    "spans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "trace_id", "span_id", "kind", "attributes"],
+        "properties": {
+          "name": { "type": "string" },
+          "trace_id": { "type": "string" },
+          "span_id": { "type": "string" },
+          "parent_span_id": { "type": "string" },
+          "kind": { "type": "string" },
+          "attributes": {
+            "type": "object",
+            "required": ["rdllm.span.kind"],
+            "properties": {
+              "rdllm.span.kind": {
+                "enum": ["generation", "source_access", "citation", "claim_support"]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "trace_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": true
+}

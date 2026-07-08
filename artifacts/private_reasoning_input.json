@@ -1,0 +1,743 @@
+{
+  "case_id": "artifact:private-reasoning-attribution",
+  "client_attribution_enforcement": {
+    "artifact_bindings": {
+      "embedded_foundation_api_profile_hash": "88cfbe2e7a6bf70030a4ce736987e46aa08a51ca19518a3597406acc152c80d7",
+      "foundation_api_profile_hash": "88cfbe2e7a6bf70030a4ce736987e46aa08a51ca19518a3597406acc152c80d7",
+      "foundation_api_profile_hash_reproducible": false,
+      "observed_header_hash": "2c1367791813c0e496a6158f3566afded69225db630eb15f30a4d98cbdd9e6a8",
+      "observed_payload_hash": "bedce428edddf9aaacedab155e6acc407a0e1466bc054cb68fe21823ebf5d145",
+      "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+      "response_envelope_hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243",
+      "response_envelope_hash_reproducible": true,
+      "source_footer_delivery_hash": "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+      "source_footer_delivery_hash_reproducible": true
+    },
+    "case": {
+      "case_id": "artifact:client-attribution-enforcement",
+      "status": "ready"
+    },
+    "checks": {
+      "client_policy_is_fail_closed": true,
+      "client_render_decision_matches_enforcement": true,
+      "embedded_foundation_profile_matches_observed_profile": true,
+      "embedded_response_envelope_matches_profile": true,
+      "embedded_response_envelope_verified": true,
+      "embedded_source_footer_delivery_matches_profile": true,
+      "embedded_source_footer_delivery_verified": true,
+      "foundation_api_profile_verified": true,
+      "observed_headers_include_required_profile_headers": true,
+      "observed_headers_match_profile_values": true,
+      "observed_payload_has_required_json_fields": true,
+      "private_text_not_disclosed": true,
+      "rendered_output_hash_matches_envelope": true,
+      "source_labels_match_delivery_rows": true,
+      "verifier_commands_match_profile_contract": true
+    },
+    "client_decision": {
+      "decision": "render_attributed",
+      "failure_action": "render_with_sources",
+      "failure_reasons": [],
+      "may_render_attributed_answer": true,
+      "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+      "requested_decision": "render_attributed",
+      "source_labels": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    "client_enforcement_hash": "31f1c7d919bbeb81f3259ceee324c931360dae638b40905824f3863c5383fbf0",
+    "client_subject": {
+      "client_id": "client:rdllm-reference-chat",
+      "client_surface": "chat_ui",
+      "client_version": "2026-06",
+      "foundation_profile_hash": "88cfbe2e7a6bf70030a4ce736987e46aa08a51ca19518a3597406acc152c80d7",
+      "render_target": "answer_panel",
+      "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+      "response_envelope_hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243",
+      "source_footer_delivery_hash": "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9"
+    },
+    "issued_at": "2026-05-31T00:00:00Z",
+    "issuer": "rdllm-local-demo",
+    "observed_header_results": [
+      {
+        "expected_value_hash": "65a663e84eeada55b68fcf1b7c1dcacea31896aa2b45dbb28bbc3386df89cef0",
+        "matches_profile": true,
+        "name": "RDLLM-Attribution-Level",
+        "observed_value_hash": "65a663e84eeada55b68fcf1b7c1dcacea31896aa2b45dbb28bbc3386df89cef0",
+        "present": true,
+        "row_hash": "a63dfd017508035bdb69ec38f9b753a2868eb10325c378b77634796e8eb41a06"
+      },
+      {
+        "expected_value_hash": "170d43b0be158080d5facb36d4a7c4ed2c87607cdb5c66db836d01b1a33a3d37",
+        "matches_profile": true,
+        "name": "RDLLM-Discovery-Manifest-Hash",
+        "observed_value_hash": "170d43b0be158080d5facb36d4a7c4ed2c87607cdb5c66db836d01b1a33a3d37",
+        "present": true,
+        "row_hash": "6874bde7414f2b6c8a4237f0d306c31a476c4c1a11af6081a6d0189b0adacdf0"
+      },
+      {
+        "expected_value_hash": "74898e2e267e687fb6611cd612c57f20b81b3630d01f51a0a7d81a33c532c6e7",
+        "matches_profile": true,
+        "name": "RDLLM-Foundation-Profile-Hash",
+        "observed_value_hash": "74898e2e267e687fb6611cd612c57f20b81b3630d01f51a0a7d81a33c532c6e7",
+        "present": true,
+        "row_hash": "3d1f9f9d363e450c20a5262101469d04b67386dcd0ff3d084b801d60fe675a65"
+      },
+      {
+        "expected_value_hash": "df39c1c53384abed7c86c1800d41549fde7ed4d34eedf572c5f6d85468e9455e",
+        "matches_profile": true,
+        "name": "RDLLM-Response-Envelope-Hash",
+        "observed_value_hash": "df39c1c53384abed7c86c1800d41549fde7ed4d34eedf572c5f6d85468e9455e",
+        "present": true,
+        "row_hash": "8e5269db8568964a26e955ee70eee019634d04529b11fcdf6f30f8f75e356706"
+      },
+      {
+        "expected_value_hash": "81e01a70891e98c3968202ad8a7c61714e0930a55d45dc601a38aedb28a36962",
+        "matches_profile": true,
+        "name": "RDLLM-Source-Footer-Delivery-Hash",
+        "observed_value_hash": "81e01a70891e98c3968202ad8a7c61714e0930a55d45dc601a38aedb28a36962",
+        "present": true,
+        "row_hash": "b5760178f60676ac0b29b8aa1877983dce22b77ba80ba0f732f966453d68c407"
+      },
+      {
+        "expected_value_hash": "e39dec1ecc23b379f44c1901deb7d9bc622b1df5234e0a898924ced6045f3307",
+        "matches_profile": true,
+        "name": "RDLLM-Verification-Endpoint",
+        "observed_value_hash": "e39dec1ecc23b379f44c1901deb7d9bc622b1df5234e0a898924ced6045f3307",
+        "present": true,
+        "row_hash": "6f2f1aad41ef12ec7d1128553cfa5b243c8ea7852be7df555615332085374abe"
+      }
+    ],
+    "observed_payload_commitments": {
+      "payload_hash": "bedce428edddf9aaacedab155e6acc407a0e1466bc054cb68fe21823ebf5d145",
+      "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+      "required_json_field_count": 6,
+      "source_label_count": 3,
+      "source_labels_hash": "ca9bd69fb924f20108fc78fa2add7b70858bd43d8d963fd5a2cab41db2a05302"
+    },
+    "privacy": {
+      "answer_text_disclosed": false,
+      "client_receipt_uses_hashes_and_labels": true,
+      "evidence_text_disclosed": false,
+      "payment_data_disclosed": false,
+      "prompt_text_disclosed": false,
+      "source_text_disclosed": false
+    },
+    "schemas": {
+      "client_attribution_enforcement": "docs/schemas/client_attribution_enforcement.schema.json",
+      "foundation_api_profile": "docs/schemas/foundation_attribution_profile.schema.json",
+      "response_envelope": "docs/schemas/response_envelope.schema.json",
+      "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "0fea9fc125a8042d377e79baa720086ea958a328acee8dc6937722faefb321e9"
+    },
+    "summary": {
+      "client_enforcement_ready": true,
+      "failed_check_count": 0,
+      "minimum_profile_level": "RDLLM-L104",
+      "privacy_preserved": true,
+      "required_header_count": 6,
+      "required_json_field_count": 6,
+      "source_label_count": 3,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L105"
+    },
+    "verification_errors": {
+      "foundation_api_profile_error_count": 0,
+      "response_envelope_error_count": 0,
+      "source_footer_delivery_error_count": 0
+    },
+    "version": "rdllm-client-attribution-enforcement/v1"
+  },
+  "client_attribution_input": {
+    "$artifact_ref": "artifacts/client_attribution_input.json"
+  },
+  "persistent_memory_input": {
+    "$artifact_ref": "artifacts/persistent_memory_input.json"
+  },
+  "persistent_memory_provenance": {
+    "artifact_bindings": {
+      "client_enforcement_hash": "31f1c7d919bbeb81f3259ceee324c931360dae638b40905824f3863c5383fbf0",
+      "client_enforcement_hash_reproducible": true,
+      "foundation_profile_hash": "88cfbe2e7a6bf70030a4ce736987e46aa08a51ca19518a3597406acc152c80d7",
+      "foundation_profile_hash_reproducible": true,
+      "memory_entry_input_hash": "a70a4cf2bc28015741e065acf43f6ec008d867a0229e484a26b1d30fc25c9150",
+      "memory_entry_root": "c663bc00b72e369482bfbc7f2326012cbc78042021a3e0a1604a57360749b0f3",
+      "memory_read_input_hash": "f3346885e055a8d6ae1ed4d2b068e11ebe9a2ad051e8141ae0a56ba003b408ba",
+      "memory_read_root": "29ce134af0f8f4812bf139025a5151e465bf8c0820160a9a125070981134a46d",
+      "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+      "royalty_obligation_root": "e16b27e488288f9f2757a40c738eeac7497bdc4e0c41bc9ed762dde2057e4947",
+      "source_footer_delivery_hash": "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+      "source_footer_delivery_hash_reproducible": true
+    },
+    "case": {
+      "case_id": "artifact:persistent-memory-provenance",
+      "status": "ready"
+    },
+    "checks": {
+      "artifact_hashes_reproducible": true,
+      "client_attribution_enforcement_verified": true,
+      "deleted_memory_not_reused": true,
+      "memory_entries_have_license_and_retention_policy": true,
+      "memory_entries_have_origin_sources": true,
+      "memory_origin_labels_match_delivered_footer": true,
+      "memory_policy_is_fail_closed": true,
+      "memory_read_labels_visible_in_footer": true,
+      "memory_reads_bind_to_client_rendered_output": true,
+      "memory_royalty_obligations_cover_sources": true,
+      "private_memory_text_not_disclosed": true,
+      "source_footer_delivery_verified": true
+    },
+    "issued_at": "2026-05-31T00:00:00Z",
+    "issuer": "rdllm-local-demo",
+    "memory_entries": [
+      {
+        "allowed_use_count": 2,
+        "delete_tombstone_hash": "",
+        "expires_at": "2026-12-31T00:00:00Z",
+        "license_terms_hash": "cf69e8f16a51df3ac32dba0835ba2caf08ab38e13f99592287bc8fb2cbd2265c",
+        "memory_entry_hash": "737e4934319eb46e8c789bda624d690df04ce97af4670fc3c2c60b7f501f7ca3",
+        "memory_id": "mem:reference-provenance-ledger-source",
+        "memory_text_hash": "46fc9547cb20c4615f87c390326341a30613670fcfe0898b108fda221cb3836a",
+        "memory_type": "source_summary",
+        "operation": "write",
+        "origin_artifact_hashes": [
+          "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+          "31f1c7d919bbeb81f3259ceee324c931360dae638b40905824f3863c5383fbf0"
+        ],
+        "parent_memory_text_hash": "",
+        "retention_basis": "licensed_attributed_memory",
+        "retention_policy_hash": "d52dbe2c1e24dab1ca1ee411f17d3a5a0b4afdc5c433b2f3b31a11f099d585f3",
+        "royalty_obligation_count": 1,
+        "sequence": 1,
+        "source_labels": [
+          "S1"
+        ],
+        "version": 1
+      }
+    ],
+    "memory_policy": {
+      "policy_hash": "8adb3383e680632a05e124fc37a35c7accde8b35540450c3191b15f68121e502",
+      "policy_id": "policy:persistent-memory-source-carry-forward",
+      "requires_delete_tombstones": true,
+      "requires_license_terms": true,
+      "requires_royalty_carry_forward": true,
+      "requires_source_provenance": true
+    },
+    "memory_reads": [
+      {
+        "client_enforcement_hash": "31f1c7d919bbeb81f3259ceee324c931360dae638b40905824f3863c5383fbf0",
+        "memory_id": "mem:reference-provenance-ledger-source",
+        "memory_read_hash": "ee64d8a056af4a65c0a47104bea22d568a249626f6e4520c84018664322b36c1",
+        "memory_version": 1,
+        "read_id": "memread:reference-provenance-ledger-source:1",
+        "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+        "sequence": 2,
+        "source_labels_carried": [
+          "S1"
+        ],
+        "usage_purpose": "answer_generation",
+        "visible_source_labels": [
+          "S1"
+        ]
+      }
+    ],
+    "memory_system": {
+      "minimum_client_level": "RDLLM-L105",
+      "scope": "assistant_persistent_memory",
+      "system_id": "memory:rdllm-reference-agent",
+      "system_version": "2026-06"
+    },
+    "persistent_memory_provenance_hash": "a61a76f2f7c5168a073cd9ac81e8838a0f1ac6c899456739d8670621ae05aa5c",
+    "privacy": {
+      "answer_text_disclosed": false,
+      "memory_receipt_uses_hashes_labels_and_policy_refs": true,
+      "memory_text_disclosed": false,
+      "payment_data_disclosed": false,
+      "prompt_text_disclosed": false,
+      "source_text_disclosed": false
+    },
+    "royalty_obligations": [
+      {
+        "creator_id": "arjun",
+        "memory_id": "mem:reference-provenance-ledger-source",
+        "memory_version": 1,
+        "obligation_hash": "28e71d5f7364c5273f262005df64d40245f48a4a869a13dafaaae70e9b13a4bf",
+        "royalty_row_hash": "57b873052212393ae19e3a26665b7740bcd9e4565295231b33d9d1d8b9074535",
+        "settlement_state": "direct",
+        "share": "1.0",
+        "source_label": "S1",
+        "work_id": "arjun-provenance-ledger"
+      }
+    ],
+    "schemas": {
+      "client_attribution_enforcement": "docs/schemas/client_attribution_enforcement.schema.json",
+      "persistent_memory_provenance": "docs/schemas/persistent_memory_provenance.schema.json",
+      "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "edcd5bfdfd586a250b8e8120c96934dfa8e410378fba34ae8ea5a7c8baca8aea"
+    },
+    "summary": {
+      "failed_check_count": 0,
+      "memory_entry_count": 1,
+      "memory_provenance_ready": true,
+      "memory_read_count": 1,
+      "minimum_client_level": "RDLLM-L105",
+      "privacy_preserved": true,
+      "royalty_obligation_count": 1,
+      "source_label_count": 1,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L106"
+    },
+    "verification_errors": {
+      "client_attribution_enforcement": 0,
+      "source_footer_delivery": 0
+    },
+    "version": "rdllm-persistent-memory-provenance/v1"
+  },
+  "private_strings": [
+    "How should AI prove attribution?",
+    "Royalty-aware answer:\nFor the prompt 'How should AI prove attribution?', the strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]",
+    "Royalty-aware answer:\nFor the prompt 'How should AI prove attribution?', the strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]\n\nSources\n[S1] Provenance Ledgers for AI Outputs - Arjun Rao; chunk=arjun-provenance-ledger:c1; uri=registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1; support=0.303; text_match=0.900; hash=e94efa6d9bb3.\n    Evidence: span_hashes=399e7ff82b80,6ea90fbdd0fb. Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.\n[S2] Creator Governance for AI Licensing - Lina Park; chunk=lina-governance-disputes:c1; uri=registered://works/lina-governance-disputes#lina-governance-disputes:c1; support=0.204; text_match=0.633; hash=2e332f176133.\n    Evidence: span_hashes=71e11e089ebe,82b19c7059e7. Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.\n[S3] Usage Pools for Creator Platforms - Maya Sen; chunk=maya-youtube-style-pool:c1; uri=registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1; support=0.333; text_match=0.933; hash=6029417218e9.\n    Evidence: span_hashes=28528b6fc0db,a9ed8431a259. A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.\nGrounding: 6/6 claims supported; status=grounded.\nClaim Evidence\n[C1] S1; span=399e7ff82b80; chars=0-64.\n[C2] S1; span=6ea90fbdd0fb; chars=65-244.\n[C3] S2; span=71e11e089ebe; chars=0-51.\n[C4] S2; span=82b19c7059e7; chars=52-164.\n[C5] S3; span=28528b6fc0db; chars=0-136.\n[C6] S3; span=a9ed8431a259; chars=137-262.",
+    "Persistent memory: source S1 supports the answer's provenance-ledger claim.",
+    "Hidden reasoning: use the persistent memory only while carrying source S1 into the final footer.",
+    "Delegate reviewer confirms hidden source influence remains footer-visible.",
+    "Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. Hashes do not prove legal ownership by themselves, but they do prove that a payout was tied to a specific registered text at a specific point in the ledger.",
+    "Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. A practical AI licensing marketplace can combine direct opt in registration with collective management for works whose owners are difficult to contact, while maintaining public summaries of training content and private audit trails.",
+    "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. A royalty driven LLM should use the same business idea but replace video views with generation events, retrieved source use, and output support."
+  ],
+  "reasoning_policy": {
+    "policy_id": "policy:private-reasoning-source-carry-forward",
+    "requires_auditor_challenge_support": true,
+    "requires_footer_closure": true,
+    "requires_memory_receipts_for_memory_steps": true,
+    "requires_no_raw_private_reasoning": true,
+    "requires_private_trace_commitments": true,
+    "requires_source_carry_forward": true
+  },
+  "reasoning_royalty_obligations": [
+    {
+      "basis": "private_reasoning_source_influence",
+      "creator_id": "arjun",
+      "settlement_state": "direct",
+      "share": "1.0",
+      "source_label": "S1",
+      "work_id": "arjun-provenance-ledger"
+    }
+  ],
+  "reasoning_steps": [
+    {
+      "claim_hashes": [
+        "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e"
+      ],
+      "input_artifact_hashes": [
+        "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+        "31f1c7d919bbeb81f3259ceee324c931360dae638b40905824f3863c5383fbf0",
+        "a61a76f2f7c5168a073cd9ac81e8838a0f1ac6c899456739d8670621ae05aa5c"
+      ],
+      "memory_ids": [
+        "mem:reference-provenance-ledger-source"
+      ],
+      "operation": "source_influenced_reasoning",
+      "output_commitment_hash": "4e67a194737dae8f80b20e6a793e25c7dbbae51e16a0ae7da9e7929f537d5922",
+      "private_trace_salt": "salt:artifact:private-reasoning:memory",
+      "private_trace_text": "Hidden reasoning: use the persistent memory only while carrying source S1 into the final footer.",
+      "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+      "sequence": 1,
+      "source_labels": [
+        "S1"
+      ],
+      "step_id": "reason:memory-source-synthesis",
+      "step_type": "memory_reuse",
+      "tool_call_ids": [],
+      "visible_source_labels": [
+        "S1"
+      ]
+    },
+    {
+      "claim_hashes": [
+        "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e"
+      ],
+      "delegate_model_id": "model:rdllm-attribution-reviewer",
+      "input_artifact_hashes": [
+        "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+        "31f1c7d919bbeb81f3259ceee324c931360dae638b40905824f3863c5383fbf0",
+        "a61a76f2f7c5168a073cd9ac81e8838a0f1ac6c899456739d8670621ae05aa5c"
+      ],
+      "memory_ids": [
+        "mem:reference-provenance-ledger-source"
+      ],
+      "operation": "delegated_reasoning_review",
+      "output_commitment_hash": "ef0211b8a5b9f70516d6d6b389a59e341502562ea27ca49db32e89d65643ed77",
+      "private_trace_salt": "salt:artifact:private-reasoning:delegate",
+      "private_trace_text": "Delegate reviewer confirms hidden source influence remains footer-visible.",
+      "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+      "sequence": 2,
+      "source_labels": [
+        "S1"
+      ],
+      "step_id": "reason:delegate-attribution-check",
+      "step_type": "model_router_synthesis",
+      "tool_call_ids": [],
+      "visible_source_labels": [
+        "S1"
+      ]
+    }
+  ],
+  "reasoning_system": {
+    "scope": "private_reasoning_and_delegation",
+    "system_id": "reasoning:rdllm-reference-orchestrator",
+    "system_version": "2026-06"
+  },
+  "source_footer_delivery": {
+    "artifact_bindings": {
+      "grounded_footer_contract_hash": "d2e0a8dbef31224c19d9c524d8136f168931d9f5d4ccf54bbda96b809bddbcde",
+      "grounded_footer_source_availability_hash": "6f3d0af1dfc20e5d743ace20bf629c1ca853719e1dc6f29959957cb7064afd85",
+      "grounded_footer_source_confidence_hash": "e21bf99ae1dbd34ff4c7e5d7c1da0f8a1842044e23b4035b9455f9ee390a4b09",
+      "grounded_source_footer_hash": "85246ef655a8d4feb604f9daa87564faa2bf31ef88b3a2e0a78db3e23e86a70d",
+      "grounded_source_footer_hash_reproducible": true,
+      "proof_carrying_response_hash": "39d2989d51a03adadf43b1a2340f88e783ab52b916fb839f96f517c67c60e014",
+      "proof_carrying_response_hash_reproducible": true,
+      "response_envelope_citation_footer_contract_hash": "d2e0a8dbef31224c19d9c524d8136f168931d9f5d4ccf54bbda96b809bddbcde",
+      "response_envelope_hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243",
+      "response_envelope_hash_reproducible": true,
+      "response_envelope_source_availability_hash": "6f3d0af1dfc20e5d743ace20bf629c1ca853719e1dc6f29959957cb7064afd85",
+      "response_envelope_source_confidence_hash": "e21bf99ae1dbd34ff4c7e5d7c1da0f8a1842044e23b4035b9455f9ee390a4b09",
+      "serving_gateway_report_hash": "a2396d31b99d9eca8614bf838355e476e6b378985aac3bf49fa13288f9500c18",
+      "serving_gateway_report_hash_reproducible": true
+    },
+    "case": {
+      "case_id": "artifact:source-footer-delivery",
+      "status": "ready"
+    },
+    "checks": {
+      "all_grounded_claim_spans_visible": true,
+      "all_grounded_sources_visible_in_delivered_output": true,
+      "all_grounded_sources_visible_in_rendered_output": true,
+      "artifact_hashes_reproducible": true,
+      "copied_output_contains_rendered_answer": true,
+      "delivered_output_contains_copied_output": true,
+      "delivered_output_matches_gateway": true,
+      "delivery_metadata_contains_verifier_handles": true,
+      "delivery_rows_carry_source_rationale": true,
+      "gateway_served_proof_response": true,
+      "grounded_footer_matches_response_contract": true,
+      "grounded_source_footer_ready_l102": true,
+      "private_text_not_disclosed": true,
+      "proof_carrying_response_verified": true,
+      "proof_response_embeds_response_envelope": true,
+      "rendered_output_matches_envelope": true,
+      "response_envelope_verified": true,
+      "response_source_labels_match_grounded_footer": true,
+      "serving_gateway_verified": true
+    },
+    "claim_delivery_rows": [
+      {
+        "claim_delivery_row_hash": "600f5011cbf1e42a78b8fe40759159a68d76a32addb83f6a3e6cc22e94de574c",
+        "claim_footer_row_hash": "579ada073c48566d3c62c79a783d566b7f38ea27b0863007e599ad14616d4492",
+        "claim_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+        "claim_index": 1,
+        "display_anchor": "[S1:span=399e7ff82b80]",
+        "display_anchor_or_label_visible": true,
+        "evidence_span_prefix": "399e7ff82b80",
+        "public_region_bound": true,
+        "region_hash": "63f6a786276eed05fb7d376528d490129b1482a9fe90f82e6fd0a97996941aeb",
+        "region_id": "region:arjun-provenance-ledger:c1:1",
+        "source_label": "S1",
+        "span_visible_in_delivered_output": true,
+        "span_visible_in_rendered_output": true
+      },
+      {
+        "claim_delivery_row_hash": "6c5d8703f069fb8f1d7e856dc1c7c3293ed0d288dc3566e800c725ed75a69f25",
+        "claim_footer_row_hash": "73e6fbc9bb0faccb45abef608344dd4a75740f97fb4a2965d3e487dc5ba8f97e",
+        "claim_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+        "claim_index": 2,
+        "display_anchor": "[S1:span=6ea90fbdd0fb]",
+        "display_anchor_or_label_visible": true,
+        "evidence_span_prefix": "6ea90fbdd0fb",
+        "public_region_bound": true,
+        "region_hash": "78639dea1b4e201d6791feb2264e2654cb64bef2db549fee1da8bf5ede5225c5",
+        "region_id": "region:arjun-provenance-ledger:c1:2",
+        "source_label": "S1",
+        "span_visible_in_delivered_output": true,
+        "span_visible_in_rendered_output": true
+      },
+      {
+        "claim_delivery_row_hash": "7d45fd962b73ceaec3ae97b542bf010763e7f8e0d4661e32c07da64994019b65",
+        "claim_footer_row_hash": "5e28b6e633a5f0056bc84825f42d29e646e9f8fa4813cdaf95fda11e20340c9f",
+        "claim_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+        "claim_index": 3,
+        "display_anchor": "[S2:span=71e11e089ebe]",
+        "display_anchor_or_label_visible": true,
+        "evidence_span_prefix": "71e11e089ebe",
+        "public_region_bound": true,
+        "region_hash": "5b923b27642a02c4d010711840773a3b70d685b5ce7cd3531a3782056bcf47c9",
+        "region_id": "region:lina-governance-disputes:c1:1",
+        "source_label": "S2",
+        "span_visible_in_delivered_output": true,
+        "span_visible_in_rendered_output": true
+      },
+      {
+        "claim_delivery_row_hash": "2ec39c713443f18566da8da3efda37639c647da3d3d1b388c1ffd66fe4611e1f",
+        "claim_footer_row_hash": "07044e02c2d95bcfe8e935170214b2bd41001093f3214c2834f9574a5e63770e",
+        "claim_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+        "claim_index": 4,
+        "display_anchor": "[S2:span=82b19c7059e7]",
+        "display_anchor_or_label_visible": true,
+        "evidence_span_prefix": "82b19c7059e7",
+        "public_region_bound": true,
+        "region_hash": "2fa35172bf960109744f099374c9f01467fb50444bd6f4ed5da22e03a46a6ed7",
+        "region_id": "region:lina-governance-disputes:c1:2",
+        "source_label": "S2",
+        "span_visible_in_delivered_output": true,
+        "span_visible_in_rendered_output": true
+      },
+      {
+        "claim_delivery_row_hash": "aa8be535c61a2201e745cd168fcd79c784cd53a8bbe1285fa457c06ff40fb18e",
+        "claim_footer_row_hash": "194737aeab668d951f6c79ed8c40c7701bec8b83b662b3eb62c9ef521336dc0e",
+        "claim_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+        "claim_index": 5,
+        "display_anchor": "[S3:span=28528b6fc0db]",
+        "display_anchor_or_label_visible": true,
+        "evidence_span_prefix": "28528b6fc0db",
+        "public_region_bound": true,
+        "region_hash": "489c3c1050108eaa2ac221610abe5dbaac8c95722b7d45252ab0c4cbaf60b03b",
+        "region_id": "region:maya-youtube-style-pool:c1:1",
+        "source_label": "S3",
+        "span_visible_in_delivered_output": true,
+        "span_visible_in_rendered_output": true
+      },
+      {
+        "claim_delivery_row_hash": "2758d606ea16a384865eddcc84eaf11a12351487bb10c3f1f2af5196e2845bab",
+        "claim_footer_row_hash": "a976c2615f110bf46b8ba2e3113fb5c41ad7ba6e60433cbc8097db96c71c0ed5",
+        "claim_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+        "claim_index": 6,
+        "display_anchor": "[S3:span=a9ed8431a259]",
+        "display_anchor_or_label_visible": true,
+        "evidence_span_prefix": "a9ed8431a259",
+        "public_region_bound": true,
+        "region_hash": "21588507c81cdfc66d83995f03060624d9cbefcdf906ba89ecb9647001960c92",
+        "region_id": "region:maya-youtube-style-pool:c1:2",
+        "source_label": "S3",
+        "span_visible_in_delivered_output": true,
+        "span_visible_in_rendered_output": true
+      }
+    ],
+    "delivery_metadata": {
+      "claim_delivery_row_hashes": [
+        "600f5011cbf1e42a78b8fe40759159a68d76a32addb83f6a3e6cc22e94de574c",
+        "6c5d8703f069fb8f1d7e856dc1c7c3293ed0d288dc3566e800c725ed75a69f25",
+        "7d45fd962b73ceaec3ae97b542bf010763e7f8e0d4661e32c07da64994019b65",
+        "2ec39c713443f18566da8da3efda37639c647da3d3d1b388c1ffd66fe4611e1f",
+        "aa8be535c61a2201e745cd168fcd79c784cd53a8bbe1285fa457c06ff40fb18e",
+        "2758d606ea16a384865eddcc84eaf11a12351487bb10c3f1f2af5196e2845bab"
+      ],
+      "delivered_output_hash": "dd37b330c28adcddd35ea3de9d96b9f84736510b82d6486c0ce52b383ce36e94",
+      "gateway_report_hash": "a2396d31b99d9eca8614bf838355e476e6b378985aac3bf49fa13288f9500c18",
+      "grounded_footer_verifier_command": "verify-grounded-source-footer",
+      "grounded_source_footer_hash": "85246ef655a8d4feb604f9daa87564faa2bf31ef88b3a2e0a78db3e23e86a70d",
+      "grounded_source_footer_well_known_path": "/.well-known/rdllm/grounded-source-footer.json",
+      "metadata_hash": "c81b9fb51ec7aa63422af3f6ca61aeb89ffb1885b9692c4fa703eebaa41b292b",
+      "profile": "rdllm-grounded-source-footer-delivery/v1",
+      "proof_response_hash": "39d2989d51a03adadf43b1a2340f88e783ab52b916fb839f96f517c67c60e014",
+      "proof_row_hashes": [
+        "70357839a0df55cc19de0d812f6801d3757ce482cf2b7abc7cc2b409c3cafc5e",
+        "65cc667614b6780845544c95dedb8e84a6d152d3e248ea7b1d743641919c3821",
+        "a202b5557daae183d2405a6cb534416cdcfc5165d2ec997661888c0d159edeac"
+      ],
+      "source_delivery_row_hashes": [
+        "881d6478c9f78d6350859cf5e732a5a3911021ee73665de784ade30011646c71",
+        "5a0b1c6e3f9f1737ac1ca6b0de3c03b29a6d25783fed851867b778d5f894eaa0",
+        "91547e344b38851d765b6e458c79fd555f18279c79af90582b2e9594a2d58eac"
+      ],
+      "source_footer_delivery_well_known_path": "/.well-known/rdllm/source-footer-delivery.json",
+      "source_label_order": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "source_rationale_hashes": [
+        "9b6a54a5f41cfd443dbc8e377c114e9b8046b4a9c33ecebb0d2b49f6c4cc183a",
+        "3c87e5b70bc154a6ca395a3e12f2036690e4b97392c26f68ff6ff250a00305ca",
+        "fa652b93ac4b557850f480ac1486d0c4edb810a211b0e2f3edd3813b67571a1f"
+      ],
+      "verifier_command": "verify-source-footer-delivery"
+    },
+    "delivery_subject": {
+      "copied_output_hash": "dd37b330c28adcddd35ea3de9d96b9f84736510b82d6486c0ce52b383ce36e94",
+      "delivered_output_hash": "dd37b330c28adcddd35ea3de9d96b9f84736510b82d6486c0ce52b383ce36e94",
+      "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
+      "event_id": "evt_b560c62bb49a73d0",
+      "grounded_source_footer_hash": "85246ef655a8d4feb604f9daa87564faa2bf31ef88b3a2e0a78db3e23e86a70d",
+      "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c"
+    },
+    "issued_at": "2026-05-31T00:00:00Z",
+    "issuer": "rdllm-local-demo",
+    "privacy": {
+      "copied_output_text_disclosed": false,
+      "delivered_output_text_disclosed": false,
+      "evidence_text_disclosed": false,
+      "hash_only_delivery_commitments": true,
+      "payment_data_disclosed": false,
+      "prompt_text_disclosed": false,
+      "rendered_output_text_disclosed": false,
+      "source_text_disclosed": false
+    },
+    "schemas": {
+      "grounded_source_footer": "docs/schemas/grounded_source_footer.schema.json",
+      "proof_carrying_response": "docs/schemas/proof_carrying_response.schema.json",
+      "response_envelope": "docs/schemas/response_envelope.schema.json",
+      "serving_gateway_report": "docs/schemas/serving_gateway_report.schema.json",
+      "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "b59b41bfcd791dcbc6a86de47b51136908fda2b32d2e9cf513cd1f64c8f6b9d4"
+    },
+    "source_delivery_rows": [
+      {
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "citation_reliance_covered": true,
+        "claim_count": 2,
+        "display_label": "[S1]",
+        "display_order": 1,
+        "footer_row_hash": "522b4dd36a6c6de6eed4de5556f7115859bda13cb9e29cd714dc14feab4d684c",
+        "label": "S1",
+        "label_visible_in_delivered_output": true,
+        "label_visible_in_rendered_output": true,
+        "license_transaction_covered": true,
+        "proof_row_hash": "70357839a0df55cc19de0d812f6801d3757ce482cf2b7abc7cc2b409c3cafc5e",
+        "source_available": true,
+        "source_confidence_verified": true,
+        "source_delivery_row_hash": "881d6478c9f78d6350859cf5e732a5a3911021ee73665de784ade30011646c71",
+        "source_rationale": {
+          "claim_support": "supported_claims_present",
+          "confidence_level": "verified",
+          "confidence_score": 1.0,
+          "content_hash_prefix": "e94efa6d9bb3",
+          "evidence_span_coverage": "covered",
+          "faithful_reliance": "covered",
+          "license_transaction": "covered",
+          "reason_code": "verified_claim_support_identity_reliance_license",
+          "settlement": "direct",
+          "source_availability": "inspectable",
+          "source_identity": "verified",
+          "source_rationale_hash": "9b6a54a5f41cfd443dbc8e377c114e9b8046b4a9c33ecebb0d2b49f6c4cc183a",
+          "supported_claim_count": 2
+        },
+        "source_rationale_hash": "9b6a54a5f41cfd443dbc8e377c114e9b8046b4a9c33ecebb0d2b49f6c4cc183a",
+        "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "title": "Provenance Ledgers for AI Outputs",
+        "title_visible_in_rendered_output": true,
+        "uri_visible_in_rendered_output": true,
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "chunk_id": "lina-governance-disputes:c1",
+        "citation_reliance_covered": true,
+        "claim_count": 2,
+        "display_label": "[S2]",
+        "display_order": 2,
+        "footer_row_hash": "bf48c5f3d184feb7aef4f382e9804cf15e02f3ba2f732a1b2534c61ee5787d8c",
+        "label": "S2",
+        "label_visible_in_delivered_output": true,
+        "label_visible_in_rendered_output": true,
+        "license_transaction_covered": true,
+        "proof_row_hash": "65cc667614b6780845544c95dedb8e84a6d152d3e248ea7b1d743641919c3821",
+        "source_available": true,
+        "source_confidence_verified": true,
+        "source_delivery_row_hash": "5a0b1c6e3f9f1737ac1ca6b0de3c03b29a6d25783fed851867b778d5f894eaa0",
+        "source_rationale": {
+          "claim_support": "supported_claims_present",
+          "confidence_level": "verified",
+          "confidence_score": 1.0,
+          "content_hash_prefix": "2e332f176133",
+          "evidence_span_coverage": "covered",
+          "faithful_reliance": "covered",
+          "license_transaction": "covered",
+          "reason_code": "verified_claim_support_identity_reliance_license",
+          "settlement": "direct",
+          "source_availability": "inspectable",
+          "source_identity": "verified",
+          "source_rationale_hash": "3c87e5b70bc154a6ca395a3e12f2036690e4b97392c26f68ff6ff250a00305ca",
+          "supported_claim_count": 2
+        },
+        "source_rationale_hash": "3c87e5b70bc154a6ca395a3e12f2036690e4b97392c26f68ff6ff250a00305ca",
+        "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "title": "Creator Governance for AI Licensing",
+        "title_visible_in_rendered_output": true,
+        "uri_visible_in_rendered_output": true,
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "citation_reliance_covered": true,
+        "claim_count": 2,
+        "display_label": "[S3]",
+        "display_order": 3,
+        "footer_row_hash": "afda8f78fce015a8ef1ad3c5c26f75b1b3e34e8403ff27158fe0094a4eac62d5",
+        "label": "S3",
+        "label_visible_in_delivered_output": true,
+        "label_visible_in_rendered_output": true,
+        "license_transaction_covered": true,
+        "proof_row_hash": "a202b5557daae183d2405a6cb534416cdcfc5165d2ec997661888c0d159edeac",
+        "source_available": true,
+        "source_confidence_verified": true,
+        "source_delivery_row_hash": "91547e344b38851d765b6e458c79fd555f18279c79af90582b2e9594a2d58eac",
+        "source_rationale": {
+          "claim_support": "supported_claims_present",
+          "confidence_level": "verified",
+          "confidence_score": 1.0,
+          "content_hash_prefix": "6029417218e9",
+          "evidence_span_coverage": "covered",
+          "faithful_reliance": "covered",
+          "license_transaction": "covered",
+          "reason_code": "verified_claim_support_identity_reliance_license",
+          "settlement": "direct",
+          "source_availability": "inspectable",
+          "source_identity": "verified",
+          "source_rationale_hash": "fa652b93ac4b557850f480ac1486d0c4edb810a211b0e2f3edd3813b67571a1f",
+          "supported_claim_count": 2
+        },
+        "source_rationale_hash": "fa652b93ac4b557850f480ac1486d0c4edb810a211b0e2f3edd3813b67571a1f",
+        "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "title": "Usage Pools for Creator Platforms",
+        "title_visible_in_rendered_output": true,
+        "uri_visible_in_rendered_output": true,
+        "work_id": "maya-youtube-style-pool"
+      }
+    ],
+    "source_footer_delivery_hash": "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+    "summary": {
+      "claim_span_count": 6,
+      "client_verifier_handles_present": true,
+      "delivered_claim_span_count": 6,
+      "delivered_source_count": 3,
+      "failed_check_count": 0,
+      "grounded_footer_delivery_enforced": true,
+      "privacy_preserved": true,
+      "source_selection_rationale_delivered": true,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L103",
+      "visible_source_count": 3
+    },
+    "verification_errors": {
+      "proof_carrying_response_error_count": 0,
+      "response_envelope_error_count": 0,
+      "serving_gateway_error_count": 0
+    },
+    "version": "rdllm-source-footer-delivery/v1"
+  },
+  "source_footer_delivery_input": {
+    "$artifact_ref": "artifacts/source_footer_delivery_input.json"
+  }
+}

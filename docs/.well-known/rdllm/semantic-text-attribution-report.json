@@ -1,0 +1,182 @@
+{
+  "commitments": {
+    "footer_root": "97ba91b71822df965af821295196f83bf97163be13efda3d8c392a66e1bb24cc",
+    "input_root": "13f71ac5adf9bcba211a3dfc05ba0ce7226d60bbb27eb84a7eae2c9f6e976b6d",
+    "match_row_root": "349d8d7d8737d79064f3227bb86a1293d96daae6c21f1a76758ae70781b8fb1e",
+    "policy_root": "8aa35dddf2934816797efe2596d438f56407561338a476c56a54ac9253fe3ab1",
+    "share_root": "d4294d402c5fca07e89e0e5b59710d267db43c66f1cfa93d14826439c12ec629"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "economics": {
+    "creator_pool_total": "0.550000",
+    "default_gross_revenue_per_input": "1.000000",
+    "escrow_total": "0.000000",
+    "gross_revenue_total": "1.000000",
+    "payout_total": "0.550000"
+  },
+  "issuer": "rdllm-local-demo",
+  "match_rows": [
+    {
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "creator_id": "arjun",
+      "decision": "accepted",
+      "decoy_margin": 0.54974915,
+      "feature_commitment": "361ad9cbc4f741184701d47add1acd7839016ace8561c7b4ea6c400a9b12fc53",
+      "input_id": "external_provenance_answer",
+      "policy_allowed": true,
+      "policy_reasons": [
+        "permit:external_attribution"
+      ],
+      "rank": 1,
+      "scores": {
+        "concept_overlap": 0.6,
+        "decision_score": 0.64372249,
+        "exact_sequence": 0.57446809,
+        "longest_sequence": 0.9,
+        "ngram_containment": 0.53488372,
+        "semantic_density": 1.0,
+        "source_distinctiveness": 0.55632184,
+        "token_overlap": 0.625
+      },
+      "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+      "title": "Provenance Ledgers for AI Outputs",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_id": "lina-governance-disputes:c1",
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "creator_id": "lina",
+      "decision": "below_threshold",
+      "decoy_margin": 0.0,
+      "feature_commitment": "1794ce49d82e700095e899c34f774877d40ae14c078450aaef6d8370a1ef9f23",
+      "input_id": "external_provenance_answer",
+      "policy_allowed": true,
+      "policy_reasons": [
+        "permit:external_attribution"
+      ],
+      "rank": 2,
+      "scores": {
+        "concept_overlap": 0.11320755,
+        "decision_score": 0.09397334,
+        "exact_sequence": 0.02325581,
+        "longest_sequence": 0.03333333,
+        "ngram_containment": 0.0,
+        "semantic_density": 0.75,
+        "source_distinctiveness": 0.11547912,
+        "token_overlap": 0.046875
+      },
+      "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+      "title": "Creator Governance for AI Licensing",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "creator_id": "maya",
+      "decision": "below_threshold",
+      "decoy_margin": 0.0,
+      "feature_commitment": "16257a0bcb1a40e6546144513aba858b817c9e49375d288e4446186156d8e069",
+      "input_id": "external_provenance_answer",
+      "policy_allowed": true,
+      "policy_reasons": [
+        "permit:external_attribution"
+      ],
+      "rank": 3,
+      "scores": {
+        "concept_overlap": 0.09433962,
+        "decision_score": 0.08377167,
+        "exact_sequence": 0.02222222,
+        "longest_sequence": 0.03333333,
+        "ngram_containment": 0.0,
+        "semantic_density": 0.625,
+        "source_distinctiveness": 0.09133489,
+        "token_overlap": 0.06557377
+      },
+      "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+      "title": "Usage Pools for Creator Platforms",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "policy": {
+    "accept_threshold": 0.2,
+    "accepted_decision": "accepted",
+    "ambiguous_decision": "ambiguous_semantic_escrow",
+    "creator_pool_rate": "0.55",
+    "min_decoy_margin": 0.02,
+    "policy_block_decision": "rights_conflict_escrow",
+    "profile": "rdllm-semantic-text-attribution-policy/v1",
+    "unmatched_decision": "semantic_text_escrow"
+  },
+  "privacy": {
+    "footer_discloses_source_ids_not_text": true,
+    "matched_text_disclosed": false,
+    "output_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "report_uses_scores_hashes_and_source_ids": true,
+    "semantic_fingerprints_disclosed_as_hashes": true,
+    "source_text_disclosed": false
+  },
+  "report_hash": "44ef9f2aea5b0200394fb4e1c2411aaa5248fa3958f9bb79c5d9084a9211b2c7",
+  "report_version": "rdllm-semantic-text-attribution/v1",
+  "royalty_shares": [
+    {
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "contribution_weight": 1.0,
+      "creator_id": "arjun",
+      "decision": "accepted",
+      "decision_score": 0.64372249,
+      "input_id": "external_provenance_answer",
+      "payout": "0.550000",
+      "work_id": "arjun-provenance-ledger"
+    }
+  ],
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "3022c7edaf232e9309c2b30011c0b63f2b88c43211893ab0b0e204adcb5deb68"
+  },
+  "source_footers": [
+    {
+      "escrow": null,
+      "footer_status": "attributed",
+      "footer_text_hash": "45cb033997825b4ae187902da72b98e0f1224111df0227cf3f6750eed0ef7297",
+      "footer_text_preview": "Sources: [S1] Provenance Ledgers for AI Outputs (registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1) hash=e94efa6d9bb390d477 score=0.64372249",
+      "input_id": "external_provenance_answer",
+      "sources": [
+        {
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "arjun",
+          "decision_score": 0.64372249,
+          "decoy_margin": 0.54974915,
+          "label": "S1",
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "title": "Provenance Ledgers for AI Outputs",
+          "work_id": "arjun-provenance-ledger"
+        }
+      ]
+    }
+  ],
+  "submitted_outputs": [
+    {
+      "gross_revenue": "1.000000",
+      "input_id": "external_provenance_answer",
+      "output_hash": "5f5cc5e0ddb9d677f95656f7655215715e370f7fe4c6e14a82e9631ed4160bcd",
+      "output_semantic_fingerprint": "dac682373ad9bdd259b4bca5ed1bd18be063bb53a7a8d7bd521ed97e4569afa7",
+      "policy_use": "external_attribution",
+      "prompt_hash": "41c8fec8151fcd68f693d4dd2b72cfc7fe80cb96000f88f37995ce6b65ea27f8"
+    }
+  ],
+  "summary": {
+    "accepted_input_count": 1,
+    "candidate_row_count": 3,
+    "creator_pool_conserved": true,
+    "escrow_input_count": 0,
+    "input_count": 1,
+    "rights_conflict_count": 0,
+    "semantic_text_attribution": true,
+    "source_footer_count": 1,
+    "status": "ready"
+  }
+}

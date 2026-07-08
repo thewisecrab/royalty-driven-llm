@@ -1,0 +1,1823 @@
+{
+  "creator_license_contract": {
+    "commitments": {
+      "content_hash_root": "6a574168c63d95e10ea2c51c052f4bcf1eaabdcab678705d33bf682c2be5235a",
+      "creator_root": "f8360bf459ec271fc44c6b09fd1f51c7b5e55af808448e67829cb0a1be59cd82",
+      "policy_root": "1de2a731fde834cefffdbd50dba02586eff3756f18865d95e59556b115e9076f",
+      "term_root": "5302f6f5c8060d77c6ec07bb3f4863b65035be86e6dea61b71dc18351e00f530"
+    },
+    "contract_hash": "b72a02031cb195f1899bdec74f511d38b390d7d03e68409c567e1e3724e2fe08",
+    "contract_version": "rdllm-creator-license-contract/v1",
+    "created_at": "2026-05-31T00:00:00Z",
+    "creator_commitments": [
+      {
+        "creator_id": "arjun",
+        "creator_name": "Arjun Rao",
+        "payout_account_disclosed": false,
+        "payout_account_hash": "36046f2f9ba53892df7e7815fe5e2f5c5635908722ff258bdb6798aaca33f993"
+      },
+      {
+        "creator_id": "lina",
+        "creator_name": "Lina Park",
+        "payout_account_disclosed": false,
+        "payout_account_hash": "e40e0e769e8810ddee05459d531a117078b5d3c0df0838ecc0d527d8ae9efb24"
+      },
+      {
+        "creator_id": "maya",
+        "creator_name": "Maya Sen",
+        "payout_account_disclosed": false,
+        "payout_account_hash": "093ef537c9af164c23f6868280281b5be3bbc058642bd017153126dc407fda1e"
+      }
+    ],
+    "effective_at": "2026-05-31T00:00:00Z",
+    "enforcement": {
+      "license_terms_must_precede_use": true,
+      "minimum_creator_pool_rate_must_be_met": true,
+      "policy_engine_must_enforce_allowed_uses": true,
+      "proof_pack_required_for_public_answers": true,
+      "revoked_works_denied_for_future_use": true,
+      "unlicensed_traced_use_routes_to_rights_conflict_escrow": true
+    },
+    "issuer": "rdllm-local-demo",
+    "privacy": {
+      "contract_uses_content_hashes": true,
+      "contract_uses_payout_account_hashes": true,
+      "payout_account_disclosed": false,
+      "work_text_disclosed": false
+    },
+    "profile": {
+      "bom_standard": "SPDX 3",
+      "dataset_metadata_standard": "MLCommons Croissant",
+      "profile_id": "rdllm-creator-license-contract-profile/v1",
+      "provenance_standard": "W3C PROV",
+      "rights_standard": "ODRL"
+    },
+    "provider": "provider:rdllm-reference",
+    "schemas": {
+      "creator_license_contract": "docs/schemas/creator_license_contract.schema.json"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "6e47667c4138879f91252d84389a74e044faa90a6eccf8960bbec88a33040768"
+    },
+    "summary": {
+      "active_term_count": 3,
+      "creator_count": 3,
+      "minimum_creator_pool_rate_max": 0.0,
+      "offline_verification_supported": true,
+      "revoked_term_count": 0,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L38",
+      "term_count": 3,
+      "work_count": 3
+    },
+    "terms": [
+      {
+        "allowed_uses": [
+          "display",
+          "external_attribution",
+          "generation",
+          "quote",
+          "retrieval",
+          "training"
+        ],
+        "consent_status": "active",
+        "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+        "creator_id": "arjun",
+        "creator_name": "Arjun Rao",
+        "duties": {
+          "attribution_required": true,
+          "audit_trail_required": true,
+          "challenge_process_required": true,
+          "proof_pack_required": true,
+          "revocation_must_affect_future_use": true,
+          "royalty_required": true
+        },
+        "jurisdictions": [
+          "GLOBAL"
+        ],
+        "license": "royalty-bearing",
+        "license_uri": "",
+        "minimum_creator_pool_rate": 0.0,
+        "payout_account_disclosed": false,
+        "payout_account_hash": "36046f2f9ba53892df7e7815fe5e2f5c5635908722ff258bdb6798aaca33f993",
+        "policy_id": "policy:arjun-provenance-ledger",
+        "prohibited_uses": [],
+        "requires_attribution": true,
+        "requires_royalty": true,
+        "revoked": false,
+        "revoked_at": "",
+        "source_uri": "registered://works/arjun-provenance-ledger",
+        "standards": {
+          "croissant_usage_policy": {
+            "allowedUses": [
+              "display",
+              "external_attribution",
+              "generation",
+              "quote",
+              "retrieval",
+              "training"
+            ],
+            "copyrightHolder": "arjun",
+            "jurisdictions": [
+              "GLOBAL"
+            ],
+            "license": "royalty-bearing",
+            "prohibitedUses": []
+          },
+          "odrl_policy": {
+            "@context": "http://www.w3.org/ns/odrl.jsonld",
+            "asset": "registered://works/arjun-provenance-ledger",
+            "constraint": [
+              {
+                "leftOperand": "spatial",
+                "operator": "isAnyOf",
+                "rightOperand": [
+                  "GLOBAL"
+                ]
+              }
+            ],
+            "duty": [
+              {
+                "action": "attribute",
+                "target": "arjun-provenance-ledger"
+              },
+              {
+                "action": "compensate"
+              },
+              {
+                "action": "audit",
+                "target": "rdllm:proofPack"
+              }
+            ],
+            "permission": [
+              {
+                "action": "display"
+              },
+              {
+                "action": "external_attribution"
+              },
+              {
+                "action": "generation"
+              },
+              {
+                "action": "quote"
+              },
+              {
+                "action": "retrieval"
+              },
+              {
+                "action": "training"
+              }
+            ],
+            "profile": "rdllm-creator-license-contract",
+            "prohibition": [],
+            "type": "Offer",
+            "uid": "policy:arjun-provenance-ledger"
+          },
+          "spdx_external_ref": {
+            "intendedUse": [
+              "display",
+              "external_attribution",
+              "generation",
+              "quote",
+              "retrieval",
+              "training"
+            ],
+            "name": "Provenance Ledgers for AI Outputs",
+            "verifiedUsing": [
+              {
+                "algorithm": "SHA256",
+                "hashValue": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f"
+              }
+            ]
+          }
+        },
+        "term_hash": "cbcb535107e8bdeb9f9c64a7325e4b4c9e46c5f3c36740bbd42c3fc524bc8dd1",
+        "term_id": "term:arjun-provenance-ledger:policy:arjun-provenance-ledger",
+        "title": "Provenance Ledgers for AI Outputs",
+        "title_hash": "bd7e52e1f8409358f7b1fd6b04874617d1bbaa14a2205d68a9babd3c1735e13d",
+        "work_id": "arjun-provenance-ledger",
+        "work_text_disclosed": false
+      },
+      {
+        "allowed_uses": [
+          "display",
+          "external_attribution",
+          "generation",
+          "quote",
+          "retrieval",
+          "training"
+        ],
+        "consent_status": "active",
+        "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+        "creator_id": "lina",
+        "creator_name": "Lina Park",
+        "duties": {
+          "attribution_required": true,
+          "audit_trail_required": true,
+          "challenge_process_required": true,
+          "proof_pack_required": true,
+          "revocation_must_affect_future_use": true,
+          "royalty_required": true
+        },
+        "jurisdictions": [
+          "GLOBAL"
+        ],
+        "license": "royalty-bearing",
+        "license_uri": "",
+        "minimum_creator_pool_rate": 0.0,
+        "payout_account_disclosed": false,
+        "payout_account_hash": "e40e0e769e8810ddee05459d531a117078b5d3c0df0838ecc0d527d8ae9efb24",
+        "policy_id": "policy:lina-governance-disputes",
+        "prohibited_uses": [],
+        "requires_attribution": true,
+        "requires_royalty": true,
+        "revoked": false,
+        "revoked_at": "",
+        "source_uri": "registered://works/lina-governance-disputes",
+        "standards": {
+          "croissant_usage_policy": {
+            "allowedUses": [
+              "display",
+              "external_attribution",
+              "generation",
+              "quote",
+              "retrieval",
+              "training"
+            ],
+            "copyrightHolder": "lina",
+            "jurisdictions": [
+              "GLOBAL"
+            ],
+            "license": "royalty-bearing",
+            "prohibitedUses": []
+          },
+          "odrl_policy": {
+            "@context": "http://www.w3.org/ns/odrl.jsonld",
+            "asset": "registered://works/lina-governance-disputes",
+            "constraint": [
+              {
+                "leftOperand": "spatial",
+                "operator": "isAnyOf",
+                "rightOperand": [
+                  "GLOBAL"
+                ]
+              }
+            ],
+            "duty": [
+              {
+                "action": "attribute",
+                "target": "lina-governance-disputes"
+              },
+              {
+                "action": "compensate"
+              },
+              {
+                "action": "audit",
+                "target": "rdllm:proofPack"
+              }
+            ],
+            "permission": [
+              {
+                "action": "display"
+              },
+              {
+                "action": "external_attribution"
+              },
+              {
+                "action": "generation"
+              },
+              {
+                "action": "quote"
+              },
+              {
+                "action": "retrieval"
+              },
+              {
+                "action": "training"
+              }
+            ],
+            "profile": "rdllm-creator-license-contract",
+            "prohibition": [],
+            "type": "Offer",
+            "uid": "policy:lina-governance-disputes"
+          },
+          "spdx_external_ref": {
+            "intendedUse": [
+              "display",
+              "external_attribution",
+              "generation",
+              "quote",
+              "retrieval",
+              "training"
+            ],
+            "name": "Creator Governance for AI Licensing",
+            "verifiedUsing": [
+              {
+                "algorithm": "SHA256",
+                "hashValue": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac"
+              }
+            ]
+          }
+        },
+        "term_hash": "9a704be10d700f08f46f97990c6efdf946312817343eb70317143ce60a140df0",
+        "term_id": "term:lina-governance-disputes:policy:lina-governance-disputes",
+        "title": "Creator Governance for AI Licensing",
+        "title_hash": "66125b1b2829bed8ddd5576b0156ad6eaafc612e1dede78432cafcb8cb42dc5a",
+        "work_id": "lina-governance-disputes",
+        "work_text_disclosed": false
+      },
+      {
+        "allowed_uses": [
+          "display",
+          "external_attribution",
+          "generation",
+          "quote",
+          "retrieval",
+          "training"
+        ],
+        "consent_status": "active",
+        "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+        "creator_id": "maya",
+        "creator_name": "Maya Sen",
+        "duties": {
+          "attribution_required": true,
+          "audit_trail_required": true,
+          "challenge_process_required": true,
+          "proof_pack_required": true,
+          "revocation_must_affect_future_use": true,
+          "royalty_required": true
+        },
+        "jurisdictions": [
+          "GLOBAL"
+        ],
+        "license": "royalty-bearing",
+        "license_uri": "",
+        "minimum_creator_pool_rate": 0.0,
+        "payout_account_disclosed": false,
+        "payout_account_hash": "093ef537c9af164c23f6868280281b5be3bbc058642bd017153126dc407fda1e",
+        "policy_id": "policy:maya-youtube-style-pool",
+        "prohibited_uses": [],
+        "requires_attribution": true,
+        "requires_royalty": true,
+        "revoked": false,
+        "revoked_at": "",
+        "source_uri": "registered://works/maya-youtube-style-pool",
+        "standards": {
+          "croissant_usage_policy": {
+            "allowedUses": [
+              "display",
+              "external_attribution",
+              "generation",
+              "quote",
+              "retrieval",
+              "training"
+            ],
+            "copyrightHolder": "maya",
+            "jurisdictions": [
+              "GLOBAL"
+            ],
+            "license": "royalty-bearing",
+            "prohibitedUses": []
+          },
+          "odrl_policy": {
+            "@context": "http://www.w3.org/ns/odrl.jsonld",
+            "asset": "registered://works/maya-youtube-style-pool",
+            "constraint": [
+              {
+                "leftOperand": "spatial",
+                "operator": "isAnyOf",
+                "rightOperand": [
+                  "GLOBAL"
+                ]
+              }
+            ],
+            "duty": [
+              {
+                "action": "attribute",
+                "target": "maya-youtube-style-pool"
+              },
+              {
+                "action": "compensate"
+              },
+              {
+                "action": "audit",
+                "target": "rdllm:proofPack"
+              }
+            ],
+            "permission": [
+              {
+                "action": "display"
+              },
+              {
+                "action": "external_attribution"
+              },
+              {
+                "action": "generation"
+              },
+              {
+                "action": "quote"
+              },
+              {
+                "action": "retrieval"
+              },
+              {
+                "action": "training"
+              }
+            ],
+            "profile": "rdllm-creator-license-contract",
+            "prohibition": [],
+            "type": "Offer",
+            "uid": "policy:maya-youtube-style-pool"
+          },
+          "spdx_external_ref": {
+            "intendedUse": [
+              "display",
+              "external_attribution",
+              "generation",
+              "quote",
+              "retrieval",
+              "training"
+            ],
+            "name": "Usage Pools for Creator Platforms",
+            "verifiedUsing": [
+              {
+                "algorithm": "SHA256",
+                "hashValue": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7"
+              }
+            ]
+          }
+        },
+        "term_hash": "de302176c9eccd11587c84a39617633e839230c34772a704d23bf437e39b0b2a",
+        "term_id": "term:maya-youtube-style-pool:policy:maya-youtube-style-pool",
+        "title": "Usage Pools for Creator Platforms",
+        "title_hash": "39093cc41eb52cdc1465230b9e6a61c9f9fc33c36ceba6ef1ebedfd6416db31d",
+        "work_id": "maya-youtube-style-pool",
+        "work_text_disclosed": false
+      }
+    ]
+  },
+  "grounded_source_footer": {
+    "artifact_bindings": {
+      "citation_footer_contract_hash": "b18a8cc93a4974ead44bf84e5a76f2b0f00b2fc0d588ec9b5e32b6ea188450eb",
+      "citation_footer_contract_hash_reproducible": true,
+      "citation_reliance_receipt_hash": "1479ff223a0d400ee59040fa31ef2b026dafe363663f6c09fa9f6ff2bcacbd7a",
+      "citation_reliance_receipt_hash_reproducible": true,
+      "evidence_region_binding_report_hash": "6bb4dedd66d51a8a5b01ecd2a985969a4773fd47301ad2b6ba7e4a1b0d78e8f5",
+      "evidence_region_binding_report_hash_reproducible": true,
+      "license_transaction_receipt_hash": "1f9429f6d28294793e7aa2dbfe5d71406ccbe32bcb791ab6d28d730ef2d1f641",
+      "license_transaction_receipt_hash_reproducible": true,
+      "rendered_attribution_audit_hash": "78658d18c49302c5a8312c04136c311895dbc44f281aea216f6960d3d1a89017",
+      "rendered_attribution_audit_hash_reproducible": true,
+      "source_availability_report_hash": "a42d96bcc238d04cc845dec1e3ffd7688467d8518deb92882b2d19901b7d4df7",
+      "source_availability_report_hash_reproducible": true,
+      "source_confidence_report_hash": "e5b8a300ca61aa2afc07afc5e37ed246d51bd4435cc76a9859a7ccb39d991265",
+      "source_confidence_report_hash_reproducible": true
+    },
+    "case": {
+      "case_id": "artifact:grounded-source-footer",
+      "status": "ready"
+    },
+    "checks": {
+      "artifact_hashes_reproducible": true,
+      "citation_reliance_covers_visible_sources": true,
+      "claim_regions_publicly_bound": true,
+      "footer_claims_have_source_rows": true,
+      "footer_rows_have_claims": true,
+      "license_transactions_cover_visible_sources": true,
+      "private_text_not_disclosed": true,
+      "proof_handles_present": true,
+      "rendered_footer_matches_contract": true,
+      "source_availability_inspectable": true,
+      "source_confidence_verified": true,
+      "visible_footer_source_count_positive": true
+    },
+    "claim_rows": [
+      {
+        "claim_footer_row_hash": "9bbb698fbb719c1653422e6b56fd936ab1e661696f19a0abcd559ac40396daa3",
+        "claim_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+        "claim_index": 1,
+        "confidence_level": "verified",
+        "confidence_score": 1.0,
+        "display_anchor": "[S1:span=399e7ff82b80]",
+        "end_char": 64,
+        "evidence_span_prefix": "399e7ff82b80",
+        "line_end": 1,
+        "line_start": 1,
+        "location_hash": "e5397b3690b9c328b01ff8812a7c4525e8e9294f472be5480b380e0d90b315f9",
+        "page": 1,
+        "public_location": true,
+        "region_hash": "5765f4c7ef923e2def85b8c26443f77c582576fcabae7554ea375a337725aafc",
+        "region_id": "region:arjun-provenance-ledger:c1:1",
+        "region_type": "text_span",
+        "region_verified": true,
+        "rendered_claim_evidence_present": true,
+        "source_label": "S1",
+        "start_char": 0
+      },
+      {
+        "claim_footer_row_hash": "6b289b65bcba0468b4aca2b94aefa43670a2bb59101c642547d47738d81a88dc",
+        "claim_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+        "claim_index": 2,
+        "confidence_level": "verified",
+        "confidence_score": 1.0,
+        "display_anchor": "[S1:span=6ea90fbdd0fb]",
+        "end_char": 244,
+        "evidence_span_prefix": "6ea90fbdd0fb",
+        "line_end": 2,
+        "line_start": 2,
+        "location_hash": "747a425f496205b3a31b2e813b744bf35f77c12d070edcfbfae4ab1eca9e2a05",
+        "page": 2,
+        "public_location": true,
+        "region_hash": "cb315fc5a8c3c0024855512370af9b2896b7630b8e03f733a3416fb6ff9bc956",
+        "region_id": "region:arjun-provenance-ledger:c1:2",
+        "region_type": "text_span",
+        "region_verified": true,
+        "rendered_claim_evidence_present": true,
+        "source_label": "S1",
+        "start_char": 65
+      },
+      {
+        "claim_footer_row_hash": "e952f5927e11dc4379ee6998a068f8be18d21fc961acb457817623137e117216",
+        "claim_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+        "claim_index": 3,
+        "confidence_level": "verified",
+        "confidence_score": 1.0,
+        "display_anchor": "[S2:span=71e11e089ebe]",
+        "end_char": 51,
+        "evidence_span_prefix": "71e11e089ebe",
+        "line_end": 3,
+        "line_start": 3,
+        "location_hash": "83df6465585dd6108164e549a9011abcbc09e0ce9e46b8e4c96924ecc94a4866",
+        "page": 3,
+        "public_location": true,
+        "region_hash": "569c136a538c7e2e4d5580099367a21ee957ff6c63fafd891b3ce4f7923802bb",
+        "region_id": "region:lina-governance-disputes:c1:3",
+        "region_type": "text_span",
+        "region_verified": true,
+        "rendered_claim_evidence_present": true,
+        "source_label": "S2",
+        "start_char": 0
+      },
+      {
+        "claim_footer_row_hash": "f80232acd1cb2de0065b52901b4adfbed36b735f74e4ced890de39df530854f2",
+        "claim_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+        "claim_index": 4,
+        "confidence_level": "verified",
+        "confidence_score": 1.0,
+        "display_anchor": "[S2:span=82b19c7059e7]",
+        "end_char": 164,
+        "evidence_span_prefix": "82b19c7059e7",
+        "line_end": 4,
+        "line_start": 4,
+        "location_hash": "32f0aaa0c29dd530ed228060ae11d6d8707dda1cefe5b45eca0fe44fa982bdb3",
+        "page": 4,
+        "public_location": true,
+        "region_hash": "098573285bfee4a172b57923131a1bf2891f9b29614cb8edb358d128fbf3e03c",
+        "region_id": "region:lina-governance-disputes:c1:4",
+        "region_type": "text_span",
+        "region_verified": true,
+        "rendered_claim_evidence_present": true,
+        "source_label": "S2",
+        "start_char": 52
+      },
+      {
+        "claim_footer_row_hash": "f23df73e2096741a28d91b08676ee2c1138a937b4f108cf13c80c657205a9fd5",
+        "claim_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+        "claim_index": 5,
+        "confidence_level": "verified",
+        "confidence_score": 1.0,
+        "display_anchor": "[S3:span=28528b6fc0db]",
+        "end_char": 136,
+        "evidence_span_prefix": "28528b6fc0db",
+        "line_end": 5,
+        "line_start": 5,
+        "location_hash": "771f2c906986cfba96b6e8f064c7dec5f4c8b6a69df00763d9858748688ab5fb",
+        "page": 5,
+        "public_location": true,
+        "region_hash": "b596c8088f1ee476a2f1b3b46be78e118742e6ad27cbaef994f99fe406c0bebb",
+        "region_id": "region:maya-youtube-style-pool:c1:5",
+        "region_type": "text_span",
+        "region_verified": true,
+        "rendered_claim_evidence_present": true,
+        "source_label": "S3",
+        "start_char": 0
+      },
+      {
+        "claim_footer_row_hash": "5ad93381892edd0020cc97c66609e4d7760f1c72802691660c1dd5ef5b504020",
+        "claim_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+        "claim_index": 6,
+        "confidence_level": "verified",
+        "confidence_score": 1.0,
+        "display_anchor": "[S3:span=a9ed8431a259]",
+        "end_char": 262,
+        "evidence_span_prefix": "a9ed8431a259",
+        "line_end": 6,
+        "line_start": 6,
+        "location_hash": "f9b25d284a6fbbf6872d75040e908d6f52d7b44aa499eea46af23ebe3b212dfc",
+        "page": 6,
+        "public_location": true,
+        "region_hash": "0c4ebc456da4a0572f8164cc23d6899579b1c321529bd3487e36f26145aa163d",
+        "region_id": "region:maya-youtube-style-pool:c1:6",
+        "region_type": "text_span",
+        "region_verified": true,
+        "rendered_claim_evidence_present": true,
+        "source_label": "S3",
+        "start_char": 137
+      }
+    ],
+    "footer_display": {
+      "claim_line_count": 6,
+      "footer_hash": "5f43b3b771bd8647035fa8a4e041682cdc543abd5b07949d352b48decc1aff22",
+      "profile": "rdllm-verifiable-citation-footer/v1",
+      "source_label_order": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "source_line_count": 3
+    },
+    "footer_rows": [
+      {
+        "availability_row_hash": "59a9c46cb41722603fc7dab7c881a9b491664436985ee96127e4e649b04a587f",
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "citation_reliance_covered": true,
+        "claim_span_coverage": true,
+        "confidence_level": "verified",
+        "confidence_score": 1.0,
+        "content_hash_prefix": "e94efa6d9bb3",
+        "creator_id": "arjun",
+        "creator_name": "Arjun Rao",
+        "display_label": "[S1]",
+        "display_order": 1,
+        "footer_row_hash": "13f23ce638ce0dc5acca751dba853051b4730ee961f540da3dbbf06da726e73e",
+        "label": "S1",
+        "license_status": "active",
+        "license_transaction_coverage_row_hash": "426f9628ba402b47776ecd2fe7a671faf11bccb236d06eaf9abbb9d548e36bec",
+        "license_transaction_covered": true,
+        "rendered_in_footer": true,
+        "royalty_status": "active",
+        "selected_license_transaction_id": "ltx:use:S1:1",
+        "source_available": true,
+        "source_confidence_hash": "4617894398af45eda794a638ca42c3f708aaa93135d88b590a8e850fcbbc549e",
+        "source_confidence_verified": true,
+        "source_reliance_row_hash": "c0bf225f0a3a7c1f1704ef25e85761b5aa6f0dcf24196e8e069132cfa353e7c4",
+        "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "supported_claim_count": 2,
+        "title": "Provenance Ledgers for AI Outputs",
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "availability_row_hash": "f955f17e5e2637c2477829063d00434c4ae95f08caed152ff3d6c9f71480e413",
+        "chunk_id": "lina-governance-disputes:c1",
+        "citation_reliance_covered": true,
+        "claim_span_coverage": true,
+        "confidence_level": "verified",
+        "confidence_score": 1.0,
+        "content_hash_prefix": "2e332f176133",
+        "creator_id": "lina",
+        "creator_name": "Lina Park",
+        "display_label": "[S2]",
+        "display_order": 2,
+        "footer_row_hash": "2ab4f208a5cde3cf0fd377f16426a6b062c36877d6af05defd436a02d9d9fc89",
+        "label": "S2",
+        "license_status": "active",
+        "license_transaction_coverage_row_hash": "510d73be4a03022a37fc66039e74c217db989d20942f5a0276f00d916f267e2d",
+        "license_transaction_covered": true,
+        "rendered_in_footer": true,
+        "royalty_status": "active",
+        "selected_license_transaction_id": "ltx:use:S2:2",
+        "source_available": true,
+        "source_confidence_hash": "9ca9eb5257c703f139653e4492430d69f2b1dfbb5a98477f73e3b4fc9c1c1311",
+        "source_confidence_verified": true,
+        "source_reliance_row_hash": "46147c6c3a694b5d4b520381ab3fcd8d575b121c8480e45ecb07d92a76c69f7a",
+        "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "supported_claim_count": 2,
+        "title": "Creator Governance for AI Licensing",
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "availability_row_hash": "43e28912dbbd3a6f63a3a7a9cf5af5557848c966cae4478504de47af66b9bc2c",
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "citation_reliance_covered": true,
+        "claim_span_coverage": true,
+        "confidence_level": "verified",
+        "confidence_score": 1.0,
+        "content_hash_prefix": "6029417218e9",
+        "creator_id": "maya",
+        "creator_name": "Maya Sen",
+        "display_label": "[S3]",
+        "display_order": 3,
+        "footer_row_hash": "0e20922764d295c15de61d0b5218267c21345fbacaaadb6eb704c14bee06e0d9",
+        "label": "S3",
+        "license_status": "active",
+        "license_transaction_coverage_row_hash": "39614139ff9655fb463967adaa3474171eb21614d3304eaeacc9cd1d215c66b0",
+        "license_transaction_covered": true,
+        "rendered_in_footer": true,
+        "royalty_status": "active",
+        "selected_license_transaction_id": "ltx:use:S3:3",
+        "source_available": true,
+        "source_confidence_hash": "29b5a57aefebb198e44d63efa00e3afb0bd1e69c26a26ae80cb632fabd2ff6c8",
+        "source_confidence_verified": true,
+        "source_reliance_row_hash": "6c4c48a23a1353aa76de356c4220c858a0122b5a486cdb8774cacb65e8cfd297",
+        "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "supported_claim_count": 2,
+        "title": "Usage Pools for Creator Platforms",
+        "work_id": "maya-youtube-style-pool"
+      }
+    ],
+    "grounded_source_footer_hash": "7a0be33bb5f4598f94085c26cfcb57b09627c4a20e81a5f7fcb160ecb0c0d78e",
+    "issued_at": "2026-05-31T00:00:00Z",
+    "issuer": "rdllm-local-demo",
+    "privacy": {
+      "claim_text_disclosed": false,
+      "evidence_text_disclosed": false,
+      "footer_text_disclosed": false,
+      "hash_only_proof_handles": true,
+      "output_disclosed": false,
+      "payment_data_disclosed": false,
+      "prompt_disclosed": false,
+      "source_text_disclosed": false
+    },
+    "proof_rows": [
+      {
+        "claim_count": 2,
+        "label": "S1",
+        "proof_hashes": {
+          "citation_footer_contract_hash": "b18a8cc93a4974ead44bf84e5a76f2b0f00b2fc0d588ec9b5e32b6ea188450eb",
+          "citation_reliance_receipt_hash": "1479ff223a0d400ee59040fa31ef2b026dafe363663f6c09fa9f6ff2bcacbd7a",
+          "evidence_region_binding_report_hash": "6bb4dedd66d51a8a5b01ecd2a985969a4773fd47301ad2b6ba7e4a1b0d78e8f5",
+          "license_transaction_receipt_hash": "1f9429f6d28294793e7aa2dbfe5d71406ccbe32bcb791ab6d28d730ef2d1f641",
+          "rendered_attribution_audit_hash": "78658d18c49302c5a8312c04136c311895dbc44f281aea216f6960d3d1a89017",
+          "source_availability_report_hash": "a42d96bcc238d04cc845dec1e3ffd7688467d8518deb92882b2d19901b7d4df7",
+          "source_confidence_report_hash": "e5b8a300ca61aa2afc07afc5e37ed246d51bd4435cc76a9859a7ccb39d991265"
+        },
+        "proof_row_hash": "8afa96eaf0264414cdfa1da9cdf18a30c103ce395715e526816be76f90d3e54e",
+        "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "verification_endpoint": "/v1/rdllm/grounded-source-footers",
+        "verifier_command": "verify-grounded-source-footer",
+        "well_known_path": "/.well-known/rdllm/grounded-source-footer.json",
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "claim_count": 2,
+        "label": "S2",
+        "proof_hashes": {
+          "citation_footer_contract_hash": "b18a8cc93a4974ead44bf84e5a76f2b0f00b2fc0d588ec9b5e32b6ea188450eb",
+          "citation_reliance_receipt_hash": "1479ff223a0d400ee59040fa31ef2b026dafe363663f6c09fa9f6ff2bcacbd7a",
+          "evidence_region_binding_report_hash": "6bb4dedd66d51a8a5b01ecd2a985969a4773fd47301ad2b6ba7e4a1b0d78e8f5",
+          "license_transaction_receipt_hash": "1f9429f6d28294793e7aa2dbfe5d71406ccbe32bcb791ab6d28d730ef2d1f641",
+          "rendered_attribution_audit_hash": "78658d18c49302c5a8312c04136c311895dbc44f281aea216f6960d3d1a89017",
+          "source_availability_report_hash": "a42d96bcc238d04cc845dec1e3ffd7688467d8518deb92882b2d19901b7d4df7",
+          "source_confidence_report_hash": "e5b8a300ca61aa2afc07afc5e37ed246d51bd4435cc76a9859a7ccb39d991265"
+        },
+        "proof_row_hash": "40fd3a208a7ead051787a5487daa57d0407f76ccb45b74aadb122bf5c5783c67",
+        "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "verification_endpoint": "/v1/rdllm/grounded-source-footers",
+        "verifier_command": "verify-grounded-source-footer",
+        "well_known_path": "/.well-known/rdllm/grounded-source-footer.json",
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "claim_count": 2,
+        "label": "S3",
+        "proof_hashes": {
+          "citation_footer_contract_hash": "b18a8cc93a4974ead44bf84e5a76f2b0f00b2fc0d588ec9b5e32b6ea188450eb",
+          "citation_reliance_receipt_hash": "1479ff223a0d400ee59040fa31ef2b026dafe363663f6c09fa9f6ff2bcacbd7a",
+          "evidence_region_binding_report_hash": "6bb4dedd66d51a8a5b01ecd2a985969a4773fd47301ad2b6ba7e4a1b0d78e8f5",
+          "license_transaction_receipt_hash": "1f9429f6d28294793e7aa2dbfe5d71406ccbe32bcb791ab6d28d730ef2d1f641",
+          "rendered_attribution_audit_hash": "78658d18c49302c5a8312c04136c311895dbc44f281aea216f6960d3d1a89017",
+          "source_availability_report_hash": "a42d96bcc238d04cc845dec1e3ffd7688467d8518deb92882b2d19901b7d4df7",
+          "source_confidence_report_hash": "e5b8a300ca61aa2afc07afc5e37ed246d51bd4435cc76a9859a7ccb39d991265"
+        },
+        "proof_row_hash": "060398ddac0dcfc396d196c2176a193e50890b981fc9426cecdee9734cde328b",
+        "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "verification_endpoint": "/v1/rdllm/grounded-source-footers",
+        "verifier_command": "verify-grounded-source-footer",
+        "well_known_path": "/.well-known/rdllm/grounded-source-footer.json",
+        "work_id": "maya-youtube-style-pool"
+      }
+    ],
+    "schemas": {
+      "citation_footer_contract": "docs/schemas/citation_footer_contract.schema.json",
+      "citation_reliance_receipt": "docs/schemas/citation_reliance_receipt.schema.json",
+      "evidence_region_binding_report": "docs/schemas/evidence_region_binding_report.schema.json",
+      "grounded_source_footer": "docs/schemas/grounded_source_footer.schema.json",
+      "license_transaction_receipt": "docs/schemas/license_transaction_receipt.schema.json",
+      "rendered_attribution_audit": "docs/schemas/rendered_attribution_audit.schema.json",
+      "source_availability_report": "docs/schemas/source_availability_report.schema.json",
+      "source_confidence_report": "docs/schemas/source_confidence_report.schema.json"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "1fdffd3870c4b59c729c0fe2c999890240c8b728098411e93d32dfcdb070fa9f"
+    },
+    "summary": {
+      "claim_row_count": 6,
+      "failed_check_count": 0,
+      "footer_hallucination_resistance_supported": true,
+      "license_aware_footer_supported": true,
+      "privacy_preserved": true,
+      "proof_row_count": 3,
+      "public_region_bound_claim_count": 6,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L102",
+      "user_grounded_footer_supported": true,
+      "verified_source_count": 3,
+      "visible_source_count": 3
+    },
+    "version": "rdllm-grounded-source-footer/v1"
+  },
+  "origin_attestations": [
+    {
+      "attestation_issuer_trusted": true,
+      "attestation_signature_verified": true,
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "label": "S1",
+      "origin_attestation_hash": "b4649116b2450ec2252573041312aba87f35ce9579e96384b2caaa99699ba024",
+      "origin_attestation_issuer": "registry:rdllm-origin",
+      "origin_class": "human_original",
+      "synthetic_generation_disclosed": false,
+      "upstream_sources": [],
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "attestation_issuer_trusted": true,
+      "attestation_signature_verified": true,
+      "chunk_id": "lina-governance-disputes:c1",
+      "label": "S2",
+      "origin_attestation_hash": "c317e526a1a7a1bd526ddde5b252d8993364bc59963f78bce2005439cc418f61",
+      "origin_attestation_issuer": "registry:rdllm-origin",
+      "origin_class": "human_original",
+      "synthetic_generation_disclosed": false,
+      "upstream_sources": [],
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "attestation_issuer_trusted": true,
+      "attestation_signature_verified": true,
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "label": "S3",
+      "origin_attestation_hash": "68b34c389b56ee77acdce3668f62cf6820248fe39f3a268598c04a1306af3513",
+      "origin_attestation_issuer": "registry:rdllm-origin",
+      "origin_class": "human_original",
+      "synthetic_generation_disclosed": false,
+      "upstream_sources": [],
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "private_strings": [
+    "How should AI prove attribution?",
+    "Royalty-aware answer:\nFor the prompt 'How should AI prove attribution?', the strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]",
+    "Royalty-aware answer:\nFor the prompt 'How should AI prove attribution?', the strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]\n\nSources\n[S1] Provenance Ledgers for AI Outputs - Arjun Rao; chunk=arjun-provenance-ledger:c1; uri=registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1; support=0.303; text_match=0.900; hash=e94efa6d9bb3.\n    Evidence: span_hashes=399e7ff82b80,6ea90fbdd0fb. Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.\n[S2] Creator Governance for AI Licensing - Lina Park; chunk=lina-governance-disputes:c1; uri=registered://works/lina-governance-disputes#lina-governance-disputes:c1; support=0.204; text_match=0.633; hash=2e332f176133.\n    Evidence: span_hashes=71e11e089ebe,82b19c7059e7. Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.\n[S3] Usage Pools for Creator Platforms - Maya Sen; chunk=maya-youtube-style-pool:c1; uri=registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1; support=0.333; text_match=0.933; hash=6029417218e9.\n    Evidence: span_hashes=28528b6fc0db,a9ed8431a259. A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.\nGrounding: 6/6 claims supported; status=grounded.\nClaim Evidence\n[C1] S1; span=399e7ff82b80; chars=0-64.\n[C2] S1; span=6ea90fbdd0fb; chars=65-244.\n[C3] S2; span=71e11e089ebe; chars=0-51.\n[C4] S2; span=82b19c7059e7; chars=52-164.\n[C5] S3; span=28528b6fc0db; chars=0-136.\n[C6] S3; span=a9ed8431a259; chars=137-262.",
+    "artifact private source origin lineage replay text",
+    "Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. Hashes do not prove legal ownership by themselves, but they do prove that a payout was tied to a specific registered text at a specific point in the ledger.",
+    "Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. A practical AI licensing marketplace can combine direct opt in registration with collective management for works whose owners are difficult to contact, while maintaining public summaries of training content and private audit trails.",
+    "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. A royalty driven LLM should use the same business idea but replace video views with generation events, retrieved source use, and output support."
+  ],
+  "source_authenticity_report": {
+    "artifact_bindings": {
+      "availability_boundary_event_match": true,
+      "creator_license_contract_bound": true,
+      "creator_license_contract_hash": "b72a02031cb195f1899bdec74f511d38b390d7d03e68409c567e1e3724e2fe08",
+      "source_availability_bound": true,
+      "source_availability_report_hash": "a42d96bcc238d04cc845dec1e3ffd7688467d8518deb92882b2d19901b7d4df7",
+      "source_boundary_bound": true,
+      "source_boundary_report_hash": "b2e533b09bf7dff78a5c8d6071b881c4e31e79f8ff31867fe4f4a23d09a35698",
+      "source_confidence_bound": true,
+      "source_confidence_report_hash": "e5b8a300ca61aa2afc07afc5e37ed246d51bd4435cc76a9859a7ccb39d991265"
+    },
+    "artifact_status": {
+      "creator_license_contract_errors": [],
+      "creator_license_contract_public_verified": true,
+      "creator_license_contract_status_ready": true,
+      "source_availability_hash_reproducible": true,
+      "source_availability_shape_valid": true,
+      "source_availability_status_verified": true,
+      "source_boundary_hash_reproducible": true,
+      "source_boundary_shape_valid": true,
+      "source_boundary_status_verified": true,
+      "source_confidence_errors": [],
+      "source_confidence_shape_valid": true,
+      "source_confidence_status_verified": true
+    },
+    "authenticity_signal_commitments": [
+      {
+        "authenticity_signal_hash": "7263e377921c080c03497cafb82563416a63edaa1171b94ff0deff545971bff9",
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+        "issuer": "issuer:rdllm-origin-registry",
+        "origin_evidence_hash": "d343fffd33e5f6292bc6e98d4164562823d67704b623b2fb93786dcc15c8594c",
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "authenticity_signal_hash": "0a1c06ca3d3c921779c130df86ded55e98f47581fd4f9f10418ae6b1ce68ebff",
+        "chunk_id": "lina-governance-disputes:c1",
+        "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+        "issuer": "issuer:rdllm-origin-registry",
+        "origin_evidence_hash": "38438486eb6d1bc1d1e82459220c35860287a028183222fbfb2b2709b506d706",
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "authenticity_signal_hash": "ad6329f9b2c8ff944233fb8ee09871bdb3e610a11f1abfd6071d44871e09d6b8",
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+        "issuer": "issuer:rdllm-origin-registry",
+        "origin_evidence_hash": "98e4548b490cd2cacbd822421a8753ee3a7f3d85d276afc637451bf8e3ed4220",
+        "work_id": "maya-youtube-style-pool"
+      }
+    ],
+    "checks": {
+      "all_domains_reputable": true,
+      "all_origin_issuers_trusted": true,
+      "all_origin_signatures_verified": true,
+      "all_poisoning_risks_below_threshold": true,
+      "all_source_farm_risks_below_threshold": true,
+      "all_sources_are_human_non_synthetic": true,
+      "all_sources_authenticity_verified": true,
+      "all_sources_have_archive_consensus": true,
+      "all_sources_have_origin_signals": true,
+      "all_sources_stable": true,
+      "artifact_statuses_verified": true,
+      "availability_boundary_event_match": true,
+      "private_fields_absent": true
+    },
+    "commitments": {
+      "artifact_binding_root": "7ba06d7a1b47d62171629870529b8f316a632311a093817f7fd865e903087dd6",
+      "artifact_status_hash": "6c69fa8f4e831b3c717a21c3060e7ce76d774bd2d45ad71b3227344bdb09f688",
+      "authenticity_signal_root": "f68da2827855d9ac2f2548f0115fc9b36093b41bd8fe73c461755ea75dac9c38",
+      "issue_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "schema": "docs/schemas/source_authenticity_report.schema.json",
+      "source_authenticity_root": "a219c3f259ddf379085bf51ef02fa0d3648ff917812287831c7fbba3d0c65562"
+    },
+    "created_at": "2026-05-31T00:00:00Z",
+    "event": {
+      "answer_hash": "069df2b36f4c12ee438a0edb55cc944c675fb5f3802cb70592907f047916ac51",
+      "creator_license_contract_hash": "b72a02031cb195f1899bdec74f511d38b390d7d03e68409c567e1e3724e2fe08",
+      "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+      "event_id": "evt_1ed43e106d466249",
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "source_availability_report_hash": "a42d96bcc238d04cc845dec1e3ffd7688467d8518deb92882b2d19901b7d4df7",
+      "source_boundary_report_hash": "b2e533b09bf7dff78a5c8d6071b881c4e31e79f8ff31867fe4f4a23d09a35698",
+      "source_confidence_report_hash": "e5b8a300ca61aa2afc07afc5e37ed246d51bd4435cc76a9859a7ccb39d991265"
+    },
+    "issuer": "rdllm-local-demo",
+    "issues": [],
+    "policy": {
+      "escrows_unverified_synthetic_or_high_risk_sources": true,
+      "maximum_poisoning_risk": 0.2,
+      "maximum_source_farm_risk": 0.2,
+      "minimum_content_stability": 0.75,
+      "minimum_domain_reputation": 0.6,
+      "policy_version": "rdllm-source-authenticity-policy/v1",
+      "requires_human_non_synthetic_origin_for_direct_payout": true,
+      "requires_signed_origin_evidence": true,
+      "requires_trusted_origin_issuer": true,
+      "target_certification_level": "RDLLM-L64"
+    },
+    "privacy": {
+      "answer_text_disclosed": false,
+      "claim_text_disclosed": false,
+      "evidence_text_disclosed": false,
+      "origin_evidence_text_disclosed": false,
+      "payout_account_disclosed": false,
+      "prompt_text_disclosed": false,
+      "report_uses_hashes_origin_booleans_and_risk_scores": true,
+      "source_text_disclosed": false
+    },
+    "report_hash": "b4d53ec02b5e3520c0c8aef51734121ebd7f7d23206aa1a871631c698f03f354",
+    "report_version": "rdllm-source-authenticity-report/v1",
+    "schemas": {
+      "creator_license_contract": "docs/schemas/creator_license_contract.schema.json",
+      "source_authenticity_report": "docs/schemas/source_authenticity_report.schema.json",
+      "source_availability_report": "docs/schemas/source_availability_report.schema.json",
+      "source_boundary_report": "docs/schemas/source_boundary_report.schema.json",
+      "source_confidence_report": "docs/schemas/source_confidence_report.schema.json"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "6636275022d6fdc5f4c5bd44c0bbdaf0f6e483954f1de271683554341232cd8f"
+    },
+    "source_authenticity_rows": [
+      {
+        "ai_generated_disclosed": false,
+        "authenticity_signal_hash": "7263e377921c080c03497cafb82563416a63edaa1171b94ff0deff545971bff9",
+        "authenticity_signal_present": true,
+        "availability_row_hash": "59a9c46cb41722603fc7dab7c881a9b491664436985ee96127e4e649b04a587f",
+        "canonical_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "citation_gaming_signal_count": 0,
+        "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+        "content_hash_matches_license": true,
+        "content_stability_above_threshold": true,
+        "content_stability_score": 0.99,
+        "creator_id": "arjun",
+        "cross_archive_consensus": true,
+        "direct_payout_eligible": true,
+        "display_order": 1,
+        "domain_reputation_above_threshold": true,
+        "domain_reputation_score": 0.96,
+        "first_publication_at": "2026-05-01T00:00:00Z",
+        "footer_mode": "display_verified_source",
+        "human_non_synthetic_origin": true,
+        "human_origin_attested": true,
+        "label": "S1",
+        "license_term_active": true,
+        "license_term_hash": "cbcb535107e8bdeb9f9c64a7325e4b4c9e46c5f3c36740bbd42c3fc524bc8dd1",
+        "origin_disclosure_complete": true,
+        "origin_evidence_hash": "d343fffd33e5f6292bc6e98d4164562823d67704b623b2fb93786dcc15c8594c",
+        "origin_evidence_id": "origin:arjun-provenance-ledger",
+        "origin_evidence_type": "creator_signed_manifest",
+        "origin_issuer": "issuer:rdllm-origin-registry",
+        "origin_issuer_trusted": true,
+        "origin_registry_entry_hash": "217e4d528f4ecb5c0278d2096e7316ff24c656d1a60f2b9a3e31f89dae36d9d7",
+        "origin_signature_algorithm": "HMAC-SHA256",
+        "origin_signature_verified": true,
+        "payout_mode": "eligible_direct_payout",
+        "poisoning_risk_below_threshold": true,
+        "poisoning_risk_score": 0.02,
+        "source_authenticity_hash": "55e02ec99e3a3205fcadc116acbec102d15fe51e668eab6ed8d14a69483e59a8",
+        "source_authenticity_status": "verified_human_origin",
+        "source_authenticity_verified": true,
+        "source_available_and_inspectable": true,
+        "source_boundary_closed": true,
+        "source_boundary_hash": "3b7bee7f4e5ba7ce6dec1634695d0d4a27f520620cc1ec76530a9dddc53195b9",
+        "source_confidence_level": "verified",
+        "source_farm_risk_below_threshold": true,
+        "source_farm_risk_score": 0.02,
+        "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "synthetic_source": false,
+        "title": "Provenance Ledgers for AI Outputs",
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "ai_generated_disclosed": false,
+        "authenticity_signal_hash": "0a1c06ca3d3c921779c130df86ded55e98f47581fd4f9f10418ae6b1ce68ebff",
+        "authenticity_signal_present": true,
+        "availability_row_hash": "f955f17e5e2637c2477829063d00434c4ae95f08caed152ff3d6c9f71480e413",
+        "canonical_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "chunk_id": "lina-governance-disputes:c1",
+        "citation_gaming_signal_count": 0,
+        "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+        "content_hash_matches_license": true,
+        "content_stability_above_threshold": true,
+        "content_stability_score": 0.99,
+        "creator_id": "lina",
+        "cross_archive_consensus": true,
+        "direct_payout_eligible": true,
+        "display_order": 2,
+        "domain_reputation_above_threshold": true,
+        "domain_reputation_score": 0.96,
+        "first_publication_at": "2026-05-01T00:00:00Z",
+        "footer_mode": "display_verified_source",
+        "human_non_synthetic_origin": true,
+        "human_origin_attested": true,
+        "label": "S2",
+        "license_term_active": true,
+        "license_term_hash": "9a704be10d700f08f46f97990c6efdf946312817343eb70317143ce60a140df0",
+        "origin_disclosure_complete": true,
+        "origin_evidence_hash": "38438486eb6d1bc1d1e82459220c35860287a028183222fbfb2b2709b506d706",
+        "origin_evidence_id": "origin:lina-governance-disputes",
+        "origin_evidence_type": "creator_signed_manifest",
+        "origin_issuer": "issuer:rdllm-origin-registry",
+        "origin_issuer_trusted": true,
+        "origin_registry_entry_hash": "82b1cb7568de39e260d9f94dcaf6406ab474fc438d89c4c49e320ddce26c2481",
+        "origin_signature_algorithm": "HMAC-SHA256",
+        "origin_signature_verified": true,
+        "payout_mode": "eligible_direct_payout",
+        "poisoning_risk_below_threshold": true,
+        "poisoning_risk_score": 0.02,
+        "source_authenticity_hash": "b42941e940de99161047779391ea5ae46d66d7cb37646aec220126e2704243a4",
+        "source_authenticity_status": "verified_human_origin",
+        "source_authenticity_verified": true,
+        "source_available_and_inspectable": true,
+        "source_boundary_closed": true,
+        "source_boundary_hash": "ba5f6d980863e76860413586d66f125d723de0908f0f6976df11b173ecc90f13",
+        "source_confidence_level": "verified",
+        "source_farm_risk_below_threshold": true,
+        "source_farm_risk_score": 0.02,
+        "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "synthetic_source": false,
+        "title": "Creator Governance for AI Licensing",
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "ai_generated_disclosed": false,
+        "authenticity_signal_hash": "ad6329f9b2c8ff944233fb8ee09871bdb3e610a11f1abfd6071d44871e09d6b8",
+        "authenticity_signal_present": true,
+        "availability_row_hash": "43e28912dbbd3a6f63a3a7a9cf5af5557848c966cae4478504de47af66b9bc2c",
+        "canonical_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "citation_gaming_signal_count": 0,
+        "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+        "content_hash_matches_license": true,
+        "content_stability_above_threshold": true,
+        "content_stability_score": 0.99,
+        "creator_id": "maya",
+        "cross_archive_consensus": true,
+        "direct_payout_eligible": true,
+        "display_order": 3,
+        "domain_reputation_above_threshold": true,
+        "domain_reputation_score": 0.96,
+        "first_publication_at": "2026-05-01T00:00:00Z",
+        "footer_mode": "display_verified_source",
+        "human_non_synthetic_origin": true,
+        "human_origin_attested": true,
+        "label": "S3",
+        "license_term_active": true,
+        "license_term_hash": "de302176c9eccd11587c84a39617633e839230c34772a704d23bf437e39b0b2a",
+        "origin_disclosure_complete": true,
+        "origin_evidence_hash": "98e4548b490cd2cacbd822421a8753ee3a7f3d85d276afc637451bf8e3ed4220",
+        "origin_evidence_id": "origin:maya-youtube-style-pool",
+        "origin_evidence_type": "creator_signed_manifest",
+        "origin_issuer": "issuer:rdllm-origin-registry",
+        "origin_issuer_trusted": true,
+        "origin_registry_entry_hash": "a06df83f29761ba257c06facc1579f85e73ae44d76297972e57eb39219247541",
+        "origin_signature_algorithm": "HMAC-SHA256",
+        "origin_signature_verified": true,
+        "payout_mode": "eligible_direct_payout",
+        "poisoning_risk_below_threshold": true,
+        "poisoning_risk_score": 0.02,
+        "source_authenticity_hash": "410e3f5ce6225c1f750914e6d0cfccc2e4db4d9748036accf4739e70b0d25bd6",
+        "source_authenticity_status": "verified_human_origin",
+        "source_authenticity_verified": true,
+        "source_available_and_inspectable": true,
+        "source_boundary_closed": true,
+        "source_boundary_hash": "ca67c281df65c03a6fc509ad2272ed95d066dfd4b2923a9f9e693c549640d901",
+        "source_confidence_level": "verified",
+        "source_farm_risk_below_threshold": true,
+        "source_farm_risk_score": 0.02,
+        "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "synthetic_source": false,
+        "title": "Usage Pools for Creator Platforms",
+        "work_id": "maya-youtube-style-pool"
+      }
+    ],
+    "summary": {
+      "all_sources_authentic": true,
+      "direct_payout_eligible_count": 3,
+      "escrow_recommended_count": 0,
+      "high_poisoning_risk_count": 0,
+      "high_source_farm_risk_count": 0,
+      "issue_count": 0,
+      "source_count": 3,
+      "status": "verified",
+      "synthetic_or_unverified_count": 0,
+      "target_certification_level": "RDLLM-L64",
+      "verified_source_count": 3
+    }
+  },
+  "warranted_source_footer": {
+    "artifact_bindings": {
+      "citation_footer_contract": {
+        "artifact_type": "rdllm-citation-footer-contract/v1",
+        "declared_hash": "b18a8cc93a4974ead44bf84e5a76f2b0f00b2fc0d588ec9b5e32b6ea188450eb",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "evidence_force_calibration": {
+        "artifact_type": "rdllm-evidence-force-calibration/v1",
+        "declared_hash": "b0fbf063d3da88b93cb1590c4fc224d7328b8b68318adb0049a2084185e24be7",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "grounded_source_footer": {
+        "artifact_type": "",
+        "declared_hash": "7a0be33bb5f4598f94085c26cfcb57b09627c4a20e81a5f7fcb160ecb0c0d78e",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "rendered_attribution_audit": {
+        "artifact_type": "rdllm-rendered-attribution-audit/v1",
+        "declared_hash": "78658d18c49302c5a8312c04136c311895dbc44f281aea216f6960d3d1a89017",
+        "hash_reproducible": true,
+        "present": true
+      }
+    },
+    "checks": {
+      "artifact_hashes_reproducible": true,
+      "citation_footer_contract_verified": true,
+      "evidence_force_calibration_ready_l119": true,
+      "footer_display_hash_reproducible": true,
+      "grounded_source_footer_ready": true,
+      "private_text_not_disclosed": true,
+      "rendered_attribution_audit_ready": true,
+      "source_rows_visible_and_verified": true,
+      "verified_footer_rows_show_only_calibrated_warrants": true,
+      "visible_footer_claims_covered_by_l119": true,
+      "visible_verified_claims_force_calibrated": true,
+      "warrant_rows_cover_visible_footer_claims": true,
+      "warrant_rows_include_required_force_axes": true
+    },
+    "claim_warrant_rows": [
+      {
+        "axis_rows": [
+          {
+            "axis": "relation",
+            "axis_row_hash": "a5c41cd54c43f122d807f2dfb7124b8b9f224a687c83c892e478720d5e537bcd",
+            "calibrated": true,
+            "claim_force": "supports",
+            "claim_rank": 3,
+            "evidence_force": "supports",
+            "evidence_rank": 3,
+            "force_gap": 0
+          },
+          {
+            "axis": "modality",
+            "axis_row_hash": "756758eb0f6f181befeb6d27cb6e37818966d6b350230b44cca94ca7de7446e7",
+            "calibrated": true,
+            "claim_force": "asserted",
+            "claim_rank": 4,
+            "evidence_force": "asserted",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "scope",
+            "axis_row_hash": "7f5299e71b286af149837b183a78e8d12cf6838177431062325c4b9cdc444574",
+            "calibrated": true,
+            "claim_force": "sample",
+            "claim_rank": 3,
+            "evidence_force": "population",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "temporal",
+            "axis_row_hash": "486875cba0f102f72152bc07d9fa32493e77c2092400c0f4cf7293a25791b978",
+            "calibrated": true,
+            "claim_force": "current",
+            "claim_rank": 4,
+            "evidence_force": "current",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "numeric",
+            "axis_row_hash": "44da5fbf187c91c4c18329fe9f9f559783dfa775089f74c038c3f6a55e83df2c",
+            "calibrated": true,
+            "claim_force": "approximate",
+            "claim_rank": 2,
+            "evidence_force": "range",
+            "evidence_rank": 3,
+            "force_gap": 0
+          }
+        ],
+        "calibrated": true,
+        "claim_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+        "claim_index": 1,
+        "claim_warrant_row_hash": "370b3756070d555968794f0f8bf05d5d337c45a04d1752fb3d29e09e79852e95",
+        "confidence": 1.0,
+        "covered_by_force_row": true,
+        "display_anchor": "[S1:span=399e7ff82b80]",
+        "display_text": "claim 1 [S1:span=399e7ff82b80] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=399e7ff82b80",
+        "evidence_span_prefix": "399e7ff82b80",
+        "footer_claim_verified": true,
+        "footer_status": "verified",
+        "matched_claim_ids": [
+          "claim:footer:S1:1"
+        ],
+        "matched_force_row_hashes": [
+          "29d11b5415157ccaeb5c53a719fd9696400dee33c506eda0c4bf208f79b815e1"
+        ],
+        "settlement_action": "direct_payout_allowed",
+        "source_label": "S1",
+        "support_score": 0.9,
+        "violation_axes": [],
+        "visible_claim_key": "c91a39c21b4676a5ff0e52f80a9711023e705f2d8b52c9eefa61eda8a71020d3",
+        "warrant_status": "calibrated"
+      },
+      {
+        "axis_rows": [
+          {
+            "axis": "relation",
+            "axis_row_hash": "a5c41cd54c43f122d807f2dfb7124b8b9f224a687c83c892e478720d5e537bcd",
+            "calibrated": true,
+            "claim_force": "supports",
+            "claim_rank": 3,
+            "evidence_force": "supports",
+            "evidence_rank": 3,
+            "force_gap": 0
+          },
+          {
+            "axis": "modality",
+            "axis_row_hash": "756758eb0f6f181befeb6d27cb6e37818966d6b350230b44cca94ca7de7446e7",
+            "calibrated": true,
+            "claim_force": "asserted",
+            "claim_rank": 4,
+            "evidence_force": "asserted",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "scope",
+            "axis_row_hash": "7f5299e71b286af149837b183a78e8d12cf6838177431062325c4b9cdc444574",
+            "calibrated": true,
+            "claim_force": "sample",
+            "claim_rank": 3,
+            "evidence_force": "population",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "temporal",
+            "axis_row_hash": "486875cba0f102f72152bc07d9fa32493e77c2092400c0f4cf7293a25791b978",
+            "calibrated": true,
+            "claim_force": "current",
+            "claim_rank": 4,
+            "evidence_force": "current",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "numeric",
+            "axis_row_hash": "44da5fbf187c91c4c18329fe9f9f559783dfa775089f74c038c3f6a55e83df2c",
+            "calibrated": true,
+            "claim_force": "approximate",
+            "claim_rank": 2,
+            "evidence_force": "range",
+            "evidence_rank": 3,
+            "force_gap": 0
+          }
+        ],
+        "calibrated": true,
+        "claim_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+        "claim_index": 2,
+        "claim_warrant_row_hash": "49b125b035bdcc697668633b36a8c5e34682560daba9c6a822e4860052de4b3e",
+        "confidence": 1.0,
+        "covered_by_force_row": true,
+        "display_anchor": "[S1:span=6ea90fbdd0fb]",
+        "display_text": "claim 2 [S1:span=6ea90fbdd0fb] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=6ea90fbdd0fb",
+        "evidence_span_prefix": "6ea90fbdd0fb",
+        "footer_claim_verified": true,
+        "footer_status": "verified",
+        "matched_claim_ids": [
+          "claim:footer:S1:2"
+        ],
+        "matched_force_row_hashes": [
+          "83dd192df824f30d8d047a307a809d22bf0c454128b8a3ade675f7b973107cd9"
+        ],
+        "settlement_action": "direct_payout_allowed",
+        "source_label": "S1",
+        "support_score": 0.9,
+        "violation_axes": [],
+        "visible_claim_key": "5c4d1a08969d55860b1affece9257587fec99771e1f9a87fc75ecb2208da1481",
+        "warrant_status": "calibrated"
+      },
+      {
+        "axis_rows": [
+          {
+            "axis": "relation",
+            "axis_row_hash": "a5c41cd54c43f122d807f2dfb7124b8b9f224a687c83c892e478720d5e537bcd",
+            "calibrated": true,
+            "claim_force": "supports",
+            "claim_rank": 3,
+            "evidence_force": "supports",
+            "evidence_rank": 3,
+            "force_gap": 0
+          },
+          {
+            "axis": "modality",
+            "axis_row_hash": "756758eb0f6f181befeb6d27cb6e37818966d6b350230b44cca94ca7de7446e7",
+            "calibrated": true,
+            "claim_force": "asserted",
+            "claim_rank": 4,
+            "evidence_force": "asserted",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "scope",
+            "axis_row_hash": "7f5299e71b286af149837b183a78e8d12cf6838177431062325c4b9cdc444574",
+            "calibrated": true,
+            "claim_force": "sample",
+            "claim_rank": 3,
+            "evidence_force": "population",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "temporal",
+            "axis_row_hash": "486875cba0f102f72152bc07d9fa32493e77c2092400c0f4cf7293a25791b978",
+            "calibrated": true,
+            "claim_force": "current",
+            "claim_rank": 4,
+            "evidence_force": "current",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "numeric",
+            "axis_row_hash": "44da5fbf187c91c4c18329fe9f9f559783dfa775089f74c038c3f6a55e83df2c",
+            "calibrated": true,
+            "claim_force": "approximate",
+            "claim_rank": 2,
+            "evidence_force": "range",
+            "evidence_rank": 3,
+            "force_gap": 0
+          }
+        ],
+        "calibrated": true,
+        "claim_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+        "claim_index": 3,
+        "claim_warrant_row_hash": "9bbff5b59b3fca186ef47b2584030a2df1176a650e8ced5ac66c4c95d70ca88c",
+        "confidence": 1.0,
+        "covered_by_force_row": true,
+        "display_anchor": "[S2:span=71e11e089ebe]",
+        "display_text": "claim 3 [S2:span=71e11e089ebe] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=71e11e089ebe",
+        "evidence_span_prefix": "71e11e089ebe",
+        "footer_claim_verified": true,
+        "footer_status": "verified",
+        "matched_claim_ids": [
+          "claim:footer:S2:3"
+        ],
+        "matched_force_row_hashes": [
+          "e70bbf7ae7400bd48ba50ab606574d5636adccc00d2a54e5136d2cdf2530c5e3"
+        ],
+        "settlement_action": "direct_payout_allowed",
+        "source_label": "S2",
+        "support_score": 0.9,
+        "violation_axes": [],
+        "visible_claim_key": "79f2854833fd5bd1d0ea487f5645019fd7ae6f58a96f6835c02b1c6ca82fe552",
+        "warrant_status": "calibrated"
+      },
+      {
+        "axis_rows": [
+          {
+            "axis": "relation",
+            "axis_row_hash": "a5c41cd54c43f122d807f2dfb7124b8b9f224a687c83c892e478720d5e537bcd",
+            "calibrated": true,
+            "claim_force": "supports",
+            "claim_rank": 3,
+            "evidence_force": "supports",
+            "evidence_rank": 3,
+            "force_gap": 0
+          },
+          {
+            "axis": "modality",
+            "axis_row_hash": "756758eb0f6f181befeb6d27cb6e37818966d6b350230b44cca94ca7de7446e7",
+            "calibrated": true,
+            "claim_force": "asserted",
+            "claim_rank": 4,
+            "evidence_force": "asserted",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "scope",
+            "axis_row_hash": "7f5299e71b286af149837b183a78e8d12cf6838177431062325c4b9cdc444574",
+            "calibrated": true,
+            "claim_force": "sample",
+            "claim_rank": 3,
+            "evidence_force": "population",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "temporal",
+            "axis_row_hash": "486875cba0f102f72152bc07d9fa32493e77c2092400c0f4cf7293a25791b978",
+            "calibrated": true,
+            "claim_force": "current",
+            "claim_rank": 4,
+            "evidence_force": "current",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "numeric",
+            "axis_row_hash": "44da5fbf187c91c4c18329fe9f9f559783dfa775089f74c038c3f6a55e83df2c",
+            "calibrated": true,
+            "claim_force": "approximate",
+            "claim_rank": 2,
+            "evidence_force": "range",
+            "evidence_rank": 3,
+            "force_gap": 0
+          }
+        ],
+        "calibrated": true,
+        "claim_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+        "claim_index": 4,
+        "claim_warrant_row_hash": "a3f632654eea494e407056797c47abf1c0034e1d93b16f4f7dbced05d6e2e77e",
+        "confidence": 1.0,
+        "covered_by_force_row": true,
+        "display_anchor": "[S2:span=82b19c7059e7]",
+        "display_text": "claim 4 [S2:span=82b19c7059e7] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=82b19c7059e7",
+        "evidence_span_prefix": "82b19c7059e7",
+        "footer_claim_verified": true,
+        "footer_status": "verified",
+        "matched_claim_ids": [
+          "claim:footer:S2:4"
+        ],
+        "matched_force_row_hashes": [
+          "e9d1850942ef30cd8c48b61c47309f55636241d0ce736fdeda1960f224e826e0"
+        ],
+        "settlement_action": "direct_payout_allowed",
+        "source_label": "S2",
+        "support_score": 0.9,
+        "violation_axes": [],
+        "visible_claim_key": "385115f2ee7fcf8b3a5493bdcd6830ca8bfb9c0c3b5744146e8d53aea85b127d",
+        "warrant_status": "calibrated"
+      },
+      {
+        "axis_rows": [
+          {
+            "axis": "relation",
+            "axis_row_hash": "a5c41cd54c43f122d807f2dfb7124b8b9f224a687c83c892e478720d5e537bcd",
+            "calibrated": true,
+            "claim_force": "supports",
+            "claim_rank": 3,
+            "evidence_force": "supports",
+            "evidence_rank": 3,
+            "force_gap": 0
+          },
+          {
+            "axis": "modality",
+            "axis_row_hash": "756758eb0f6f181befeb6d27cb6e37818966d6b350230b44cca94ca7de7446e7",
+            "calibrated": true,
+            "claim_force": "asserted",
+            "claim_rank": 4,
+            "evidence_force": "asserted",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "scope",
+            "axis_row_hash": "7f5299e71b286af149837b183a78e8d12cf6838177431062325c4b9cdc444574",
+            "calibrated": true,
+            "claim_force": "sample",
+            "claim_rank": 3,
+            "evidence_force": "population",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "temporal",
+            "axis_row_hash": "486875cba0f102f72152bc07d9fa32493e77c2092400c0f4cf7293a25791b978",
+            "calibrated": true,
+            "claim_force": "current",
+            "claim_rank": 4,
+            "evidence_force": "current",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "numeric",
+            "axis_row_hash": "44da5fbf187c91c4c18329fe9f9f559783dfa775089f74c038c3f6a55e83df2c",
+            "calibrated": true,
+            "claim_force": "approximate",
+            "claim_rank": 2,
+            "evidence_force": "range",
+            "evidence_rank": 3,
+            "force_gap": 0
+          }
+        ],
+        "calibrated": true,
+        "claim_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+        "claim_index": 5,
+        "claim_warrant_row_hash": "926e5caaa28bc2f94db5de01c2ecc7e4994c8427acccdaa4eff1917e22898fc2",
+        "confidence": 1.0,
+        "covered_by_force_row": true,
+        "display_anchor": "[S3:span=28528b6fc0db]",
+        "display_text": "claim 5 [S3:span=28528b6fc0db] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=28528b6fc0db",
+        "evidence_span_prefix": "28528b6fc0db",
+        "footer_claim_verified": true,
+        "footer_status": "verified",
+        "matched_claim_ids": [
+          "claim:footer:S3:5"
+        ],
+        "matched_force_row_hashes": [
+          "473d75728df3259024fcac582916fe64f10053f2a7784352a35f52d38c6132db"
+        ],
+        "settlement_action": "direct_payout_allowed",
+        "source_label": "S3",
+        "support_score": 0.9,
+        "violation_axes": [],
+        "visible_claim_key": "1cba8bdc2339f30422a2af08420fbfa9cc4773dc534c3ebbe835dd2e0708a897",
+        "warrant_status": "calibrated"
+      },
+      {
+        "axis_rows": [
+          {
+            "axis": "relation",
+            "axis_row_hash": "a5c41cd54c43f122d807f2dfb7124b8b9f224a687c83c892e478720d5e537bcd",
+            "calibrated": true,
+            "claim_force": "supports",
+            "claim_rank": 3,
+            "evidence_force": "supports",
+            "evidence_rank": 3,
+            "force_gap": 0
+          },
+          {
+            "axis": "modality",
+            "axis_row_hash": "756758eb0f6f181befeb6d27cb6e37818966d6b350230b44cca94ca7de7446e7",
+            "calibrated": true,
+            "claim_force": "asserted",
+            "claim_rank": 4,
+            "evidence_force": "asserted",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "scope",
+            "axis_row_hash": "7f5299e71b286af149837b183a78e8d12cf6838177431062325c4b9cdc444574",
+            "calibrated": true,
+            "claim_force": "sample",
+            "claim_rank": 3,
+            "evidence_force": "population",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "temporal",
+            "axis_row_hash": "486875cba0f102f72152bc07d9fa32493e77c2092400c0f4cf7293a25791b978",
+            "calibrated": true,
+            "claim_force": "current",
+            "claim_rank": 4,
+            "evidence_force": "current",
+            "evidence_rank": 4,
+            "force_gap": 0
+          },
+          {
+            "axis": "numeric",
+            "axis_row_hash": "44da5fbf187c91c4c18329fe9f9f559783dfa775089f74c038c3f6a55e83df2c",
+            "calibrated": true,
+            "claim_force": "approximate",
+            "claim_rank": 2,
+            "evidence_force": "range",
+            "evidence_rank": 3,
+            "force_gap": 0
+          }
+        ],
+        "calibrated": true,
+        "claim_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+        "claim_index": 6,
+        "claim_warrant_row_hash": "2ce4d6ff565f29d322c0e5d58d437287706d81b40a6e03255d3d331548c20ddd",
+        "confidence": 1.0,
+        "covered_by_force_row": true,
+        "display_anchor": "[S3:span=a9ed8431a259]",
+        "display_text": "claim 6 [S3:span=a9ed8431a259] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=a9ed8431a259",
+        "evidence_span_prefix": "a9ed8431a259",
+        "footer_claim_verified": true,
+        "footer_status": "verified",
+        "matched_claim_ids": [
+          "claim:footer:S3:6"
+        ],
+        "matched_force_row_hashes": [
+          "8c1e604badf74142245125fe448178a371d291243a5823eef8054fc7d17c3376"
+        ],
+        "settlement_action": "direct_payout_allowed",
+        "source_label": "S3",
+        "support_score": 0.9,
+        "violation_axes": [],
+        "visible_claim_key": "207b4d4083b5595d43ca466be7118912af3856d08a202be8272ac47602f05247",
+        "warrant_status": "calibrated"
+      }
+    ],
+    "commitments": {
+      "artifact_binding_root": "de9b7c9274e4a25e1dcadb5a380a3c1dcdf9461893efa4b1cf0f7014c66c3dd0",
+      "claim_warrant_root": "9049182ba65a143387ad5307e04a02f3e281f32b51cffc8ce7503e6840a72520",
+      "footer_display_hash": "7479c5df707e0dae21a60ae5377baecd6309996027e4ac9e2afc89efd1513fdd",
+      "schema": "docs/schemas/warranted_source_footer.schema.json",
+      "source_row_root": "e7b89d0271d2129c54bd30e52199441cc6aa8fdc6c3327f446ae77773564a085"
+    },
+    "coverage_gaps": {
+      "failed_checks": [],
+      "uncalibrated_visible_claim_keys": [],
+      "uncovered_visible_claim_keys": []
+    },
+    "created_at": "2026-05-31T00:00:00Z",
+    "footer_display": {
+      "claim_warrant_root": "9049182ba65a143387ad5307e04a02f3e281f32b51cffc8ce7503e6840a72520",
+      "footer_hash": "7479c5df707e0dae21a60ae5377baecd6309996027e4ac9e2afc89efd1513fdd",
+      "line_count": 6,
+      "profile": "rdllm-visible-warranted-source-footer/v1",
+      "visible_claim_key_root": "95119504d40b97426fa388373a4e4608af7fbf540dc433fa55a9b46b1ee343a1",
+      "warrant_lines": [
+        "claim 1 [S1:span=399e7ff82b80] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=399e7ff82b80",
+        "claim 2 [S1:span=6ea90fbdd0fb] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=6ea90fbdd0fb",
+        "claim 3 [S2:span=71e11e089ebe] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=71e11e089ebe",
+        "claim 4 [S2:span=82b19c7059e7] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=82b19c7059e7",
+        "claim 5 [S3:span=28528b6fc0db] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=28528b6fc0db",
+        "claim 6 [S3:span=a9ed8431a259] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=a9ed8431a259"
+      ]
+    },
+    "footer_version": "rdllm-warranted-source-footer/v1",
+    "issuer": "rdllm-local-demo",
+    "policy": {
+      "minimum_input_level": "RDLLM-L119",
+      "profile": "rdllm-visible-warrant-disclosure-policy/v1",
+      "raw_claim_text_disclosure_allowed": false,
+      "raw_evidence_text_disclosure_allowed": false,
+      "required_axes": [
+        "relation",
+        "modality",
+        "scope",
+        "temporal",
+        "numeric"
+      ],
+      "target_certification_level": "RDLLM-L120",
+      "verified_footer_requires_visible_warrant_label": true
+    },
+    "privacy": {
+      "footer_warrant_labels_disclosed": true,
+      "payment_account_disclosed": false,
+      "public_report_uses_hashes_force_labels_scores_and_statuses": true,
+      "raw_answer_text_disclosed": false,
+      "raw_claim_text_disclosed": false,
+      "raw_evidence_text_disclosed": false,
+      "raw_prompt_text_disclosed": false,
+      "raw_source_text_disclosed": false
+    },
+    "schemas": {
+      "citation_footer_contract": "docs/schemas/citation_footer_contract.schema.json",
+      "evidence_force_calibration": "docs/schemas/evidence_force_calibration.schema.json",
+      "grounded_source_footer": "docs/schemas/grounded_source_footer.schema.json",
+      "rendered_attribution_audit": "docs/schemas/rendered_attribution_audit.schema.json",
+      "warranted_source_footer": "docs/schemas/warranted_source_footer.schema.json"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "c764bf96b23938a854010cfc505ff37ed47d6964d03386722d7368681f08a189"
+    },
+    "source_rows": [
+      {
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "confidence_level": "verified",
+        "content_hash_prefix": "e94efa6d9bb3",
+        "creator_id": "arjun",
+        "creator_name": "Arjun Rao",
+        "display_label": "[S1]",
+        "display_order": 1,
+        "grounded_footer_row_hash": "13f23ce638ce0dc5acca751dba853051b4730ee961f540da3dbbf06da726e73e",
+        "label": "S1",
+        "license_status": "active",
+        "royalty_status": "active",
+        "source_available": true,
+        "source_confidence_verified": true,
+        "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+        "title": "Provenance Ledgers for AI Outputs",
+        "warranted_source_row_hash": "1f7349b17b054ad644e51d6949bd09d7351987aa302482ae6069beec36b5695c",
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "chunk_id": "lina-governance-disputes:c1",
+        "confidence_level": "verified",
+        "content_hash_prefix": "2e332f176133",
+        "creator_id": "lina",
+        "creator_name": "Lina Park",
+        "display_label": "[S2]",
+        "display_order": 2,
+        "grounded_footer_row_hash": "2ab4f208a5cde3cf0fd377f16426a6b062c36877d6af05defd436a02d9d9fc89",
+        "label": "S2",
+        "license_status": "active",
+        "royalty_status": "active",
+        "source_available": true,
+        "source_confidence_verified": true,
+        "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+        "title": "Creator Governance for AI Licensing",
+        "warranted_source_row_hash": "b524ab5ff5f810bcc2fdc86cc10d894cd4204bea806f21b7be68885af85af2b5",
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "confidence_level": "verified",
+        "content_hash_prefix": "6029417218e9",
+        "creator_id": "maya",
+        "creator_name": "Maya Sen",
+        "display_label": "[S3]",
+        "display_order": 3,
+        "grounded_footer_row_hash": "0e20922764d295c15de61d0b5218267c21345fbacaaadb6eb704c14bee06e0d9",
+        "label": "S3",
+        "license_status": "active",
+        "royalty_status": "active",
+        "source_available": true,
+        "source_confidence_verified": true,
+        "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+        "title": "Usage Pools for Creator Platforms",
+        "warranted_source_row_hash": "e41c1918e04a1df790af59e8af3153b606dd392c504685f750e49f7c1190dad2",
+        "work_id": "maya-youtube-style-pool"
+      }
+    ],
+    "summary": {
+      "calibrated_visible_claim_count": 6,
+      "failed_check_count": 0,
+      "minimum_input_level": "RDLLM-L119",
+      "privacy_preserved": true,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L120",
+      "uncalibrated_visible_claim_count": 0,
+      "uncovered_visible_claim_count": 0,
+      "user_visible_warrant_labels_supported": true,
+      "verified_footer_warrant_disclosure_supported": true,
+      "visible_claim_count": 6,
+      "visible_source_count": 3,
+      "warrant_line_count": 6
+    },
+    "warranted_source_footer_hash": "43259a4501439a5a53494e65fdbb239e216d39544c96c364b89566dd8ca76ea2"
+  }
+}

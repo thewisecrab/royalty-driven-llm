@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_certification_trust_federation.schema.json",
+  "title": "RDLLM Universal Certification Trust Federation",
+  "type": "object",
+  "required": [
+    "universal_certification_trust_federation_version",
+    "schema",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "federation_role_rows",
+    "trust_mark_rows",
+    "credential_claim_rows",
+    "transparency_channel_rows",
+    "negative_federation_rows",
+    "checks",
+    "federation_decision",
+    "privacy",
+    "well_known",
+    "summary",
+    "universal_certification_trust_federation_hash",
+    "signature"
+  ],
+  "properties": {
+    "universal_certification_trust_federation_version": {
+      "const": "rdllm-universal-certification-trust-federation/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_certification_trust_federation.schema.json"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_invocation_enforcement_level",
+        "minimum_negotiation_level",
+        "well_known_path",
+        "required_core_artifacts",
+        "required_federation_roles",
+        "required_trust_marks",
+        "required_credential_claims",
+        "required_transparency_channels",
+        "required_negative_federation_failures"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-certification-trust-federation-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L161" },
+        "minimum_invocation_enforcement_level": { "const": "RDLLM-L160" },
+        "minimum_negotiation_level": { "const": "RDLLM-L159" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-certification-trust-federation.json"
+        },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_federation_roles": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_trust_marks": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_credential_claims": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_transparency_channels": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_negative_federation_failures": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["bindings", "binding_root"],
+      "properties": {
+        "bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "declared_hash",
+              "payload_hash",
+              "hash_reproducible",
+              "present"
+            ],
+            "properties": {
+              "name": { "type": "string" },
+              "version": { "type": "string" },
+              "declared_hash": { "type": "string" },
+              "payload_hash": { "type": "string" },
+              "hash_reproducible": { "type": "boolean" },
+              "status": { "type": "string" },
+              "target_level": { "type": "string" },
+              "present": { "type": "boolean" },
+              "artifact_binding_hash": { "type": "string" }
+            }
+          }
+        },
+        "binding_root": { "type": "string" }
+      }
+    },
+    "federation_role_rows": { "$ref": "#/$defs/rowSet" },
+    "trust_mark_rows": { "$ref": "#/$defs/rowSet" },
+    "credential_claim_rows": { "$ref": "#/$defs/rowSet" },
+    "transparency_channel_rows": { "$ref": "#/$defs/rowSet" },
+    "negative_federation_rows": { "$ref": "#/$defs/rowSet" },
+    "checks": { "type": "object", "additionalProperties": { "type": "boolean" } },
+    "federation_decision": {
+      "type": "object",
+      "required": [
+        "universal_certification_trust_federation_authorized",
+        "failure_modes",
+        "conformance_claim_without_trust_chain_allowed",
+        "relying_party_acceptance_without_valid_status_allowed",
+        "provider_self_certification_sufficient"
+      ],
+      "properties": {
+        "universal_certification_trust_federation_authorized": {
+          "type": "boolean"
+        },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "on_failure": { "type": "string" },
+        "conformance_claim_without_trust_chain_allowed": { "type": "boolean" },
+        "relying_party_acceptance_without_valid_status_allowed": { "type": "boolean" },
+        "provider_self_certification_sufficient": { "type": "boolean" }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "public_artifact_uses_hashes_only",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "credential_subject_payload_disclosed",
+        "trust_chain_private_metadata_disclosed",
+        "private_field_count"
+      ],
+      "properties": {
+        "public_artifact_uses_hashes_only": { "type": "boolean" },
+        "prompt_text_disclosed": { "type": "boolean" },
+        "answer_text_disclosed": { "type": "boolean" },
+        "source_text_disclosed": { "type": "boolean" },
+        "credential_subject_payload_disclosed": { "type": "boolean" },
+        "trust_chain_private_metadata_disclosed": { "type": "boolean" },
+        "private_field_count": { "type": "integer" }
+      }
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "schema", "create", "verify"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-certification-trust-federation.json"
+        },
+        "schema": {
+          "const": "docs/schemas/universal_certification_trust_federation.schema.json"
+        },
+        "create": { "const": "universal-certification-trust-federation" },
+        "verify": { "const": "verify-universal-certification-trust-federation" }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_invocation_enforcement_level",
+        "minimum_negotiation_level",
+        "failure_mode_count"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L161" },
+        "minimum_invocation_enforcement_level": { "const": "RDLLM-L160" },
+        "minimum_negotiation_level": { "const": "RDLLM-L159" },
+        "federation_role_count": { "type": "integer" },
+        "ready_federation_role_count": { "type": "integer" },
+        "trust_mark_count": { "type": "integer" },
+        "ready_trust_mark_count": { "type": "integer" },
+        "credential_claim_count": { "type": "integer" },
+        "ready_credential_claim_count": { "type": "integer" },
+        "transparency_channel_count": { "type": "integer" },
+        "ready_transparency_channel_count": { "type": "integer" },
+        "negative_federation_failure_count": { "type": "integer" },
+        "ready_negative_federation_failure_count": { "type": "integer" },
+        "core_artifact_count": { "type": "integer" },
+        "failure_mode_count": { "type": "integer" },
+        "federated_certification_required": { "type": "boolean" },
+        "trust_anchor_required": { "type": "boolean" },
+        "revocation_status_required": { "type": "boolean" },
+        "third_party_conformance_supported": { "type": "boolean" },
+        "offline_verification_supported": { "type": "boolean" },
+        "privacy_preserved": { "type": "boolean" }
+      }
+    },
+    "universal_certification_trust_federation_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "properties": {
+        "algorithm": { "type": "string" },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "rowSet": {
+      "type": "object",
+      "required": ["rows", "row_count", "ready_count", "root"],
+      "properties": {
+        "rows": {
+          "type": "array",
+          "items": { "type": "object", "additionalProperties": true }
+        },
+        "row_count": { "type": "integer" },
+        "ready_count": { "type": "integer" },
+        "root": { "type": "string" }
+      }
+    }
+  },
+  "additionalProperties": true
+}

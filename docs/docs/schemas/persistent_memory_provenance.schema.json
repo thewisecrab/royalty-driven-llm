@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/persistent_memory_provenance.schema.json",
+  "title": "RDLLM Persistent Memory Provenance Receipt",
+  "type": "object",
+  "required": [
+    "version",
+    "issued_at",
+    "issuer",
+    "case",
+    "memory_system",
+    "artifact_bindings",
+    "memory_policy",
+    "memory_entries",
+    "memory_reads",
+    "royalty_obligations",
+    "verification_errors",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "persistent_memory_provenance_hash",
+    "signature"
+  ],
+  "properties": {
+    "version": {
+      "const": "rdllm-persistent-memory-provenance/v1"
+    },
+    "issued_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "case": {
+      "type": "object",
+      "required": ["case_id", "status"],
+      "additionalProperties": true
+    },
+    "memory_system": {
+      "type": "object",
+      "required": ["system_id", "system_version", "scope", "minimum_client_level"],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "source_footer_delivery_hash",
+        "source_footer_delivery_hash_reproducible",
+        "client_enforcement_hash",
+        "client_enforcement_hash_reproducible",
+        "foundation_profile_hash",
+        "foundation_profile_hash_reproducible",
+        "memory_entry_root",
+        "memory_read_root",
+        "royalty_obligation_root",
+        "memory_entry_input_hash",
+        "memory_read_input_hash",
+        "rendered_output_hash"
+      ],
+      "additionalProperties": true
+    },
+    "memory_policy": {
+      "type": "object",
+      "required": [
+        "policy_id",
+        "requires_source_provenance",
+        "requires_license_terms",
+        "requires_royalty_carry_forward",
+        "requires_delete_tombstones",
+        "policy_hash"
+      ],
+      "additionalProperties": true
+    },
+    "memory_entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "memory_id",
+          "version",
+          "operation",
+          "sequence",
+          "memory_type",
+          "memory_text_hash",
+          "source_labels",
+          "origin_artifact_hashes",
+          "license_terms_hash",
+          "retention_policy_hash",
+          "retention_basis",
+          "allowed_use_count",
+          "royalty_obligation_count",
+          "memory_entry_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "memory_reads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "read_id",
+          "memory_id",
+          "memory_version",
+          "sequence",
+          "rendered_output_hash",
+          "client_enforcement_hash",
+          "source_labels_carried",
+          "visible_source_labels",
+          "usage_purpose",
+          "memory_read_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "royalty_obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "memory_id",
+          "memory_version",
+          "source_label",
+          "creator_id",
+          "work_id",
+          "share",
+          "settlement_state",
+          "obligation_hash",
+          "royalty_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "verification_errors": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "source_footer_delivery_verified",
+        "client_attribution_enforcement_verified",
+        "artifact_hashes_reproducible",
+        "memory_entries_have_origin_sources",
+        "memory_origin_labels_match_delivered_footer",
+        "memory_entries_have_license_and_retention_policy",
+        "memory_royalty_obligations_cover_sources",
+        "memory_reads_bind_to_client_rendered_output",
+        "memory_read_labels_visible_in_footer",
+        "deleted_memory_not_reused",
+        "private_memory_text_not_disclosed",
+        "memory_policy_is_fail_closed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "memory_text_disclosed",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "payment_data_disclosed",
+        "memory_receipt_uses_hashes_labels_and_policy_refs"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "persistent_memory_provenance",
+        "client_attribution_enforcement",
+        "source_footer_delivery"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_client_level",
+        "memory_entry_count",
+        "memory_read_count",
+        "source_label_count",
+        "royalty_obligation_count",
+        "failed_check_count",
+        "memory_provenance_ready",
+        "privacy_preserved"
+      ],
+      "additionalProperties": true
+    },
+    "persistent_memory_provenance_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

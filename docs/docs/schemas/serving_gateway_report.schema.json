@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/serving_gateway_report.schema.json",
+  "title": "RDLLM Serving Gateway Report",
+  "type": "object",
+  "required": [
+    "gateway_report_version",
+    "issuer",
+    "created_at",
+    "request",
+    "egress",
+    "embedded_artifacts",
+    "artifact_bindings",
+    "serving_policy",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "gateway_report_hash",
+    "signature"
+  ],
+  "properties": {
+    "gateway_report_version": {
+      "const": "rdllm-serving-gateway-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "request": {
+      "type": "object",
+      "required": [
+        "request_id",
+        "provider",
+        "model_id",
+        "model_version",
+        "route_id",
+        "prompt_hash",
+        "raw_model_output_hash",
+        "prompt_supplied_to_gateway",
+        "raw_model_output_supplied_to_gateway",
+        "prompt_text_disclosed",
+        "raw_model_output_text_disclosed"
+      ],
+      "additionalProperties": true
+    },
+    "egress": {
+      "type": "object",
+      "required": [
+        "delivery_status",
+        "release_decision",
+        "delivered_output_hash",
+        "proof_display_copied_output_hash",
+        "proof_display_rendered_output_hash",
+        "proof_response_hash",
+        "released_via",
+        "delivered_output_matches_proof_display"
+      ],
+      "additionalProperties": true
+    },
+    "embedded_artifacts": {
+      "type": "object",
+      "required": ["proof_carrying_response"],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "proof_response_hash",
+        "response_envelope_hash",
+        "attribution_capsule_hash",
+        "release_gate_hash",
+        "provider_card_hash",
+        "certification_report_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "serving_policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "minimum_proof_response_level",
+        "on_proof_failure",
+        "egress_must_equal_proof_response_copied_output",
+        "blocked_responses_must_suppress_raw_model_output",
+        "prompt_and_raw_output_are_hash_committed_only"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "proof_carrying_response_verified",
+        "proof_response_hash_bound",
+        "delivered_output_matches_proof_copied_output",
+        "released_response_uses_capsule_marker",
+        "blocked_response_returns_only_held_notice",
+        "blocked_response_suppresses_raw_model_output",
+        "unverified_raw_output_not_delivered",
+        "release_requires_verified_proof",
+        "provider_declares_gateway_surface",
+        "certification_meets_gateway_minimum",
+        "gateway_does_not_disclose_prompt_or_raw_output_fields"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "serving_gateway_report",
+        "proof_carrying_response"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_proof_response_level",
+        "proof_response_hash",
+        "release_gate_hash",
+        "delivery_status",
+        "release_decision",
+        "delivered_output_hash",
+        "passed_check_count",
+        "check_count",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "raw_model_output_text_disclosed",
+        "delivered_output_embedded",
+        "proof_response_embeds_public_answer_when_released",
+        "blocked_raw_model_output_suppressed",
+        "hash_only_request_commitments"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "gateway_report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

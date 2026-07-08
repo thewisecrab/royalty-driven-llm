@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/registry_report.schema.json",
+  "title": "RDLLM Ownership Claim Registry Report",
+  "type": "object",
+  "required": [
+    "registry_report_version",
+    "summary",
+    "attestations",
+    "conflicts",
+    "report_hash"
+  ],
+  "properties": {
+    "registry_report_version": {
+      "const": "rdllm-claim-registry/v1"
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "work_count",
+        "attestation_count",
+        "duplicate_threshold",
+        "open_conflict_count",
+        "conflicted_work_count"
+      ],
+      "properties": {
+        "work_count": { "type": "integer", "minimum": 0 },
+        "attestation_count": { "type": "integer", "minimum": 0 },
+        "duplicate_threshold": { "type": "number", "minimum": 0, "maximum": 1 },
+        "open_conflict_count": { "type": "integer", "minimum": 0 },
+        "conflicted_work_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "attestations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "attestation_id",
+          "work_id",
+          "creator_id",
+          "claim_type",
+          "issuer",
+          "issued_at",
+          "status"
+        ],
+        "properties": {
+          "attestation_id": { "type": "string" },
+          "work_id": { "type": "string" },
+          "creator_id": { "type": "string" },
+          "claim_type": { "type": "string" },
+          "issuer": { "type": "string" },
+          "issued_at": { "type": "string" },
+          "evidence_uri": { "type": "string" },
+          "evidence_hash": { "type": "string" },
+          "signature": { "type": "string" },
+          "status": { "type": "string" }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "conflict_id",
+          "work_ids",
+          "creator_ids",
+          "conflict_type",
+          "score",
+          "content_hashes",
+          "status",
+          "resolution"
+        ],
+        "properties": {
+          "conflict_id": { "type": "string" },
+          "work_ids": { "type": "array", "items": { "type": "string" } },
+          "creator_ids": { "type": "array", "items": { "type": "string" } },
+          "conflict_type": {
+            "enum": ["duplicate_content", "near_duplicate_content"]
+          },
+          "score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "content_hashes": { "type": "array", "items": { "type": "string" } },
+          "status": { "type": "string" },
+          "resolution": { "type": "string" }
+        }
+      }
+    },
+    "report_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": true
+}

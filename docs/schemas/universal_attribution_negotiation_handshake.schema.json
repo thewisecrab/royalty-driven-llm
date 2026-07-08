@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_attribution_negotiation_handshake.schema.json",
+  "title": "RDLLM Universal Attribution Negotiation Handshake",
+  "type": "object",
+  "required": [
+    "universal_attribution_negotiation_handshake_version",
+    "schema",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "provider_negotiation_rows",
+    "handshake_phase_rows",
+    "contract_field_rows",
+    "client_capability_rows",
+    "negative_negotiation_rows",
+    "checks",
+    "handshake_decision",
+    "privacy",
+    "well_known",
+    "summary",
+    "universal_attribution_negotiation_handshake_hash",
+    "signature"
+  ],
+  "properties": {
+    "universal_attribution_negotiation_handshake_version": {
+      "const": "rdllm-universal-attribution-negotiation-handshake/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_attribution_negotiation_handshake.schema.json"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_drift_sentinel_level",
+        "minimum_adapter_harness_level",
+        "well_known_path",
+        "required_core_artifacts",
+        "required_provider_families",
+        "required_negotiation_phases",
+        "required_contract_fields",
+        "required_client_capabilities",
+        "required_negotiation_failures"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-attribution-negotiation-handshake-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L159" },
+        "minimum_drift_sentinel_level": { "const": "RDLLM-L158" },
+        "minimum_adapter_harness_level": { "const": "RDLLM-L157" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-attribution-negotiation-handshake.json"
+        },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_negotiation_phases": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_contract_fields": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_client_capabilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_negotiation_failures": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["bindings", "binding_root"],
+      "properties": {
+        "bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "declared_hash",
+              "payload_hash",
+              "hash_reproducible",
+              "present"
+            ],
+            "properties": {
+              "name": { "type": "string" },
+              "version": { "type": "string" },
+              "declared_hash": { "type": "string" },
+              "payload_hash": { "type": "string" },
+              "hash_reproducible": { "type": "boolean" },
+              "status": { "type": "string" },
+              "target_level": { "type": "string" },
+              "present": { "type": "boolean" },
+              "artifact_binding_hash": { "type": "string" }
+            }
+          }
+        },
+        "binding_root": { "type": "string" }
+      }
+    },
+    "provider_negotiation_rows": { "$ref": "#/$defs/rowSet" },
+    "handshake_phase_rows": { "$ref": "#/$defs/rowSet" },
+    "contract_field_rows": { "$ref": "#/$defs/rowSet" },
+    "client_capability_rows": { "$ref": "#/$defs/rowSet" },
+    "negative_negotiation_rows": { "$ref": "#/$defs/rowSet" },
+    "checks": { "type": "object", "additionalProperties": { "type": "boolean" } },
+    "handshake_decision": {
+      "type": "object",
+      "required": [
+        "universal_attribution_negotiation_handshake_authorized",
+        "failure_modes",
+        "generation_without_negotiation_allowed"
+      ],
+      "properties": {
+        "universal_attribution_negotiation_handshake_authorized": {
+          "type": "boolean"
+        },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "on_failure": { "type": "string" },
+        "generation_without_negotiation_allowed": { "type": "boolean" },
+        "revocation_required_for": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "public_artifact_uses_hashes_only",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "native_provider_payload_disclosed",
+        "customer_identity_disclosed",
+        "private_field_count"
+      ],
+      "properties": {
+        "public_artifact_uses_hashes_only": { "type": "boolean" },
+        "prompt_text_disclosed": { "type": "boolean" },
+        "answer_text_disclosed": { "type": "boolean" },
+        "source_text_disclosed": { "type": "boolean" },
+        "native_provider_payload_disclosed": { "type": "boolean" },
+        "customer_identity_disclosed": { "type": "boolean" },
+        "private_field_count": { "type": "integer" }
+      }
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "schema", "create", "verify"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-attribution-negotiation-handshake.json"
+        },
+        "schema": {
+          "const": "docs/schemas/universal_attribution_negotiation_handshake.schema.json"
+        },
+        "create": { "const": "universal-attribution-negotiation-handshake" },
+        "verify": { "const": "verify-universal-attribution-negotiation-handshake" }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_drift_sentinel_level",
+        "minimum_adapter_harness_level",
+        "failure_mode_count"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L159" },
+        "minimum_drift_sentinel_level": { "const": "RDLLM-L158" },
+        "minimum_adapter_harness_level": { "const": "RDLLM-L157" },
+        "provider_family_count": { "type": "integer" },
+        "ready_provider_family_count": { "type": "integer" },
+        "negotiation_phase_count": { "type": "integer" },
+        "ready_negotiation_phase_count": { "type": "integer" },
+        "contract_field_count": { "type": "integer" },
+        "ready_contract_field_count": { "type": "integer" },
+        "client_capability_count": { "type": "integer" },
+        "ready_client_capability_count": { "type": "integer" },
+        "negative_negotiation_fixture_count": { "type": "integer" },
+        "ready_negative_negotiation_fixture_count": { "type": "integer" },
+        "core_artifact_count": { "type": "integer" },
+        "failure_mode_count": { "type": "integer" },
+        "request_time_negotiation_required": { "type": "boolean" },
+        "generation_without_negotiation_blocked": { "type": "boolean" },
+        "source_footer_contract_negotiated": { "type": "boolean" },
+        "settlement_contract_negotiated": { "type": "boolean" },
+        "offline_verification_supported": { "type": "boolean" },
+        "privacy_preserved": { "type": "boolean" }
+      }
+    },
+    "universal_attribution_negotiation_handshake_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "properties": {
+        "algorithm": { "type": "string" },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "rowSet": {
+      "type": "object",
+      "required": ["rows", "row_count", "ready_count", "root"],
+      "properties": {
+        "rows": {
+          "type": "array",
+          "items": { "type": "object", "additionalProperties": true }
+        },
+        "row_count": { "type": "integer" },
+        "ready_count": { "type": "integer" },
+        "root": { "type": "string" }
+      }
+    }
+  },
+  "additionalProperties": true
+}

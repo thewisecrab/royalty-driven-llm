@@ -1,0 +1,170 @@
+{
+  "artifact_bindings": [],
+  "checks": {
+    "artifact_signatures_verified": true,
+    "artifact_signers_registered": true,
+    "key_ids_unique": true,
+    "principals_present": true,
+    "private_key_material_absent": true,
+    "revoked_keys_not_used": true,
+    "rotations_link_active_new_keys": true,
+    "witness_keys_registered": true,
+    "witness_signatures_verified": true
+  },
+  "commitments": {
+    "artifact_binding_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "principal_root": "44cbe508a6577dfb144f36003cbcd4eeb55164a74f5e164219d1bffc0de78b39",
+    "revoked_key_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "rotation_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "schema": "docs/schemas/trust_registry.schema.json",
+    "witness_binding_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "key_rotations": [],
+  "principals": [
+    {
+      "allowed_signature_algorithms": [
+        "HMAC-SHA256"
+      ],
+      "entry_hash": "e5baec474b0b3c06748e232944aa15aa2ddab64225462559d09cbc026c4127fb",
+      "key_hash": "056c7208f177fdd84c42062154d201878ad10df974929145e7c07f2bf40b9418",
+      "key_id": "e0c18dd70e5fe5795f8df91f",
+      "key_type": "HMAC-SHA256-reference-signer",
+      "principal_id": "escrow:rdllm-reference-registry",
+      "public_key_material_disclosed": false,
+      "role": "escrow_processor",
+      "status": "active"
+    },
+    {
+      "allowed_signature_algorithms": [
+        "HMAC-SHA256"
+      ],
+      "entry_hash": "b1ca66130a3ecae7c0d864164677546401d7e224df7eef3d59858e6a3dcba309",
+      "key_hash": "83d9028f993e4876c28b438bbb0c43cda080289f0307a5db6567db720f84756d",
+      "key_id": "a043c263a1ff02fb67fda0f8",
+      "key_type": "HMAC-SHA256-reference-signer",
+      "principal_id": "processor:rdllm-reference-ach",
+      "public_key_material_disclosed": false,
+      "role": "payment_processor",
+      "status": "active"
+    },
+    {
+      "allowed_signature_algorithms": [
+        "HMAC-SHA256"
+      ],
+      "alternate_key_hashes": [
+        "58ab22bce6215a1b2def70665829abec426ba099b00cfd88a45d69725022b0a1"
+      ],
+      "entry_hash": "79bd3c35af995029986275a1ce0ec90037de0e35b8d7aa210b3784fccb556a56",
+      "key_hash": "44469572953e569a43631a41b405657c9a8a58c5943be4b1b027895e731611b2",
+      "key_id": "59ffd249308c3a47bd6a9dc3",
+      "key_type": "HMAC-SHA256-reference-signer",
+      "principal_id": "verifier_alpha",
+      "public_key_material_disclosed": false,
+      "role": "independent_attribution_verifier",
+      "status": "active",
+      "verifier_key_hash": "58ab22bce6215a1b2def70665829abec426ba099b00cfd88a45d69725022b0a1"
+    },
+    {
+      "allowed_signature_algorithms": [
+        "HMAC-SHA256"
+      ],
+      "alternate_key_hashes": [
+        "e37d348b62b3de614e02f1078c8bfb5ea7299745d466b35d9c5a08b1e886309a"
+      ],
+      "entry_hash": "ba92d7071d1b898956233f0fa946cd011050f07687f812fa85da197ec4a8e53d",
+      "key_hash": "c4399a7edad1ebae068c32193237bec6f03648c26e43c2a321d81f287407cc27",
+      "key_id": "6afb7ec86fe2503c2c990f24",
+      "key_type": "HMAC-SHA256-reference-signer",
+      "principal_id": "verifier_beta",
+      "public_key_material_disclosed": false,
+      "role": "independent_attribution_verifier",
+      "status": "active",
+      "verifier_key_hash": "e37d348b62b3de614e02f1078c8bfb5ea7299745d466b35d9c5a08b1e886309a"
+    },
+    {
+      "allowed_signature_algorithms": [
+        "HMAC-SHA256"
+      ],
+      "alternate_key_hashes": [
+        "344e89078ca9441abedd96bf008e450b24420c445a3baffb698c68937ba87a1b"
+      ],
+      "entry_hash": "abed060b8d649427c60be99264a85470878f2cb481cadfd1e4e98eb5eacd1dd9",
+      "key_hash": "2f72a6bd695bc61f37d3082a347c2416dedd4a5690a670ec37d530ad121190e0",
+      "key_id": "baec4dade9c6e4e5684932bf",
+      "key_type": "HMAC-SHA256-reference-signer",
+      "principal_id": "verifier_gamma",
+      "public_key_material_disclosed": false,
+      "role": "independent_attribution_verifier",
+      "status": "active",
+      "verifier_key_hash": "344e89078ca9441abedd96bf008e450b24420c445a3baffb698c68937ba87a1b"
+    },
+    {
+      "allowed_signature_algorithms": [
+        "HMAC-SHA256"
+      ],
+      "entry_hash": "43a6e92dd2cabb37b76916ab0325133f36fefcf9c9c8645110935791a2a07776",
+      "key_hash": "3879a8a90c2eede4b073fca2b1ba724f7ef1320718e6fa580238f316d04ad48d",
+      "key_id": "3e35ff1a9944ad3afd55f4b8",
+      "key_type": "HMAC-SHA256-reference-signer",
+      "principal_id": "watchtower_alpha",
+      "public_key_material_disclosed": false,
+      "role": "independent_watchtower",
+      "status": "active"
+    },
+    {
+      "allowed_signature_algorithms": [
+        "HMAC-SHA256"
+      ],
+      "entry_hash": "52bed5d50f308a0f8f0be926171448a78cd3d369c01bc7e6038cc4f048eb6d69",
+      "key_hash": "95598d1684a6de7c5e6a290c528c9a63582815971007e1b8cf38d38917aeccbc",
+      "key_id": "b9d4416e906d1e1bd7c1c12d",
+      "key_type": "HMAC-SHA256-reference-signer",
+      "principal_id": "watchtower_beta",
+      "public_key_material_disclosed": false,
+      "role": "independent_watchtower",
+      "status": "active"
+    }
+  ],
+  "privacy": {
+    "customer_or_payment_text_disclosed": false,
+    "private_prompt_or_source_text_disclosed": false,
+    "raw_key_material_disclosed": false,
+    "registry_uses_key_hashes_and_artifact_hashes": true,
+    "signing_secrets_disclosed": false
+  },
+  "registry_version": "rdllm-trust-registry/v1",
+  "revoked_keys": [],
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "d06143978581c22300a82ccd8b450308b44c2d77148c3de0942c58590f16a941"
+  },
+  "summary": {
+    "artifact_binding_count": 0,
+    "failed_check_count": 0,
+    "principal_count": 7,
+    "private_input_field_count": 0,
+    "revoked_key_count": 0,
+    "rotation_count": 0,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L51",
+    "witness_binding_count": 0
+  },
+  "trust_profile": {
+    "key_format": "rdllm-reference-hmac-key-hash",
+    "production_mapping": [
+      "RFC7517_JWKS",
+      "W3C_DID_verificationMethod",
+      "Sigstore_TUF_trust_root"
+    ],
+    "profile": "rdllm-public-trust-registry/v1",
+    "raw_key_material_disallowed": true,
+    "revocation_checked": true,
+    "rotation_checked": true,
+    "witness_keys_bound": true
+  },
+  "trust_registry_hash": "ca4bf6639b80b98dd0dffcf7b67855a0a9717e22ceca6576df57e0c029346974",
+  "witness_bindings": []
+}

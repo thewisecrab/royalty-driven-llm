@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/settlement_report.schema.json",
+  "title": "RDLLM Escrow Resolution Settlement Report",
+  "type": "object",
+  "required": [
+    "settlement_version",
+    "status",
+    "resolution",
+    "source_ledger_hash",
+    "summary",
+    "balances_before",
+    "release_balances",
+    "balances_after",
+    "releases",
+    "errors",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "settlement_version": {
+      "const": "rdllm-escrow-resolution/v1"
+    },
+    "status": {
+      "enum": ["ok", "failed"]
+    },
+    "resolution": {
+      "type": "object",
+      "required": [
+        "resolution_id",
+        "conflict_id",
+        "registry_report_hash",
+        "resolved_at",
+        "resolver",
+        "reason",
+        "status",
+        "payout_splits"
+      ],
+      "properties": {
+        "resolution_id": { "type": "string" },
+        "conflict_id": { "type": "string" },
+        "registry_report_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "resolved_at": { "type": "string" },
+        "resolver": { "type": "string" },
+        "reason": { "type": "string" },
+        "evidence_uri": { "type": "string" },
+        "evidence_hash": { "type": "string" },
+        "signature": { "type": "string" },
+        "status": { "type": "string" },
+        "payout_splits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["creator_id", "work_id", "weight"],
+            "properties": {
+              "creator_id": { "type": "string" },
+              "work_id": { "type": "string" },
+              "weight": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "source_ledger_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "matched_event_count",
+        "release_count",
+        "total_released",
+        "creator_count"
+      ]
+    },
+    "balances_before": { "type": "object" },
+    "release_balances": { "type": "object" },
+    "balances_after": { "type": "object" },
+    "releases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "release_id",
+          "event_id",
+          "event_hash",
+          "resolution_id",
+          "conflict_id",
+          "registry_report_hash",
+          "creator_id",
+          "work_id",
+          "split_weight",
+          "payout",
+          "source_escrow_account"
+        ]
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "report_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "value"]
+    },
+    "verification_errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": true
+}

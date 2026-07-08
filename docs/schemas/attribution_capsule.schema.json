@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/attribution_capsule.schema.json",
+  "title": "RDLLM Portable Attribution Capsule",
+  "type": "object",
+  "required": [
+    "capsule_version",
+    "issuer",
+    "created_at",
+    "provider",
+    "subject",
+    "portable_surfaces",
+    "artifact_bindings",
+    "schemas",
+    "commitments",
+    "readiness_checks",
+    "summary",
+    "privacy",
+    "capsule_hash",
+    "signature"
+  ],
+  "properties": {
+    "capsule_version": {
+      "const": "rdllm-attribution-capsule/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "provider": {
+      "type": "object",
+      "required": ["id", "model_id", "model_version"],
+      "additionalProperties": true
+    },
+    "subject": {
+      "type": "object",
+      "required": [
+        "content_kind",
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "answer_hash",
+        "source_label_root",
+        "claim_span_root",
+        "source_count",
+        "claim_count"
+      ],
+      "additionalProperties": true
+    },
+    "portable_surfaces": {
+      "type": "object",
+      "required": [
+        "capsule_id",
+        "text_footer",
+        "markdown_comment",
+        "http_headers",
+        "well_known_path",
+        "c2pa_assertion",
+        "scitt_statement_subject",
+        "delivery_contract"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "artifact_type",
+          "schema",
+          "required",
+          "declared_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "entry_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "attribution_receipt",
+        "answer_provenance_card",
+        "source_verification_report",
+        "response_envelope",
+        "provider_attribution_card",
+        "creator_license_contract",
+        "semantic_text_attribution_report",
+        "attribution_exchange",
+        "conformance_vector_pack",
+        "federation_handshake",
+        "attribution_capsule",
+        "response_release_gate",
+        "proof_carrying_response",
+        "serving_gateway_report",
+        "streaming_attribution_manifest",
+        "assurance_bundle",
+        "certification_report",
+        "integration_profile",
+        "discovery_manifest"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "subject_hash",
+        "artifact_binding_root",
+        "schema_root",
+        "response_envelope_hash",
+        "federation_handshake_hash",
+        "attribution_exchange_hash",
+        "conformance_vector_pack_hash",
+        "provider_card_hash",
+        "certification_report_hash",
+        "integration_profile_hash",
+        "discovery_manifest_hash",
+        "assurance_bundle_hash",
+        "semantic_text_attribution_report_hash",
+        "creator_license_contract_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "readiness_checks": {
+      "type": "object",
+      "required": [
+        "all_required_artifacts_bound",
+        "response_envelope_verified",
+        "federation_handshake_ready",
+        "attribution_exchange_ready",
+        "conformance_vector_pack_ready",
+        "creator_license_contract_bound",
+        "certification_reaches_l33",
+        "provider_declares_capsule_surface",
+        "integration_declares_capsule_schema",
+        "integration_declares_capsule_endpoint",
+        "integration_declares_capsule_verifier",
+        "discovery_declares_capsule_path",
+        "copy_marker_present",
+        "delivery_body_hash_declared",
+        "runtime_headers_declared",
+        "c2pa_compatibility_declared",
+        "artifact_hashes_reproducible",
+        "privacy_promises_preserved"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_upstream_level",
+        "capsule_id",
+        "artifact_count",
+        "required_artifact_count",
+        "runtime_header_count",
+        "schema_count",
+        "copyable",
+        "content_credentials_compatible",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "artifact_payloads_embedded",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "matched_text_disclosed",
+        "hidden_state_disclosed",
+        "capsule_uses_hashes_markers_and_provenance_pointers"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "capsule_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

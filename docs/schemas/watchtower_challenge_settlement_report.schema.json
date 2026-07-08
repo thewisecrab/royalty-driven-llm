@@ -1,0 +1,301 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/watchtower_challenge_settlement_report.schema.json",
+  "title": "RDLLM Watchtower Challenge Settlement Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "watchtower_subject",
+    "watchtower_registry_rows",
+    "watchtower_attestations",
+    "watchtower_quorum",
+    "challenge_rows",
+    "slashing_evidence_rows",
+    "bounty_rows",
+    "settlement_gate",
+    "settlement_rows",
+    "commitments",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "watchtower_report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-watchtower-challenge-settlement-report/v1"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "watchtower_role",
+        "required_watchtower_quorum",
+        "direct_settlement_requires",
+        "failure_route"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "artifact_count",
+        "artifact_binding_root",
+        "bindings",
+        "receipt_transparency_consistency_report_hash",
+        "verifier_accountability_report_hash",
+        "trust_registry_hash",
+        "provider_card_hash",
+        "certification_report_hash"
+      ],
+      "additionalProperties": true
+    },
+    "watchtower_subject": {
+      "type": "object",
+      "required": [
+        "receipt_transparency_consistency_report_hash",
+        "verifier_accountability_report_hash",
+        "trust_registry_hash",
+        "provider_card_hash",
+        "certification_report_hash",
+        "receipt_status",
+        "receipt_target_certification_level",
+        "receipt_settlement_decision",
+        "receipt_direct_settlement_ready",
+        "receipt_required_count",
+        "receipt_missing_count",
+        "receipt_append_only_violation_count",
+        "receipt_split_view_conflict_count",
+        "receipt_gate_decision",
+        "verifier_accountability_status",
+        "verifier_accountability_blocking_challenge_count",
+        "certification_highest_level",
+        "subject_hash"
+      ],
+      "additionalProperties": true
+    },
+    "watchtower_registry_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "watchtower_id",
+          "role",
+          "registry_key_hash",
+          "derived_key_hash",
+          "status",
+          "active_registered_watchtower",
+          "watchtower_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "watchtower_attestations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "watchtower_id",
+          "watchtower_role",
+          "watchtower_key_hash",
+          "observed_at",
+          "subject_hash",
+          "receipt_transparency_consistency_report_hash",
+          "signature_algorithm",
+          "signature",
+          "attestation_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "watchtower_quorum": {
+      "type": "object",
+      "required": [
+        "required_quorum",
+        "registered_watchtower_count",
+        "active_watchtower_count",
+        "attestation_count",
+        "attesting_watchtower_ids",
+        "quorum_met"
+      ],
+      "additionalProperties": true
+    },
+    "challenge_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "challenge_id",
+          "opened_by",
+          "target_type",
+          "target_id",
+          "status",
+          "reason_code",
+          "evidence_hash",
+          "opened_at",
+          "resolved_at",
+          "blocking",
+          "slash_targets",
+          "challenged_amount",
+          "currency",
+          "challenge_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "slashing_evidence_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "challenge_id",
+          "slash_target",
+          "target_type",
+          "bond_id",
+          "bond_amount",
+          "slash_amount",
+          "currency",
+          "slash_status",
+          "evidence_hash",
+          "slashing_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "bounty_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "challenge_id",
+          "opened_by",
+          "bounty_source",
+          "bounty_amount",
+          "currency",
+          "bounty_status",
+          "bounty_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "settlement_gate": {
+      "type": "object",
+      "required": [
+        "decision",
+        "direct_settlement_ready",
+        "blocking_challenge_count",
+        "open_challenge_count",
+        "accepted_challenge_count",
+        "slash_ready_count"
+      ],
+      "additionalProperties": true
+    },
+    "settlement_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "work_id",
+          "prior_settlement_decision",
+          "settlement_decision",
+          "payout",
+          "escrow_amount",
+          "settlement_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "watchtower_subject_hash",
+        "watchtower_registry_root",
+        "watchtower_attestation_root",
+        "challenge_row_root",
+        "slashing_evidence_root",
+        "bounty_row_root",
+        "settlement_row_root"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "watchtower_challenge_settlement_report",
+        "receipt_transparency_consistency_report",
+        "verifier_accountability_report",
+        "trust_registry",
+        "provider_attribution_card",
+        "certification_report"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "watchtower_subject_hash",
+        "required_watchtower_quorum",
+        "registered_watchtower_count",
+        "active_watchtower_count",
+        "attestation_count",
+        "blocking_challenge_count",
+        "open_challenge_count",
+        "accepted_challenge_count",
+        "slash_ready_count",
+        "bounty_row_count",
+        "settlement_decision",
+        "direct_settlement_ready",
+        "settlement_row_count",
+        "payout_total",
+        "escrow_total",
+        "creator_pool_conserved_or_escrowed",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "watchtower_report_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

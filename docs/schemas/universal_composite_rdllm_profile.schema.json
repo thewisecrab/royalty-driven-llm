@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_composite_rdllm_profile.schema.json",
+  "title": "RDLLM Universal Composite Profile",
+  "type": "object",
+  "required": [
+    "profile_version",
+    "issuer",
+    "created_at",
+    "composite_policy",
+    "artifact_bindings",
+    "provider_family_rows",
+    "api_binding_rows",
+    "composite_plane_rows",
+    "customer_surface_rows",
+    "standard_mapping_rows",
+    "failure_case_rows",
+    "evidence_commitments",
+    "checks",
+    "deployment_decision",
+    "verifier_commands",
+    "research_controls",
+    "privacy",
+    "summary",
+    "universal_composite_rdllm_profile_hash"
+  ],
+  "properties": {
+    "profile_version": {
+      "const": "rdllm-universal-composite-rdllm-profile/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "composite_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_gateway_level",
+        "well_known_path",
+        "required_core_artifacts",
+        "required_provider_families",
+        "required_api_bindings",
+        "required_composite_planes",
+        "required_customer_surfaces",
+        "required_standard_mappings",
+        "required_failure_cases"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-universal-composite-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L148" },
+        "minimum_gateway_level": { "const": "RDLLM-L147" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-composite-rdllm-profile.json"
+        },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_api_bindings": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_composite_planes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_customer_surfaces": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_standard_mappings": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_failure_cases": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["artifact_count", "artifact_binding_root", "bindings"],
+      "properties": {
+        "artifact_count": { "type": "integer" },
+        "artifact_binding_root": { "type": "string" },
+        "bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "declared_hash",
+              "payload_hash",
+              "hash_reproducible",
+              "present",
+              "artifact_binding_hash"
+            ]
+          }
+        }
+      }
+    },
+    "provider_family_rows": { "type": "array" },
+    "api_binding_rows": { "type": "array" },
+    "composite_plane_rows": { "type": "array" },
+    "customer_surface_rows": { "type": "array" },
+    "standard_mapping_rows": { "type": "array" },
+    "failure_case_rows": { "type": "array" },
+    "evidence_commitments": { "type": "object" },
+    "checks": { "type": "object" },
+    "deployment_decision": {
+      "type": "object",
+      "required": [
+        "universal_composite_authorized",
+        "provider_claim_allowed",
+        "native_model_invocation_allowed",
+        "customer_response_display_allowed",
+        "creator_settlement_allowed",
+        "failure_modes"
+      ]
+    },
+    "verifier_commands": {
+      "type": "array",
+      "items": { "type": "string" },
+      "contains": {
+        "const": "verify-universal-composite-rdllm-profile"
+      }
+    },
+    "research_controls": { "type": "object" },
+    "privacy": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_gateway_level",
+        "failed_check_count",
+        "core_artifact_count",
+        "provider_family_count",
+        "api_binding_count",
+        "composite_plane_count",
+        "customer_surface_count",
+        "standard_mapping_count",
+        "offline_verification_supported",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L148" },
+        "minimum_gateway_level": { "const": "RDLLM-L147" }
+      }
+    },
+    "universal_composite_rdllm_profile_hash": { "type": "string" },
+    "signature": { "type": "string" }
+  }
+}

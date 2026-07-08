@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/license_transaction_receipt.schema.json",
+  "title": "RDLLM License Transaction Receipt",
+  "type": "object",
+  "required": [
+    "version",
+    "issued_at",
+    "issuer",
+    "case",
+    "policy",
+    "artifact_bindings",
+    "source_usage_rows",
+    "transaction_rows",
+    "coverage_rows",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "license_transaction_receipt_hash",
+    "signature"
+  ],
+  "properties": {
+    "version": {
+      "const": "rdllm-license-transaction-receipt/v1"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "case": {
+      "type": "object",
+      "required": ["case_id", "status"],
+      "properties": {
+        "case_id": {
+          "type": "string"
+        },
+        "status": {
+          "enum": ["ready", "needs_review"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "require_license_server_transaction_for_direct_sources",
+        "require_license_server_signature",
+        "require_license_ledger_inclusion",
+        "require_transaction_before_access",
+        "require_transaction_terms_match_protocol",
+        "require_transaction_binds_access_log",
+        "require_reliance_receipt_for_direct_sources",
+        "require_invalid_or_missing_transaction_escrowed"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "source_access_lease_report_hash",
+        "content_protocol_ingestion_report_hash",
+        "citation_reliance_receipt_hash",
+        "source_access_lease_report_hash_reproducible",
+        "content_protocol_ingestion_report_hash_reproducible",
+        "citation_reliance_receipt_hash_reproducible"
+      ],
+      "additionalProperties": true
+    },
+    "source_usage_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_usage_id",
+          "source_label",
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "content_hash",
+          "usage_purpose",
+          "settlement_status",
+          "direct_settlement",
+          "escrowed"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "transaction_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "transaction_id",
+          "source_usage_id",
+          "access_event_id",
+          "protocol_record_id",
+          "license_server",
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "usage_purpose",
+          "payment_type",
+          "transaction_status",
+          "token_payload_hash",
+          "token_signature",
+          "token_signature_valid",
+          "license_ledger_leaf_hash",
+          "license_ledger_checkpoint_hash",
+          "license_ledger_inclusion_proof_hashes",
+          "license_ledger_included",
+          "raw_license_token_disclosed",
+          "transaction_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "coverage_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_usage_id",
+          "source_label",
+          "work_id",
+          "chunk_id",
+          "usage_purpose",
+          "direct_settlement",
+          "escrowed",
+          "matching_transaction_count",
+          "selected_transaction_id",
+          "transaction_accepted",
+          "token_signature_valid",
+          "license_ledger_included",
+          "transaction_terms_match_protocol",
+          "transaction_binds_access_log",
+          "transaction_valid_before_access",
+          "source_access_lease_covered",
+          "content_protocol_covered",
+          "citation_reliance_covered",
+          "covered_for_license_transaction",
+          "invalid_or_missing_transaction_escrowed",
+          "coverage_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "artifact_hashes_reproducible",
+        "direct_sources_have_license_transactions",
+        "license_transactions_accepted",
+        "license_server_signatures_valid",
+        "license_transactions_ledger_included",
+        "license_transaction_terms_match_protocol",
+        "license_transactions_bind_access_logs",
+        "license_transactions_valid_before_access",
+        "citation_reliance_receipt_covers_direct_sources",
+        "no_direct_settlement_without_license_transaction",
+        "invalid_or_missing_transactions_escrowed",
+        "private_text_not_disclosed",
+        "direct_source_count_positive"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "license_transaction_receipt",
+        "source_access_lease_report",
+        "content_protocol_ingestion_report",
+        "citation_reliance_receipt"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "source_usage_count",
+        "direct_source_usage_count",
+        "license_transaction_count",
+        "coverage_row_count",
+        "covered_direct_source_count",
+        "escrowed_invalid_or_missing_transaction_count",
+        "failed_check_count",
+        "license_server_transaction_supported",
+        "license_ledger_inclusion_supported",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["ready", "needs_review"]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L101"
+        }
+      },
+      "additionalProperties": true
+    },
+    "license_transaction_receipt_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

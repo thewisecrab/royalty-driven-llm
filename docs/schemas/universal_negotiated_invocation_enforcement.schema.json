@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_negotiated_invocation_enforcement.schema.json",
+  "title": "RDLLM Universal Negotiated Invocation Enforcement",
+  "type": "object",
+  "required": [
+    "universal_negotiated_invocation_enforcement_version",
+    "schema",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "invocation_enforcement_rows",
+    "enforcement_control_rows",
+    "telemetry_field_rows",
+    "bypass_failure_rows",
+    "checks",
+    "enforcement_decision",
+    "privacy",
+    "well_known",
+    "summary",
+    "universal_negotiated_invocation_enforcement_hash",
+    "signature"
+  ],
+  "properties": {
+    "universal_negotiated_invocation_enforcement_version": {
+      "const": "rdllm-universal-negotiated-invocation-enforcement/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_negotiated_invocation_enforcement.schema.json"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_negotiation_level",
+        "minimum_drift_sentinel_level",
+        "minimum_adapter_harness_level",
+        "well_known_path",
+        "required_core_artifacts",
+        "required_provider_families",
+        "required_invocation_surfaces",
+        "required_enforcement_controls",
+        "required_telemetry_fields",
+        "required_bypass_failures"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-negotiated-invocation-enforcement-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L160" },
+        "minimum_negotiation_level": { "const": "RDLLM-L159" },
+        "minimum_drift_sentinel_level": { "const": "RDLLM-L158" },
+        "minimum_adapter_harness_level": { "const": "RDLLM-L157" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-negotiated-invocation-enforcement.json"
+        },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_invocation_surfaces": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_enforcement_controls": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_telemetry_fields": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_bypass_failures": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["bindings", "binding_root"],
+      "properties": {
+        "bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "declared_hash",
+              "payload_hash",
+              "hash_reproducible",
+              "present"
+            ],
+            "properties": {
+              "name": { "type": "string" },
+              "version": { "type": "string" },
+              "declared_hash": { "type": "string" },
+              "payload_hash": { "type": "string" },
+              "hash_reproducible": { "type": "boolean" },
+              "status": { "type": "string" },
+              "target_level": { "type": "string" },
+              "present": { "type": "boolean" },
+              "artifact_binding_hash": { "type": "string" }
+            }
+          }
+        },
+        "binding_root": { "type": "string" }
+      }
+    },
+    "invocation_enforcement_rows": { "$ref": "#/$defs/rowSet" },
+    "enforcement_control_rows": { "$ref": "#/$defs/rowSet" },
+    "telemetry_field_rows": { "$ref": "#/$defs/rowSet" },
+    "bypass_failure_rows": { "$ref": "#/$defs/rowSet" },
+    "checks": { "type": "object", "additionalProperties": { "type": "boolean" } },
+    "enforcement_decision": {
+      "type": "object",
+      "required": [
+        "universal_negotiated_invocation_enforcement_authorized",
+        "failure_modes",
+        "model_invocation_without_negotiated_contract_allowed"
+      ],
+      "properties": {
+        "universal_negotiated_invocation_enforcement_authorized": {
+          "type": "boolean"
+        },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "on_failure": { "type": "string" },
+        "model_invocation_without_negotiated_contract_allowed": {
+          "type": "boolean"
+        },
+        "revocation_required_for": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "public_artifact_uses_hashes_only",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "native_provider_payload_disclosed",
+        "tool_payload_disclosed",
+        "private_field_count"
+      ],
+      "properties": {
+        "public_artifact_uses_hashes_only": { "type": "boolean" },
+        "prompt_text_disclosed": { "type": "boolean" },
+        "answer_text_disclosed": { "type": "boolean" },
+        "source_text_disclosed": { "type": "boolean" },
+        "native_provider_payload_disclosed": { "type": "boolean" },
+        "tool_payload_disclosed": { "type": "boolean" },
+        "private_field_count": { "type": "integer" }
+      }
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "schema", "create", "verify"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-negotiated-invocation-enforcement.json"
+        },
+        "schema": {
+          "const": "docs/schemas/universal_negotiated_invocation_enforcement.schema.json"
+        },
+        "create": { "const": "universal-negotiated-invocation-enforcement" },
+        "verify": { "const": "verify-universal-negotiated-invocation-enforcement" }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_negotiation_level",
+        "minimum_drift_sentinel_level",
+        "minimum_adapter_harness_level",
+        "failure_mode_count"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L160" },
+        "minimum_negotiation_level": { "const": "RDLLM-L159" },
+        "minimum_drift_sentinel_level": { "const": "RDLLM-L158" },
+        "minimum_adapter_harness_level": { "const": "RDLLM-L157" },
+        "provider_family_count": { "type": "integer" },
+        "invocation_surface_count": { "type": "integer" },
+        "provider_surface_count": { "type": "integer" },
+        "ready_provider_surface_count": { "type": "integer" },
+        "enforcement_control_count": { "type": "integer" },
+        "ready_enforcement_control_count": { "type": "integer" },
+        "telemetry_field_count": { "type": "integer" },
+        "ready_telemetry_field_count": { "type": "integer" },
+        "bypass_failure_count": { "type": "integer" },
+        "ready_bypass_failure_count": { "type": "integer" },
+        "core_artifact_count": { "type": "integer" },
+        "failure_mode_count": { "type": "integer" },
+        "invocation_gate_required": { "type": "boolean" },
+        "model_invocation_without_negotiation_blocked": { "type": "boolean" },
+        "settlement_release_requires_invocation_receipt": { "type": "boolean" },
+        "offline_verification_supported": { "type": "boolean" },
+        "privacy_preserved": { "type": "boolean" }
+      }
+    },
+    "universal_negotiated_invocation_enforcement_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "properties": {
+        "algorithm": { "type": "string" },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "rowSet": {
+      "type": "object",
+      "required": ["rows", "row_count", "ready_count", "root"],
+      "properties": {
+        "rows": {
+          "type": "array",
+          "items": { "type": "object", "additionalProperties": true }
+        },
+        "row_count": { "type": "integer" },
+        "ready_count": { "type": "integer" },
+        "root": { "type": "string" }
+      }
+    }
+  },
+  "additionalProperties": true
+}

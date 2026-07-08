@@ -1,0 +1,21 @@
+{
+  "resolution_id": "res_conf_451172c810c96d60_001",
+  "conflict_id": "conf_451172c810c96d60",
+  "registry_report_hash": "3c48010352ebea9fa4c501a225d7292696fc25ce259c276681e5ab6a8039527d",
+  "resolved_at": "2026-05-29T00:00:00Z",
+  "resolver": "rdllm-demo-review-board",
+  "reason": "Arjun Rao supplied the verified source evidence for the original provenance ledger work; the duplicate claimant is rejected for this settlement cycle.",
+  "evidence_uri": "registered://resolutions/conf_451172c810c96d60",
+  "evidence_hash": "8cb64539696cfabf36e01b1e5a08af227dc7bf0af095034f8116f7512d1ad4b6",
+  "signature": "demo-resolution-signature",
+  "status": "resolved",
+  "winning_creator_id": "arjun",
+  "winning_work_id": "arjun-provenance-ledger",
+  "payout_splits": [
+    {
+      "creator_id": "arjun",
+      "work_id": "arjun-provenance-ledger",
+      "weight": "1"
+    }
+  ]
+}

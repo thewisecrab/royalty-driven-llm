@@ -1,0 +1,943 @@
+{
+  "case_id": "artifact:post-training-signal-provenance",
+  "model_lineage_attribution_report": {
+    "accepted_training_item_pools": [
+      {
+        "artifact_hash": "8b21d4be3c96aef03b76f128b573fe508e109e1afb4519add2fcde9e60a1c10d",
+        "decision": "accepted_model_lineage",
+        "item_hash": "e684faf4cf188fcbf9165dadc4d531e8d2aa58a6e8f18bef00051ab7f016ac2b",
+        "item_id": "item:student-accepted",
+        "item_pool": "0.825000",
+        "item_pool_hash": "32e887e6f7d7009d8f28ea6394826ab91f0bcf98342b305597bc11725ee0aa11",
+        "share_of_model_lineage_pool": "0.75000000",
+        "training_item_row_hash": "107cc6621a7760a19ae00f566ef22b4f2e98290f0bb8d3bf011c6d30921c5c7a"
+      }
+    ],
+    "checks": {
+      "accepted_training_items_present": true,
+      "all_synthetic_training_disclosed": true,
+      "creator_pool_conserved": true,
+      "direct_payout_or_escrow_conserved": true,
+      "distillation_evidence_bound": true,
+      "duplicate_training_items_not_overpaid": true,
+      "footer_rows_present_for_direct_payout": true,
+      "no_private_text_disclosed": true,
+      "student_model_bound": true,
+      "training_lineage_declared": true,
+      "training_run_bound": true,
+      "training_summary_hash_reproducible": true
+    },
+    "commitments": {
+      "accepted_item_pool_root": "3808e3637fbe917a41c341ee9e9beafa952b6164a1d87407092b205e37a21e0c",
+      "escrow_root": "00f5379da289d731df6bdf0c8bb40b144726fd359decb8ca945d2e671b625115",
+      "footer_root": "3ced25da523c688e74d2bf1676cb40c644816ccb7396ce52670c1491292bd3bb",
+      "obligation_root": "74ade8f937019282a00bc05c7254dadce02b4709194d0ea62b1fa16c45286d9a",
+      "policy_hash": "1e42b2fbe5750459d91b5b96e0f91bb760db1f3dfb8d463c9abf2349dcf7b7e0",
+      "student_model_hash": "450f6143209d647011d1c72fec61ee1b887270a14cdbc3a8e3c740d5d193b9f9",
+      "student_usage_hash": "be006ba6204f0a6ab3b414110ba74a529e3b368af8be52cb6f029da4d331ce2f",
+      "training_item_root": "0b0970f876b4c1ca69e92b7ac940d6b5c32f85c65283ec0a058b05e6992ec9b1",
+      "training_run_hash": "be4f113817ae31f958ea418c78381e91fafcb71b94d56242601a1413a7f1e511",
+      "training_summary_hash": "96d7b568363adf49f46b0cb6c2d36bcdc4482371f7a8c136825fcb3a52133ab7"
+    },
+    "created_at": "2026-05-31T00:00:00Z",
+    "economics": {
+      "creator_pool": "5.500000",
+      "creator_pool_rate": "0.55",
+      "direct_payout_total": "0.825000",
+      "escrow_total": "0.275000",
+      "gross_revenue": "10.000000",
+      "model_lineage_pool": "1.100000",
+      "residual_pool": "4.400000"
+    },
+    "escrow_rows": [
+      {
+        "artifact_hash": "37166dbcc7de282c2222d1b2a8bfda5b0f7d3acd6735809f596f135bccc4e0cb",
+        "decision": "model_lineage_rights_escrow",
+        "escrow_hash": "4703a71efccebbcdf16af2ef8eb939bb9ef651edd17b8be798f636a9f405ae8c",
+        "escrow_id": "escrow:model-lineage:item:student-revoked",
+        "escrow_reason": "model_lineage_rights_escrow",
+        "item_hash": "abec8a56d7f83e6e731583e43a74c89b4fa922f628bcc257c7bb052d99ae49af",
+        "item_id": "item:student-revoked",
+        "item_pool": "0.275000",
+        "item_pool_hash": "e1a914278f7c23ee7789831964203d3c2dc8a08ffaafce60a492ff2092dd644c",
+        "payout": "0.275000",
+        "recipient_creator_id": "creator:model_lineage_escrow",
+        "share_of_model_lineage_pool": "0.25000000",
+        "training_item_row_hash": "91107b93a155529b3ca04e1427d107262b3d10c1888a3fe46a6479da58788346",
+        "work_id": "escrow:model_lineage"
+      }
+    ],
+    "issuer": "rdllm-local-demo",
+    "model_lineage_footer_rows": [
+      {
+        "basis": "model_lineage_training_inheritance",
+        "chunk_id": "jaron-data-dignity:chunk:0",
+        "creator_id": "jaron",
+        "creator_name": "Jaron Lanier",
+        "footer_row_hash": "c0503ceb19d6b7ff0dc5dc3d8b47b3c6b67fa298737d0c5281b917a65de0df0b",
+        "payout": "0.247500",
+        "source_row_hash": "f186d428927d476f24c2108d1e4c95471991db42fe53cd2050ac38ba9cbaf14a",
+        "work_id": "jaron-data-dignity"
+      },
+      {
+        "basis": "model_lineage_training_inheritance",
+        "chunk_id": "maya-youtube-transcript:chunk:0",
+        "creator_id": "maya",
+        "creator_name": "Maya Rao",
+        "footer_row_hash": "5151a1dbd851338c8a71c1ce884c5c02d897cfe43e7f2ad3c2b30100ea15a597",
+        "payout": "0.577500",
+        "source_row_hash": "d97c0b60eb463e6c390780e0b874c6824042a1225bec8a66a3664d0fe26a5d1c",
+        "work_id": "maya-youtube-transcript"
+      }
+    ],
+    "model_lineage_policy": {
+      "distillation_and_fine_tuning_cannot_extinguish_upstream_royalties": true,
+      "duplicate_training_artifacts_do_not_inflate_credit": true,
+      "future_usage_pool_split": "model_lineage_pool_then_residual_local_pool",
+      "model_lineage_rate": "0.20",
+      "profile": "rdllm-model-lineage-attribution/v1",
+      "synthetic_training_must_be_disclosed": true,
+      "trigger": "student_model_trained_or_distilled_from_attributed_outputs_or_synthetic_data"
+    },
+    "privacy": {
+      "public_report_uses_hashes_source_ids_and_model_metadata": true,
+      "source_text_disclosed": false,
+      "student_output_text_disclosed": false,
+      "student_prompt_text_disclosed": false,
+      "teacher_output_text_disclosed": false,
+      "training_text_disclosed": false
+    },
+    "report_hash": "93dfb78a8335e3709eaa1a6b4265b542faf2cd2171188ab68084f2051b07c0c7",
+    "report_version": "rdllm-model-lineage-attribution/v1",
+    "schemas": {
+      "model_lineage_attribution_report": "docs/schemas/model_lineage_attribution_report.schema.json"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "c97b4a1f403b1654588ffb42eed3263909ae485ef4e5ee7bb77a4d32f46c7d9c"
+    },
+    "student_model": {
+      "base_model_id": "model:rdllm-base",
+      "model_card_hash": "",
+      "model_id": "model:rdllm-student-distilled",
+      "model_version": "2026-06",
+      "provider": "provider:downstream-reference"
+    },
+    "student_usage": {
+      "creator_pool": "5.500000",
+      "event_hash": "0aa64c2cf4d5c5bcd7f10e0dc252db8cd515de947f3a0e3bba692c957a3de995",
+      "event_id": "event:rdllm-student-usage",
+      "usage_hash": "be006ba6204f0a6ab3b414110ba74a529e3b368af8be52cb6f029da4d331ce2f"
+    },
+    "summary": {
+      "accepted_training_item_count": 1,
+      "creator_pool_conserved": true,
+      "duplicate_training_item_count": 1,
+      "escrow_item_count": 1,
+      "footer_row_count": 2,
+      "hidden_synthetic_failure_count": 0,
+      "missing_teacher_evidence_count": 0,
+      "model_lineage_pool": "1.100000",
+      "model_lineage_pool_conserved": true,
+      "settlement_obligation_count": 2,
+      "status": "ready",
+      "student_model_id": "model:rdllm-student-distilled",
+      "target_certification_level": "RDLLM-L91",
+      "training_item_count": 3
+    },
+    "training_items": [
+      {
+        "artifact_hash": "8b21d4be3c96aef03b76f128b573fe508e109e1afb4519add2fcde9e60a1c10d",
+        "artifact_type": "rdllm-proof-carrying-response",
+        "checks": {
+          "artifact_hash_present": true,
+          "duplicate_not_overpaid": true,
+          "item_hash_present": true,
+          "lineage_tracking_enabled": true,
+          "positive_training_weight": true,
+          "source_row_hashes_valid": true,
+          "source_rows_present": true,
+          "source_training_rights_valid": true,
+          "synthetic_source_disclosed": true,
+          "teacher_evidence_present": true
+        },
+        "decision": "accepted_model_lineage",
+        "item_hash": "e684faf4cf188fcbf9165dadc4d531e8d2aa58a6e8f18bef00051ab7f016ac2b",
+        "item_id": "item:student-accepted",
+        "source_row_count": 2,
+        "source_rows": [
+          {
+            "allowed_uses": [
+              "distillation",
+              "training"
+            ],
+            "chunk_id": "maya-youtube-transcript:chunk:0",
+            "content_hash": "c48a6abd49d85bf98b54c8bd9b3450731cbfc6bc3ee79d09e61a92c9adc6921a",
+            "contribution_weight": "0.70000000",
+            "creator_id": "maya",
+            "creator_name": "Maya Rao",
+            "license_status": "active",
+            "source_evidence_hash": "",
+            "source_label": "S1",
+            "source_row_hash": "d97c0b60eb463e6c390780e0b874c6824042a1225bec8a66a3664d0fe26a5d1c",
+            "source_uri_hash": "",
+            "training_allowed": true,
+            "work_id": "maya-youtube-transcript"
+          },
+          {
+            "allowed_uses": [
+              "training"
+            ],
+            "chunk_id": "jaron-data-dignity:chunk:0",
+            "content_hash": "79474a3fa627b1bd9928787eff5138cf290b9bb196e24f618e4229c7f6f5fd75",
+            "contribution_weight": "0.30000000",
+            "creator_id": "jaron",
+            "creator_name": "Jaron Lanier",
+            "license_status": "active",
+            "source_evidence_hash": "",
+            "source_label": "S2",
+            "source_row_hash": "f186d428927d476f24c2108d1e4c95471991db42fe53cd2050ac38ba9cbaf14a",
+            "source_uri_hash": "",
+            "training_allowed": true,
+            "work_id": "jaron-data-dignity"
+          }
+        ],
+        "synthetic_disclosed": true,
+        "synthetic_generated": true,
+        "teacher_distribution_root": "b77e57eb693f97849ad021c837436bf85cbad2a1988c1b8ebfee9320f6a3294c",
+        "teacher_model_id_hash": "a3a23b96aced76779932337134ca807ad1aaafcdee1c013bc8162507749330e8",
+        "teacher_output_hash": "",
+        "training_item_row_hash": "107cc6621a7760a19ae00f566ef22b4f2e98290f0bb8d3bf011c6d30921c5c7a",
+        "training_method": "distillation",
+        "training_weight": "3.00000000"
+      },
+      {
+        "artifact_hash": "8b21d4be3c96aef03b76f128b573fe508e109e1afb4519add2fcde9e60a1c10d",
+        "artifact_type": "rdllm-proof-carrying-response",
+        "checks": {
+          "artifact_hash_present": true,
+          "duplicate_not_overpaid": false,
+          "item_hash_present": true,
+          "lineage_tracking_enabled": true,
+          "positive_training_weight": true,
+          "source_row_hashes_valid": true,
+          "source_rows_present": true,
+          "source_training_rights_valid": true,
+          "synthetic_source_disclosed": true,
+          "teacher_evidence_present": true
+        },
+        "decision": "duplicate_training_item_held",
+        "item_hash": "818c5d077ddec9b3a12687ff8f9719a5a3a989ee850391cedcd2e7ed9bfcfad6",
+        "item_id": "item:student-duplicate",
+        "source_row_count": 1,
+        "source_rows": [
+          {
+            "allowed_uses": [
+              "training"
+            ],
+            "chunk_id": "maya-youtube-transcript:chunk:0",
+            "content_hash": "c48a6abd49d85bf98b54c8bd9b3450731cbfc6bc3ee79d09e61a92c9adc6921a",
+            "contribution_weight": "1.00000000",
+            "creator_id": "maya",
+            "creator_name": "Maya Rao",
+            "license_status": "active",
+            "source_evidence_hash": "",
+            "source_label": "",
+            "source_row_hash": "b83e4dd6eb300e86ceac520892cfb7f767ef215a64692f13b1fb0a52d5788ccd",
+            "source_uri_hash": "",
+            "training_allowed": true,
+            "work_id": "maya-youtube-transcript"
+          }
+        ],
+        "synthetic_disclosed": true,
+        "synthetic_generated": true,
+        "teacher_distribution_root": "040d1739d5982d4cded4d24dbc1f17b41b208c060dd6a8d648d2778cb9383454",
+        "teacher_model_id_hash": "a3a23b96aced76779932337134ca807ad1aaafcdee1c013bc8162507749330e8",
+        "teacher_output_hash": "",
+        "training_item_row_hash": "6fb906c5baa8baf5dd903d4d1e1d48b01f329d3992a7a949d24243d9c3abfc72",
+        "training_method": "distillation",
+        "training_weight": "3.00000000"
+      },
+      {
+        "artifact_hash": "37166dbcc7de282c2222d1b2a8bfda5b0f7d3acd6735809f596f135bccc4e0cb",
+        "artifact_type": "synthetic-dataset-row",
+        "checks": {
+          "artifact_hash_present": true,
+          "duplicate_not_overpaid": true,
+          "item_hash_present": true,
+          "lineage_tracking_enabled": true,
+          "positive_training_weight": true,
+          "source_row_hashes_valid": true,
+          "source_rows_present": true,
+          "source_training_rights_valid": false,
+          "synthetic_source_disclosed": true,
+          "teacher_evidence_present": true
+        },
+        "decision": "model_lineage_rights_escrow",
+        "item_hash": "abec8a56d7f83e6e731583e43a74c89b4fa922f628bcc257c7bb052d99ae49af",
+        "item_id": "item:student-revoked",
+        "source_row_count": 1,
+        "source_rows": [
+          {
+            "allowed_uses": [
+              "training"
+            ],
+            "chunk_id": "revoked-work:chunk:0",
+            "content_hash": "09f8d880a2a9950bda44063ec0f91eaa2eb573dfb95899cf7af4bb85187ee59b",
+            "contribution_weight": "1.00000000",
+            "creator_id": "revoked",
+            "creator_name": "Revoked Creator",
+            "license_status": "revoked",
+            "source_evidence_hash": "",
+            "source_label": "",
+            "source_row_hash": "e6d8c429df5ca0f5a04c7f879beb73f023de81207c471f523c113813c1c96133",
+            "source_uri_hash": "",
+            "training_allowed": false,
+            "work_id": "revoked-work"
+          }
+        ],
+        "synthetic_disclosed": true,
+        "synthetic_generated": true,
+        "teacher_distribution_root": "72aa20c5e2ffbf91e302032740287acfe359990cc2ca9b89c5eba18acf887c22",
+        "teacher_model_id_hash": "a3a23b96aced76779932337134ca807ad1aaafcdee1c013bc8162507749330e8",
+        "teacher_output_hash": "",
+        "training_item_row_hash": "91107b93a155529b3ca04e1427d107262b3d10c1888a3fe46a6479da58788346",
+        "training_method": "distillation",
+        "training_weight": "1.00000000"
+      }
+    ],
+    "training_run": {
+      "dataset_hash": "1296b1f65f83f964085d7651b6c52ec3a661299d4a4c02e71227e24744f6c008",
+      "lineage_tracking_enabled": true,
+      "method": "distillation",
+      "run_id": "train:rdllm-student:001",
+      "stage": "post_training",
+      "synthetic_data_disclosed": true,
+      "training_content_summary_hash": "96d7b568363adf49f46b0cb6c2d36bcdc4482371f7a8c136825fcb3a52133ab7"
+    },
+    "usage_settlement_obligations": [
+      {
+        "basis": "downstream_model_usage_inherits_training_lineage",
+        "chunk_id": "maya-youtube-transcript:chunk:0",
+        "obligation_hash": "b5d73c1c2ac61a99179cda01c4573c4677e86dda8fc6cede183fd454e4045b66",
+        "obligation_id": "model-lineage:event:rdllm-student-usage:1:1",
+        "payout": "0.577500",
+        "recipient_creator_id": "maya",
+        "recipient_creator_name": "Maya Rao",
+        "share_of_item_pool": "0.70000000",
+        "source_row_hash": "d97c0b60eb463e6c390780e0b874c6824042a1225bec8a66a3664d0fe26a5d1c",
+        "student_model_id": "model:rdllm-student-distilled",
+        "student_model_version": "2026-06",
+        "training_item_row_hash": "107cc6621a7760a19ae00f566ef22b4f2e98290f0bb8d3bf011c6d30921c5c7a",
+        "usage_event_hash": "0aa64c2cf4d5c5bcd7f10e0dc252db8cd515de947f3a0e3bba692c957a3de995",
+        "usage_event_id": "event:rdllm-student-usage",
+        "work_id": "maya-youtube-transcript"
+      },
+      {
+        "basis": "downstream_model_usage_inherits_training_lineage",
+        "chunk_id": "jaron-data-dignity:chunk:0",
+        "obligation_hash": "48bda6b91053e052620e5396c8ecf789082a6f4c69526e1b0f9a5181f7ebc115",
+        "obligation_id": "model-lineage:event:rdllm-student-usage:1:2",
+        "payout": "0.247500",
+        "recipient_creator_id": "jaron",
+        "recipient_creator_name": "Jaron Lanier",
+        "share_of_item_pool": "0.30000000",
+        "source_row_hash": "f186d428927d476f24c2108d1e4c95471991db42fe53cd2050ac38ba9cbaf14a",
+        "student_model_id": "model:rdllm-student-distilled",
+        "student_model_version": "2026-06",
+        "training_item_row_hash": "107cc6621a7760a19ae00f566ef22b4f2e98290f0bb8d3bf011c6d30921c5c7a",
+        "usage_event_hash": "0aa64c2cf4d5c5bcd7f10e0dc252db8cd515de947f3a0e3bba692c957a3de995",
+        "usage_event_id": "event:rdllm-student-usage",
+        "work_id": "jaron-data-dignity"
+      }
+    ]
+  },
+  "model_lineage_input": {
+    "private_strings": [
+      "Private synthetic distillation row with upstream creator influence.",
+      "Private downstream output from a distilled student model."
+    ],
+    "student_model": {
+      "base_model_id": "model:rdllm-base",
+      "model_id": "model:rdllm-student-distilled",
+      "model_version": "2026-06",
+      "provider": "provider:downstream-reference"
+    },
+    "student_usage": {
+      "creator_pool": "5.500000",
+      "event_hash": "0aa64c2cf4d5c5bcd7f10e0dc252db8cd515de947f3a0e3bba692c957a3de995",
+      "event_id": "event:rdllm-student-usage",
+      "output": "Private downstream output from a distilled student model.",
+      "prompt": "Private downstream prompt for a distilled student model."
+    },
+    "training_content_summary": {
+      "certification": {
+        "highest_level": "RDLLM-L131",
+        "report_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+        "status": "passed"
+      },
+      "commitments": {
+        "certification_report_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+        "content_hash_root": "6a574168c63d95e10ea2c51c052f4bcf1eaabdcab678705d33bf682c2be5235a",
+        "policy_root": "e441c4cf6e287bb0f1022a0056cc96b57bc11923e0e543e1c0b0f7decdb9a3f5",
+        "provider_card_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+        "training_value_root": "f2b095f258979a66f7f0b410c1ab0f629e8b0aae5088beec6b23e8734ca962a1",
+        "work_root": "ff314391f6301f742aedb83ccc1898428012154d419a07d27f60c2477c6b12cd"
+      },
+      "created_at": "2026-05-31T00:00:00Z",
+      "issuer": "rdllm-local-demo",
+      "limitations": [
+        "reference summary covers registered training corpus, not web-scale unregistered training data",
+        "training influence is represented by deterministic training-value priors, not provider hidden states",
+        "public summary does not disclose private work text"
+      ],
+      "privacy": {
+        "answer_text_disclosed": false,
+        "chunk_text_disclosed": false,
+        "prompt_text_disclosed": false,
+        "public_summary_uses_counts_and_hash_roots": true,
+        "work_text_disclosed": false
+      },
+      "provider": {
+        "id": "provider:rdllm-reference",
+        "model_id": "model:rdllm-reference",
+        "model_version": "2026-05",
+        "training_stage": "reference_corpus"
+      },
+      "provider_card": {
+        "card_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+        "highest_level": "RDLLM-L131"
+      },
+      "rights_policy": {
+        "copyright_policy": "respect machine-readable allowed uses, prohibited uses, revocation, attribution duties, and royalty duties",
+        "minimum_creator_pool_rate_enforced": true,
+        "revoked_works_excluded": true,
+        "rights_checked_before_training": true,
+        "tdm_rights_signal": "rights metadata is expressed separately from provenance credentials"
+      },
+      "signature": {
+        "algorithm": "HMAC-SHA256",
+        "issuer": "rdllm-local-demo",
+        "value": "6b4b35096757ddea35f98431a31f7cd665025b134722c980d148cc861d706aa4"
+      },
+      "summary_hash": "96d7b568363adf49f46b0cb6c2d36bcdc4482371f7a8c136825fcb3a52133ab7",
+      "summary_version": "rdllm-training-content-summary/v1",
+      "template_alignment": {
+        "croissant_1_1_usage_policy": true,
+        "eu_ai_act_article_53_training_summary": true,
+        "odrl_rights_policy": true,
+        "public_summary_uses_categories_and_hash_roots": true,
+        "spdx_3_ai_dataset_bom": true
+      },
+      "training_content": {
+        "aggregate": {
+          "allowed_use_counts": {
+            "display": 3,
+            "external_attribution": 3,
+            "generation": 3,
+            "quote": 3,
+            "retrieval": 3,
+            "training": 3
+          },
+          "attribution_required_work_count": 3,
+          "chunk_count": 3,
+          "creator_count": 3,
+          "license_counts": {
+            "royalty-bearing": 3
+          },
+          "prohibited_use_counts": {},
+          "revoked_work_count": 0,
+          "royalty_required_work_count": 3,
+          "source_category_counts": {
+            "registered_creator_text": 3
+          },
+          "training_allowed_work_count": 3,
+          "training_blocked_work_count": 0,
+          "training_rights_coverage": 1.0,
+          "work_count": 3
+        },
+        "cohorts": [
+          {
+            "allowed_uses": [
+              "training",
+              "retrieval",
+              "generation",
+              "display",
+              "quote",
+              "external_attribution"
+            ],
+            "chunk_count": 1,
+            "chunk_hash_root": "4e89b4fab301dd86a537dc87e3132b69e0ef734af3a6d46c5343b2e6213d6983",
+            "content_category": "registered_creator_text",
+            "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+            "content_modality": "text",
+            "creator_id": "arjun",
+            "derived_from": [],
+            "has_upstream_lineage": false,
+            "jurisdictions": [
+              "GLOBAL"
+            ],
+            "license": "royalty-bearing",
+            "license_uri": "",
+            "minimum_creator_pool_rate": 0.0,
+            "policy_id": "policy:arjun-provenance-ledger",
+            "prohibited_uses": [],
+            "requires_attribution": true,
+            "requires_royalty": true,
+            "revoked": false,
+            "revoked_at": "",
+            "source_uri": "registered://works/arjun-provenance-ledger",
+            "training_allowed": true,
+            "training_policy_reasons": [
+              "permit:training"
+            ],
+            "training_value_root": "5089ed01b9cb3f2b364b572771007455ade7c58aa969057a079a9ed28ab8bff9",
+            "work_id": "arjun-provenance-ledger"
+          },
+          {
+            "allowed_uses": [
+              "training",
+              "retrieval",
+              "generation",
+              "display",
+              "quote",
+              "external_attribution"
+            ],
+            "chunk_count": 1,
+            "chunk_hash_root": "2a360a87e44ec4a467083af6cef4d8847e733e184fe67ee391b82d49afb25a8a",
+            "content_category": "registered_creator_text",
+            "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+            "content_modality": "text",
+            "creator_id": "lina",
+            "derived_from": [],
+            "has_upstream_lineage": false,
+            "jurisdictions": [
+              "GLOBAL"
+            ],
+            "license": "royalty-bearing",
+            "license_uri": "",
+            "minimum_creator_pool_rate": 0.0,
+            "policy_id": "policy:lina-governance-disputes",
+            "prohibited_uses": [],
+            "requires_attribution": true,
+            "requires_royalty": true,
+            "revoked": false,
+            "revoked_at": "",
+            "source_uri": "registered://works/lina-governance-disputes",
+            "training_allowed": true,
+            "training_policy_reasons": [
+              "permit:training"
+            ],
+            "training_value_root": "f91ad52bd01af7c3d9aa67790cf2f39197b9c76b6bc9afbb0dfc4c00518b3ed2",
+            "work_id": "lina-governance-disputes"
+          },
+          {
+            "allowed_uses": [
+              "training",
+              "retrieval",
+              "generation",
+              "display",
+              "quote",
+              "external_attribution"
+            ],
+            "chunk_count": 1,
+            "chunk_hash_root": "b72eb7be55ee2b2203af97193b7883979fce9a652dfad9ccef6ffca8323b8b27",
+            "content_category": "registered_creator_text",
+            "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+            "content_modality": "text",
+            "creator_id": "maya",
+            "derived_from": [],
+            "has_upstream_lineage": false,
+            "jurisdictions": [
+              "GLOBAL"
+            ],
+            "license": "royalty-bearing",
+            "license_uri": "",
+            "minimum_creator_pool_rate": 0.0,
+            "policy_id": "policy:maya-youtube-style-pool",
+            "prohibited_uses": [],
+            "requires_attribution": true,
+            "requires_royalty": true,
+            "revoked": false,
+            "revoked_at": "",
+            "source_uri": "registered://works/maya-youtube-style-pool",
+            "training_allowed": true,
+            "training_policy_reasons": [
+              "permit:training"
+            ],
+            "training_value_root": "68c4851b1ca59158789fdf4256ca33372be4ee789019ea03a3652e678b57cc20",
+            "work_id": "maya-youtube-style-pool"
+          }
+        ],
+        "modalities": {
+          "text": 3
+        },
+        "source_scope": "registered_creator_works",
+        "training_stage": "reference_corpus"
+      }
+    },
+    "training_items": [
+      {
+        "artifact_hash": "8b21d4be3c96aef03b76f128b573fe508e109e1afb4519add2fcde9e60a1c10d",
+        "artifact_type": "rdllm-proof-carrying-response",
+        "item_hash": "e684faf4cf188fcbf9165dadc4d531e8d2aa58a6e8f18bef00051ab7f016ac2b",
+        "item_id": "item:student-accepted",
+        "raw_text": "Private synthetic distillation row with upstream creator influence.",
+        "source_rows": [
+          {
+            "allowed_uses": [
+              "training",
+              "distillation"
+            ],
+            "chunk_id": "maya-youtube-transcript:chunk:0",
+            "content_hash": "c48a6abd49d85bf98b54c8bd9b3450731cbfc6bc3ee79d09e61a92c9adc6921a",
+            "contribution_weight": "0.70",
+            "creator_id": "maya",
+            "creator_name": "Maya Rao",
+            "license_status": "active",
+            "source_label": "S1",
+            "source_text": "Private source text that must not appear in the public report.",
+            "training_allowed": true,
+            "work_id": "maya-youtube-transcript"
+          },
+          {
+            "allowed_uses": [
+              "training"
+            ],
+            "chunk_id": "jaron-data-dignity:chunk:0",
+            "content_hash": "79474a3fa627b1bd9928787eff5138cf290b9bb196e24f618e4229c7f6f5fd75",
+            "contribution_weight": "0.30",
+            "creator_id": "jaron",
+            "creator_name": "Jaron Lanier",
+            "license_status": "active",
+            "source_label": "S2",
+            "training_allowed": true,
+            "work_id": "jaron-data-dignity"
+          }
+        ],
+        "synthetic_disclosed": true,
+        "synthetic_generated": true,
+        "teacher_distribution_root": "b77e57eb693f97849ad021c837436bf85cbad2a1988c1b8ebfee9320f6a3294c",
+        "teacher_model_id": "model:rdllm-reference",
+        "training_weight": "3.0"
+      },
+      {
+        "artifact_hash": "8b21d4be3c96aef03b76f128b573fe508e109e1afb4519add2fcde9e60a1c10d",
+        "artifact_type": "rdllm-proof-carrying-response",
+        "item_hash": "818c5d077ddec9b3a12687ff8f9719a5a3a989ee850391cedcd2e7ed9bfcfad6",
+        "item_id": "item:student-duplicate",
+        "source_rows": [
+          {
+            "allowed_uses": [
+              "training"
+            ],
+            "chunk_id": "maya-youtube-transcript:chunk:0",
+            "content_hash": "c48a6abd49d85bf98b54c8bd9b3450731cbfc6bc3ee79d09e61a92c9adc6921a",
+            "contribution_weight": "1.00",
+            "creator_id": "maya",
+            "creator_name": "Maya Rao",
+            "license_status": "active",
+            "training_allowed": true,
+            "work_id": "maya-youtube-transcript"
+          }
+        ],
+        "synthetic_disclosed": true,
+        "synthetic_generated": true,
+        "teacher_distribution_root": "040d1739d5982d4cded4d24dbc1f17b41b208c060dd6a8d648d2778cb9383454",
+        "teacher_model_id": "model:rdllm-reference",
+        "training_weight": "3.0"
+      },
+      {
+        "artifact_hash": "37166dbcc7de282c2222d1b2a8bfda5b0f7d3acd6735809f596f135bccc4e0cb",
+        "artifact_type": "synthetic-dataset-row",
+        "item_hash": "abec8a56d7f83e6e731583e43a74c89b4fa922f628bcc257c7bb052d99ae49af",
+        "item_id": "item:student-revoked",
+        "source_rows": [
+          {
+            "allowed_uses": [
+              "training"
+            ],
+            "chunk_id": "revoked-work:chunk:0",
+            "content_hash": "09f8d880a2a9950bda44063ec0f91eaa2eb573dfb95899cf7af4bb85187ee59b",
+            "contribution_weight": "1.00",
+            "creator_id": "revoked",
+            "creator_name": "Revoked Creator",
+            "license_status": "revoked",
+            "training_allowed": false,
+            "work_id": "revoked-work"
+          }
+        ],
+        "synthetic_disclosed": true,
+        "synthetic_generated": true,
+        "teacher_distribution_root": "72aa20c5e2ffbf91e302032740287acfe359990cc2ca9b89c5eba18acf887c22",
+        "teacher_model_id": "model:rdllm-reference",
+        "training_weight": "1.0"
+      }
+    ],
+    "training_run": {
+      "dataset_hash": "1296b1f65f83f964085d7651b6c52ec3a661299d4a4c02e71227e24744f6c008",
+      "lineage_tracking_enabled": true,
+      "method": "distillation",
+      "run_id": "train:rdllm-student:001",
+      "stage": "post_training",
+      "synthetic_data_disclosed": true
+    }
+  },
+  "post_training_policy": {
+    "policy_id": "policy:post-training-signal-carry-forward",
+    "requires_annotator_or_verifier_attestation": true,
+    "requires_model_lineage_settlement": true,
+    "requires_no_raw_signal_text": true,
+    "requires_reward_commitments": true,
+    "requires_royalty_carry_forward": true,
+    "requires_signal_lineage": true,
+    "requires_source_carry_forward": true,
+    "requires_synthetic_disclosure": true
+  },
+  "post_training_signals": [
+    {
+      "annotator_attestation_hash": "8df3e8e1291fd1192909d833c9fd4d47b20b93bfb348dde273b95e81b2a796ac",
+      "creator_ids": [
+        "arjun"
+      ],
+      "escrow_if_unattributed": true,
+      "input_artifact_hashes": [
+        "e66553a238d95638b4fec18cbe48a41bfc28193aef82509a5dd150a247de5a0e",
+        "93dfb78a8335e3709eaa1a6b4265b542faf2cd2171188ab68084f2051b07c0c7"
+      ],
+      "license_terms_hash": "52918c478d4c3fef5bc0a0d0f82aa3e82e4c2bbcccaeeae667ddeccdbf164f05",
+      "post_training_stage": "alignment",
+      "private_feedback_text": "Private preference label: the attributed answer is preferred because source labels remain visible through footer delivery.",
+      "reward_model_id": "reward:model:rdllm-reference",
+      "reward_value": "0.91",
+      "sequence": 1,
+      "signal_id": "signal:artifact:rlhf-preference:001",
+      "signal_type": "rlhf_preference",
+      "source_labels": [
+        "S1"
+      ],
+      "synthetic_disclosed": true,
+      "synthetic_input": true,
+      "upstream_artifact_hashes": [
+        "e66553a238d95638b4fec18cbe48a41bfc28193aef82509a5dd150a247de5a0e",
+        "93dfb78a8335e3709eaa1a6b4265b542faf2cd2171188ab68084f2051b07c0c7"
+      ],
+      "used_for_update": true,
+      "verifier_id": "verifier:rdllm-post-training-signal",
+      "work_ids": [
+        "arjun-provenance-ledger"
+      ]
+    }
+  ],
+  "post_training_system": {
+    "model_id": "model:rdllm-reference-aligned",
+    "model_version": "2026-06",
+    "provider": "provider:rdllm-reference",
+    "run_id": "posttrain:artifact:rdllm-reference:001",
+    "stage": "rlhf_alignment"
+  },
+  "private_reasoning_attribution": {
+    "artifact_bindings": {
+      "agent_tool_attribution_ledger_hash": "",
+      "agent_tool_attribution_ledger_hash_reproducible": true,
+      "client_enforcement_hash": "31f1c7d919bbeb81f3259ceee324c931360dae638b40905824f3863c5383fbf0",
+      "client_enforcement_hash_reproducible": true,
+      "persistent_memory_provenance_hash": "a61a76f2f7c5168a073cd9ac81e8838a0f1ac6c899456739d8670621ae05aa5c",
+      "persistent_memory_provenance_hash_reproducible": true,
+      "reasoning_step_input_hash": "a10e8409488dff9eea3920ea35198f314e15573099a1b085e00a8d1958f56a3f",
+      "reasoning_step_root": "39d05a42733217f7db0696d0063f23b3fa5e3612da9b9575312af3fa7924af62",
+      "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+      "royalty_obligation_root": "ecfcc449a0690cc78243f6218bbd6f124e1b712c9e72c144eb67c1247b38c987",
+      "source_footer_delivery_hash": "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+      "source_footer_delivery_hash_reproducible": true
+    },
+    "case": {
+      "case_id": "artifact:private-reasoning-attribution",
+      "status": "ready"
+    },
+    "checks": {
+      "agent_tool_ledger_verified_when_tools_used": true,
+      "artifact_hashes_reproducible": true,
+      "client_attribution_enforcement_verified": true,
+      "delegation_steps_identify_model_and_artifacts": true,
+      "memory_reasoning_steps_bind_l106_receipt": true,
+      "persistent_memory_provenance_verified": true,
+      "raw_private_reasoning_not_disclosed": true,
+      "reasoning_policy_is_fail_closed": true,
+      "reasoning_royalty_obligations_cover_sources": true,
+      "reasoning_source_labels_declared": true,
+      "reasoning_source_labels_visible_in_footer": true,
+      "reasoning_steps_bind_client_rendered_output": true,
+      "reasoning_steps_bind_upstream_artifacts": true,
+      "reasoning_steps_have_private_commitments": true,
+      "source_footer_delivery_verified": true,
+      "tool_reasoning_steps_bind_tool_ledger": true
+    },
+    "issued_at": "2026-05-31T00:00:00Z",
+    "issuer": "rdllm-local-demo",
+    "privacy": {
+      "answer_text_disclosed": false,
+      "chain_of_thought_disclosed": false,
+      "memory_text_disclosed": false,
+      "payment_data_disclosed": false,
+      "prompt_text_disclosed": false,
+      "raw_private_reasoning_disclosed": false,
+      "receipt_uses_hashes_labels_and_commitments": true,
+      "source_text_disclosed": false,
+      "tool_output_text_disclosed": false
+    },
+    "private_reasoning_attribution_hash": "e66553a238d95638b4fec18cbe48a41bfc28193aef82509a5dd150a247de5a0e",
+    "reasoning_policy": {
+      "policy_hash": "db297ddec7a6a4e886512cc6a4803906e372297c081e961ba9e68aa6ad344c49",
+      "policy_id": "policy:private-reasoning-source-carry-forward",
+      "requires_auditor_challenge_support": true,
+      "requires_footer_closure": true,
+      "requires_memory_receipts_for_memory_steps": true,
+      "requires_no_raw_private_reasoning": true,
+      "requires_private_trace_commitments": true,
+      "requires_source_carry_forward": true
+    },
+    "reasoning_steps": [
+      {
+        "audit_opening_commitment": "07c983770433fd558165c77374f54100c83eca65d1bc13badda78d3f6b10009b",
+        "claim_hashes": [
+          "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e"
+        ],
+        "delegate_model_id": "",
+        "input_artifact_hashes": [
+          "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+          "31f1c7d919bbeb81f3259ceee324c931360dae638b40905824f3863c5383fbf0",
+          "a61a76f2f7c5168a073cd9ac81e8838a0f1ac6c899456739d8670621ae05aa5c"
+        ],
+        "memory_ids": [
+          "mem:reference-provenance-ledger-source"
+        ],
+        "operation": "source_influenced_reasoning",
+        "output_commitment_hash": "4e67a194737dae8f80b20e6a793e25c7dbbae51e16a0ae7da9e7929f537d5922",
+        "private_trace_hash": "9df26c79c51e0d94bfa2ddd36355960eaedcb6f372d38a522119c183a12b9543",
+        "private_trace_salt_hash": "ea858c24a821d13a4e3eb026d06d9ffcfcb9d0cb9b11bfe38b2e4a15dc415962",
+        "raw_private_reasoning_disclosed": false,
+        "reasoning_step_hash": "18abef740a138c5a5b695ca318e585e87670d42e79b8ee52e5cef5bc17e841a3",
+        "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+        "sequence": 1,
+        "source_labels": [
+          "S1"
+        ],
+        "step_id": "reason:memory-source-synthesis",
+        "step_type": "memory_reuse",
+        "tool_call_ids": [],
+        "visible_source_labels": [
+          "S1"
+        ]
+      },
+      {
+        "audit_opening_commitment": "125d4e024cf7649703e723fa097fded820ad96f72f040daf3c9142a6ea8b7ffb",
+        "claim_hashes": [
+          "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e"
+        ],
+        "delegate_model_id": "model:rdllm-attribution-reviewer",
+        "input_artifact_hashes": [
+          "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+          "31f1c7d919bbeb81f3259ceee324c931360dae638b40905824f3863c5383fbf0",
+          "a61a76f2f7c5168a073cd9ac81e8838a0f1ac6c899456739d8670621ae05aa5c"
+        ],
+        "memory_ids": [
+          "mem:reference-provenance-ledger-source"
+        ],
+        "operation": "delegated_reasoning_review",
+        "output_commitment_hash": "ef0211b8a5b9f70516d6d6b389a59e341502562ea27ca49db32e89d65643ed77",
+        "private_trace_hash": "1bc27e64c9aa8e3a9533b1583dca8d7360b4d1b8f29b4f39c9e78d518364fc39",
+        "private_trace_salt_hash": "2a77d848326eae708fb868d0a415d68d50389f23ca4325918429851cec82e064",
+        "raw_private_reasoning_disclosed": false,
+        "reasoning_step_hash": "7c00204d3cb71abc106ffe0a8e0e28d00d473e9129e4867c91ccaab89bc32b1b",
+        "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+        "sequence": 2,
+        "source_labels": [
+          "S1"
+        ],
+        "step_id": "reason:delegate-attribution-check",
+        "step_type": "model_router_synthesis",
+        "tool_call_ids": [],
+        "visible_source_labels": [
+          "S1"
+        ]
+      }
+    ],
+    "reasoning_system": {
+      "minimum_memory_level": "RDLLM-L106",
+      "scope": "private_reasoning_and_delegation",
+      "system_id": "reasoning:rdllm-reference-orchestrator",
+      "system_version": "2026-06"
+    },
+    "royalty_obligations": [
+      {
+        "basis": "private_reasoning_source_influence",
+        "creator_id": "arjun",
+        "obligation_hash": "b24c16c1de7ccc6dfc3acbff16b806acd9052a15d09a8df181d63d1db5206ca2",
+        "royalty_row_hash": "68d44c64c82d39388acfdaf227632c2bc8f2e4920eb1c9456c34161b98f54dcc",
+        "settlement_state": "direct",
+        "share": "1.0",
+        "source_label": "S1",
+        "work_id": "arjun-provenance-ledger"
+      }
+    ],
+    "schemas": {
+      "client_attribution_enforcement": "docs/schemas/client_attribution_enforcement.schema.json",
+      "persistent_memory_provenance": "docs/schemas/persistent_memory_provenance.schema.json",
+      "private_reasoning_attribution": "docs/schemas/private_reasoning_attribution.schema.json",
+      "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "a4850dd69a711b5167eb356a25b372d717196b96ed7db2f7e991e3ac4e422c9d"
+    },
+    "summary": {
+      "delegation_step_count": 1,
+      "failed_check_count": 0,
+      "memory_step_count": 2,
+      "minimum_memory_level": "RDLLM-L106",
+      "privacy_preserved": true,
+      "private_reasoning_attribution_ready": true,
+      "reasoning_step_count": 2,
+      "royalty_obligation_count": 1,
+      "source_label_count": 1,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L107",
+      "tool_step_count": 0
+    },
+    "verification_errors": {
+      "agent_tool_attribution_ledger": 0,
+      "client_attribution_enforcement": 0,
+      "persistent_memory_provenance": 0,
+      "source_footer_delivery": 0
+    },
+    "version": "rdllm-private-reasoning-attribution/v1"
+  },
+  "private_reasoning_input": {
+    "$artifact_ref": "artifacts/private_reasoning_input.json"
+  },
+  "private_strings": [
+    "How should AI prove attribution?",
+    "Royalty-aware answer:\nFor the prompt 'How should AI prove attribution?', the strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]",
+    "Royalty-aware answer:\nFor the prompt 'How should AI prove attribution?', the strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]\n\nSources\n[S1] Provenance Ledgers for AI Outputs - Arjun Rao; chunk=arjun-provenance-ledger:c1; uri=registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1; support=0.303; text_match=0.900; hash=e94efa6d9bb3.\n    Evidence: span_hashes=399e7ff82b80,6ea90fbdd0fb. Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.\n[S2] Creator Governance for AI Licensing - Lina Park; chunk=lina-governance-disputes:c1; uri=registered://works/lina-governance-disputes#lina-governance-disputes:c1; support=0.204; text_match=0.633; hash=2e332f176133.\n    Evidence: span_hashes=71e11e089ebe,82b19c7059e7. Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.\n[S3] Usage Pools for Creator Platforms - Maya Sen; chunk=maya-youtube-style-pool:c1; uri=registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1; support=0.333; text_match=0.933; hash=6029417218e9.\n    Evidence: span_hashes=28528b6fc0db,a9ed8431a259. A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.\nGrounding: 6/6 claims supported; status=grounded.\nClaim Evidence\n[C1] S1; span=399e7ff82b80; chars=0-64.\n[C2] S1; span=6ea90fbdd0fb; chars=65-244.\n[C3] S2; span=71e11e089ebe; chars=0-51.\n[C4] S2; span=82b19c7059e7; chars=52-164.\n[C5] S3; span=28528b6fc0db; chars=0-136.\n[C6] S3; span=a9ed8431a259; chars=137-262.",
+    "Persistent memory: source S1 supports the answer's provenance-ledger claim.",
+    "Hidden reasoning: use the persistent memory only while carrying source S1 into the final footer.",
+    "Delegate reviewer confirms hidden source influence remains footer-visible.",
+    "Private preference label: the attributed answer is preferred because source labels remain visible through footer delivery.",
+    "Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. Hashes do not prove legal ownership by themselves, but they do prove that a payout was tied to a specific registered text at a specific point in the ledger.",
+    "Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. A practical AI licensing marketplace can combine direct opt in registration with collective management for works whose owners are difficult to contact, while maintaining public summaries of training content and private audit trails.",
+    "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. A royalty driven LLM should use the same business idea but replace video views with generation events, retrieved source use, and output support."
+  ],
+  "signal_royalty_obligations": [
+    {
+      "basis": "post_training_signal_influence",
+      "creator_id": "arjun",
+      "settlement_state": "direct",
+      "share": "1.0",
+      "source_label": "S1",
+      "work_id": "arjun-provenance-ledger"
+    }
+  ]
+}

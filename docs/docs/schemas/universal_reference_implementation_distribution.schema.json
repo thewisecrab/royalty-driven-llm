@@ -1,0 +1,247 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_reference_implementation_distribution.schema.json",
+  "title": "RDLLM Universal Reference Implementation Distribution",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "universal_reference_implementation_distribution_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "artifact_bindings",
+    "distribution_component_rows",
+    "install_target_rows",
+    "negative_distribution_rows",
+    "distribution_model",
+    "evidence_roots",
+    "distribution_decision",
+    "privacy",
+    "checks",
+    "summary",
+    "universal_reference_implementation_distribution_hash",
+    "signature"
+  ],
+  "properties": {
+    "universal_reference_implementation_distribution_version": {
+      "const": "rdllm-universal-reference-implementation-distribution/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_reference_implementation_distribution.schema.json"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_industry_root_level",
+        "minimum_adoption_pack_level",
+        "signed_installable_distribution_required",
+        "self_assertion_sufficient",
+        "reproducible_build_required",
+        "sbom_required",
+        "slsa_provenance_required",
+        "transparency_log_required",
+        "fail_closed_default_required",
+        "source_footer_reliance_requires_distribution",
+        "creator_settlement_release_requires_distribution"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-reference-implementation-distribution-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L164" },
+        "minimum_industry_root_level": { "const": "RDLLM-L163" },
+        "minimum_adoption_pack_level": { "const": "RDLLM-L162" },
+        "signed_installable_distribution_required": { "const": true },
+        "self_assertion_sufficient": { "const": false },
+        "reproducible_build_required": { "const": true },
+        "sbom_required": { "const": true },
+        "slsa_provenance_required": { "const": true },
+        "transparency_log_required": { "const": true },
+        "fail_closed_default_required": { "const": true },
+        "source_footer_reliance_requires_distribution": { "const": true },
+        "creator_settlement_release_requires_distribution": { "const": true }
+      }
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-reference-implementation-distribution.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-reference-implementation-distribution/v1"
+        }
+      }
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "artifact_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "present"
+        ],
+        "properties": {
+          "artifact_hash": { "type": "string" },
+          "payload_hash": { "type": "string" },
+          "hash_reproducible": { "type": "boolean" },
+          "status": { "type": "string" },
+          "level": { "type": "string" },
+          "present": { "type": "boolean" }
+        }
+      }
+    },
+    "distribution_component_rows": {
+      "$ref": "#/$defs/rowMap"
+    },
+    "install_target_rows": {
+      "$ref": "#/$defs/rowMap"
+    },
+    "negative_distribution_rows": {
+      "$ref": "#/$defs/rowMap"
+    },
+    "distribution_model": {
+      "type": "object",
+      "required": [
+        "type",
+        "industry_root_hash",
+        "adoption_pack_hash",
+        "root_binds_adoption_pack",
+        "distribution_binds_industry_root"
+      ],
+      "properties": {
+        "type": {
+          "const": "signed_reproducible_installable_reference_distribution"
+        },
+        "industry_root_hash": { "type": "string" },
+        "adoption_pack_hash": { "type": "string" },
+        "root_binds_adoption_pack": { "type": "boolean" },
+        "distribution_binds_industry_root": { "const": true },
+        "distribution_binds_components": { "const": true },
+        "distribution_binds_install_targets": { "const": true }
+      }
+    },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "artifact_binding_root",
+        "distribution_component_root",
+        "install_target_root",
+        "negative_distribution_root"
+      ],
+      "properties": {
+        "artifact_binding_root": { "type": "string" },
+        "distribution_component_root": { "type": "string" },
+        "install_target_root": { "type": "string" },
+        "negative_distribution_root": { "type": "string" }
+      }
+    },
+    "distribution_decision": {
+      "type": "object",
+      "required": [
+        "reference_distribution_ready",
+        "provider_self_assertion_sufficient",
+        "source_footer_reliance_allowed",
+        "creator_settlement_release_allowed",
+        "provider_installation_allowed",
+        "failure_modes"
+      ],
+      "properties": {
+        "reference_distribution_ready": { "type": "boolean" },
+        "provider_self_assertion_sufficient": { "const": false },
+        "source_footer_reliance_allowed": { "type": "boolean" },
+        "creator_settlement_release_allowed": { "type": "boolean" },
+        "provider_installation_allowed": { "type": "boolean" },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "native_provider_payloads_disclosed",
+        "tool_payloads_disclosed",
+        "customer_records_disclosed",
+        "payment_account_details_disclosed",
+        "public_distribution_uses_hashes_status_rows_and_verifier_commands"
+      ],
+      "properties": {
+        "prompt_text_disclosed": { "const": false },
+        "answer_text_disclosed": { "const": false },
+        "source_text_disclosed": { "const": false },
+        "native_provider_payloads_disclosed": { "const": false },
+        "tool_payloads_disclosed": { "const": false },
+        "customer_records_disclosed": { "const": false },
+        "payment_account_details_disclosed": { "const": false },
+        "public_distribution_uses_hashes_status_rows_and_verifier_commands": {
+          "const": true
+        }
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_industry_root_level",
+        "minimum_adoption_pack_level",
+        "signed_installable_distribution"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["ready", "blocked"]
+        },
+        "target_certification_level": { "const": "RDLLM-L164" },
+        "minimum_industry_root_level": { "const": "RDLLM-L163" },
+        "minimum_adoption_pack_level": { "const": "RDLLM-L162" },
+        "signed_installable_distribution": { "const": true }
+      }
+    },
+    "universal_reference_implementation_distribution_hash": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "properties": {
+        "algorithm": { "const": "HMAC-SHA256" },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "rowMap": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    }
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/evidence_force_calibration.schema.json",
+  "title": "RDLLM Evidence Force Calibration Report",
+  "type": "object",
+  "required": [
+    "calibration_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "claim_force_rows",
+    "visible_footer_claim_rows",
+    "footer_claim_coverage_rows",
+    "force_raise_rows",
+    "coverage_gaps",
+    "checks",
+    "commitments",
+    "schemas",
+    "summary",
+    "privacy",
+    "evidence_force_calibration_hash",
+    "signature"
+  ],
+  "properties": {
+    "calibration_version": {
+      "const": "rdllm-evidence-force-calibration/v1"
+    },
+    "issuer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "target_certification_level",
+        "minimum_input_level",
+        "required_axes",
+        "min_support_score",
+        "min_confidence",
+        "verified_footer_requires_calibration",
+        "direct_settlement_requires_calibration"
+      ],
+      "properties": {
+        "target_certification_level": {
+          "const": "RDLLM-L119"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L118"
+        },
+        "required_axes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "claim_force_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "source_id",
+          "claim_hash",
+          "evidence_hash",
+          "axis_rows",
+          "support_score",
+          "confidence",
+          "calibrated",
+          "footer_status",
+          "settlement_action",
+          "claim_force_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "visible_footer_claim_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_index",
+          "source_label",
+          "claim_hash",
+          "evidence_span_prefix",
+          "visible_claim_key",
+          "visible_footer_claim_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "footer_claim_coverage_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "visible_claim_key",
+          "source_label",
+          "claim_hash",
+          "covered_by_force_row",
+          "matched_calibrated",
+          "footer_claim_coverage_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "force_raise_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "challenge_id",
+          "claim_id",
+          "axis",
+          "expected_rejected",
+          "rejected",
+          "control_passed",
+          "force_raise_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "required": [
+        "missing_axis_rows",
+        "over_warranted_claim_ids",
+        "failed_force_raise_control_ids",
+        "missing_or_unreproducible_artifacts"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "claim_force_root",
+        "force_raise_root",
+        "artifact_binding_root",
+        "schema"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "evidence_force_calibration"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "claim_count",
+        "calibrated_claim_count",
+        "over_warranted_claim_count",
+        "force_raise_control_count",
+        "failed_force_raise_control_count",
+        "max_force_gap"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "ready",
+            "failed"
+          ]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L119"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L118"
+        }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_prompt_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_claim_text_disclosed",
+        "raw_evidence_text_disclosed",
+        "raw_source_text_disclosed",
+        "raw_payment_account_disclosed",
+        "public_report_uses_hashes_scores_force_labels_and_actions"
+      ],
+      "additionalProperties": true
+    },
+    "evidence_force_calibration_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

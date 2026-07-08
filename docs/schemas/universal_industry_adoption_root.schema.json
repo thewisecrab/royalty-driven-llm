@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_industry_adoption_root.schema.json",
+  "title": "RDLLM Universal Industry Adoption Root",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "universal_industry_adoption_root_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "artifact_bindings",
+    "publication_endpoint_rows",
+    "role_obligation_rows",
+    "negative_root_rows",
+    "closure_model",
+    "evidence_roots",
+    "adoption_decision",
+    "privacy",
+    "checks",
+    "summary",
+    "universal_industry_adoption_root_hash",
+    "signature"
+  ],
+  "properties": {
+    "universal_industry_adoption_root_version": {
+      "const": "rdllm-universal-industry-adoption-root/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_industry_adoption_root.schema.json"
+    },
+    "created_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_adoption_pack_level",
+        "minimum_trust_federation_level",
+        "provider_neutral_root_required",
+        "self_assertion_sufficient",
+        "two_phase_acyclic_closure_required",
+        "source_footer_reliance_requires_root",
+        "creator_settlement_release_requires_root",
+        "public_endpoint_verifiers_required"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-industry-adoption-root-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L163" },
+        "minimum_adoption_pack_level": { "const": "RDLLM-L162" },
+        "minimum_trust_federation_level": { "const": "RDLLM-L161" },
+        "provider_neutral_root_required": { "const": true },
+        "self_assertion_sufficient": { "const": false },
+        "two_phase_acyclic_closure_required": { "const": true },
+        "source_footer_reliance_requires_root": { "const": true },
+        "creator_settlement_release_requires_root": { "const": true },
+        "public_endpoint_verifiers_required": { "const": true }
+      }
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-industry-adoption-root.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-industry-adoption-root/v1"
+        }
+      }
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "artifact_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "present"
+        ],
+        "properties": {
+          "artifact_hash": { "type": "string" },
+          "payload_hash": { "type": "string" },
+          "hash_reproducible": { "type": "boolean" },
+          "status": { "type": "string" },
+          "level": { "type": "string" },
+          "present": { "type": "boolean" }
+        }
+      }
+    },
+    "publication_endpoint_rows": { "$ref": "#/$defs/rowMap" },
+    "role_obligation_rows": { "$ref": "#/$defs/rowMap" },
+    "negative_root_rows": { "$ref": "#/$defs/rowMap" },
+    "closure_model": {
+      "type": "object",
+      "required": [
+        "type",
+        "proof_graph_hash",
+        "adoption_pack_hash",
+        "adoption_pack_binds_proof_graph",
+        "root_binds_adoption_pack"
+      ],
+      "properties": {
+        "type": { "const": "two_phase_acyclic_root" },
+        "proof_graph_hash": { "type": "string" },
+        "adoption_pack_hash": { "type": "string" },
+        "adoption_pack_binds_proof_graph": { "type": "boolean" },
+        "root_binds_adoption_pack": { "const": true },
+        "root_binds_publication_endpoints": { "const": true },
+        "root_binds_role_obligations": { "const": true }
+      }
+    },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "artifact_binding_root",
+        "publication_endpoint_root",
+        "role_obligation_root",
+        "negative_root"
+      ],
+      "properties": {
+        "artifact_binding_root": { "type": "string" },
+        "publication_endpoint_root": { "type": "string" },
+        "role_obligation_root": { "type": "string" },
+        "negative_root": { "type": "string" }
+      }
+    },
+    "adoption_decision": {
+      "type": "object",
+      "required": [
+        "industry_adoption_root_ready",
+        "provider_self_assertion_sufficient",
+        "source_footer_reliance_allowed",
+        "creator_settlement_release_allowed",
+        "failure_modes"
+      ],
+      "properties": {
+        "industry_adoption_root_ready": { "type": "boolean" },
+        "provider_self_assertion_sufficient": { "const": false },
+        "source_footer_reliance_allowed": { "type": "boolean" },
+        "creator_settlement_release_allowed": { "type": "boolean" },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "native_provider_payloads_disclosed",
+        "tool_payloads_disclosed",
+        "payment_account_details_disclosed",
+        "public_root_uses_hashes_status_rows_and_verifier_commands"
+      ],
+      "properties": {
+        "prompt_text_disclosed": { "const": false },
+        "answer_text_disclosed": { "const": false },
+        "source_text_disclosed": { "const": false },
+        "native_provider_payloads_disclosed": { "const": false },
+        "tool_payloads_disclosed": { "const": false },
+        "payment_account_details_disclosed": { "const": false },
+        "public_root_uses_hashes_status_rows_and_verifier_commands": {
+          "const": true
+        }
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_adoption_pack_level",
+        "minimum_trust_federation_level",
+        "provider_neutral_root_supported"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L163" },
+        "minimum_adoption_pack_level": { "const": "RDLLM-L162" },
+        "minimum_trust_federation_level": { "const": "RDLLM-L161" },
+        "provider_neutral_root_supported": { "const": true }
+      }
+    },
+    "universal_industry_adoption_root_hash": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "properties": {
+        "algorithm": { "const": "HMAC-SHA256" },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "rowMap": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    }
+  }
+}

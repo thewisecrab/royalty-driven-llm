@@ -1,0 +1,206 @@
+{
+  "artifact_bindings": {
+    "composite_foundation_adapter": {
+      "artifact_type": "rdllm-composite-foundation-adapter/v1",
+      "declared_hash": "6656bbf9c9129bfe19120e2a2655d979890e87e457dd722280ea1c5d85e75864",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "discovery_manifest": {
+      "artifact_type": "rdllm-discovery-manifest/v1",
+      "declared_hash": "ef30383461749d41f25c23439b7fa299dd10e267eeed8cd3978fe438bc911600",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "foundation_api_profile": {
+      "artifact_type": "rdllm-foundation-attribution-profile/v1",
+      "declared_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "foundation_provider_conformance": {
+      "artifact_type": "rdllm-foundation-provider-conformance/v1",
+      "declared_hash": "db1fdda0749269946a8f5b65b2c86bcd42c54250e3c8a919a984f3558a2fad2f",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "foundation_runtime_adapter": {
+      "artifact_type": "rdllm-foundation-runtime-adapter/v1",
+      "declared_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+      "hash_reproducible": true,
+      "present": true
+    }
+  },
+  "candidate_route_bindings": [
+    {
+      "provider_family": "openai_responses",
+      "route_hash": "4fd6b1dc9e06f8de19aee36808309f06fb94a784d8535131b8e71a9075b70bcb",
+      "route_id": "route:openai_responses"
+    },
+    {
+      "provider_family": "anthropic_messages",
+      "route_hash": "cd1bfa0defc793cfc0fd03a69b42c2b5162888445bc851f833aad9139ecbe561",
+      "route_id": "route:anthropic_messages"
+    },
+    {
+      "provider_family": "google_gemini",
+      "route_hash": "d8c2484ebcb95abb6fa09c7d669f21b2a3702dff4d91897d463623eb46cee4f3",
+      "route_id": "route:google_gemini"
+    },
+    {
+      "provider_family": "meta_llama",
+      "route_hash": "ef023c00e320069d35a09c90d8414468cfd38bd0b988a4f944cc89aaaf638c98",
+      "route_id": "route:meta_llama"
+    },
+    {
+      "provider_family": "mistral_chat",
+      "route_hash": "7eb3b6c4ddba96797a576627f0779f90a5779a96f8a73dff0ede05ef4066a29b",
+      "route_id": "route:mistral_chat"
+    },
+    {
+      "provider_family": "cohere_chat",
+      "route_hash": "4937fc6ec6e38e6f5ba756446ef44ed720e87edade89c1e3f2bc90fe692a4072",
+      "route_id": "route:cohere_chat"
+    },
+    {
+      "provider_family": "xai_grok",
+      "route_hash": "0e990f3fa241e3111e3d1e6e6182b9f347c9460eb560a976a7b10896632e4892",
+      "route_id": "route:xai_grok"
+    },
+    {
+      "provider_family": "amazon_bedrock_converse",
+      "route_hash": "1f66ede4a0bce79e97fa9cd391fa7ff7582d843f087dfed4ebf168345bc4067d",
+      "route_id": "route:amazon_bedrock_converse"
+    },
+    {
+      "provider_family": "azure_openai_responses",
+      "route_hash": "30cb39bdd22f00c838bb28ae9cd7eaf8c741456ff7dfd68d3909922f5a89e4ee",
+      "route_id": "route:azure_openai_responses"
+    },
+    {
+      "provider_family": "openai_compatible_chat",
+      "route_hash": "a39911028c9bfdd22e7d9564ec7dd48d9637c2fa4afc09aee15edf1c7817b2fb",
+      "route_id": "route:openai_compatible_chat"
+    }
+  ],
+  "checks": {
+    "artifact_hashes_reproducible": true,
+    "candidate_routes_cover_required_families": true,
+    "candidate_routes_supported_by_adapter_and_conformance": true,
+    "fallback_paths_fail_closed": true,
+    "foundation_runtime_adapter_released_l127": true,
+    "non_selected_routes_not_released": true,
+    "private_text_not_disclosed": true,
+    "required_provider_families_declared": true,
+    "route_scores_and_health_are_committed": true,
+    "router_observation_hash_present": true,
+    "routes_meet_minimum_attribution_level": true,
+    "selected_route_declared_once": true,
+    "selected_route_matches_runtime_adapter": true,
+    "selected_route_release_authorized": true
+  },
+  "commitments": {
+    "candidate_route_root": "29c1f918a8a571ae35fd962f9cc90bcb8b3d590ed47b395939f516d6c924ccea",
+    "router_observation_hash": "aca3e885501e020f9aca55f8b4bbe596405d6a8b1674d3de826df67fa9a6734a",
+    "schema": "docs/schemas/foundation_runtime_router.schema.json",
+    "selected_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51"
+  },
+  "coverage_gaps": {
+    "failed_checks": [],
+    "failure_modes": [],
+    "missing_required_provider_families": [],
+    "released_non_selected_routes": [],
+    "unsupported_route_families": []
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "foundation_runtime_router_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+  "issuer": "rdllm-local-demo",
+  "normalized_universal_contract": {
+    "citation_url_health_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+    "composite_foundation_adapter_hash": "6656bbf9c9129bfe19120e2a2655d979890e87e457dd722280ea1c5d85e75864",
+    "discovery_manifest_hash": "ef30383461749d41f25c23439b7fa299dd10e267eeed8cd3978fe438bc911600",
+    "foundation_profile_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+    "foundation_provider_conformance_hash": "db1fdda0749269946a8f5b65b2c86bcd42c54250e3c8a919a984f3558a2fad2f",
+    "foundation_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+    "profile": "rdllm-universal-foundation-runtime-routing/v1",
+    "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+    "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737"
+  },
+  "privacy": {
+    "hash_only_candidate_routes": true,
+    "raw_native_response_disclosed": false,
+    "raw_prompt_text_disclosed": false,
+    "raw_router_payload_disclosed": false,
+    "raw_source_text_disclosed": false
+  },
+  "router_decision": {
+    "decision": "release",
+    "failed_checks": [],
+    "failure_modes": [],
+    "release_authorized": true,
+    "safe_output_policy": "emit_selected_rdllm_runtime_contract",
+    "selected_provider_family": "openai_responses",
+    "selected_route_id": "route:openai_responses"
+  },
+  "routing_policy": {
+    "minimum_input_level": "RDLLM-L127",
+    "minimum_route_attribution_level": "RDLLM-L127",
+    "on_fallback_route_failure": "block_display",
+    "on_unverified_route": "block_display",
+    "profile": "rdllm-foundation-runtime-router-policy/v1",
+    "raw_router_payload_disclosure_allowed": false,
+    "required_provider_families": [
+      "openai_responses",
+      "anthropic_messages",
+      "google_gemini",
+      "meta_llama",
+      "mistral_chat",
+      "cohere_chat",
+      "xai_grok",
+      "amazon_bedrock_converse",
+      "azure_openai_responses",
+      "openai_compatible_chat"
+    ],
+    "selected_route_id": "route:openai_responses",
+    "selection_policy": "highest_verified_rdllm_route",
+    "target_certification_level": "RDLLM-L128"
+  },
+  "runtime_router_version": "rdllm-foundation-runtime-router/v1",
+  "schemas": {
+    "composite_foundation_adapter": "docs/schemas/composite_foundation_adapter.schema.json",
+    "discovery_manifest": "docs/schemas/discovery_manifest.schema.json",
+    "foundation_api_profile": "docs/schemas/foundation_attribution_profile.schema.json",
+    "foundation_provider_conformance": "docs/schemas/foundation_provider_conformance.schema.json",
+    "foundation_runtime_adapter": "docs/schemas/foundation_runtime_adapter.schema.json",
+    "foundation_runtime_router": "docs/schemas/foundation_runtime_router.schema.json"
+  },
+  "selected_route_binding": {
+    "foundation_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+    "native_api_version": "responses/v1",
+    "native_model": "openai:responses-compatible",
+    "provider_family": "openai_responses",
+    "provider_id": "provider:openai-responses",
+    "route_decision_hash": "be7c1645424246ff54377b59bd6895ef9df1b7f6147a2392ace3a27f3eef51c2",
+    "route_id": "route:openai_responses"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "043295cffc267eed7dea0d24ed45de5b12078609434e04160cff492a99462c4f"
+  },
+  "summary": {
+    "candidate_route_count": 10,
+    "covered_provider_family_count": 10,
+    "fail_closed_router_supported": true,
+    "failed_check_count": 0,
+    "failure_mode_count": 0,
+    "minimum_input_level": "RDLLM-L127",
+    "privacy_preserved": true,
+    "required_provider_family_count": 10,
+    "router_release_authorized": true,
+    "selected_provider_family": "openai_responses",
+    "status": "released",
+    "target_certification_level": "RDLLM-L128",
+    "universal_foundation_routing_supported": true
+  }
+}

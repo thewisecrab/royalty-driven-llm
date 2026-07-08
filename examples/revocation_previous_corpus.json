@@ -1,0 +1,32 @@
+{
+  "creators": [
+    {
+      "creator_id": "creator_revocable",
+      "name": "Revocable Rights Owner",
+      "payout_account": "acct_revocable"
+    }
+  ],
+  "works": [
+    {
+      "work_id": "revocable-rights-source",
+      "creator_id": "creator_revocable",
+      "title": "Revocable Rights Source",
+      "content": "Revocable source text proves that creators can revoke future AI uses while historical royalty events remain preserved.",
+      "source_uri": "https://example.test/rights/revocable-source",
+      "license": "royalty-bearing",
+      "policy_id": "policy:revocable-rights-source",
+      "allowed_uses": [
+        "training",
+        "retrieval",
+        "generation",
+        "display",
+        "quote",
+        "external_attribution"
+      ],
+      "prohibited_uses": [],
+      "requires_attribution": true,
+      "requires_royalty": true,
+      "revoked": false
+    }
+  ]
+}

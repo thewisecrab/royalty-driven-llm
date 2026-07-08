@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_citation_verification_contract.schema.json",
+  "title": "RDLLM Universal Citation Verification Contract",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "citation_contract_version",
+    "issuer",
+    "created_at",
+    "citation_policy",
+    "artifact_bindings",
+    "verification_dimension_rows",
+    "citation_verification_rows",
+    "failure_case_rows",
+    "verifier_command_rows",
+    "commitments",
+    "checks",
+    "citation_decision",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_citation_verification_contract_hash",
+    "signature"
+  ],
+  "properties": {
+    "citation_contract_version": {
+      "const": "rdllm-universal-citation-verification-contract/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "citation_policy": {
+      "type": "object",
+      "required": [
+        "target_certification_level",
+        "minimum_input_level",
+        "required_core_artifacts",
+        "required_verification_dimensions",
+        "required_failure_cases",
+        "required_verifier_commands"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L141" },
+        "minimum_input_level": { "const": "RDLLM-L140" },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_verification_dimensions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_failure_cases": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_verifier_commands": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["artifact_count", "artifact_binding_root", "bindings"]
+    },
+    "verification_dimension_rows": { "type": "array" },
+    "citation_verification_rows": { "type": "array" },
+    "failure_case_rows": { "type": "array" },
+    "verifier_command_rows": { "type": "array" },
+    "commitments": { "type": "object" },
+    "checks": { "type": "object" },
+    "citation_decision": { "type": "object" },
+    "schemas": {
+      "type": "object",
+      "required": ["universal_citation_verification_contract"],
+      "properties": {
+        "universal_citation_verification_contract": {
+          "const": "docs/schemas/universal_citation_verification_contract.schema.json"
+        }
+      }
+    },
+    "privacy": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "verification_dimension_count",
+        "citation_verification_count",
+        "displayed_footer_label_count",
+        "context_source_label_count",
+        "failure_case_count",
+        "verifier_command_count",
+        "failed_check_count",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L141" },
+        "minimum_input_level": { "const": "RDLLM-L140" },
+        "verification_dimension_count": { "type": "integer" },
+        "citation_verification_count": { "type": "integer" },
+        "displayed_footer_label_count": { "type": "integer" },
+        "context_source_label_count": { "type": "integer" },
+        "failure_case_count": { "type": "integer" },
+        "verifier_command_count": { "type": "integer" },
+        "failed_check_count": { "type": "integer" },
+        "privacy_preserved": { "type": "boolean" }
+      }
+    },
+    "universal_citation_verification_contract_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

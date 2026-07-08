@@ -1,0 +1,559 @@
+{
+  "attribution_bom_hash": "ded5d5f60f8d8a01d6d7ab1d1ab14f90e379cdb997fb8919d87528b67e85f971",
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "rdllm:model:reference",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "14a8416ad427718b73334adf4bb42ff727d88801bc293014982a334f08fa621f"
+        }
+      ],
+      "name": "model:rdllm-reference",
+      "properties": [
+        {
+          "name": "rdllm:base_model_id",
+          "value": "model:rdllm-base"
+        },
+        {
+          "name": "rdllm:minimum_certification_level",
+          "value": "RDLLM-L108"
+        }
+      ],
+      "publisher": "provider:rdllm-reference",
+      "type": "machine-learning-model",
+      "version": "2026-06"
+    },
+    {
+      "bom-ref": "rdllm:source:S1:maya-youtube-transcript:maya-youtube-transcript:chunk:0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c48a6abd49d85bf98b54c8bd9b3450731cbfc6bc3ee79d09e61a92c9adc6921a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "LicenseRef-RDLLM-Attributed-AI",
+            "url": ""
+          }
+        }
+      ],
+      "name": "Maya Rao",
+      "properties": [
+        {
+          "name": "rdllm:source_label",
+          "value": "S1"
+        },
+        {
+          "name": "rdllm:creator_id",
+          "value": "maya"
+        },
+        {
+          "name": "rdllm:work_id",
+          "value": "maya-youtube-transcript"
+        },
+        {
+          "name": "rdllm:chunk_id",
+          "value": "maya-youtube-transcript:chunk:0"
+        },
+        {
+          "name": "rdllm:content_hash",
+          "value": "c48a6abd49d85bf98b54c8bd9b3450731cbfc6bc3ee79d09e61a92c9adc6921a"
+        },
+        {
+          "name": "rdllm:license_terms_hash",
+          "value": "7490b46bc8ce66867d52f64f96413a01a74c9d16694726bf08dffc3226b09e3d"
+        },
+        {
+          "name": "rdllm:notice_hash",
+          "value": "c7a01dde77d13d3ffbc5581b46ca5080d78b1267d1edb8df0a6b9f791361f9c7"
+        },
+        {
+          "name": "rdllm:settlement_state",
+          "value": "direct"
+        },
+        {
+          "name": "rdllm:royalty_basis",
+          "value": "model_release_attribution_bom"
+        }
+      ],
+      "scope": "required",
+      "type": "data",
+      "version": "maya-youtube-transcript:chunk:0"
+    },
+    {
+      "bom-ref": "rdllm:source:S2:jaron-data-dignity:jaron-data-dignity:chunk:0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "79474a3fa627b1bd9928787eff5138cf290b9bb196e24f618e4229c7f6f5fd75"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "LicenseRef-RDLLM-Attributed-AI",
+            "url": ""
+          }
+        }
+      ],
+      "name": "Jaron Lanier",
+      "properties": [
+        {
+          "name": "rdllm:source_label",
+          "value": "S2"
+        },
+        {
+          "name": "rdllm:creator_id",
+          "value": "jaron"
+        },
+        {
+          "name": "rdllm:work_id",
+          "value": "jaron-data-dignity"
+        },
+        {
+          "name": "rdllm:chunk_id",
+          "value": "jaron-data-dignity:chunk:0"
+        },
+        {
+          "name": "rdllm:content_hash",
+          "value": "79474a3fa627b1bd9928787eff5138cf290b9bb196e24f618e4229c7f6f5fd75"
+        },
+        {
+          "name": "rdllm:license_terms_hash",
+          "value": "ca9a4740d5b6847f5c12f767080de45ea8194a8bc06d58dfb2d9e78814d81a26"
+        },
+        {
+          "name": "rdllm:notice_hash",
+          "value": "e5c8a2afefde34413651e30e2f91f9867c3945db533445bb6f6f55caa0611cb6"
+        },
+        {
+          "name": "rdllm:settlement_state",
+          "value": "direct"
+        },
+        {
+          "name": "rdllm:royalty_basis",
+          "value": "model_release_attribution_bom"
+        }
+      ],
+      "scope": "required",
+      "type": "data",
+      "version": "jaron-data-dignity:chunk:0"
+    },
+    {
+      "bom-ref": "rdllm:artifact:certification_report",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "/.well-known/rdllm/certification-report.json"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1"
+        }
+      ],
+      "name": "certification_report",
+      "properties": [
+        {
+          "name": "rdllm:artifact_type",
+          "value": "certification_report"
+        },
+        {
+          "name": "rdllm:schema",
+          "value": "docs/schemas/certification_report.schema.json"
+        }
+      ],
+      "scope": "required",
+      "type": "file",
+      "version": "1"
+    },
+    {
+      "bom-ref": "rdllm:artifact:creator_license_contract",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "/.well-known/rdllm/creator-license-contract.json"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b72a02031cb195f1899bdec74f511d38b390d7d03e68409c567e1e3724e2fe08"
+        }
+      ],
+      "name": "creator_license_contract",
+      "properties": [
+        {
+          "name": "rdllm:artifact_type",
+          "value": "creator_license_contract"
+        },
+        {
+          "name": "rdllm:schema",
+          "value": "docs/schemas/creator_license_contract.schema.json"
+        }
+      ],
+      "scope": "required",
+      "type": "file",
+      "version": "1"
+    },
+    {
+      "bom-ref": "rdllm:artifact:model_lineage_attribution_report",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "/.well-known/rdllm/model-lineage-attribution-report.json"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "93dfb78a8335e3709eaa1a6b4265b542faf2cd2171188ab68084f2051b07c0c7"
+        }
+      ],
+      "name": "model_lineage_attribution_report",
+      "properties": [
+        {
+          "name": "rdllm:artifact_type",
+          "value": "model_lineage_attribution_report"
+        },
+        {
+          "name": "rdllm:schema",
+          "value": "docs/schemas/model_lineage_attribution_report.schema.json"
+        }
+      ],
+      "scope": "required",
+      "type": "file",
+      "version": "1"
+    },
+    {
+      "bom-ref": "rdllm:artifact:post_training_signal_provenance",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "/.well-known/rdllm/post-training-signal-provenance.json"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8c94e5752b2a38ef9b5d4fa53a9dbe811901b6b3237e4a944fcea4e4d464228d"
+        }
+      ],
+      "name": "post_training_signal_provenance",
+      "properties": [
+        {
+          "name": "rdllm:artifact_type",
+          "value": "post_training_signal_provenance"
+        },
+        {
+          "name": "rdllm:schema",
+          "value": "docs/schemas/post_training_signal_provenance.schema.json"
+        }
+      ],
+      "scope": "required",
+      "type": "file",
+      "version": "1"
+    },
+    {
+      "bom-ref": "rdllm:artifact:proof_dependency_graph",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "/.well-known/rdllm/proof-dependency-graph.json"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d35ed931e05a87d73453ee2a923e38c46d60611d07bc7072fe567998978cba7c"
+        }
+      ],
+      "name": "proof_dependency_graph",
+      "properties": [
+        {
+          "name": "rdllm:artifact_type",
+          "value": "proof_dependency_graph"
+        },
+        {
+          "name": "rdllm:schema",
+          "value": "docs/schemas/proof_dependency_graph.schema.json"
+        }
+      ],
+      "scope": "required",
+      "type": "file",
+      "version": "1"
+    },
+    {
+      "bom-ref": "rdllm:artifact:provider_attribution_card",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "/.well-known/rdllm/provider-attribution-card.json"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6"
+        }
+      ],
+      "name": "provider_attribution_card",
+      "properties": [
+        {
+          "name": "rdllm:artifact_type",
+          "value": "provider_attribution_card"
+        },
+        {
+          "name": "rdllm:schema",
+          "value": "docs/schemas/provider_attribution_card.schema.json"
+        }
+      ],
+      "scope": "required",
+      "type": "file",
+      "version": "1"
+    },
+    {
+      "bom-ref": "rdllm:artifact:training_content_summary",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "/.well-known/rdllm/training-content-summary.json"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "96d7b568363adf49f46b0cb6c2d36bcdc4482371f7a8c136825fcb3a52133ab7"
+        }
+      ],
+      "name": "training_content_summary",
+      "properties": [
+        {
+          "name": "rdllm:artifact_type",
+          "value": "training_content_summary"
+        },
+        {
+          "name": "rdllm:schema",
+          "value": "docs/schemas/training_content_summary.schema.json"
+        }
+      ],
+      "scope": "required",
+      "type": "file",
+      "version": "1"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [
+        "rdllm:artifact:certification_report",
+        "rdllm:artifact:creator_license_contract",
+        "rdllm:artifact:model_lineage_attribution_report",
+        "rdllm:artifact:post_training_signal_provenance",
+        "rdllm:artifact:proof_dependency_graph",
+        "rdllm:artifact:provider_attribution_card",
+        "rdllm:artifact:training_content_summary",
+        "rdllm:source:S1:maya-youtube-transcript:maya-youtube-transcript:chunk:0",
+        "rdllm:source:S2:jaron-data-dignity:jaron-data-dignity:chunk:0"
+      ],
+      "ref": "rdllm:model:reference"
+    },
+    {
+      "dependsOn": [],
+      "ref": "rdllm:artifact:certification_report"
+    },
+    {
+      "dependsOn": [],
+      "ref": "rdllm:artifact:creator_license_contract"
+    },
+    {
+      "dependsOn": [],
+      "ref": "rdllm:artifact:model_lineage_attribution_report"
+    },
+    {
+      "dependsOn": [],
+      "ref": "rdllm:artifact:post_training_signal_provenance"
+    },
+    {
+      "dependsOn": [],
+      "ref": "rdllm:artifact:proof_dependency_graph"
+    },
+    {
+      "dependsOn": [],
+      "ref": "rdllm:artifact:provider_attribution_card"
+    },
+    {
+      "dependsOn": [],
+      "ref": "rdllm:artifact:training_content_summary"
+    },
+    {
+      "dependsOn": [],
+      "ref": "rdllm:source:S1:maya-youtube-transcript:maya-youtube-transcript:chunk:0"
+    },
+    {
+      "dependsOn": [],
+      "ref": "rdllm:source:S2:jaron-data-dignity:jaron-data-dignity:chunk:0"
+    }
+  ],
+  "issued_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "metadata": {
+    "component": {
+      "bom-ref": "rdllm:model:reference",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "14a8416ad427718b73334adf4bb42ff727d88801bc293014982a334f08fa621f"
+        }
+      ],
+      "name": "model:rdllm-reference",
+      "properties": [
+        {
+          "name": "rdllm:base_model_id",
+          "value": "model:rdllm-base"
+        },
+        {
+          "name": "rdllm:minimum_certification_level",
+          "value": "RDLLM-L108"
+        }
+      ],
+      "publisher": "provider:rdllm-reference",
+      "type": "machine-learning-model",
+      "version": "2026-06"
+    },
+    "properties": [
+      {
+        "name": "rdllm:target_certification_level",
+        "value": "RDLLM-L109"
+      },
+      {
+        "name": "rdllm:minimum_certification_level",
+        "value": "RDLLM-L108"
+      },
+      {
+        "name": "rdllm:certification_report_hash",
+        "value": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1"
+      },
+      {
+        "name": "rdllm:proof_dependency_graph_hash",
+        "value": "d35ed931e05a87d73453ee2a923e38c46d60611d07bc7072fe567998978cba7c"
+      }
+    ],
+    "supplier": {
+      "name": "rdllm-local-demo"
+    },
+    "timestamp": "2026-05-31T00:00:00Z"
+  },
+  "rdllm": {
+    "artifact_bindings": {
+      "certification_report": {
+        "declared_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+        "hash_reproducible": true
+      },
+      "creator_license_contract": {
+        "declared_hash": "b72a02031cb195f1899bdec74f511d38b390d7d03e68409c567e1e3724e2fe08",
+        "hash_reproducible": true
+      },
+      "model_lineage_attribution_report": {
+        "declared_hash": "93dfb78a8335e3709eaa1a6b4265b542faf2cd2171188ab68084f2051b07c0c7",
+        "hash_reproducible": true
+      },
+      "post_training_signal_provenance": {
+        "declared_hash": "8c94e5752b2a38ef9b5d4fa53a9dbe811901b6b3237e4a944fcea4e4d464228d",
+        "hash_reproducible": true
+      },
+      "proof_dependency_graph": {
+        "declared_hash": "d35ed931e05a87d73453ee2a923e38c46d60611d07bc7072fe567998978cba7c",
+        "hash_reproducible": true
+      },
+      "provider_attribution_card": {
+        "declared_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+        "hash_reproducible": true
+      },
+      "training_content_summary": {
+        "declared_hash": "96d7b568363adf49f46b0cb6c2d36bcdc4482371f7a8c136825fcb3a52133ab7",
+        "hash_reproducible": true
+      }
+    },
+    "case_id": "artifact:attribution-bom",
+    "checks": {
+      "certification_report_verified_l108_or_higher": true,
+      "cyclonedx_required_fields_present": true,
+      "dependencies_bind_model_to_sources_and_proofs": true,
+      "notices_and_private_text_not_disclosed": true,
+      "post_training_signal_provenance_bound": true,
+      "proof_artifact_components_have_reproducible_hashes": true,
+      "proof_dependency_graph_verified": true,
+      "provider_card_declares_attribution_bom_inputs": true,
+      "source_components_cover_training_and_post_training_labels": true,
+      "source_components_have_notice_and_license_hashes": true
+    },
+    "notice_carry_forward": {
+      "license_text_disclosed": false,
+      "notice_root": "833b56d254283bd2704f9f69bacf431d2d3fbbf811738098b22de4b86311c811",
+      "notice_rows": [
+        {
+          "creator_id": "maya",
+          "license_terms_hash": "7490b46bc8ce66867d52f64f96413a01a74c9d16694726bf08dffc3226b09e3d",
+          "license_text_disclosed": false,
+          "notice_hash": "c7a01dde77d13d3ffbc5581b46ca5080d78b1267d1edb8df0a6b9f791361f9c7",
+          "notice_text_disclosed": false,
+          "source_label": "S1",
+          "work_id": "maya-youtube-transcript"
+        },
+        {
+          "creator_id": "jaron",
+          "license_terms_hash": "ca9a4740d5b6847f5c12f767080de45ea8194a8bc06d58dfb2d9e78814d81a26",
+          "license_text_disclosed": false,
+          "notice_hash": "e5c8a2afefde34413651e30e2f91f9867c3945db533445bb6f6f55caa0611cb6",
+          "notice_text_disclosed": false,
+          "source_label": "S2",
+          "work_id": "jaron-data-dignity"
+        }
+      ],
+      "notice_text_disclosed": false
+    },
+    "privacy": {
+      "bom_uses_hashes_labels_and_references": true,
+      "feedback_text_disclosed": false,
+      "license_text_disclosed": false,
+      "notice_text_disclosed": false,
+      "payment_data_disclosed": false,
+      "raw_output_disclosed": false,
+      "raw_prompt_disclosed": false,
+      "source_text_disclosed": false
+    },
+    "schemas": {
+      "attribution_bom": "docs/schemas/attribution_bom.schema.json",
+      "post_training_signal_provenance": "docs/schemas/post_training_signal_provenance.schema.json",
+      "proof_dependency_graph": "docs/schemas/proof_dependency_graph.schema.json"
+    },
+    "verification_errors": {
+      "proof_dependency_graph": 0
+    }
+  },
+  "serialNumber": "urn:rdllm:attribution-bom:b1e69f6dae99f840",
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "e010cab74565c5b7a9314f238aba7f9f6d09f605b6d32d5c2923fe84df8e558f"
+  },
+  "specVersion": "1.7",
+  "summary": {
+    "attribution_bom_ready": true,
+    "component_count": 10,
+    "failed_check_count": 0,
+    "minimum_certification_level": "RDLLM-L108",
+    "notice_row_count": 2,
+    "privacy_preserved": true,
+    "proof_artifact_component_count": 7,
+    "source_component_count": 2,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L109"
+  },
+  "version": "rdllm-attribution-bom/v1"
+}

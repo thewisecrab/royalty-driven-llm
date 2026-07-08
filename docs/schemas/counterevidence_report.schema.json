@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rdllm/counterevidence_report.schema.json",
+  "title": "RDLLM Counterevidence Adjudication Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "event",
+    "artifact_bindings",
+    "claims",
+    "summary",
+    "commitments",
+    "schemas",
+    "privacy",
+    "issues",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-counterevidence-adjudication-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "counterevidence_threshold",
+        "max_unaddressed_counterevidence",
+        "requires_evidence_sufficiency",
+        "requires_source_availability",
+        "requires_source_materialization",
+        "requires_footer_binding_for_addressed_counterevidence"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-counterevidence-policy/v1" },
+        "counterevidence_threshold": { "type": "number", "minimum": 0, "maximum": 1 },
+        "max_unaddressed_counterevidence": { "type": "integer", "minimum": 0 },
+        "requires_evidence_sufficiency": { "type": "boolean" },
+        "requires_source_availability": { "type": "boolean" },
+        "requires_source_materialization": { "type": "boolean" },
+        "requires_footer_binding_for_addressed_counterevidence": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "event": {
+      "type": "object",
+      "required": ["event_id", "event_hash", "rendered_output_hash", "answer_hash"],
+      "properties": {
+        "event_id": { "type": "string" },
+        "event_hash": { "type": "string" },
+        "rendered_output_hash": { "type": "string" },
+        "answer_hash": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "answer_card_hash",
+        "source_verification_report_hash",
+        "source_availability_report_hash",
+        "evidence_sufficiency_report_hash",
+        "citation_footer_contract_hash",
+        "answer_card_bound",
+        "source_verification_bound",
+        "source_availability_bound",
+        "evidence_sufficiency_bound",
+        "citation_footer_bound"
+      ],
+      "additionalProperties": true
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_index",
+          "claim_hash",
+          "source_label",
+          "work_id",
+          "chunk_id",
+          "evidence_span_hash",
+          "evidence_span_prefix",
+          "counterevidence_threshold",
+          "candidate_limit",
+          "counterevidence_candidate_count",
+          "addressed_counterevidence_count",
+          "unaddressed_counterevidence_count",
+          "counterevidence_free",
+          "answer_acknowledges_counterevidence",
+          "candidates",
+          "claim_counterevidence_hash"
+        ],
+        "properties": {
+          "claim_index": { "type": "integer", "minimum": 1 },
+          "claim_hash": { "type": "string" },
+          "source_label": { "type": "string" },
+          "work_id": { "type": "string" },
+          "chunk_id": { "type": "string" },
+          "evidence_span_hash": { "type": "string" },
+          "evidence_span_prefix": { "type": "string" },
+          "counterevidence_threshold": { "type": "number", "minimum": 0, "maximum": 1 },
+          "candidate_limit": { "type": "integer", "minimum": 1 },
+          "counterevidence_candidate_count": { "type": "integer", "minimum": 0 },
+          "addressed_counterevidence_count": { "type": "integer", "minimum": 0 },
+          "unaddressed_counterevidence_count": { "type": "integer", "minimum": 0 },
+          "counterevidence_free": { "type": "boolean" },
+          "answer_acknowledges_counterevidence": { "type": "boolean" },
+          "candidates": { "type": "array" },
+          "claim_counterevidence_hash": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "claim_count",
+        "counterevidence_candidate_count",
+        "unaddressed_counterevidence_count",
+        "addressed_counterevidence_count",
+        "counterevidence_free_claim_count",
+        "all_claims_counterevidence_adjudicated",
+        "issue_count"
+      ],
+      "properties": {
+        "status": { "enum": ["verified", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L57" },
+        "claim_count": { "type": "integer", "minimum": 0 },
+        "counterevidence_candidate_count": { "type": "integer", "minimum": 0 },
+        "unaddressed_counterevidence_count": { "type": "integer", "minimum": 0 },
+        "addressed_counterevidence_count": { "type": "integer", "minimum": 0 },
+        "counterevidence_free_claim_count": { "type": "integer", "minimum": 0 },
+        "all_claims_counterevidence_adjudicated": { "type": "boolean" },
+        "issue_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "claim_counterevidence_root",
+        "artifact_binding_root",
+        "issue_root",
+        "event_hash"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["counterevidence_report"],
+      "properties": {
+        "counterevidence_report": {
+          "const": "docs/schemas/counterevidence_report.schema.json"
+        }
+      },
+      "additionalProperties": false
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "claim_text_disclosed",
+        "source_text_disclosed",
+        "counterevidence_text_disclosed",
+        "report_uses_hashes_scores_and_offsets"
+      ],
+      "additionalProperties": true
+    },
+    "issues": { "type": "array", "items": { "type": "string" } },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

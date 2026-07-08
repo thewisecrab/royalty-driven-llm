@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/operator_doctor.schema.json",
+  "title": "RDLLM Operator Doctor Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "errors",
+    "work_dir",
+    "package_resources",
+    "profile_templates",
+    "bootstrap",
+    "response"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-operator-doctor/v1"
+    },
+    "status": {
+      "enum": ["passed", "failed"]
+    },
+    "errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "work_dir": {
+      "type": "string"
+    },
+    "package_resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "errors", "checks"],
+      "properties": {
+        "status": { "enum": ["passed", "failed"] },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "checks": {
+          "type": "object",
+          "additionalProperties": {
+            "enum": ["passed", "failed"]
+          }
+        }
+      }
+    },
+    "profile_templates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "errors", "profile_statuses"],
+      "properties": {
+        "status": { "enum": ["passed", "failed"] },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "profile_statuses": {
+          "type": "object",
+          "additionalProperties": {
+            "enum": ["ready", "blocked", "failed"]
+          }
+        }
+      }
+    },
+    "bootstrap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "manifest_status",
+        "verification_status",
+        "runtime_status",
+        "errors",
+        "manifest_path"
+      ],
+      "properties": {
+        "status": { "enum": ["passed", "failed"] },
+        "manifest_status": { "type": "string" },
+        "verification_status": { "type": "string" },
+        "runtime_status": { "type": "string" },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "manifest_path": { "type": "string" }
+      }
+    },
+    "response": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "response_status",
+        "verification_status",
+        "production_display_ready",
+        "source_grounding_acceptance_status",
+        "event_hash",
+        "footer_hash",
+        "display_hash",
+        "response_path",
+        "errors"
+      ],
+      "properties": {
+        "status": { "enum": ["passed", "failed"] },
+        "response_status": { "type": "string" },
+        "verification_status": { "type": "string" },
+        "production_display_ready": { "type": "boolean" },
+        "source_grounding_acceptance_status": {
+          "enum": ["passed", "failed", "unknown"]
+        },
+        "event_hash": { "$ref": "#/$defs/hash64_or_empty" },
+        "footer_hash": { "$ref": "#/$defs/hash64_or_empty" },
+        "display_hash": { "$ref": "#/$defs/hash64_or_empty" },
+        "response_path": { "type": "string" },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "hash64_or_empty": {
+      "type": "string",
+      "pattern": "^$|^[0-9a-f]{64}$"
+    }
+  }
+}

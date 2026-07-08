@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/output_provenance_binding_report.schema.json",
+  "title": "RDLLM Output Provenance Binding Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "binding_subject",
+    "content_credential_rows",
+    "durable_signal_rows",
+    "public_verification_rows",
+    "commitments",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "binding_report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-output-provenance-binding-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_watchtower_level",
+        "exported_output_requires",
+        "raw_output_text_must_not_be_embedded"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "artifact_count",
+        "artifact_binding_root",
+        "bindings"
+      ],
+      "additionalProperties": true
+    },
+    "binding_subject": {
+      "type": "object",
+      "required": [
+        "proof_response_hash",
+        "serving_gateway_report_hash",
+        "attribution_capsule_hash",
+        "watchtower_challenge_settlement_report_hash",
+        "provider_card_hash",
+        "certification_report_hash",
+        "rendered_output_hash",
+        "copied_output_hash",
+        "attribution_footer_hash",
+        "gateway_delivered_output_hash",
+        "proof_delivery_status",
+        "proof_release_decision",
+        "gateway_delivery_status",
+        "watchtower_status",
+        "watchtower_target_certification_level",
+        "watchtower_direct_settlement_ready",
+        "certification_highest_level",
+        "subject_hash"
+      ],
+      "additionalProperties": true
+    },
+    "content_credential_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "manifest_profile",
+          "manifest_id",
+          "assertion_label",
+          "provenance_pointer",
+          "bound_output_hash",
+          "bound_rendered_output_hash",
+          "bound_proof_response_hash",
+          "bound_attribution_capsule_hash",
+          "bound_watchtower_report_hash",
+          "subject_hash",
+          "credential_payload_hash",
+          "signature_algorithm",
+          "signature",
+          "verified",
+          "credential_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "durable_signal_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "signal_type",
+          "verifier",
+          "purpose",
+          "bound_output_hash",
+          "bound_proof_response_hash",
+          "subject_hash",
+          "confidence",
+          "signal_present",
+          "raw_output_text_disclosed",
+          "signal_id",
+          "signal_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "public_verification_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "surface",
+          "path",
+          "verifier_command",
+          "bound_subject_hash",
+          "required",
+          "verification_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "subject_hash",
+        "content_credential_root",
+        "durable_signal_root",
+        "public_verification_root",
+        "artifact_binding_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "output_provenance_binding_report",
+        "proof_carrying_response",
+        "serving_gateway_report",
+        "attribution_capsule",
+        "watchtower_challenge_settlement_report",
+        "provider_attribution_card",
+        "certification_report"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "subject_hash",
+        "copied_output_hash",
+        "credential_count",
+        "durable_signal_count",
+        "public_verification_surface_count",
+        "watchtower_settlement_ready",
+        "raw_output_text_disclosed",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_output_text_disclosed",
+        "prompt_text_disclosed",
+        "source_text_disclosed",
+        "report_uses_hashes_credentials_and_public_verification_paths",
+        "private_field_findings"
+      ],
+      "additionalProperties": true
+    },
+    "binding_report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

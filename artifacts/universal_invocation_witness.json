@@ -1,0 +1,231 @@
+{
+  "checks": {
+    "coverage_call_rows_present": true,
+    "coverage_hash_reproducible": true,
+    "coverage_ready_l134": true,
+    "coverage_report_present": true,
+    "egress_event_ids_unique": true,
+    "egress_fields_match_coverage": true,
+    "every_covered_call_has_egress_observation": true,
+    "every_covered_call_has_provider_receipt": true,
+    "every_covered_call_has_witness_event": true,
+    "independent_witness_events_present": true,
+    "network_egress_observations_present": true,
+    "no_uncovered_egress_observations": true,
+    "no_uncovered_provider_receipts": true,
+    "no_uncovered_witness_events": true,
+    "one_egress_event_per_invocation": true,
+    "one_provider_receipt_per_invocation": true,
+    "private_text_not_disclosed": true,
+    "provider_receipt_fields_match_coverage": true,
+    "provider_receipt_ids_unique": true,
+    "provider_receipts_signed": true,
+    "provider_signed_receipts_present": true,
+    "witness_event_ids_unique": true,
+    "witness_quorum_satisfied": true,
+    "witnesses_bind_provider_receipt_and_egress": true,
+    "witnesses_signed": true
+  },
+  "commitments": {
+    "coverage_call_root": "c13d3cfc437544002385e67c96600a8845c567f32fb9dd30e756ff6fe9600b50",
+    "egress_observation_root": "3f5c4253e083a5e6ce3aaed2d372c9fb7313615f751fd13ea5ff263da5a39e46",
+    "provider_receipt_root": "f9e59287e71c907227f50ff8e85a6fbaa3519207c5d259da56d7145d07e626bd",
+    "reconciliation_root": "e29aa5349c7dbbb58564c8c66f3524f69d20357656ebab5525282abe2d4eb908",
+    "witness_event_root": "9d4ce76d75a167462dc934cbe3b2727aae60fc3474645a597f03169d33b03db1"
+  },
+  "coverage_binding": {
+    "coverage_complete": true,
+    "guarded_call_count": 1,
+    "hash_reproducible": true,
+    "metered_call_count": 1,
+    "minimum_input_level": "RDLLM-L133",
+    "status": "ready",
+    "target_level": "RDLLM-L134",
+    "uncovered_call_count": 0,
+    "universal_invocation_coverage_hash": "1834caa22034427625bbdaec3bbda5dff28d22f92284e3f51f16aed673d00193"
+  },
+  "coverage_call_rows": [
+    {
+      "coverage_call_hash": "0f80e7ea4c7ce2602ce35679c9148c223300e2ab880373b8573e5da266ab60af",
+      "creator_pool": "0.550000",
+      "gateway_event_id": "gateway:demo:l134",
+      "gross_revenue": "1.000000",
+      "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+      "invocation_id": "invoke:demo:l133",
+      "meter_event_id": "meter:demo:l134",
+      "native_model": "openai:responses-compatible",
+      "provider_family": "openai_responses",
+      "request_id": "req:demo:l133",
+      "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+      "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "route_id": "route:openai_responses",
+      "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737"
+    }
+  ],
+  "created_at": "2026-06-01T21:55:01Z",
+  "egress_event_rows": [
+    {
+      "allowed_by_gateway": true,
+      "destination_endpoint_hash": "f8186a0d30d7b86ca39de16282055786b62340f80c88db8a717c0228eacb0e42",
+      "egress_event_id": "egress:artifact:l135",
+      "egress_hash": "3c00bad0290e637b4e4bd0f3ceab00ed96994ac58fb0e0fa2730fac7e6109804",
+      "egress_policy_id": "egress-policy:artifact:l135",
+      "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+      "invocation_id": "invoke:demo:l133",
+      "native_model": "openai:responses-compatible",
+      "observed_at": "2026-06-02T00:00:01Z",
+      "observed_by_independent_collector": true,
+      "observer_id": "observer:artifact:l135",
+      "provider_family": "openai_responses",
+      "request_id": "req:demo:l133",
+      "route_id": "route:openai_responses"
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "nonrepudiation_reconciliation": {
+    "duplicate_egress_event_ids": [],
+    "duplicate_egress_invocations": [],
+    "duplicate_provider_receipt_ids": [],
+    "duplicate_receipt_invocations": [],
+    "duplicate_witness_event_ids": [],
+    "field_mismatches": [],
+    "matched_invocations": [
+      {
+        "egress_event_id": "egress:artifact:l135",
+        "independent_organization_count": 2,
+        "invocation_id": "invoke:demo:l133",
+        "meter_event_id": "meter:demo:l134",
+        "provider_receipt_id": "provider-receipt:artifact:l135",
+        "witness_event_ids": [
+          "witness:artifact:l135:a",
+          "witness:artifact:l135:b"
+        ]
+      }
+    ],
+    "missing_egress_invocations": [],
+    "missing_provider_receipt_invocations": [],
+    "missing_witness_invocations": [],
+    "orphan_egress_invocations": [],
+    "orphan_provider_receipt_invocations": [],
+    "orphan_witness_invocations": [],
+    "quorum_failures": []
+  },
+  "privacy": {
+    "private_strings_absent": true,
+    "private_text_fields_excluded": true,
+    "provider_and_witness_secrets_excluded": true,
+    "provider_receipt_egress_and_witness_rows_are_hash_and_id_only": true,
+    "raw_prompts_outputs_sources_excluded": true
+  },
+  "provider_receipt_rows": [
+    {
+      "billed_units": "1",
+      "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+      "invocation_id": "invoke:demo:l133",
+      "issued_at": "2026-06-02T00:00:00Z",
+      "meter_event_id": "meter:demo:l134",
+      "native_model": "openai:responses-compatible",
+      "provider_account_hash": "e0e0b2617e93bffe5b5b43accc66d0c838cabcdb4c15524306bc1479a09bbff6",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "provider_key_hash": "24ad16126ed94c7ae899c853de2ac3a247cb4efa8d51486235bb68327de66a26",
+      "provider_receipt_hash": "082a7327a3d6fc0f784c64cf8ff324a6a5a07e88d965e276a763e2bdd7467118",
+      "provider_receipt_id": "provider-receipt:artifact:l135",
+      "provider_signature": "9e7674d37a4fd8bf06e32cae8a4f93f261cb99d829e0b7177ac111c285e3bbb9",
+      "provider_usage_hash": "071e44de106f116ba2276e63631c2989e6251d3f4cf344495b3386ee90c26845",
+      "request_id": "req:demo:l133",
+      "route_id": "route:openai_responses",
+      "usage_units": "1"
+    }
+  ],
+  "schemas": {
+    "universal_invocation_coverage": "docs/schemas/universal_invocation_coverage.schema.json",
+    "universal_invocation_witness": "docs/schemas/universal_invocation_witness.schema.json"
+  },
+  "signature": "dd11cb5e9dee1a7d97978e7a2c27dfee0a54b0ca11250924aa477b5d7bcd0629",
+  "summary": {
+    "covered_call_count": 1,
+    "egress_event_count": 1,
+    "failed_check_count": 0,
+    "failure_mode_count": 0,
+    "field_mismatch_count": 0,
+    "matched_invocation_count": 1,
+    "minimum_input_level": "RDLLM-L134",
+    "missing_egress_count": 0,
+    "missing_provider_receipt_count": 0,
+    "missing_witness_count": 0,
+    "nonrepudiation_complete": true,
+    "provider_receipt_count": 1,
+    "quorum_failure_count": 0,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L135",
+    "witness_event_count": 2
+  },
+  "universal_invocation_witness_hash": "e57fba2de0499a538d367dc61ae777569c52cf0944f7053bd91eaeadec49a382",
+  "witness_decision": {
+    "decision": "certify_nonrepudiation",
+    "failed_checks": [],
+    "failure_modes": [],
+    "nonrepudiation_complete": true,
+    "safe_call_policy": "every_l134_covered_call_requires_provider_receipt_egress_and_witness_quorum"
+  },
+  "witness_policy": {
+    "minimum_input_level": "RDLLM-L134",
+    "on_missing_egress_observation": "block_nonrepudiation",
+    "on_missing_provider_receipt": "block_nonrepudiation",
+    "on_missing_witness_quorum": "block_nonrepudiation",
+    "on_private_text_leak": "block_publication",
+    "profile": "rdllm-universal-invocation-witness-policy/v1",
+    "require_network_egress_observations": true,
+    "require_provider_signed_receipts": true,
+    "required_independent_organizations": 2,
+    "required_witness_quorum": 2,
+    "target_certification_level": "RDLLM-L135"
+  },
+  "witness_rows": [
+    {
+      "egress_event_id": "egress:artifact:l135",
+      "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+      "independent": true,
+      "invocation_id": "invoke:demo:l133",
+      "meter_event_id": "meter:demo:l134",
+      "observed_at": "2026-06-02T00:00:02Z",
+      "organization_id": "org:artifact:a",
+      "provider_receipt_id": "provider-receipt:artifact:l135",
+      "replay_verdict": "accepted",
+      "request_id": "req:demo:l133",
+      "saw_egress_event": true,
+      "saw_l134_coverage": true,
+      "saw_provider_receipt": true,
+      "trust_tier": "independent",
+      "witness_event_hash": "fb181d87bfd67388ed116dd69e8b8583a1fd3f21f0c0abaaa04bc4c2962fc7ab",
+      "witness_event_id": "witness:artifact:l135:a",
+      "witness_id": "witness:artifact:a",
+      "witness_key_hash": "d2f4ddde9c3b5d91cb654f14a68ea1fb3baa40e9d0d3c90337502f1b62a134b3",
+      "witness_signature": "8e062713975d9277f380ac4211007fb0d5b46343e571d493d240f499689f00e2"
+    },
+    {
+      "egress_event_id": "egress:artifact:l135",
+      "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+      "independent": true,
+      "invocation_id": "invoke:demo:l133",
+      "meter_event_id": "meter:demo:l134",
+      "observed_at": "2026-06-02T00:00:02Z",
+      "organization_id": "org:artifact:b",
+      "provider_receipt_id": "provider-receipt:artifact:l135",
+      "replay_verdict": "accepted",
+      "request_id": "req:demo:l133",
+      "saw_egress_event": true,
+      "saw_l134_coverage": true,
+      "saw_provider_receipt": true,
+      "trust_tier": "independent",
+      "witness_event_hash": "56261ac4f48093a97a0d3a0a0d2d0682a8bf70656ea46ccd48df4abda4a7f501",
+      "witness_event_id": "witness:artifact:l135:b",
+      "witness_id": "witness:artifact:b",
+      "witness_key_hash": "8af0b4b84da365d3b3b3f06c9aaa4ace624e102137924b90d9685e6ef9b43951",
+      "witness_signature": "30a757b59425de7efbd0aa7c24668fcc3866514bcfe30e53f9bf63e8751a28be"
+    }
+  ],
+  "witness_version": "rdllm-universal-invocation-witness/v1"
+}

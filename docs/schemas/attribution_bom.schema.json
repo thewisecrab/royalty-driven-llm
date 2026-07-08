@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/attribution_bom.schema.json",
+  "title": "RDLLM Attribution Bill of Materials",
+  "type": "object",
+  "required": [
+    "bomFormat",
+    "specVersion",
+    "serialNumber",
+    "version",
+    "issued_at",
+    "issuer",
+    "metadata",
+    "components",
+    "dependencies",
+    "rdllm",
+    "summary",
+    "attribution_bom_hash",
+    "signature"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "bomFormat": { "const": "CycloneDX" },
+    "specVersion": { "const": "1.7" },
+    "serialNumber": { "type": "string" },
+    "version": { "const": "rdllm-attribution-bom/v1" },
+    "issued_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "metadata": {
+      "type": "object",
+      "required": ["timestamp", "component", "supplier", "properties"],
+      "additionalProperties": true
+    },
+    "components": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["bom-ref", "type", "name", "hashes"],
+        "additionalProperties": true
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ref", "dependsOn"],
+        "additionalProperties": true
+      }
+    },
+    "rdllm": {
+      "type": "object",
+      "required": [
+        "case_id",
+        "artifact_bindings",
+        "notice_carry_forward",
+        "verification_errors",
+        "checks",
+        "privacy",
+        "schemas"
+      ],
+      "properties": {
+        "checks": {
+          "type": "object",
+          "required": [
+            "cyclonedx_required_fields_present",
+            "certification_report_verified_l108_or_higher",
+            "provider_card_declares_attribution_bom_inputs",
+            "proof_dependency_graph_verified",
+            "source_components_have_notice_and_license_hashes",
+            "source_components_cover_training_and_post_training_labels",
+            "proof_artifact_components_have_reproducible_hashes",
+            "dependencies_bind_model_to_sources_and_proofs",
+            "post_training_signal_provenance_bound",
+            "notices_and_private_text_not_disclosed"
+          ],
+          "additionalProperties": { "type": "boolean" }
+        },
+        "schemas": {
+          "type": "object",
+          "required": [
+            "attribution_bom",
+            "post_training_signal_provenance",
+            "proof_dependency_graph"
+          ],
+          "additionalProperties": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_certification_level",
+        "component_count",
+        "source_component_count",
+        "proof_artifact_component_count",
+        "notice_row_count",
+        "failed_check_count",
+        "attribution_bom_ready",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L109" },
+        "minimum_certification_level": { "const": "RDLLM-L108" },
+        "component_count": { "type": "integer", "minimum": 1 },
+        "source_component_count": { "type": "integer", "minimum": 0 },
+        "proof_artifact_component_count": { "type": "integer", "minimum": 0 },
+        "notice_row_count": { "type": "integer", "minimum": 0 },
+        "failed_check_count": { "type": "integer", "minimum": 0 },
+        "attribution_bom_ready": { "type": "boolean" },
+        "privacy_preserved": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "attribution_bom_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  }
+}

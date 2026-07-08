@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/post_adjudication_settlement_adjustment_report.schema.json",
+  "title": "RDLLM Post-Adjudication Settlement Adjustment Report",
+  "type": "object",
+  "required": [
+    "version",
+    "issued_at",
+    "issuer",
+    "case",
+    "policy",
+    "previously_paid_rows",
+    "corrected_entitlement_rows",
+    "creator_delta_rows",
+    "escrow_rows",
+    "future_payable_rows",
+    "top_up_rows",
+    "recoupment_rows",
+    "future_netting_rows",
+    "adjustment_freeze_rows",
+    "creator_adjustment_receipts",
+    "accounting",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "version": {
+      "const": "rdllm-post-adjudication-settlement-adjustment-report/v1"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "case": {
+      "type": "object",
+      "required": [
+        "adjustment_case_id",
+        "status",
+        "basis_adjudication"
+      ],
+      "properties": {
+        "adjustment_case_id": {
+          "type": "string"
+        },
+        "case_type": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "ready",
+            "appeal_pending",
+            "needs_review"
+          ]
+        },
+        "basis_adjudication": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object"
+    },
+    "previously_paid_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "corrected_entitlement_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "creator_delta_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "escrow_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "future_payable_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "top_up_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "recoupment_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "future_netting_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "adjustment_freeze_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "creator_adjustment_receipts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "accounting": {
+      "type": "object",
+      "required": [
+        "previously_paid_total",
+        "corrected_entitlement_total",
+        "top_up_total",
+        "recoupment_total",
+        "frozen_total"
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "post_adjudication_settlement_adjustment_report"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "creator_adjustment_conserved"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "ready",
+            "appeal_pending",
+            "needs_review"
+          ]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L94"
+        },
+        "creator_adjustment_conserved": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "report_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

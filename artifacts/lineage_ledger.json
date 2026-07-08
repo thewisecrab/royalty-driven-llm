@@ -1,0 +1,458 @@
+{
+  "balances": {
+    "origin_writer": "0.120122",
+    "summary_editor": "0.429878"
+  },
+  "events": [
+    {
+      "answer_text": "Derived provenance summary: attribution systems preserve source lineage across summaries and transformed training corpora.",
+      "attribution_gap": {
+        "accessed_sources": [
+          {
+            "access_id": "srcacc_5efd14e555098423",
+            "access_type": "retrieval",
+            "chunk_id": "derived-provenance-summary:c1",
+            "content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+            "creator_id": "summary_editor",
+            "decision_status": "allowed",
+            "policy_allowed": true,
+            "rank": 1,
+            "registry_allowed": true,
+            "score": 0.45407911,
+            "use": "retrieval",
+            "work_id": "derived-provenance-summary"
+          },
+          {
+            "access_id": "srcacc_1af836f2b89b814e",
+            "access_type": "text_match",
+            "chunk_id": "derived-provenance-summary:c1",
+            "content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+            "creator_id": "summary_editor",
+            "decision_status": "allowed",
+            "policy_allowed": true,
+            "rank": 1,
+            "registry_allowed": true,
+            "score": 1.0,
+            "use": "external_attribution",
+            "work_id": "derived-provenance-summary"
+          },
+          {
+            "access_id": "srcacc_29c72c9e4c2b9333",
+            "access_type": "retrieval",
+            "chunk_id": "origin-provenance-note:c1",
+            "content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+            "creator_id": "origin_writer",
+            "decision_status": "allowed",
+            "policy_allowed": true,
+            "rank": 2,
+            "registry_allowed": true,
+            "score": 0.06850296,
+            "use": "retrieval",
+            "work_id": "origin-provenance-note"
+          },
+          {
+            "access_id": "srcacc_c4d5450dc6a2f8c4",
+            "access_type": "text_match",
+            "chunk_id": "origin-provenance-note:c1",
+            "content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+            "creator_id": "origin_writer",
+            "decision_status": "allowed",
+            "policy_allowed": true,
+            "rank": 2,
+            "registry_allowed": true,
+            "score": 0.26315789,
+            "use": "external_attribution",
+            "work_id": "origin-provenance-note"
+          }
+        ],
+        "classifications": {
+          "cited_without_access": [],
+          "consumed_without_credit": [],
+          "paid_hidden": [],
+          "policy_withheld": [],
+          "registry_withheld": []
+        },
+        "gap_version": "rdllm-attribution-gap/v1",
+        "grounding_status": "grounded",
+        "issues": [],
+        "policy_status": "allowed",
+        "registry_status": "clear",
+        "report_hash": "c71b0a649618a8fd51ce41367cc77e05885271a094ad529e6f5f961ba90f0a64",
+        "scores": {
+          "allowed_credit_coverage": 1.0,
+          "attribution_gap_rate": 0.0,
+          "citation_efficiency": 1.0,
+          "credit_efficiency": 1.0,
+          "payout_visibility": 1.0
+        },
+        "summary": {
+          "access_record_count": 4,
+          "accessed_source_count": 2,
+          "allowed_accessed_source_count": 2,
+          "cited_without_access_count": 0,
+          "consumed_without_credit_count": 0,
+          "credited_source_count": 2,
+          "escrow_accounts": [],
+          "paid_hidden_count": 0,
+          "paid_source_count": 2,
+          "policy_withheld_count": 0,
+          "registry_withheld_count": 0,
+          "visible_source_count": 2
+        },
+        "verdict": "closed"
+      },
+      "claim_support": [
+        {
+          "chunk_id": "derived-provenance-summary:c1",
+          "claim": "Derived provenance summary: attribution systems preserve source lineage across summaries and transformed training corpora.",
+          "evidence_end_char": 122,
+          "evidence_span_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+          "evidence_start_char": 0,
+          "evidence_text": "Derived provenance summary: attribution systems preserve source lineage across summaries and transformed training corpora.",
+          "source_label": "S1",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "derived-provenance-summary"
+        }
+      ],
+      "creator_pool": "0.550000",
+      "creator_pool_rate": "0.55",
+      "event_hash": "51cd042a31adafba0f868423241a512d13e2a86ebb22a878ad0bdc0847a79ed4",
+      "event_id": "evt_51cd042a31adafba",
+      "gross_revenue": "1.000000",
+      "grounding_quality": {
+        "issues": [],
+        "overall_score": 1.0,
+        "quality_version": "rdllm-grounding-quality/v1",
+        "scores": {
+          "citation_integrity": 1.0,
+          "evidence_relevance": 1.0,
+          "fact_support": 1.0,
+          "payout_alignment": 1.0,
+          "policy_alignment": 1.0,
+          "source_accessibility": 1.0
+        },
+        "summary": {
+          "claim_count": 1,
+          "footer_source_count": 2,
+          "footer_span_hash_count": 1,
+          "source_count": 2,
+          "supported_claims": 1
+        },
+        "verdict": "verified"
+      },
+      "grounding_report": {
+        "coverage": 1.0,
+        "policy_denials": 0,
+        "policy_status": "allowed",
+        "registry_conflicts": 0,
+        "registry_report_hash": "",
+        "registry_status": "clear",
+        "source_count": 2,
+        "status": "grounded",
+        "supported_claims": 1,
+        "total_claims": 1,
+        "unsupported_claims": 0
+      },
+      "output": "Derived provenance summary: attribution systems preserve source lineage across summaries and transformed training corpora.\n\nSources\n[S1] Derived Provenance Summary - Summary Editor; chunk=derived-provenance-summary:c1; uri=https://example.test/derived-provenance-summary; support=1.000; text_match=1.000; hash=9b0f2bb803b6.\n    Evidence: span_hashes=9b0f2bb803b6. Derived provenance summary: attribution systems preserve source lineage across summaries and transformed training corpora.\n[S2] Original Provenance Note - Origin Writer; chunk=origin-provenance-note:c1; uri=https://example.test/origin-provenance-note; support=0.524; text_match=0.263; hash=f6465dd18fe8.\n    Evidence: The original provenance note says attribution systems should preserve source lineage across summaries, synthetic datasets, tool outputs, and transformed training corpora.\nGrounding: 1/1 claims supported; status=grounded.\nClaim Evidence\n[C1] S1; span=9b0f2bb803b6; chars=0-122.",
+      "policy_decisions": [
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "derived-provenance-summary:c1",
+          "content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:derived-provenance-summary",
+          "reasons": [
+            "permit:external_attribution"
+          ],
+          "source_uri": "https://example.test/derived-provenance-summary",
+          "target_id": "derived-provenance-summary:c1",
+          "target_type": "chunk",
+          "text_match_score": 1.0,
+          "use": "external_attribution",
+          "work_id": "derived-provenance-summary"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "derived-provenance-summary:c1",
+          "content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:derived-provenance-summary",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "https://example.test/derived-provenance-summary",
+          "target_id": "derived-provenance-summary:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "derived-provenance-summary"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "origin-provenance-note:c1",
+          "content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:origin-provenance-note",
+          "reasons": [
+            "permit:external_attribution"
+          ],
+          "source_uri": "https://example.test/origin-provenance-note",
+          "target_id": "origin-provenance-note:c1",
+          "target_type": "chunk",
+          "text_match_score": 0.26315789,
+          "use": "external_attribution",
+          "work_id": "origin-provenance-note"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "origin-provenance-note:c1",
+          "content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:origin-provenance-note",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "https://example.test/origin-provenance-note",
+          "target_id": "origin-provenance-note:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "origin-provenance-note"
+        }
+      ],
+      "prompt": "What does the derived provenance summary say?",
+      "registry_decisions": [],
+      "retrieval_hits": [
+        {
+          "chunk_id": "derived-provenance-summary:c1",
+          "content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+          "creator_id": "summary_editor",
+          "rank": 1,
+          "score": 0.45407911,
+          "title": "Derived Provenance Summary",
+          "work_id": "derived-provenance-summary"
+        },
+        {
+          "chunk_id": "origin-provenance-note:c1",
+          "content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+          "creator_id": "origin_writer",
+          "rank": 2,
+          "score": 0.06850296,
+          "title": "Original Provenance Note",
+          "work_id": "origin-provenance-note"
+        }
+      ],
+      "royalty_shares": [
+        {
+          "attribution_basis": {
+            "citation": 0.0,
+            "output_support": 1.0,
+            "prompt_overlap": 0.1875,
+            "retrieval": 0.45407911,
+            "text_match": 1.0,
+            "training_value": 1.04064947
+          },
+          "chunk_id": "derived-provenance-summary:c1",
+          "citation_score": 0.0,
+          "content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+          "contribution_weight": "0.781596",
+          "creator_id": "summary_editor",
+          "data_value_prior": 1.0,
+          "output_support": 1.0,
+          "payout": "0.429878",
+          "query_relevance": 0.1875,
+          "retrieval_score": 0.45407911,
+          "text_match_score": 1.0,
+          "training_value_score": 1.04064947,
+          "work_id": "derived-provenance-summary"
+        },
+        {
+          "attribution_basis": {
+            "citation": 0.0,
+            "output_support": 0.52380952,
+            "prompt_overlap": 0.04166667,
+            "retrieval": 0.06850296,
+            "text_match": 0.26315789,
+            "training_value": 0.95935053
+          },
+          "chunk_id": "origin-provenance-note:c1",
+          "citation_score": 0.0,
+          "content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+          "contribution_weight": "0.218404",
+          "creator_id": "origin_writer",
+          "data_value_prior": 1.0,
+          "output_support": 0.52380952,
+          "payout": "0.120122",
+          "query_relevance": 0.04166667,
+          "retrieval_score": 0.06850296,
+          "text_match_score": 0.26315789,
+          "training_value_score": 0.95935053,
+          "work_id": "origin-provenance-note"
+        }
+      ],
+      "source_accesses": [
+        {
+          "access_id": "srcacc_5efd14e555098423",
+          "access_type": "retrieval",
+          "chunk_id": "derived-provenance-summary:c1",
+          "content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+          "creator_id": "summary_editor",
+          "decision_status": "allowed",
+          "matched_text_hash": "",
+          "policy_allowed": true,
+          "rank": 1,
+          "registry_allowed": true,
+          "score": 0.45407911,
+          "source_uri": "https://example.test/derived-provenance-summary",
+          "title": "Derived Provenance Summary",
+          "use": "retrieval",
+          "work_id": "derived-provenance-summary"
+        },
+        {
+          "access_id": "srcacc_1af836f2b89b814e",
+          "access_type": "text_match",
+          "chunk_id": "derived-provenance-summary:c1",
+          "content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+          "creator_id": "summary_editor",
+          "decision_status": "allowed",
+          "matched_text_hash": "9fcb3a90a0f8a56851d05f1e655c402495b8dbe1a07fab2f50087b4a39613807",
+          "policy_allowed": true,
+          "rank": 1,
+          "registry_allowed": true,
+          "score": 1.0,
+          "source_uri": "https://example.test/derived-provenance-summary",
+          "title": "Derived Provenance Summary",
+          "use": "external_attribution",
+          "work_id": "derived-provenance-summary"
+        },
+        {
+          "access_id": "srcacc_29c72c9e4c2b9333",
+          "access_type": "retrieval",
+          "chunk_id": "origin-provenance-note:c1",
+          "content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+          "creator_id": "origin_writer",
+          "decision_status": "allowed",
+          "matched_text_hash": "",
+          "policy_allowed": true,
+          "rank": 2,
+          "registry_allowed": true,
+          "score": 0.06850296,
+          "source_uri": "https://example.test/origin-provenance-note",
+          "title": "Original Provenance Note",
+          "use": "retrieval",
+          "work_id": "origin-provenance-note"
+        },
+        {
+          "access_id": "srcacc_c4d5450dc6a2f8c4",
+          "access_type": "text_match",
+          "chunk_id": "origin-provenance-note:c1",
+          "content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+          "creator_id": "origin_writer",
+          "decision_status": "allowed",
+          "matched_text_hash": "da532f321c331426f5364b5d44b3593fcf4b022f45af5031a7b40b6da4f5a12f",
+          "policy_allowed": true,
+          "rank": 2,
+          "registry_allowed": true,
+          "score": 0.26315789,
+          "source_uri": "https://example.test/origin-provenance-note",
+          "title": "Original Provenance Note",
+          "use": "external_attribution",
+          "work_id": "origin-provenance-note"
+        }
+      ],
+      "source_references": [
+        {
+          "chunk_id": "derived-provenance-summary:c1",
+          "citation_score": 0.0,
+          "content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+          "contribution_weight": "0.781596",
+          "creator_id": "summary_editor",
+          "creator_name": "Summary Editor",
+          "evidence_span_hashes": [
+            "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955"
+          ],
+          "jurisdiction": "GLOBAL",
+          "label": "S1",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "output_support": 1.0,
+          "payout": "0.429878",
+          "policy_id": "policy:derived-provenance-summary",
+          "policy_use": "external_attribution",
+          "quote": "Derived provenance summary: attribution systems preserve source lineage across summaries and transformed training corpora.",
+          "retrieval_score": 0.45407911,
+          "source_uri": "https://example.test/derived-provenance-summary",
+          "text_match_score": 1.0,
+          "title": "Derived Provenance Summary",
+          "work_id": "derived-provenance-summary"
+        },
+        {
+          "chunk_id": "origin-provenance-note:c1",
+          "citation_score": 0.0,
+          "content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+          "contribution_weight": "0.218404",
+          "creator_id": "origin_writer",
+          "creator_name": "Origin Writer",
+          "evidence_span_hashes": [],
+          "jurisdiction": "GLOBAL",
+          "label": "S2",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "output_support": 0.52380952,
+          "payout": "0.120122",
+          "policy_id": "policy:origin-provenance-note",
+          "policy_use": "external_attribution",
+          "quote": "The original provenance note says attribution systems should preserve source lineage across summaries, synthetic datasets, tool outputs, and transformed training corpora.",
+          "retrieval_score": 0.06850296,
+          "source_uri": "https://example.test/origin-provenance-note",
+          "text_match_score": 0.26315789,
+          "title": "Original Provenance Note",
+          "work_id": "origin-provenance-note"
+        }
+      ],
+      "text_matches": [
+        {
+          "chunk_id": "derived-provenance-summary:c1",
+          "content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+          "creator_id": "summary_editor",
+          "exact_score": 1.0,
+          "longest_sequence_tokens": 13,
+          "matched_text": "derived provenance summary attribution systems preserve source lineage across summaries transformed training corpora",
+          "ngram_score": 1.0,
+          "rank": 1,
+          "score": 1.0,
+          "title": "Derived Provenance Summary",
+          "work_id": "derived-provenance-summary"
+        },
+        {
+          "chunk_id": "origin-provenance-note:c1",
+          "content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+          "creator_id": "origin_writer",
+          "exact_score": 0.26315789,
+          "longest_sequence_tokens": 5,
+          "matched_text": "preserve source lineage across summaries",
+          "ngram_score": 0.06666667,
+          "rank": 2,
+          "score": 0.26315789,
+          "title": "Original Provenance Note",
+          "work_id": "origin-provenance-note"
+        }
+      ]
+    }
+  ]
+}

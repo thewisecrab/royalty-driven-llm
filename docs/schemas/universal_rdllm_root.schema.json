@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_rdllm_root.schema.json",
+  "title": "RDLLM Universal Root of Trust",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "root_version",
+    "issuer",
+    "created_at",
+    "root_policy",
+    "artifact_bindings",
+    "provider_family_rows",
+    "composite_surface_rows",
+    "root_obligation_rows",
+    "failure_case_rows",
+    "verifier_command_rows",
+    "research_alignment_rows",
+    "commitments",
+    "checks",
+    "root_decision",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_rdllm_root_hash",
+    "signature"
+  ],
+  "properties": {
+    "root_version": { "const": "rdllm-universal-rdllm-root/v1" },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "root_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "well_known_path",
+        "required_root_artifacts",
+        "required_provider_families",
+        "required_composite_surfaces",
+        "required_failure_cases",
+        "required_verifier_commands"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-universal-root-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L146" },
+        "minimum_input_level": { "const": "RDLLM-L145" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-rdllm-root.json"
+        },
+        "required_root_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_composite_surfaces": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_failure_cases": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_verifier_commands": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "artifact_bindings": { "type": "object" },
+    "provider_family_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "provider_family",
+          "root_registry_hash",
+          "provider_public_key_hash",
+          "deployment_root_hash",
+          "authority_control_hash",
+          "settlement_authority_hash",
+          "public_verifier_command",
+          "supports_universal_rdllm_root",
+          "supports_public_verification",
+          "supports_cross_provider_attribution",
+          "supports_creator_query",
+          "fail_closed",
+          "ready"
+        ]
+      }
+    },
+    "composite_surface_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "composite_surface",
+          "surface_root_hash",
+          "api_contract_hash",
+          "schema_hash",
+          "well_known_path",
+          "challenge_fixture_hash",
+          "covered",
+          "fail_closed",
+          "ready"
+        ]
+      }
+    },
+    "root_obligation_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "provider_family",
+          "composite_surface",
+          "root_binding_hash",
+          "artifact_set_hash",
+          "verifier_set_hash",
+          "policy_hash",
+          "publication_hash",
+          "challenge_hash",
+          "fail_closed_fixture_hash",
+          "l145_authority_hash",
+          "certification_bound",
+          "discovery_bound",
+          "integration_bound",
+          "proof_graph_bound",
+          "assurance_bound",
+          "authority_control_bound",
+          "source_footer_bound",
+          "settlement_bound",
+          "verifier_command_bound",
+          "fail_closed",
+          "ready"
+        ]
+      }
+    },
+    "failure_case_rows": { "type": "array", "items": { "type": "object" } },
+    "verifier_command_rows": { "type": "array", "items": { "type": "object" } },
+    "research_alignment_rows": { "type": "array", "items": { "type": "object" } },
+    "commitments": { "type": "object" },
+    "checks": { "type": "object", "additionalProperties": { "type": "boolean" } },
+    "root_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "publication_authorized",
+        "attribution_footer_authorized",
+        "creator_settlement_authorized",
+        "customer_confidence_footer_enabled",
+        "failed_checks",
+        "failure_modes",
+        "safe_output_policy"
+      ]
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["universal_rdllm_root"],
+      "properties": {
+        "universal_rdllm_root": {
+          "const": "docs/schemas/universal_rdllm_root.schema.json"
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_prompt_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_source_text_disclosed",
+        "raw_training_text_disclosed",
+        "raw_tool_payload_disclosed",
+        "raw_memory_payload_disclosed",
+        "raw_customer_or_billing_logs_disclosed",
+        "model_weights_or_hidden_states_disclosed",
+        "payment_details_disclosed",
+        "hash_only_root_bindings",
+        "private_field_findings",
+        "private_strings_absent"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "root_artifact_count",
+        "provider_family_count",
+        "composite_surface_count",
+        "root_obligation_count",
+        "required_obligation_count",
+        "failure_case_count",
+        "verifier_command_count",
+        "research_control_count",
+        "root_commitment_hash",
+        "offline_verification_supported",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L146" },
+        "minimum_input_level": { "const": "RDLLM-L145" },
+        "offline_verification_supported": { "const": true }
+      }
+    },
+    "universal_rdllm_root_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

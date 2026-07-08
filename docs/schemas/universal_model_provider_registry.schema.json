@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_model_provider_registry.schema.json",
+  "title": "RDLLM Universal Model Provider Registry",
+  "type": "object",
+  "required": [
+    "universal_model_provider_registry_version",
+    "schema",
+    "policy",
+    "well_known",
+    "provider_onboarding_covenant_binding",
+    "registry_source_rows",
+    "provider_namespace_rows",
+    "model_route_class_rows",
+    "adapter_discovery_rows",
+    "lifecycle_event_rows",
+    "declared_model_routes",
+    "negative_registry_rows",
+    "evidence_roots",
+    "checks",
+    "registry_decision",
+    "coverage",
+    "privacy",
+    "summary",
+    "universal_model_provider_registry_hash"
+  ],
+  "properties": {
+    "universal_model_provider_registry_version": {
+      "const": "rdllm-universal-model-provider-registry/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_model_provider_registry.schema.json"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_provider_onboarding_level",
+        "all_model_routes_must_be_registered",
+        "model_service_object_is_operational_unit",
+        "catalog_drift_blocks_reliance",
+        "unregistered_routes_fail_closed"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-model-provider-registry-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L176" },
+        "minimum_provider_onboarding_level": { "const": "RDLLM-L175" },
+        "all_model_routes_must_be_registered": { "const": true },
+        "model_service_object_is_operational_unit": { "const": true },
+        "catalog_drift_blocks_reliance": { "const": true },
+        "unregistered_routes_fail_closed": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-model-provider-registry.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-model-provider-registry/v1"
+        }
+      },
+      "additionalProperties": true
+    },
+    "registry_source_rows": {
+      "type": "object",
+      "minProperties": 10
+    },
+    "provider_namespace_rows": {
+      "type": "object",
+      "minProperties": 12
+    },
+    "model_route_class_rows": {
+      "type": "object",
+      "minProperties": 18
+    },
+    "adapter_discovery_rows": {
+      "type": "object",
+      "minProperties": 18
+    },
+    "lifecycle_event_rows": {
+      "type": "object",
+      "minProperties": 12
+    },
+    "declared_model_routes": {
+      "type": "array",
+      "minItems": 1
+    },
+    "negative_registry_rows": {
+      "type": "object",
+      "minProperties": 14
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "provider_onboarding_covenant_bound",
+        "provider_onboarding_covenant_l175_ready",
+        "registry_source_rows_complete",
+        "provider_namespace_rows_complete",
+        "model_route_class_rows_complete",
+        "adapter_discovery_rows_complete",
+        "lifecycle_event_rows_complete",
+        "declared_model_routes_present",
+        "declared_model_routes_registered",
+        "negative_registry_fixtures_reject",
+        "registry_signed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "registry_decision": {
+      "type": "object",
+      "required": [
+        "universal_model_provider_registry_ready",
+        "any_model_claim_allowed",
+        "dynamic_provider_admission_allowed",
+        "declared_model_routes_claimable",
+        "unregistered_routes_blocked",
+        "catalog_drift_blocks_reliance",
+        "source_footer_required_for_all_routes",
+        "settlement_release_allowed"
+      ],
+      "properties": {
+        "universal_model_provider_registry_ready": { "const": true },
+        "any_model_claim_allowed": { "const": true },
+        "dynamic_provider_admission_allowed": { "const": true },
+        "declared_model_routes_claimable": { "const": true },
+        "unregistered_routes_blocked": { "const": true },
+        "catalog_drift_blocks_reliance": { "const": true },
+        "source_footer_required_for_all_routes": { "const": true },
+        "settlement_release_allowed": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payloads_excluded",
+        "private_prompts_excluded",
+        "private_model_weights_excluded",
+        "private_catalog_exports_excluded",
+        "public_registry_uses_hashes_and_metadata"
+      ],
+      "properties": {
+        "private_payloads_excluded": { "const": true },
+        "private_prompts_excluded": { "const": true },
+        "private_model_weights_excluded": { "const": true },
+        "private_catalog_exports_excluded": { "const": true },
+        "public_registry_uses_hashes_and_metadata": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_provider_onboarding_level",
+        "registry_source_count",
+        "ready_registry_source_count",
+        "provider_namespace_count",
+        "ready_provider_namespace_count",
+        "model_route_class_count",
+        "ready_model_route_class_count",
+        "adapter_discovery_count",
+        "ready_adapter_discovery_count",
+        "lifecycle_event_count",
+        "ready_lifecycle_event_count",
+        "declared_model_route_count",
+        "ready_declared_model_route_count",
+        "negative_registry_failure_count",
+        "ready_negative_registry_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_model_provider_registry"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L176" },
+        "minimum_provider_onboarding_level": { "const": "RDLLM-L175" },
+        "registry_source_count": { "const": 10 },
+        "ready_registry_source_count": { "const": 10 },
+        "provider_namespace_count": { "const": 12 },
+        "ready_provider_namespace_count": { "const": 12 },
+        "model_route_class_count": { "const": 18 },
+        "ready_model_route_class_count": { "const": 18 },
+        "adapter_discovery_count": { "const": 18 },
+        "ready_adapter_discovery_count": { "const": 18 },
+        "lifecycle_event_count": { "const": 12 },
+        "ready_lifecycle_event_count": { "const": 12 },
+        "declared_model_route_count": { "minimum": 1 },
+        "ready_declared_model_route_count": { "minimum": 1 },
+        "negative_registry_failure_count": { "const": 14 },
+        "ready_negative_registry_failure_count": { "const": 14 },
+        "failure_mode_count": { "const": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_model_provider_registry": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "universal_model_provider_registry_hash": {
+      "type": "string",
+      "minLength": 64
+    }
+  },
+  "additionalProperties": true
+}

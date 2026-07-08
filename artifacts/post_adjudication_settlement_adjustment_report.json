@@ -1,0 +1,253 @@
+{
+  "accounting": {
+    "corrected_entitlement_total": "0.550000",
+    "escrow_available_total": "0.050000",
+    "frozen_total": "0.000000",
+    "future_netting_total": "0.050000",
+    "net_corrected_delta": "0.000000",
+    "net_forward_adjustment": "0.000000",
+    "overpayment_total": "0.050000",
+    "previously_paid_total": "0.550000",
+    "recoupment_total": "0.050000",
+    "top_up_total": "0.050000",
+    "underpayment_total": "0.050000"
+  },
+  "adjustment_freeze_rows": [],
+  "case": {
+    "adjustment_case_id": "adjustment:rdllm-post-adjudication:001",
+    "basis_adjudication": {
+      "artifact_hash": "7489ccc3650e383026c7932eeba3cf89513c7eb2436251fe079f495409163584",
+      "artifact_type": "rdllm-attribution-dispute-adjudication-report/v1",
+      "basis_case_id": "case:rdllm-attribution-dispute:001",
+      "basis_status": "ready",
+      "basis_target_certification_level": "RDLLM-L93",
+      "hash_reproducible": true,
+      "payload_hash": "7489ccc3650e383026c7932eeba3cf89513c7eb2436251fe079f495409163584",
+      "released_total": "0.550000"
+    },
+    "case_type": "post_adjudication_settlement_adjustment",
+    "opened_at": "2026-05-31T00:00:00Z",
+    "status": "ready"
+  },
+  "checks": {
+    "adjustment_totals_conserved": true,
+    "appeal_window_enforced": true,
+    "basis_adjudication_ready": true,
+    "corrected_entitlements_hash_bound": true,
+    "creator_visible_adjustment_receipts_created": true,
+    "escrow_covers_top_ups": true,
+    "future_netting_matches_recoupment": true,
+    "historical_events_not_rewritten": true,
+    "payment_execution_or_receipt_hashes_present": true,
+    "private_text_not_disclosed": true,
+    "recoupment_cap_enforced": true
+  },
+  "corrected_entitlement_rows": [
+    {
+      "basis": "corrected_post_adjudication_entitlement",
+      "chunk_id": "maya-youtube-transcript:chunk:0",
+      "corrected_amount": "0.435000",
+      "corrected_entitlement_hash": "fbc26987d3efb4a81467825ccc92dbc5b7044b0a8dbfda7aa0c0b99bf2dfab76",
+      "currency": "USD",
+      "decision_hash": "716ae9e2da94984b61103e50b6973e84533e120ab11a84fdeb3640ba2ee1f720",
+      "entitlement_id": "entitlement:post-adjudication:1",
+      "recipient_creator_id": "maya",
+      "source_row_hash": "2c1109cc4fb4acf59ddd5a61daaa0f8ea232fd9d7246891c0679878ef660c4ed",
+      "work_id": "maya-youtube-transcript"
+    },
+    {
+      "basis": "corrected_post_adjudication_entitlement",
+      "chunk_id": "jaron-data-dignity:chunk:0",
+      "corrected_amount": "0.115000",
+      "corrected_entitlement_hash": "8295e417cfd051288583879048e1ec97dcfe70061bd00904ce96eeedfa87d1d7",
+      "currency": "USD",
+      "decision_hash": "03364ba5b6399210077120a729d5ce4f9bd0863295277a0cb8405e5008eb580c",
+      "entitlement_id": "entitlement:post-adjudication:2",
+      "recipient_creator_id": "jaron",
+      "source_row_hash": "3286243e03b40609372e4bd6ffa287b6106175858f99ba1e1779ccc02de440b0",
+      "work_id": "jaron-data-dignity"
+    }
+  ],
+  "creator_adjustment_receipts": [
+    {
+      "adjustment_row_hash": "29bd85f65c2a1c2b3ea7c24c9865456dab89b037de5fe78ee25dc3fd3263a22c",
+      "adjustment_type": "recoupment",
+      "amount": "0.050000",
+      "basis": "creator_visible_post_adjudication_adjustment",
+      "basis_adjudication_hash": "7489ccc3650e383026c7932eeba3cf89513c7eb2436251fe079f495409163584",
+      "corrected_entitlement_hash": "8295e417cfd051288583879048e1ec97dcfe70061bd00904ce96eeedfa87d1d7",
+      "currency": "USD",
+      "historical_payment_hash": "5030bedb0743743d0b153b29b564a9874ce6dc11da37e8802aa4fe22a2f2f743",
+      "receipt_hash": "9fe0ebc90a048b113b9e3704409376c7cf2b460eff7bf3da77f4147e2f575817",
+      "receipt_id": "creator-adjustment-receipt:1:recoupment",
+      "recipient_creator_id": "jaron"
+    },
+    {
+      "adjustment_row_hash": "4453822f180f5f75dafcdc4f2e0d1b75fadf9afe88d7fdb5ace9bffb1c1d098e",
+      "adjustment_type": "top_up",
+      "amount": "0.050000",
+      "basis": "creator_visible_post_adjudication_adjustment",
+      "basis_adjudication_hash": "7489ccc3650e383026c7932eeba3cf89513c7eb2436251fe079f495409163584",
+      "corrected_entitlement_hash": "fbc26987d3efb4a81467825ccc92dbc5b7044b0a8dbfda7aa0c0b99bf2dfab76",
+      "currency": "USD",
+      "historical_payment_hash": "f4c9894b97db7403039a1e124f594c81889cf703404d10dd6fb5c4c3ede25a15",
+      "receipt_hash": "91945c3a933c686d4547c9ae23f10668dc18acaf4862a77a1801d6c702f53717",
+      "receipt_id": "creator-adjustment-receipt:2:top_up",
+      "recipient_creator_id": "maya"
+    }
+  ],
+  "creator_delta_rows": [
+    {
+      "corrected_entitlement_total": "0.115000",
+      "delta_amount": "-0.050000",
+      "previously_paid_total": "0.165000",
+      "recipient_creator_id": "jaron"
+    },
+    {
+      "corrected_entitlement_total": "0.435000",
+      "delta_amount": "0.050000",
+      "previously_paid_total": "0.385000",
+      "recipient_creator_id": "maya"
+    }
+  ],
+  "escrow_rows": [
+    {
+      "amount": "0.050000",
+      "currency": "USD",
+      "escrow_account_hash": "725351687fde265dc7f2dacc09efecbbfbed977ddd7e4cbedeca71a4dc13803c",
+      "escrow_id": "escrow:post-adjudication-adjustment",
+      "escrow_row_hash": "92ff6a4e5d3a2dffc9521d3fe1193f2b65a0fbe5b025c1e12148a14f9c8e360d",
+      "source": "post_adjudication_adjustment_pool"
+    }
+  ],
+  "future_netting_rows": [
+    {
+      "amount": "0.050000",
+      "basis": "forward_only_future_payable_netting",
+      "currency": "USD",
+      "future_payable_hash": "5d9622ef8007acd506ababe42490dc6edba635e8377556c1e7e0ed27dd33515c",
+      "future_payable_id": "future-payable:post-adjudication:recoupment",
+      "netting_id": "netting:post-adjudication:1:1",
+      "netting_row_hash": "721d4da93d16cb9210f5c49be5a368973ada4dc006049f91431aed30c9b79d05",
+      "recipient_creator_id": "jaron",
+      "recoupment_id": "recoupment:post-adjudication:1"
+    }
+  ],
+  "future_payable_rows": [
+    {
+      "amount": "0.200000",
+      "currency": "USD",
+      "payable_hash": "5d9622ef8007acd506ababe42490dc6edba635e8377556c1e7e0ed27dd33515c",
+      "payable_id": "future-payable:post-adjudication:recoupment",
+      "payable_period": "2026-06",
+      "recipient_creator_id": "jaron"
+    }
+  ],
+  "issued_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "appeal_state": "closed",
+    "historical_payment_policy": "append_only_forward_adjustment_no_rewrite",
+    "minimum_adjustment": "0.000001",
+    "recoupment_cap_rate": "0.50"
+  },
+  "previously_paid_rows": [
+    {
+      "amount": "0.385000",
+      "chunk_id": "maya-youtube-transcript:chunk:0",
+      "creator_payout_receipt_hash": "49f52d43acad7944e8d1960270372a4c87e729c07a1b5d59f0af094de9774786",
+      "currency": "USD",
+      "historical_payment_hash": "f4c9894b97db7403039a1e124f594c81889cf703404d10dd6fb5c4c3ede25a15",
+      "original_settlement_hash": "2548b132af8fc087bbb4b91a2f250b42ed54acd73381e70318a5a5b83df96271",
+      "payment_execution_hash": "0f4d22a4d9c94e8d26366ae7828e28316b6b29159bcb845aedf9cb8ed68b87be",
+      "payment_id": "payment:post-adjudication:1",
+      "recipient_creator_id": "maya",
+      "source_row_hash": "2c1109cc4fb4acf59ddd5a61daaa0f8ea232fd9d7246891c0679878ef660c4ed",
+      "work_id": "maya-youtube-transcript"
+    },
+    {
+      "amount": "0.165000",
+      "chunk_id": "jaron-data-dignity:chunk:0",
+      "creator_payout_receipt_hash": "49f52d43acad7944e8d1960270372a4c87e729c07a1b5d59f0af094de9774786",
+      "currency": "USD",
+      "historical_payment_hash": "5030bedb0743743d0b153b29b564a9874ce6dc11da37e8802aa4fe22a2f2f743",
+      "original_settlement_hash": "2f46e1ab014a18326cb05c260eabbd97323f788ad6c57170889f561817c227a7",
+      "payment_execution_hash": "0f4d22a4d9c94e8d26366ae7828e28316b6b29159bcb845aedf9cb8ed68b87be",
+      "payment_id": "payment:post-adjudication:2",
+      "recipient_creator_id": "jaron",
+      "source_row_hash": "3286243e03b40609372e4bd6ffa287b6106175858f99ba1e1779ccc02de440b0",
+      "work_id": "jaron-data-dignity"
+    }
+  ],
+  "privacy": {
+    "public_report_uses_hash_commitments": true,
+    "raw_output_disclosed": false,
+    "raw_payment_details_disclosed": false,
+    "raw_prompt_disclosed": false,
+    "raw_source_text_disclosed": false
+  },
+  "recoupment_rows": [
+    {
+      "amount": "0.050000",
+      "basis": "post_adjudication_overpayment_forward_netting",
+      "basis_adjudication_hash": "7489ccc3650e383026c7932eeba3cf89513c7eb2436251fe079f495409163584",
+      "corrected_entitlement_hash": "8295e417cfd051288583879048e1ec97dcfe70061bd00904ce96eeedfa87d1d7",
+      "currency": "USD",
+      "future_payable_total": "0.200000",
+      "historical_payment_hash": "5030bedb0743743d0b153b29b564a9874ce6dc11da37e8802aa4fe22a2f2f743",
+      "overpaid_amount": "0.050000",
+      "recipient_creator_id": "jaron",
+      "recoupment_cap_rate": "0.50",
+      "recoupment_id": "recoupment:post-adjudication:1",
+      "recoupment_row_hash": "29bd85f65c2a1c2b3ea7c24c9865456dab89b037de5fe78ee25dc3fd3263a22c"
+    }
+  ],
+  "report_hash": "67537551667f11aa00057a355f54df223315f5108dd30d8eeebb6d8fa0d7ee51",
+  "schemas": {
+    "post_adjudication_settlement_adjustment_report": "docs/schemas/post_adjudication_settlement_adjustment_report.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "7700d1e31010ef1a45e9d98fadf22fe06b321181bf8d33398f672e98e801cd58"
+  },
+  "summary": {
+    "adjusted_creator_count": 2,
+    "adjustment_case_id": "adjustment:rdllm-post-adjudication:001",
+    "appeal_state": "closed",
+    "basis_case_id": "case:rdllm-attribution-dispute:001",
+    "corrected_entitlement_total": "0.550000",
+    "creator_adjustment_conserved": true,
+    "creator_adjustment_receipt_count": 2,
+    "freeze_count": 0,
+    "frozen_total": "0.000000",
+    "future_netting_count": 1,
+    "overpayment_total": "0.050000",
+    "previously_paid_total": "0.550000",
+    "recoupment_count": 1,
+    "recoupment_total": "0.050000",
+    "status": "ready",
+    "target_certification_level": "RDLLM-L94",
+    "top_up_count": 1,
+    "top_up_total": "0.050000",
+    "underpayment_total": "0.050000"
+  },
+  "top_up_rows": [
+    {
+      "amount": "0.050000",
+      "basis": "post_adjudication_underpayment_top_up",
+      "basis_adjudication_hash": "7489ccc3650e383026c7932eeba3cf89513c7eb2436251fe079f495409163584",
+      "chunk_id": "maya-youtube-transcript:chunk:0",
+      "corrected_entitlement_hash": "fbc26987d3efb4a81467825ccc92dbc5b7044b0a8dbfda7aa0c0b99bf2dfab76",
+      "currency": "USD",
+      "escrow_account_hash": "725351687fde265dc7f2dacc09efecbbfbed977ddd7e4cbedeca71a4dc13803c",
+      "historical_payment_hash": "f4c9894b97db7403039a1e124f594c81889cf703404d10dd6fb5c4c3ede25a15",
+      "recipient_creator_id": "maya",
+      "source_row_hash": "2c1109cc4fb4acf59ddd5a61daaa0f8ea232fd9d7246891c0679878ef660c4ed",
+      "top_up_id": "top-up:post-adjudication:2",
+      "top_up_row_hash": "4453822f180f5f75dafcdc4f2e0d1b75fadf9afe88d7fdb5ace9bffb1c1d098e",
+      "work_id": "maya-youtube-transcript"
+    }
+  ],
+  "version": "rdllm-post-adjudication-settlement-adjustment-report/v1"
+}

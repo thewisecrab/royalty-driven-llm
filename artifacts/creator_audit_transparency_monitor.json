@@ -1,0 +1,460 @@
+{
+  "append_only_consistency_rows": [
+    {
+      "consistency_hash": "5caf8b03bf8ef29dfbfc91d5ba442834cba80061660e38f8639f27cc260b0e2c",
+      "current_log_id": "creator-audit-federation-latest",
+      "current_root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+      "current_tree_size": 3,
+      "decision": "consistent_prefix",
+      "prefix_consistent": true,
+      "previous_log_id": "creator-audit-federation-prefix",
+      "previous_root": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+      "previous_tree_size": 1
+    }
+  ],
+  "checks": {
+    "append_only_prefix_consistency": true,
+    "expected_federation_hashes_seen": true,
+    "expected_participant_index_hashes_seen": true,
+    "l112_transparency_report_hashes_reproducible": true,
+    "l112_transparency_report_shapes_valid": true,
+    "l112_transparency_report_versions_supported": true,
+    "l112_transparency_reports_match_monitor_query": true,
+    "l112_transparency_reports_present": true,
+    "l112_transparency_reports_ready": true,
+    "matching_observation_entry_hashes_reproducible": true,
+    "matching_observation_inclusion_proofs_valid": true,
+    "matching_observations_present": true,
+    "monitor_observations_append_only_with_previous": true,
+    "monitor_query_commitment_present": true,
+    "monitor_query_has_no_private_field_names": true,
+    "monitor_query_matches_previous": true,
+    "previous_monitor_hash_reproducible": true,
+    "private_strings_absent": true,
+    "provider_index_equivocation_absent": true,
+    "public_report_has_no_private_field_names": true,
+    "same_query_equivocation_absent": true,
+    "transparency_entries_have_required_hashes": true,
+    "transparency_entries_sequential": true,
+    "transparency_entry_hashes_reproducible": true,
+    "transparency_log_versions_supported": true,
+    "transparency_logs_present": true,
+    "transparency_roots_reproducible": true,
+    "transparency_tree_sizes_match": true
+  },
+  "commitments": {
+    "append_only_consistency_root": "5caf8b03bf8ef29dfbfc91d5ba442834cba80061660e38f8639f27cc260b0e2c",
+    "conflict_root": "2e1cfa82b035c26cbbbdae632cea070514eb8b773f616aaeaf668e2f0be8f10d",
+    "log_snapshot_root": "9a2fc4ea75e01d98e6c6356dc16f87c53711a08dd35e91dcbcf9350d2064229b",
+    "new_observation_root": "20b861f1f89889f76a042cbe013a14c7b53005588b12145cea4461f58857e2fb",
+    "observation_root": "20b861f1f89889f76a042cbe013a14c7b53005588b12145cea4461f58857e2fb",
+    "query_commitment_hash": "9b58b0c141a9e5c360a84667798afd527f301e2bef58f770de752c2cd677f323",
+    "schema": "docs/schemas/creator_audit_transparency_monitor.schema.json",
+    "transparency_report_root": "ac32d077b0d159be9525a212d79e4a0d04efe3aecd756b25f678ee0cecf355e7"
+  },
+  "conflict_rows": [],
+  "continuity": {
+    "current_observation_count": 4,
+    "monitor_mode": "genesis",
+    "new_observation_count": 4,
+    "previous_monitor_hash": "",
+    "previous_observation_count": 0,
+    "previous_query_commitment_hash": "",
+    "removed_previous_observation_count": 0,
+    "removed_previous_observation_hashes": []
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "creator_audit_transparency_monitor_hash": "8602e3189a02854b79cefc705377901ee7716a1ab21a8890cf4b0ec58d073cd6",
+  "issuer": "rdllm-local-demo",
+  "log_snapshot_rows": [
+    {
+      "computed_root": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+      "computed_tree_size": 1,
+      "declared_root": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+      "declared_tree_size": 1,
+      "entries_are_sequential": true,
+      "entries_have_required_hashes": true,
+      "entry_count": 1,
+      "entry_hashes_reproducible": true,
+      "entry_root": "4c78ab6e103af1b9efc3a58b88d853d417d4f34a356e2bb1be43f820f76cab47",
+      "log_id": "creator-audit-federation-prefix",
+      "log_version": "rdllm-creator-attribution-audit-federation-transparency-log/v1",
+      "root_matches_entries": true,
+      "snapshot_hash": "eb99e6d28cd67ab1c0c33cb1f3ba3786a56a2ba76233c8dffc0e6a00058ae046",
+      "tree_size_matches_entries": true
+    },
+    {
+      "computed_root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+      "computed_tree_size": 3,
+      "declared_root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+      "declared_tree_size": 3,
+      "entries_are_sequential": true,
+      "entries_have_required_hashes": true,
+      "entry_count": 3,
+      "entry_hashes_reproducible": true,
+      "entry_root": "c50744ce4ad04937be3497cf31886d9326a6f98c90fff9d75bd7055175ed85ca",
+      "log_id": "creator-audit-federation-latest",
+      "log_version": "rdllm-creator-attribution-audit-federation-transparency-log/v1",
+      "root_matches_entries": true,
+      "snapshot_hash": "2e6bfa9ed6f8dd7239fd540631469124ec9ad517cc5189e6d37ddc4ff832137d",
+      "tree_size_matches_entries": true
+    }
+  ],
+  "monitor_query": {
+    "expected_federation_hashes": [
+      "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953"
+    ],
+    "expected_participant_index_hashes": [
+      "0c7cad5fb40f02cd8d0752e9a018d3ee4eb637c2fb04712c2805c59ce1a5f439",
+      "2f496b48660fd9bf24eb2b44b82fb7401b9f3b275846b21a9b8f05c40ed60271"
+    ],
+    "expected_provider_ids": [
+      "provider:rdllm-partner",
+      "provider:rdllm-reference"
+    ],
+    "provider_set_hashes": [
+      "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76"
+    ],
+    "query_commitment_hash": "9b58b0c141a9e5c360a84667798afd527f301e2bef58f770de752c2cd677f323",
+    "query_hashes": [
+      "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207"
+    ],
+    "raw_creator_or_work_identifiers_disclosed": false,
+    "raw_query_terms_disclosed": false
+  },
+  "monitor_version": "rdllm-creator-audit-transparency-monitor/v1",
+  "new_observation_rows": [
+    {
+      "entry_hash": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+      "entry_hash_reproducible": true,
+      "entry_index": 0,
+      "entry_type": "rdllm-creator-attribution-audit-federation/v1",
+      "federation_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "inclusion_proof": {
+        "leaf_hash": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+        "leaf_index": 0,
+        "path": [
+          {
+            "hash": "c965c57d2f4881ea7bd9b4091ab0d1a69e2d4ddd014b29da2e7ec35313bbd124",
+            "side": "right"
+          },
+          {
+            "hash": "d7ebd744867e13c64dbef1e29622b9d57e54614d38b7f380fa983206f7b7c880",
+            "side": "right"
+          }
+        ],
+        "root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+        "tree_size": 3
+      },
+      "inclusion_proof_valid": true,
+      "log_id": "creator-audit-federation-latest",
+      "log_root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+      "observation_hash": "897c57e6080b1772306523f508f3c1d15c7dc5306c2ee639a3320ae896093407",
+      "participant_index_hash": "",
+      "provider_id": "",
+      "provider_set_hash": "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76",
+      "query_hash": "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207",
+      "subject_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "subject_payload_hash": "7accfe5cd38fd27cd7e9d79598f76e30f4e9a567f36c479aaf1defdd1e86f03e",
+      "tree_size": 3
+    },
+    {
+      "entry_hash": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+      "entry_hash_reproducible": true,
+      "entry_index": 0,
+      "entry_type": "rdllm-creator-attribution-audit-federation/v1",
+      "federation_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "inclusion_proof": {
+        "leaf_hash": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+        "leaf_index": 0,
+        "path": [],
+        "root": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+        "tree_size": 1
+      },
+      "inclusion_proof_valid": true,
+      "log_id": "creator-audit-federation-prefix",
+      "log_root": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+      "observation_hash": "5ec19b91eba825b711c50cb60f46777b0082f2ffb2d1a76f7cf03d9dd8e31e03",
+      "participant_index_hash": "",
+      "provider_id": "",
+      "provider_set_hash": "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76",
+      "query_hash": "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207",
+      "subject_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "subject_payload_hash": "7accfe5cd38fd27cd7e9d79598f76e30f4e9a567f36c479aaf1defdd1e86f03e",
+      "tree_size": 1
+    },
+    {
+      "entry_hash": "c965c57d2f4881ea7bd9b4091ab0d1a69e2d4ddd014b29da2e7ec35313bbd124",
+      "entry_hash_reproducible": true,
+      "entry_index": 1,
+      "entry_type": "rdllm-creator-attribution-audit-index/v1",
+      "federation_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "inclusion_proof": {
+        "leaf_hash": "c965c57d2f4881ea7bd9b4091ab0d1a69e2d4ddd014b29da2e7ec35313bbd124",
+        "leaf_index": 1,
+        "path": [
+          {
+            "hash": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+            "side": "left"
+          },
+          {
+            "hash": "d7ebd744867e13c64dbef1e29622b9d57e54614d38b7f380fa983206f7b7c880",
+            "side": "right"
+          }
+        ],
+        "root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+        "tree_size": 3
+      },
+      "inclusion_proof_valid": true,
+      "log_id": "creator-audit-federation-latest",
+      "log_root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+      "observation_hash": "ec7e0b4d1e2c18089099d21f9d2af50643228f79bdb45ed935732b3e811d3d43",
+      "participant_index_hash": "0c7cad5fb40f02cd8d0752e9a018d3ee4eb637c2fb04712c2805c59ce1a5f439",
+      "provider_id": "provider:rdllm-partner",
+      "provider_set_hash": "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76",
+      "query_hash": "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207",
+      "subject_hash": "0c7cad5fb40f02cd8d0752e9a018d3ee4eb637c2fb04712c2805c59ce1a5f439",
+      "subject_payload_hash": "244e1fd1f42677df43d7d7abbba501551af36c8114c21a04b7bcb17dd8192051",
+      "tree_size": 3
+    },
+    {
+      "entry_hash": "508f87ffa054858efd97a3e585e0377ed254d17ed8657e1bc0fa99b303aa880e",
+      "entry_hash_reproducible": true,
+      "entry_index": 2,
+      "entry_type": "rdllm-creator-attribution-audit-index/v1",
+      "federation_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "inclusion_proof": {
+        "leaf_hash": "508f87ffa054858efd97a3e585e0377ed254d17ed8657e1bc0fa99b303aa880e",
+        "leaf_index": 2,
+        "path": [
+          {
+            "hash": "508f87ffa054858efd97a3e585e0377ed254d17ed8657e1bc0fa99b303aa880e",
+            "side": "right"
+          },
+          {
+            "hash": "5639d6c057926b5a79d4e1c7bc1749df7dc5a6f2b3a75a636eda1c3218985194",
+            "side": "left"
+          }
+        ],
+        "root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+        "tree_size": 3
+      },
+      "inclusion_proof_valid": true,
+      "log_id": "creator-audit-federation-latest",
+      "log_root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+      "observation_hash": "1e47ea4374c1d67eec369dc6b9b82e8ce734be05c3b9e092e964c11cc9f9972e",
+      "participant_index_hash": "2f496b48660fd9bf24eb2b44b82fb7401b9f3b275846b21a9b8f05c40ed60271",
+      "provider_id": "provider:rdllm-reference",
+      "provider_set_hash": "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76",
+      "query_hash": "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207",
+      "subject_hash": "2f496b48660fd9bf24eb2b44b82fb7401b9f3b275846b21a9b8f05c40ed60271",
+      "subject_payload_hash": "94d5e3a9e8e0c15d35c6820c74f371546e8bfd02d001420937f2f2551d26c5c5",
+      "tree_size": 3
+    }
+  ],
+  "observation_rows": [
+    {
+      "entry_hash": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+      "entry_hash_reproducible": true,
+      "entry_index": 0,
+      "entry_type": "rdllm-creator-attribution-audit-federation/v1",
+      "federation_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "inclusion_proof": {
+        "leaf_hash": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+        "leaf_index": 0,
+        "path": [
+          {
+            "hash": "c965c57d2f4881ea7bd9b4091ab0d1a69e2d4ddd014b29da2e7ec35313bbd124",
+            "side": "right"
+          },
+          {
+            "hash": "d7ebd744867e13c64dbef1e29622b9d57e54614d38b7f380fa983206f7b7c880",
+            "side": "right"
+          }
+        ],
+        "root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+        "tree_size": 3
+      },
+      "inclusion_proof_valid": true,
+      "log_id": "creator-audit-federation-latest",
+      "log_root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+      "observation_hash": "897c57e6080b1772306523f508f3c1d15c7dc5306c2ee639a3320ae896093407",
+      "participant_index_hash": "",
+      "provider_id": "",
+      "provider_set_hash": "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76",
+      "query_hash": "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207",
+      "subject_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "subject_payload_hash": "7accfe5cd38fd27cd7e9d79598f76e30f4e9a567f36c479aaf1defdd1e86f03e",
+      "tree_size": 3
+    },
+    {
+      "entry_hash": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+      "entry_hash_reproducible": true,
+      "entry_index": 0,
+      "entry_type": "rdllm-creator-attribution-audit-federation/v1",
+      "federation_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "inclusion_proof": {
+        "leaf_hash": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+        "leaf_index": 0,
+        "path": [],
+        "root": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+        "tree_size": 1
+      },
+      "inclusion_proof_valid": true,
+      "log_id": "creator-audit-federation-prefix",
+      "log_root": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+      "observation_hash": "5ec19b91eba825b711c50cb60f46777b0082f2ffb2d1a76f7cf03d9dd8e31e03",
+      "participant_index_hash": "",
+      "provider_id": "",
+      "provider_set_hash": "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76",
+      "query_hash": "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207",
+      "subject_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "subject_payload_hash": "7accfe5cd38fd27cd7e9d79598f76e30f4e9a567f36c479aaf1defdd1e86f03e",
+      "tree_size": 1
+    },
+    {
+      "entry_hash": "c965c57d2f4881ea7bd9b4091ab0d1a69e2d4ddd014b29da2e7ec35313bbd124",
+      "entry_hash_reproducible": true,
+      "entry_index": 1,
+      "entry_type": "rdllm-creator-attribution-audit-index/v1",
+      "federation_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "inclusion_proof": {
+        "leaf_hash": "c965c57d2f4881ea7bd9b4091ab0d1a69e2d4ddd014b29da2e7ec35313bbd124",
+        "leaf_index": 1,
+        "path": [
+          {
+            "hash": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+            "side": "left"
+          },
+          {
+            "hash": "d7ebd744867e13c64dbef1e29622b9d57e54614d38b7f380fa983206f7b7c880",
+            "side": "right"
+          }
+        ],
+        "root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+        "tree_size": 3
+      },
+      "inclusion_proof_valid": true,
+      "log_id": "creator-audit-federation-latest",
+      "log_root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+      "observation_hash": "ec7e0b4d1e2c18089099d21f9d2af50643228f79bdb45ed935732b3e811d3d43",
+      "participant_index_hash": "0c7cad5fb40f02cd8d0752e9a018d3ee4eb637c2fb04712c2805c59ce1a5f439",
+      "provider_id": "provider:rdllm-partner",
+      "provider_set_hash": "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76",
+      "query_hash": "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207",
+      "subject_hash": "0c7cad5fb40f02cd8d0752e9a018d3ee4eb637c2fb04712c2805c59ce1a5f439",
+      "subject_payload_hash": "244e1fd1f42677df43d7d7abbba501551af36c8114c21a04b7bcb17dd8192051",
+      "tree_size": 3
+    },
+    {
+      "entry_hash": "508f87ffa054858efd97a3e585e0377ed254d17ed8657e1bc0fa99b303aa880e",
+      "entry_hash_reproducible": true,
+      "entry_index": 2,
+      "entry_type": "rdllm-creator-attribution-audit-index/v1",
+      "federation_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "inclusion_proof": {
+        "leaf_hash": "508f87ffa054858efd97a3e585e0377ed254d17ed8657e1bc0fa99b303aa880e",
+        "leaf_index": 2,
+        "path": [
+          {
+            "hash": "508f87ffa054858efd97a3e585e0377ed254d17ed8657e1bc0fa99b303aa880e",
+            "side": "right"
+          },
+          {
+            "hash": "5639d6c057926b5a79d4e1c7bc1749df7dc5a6f2b3a75a636eda1c3218985194",
+            "side": "left"
+          }
+        ],
+        "root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+        "tree_size": 3
+      },
+      "inclusion_proof_valid": true,
+      "log_id": "creator-audit-federation-latest",
+      "log_root": "a86524583186beb29c79cbb4ac7e8526835e460310836c8b731b0d9922ded862",
+      "observation_hash": "1e47ea4374c1d67eec369dc6b9b82e8ce734be05c3b9e092e964c11cc9f9972e",
+      "participant_index_hash": "2f496b48660fd9bf24eb2b44b82fb7401b9f3b275846b21a9b8f05c40ed60271",
+      "provider_id": "provider:rdllm-reference",
+      "provider_set_hash": "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76",
+      "query_hash": "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207",
+      "subject_hash": "2f496b48660fd9bf24eb2b44b82fb7401b9f3b275846b21a9b8f05c40ed60271",
+      "subject_payload_hash": "94d5e3a9e8e0c15d35c6820c74f371546e8bfd02d001420937f2f2551d26c5c5",
+      "tree_size": 3
+    }
+  ],
+  "policy": {
+    "minimum_input_level": "RDLLM-L112",
+    "profile": "rdllm-creator-audit-transparency-monitor-policy/v1",
+    "raw_creator_query_terms_prohibited": true,
+    "requires_append_only_log_monitoring": true,
+    "requires_append_only_monitor_continuity": true,
+    "requires_inclusion_proofs_for_matching_entries": true,
+    "requires_l112_transparency_reports": true,
+    "requires_query_equivocation_absence": true,
+    "target_certification_level": "RDLLM-L113"
+  },
+  "privacy": {
+    "answer_text_disclosed": false,
+    "creator_identifiers_disclosed": false,
+    "license_text_disclosed": false,
+    "notice_text_disclosed": false,
+    "payment_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "query_terms_disclosed": false,
+    "source_text_disclosed": false,
+    "stores_hashes_log_roots_inclusion_proofs_counts_and_diffs_not_text": true,
+    "work_identifiers_disclosed": false
+  },
+  "schemas": {
+    "creator_attribution_audit_federation": "docs/schemas/creator_attribution_audit_federation.schema.json",
+    "creator_attribution_audit_federation_transparency": "docs/schemas/creator_attribution_audit_federation_transparency.schema.json",
+    "creator_attribution_audit_index": "docs/schemas/creator_attribution_audit_index.schema.json",
+    "creator_audit_transparency_monitor": "docs/schemas/creator_audit_transparency_monitor.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "735dba83139671fdfb6c01c037cf9b1040a95db05f441e375fd1bca9567adfc1"
+  },
+  "summary": {
+    "append_only_violation_count": 0,
+    "conflict_count": 0,
+    "federation_observation_count": 1,
+    "matching_observation_count": 4,
+    "minimum_input_level": "RDLLM-L112",
+    "missing_expected_federation_count": 0,
+    "missing_expected_participant_index_count": 0,
+    "monitor_mode": "genesis",
+    "new_observation_count": 4,
+    "participant_index_observation_count": 2,
+    "provider_set_hash_count": 1,
+    "query_hash_count": 1,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L113",
+    "transparency_log_count": 2,
+    "transparency_report_count": 1
+  },
+  "transparency_report_rows": [
+    {
+      "append_only_violation_count": 0,
+      "checks_all_pass": true,
+      "federation_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "matches_monitor_query": true,
+      "missing_subject_count": 0,
+      "provider_set_hash": "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76",
+      "query_hash": "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207",
+      "report_index": 0,
+      "report_version": "rdllm-creator-attribution-audit-federation-transparency/v1",
+      "required_subject_count": 3,
+      "shape_error_count": 0,
+      "shape_valid": true,
+      "split_view_conflict_count": 0,
+      "status": "ready",
+      "subject_count": 3,
+      "target_certification_level": "RDLLM-L112",
+      "transparency_report_hash": "831a441248c3914cb957d5e40e22af938dfe3d95fef072c948ff66e0b7e0cb9a",
+      "transparency_report_hash_reproducible": true,
+      "transparency_report_payload_hash": "e19b50d54ee468959ede84d1139231d91021cc722154122d88d877265455c735",
+      "transparency_report_row_hash": "ac32d077b0d159be9525a212d79e4a0d04efe3aecd756b25f678ee0cecf355e7"
+    }
+  ]
+}

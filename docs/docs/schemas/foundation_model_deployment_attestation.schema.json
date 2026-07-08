@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/foundation_model_deployment_attestation.schema.json",
+  "title": "RDLLM Foundation Model Deployment Attestation",
+  "type": "object",
+  "required": [
+    "deployment_attestation_version",
+    "issuer",
+    "created_at",
+    "deployment_policy",
+    "artifact_bindings",
+    "trusted_deployment_key_rows",
+    "selected_route_binding",
+    "model_deployment_statement",
+    "request_response_binding",
+    "deployment_decision",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "foundation_model_deployment_attestation_hash",
+    "signature"
+  ],
+  "properties": {
+    "deployment_attestation_version": {
+      "const": "rdllm-foundation-model-deployment-attestation/v1"
+    },
+    "issuer": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "deployment_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "accepted_attestation_types",
+        "required_model_commitments",
+        "on_unattested_deployment",
+        "on_model_identity_mismatch",
+        "on_request_response_boundary_mismatch"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-foundation-model-deployment-attestation-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L129" },
+        "minimum_input_level": { "const": "RDLLM-L128" },
+        "accepted_attestation_types": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "required_model_commitments": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "on_unattested_deployment": { "const": "block_display" },
+        "on_model_identity_mismatch": { "const": "block_display" },
+        "on_request_response_boundary_mismatch": { "const": "block_display" }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "foundation_runtime_router",
+        "foundation_runtime_adapter"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/artifactBinding" }
+    },
+    "trusted_deployment_key_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "selected_route_binding": {
+      "type": "object",
+      "required": [
+        "route_id",
+        "provider_id",
+        "provider_family",
+        "native_model",
+        "route_decision_hash",
+        "foundation_runtime_router_hash",
+        "foundation_runtime_adapter_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "model_deployment_statement": {
+      "type": "object",
+      "required": [
+        "statement_version",
+        "provider_id",
+        "provider_family",
+        "deployment_id",
+        "native_model",
+        "model_version",
+        "attestation_type",
+        "model_manifest_hash",
+        "weights_commitment_hash",
+        "tokenizer_hash",
+        "inference_stack_hash",
+        "safety_policy_hash",
+        "attribution_policy_hash",
+        "selected_route_id",
+        "route_decision_hash",
+        "foundation_runtime_router_hash",
+        "foundation_runtime_adapter_hash",
+        "request_projection_hash",
+        "response_binding_hash",
+        "api_boundary_attestation_hash",
+        "deployment_key_id",
+        "created_at",
+        "valid_from",
+        "valid_until",
+        "statement_hash",
+        "signature"
+      ],
+      "properties": {
+        "statement_version": {
+          "const": "rdllm-foundation-model-deployment-statement/v1"
+        },
+        "provider_id": { "type": "string", "minLength": 1 },
+        "provider_family": { "type": "string", "minLength": 1 },
+        "deployment_id": { "type": "string", "minLength": 1 },
+        "native_model": { "type": "string", "minLength": 1 },
+        "model_version": { "type": "string", "minLength": 1 },
+        "statement_hash": { "type": "string", "minLength": 1 },
+        "signature": { "type": "object", "additionalProperties": true }
+      },
+      "additionalProperties": true
+    },
+    "request_response_binding": {
+      "type": "object",
+      "required": [
+        "native_response_id",
+        "native_output_hash",
+        "response_envelope_hash",
+        "request_projection_hash",
+        "response_binding_hash",
+        "api_boundary_attestation_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "deployment_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "release_authorized",
+        "failed_checks",
+        "failure_modes",
+        "safe_output_policy"
+      ],
+      "properties": {
+        "decision": { "enum": ["release", "block_display"] },
+        "release_authorized": { "type": "boolean" },
+        "failed_checks": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "safe_output_policy": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "artifact_hashes_reproducible",
+        "foundation_runtime_router_released_l128",
+        "selected_route_binds_runtime_adapter",
+        "trusted_deployment_key_active",
+        "deployment_statement_version_supported",
+        "deployment_statement_hash_reproducible",
+        "deployment_statement_signature_valid",
+        "deployment_statement_attestation_type_allowed",
+        "deployment_statement_model_commitments_present",
+        "deployment_statement_valid_for_report_time",
+        "deployment_statement_matches_selected_route",
+        "request_response_binding_complete",
+        "request_response_binding_matches_runtime_adapter",
+        "deployment_statement_binds_request_response_boundary",
+        "api_boundary_attestation_present",
+        "private_text_not_disclosed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "required": [
+        "failed_checks",
+        "failure_modes",
+        "missing_model_commitments",
+        "matched_deployment_key_id"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "foundation_runtime_router_hash",
+        "foundation_runtime_adapter_hash",
+        "trusted_deployment_key_root",
+        "model_deployment_statement_hash",
+        "request_response_binding_hash",
+        "schema"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "foundation_model_deployment_attestation",
+        "foundation_runtime_router",
+        "foundation_runtime_adapter"
+      ],
+      "properties": {
+        "foundation_model_deployment_attestation": {
+          "const": "docs/schemas/foundation_model_deployment_attestation.schema.json"
+        },
+        "foundation_runtime_router": {
+          "const": "docs/schemas/foundation_runtime_router.schema.json"
+        },
+        "foundation_runtime_adapter": {
+          "const": "docs/schemas/foundation_runtime_adapter.schema.json"
+        }
+      },
+      "additionalProperties": true
+    },
+    "privacy": { "type": "object", "additionalProperties": true },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "provider_id",
+        "provider_family",
+        "native_model",
+        "deployment_id",
+        "failed_check_count",
+        "deployment_release_authorized",
+        "model_identity_bound",
+        "request_response_boundary_bound",
+        "api_boundary_attested",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["released", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L129" },
+        "minimum_input_level": { "const": "RDLLM-L128" },
+        "failed_check_count": { "type": "integer", "minimum": 0 },
+        "deployment_release_authorized": { "type": "boolean" },
+        "model_identity_bound": { "type": "boolean" },
+        "request_response_boundary_bound": { "type": "boolean" },
+        "api_boundary_attested": { "type": "boolean" },
+        "privacy_preserved": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "foundation_model_deployment_attestation_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signature": { "type": "object", "additionalProperties": true }
+  },
+  "$defs": {
+    "artifactBinding": {
+      "type": "object",
+      "required": ["present", "declared_hash", "hash_reproducible", "artifact_type"],
+      "additionalProperties": true
+    },
+    "hashRow": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

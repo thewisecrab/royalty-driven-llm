@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/publication_witness.schema.json",
+  "title": "RDLLM Publication Witness",
+  "type": "object",
+  "required": [
+    "witness_version",
+    "issuer",
+    "created_at",
+    "witness_policy",
+    "checkpoint_subjects",
+    "monitor_errors",
+    "witness_attestations",
+    "witness_quorum",
+    "equivocation",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "publication_witness_hash",
+    "signature"
+  ],
+  "properties": {
+    "witness_version": {
+      "const": "rdllm-publication-witness/v1"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "witness_policy": {
+      "type": "object",
+      "required": [
+        "required_quorum",
+        "witness_count",
+        "split_view_detection",
+        "checkpoint_cosignatures_required",
+        "public_payloads_redacted"
+      ],
+      "additionalProperties": true
+    },
+    "checkpoint_subjects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "issuer",
+          "monitor_hash",
+          "checkpoint_index",
+          "checkpoint_hash",
+          "snapshot_hash",
+          "artifact_root",
+          "subject_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "monitor_errors": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "witness_attestations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "witness_id",
+          "witness_key_hash",
+          "observed_at",
+          "subject_hash",
+          "monitor_hash",
+          "checkpoint_hash",
+          "signature_algorithm",
+          "signature",
+          "attestation_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "witness_quorum": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "equivocation": {
+      "type": "object",
+      "required": [
+        "conflict_count",
+        "conflicts"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "publication_monitors_self_consistent",
+        "checkpoint_subjects_present",
+        "witness_quorum_policy_nonzero",
+        "witness_quorum_met",
+        "witness_signatures_valid",
+        "equivocation_absent",
+        "private_input_fields_absent"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "subject_root",
+        "attestation_root",
+        "schema"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "monitor_count",
+        "checkpoint_subject_count",
+        "witness_count",
+        "required_quorum",
+        "equivocation_count",
+        "private_input_field_count"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "publication_monitor_payloads_embedded",
+        "artifact_payloads_disclosed",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "evidence_text_disclosed",
+        "customer_or_payment_text_disclosed",
+        "witness_report_uses_checkpoint_hashes_and_cosignatures"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "publication_witness_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

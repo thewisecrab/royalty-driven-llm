@@ -1,0 +1,68 @@
+{
+  "event": {
+    "event_id": "evt_pinpoint_demo",
+    "event_hash": "evt_hash_pinpoint_demo",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05",
+    "prompt_text": "How should an AI answer prove that cited sources really support its claims?",
+    "response_text": "A reliable AI answer should cite sources only when candidate documents contain the answer-critical facts, reject topical anti-documents, publish footer source rows, and route uncertain attribution to escrow."
+  },
+  "claims": [
+    {
+      "claim_id": "claim_support_not_topical",
+      "claim_text": "A reliable AI answer should cite sources only when candidate documents contain the answer-critical facts.",
+      "required_evidence_phrases": [
+        "candidate documents contain the answer-critical facts"
+      ],
+      "expected_work_ids": ["work_pinpoint_support"],
+      "forbidden_work_ids": ["work_pinpoint_antidoc"]
+    },
+    {
+      "claim_id": "claim_escrow_uncertain",
+      "claim_text": "Uncertain attribution should be routed to escrow rather than paid directly.",
+      "required_evidence_phrases": [
+        "uncertain attribution to escrow"
+      ],
+      "expected_work_ids": ["work_pinpoint_support"],
+      "forbidden_work_ids": ["work_pinpoint_antidoc"]
+    }
+  ],
+  "candidate_documents": [
+    {
+      "document_id": "doc_pinpoint_support",
+      "work_id": "work_pinpoint_support",
+      "chunk_id": "chunk_pinpoint_support",
+      "creator_id": "creator_pinpoint",
+      "creator_name": "Pinpoint Research Owner",
+      "title": "Pinpoint Provenance Manual",
+      "source_uri": "https://example.test/pinpoint-provenance/manual",
+      "license": "royalty-bearing",
+      "document_role": "supporting",
+      "content": "Pinpoint provenance requires candidate documents contain the answer-critical facts before a model may cite them. The mechanism rejects topical anti-documents and routes uncertain attribution to escrow rather than direct payout."
+    },
+    {
+      "document_id": "doc_pinpoint_antidoc",
+      "work_id": "work_pinpoint_antidoc",
+      "chunk_id": "chunk_pinpoint_antidoc",
+      "creator_id": "creator_decoy",
+      "creator_name": "Topical Decoy Owner",
+      "title": "Topical Citation Overview",
+      "source_uri": "https://example.test/pinpoint-provenance/decoy",
+      "license": "royalty-bearing",
+      "document_role": "hard_anti_document",
+      "content": "Citation systems, source footers, AI answer confidence, documents, facts, and attribution are important topics for trustworthy user interfaces."
+    },
+    {
+      "document_id": "doc_generic_candidate",
+      "work_id": "work_generic_candidate",
+      "chunk_id": "chunk_generic_candidate",
+      "creator_id": "creator_generic",
+      "creator_name": "Generic Candidate Owner",
+      "title": "General AI Trust Note",
+      "source_uri": "https://example.test/pinpoint-provenance/generic",
+      "license": "royalty-bearing",
+      "document_role": "candidate",
+      "content": "Trustworthy AI systems should provide explanations, confidence estimates, and user-visible references where available."
+    }
+  ]
+}

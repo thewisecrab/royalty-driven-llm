@@ -1,0 +1,21 @@
+{
+  "entries": [
+    {
+      "entry_hash": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+      "entry_type": "rdllm-creator-attribution-audit-federation/v1",
+      "federation_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "index": 0,
+      "log_id": "creator-audit-federation-prefix",
+      "participant_index_hash": "",
+      "provider_id": "",
+      "provider_set_hash": "1f5a710920136f9809db75d20d25b0f68a77d2d58d85607fe75558de5f970c76",
+      "query_hash": "fd6b7cae3bfe50918115515172c8310699b620a9b6e80c9652b7beba1834b207",
+      "subject_hash": "44f20c958f52e0fe254ef7ce6742437dbaa503aa47060b591b177d0cfdb58953",
+      "subject_payload_hash": "7accfe5cd38fd27cd7e9d79598f76e30f4e9a567f36c479aaf1defdd1e86f03e"
+    }
+  ],
+  "log_id": "creator-audit-federation-prefix",
+  "log_version": "rdllm-creator-attribution-audit-federation-transparency-log/v1",
+  "root": "3005200f8e3b864fa8f9388275b3268613219ad39cf220d7b24f46641bde3422",
+  "tree_size": 1
+}

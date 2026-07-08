@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_adoption_standard.schema.json",
+  "title": "RDLLM Universal Adoption Standard",
+  "type": "object",
+  "required": [
+    "standard_version",
+    "issuer",
+    "created_at",
+    "standard_policy",
+    "artifact_bindings",
+    "provider_family_rows",
+    "sdk_surface_rows",
+    "implementer_role_rows",
+    "procurement_gate_rows",
+    "standards_mapping_rows",
+    "public_surface_rows",
+    "commitments",
+    "checks",
+    "standard_decision",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_adoption_standard_hash",
+    "signature"
+  ],
+  "properties": {
+    "standard_version": {
+      "const": "rdllm-universal-adoption-standard/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "standard_policy": { "type": "object" },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["artifact_count", "artifact_binding_root", "bindings"],
+      "properties": {
+        "artifact_count": { "type": "integer" },
+        "artifact_binding_root": { "type": "string" },
+        "bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "declared_hash",
+              "payload_hash",
+              "hash_reproducible",
+              "present",
+              "artifact_binding_hash"
+            ],
+            "properties": {
+              "name": { "type": "string" },
+              "version": { "type": "string" },
+              "declared_hash": { "type": "string" },
+              "payload_hash": { "type": "string" },
+              "hash_reproducible": { "type": "boolean" },
+              "status": { "type": "string" },
+              "target_level": { "type": "string" },
+              "present": { "type": "boolean" },
+              "artifact_binding_hash": { "type": "string" }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "provider_family_rows": { "type": "array" },
+    "sdk_surface_rows": { "type": "array" },
+    "implementer_role_rows": { "type": "array" },
+    "procurement_gate_rows": { "type": "array" },
+    "standards_mapping_rows": { "type": "array" },
+    "public_surface_rows": { "type": "array" },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "artifact_binding_root",
+        "provider_family_root",
+        "sdk_surface_root",
+        "implementer_role_root",
+        "procurement_gate_root",
+        "standards_mapping_root",
+        "public_surface_root",
+        "standard_commitment_hash"
+      ],
+      "additionalProperties": true
+    },
+    "checks": { "type": "object" },
+    "standard_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "publication_authorized",
+        "procurement_approved",
+        "failed_checks",
+        "failure_modes"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["universal_adoption_standard"],
+      "properties": {
+        "universal_adoption_standard": {
+          "const": "docs/schemas/universal_adoption_standard.schema.json"
+        }
+      },
+      "additionalProperties": true
+    },
+    "privacy": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "provider_family_count",
+        "sdk_surface_count",
+        "implementer_role_count",
+        "procurement_gate_count",
+        "standards_mapping_count",
+        "public_surface_count",
+        "failed_check_count",
+        "offline_verification_supported",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L138" },
+        "minimum_input_level": { "const": "RDLLM-L137" },
+        "provider_family_count": { "type": "integer" },
+        "sdk_surface_count": { "type": "integer" },
+        "implementer_role_count": { "type": "integer" },
+        "procurement_gate_count": { "type": "integer" },
+        "standards_mapping_count": { "type": "integer" },
+        "public_surface_count": { "type": "integer" },
+        "failed_check_count": { "type": "integer" },
+        "failure_mode_count": { "type": "integer" },
+        "offline_verification_supported": { "type": "boolean" },
+        "privacy_preserved": { "type": "boolean" },
+        "universal_rdllm_passport_hash": { "type": "string" },
+        "conformance_vector_pack_hash": { "type": "string" },
+        "standard_commitment_hash": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "universal_adoption_standard_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  },
+  "additionalProperties": true
+}

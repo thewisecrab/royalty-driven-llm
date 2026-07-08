@@ -1,0 +1,131 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "reserved-text:c1",
+      "content_hash": "1e126c1db288369d58ab6b52bac1c6438b03fb614e19ef347470fb5dc810e295",
+      "creator_id": "owner",
+      "policy_id": "policy:reserved-text",
+      "source_uri": "registered://works/reserved-text#reserved-text:c1",
+      "title": "Reserved Text",
+      "work_id": "reserved-text"
+    }
+  ],
+  "creators": [
+    {
+      "creator_id": "owner",
+      "name": "Rights Owner",
+      "payout_account": "acct_owner"
+    }
+  ],
+  "manifest_hash": "473066c0122a7bd26b44659ed8412978001e2a87100f9c91443cdb5ae7dcbe38",
+  "manifest_version": "rdllm-rights-manifest/v1",
+  "profiles": {
+    "croissant": "https://mlcommons.org/croissant/",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "spdx": "https://spdx.org/rdf/3.0.1/terms/"
+  },
+  "summary": {
+    "chunk_count": 1,
+    "creator_count": 1,
+    "work_count": 1
+  },
+  "works": [
+    {
+      "chunks": [
+        "reserved-text:c1"
+      ],
+      "content_hash": "1e126c1db288369d58ab6b52bac1c6438b03fb614e19ef347470fb5dc810e295",
+      "creator_id": "owner",
+      "creator_name": "Rights Owner",
+      "croissant": {
+        "prov:wasAttributedTo": "owner",
+        "prov:wasDerivedFrom": "registered://works/reserved-text",
+        "sc:license": "retrieval-only-royalty-bearing",
+        "usageRestrictions": {
+          "allowedUses": [
+            "training",
+            "retrieval"
+          ],
+          "jurisdictions": [
+            "GLOBAL"
+          ],
+          "prohibitedUses": [
+            "generation",
+            "external_attribution"
+          ]
+        }
+      },
+      "license": "retrieval-only-royalty-bearing",
+      "license_uri": "",
+      "odrl": {
+        "asset": "registered://works/reserved-text",
+        "duty": [
+          {
+            "action": "attribute"
+          },
+          {
+            "action": "compensate",
+            "constraint": {
+              "leftOperand": "creator_pool_rate",
+              "operator": "gteq",
+              "rightOperand": 0.55
+            }
+          }
+        ],
+        "permission": [
+          {
+            "action": "retrieval"
+          },
+          {
+            "action": "training"
+          }
+        ],
+        "prohibition": [
+          {
+            "action": "external_attribution"
+          },
+          {
+            "action": "generation"
+          }
+        ]
+      },
+      "policy": {
+        "allowed_uses": [
+          "training",
+          "retrieval"
+        ],
+        "jurisdictions": [
+          "GLOBAL"
+        ],
+        "minimum_creator_pool_rate": 0.55,
+        "policy_id": "policy:reserved-text",
+        "prohibited_uses": [
+          "generation",
+          "external_attribution"
+        ],
+        "requires_attribution": true,
+        "requires_royalty": true,
+        "revoked": false,
+        "revoked_at": ""
+      },
+      "source_uri": "registered://works/reserved-text",
+      "spdx": {
+        "externalRef": "registered://works/reserved-text",
+        "intendedUse": [
+          "training",
+          "retrieval"
+        ],
+        "name": "Reserved Text",
+        "verifiedUsing": [
+          {
+            "algorithm": "SHA256",
+            "hashValue": "1e126c1db288369d58ab6b52bac1c6438b03fb614e19ef347470fb5dc810e295"
+          }
+        ]
+      },
+      "title": "Reserved Text",
+      "work_id": "reserved-text"
+    }
+  ]
+}

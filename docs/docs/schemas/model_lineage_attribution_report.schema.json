@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RDLLM Model Lineage Attribution Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "student_model",
+    "training_run",
+    "student_usage",
+    "model_lineage_policy",
+    "training_items",
+    "accepted_training_item_pools",
+    "usage_settlement_obligations",
+    "escrow_rows",
+    "model_lineage_footer_rows",
+    "economics",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "schemas",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-model-lineage-attribution/v1"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "student_model": {
+      "type": "object",
+      "required": ["model_id", "model_version"]
+    },
+    "training_run": {
+      "type": "object",
+      "required": [
+        "run_id",
+        "method",
+        "lineage_tracking_enabled",
+        "synthetic_data_disclosed",
+        "training_content_summary_hash"
+      ]
+    },
+    "student_usage": {
+      "type": "object",
+      "required": ["event_id", "event_hash", "usage_hash", "creator_pool"]
+    },
+    "model_lineage_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "model_lineage_rate",
+        "trigger",
+        "synthetic_training_must_be_disclosed",
+        "duplicate_training_artifacts_do_not_inflate_credit"
+      ]
+    },
+    "training_items": {
+      "type": "array"
+    },
+    "accepted_training_item_pools": {
+      "type": "array"
+    },
+    "usage_settlement_obligations": {
+      "type": "array"
+    },
+    "escrow_rows": {
+      "type": "array"
+    },
+    "model_lineage_footer_rows": {
+      "type": "array"
+    },
+    "economics": {
+      "type": "object",
+      "required": [
+        "gross_revenue",
+        "creator_pool_rate",
+        "creator_pool",
+        "model_lineage_pool",
+        "residual_pool",
+        "direct_payout_total",
+        "escrow_total"
+      ]
+    },
+    "checks": {
+      "type": "object"
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "student_model_hash",
+        "training_run_hash",
+        "training_summary_hash",
+        "training_item_root",
+        "obligation_root",
+        "escrow_root",
+        "footer_root",
+        "policy_hash"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "training_item_count",
+        "accepted_training_item_count",
+        "duplicate_training_item_count",
+        "hidden_synthetic_failure_count",
+        "missing_teacher_evidence_count",
+        "escrow_item_count",
+        "settlement_obligation_count",
+        "footer_row_count",
+        "creator_pool_conserved",
+        "model_lineage_pool_conserved"
+      ]
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["model_lineage_attribution_report"]
+    },
+    "report_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

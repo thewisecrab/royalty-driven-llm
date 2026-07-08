@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rdllm/black_box_model_provenance_report.schema.json",
+  "title": "RDLLM Black-Box Model Provenance Report",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "version",
+    "audit",
+    "challenged_model",
+    "challenge_rows",
+    "candidate_evidence",
+    "model_provenance_set",
+    "model_provenance_footer_rows",
+    "settlement_obligations",
+    "escrow_rows",
+    "economics",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "version": {
+      "const": "rdllm-black-box-model-provenance/v1"
+    },
+    "audit": {
+      "type": "object",
+      "required": [
+        "audit_id",
+        "method",
+        "confidence_level",
+        "alpha",
+        "minimum_effect_over_baseline",
+        "minimum_challenge_count"
+      ]
+    },
+    "challenged_model": {
+      "type": "object",
+      "required": ["model_id_hash"]
+    },
+    "challenge_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "challenge_id",
+          "prompt_hash",
+          "challenged_output_hash",
+          "query_commitment_hash",
+          "baseline_score_count",
+          "candidate_score_count"
+        ]
+      }
+    },
+    "candidate_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidate_model_id_hash",
+          "candidate_label",
+          "score_count",
+          "mean_candidate_score",
+          "mean_baseline_score",
+          "effect_over_baseline",
+          "empirical_p_value",
+          "multiple_testing_adjusted_p_value",
+          "checks",
+          "decision"
+        ]
+      }
+    },
+    "model_provenance_set": {
+      "type": "array"
+    },
+    "model_provenance_footer_rows": {
+      "type": "array"
+    },
+    "settlement_obligations": {
+      "type": "array"
+    },
+    "escrow_rows": {
+      "type": "array"
+    },
+    "economics": {
+      "type": "object",
+      "required": [
+        "gross_revenue",
+        "creator_pool_rate",
+        "creator_pool",
+        "provenance_challenge_rate",
+        "provenance_challenge_pool",
+        "residual_creator_pool",
+        "settlement_obligation_total",
+        "escrow_total"
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "minimum_black_box_challenge_count_met",
+        "baseline_distribution_present",
+        "candidate_scores_present",
+        "model_provenance_set_constructed",
+        "multiple_testing_control_applied",
+        "provenance_set_confidence_level_met",
+        "candidate_member_sample_counts_met",
+        "undisclosed_derivative_challenge_settled_or_escrowed",
+        "creator_pool_conserved",
+        "black_box_private_text_not_disclosed"
+      ]
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "output_text_disclosed",
+        "source_text_disclosed",
+        "report_uses_hashes_and_scores_only"
+      ]
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["black_box_model_provenance_report"]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "challenge_decision",
+        "challenge_count",
+        "candidate_model_count",
+        "baseline_score_count",
+        "model_provenance_set_count",
+        "creator_pool_conserved"
+      ]
+    },
+    "report_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"]
+    }
+  }
+}

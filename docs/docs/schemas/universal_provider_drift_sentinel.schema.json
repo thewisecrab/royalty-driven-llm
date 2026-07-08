@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_provider_drift_sentinel.schema.json",
+  "title": "RDLLM Universal Provider Drift Sentinel",
+  "type": "object",
+  "required": [
+    "universal_provider_drift_sentinel_version",
+    "schema",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "drift_surface_rows",
+    "canary_replay_rows",
+    "sentinel_field_rows",
+    "negative_drift_rows",
+    "checks",
+    "sentinel_decision",
+    "privacy",
+    "well_known",
+    "summary",
+    "universal_provider_drift_sentinel_hash",
+    "signature"
+  ],
+  "properties": {
+    "universal_provider_drift_sentinel_version": {
+      "const": "rdllm-universal-provider-drift-sentinel/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_provider_drift_sentinel.schema.json"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_harness_level",
+        "well_known_path",
+        "required_core_artifacts",
+        "required_provider_families",
+        "required_drift_surfaces",
+        "required_canary_cadences",
+        "required_sentinel_fields",
+        "required_drift_failures"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-provider-drift-sentinel-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L158" },
+        "minimum_harness_level": { "const": "RDLLM-L157" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-provider-drift-sentinel.json"
+        },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_drift_surfaces": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_canary_cadences": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_sentinel_fields": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_drift_failures": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["bindings", "binding_root"],
+      "properties": {
+        "bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "declared_hash",
+              "payload_hash",
+              "hash_reproducible",
+              "present",
+              "artifact_binding_hash"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "binding_root": { "type": "string" }
+      }
+    },
+    "drift_surface_rows": {
+      "type": "object",
+      "required": ["rows", "row_count", "ready_count", "root"],
+      "properties": {
+        "rows": { "type": "array", "items": { "type": "object" } },
+        "row_count": { "type": "integer" },
+        "ready_count": { "type": "integer" },
+        "root": { "type": "string" }
+      }
+    },
+    "canary_replay_rows": {
+      "type": "object",
+      "required": ["rows", "row_count", "ready_count", "root"],
+      "properties": {
+        "rows": { "type": "array", "items": { "type": "object" } },
+        "row_count": { "type": "integer" },
+        "ready_count": { "type": "integer" },
+        "root": { "type": "string" }
+      }
+    },
+    "sentinel_field_rows": {
+      "type": "object",
+      "required": ["rows", "row_count", "ready_count", "root"],
+      "properties": {
+        "rows": { "type": "array", "items": { "type": "object" } },
+        "row_count": { "type": "integer" },
+        "ready_count": { "type": "integer" },
+        "root": { "type": "string" }
+      }
+    },
+    "negative_drift_rows": {
+      "type": "object",
+      "required": ["rows", "row_count", "ready_count", "root"],
+      "properties": {
+        "rows": { "type": "array", "items": { "type": "object" } },
+        "row_count": { "type": "integer" },
+        "ready_count": { "type": "integer" },
+        "root": { "type": "string" }
+      }
+    },
+    "checks": { "type": "object", "additionalProperties": { "type": "boolean" } },
+    "sentinel_decision": {
+      "type": "object",
+      "required": [
+        "universal_provider_drift_sentinel_authorized",
+        "failure_modes",
+        "on_failure",
+        "revocation_required_for"
+      ],
+      "properties": {
+        "universal_provider_drift_sentinel_authorized": { "type": "boolean" },
+        "failure_modes": { "type": "array", "items": { "type": "string" } },
+        "on_failure": { "type": "string" },
+        "revocation_required_for": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "privacy": { "type": "object", "additionalProperties": true },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "schema", "create", "verify"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-provider-drift-sentinel.json"
+        },
+        "schema": {
+          "const": "docs/schemas/universal_provider_drift_sentinel.schema.json"
+        },
+        "create": { "const": "universal-provider-drift-sentinel" },
+        "verify": { "const": "verify-universal-provider-drift-sentinel" }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_harness_level",
+        "provider_family_count",
+        "drift_surface_count",
+        "provider_surface_count",
+        "ready_provider_surface_count",
+        "canary_replay_count",
+        "ready_canary_replay_count",
+        "negative_drift_fixture_count",
+        "ready_negative_drift_fixture_count",
+        "continuous_drift_monitoring_supported",
+        "automatic_revocation_supported",
+        "settlement_hold_on_drift_required",
+        "offline_verification_supported",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L158" },
+        "minimum_harness_level": { "const": "RDLLM-L157" },
+        "provider_family_count": { "type": "integer" },
+        "drift_surface_count": { "type": "integer" },
+        "provider_surface_count": { "type": "integer" },
+        "ready_provider_surface_count": { "type": "integer" },
+        "canary_replay_count": { "type": "integer" },
+        "ready_canary_replay_count": { "type": "integer" },
+        "negative_drift_fixture_count": { "type": "integer" },
+        "ready_negative_drift_fixture_count": { "type": "integer" },
+        "continuous_drift_monitoring_supported": { "type": "boolean" },
+        "automatic_revocation_supported": { "type": "boolean" },
+        "settlement_hold_on_drift_required": { "type": "boolean" },
+        "offline_verification_supported": { "type": "boolean" },
+        "privacy_preserved": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "universal_provider_drift_sentinel_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "properties": {
+        "algorithm": { "type": "string" },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      }
+    }
+  },
+  "additionalProperties": false
+}

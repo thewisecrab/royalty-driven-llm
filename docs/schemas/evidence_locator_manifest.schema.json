@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/evidence_locator_manifest.schema.json",
+  "title": "RDLLM Evidence Locator Manifest",
+  "type": "object",
+  "required": [
+    "locator_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "footer_locator_display",
+    "evidence_locator_rows",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "evidence_locator_manifest_hash",
+    "signature"
+  ],
+  "properties": {
+    "locator_version": {
+      "const": "rdllm-evidence-locator-manifest/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "every_preview_claim_requires_locator",
+        "exact_passage_locator_required",
+        "public_locator_url_required",
+        "snapshot_or_text_fragment_required",
+        "allowed_locator_types",
+        "allowed_resolver_statuses",
+        "raw_full_source_text_disclosure_allowed",
+        "raw_excerpt_text_redisclosure_allowed"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "evidence_preview_footer"
+      ],
+      "additionalProperties": true
+    },
+    "footer_locator_display": {
+      "type": "object",
+      "required": [
+        "profile",
+        "locator_line_count",
+        "locator_lines",
+        "locator_root"
+      ],
+      "additionalProperties": true
+    },
+    "evidence_locator_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "display_order",
+          "source_label",
+          "claim_hash",
+          "evidence_span_prefix",
+          "display_anchor",
+          "source_uri",
+          "preview_source_uri",
+          "locator_type",
+          "locator_url",
+          "resolver_status",
+          "snapshot_hash",
+          "text_fragment_hash",
+          "region_hash",
+          "claim_preview_row_hash",
+          "declared_claim_preview_row_hash",
+          "excerpt_hash",
+          "declared_excerpt_hash",
+          "exact_passage_locator",
+          "display_line",
+          "evidence_locator_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "required": [
+        "failed_checks",
+        "missing_locator_claim_keys",
+        "unsupported_locator_claim_hashes",
+        "unresolved_locator_claim_hashes",
+        "missing_exact_locator_claim_hashes",
+        "unbound_snapshot_claim_hashes",
+        "source_uri_mismatch_claim_hashes"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "artifact_binding_root",
+        "locator_root",
+        "footer_locator_display_hash",
+        "schema"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "evidence_locator_manifest",
+        "evidence_preview_footer"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_full_source_text_disclosed",
+        "raw_excerpt_text_redisclosed",
+        "raw_answer_text_disclosed",
+        "raw_claim_text_disclosed",
+        "raw_prompt_text_disclosed",
+        "payment_account_disclosed",
+        "public_locator_urls_disclosed",
+        "snapshot_hashes_disclosed"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "preview_claim_count",
+        "locator_count",
+        "exact_locator_count",
+        "snapshot_or_text_fragment_count",
+        "failed_check_count",
+        "click_through_evidence_supported",
+        "exact_passage_resolution_supported",
+        "snapshot_fallback_supported",
+        "privacy_preserved"
+      ],
+      "additionalProperties": true
+    },
+    "evidence_locator_manifest_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

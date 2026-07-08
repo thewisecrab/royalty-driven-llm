@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/deep_research_citation_audit.schema.json",
+  "title": "RDLLM Deep Research Citation Audit",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "audit_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "answer_binding",
+    "artifact_bindings",
+    "source_rows",
+    "citation_marker_rows",
+    "claim_support_rows",
+    "footer_rows",
+    "checks",
+    "commitments",
+    "schemas",
+    "summary",
+    "privacy",
+    "deep_research_citation_audit_hash",
+    "signature"
+  ],
+  "properties": {
+    "audit_version": {
+      "const": "rdllm-deep-research-citation-audit/v1"
+    },
+    "issuer": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "citation_markers_must_resolve",
+        "source_links_must_be_materialized",
+        "claim_support_must_clear_thresholds",
+        "min_relevance_score",
+        "min_factual_support_score"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-deep-research-citation-audit-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L115" },
+        "minimum_input_level": { "const": "RDLLM-L103" },
+        "citation_markers_must_resolve": { "const": true },
+        "source_links_must_be_materialized": { "const": true },
+        "claim_support_must_clear_thresholds": { "const": true },
+        "min_relevance_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "min_factual_support_score": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "answer_binding": {
+      "type": "object",
+      "required": [
+        "answer_id_hash",
+        "rendered_text_hash",
+        "rendered_text_length",
+        "citation_marker_count",
+        "claim_count",
+        "source_count"
+      ]
+    },
+    "artifact_bindings": { "type": "object" },
+    "source_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "title",
+          "source_uri",
+          "content_hash",
+          "retrieval_status",
+          "link_materialized",
+          "source_row_hash"
+        ]
+      }
+    },
+    "citation_marker_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "occurrence",
+          "label",
+          "marker",
+          "marker_type",
+          "context_hash",
+          "resolved",
+          "marker_hash"
+        ]
+      }
+    },
+    "claim_support_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_hash",
+          "citation_labels",
+          "resolved_citation_labels",
+          "support_status",
+          "relevance_score",
+          "factual_support_score",
+          "claim_supported",
+          "claim_row_hash"
+        ]
+      }
+    },
+    "footer_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "display_order",
+          "label",
+          "title",
+          "source_uri",
+          "content_hash",
+          "visible_marker_count",
+          "supported_claim_count",
+          "footer_row_hash"
+        ]
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "rendered_text_hash_present",
+        "source_rows_present",
+        "citation_markers_present",
+        "claim_rows_present",
+        "every_marker_resolves_to_materialized_source",
+        "every_claim_has_resolved_citations",
+        "every_claim_is_factually_supported",
+        "every_cited_source_link_materialized",
+        "footer_rows_cover_all_cited_sources",
+        "artifact_bindings_hash_reproducible",
+        "public_report_has_no_private_field_names",
+        "private_strings_absent"
+      ]
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "source_row_root",
+        "citation_marker_root",
+        "claim_support_root",
+        "footer_row_root",
+        "schema"
+      ]
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["deep_research_citation_audit"]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "source_count",
+        "citation_marker_count",
+        "resolved_citation_marker_count",
+        "claim_count",
+        "supported_claim_count",
+        "verified_source_count",
+        "footer_source_count"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L115" },
+        "minimum_input_level": { "const": "RDLLM-L103" }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_prompt_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_source_text_disclosed",
+        "raw_evidence_text_disclosed",
+        "payment_text_disclosed",
+        "public_report_uses_hashes_scores_uris_and_titles"
+      ]
+    },
+    "deep_research_citation_audit_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"]
+    }
+  }
+}

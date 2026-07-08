@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/finance_ledger_attestation.schema.json",
+  "title": "RDLLM Finance Ledger Attestation",
+  "type": "object",
+  "required": [
+    "attestation_version",
+    "issuer",
+    "created_at",
+    "finance_record_rows",
+    "revenue_source_rollups",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "schemas",
+    "attestation_hash",
+    "signature"
+  ],
+  "properties": {
+    "attestation_version": {
+      "const": "rdllm-finance-ledger-attestation/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "finance_record_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "finance_record_id",
+          "revenue_source_id",
+          "external_system",
+          "record_type",
+          "period_start",
+          "period_end",
+          "currency",
+          "gross_revenue",
+          "record_hashes",
+          "external_record_hash_supplied",
+          "finance_record_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "revenue_source_rollups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "revenue_source_id",
+          "record_count",
+          "finance_gross_revenue",
+          "revenue_allocation_gross_revenue",
+          "gross_revenue_matches_revenue_allocation",
+          "finance_record_root",
+          "allocation_source_present",
+          "finance_records_present",
+          "rollup_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "revenue_allocation_report_ready",
+        "finance_records_present",
+        "finance_record_rows_hash_bound",
+        "finance_record_hashes_present",
+        "rollup_rows_hash_bound",
+        "all_finance_records_map_to_allocation_sources",
+        "all_allocation_sources_have_finance_records",
+        "source_totals_match_revenue_allocation",
+        "total_gross_matches_revenue_allocation",
+        "single_currency_report",
+        "no_duplicate_finance_record_rows",
+        "private_finance_fields_absent_from_input",
+        "private_finance_fields_absent_from_report"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "revenue_allocation_report_hash",
+        "revenue_allocation_source_root",
+        "finance_record_root",
+        "revenue_source_rollup_root",
+        "finance_gross_revenue_total",
+        "revenue_allocation_gross_revenue_total",
+        "external_system_root"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "finance_record_count",
+        "revenue_source_count",
+        "external_system_count",
+        "currency",
+        "finance_gross_revenue_total",
+        "revenue_allocation_gross_revenue_total",
+        "unmatched_finance_source_count",
+        "unbacked_allocation_source_count"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L47" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "raw_customer_account_disclosed",
+        "invoice_text_disclosed",
+        "raw_finance_records_disclosed",
+        "payment_identifier_disclosed",
+        "finance_rows_use_hashes_amounts_and_source_ids"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["finance_ledger_attestation", "revenue_allocation_report"],
+      "additionalProperties": { "type": "string" }
+    },
+    "attestation_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

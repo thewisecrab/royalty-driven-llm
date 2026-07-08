@@ -1,0 +1,965 @@
+{
+  "api_contract": {
+    "api_contract_hash": "bd9e3254228f1f479d62d34b9bbd755eda9eb1ab3076922b80a1b2038a100719",
+    "endpoint_count": 57,
+    "endpoints": [
+      {
+        "method": "POST",
+        "name": "generate",
+        "path": "/v1/rdllm/responses",
+        "returns": "rdllm-response-envelope/v1"
+      },
+      {
+        "method": "POST",
+        "name": "verify_response_envelope",
+        "path": "/v1/rdllm/verify/response-envelope",
+        "returns": "verification_result"
+      },
+      {
+        "method": "GET",
+        "name": "provider_card",
+        "path": "/.well-known/rdllm/provider-attribution-card.json",
+        "returns": "rdllm-provider-attribution-card/v1"
+      },
+      {
+        "method": "GET",
+        "name": "certification_report",
+        "path": "/.well-known/rdllm/certification-report.json",
+        "returns": "rdllm-certification/v1"
+      },
+      {
+        "method": "GET",
+        "name": "assurance_bundle",
+        "path": "/.well-known/rdllm/assurance-bundle.json",
+        "returns": "rdllm-assurance-bundle/v1"
+      },
+      {
+        "method": "GET",
+        "name": "rights_remediation_report",
+        "path": "/.well-known/rdllm/rights-remediation-report.json",
+        "returns": "rdllm-rights-remediation/v1"
+      },
+      {
+        "method": "GET",
+        "name": "semantic_text_attribution_report",
+        "path": "/.well-known/rdllm/semantic-text-attribution-report.json",
+        "returns": "rdllm-semantic-text-attribution/v1"
+      },
+      {
+        "method": "POST",
+        "name": "code_attribution_report",
+        "path": "/v1/rdllm/code-attribution-reports",
+        "returns": "rdllm-code-attribution-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "code_attribution_manifest",
+        "path": "/.well-known/rdllm/code-attribution-report.json",
+        "returns": "rdllm-code-attribution-report/v1"
+      },
+      {
+        "method": "POST",
+        "name": "claim_verification_report",
+        "path": "/v1/rdllm/claim-verification-reports",
+        "returns": "rdllm-claim-verification-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "claim_verification_manifest",
+        "path": "/.well-known/rdllm/claim-verification-report.json",
+        "returns": "rdllm-claim-verification-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "attribution_exchange",
+        "path": "/.well-known/rdllm/attribution-exchange.json",
+        "returns": "rdllm-attribution-exchange/v1"
+      },
+      {
+        "method": "GET",
+        "name": "conformance_vector_pack",
+        "path": "/.well-known/rdllm/conformance-vector-pack.json",
+        "returns": "rdllm-conformance-vector-pack/v1"
+      },
+      {
+        "method": "POST",
+        "name": "federation_handshake",
+        "path": "/v1/rdllm/federation-handshake",
+        "returns": "rdllm-federation-handshake/v1"
+      },
+      {
+        "method": "GET",
+        "name": "federation_handshake_manifest",
+        "path": "/.well-known/rdllm/federation-handshake.json",
+        "returns": "rdllm-federation-handshake/v1"
+      },
+      {
+        "method": "GET",
+        "name": "attribution_capsule",
+        "path": "/.well-known/rdllm/attribution-capsule.json",
+        "returns": "rdllm-attribution-capsule/v1"
+      },
+      {
+        "method": "GET",
+        "name": "response_release_gate",
+        "path": "/.well-known/rdllm/release-gate.json",
+        "returns": "rdllm-response-release-gate/v1"
+      },
+      {
+        "method": "POST",
+        "name": "proof_carrying_response",
+        "path": "/v1/rdllm/proof-carrying-responses",
+        "returns": "rdllm-proof-carrying-response/v1"
+      },
+      {
+        "method": "GET",
+        "name": "proof_carrying_response_manifest",
+        "path": "/.well-known/rdllm/proof-carrying-response.json",
+        "returns": "rdllm-proof-carrying-response/v1"
+      },
+      {
+        "method": "POST",
+        "name": "serving_gateway_report",
+        "path": "/v1/rdllm/serving-gateway-reports",
+        "returns": "rdllm-serving-gateway-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "serving_gateway_manifest",
+        "path": "/.well-known/rdllm/serving-gateway-report.json",
+        "returns": "rdllm-serving-gateway-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "creator_license_contract",
+        "path": "/.well-known/rdllm/creator-license-contract.json",
+        "returns": "rdllm-creator-license-contract/v1"
+      },
+      {
+        "method": "GET",
+        "name": "source_confidence_report",
+        "path": "/.well-known/rdllm/source-confidence-report.json",
+        "returns": "rdllm-source-confidence-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "citation_footer_contract",
+        "path": "/.well-known/rdllm/citation-footer-contract.json",
+        "returns": "rdllm-citation-footer-contract/v1"
+      },
+      {
+        "method": "GET",
+        "name": "source_availability_report",
+        "path": "/.well-known/rdllm/source-availability-report.json",
+        "returns": "rdllm-source-availability-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "evidence_sufficiency_report",
+        "path": "/.well-known/rdllm/evidence-sufficiency-report.json",
+        "returns": "rdllm-evidence-sufficiency-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "counterevidence_report",
+        "path": "/.well-known/rdllm/counterevidence-report.json",
+        "returns": "rdllm-counterevidence-adjudication-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "answer_claim_coverage_report",
+        "path": "/.well-known/rdllm/answer-claim-coverage-report.json",
+        "returns": "rdllm-answer-claim-coverage-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "generation_context_closure_report",
+        "path": "/.well-known/rdllm/generation-context-closure-report.json",
+        "returns": "rdllm-generation-context-closure-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "source_boundary_report",
+        "path": "/.well-known/rdllm/source-boundary-report.json",
+        "returns": "rdllm-source-boundary-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "decision_provenance_report",
+        "path": "/.well-known/rdllm/decision-provenance-report.json",
+        "returns": "rdllm-decision-provenance-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "calibrated_attribution_report",
+        "path": "/.well-known/rdllm/calibrated-attribution-report.json",
+        "returns": "rdllm-calibrated-attribution-confidence/v1"
+      },
+      {
+        "method": "POST",
+        "name": "private_audit_challenge",
+        "path": "/v1/rdllm/private-audit-challenges",
+        "returns": "rdllm-private-audit-challenge/v1"
+      },
+      {
+        "method": "GET",
+        "name": "private_audit_challenge_manifest",
+        "path": "/.well-known/rdllm/private-audit-challenge.json",
+        "returns": "rdllm-private-audit-challenge/v1"
+      },
+      {
+        "method": "POST",
+        "name": "transitive_attribution_report",
+        "path": "/v1/rdllm/transitive-attribution-reports",
+        "returns": "rdllm-transitive-attribution-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "transitive_attribution_manifest",
+        "path": "/.well-known/rdllm/transitive-attribution-report.json",
+        "returns": "rdllm-transitive-attribution-report/v1"
+      },
+      {
+        "method": "POST",
+        "name": "clearinghouse_report",
+        "path": "/v1/rdllm/clearinghouse-reports",
+        "returns": "rdllm-clearinghouse-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "clearinghouse_manifest",
+        "path": "/.well-known/rdllm/clearinghouse-report.json",
+        "returns": "rdllm-clearinghouse-report/v1"
+      },
+      {
+        "method": "POST",
+        "name": "remittance_report",
+        "path": "/v1/rdllm/remittance-reports",
+        "returns": "rdllm-remittance-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "remittance_manifest",
+        "path": "/.well-known/rdllm/remittance-report.json",
+        "returns": "rdllm-remittance-report/v1"
+      },
+      {
+        "method": "POST",
+        "name": "audit_attestation",
+        "path": "/v1/rdllm/audit-attestations",
+        "returns": "rdllm-third-party-audit-attestation/v1"
+      },
+      {
+        "method": "GET",
+        "name": "audit_attestation_manifest",
+        "path": "/.well-known/rdllm/audit-attestation.json",
+        "returns": "rdllm-third-party-audit-attestation/v1"
+      },
+      {
+        "method": "POST",
+        "name": "revenue_allocation_report",
+        "path": "/v1/rdllm/revenue-allocation-reports",
+        "returns": "rdllm-revenue-allocation-report/v1"
+      },
+      {
+        "method": "GET",
+        "name": "revenue_allocation_manifest",
+        "path": "/.well-known/rdllm/revenue-allocation-report.json",
+        "returns": "rdllm-revenue-allocation-report/v1"
+      },
+      {
+        "method": "POST",
+        "name": "finance_ledger_attestation",
+        "path": "/v1/rdllm/finance-ledger-attestations",
+        "returns": "rdllm-finance-ledger-attestation/v1"
+      },
+      {
+        "method": "GET",
+        "name": "finance_ledger_attestation_manifest",
+        "path": "/.well-known/rdllm/finance-ledger-attestation.json",
+        "returns": "rdllm-finance-ledger-attestation/v1"
+      },
+      {
+        "method": "POST",
+        "name": "proof_dependency_graph",
+        "path": "/v1/rdllm/proof-dependency-graphs",
+        "returns": "rdllm-proof-dependency-graph/v1"
+      },
+      {
+        "method": "GET",
+        "name": "proof_dependency_graph_manifest",
+        "path": "/.well-known/rdllm/proof-dependency-graph.json",
+        "returns": "rdllm-proof-dependency-graph/v1"
+      },
+      {
+        "method": "POST",
+        "name": "publication_monitor",
+        "path": "/v1/rdllm/publication-monitor-reports",
+        "returns": "rdllm-publication-monitor/v1"
+      },
+      {
+        "method": "GET",
+        "name": "publication_monitor_manifest",
+        "path": "/.well-known/rdllm/publication-monitor.json",
+        "returns": "rdllm-publication-monitor/v1"
+      },
+      {
+        "method": "POST",
+        "name": "publication_witness",
+        "path": "/v1/rdllm/publication-witness-reports",
+        "returns": "rdllm-publication-witness/v1"
+      },
+      {
+        "method": "GET",
+        "name": "publication_witness_manifest",
+        "path": "/.well-known/rdllm/publication-witness.json",
+        "returns": "rdllm-publication-witness/v1"
+      },
+      {
+        "method": "POST",
+        "name": "trust_registry",
+        "path": "/v1/rdllm/trust-registry-reports",
+        "returns": "rdllm-trust-registry/v1"
+      },
+      {
+        "method": "GET",
+        "name": "trust_registry_manifest",
+        "path": "/.well-known/rdllm/trust-registry.json",
+        "returns": "rdllm-trust-registry/v1"
+      },
+      {
+        "method": "POST",
+        "name": "certification_attestation",
+        "path": "/v1/rdllm/certification-attestations",
+        "returns": "rdllm-certification-attestation/v1"
+      },
+      {
+        "method": "GET",
+        "name": "certification_attestation_manifest",
+        "path": "/.well-known/rdllm/certification-attestation.json",
+        "returns": "rdllm-certification-attestation/v1"
+      },
+      {
+        "method": "POST",
+        "name": "challenge",
+        "path": "/v1/rdllm/challenges",
+        "returns": "rdllm-attribution-challenge/v1"
+      }
+    ],
+    "required_embedded_artifacts": [
+      "answer_provenance_card",
+      "source_verification_report",
+      "public_receipt",
+      "provider_attribution_card",
+      "certification_report"
+    ],
+    "required_headers": [
+      "RDLLM-Envelope-Hash",
+      "RDLLM-Certification-Level",
+      "RDLLM-Provider-Card-Hash",
+      "RDLLM-Handshake-Hash",
+      "RDLLM-Capsule-ID",
+      "RDLLM-Capsule-Hash",
+      "RDLLM-Release-Gate-Hash",
+      "RDLLM-Release-Decision",
+      "RDLLM-Proof-Response-Hash",
+      "RDLLM-Serving-Gateway-Hash",
+      "RDLLM-License-Contract-Hash",
+      "RDLLM-Source-Confidence-Hash",
+      "RDLLM-Citation-Footer-Hash",
+      "RDLLM-Source-Availability-Hash",
+      "RDLLM-Evidence-Sufficiency-Hash",
+      "RDLLM-Counterevidence-Hash",
+      "RDLLM-Answer-Claim-Coverage-Hash",
+      "RDLLM-Generation-Context-Closure-Hash",
+      "RDLLM-Source-Boundary-Hash",
+      "RDLLM-Decision-Provenance-Hash",
+      "RDLLM-Private-Audit-Challenge-Hash",
+      "RDLLM-Transitive-Attribution-Hash",
+      "RDLLM-Clearinghouse-Hash",
+      "RDLLM-Remittance-Hash",
+      "RDLLM-Audit-Attestation-Hash",
+      "RDLLM-Revenue-Allocation-Hash",
+      "RDLLM-Finance-Ledger-Attestation-Hash",
+      "RDLLM-Proof-Dependency-Graph-Hash",
+      "RDLLM-Publication-Monitor-Hash",
+      "RDLLM-Publication-Witness-Hash",
+      "RDLLM-Trust-Registry-Hash",
+      "RDLLM-Certification-Attestation-Hash",
+      "RDLLM-Code-Attribution-Hash",
+      "RDLLM-Claim-Verification-Hash",
+      "RDLLM-Output-Hash",
+      "RDLLM-Exchange-Hash",
+      "RDLLM-Vector-Pack-Hash",
+      "RDLLM-Signature"
+    ],
+    "required_response_format": "rdllm-response-envelope/v1",
+    "well_known_path": "/.well-known/rdllm/integration-profile.json"
+  },
+  "artifact_catalog": [
+    {
+      "artifact_type": "rdllm-provider-attribution-card/v1",
+      "declared_hash": "c1fa4ab331808f0faa1b64259033b3bf4a2bb1fcd29119f13e8ab0bb372b6aa9",
+      "entry_hash": "7fdd7bafe0111844df367e04743a8f9712bcee773cd04cfd402bd768c5cf58f6",
+      "name": "provider_attribution_card",
+      "payload_hash": "49f08a409f97d971bdf4dc65c3000db11806bcf613002a87742cd23a7253f5ba",
+      "required": true,
+      "well_known_path": "/.well-known/rdllm/provider-attribution-card.json"
+    },
+    {
+      "artifact_type": "rdllm-certification/v1",
+      "declared_hash": "111a5306ef0c73a7c7be1c09970a9729482686fb43831aecce6cfcfaba276264",
+      "entry_hash": "0b3255bc09c15b082d63b528f51e0696bd7b2ad2e78abd2dee7b9643ceee9474",
+      "name": "certification_report",
+      "payload_hash": "202840c6b1d71083a3f89b14b087dc339d0b7b4005d61a5776b05e29b949d947",
+      "required": true,
+      "well_known_path": "/.well-known/rdllm/certification-report.json"
+    },
+    {
+      "artifact_type": "rdllm-integration-profile/v1",
+      "declared_hash": "daabab8d489d83d19575798a94a05229fd21c1fdee7dcbaddc1e33dd886667d3",
+      "entry_hash": "1cce0f61907fceafc92b837e27458b64fd72b0deb0dbf37c076b8c9aea38835c",
+      "name": "integration_profile",
+      "payload_hash": "65fd726bdc59d4bfc60a42d185e7b8c8febaeacc3f0f2eff5762c66e4428984e",
+      "required": true,
+      "well_known_path": "/.well-known/rdllm/integration-profile.json"
+    },
+    {
+      "artifact_type": "rdllm-response-envelope/v1",
+      "declared_hash": "c1ddfb45d3947513d9e25a67e2a064963444c6b0e72e82787f1179056399cf4a",
+      "entry_hash": "3bb1b55eee5155fad0912e41d0f16385c93fa1631f438cdd3877c938b24bd84d",
+      "name": "response_envelope",
+      "payload_hash": "97875496f299daa036a97e9aa058129f157d375e28e73280cacb262b8d4b7fd7",
+      "required": true,
+      "well_known_path": "/.well-known/rdllm/sample-response-envelope.json"
+    },
+    {
+      "artifact_type": "rdllm-assurance-bundle/v1",
+      "declared_hash": "8b446c6c6db2c2813c4062c4962e1002647a8c23fee5a47c4172d8190993a63e",
+      "entry_hash": "10fcf3120cf476dae41618de2bb575e7889895b80cbc35ffec3369dfb7667431",
+      "name": "assurance_bundle",
+      "payload_hash": "2197f8ef9efd7d33ca792fc2f6987d446b2f4f244fd8c39107a457a449a160cc",
+      "required": true,
+      "well_known_path": "/.well-known/rdllm/assurance-bundle.json"
+    },
+    {
+      "artifact_type": "rdllm-training-content-summary/v1",
+      "declared_hash": "d1391aae94982e4a104f80d58e101db1e28a1fda439cf49dd73a903f155caf03",
+      "entry_hash": "e46a4a52ecda5d1a14d479b26adb0775ce0c0b11b8b1e7805cfbb4755c2dc039",
+      "name": "training_content_summary",
+      "payload_hash": "3d6add54d9376ec8e41881aa55c88d444c8e3b51690f79c07657cf55c3aacbaa",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/training-content-summary.json"
+    },
+    {
+      "artifact_type": "rdllm-provenance-evaluation/v1",
+      "declared_hash": "cb2df8911c05283092e1a7f70ddeaf2bbb8316c6d1f0eb8adbed6646d4d6cd7a",
+      "entry_hash": "556eee10da9223c5c24ff5fd3a0883a5ccfb3713cf04daaef6fef70226259006",
+      "name": "provenance_evaluation_report",
+      "payload_hash": "c817bca0c2b29271eeaac2d367cdc5518da88274ece19dcc4c9f61f9b22e02c0",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/provenance-evaluation-report.json"
+    },
+    {
+      "artifact_type": "rdllm-counterfactual-influence/v1",
+      "declared_hash": "0e8867e74dcb90ddbff07a535e5c0bbddc275a73a32938c1fe9f58d3f106730b",
+      "entry_hash": "b5b225e33360e92c8cbb89592cbd85b16405230aee9f9de3f77c531047366817",
+      "name": "counterfactual_influence_report",
+      "payload_hash": "24f2f83d24fbf2231ed1625cd99445035cde35d3bd5ab8d26234daaf142567fb",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/counterfactual-influence-report.json"
+    },
+    {
+      "artifact_type": "rdllm-media-attribution/v1",
+      "declared_hash": "797362b0bb37e873f4f054d4c757517e2cc417de8005f295ae96e9c593c20ae2",
+      "entry_hash": "780815b5363ebe767a79bce6241e0e8f81225548b044aeb56f562159015ae27e",
+      "name": "media_attribution_report",
+      "payload_hash": "f994055a75b5bbfd43556f01ea8ccc605725a9349cf64997c4017c9b3f74e3fa",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/media-attribution-report.json"
+    },
+    {
+      "artifact_type": "rdllm-model-signal-attribution/v1",
+      "declared_hash": "d8247fa904f299dddb63cb570e76646cfc32f51959626975b2fec767bef6a2a5",
+      "entry_hash": "2664d75a8ff414532ce3fb661e14d5633bef5592282cff477c4b8127819e8d9a",
+      "name": "model_signal_attribution_report",
+      "payload_hash": "c7967b07809ae44966c45c68c475ddcaacceebf7dd831bcd59f2c7cc1ca83b44",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/model-signal-attribution-report.json"
+    },
+    {
+      "artifact_type": "rdllm-rights-remediation/v1",
+      "declared_hash": "24fc8bf8ef2f39b8d7512c8c5b3cff45e7a8f19116416ecc51f755fb7b307700",
+      "entry_hash": "509bfe3ae930dfbc1b6ff35d34c90737774dd98c95e49109f0d37d2f14f120ca",
+      "name": "rights_remediation_report",
+      "payload_hash": "dc46784e3d568eb03de1934291caaacfcdafda7e2ab2e2ef36441a80df52208d",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/rights-remediation-report.json"
+    },
+    {
+      "artifact_type": "rdllm-semantic-text-attribution/v1",
+      "declared_hash": "5fa1c86553fa67917a9b88a18cff170e2d85406184a643d32d98051db344599d",
+      "entry_hash": "fd26e523f441ec31c442571449c2ad3773dffb2bc4bb2ff868595f65db78dd4c",
+      "name": "semantic_text_attribution_report",
+      "payload_hash": "0b4195db96da8437a600da0fc229a0f8104738c62571114e619d885ec014e5d0",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/semantic-text-attribution-report.json"
+    },
+    {
+      "artifact_type": "rdllm-code-attribution-report/v1",
+      "declared_hash": "f590876180b18176a6379bc537a6ae1ddd18e943660c4ea4292a56f4d0c0ef43",
+      "entry_hash": "55d7436371f1b7135d2bb2af8dcebf0d71864bf5a3ea966b52a070005e2a15f8",
+      "name": "code_attribution_report",
+      "payload_hash": "7fc1264a44a064e24be0a232767cf99e51b83a60cd9ee7a270cb5c79a7c8d4e2",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/code-attribution-report.json"
+    },
+    {
+      "artifact_type": "rdllm-claim-verification-report/v1",
+      "declared_hash": "33a03101ced8590011808c970ae303b24781939c1fc0e5f9466faa9913375bb2",
+      "entry_hash": "c63d46d63f27ce4033edc6046141c5ac191025a90ab822575648a4f12b4d2ed1",
+      "name": "claim_verification_report",
+      "payload_hash": "5df0722efb9a63942b35915361903be3163e116c34a822c8527053a0d5c8cba2",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/claim-verification-report.json"
+    },
+    {
+      "artifact_type": "rdllm-source-availability-report/v1",
+      "declared_hash": "238518a63376867b5c25fad055995299505bf2a351f740882e4f7a090050f993",
+      "entry_hash": "656c71fd6ef85064ff5693f45d61cb55f2e78e11ea8b7bb5c3fd73b98e3bfb12",
+      "name": "source_availability_report",
+      "payload_hash": "1f5c2aab06bb47540befe5bd0cdc43714b276ebbe1e1972c647037ff2691bd0f",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/source-availability-report.json"
+    },
+    {
+      "artifact_type": "rdllm-evidence-sufficiency-report/v1",
+      "declared_hash": "3274b7c2676c5d6676db45514ae2b640d465faee88facfb27b71f88a81358c11",
+      "entry_hash": "a21a09945feebbabcd4943435b14a3d1f405e59bd24d1784b116bfda46ac6166",
+      "name": "evidence_sufficiency_report",
+      "payload_hash": "46361cdfca45ae72450f893d357f0d2e3732dacaab3a0de53b7244e3a820013b",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/evidence-sufficiency-report.json"
+    },
+    {
+      "artifact_type": "rdllm-counterevidence-adjudication-report/v1",
+      "declared_hash": "67e1e1b3c138f4622671661d6ce083fa2ef8f8df363d539ffe19de8eea4003ea",
+      "entry_hash": "803815374a81b82bb7037e9a8390842580b57adf8bda8d0bc921ed8aebb8b90c",
+      "name": "counterevidence_report",
+      "payload_hash": "a20d15acc2aaf0998c7ba8c990970b11cb6295c069bbd48e85466a42e007dee2",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/counterevidence-report.json"
+    },
+    {
+      "artifact_type": "rdllm-answer-claim-coverage-report/v1",
+      "declared_hash": "b5af4a7492533851f71eb57c2698179696015922dfc733b77bf657a153957cce",
+      "entry_hash": "3b56ce70a04e8fc6906af2fc8f3a14992f5a090cf70936cde415fc0c8d4187ac",
+      "name": "answer_claim_coverage_report",
+      "payload_hash": "b6eafc3453e2fd360bf4ae176a154c075ff6eafafd2280755a61598ca42c3d3d",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/answer-claim-coverage-report.json"
+    },
+    {
+      "artifact_type": "rdllm-generation-context-closure-report/v1",
+      "declared_hash": "9ee942968abd610e4d6a266f53084beb598e793969eae755434864d36ce7487e",
+      "entry_hash": "61e1e74b5e5fff5d9cdc340f36bddd8ec1e56e979bc3f59e20202e2590b16733",
+      "name": "generation_context_closure_report",
+      "payload_hash": "32b15357314e70923b3f5c3c105d8bf93e65a9b7ad36c253f3bbe400f8a4faa0",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/generation-context-closure-report.json"
+    },
+    {
+      "artifact_type": "rdllm-source-boundary-report/v1",
+      "declared_hash": "b94205b29d5ea652332b2ffd705edd50936edb4a1147e9f5acfc935aad562ffb",
+      "entry_hash": "a8c69e1adfdf5f8c402e47a1b2e45d82b58c8c6e7c28c6e3952c78de04f14ed2",
+      "name": "source_boundary_report",
+      "payload_hash": "b07a6f8d08736f5863c245535a0dff16b77eee10692149ae9e0b240a73ef60af",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/source-boundary-report.json"
+    },
+    {
+      "artifact_type": "rdllm-decision-provenance-report/v1",
+      "declared_hash": "a79eada85bec2cd6ce4a2134cf094a5d3174fb51feadc188ef14c408efd0b228",
+      "entry_hash": "3299cca070fba9c7b10023ffddc3b36c4804e92803414b4d0885175443e8b8a9",
+      "name": "decision_provenance_report",
+      "payload_hash": "d741fd26bff968a5bd6e506309bc14813168335a74004bb134ed62b735615851",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/decision-provenance-report.json"
+    },
+    {
+      "artifact_type": "rdllm-calibrated-attribution-confidence/v1",
+      "declared_hash": "e8d834b586ad2db05ab719f60d28bf37177808d6fc2d92862509365c415b910d",
+      "entry_hash": "495a08bb3941235b408f5bc95aad7fe66f5b6b7e550108479c54a5c3cc7b73c7",
+      "name": "calibrated_attribution_report",
+      "payload_hash": "83140db85b6bd6fd6a4e80a311b41137e241a21833624ef7a02908049de86c1b",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/calibrated-attribution-report.json"
+    },
+    {
+      "artifact_type": "rdllm-creator-license-contract/v1",
+      "declared_hash": "cdfbb03f6f42a1a0cbe7babf170245a53257f080cd8c802fd84ca047f95493b0",
+      "entry_hash": "3a59db21df1b9aa54432d3a9e65a95c6829392a11dd6ce056459dadd1d722e9a",
+      "name": "creator_license_contract",
+      "payload_hash": "f1c61d70779f49a417ad08fdfa4dfb57d58cad5016e74924827f981c1ee1ff4f",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/creator-license-contract.json"
+    },
+    {
+      "artifact_type": "rdllm-source-confidence-report/v1",
+      "declared_hash": "cce9496347cd5f9f1d6a3fbc30efeb51671b0444e3c2552a43cd761b24b710e8",
+      "entry_hash": "ea2ac200be4165161fb39d15c120232660e7d3f1013e27d410b3d076dc4f1878",
+      "name": "source_confidence_report",
+      "payload_hash": "d7a17e4b13d7aec37b7cd6b806961ed112e204a7bd398aaa6b0fb0dab75b3f4a",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/source-confidence-report.json"
+    },
+    {
+      "artifact_type": "rdllm-citation-footer-contract/v1",
+      "declared_hash": "321949b721177295ab1ac7b509b72afd9b91fe8359752815ad4808e63d1be419",
+      "entry_hash": "16bfc31dc161ceec91a1e1136c81854e850c1a576df8e32f52c7ecd484c85504",
+      "name": "citation_footer_contract",
+      "payload_hash": "feba8a747191d7a54dd73273cf707cafe28dbd6eb4ccc4b04146f448a1551d12",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/citation-footer-contract.json"
+    },
+    {
+      "artifact_type": "rdllm-private-audit-challenge/v1",
+      "declared_hash": "51491b3f6787efa58dd9c01e2c95091a644c6a652bbcbf03a9e0ae226b75cf85",
+      "entry_hash": "514741ba3e5b0acb841aa40139c1334af2d37069df9a80afd8d3e6465052a1c6",
+      "name": "private_audit_challenge",
+      "payload_hash": "6a40116aee2cd317c3331e01f1a29b775a2208e214e9edf183eddda84b9cb8d0",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/private-audit-challenge.json"
+    },
+    {
+      "artifact_type": "rdllm-revenue-allocation-report/v1",
+      "declared_hash": "e583e9d86aaa694243787b892d40754eedaf7e3cfba23f8b9752222db6ecb987",
+      "entry_hash": "77171eb5e853a4bc73eb16e584fb0edc7b8be4f413868c6d022a30758afb447a",
+      "name": "revenue_allocation_report",
+      "payload_hash": "0e417fee7e58c22d37eb12924e30e155c43aafd6e6ab637238234d0055e2e9d5",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/revenue-allocation-report.json"
+    },
+    {
+      "artifact_type": "rdllm-finance-ledger-attestation/v1",
+      "declared_hash": "bf9213efed842b864f119fc30fcfd464e6f4df7ce8845bfe2677530d7d973ef0",
+      "entry_hash": "3f59808c4a7f474f02450dcdd5419c2af1406e79facfb192354827e3ca61abfc",
+      "name": "finance_ledger_attestation",
+      "payload_hash": "77789c123ab67daef6693198d7a220536366702fa5a1c012dcc19e5f96e4e8fa",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/finance-ledger-attestation.json"
+    },
+    {
+      "artifact_type": "rdllm-proof-dependency-graph/v1",
+      "declared_hash": "a8c62f47310d4a18f934a34bda68177bcc7f668180638cae69b3591682a99517",
+      "entry_hash": "0f6646397db0c4c00b79f23838e45fb4aa95f2086bbf468791e1a57507ade4b0",
+      "name": "proof_dependency_graph",
+      "payload_hash": "9eced1880fe80d40d600ebff567850aa730c03236d8a166a8f2e5b9efa5e8056",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/proof-dependency-graph.json"
+    },
+    {
+      "artifact_type": "rdllm-publication-monitor/v1",
+      "declared_hash": "0a103af2bb0a8ca4dd6c934028f5e9801c917205bf7c8a158a9c3bcd3e318281",
+      "entry_hash": "38873376f2de3c37c80f08f2e451e05b6563e1db1f979585f8b764b4e9f1e392",
+      "name": "publication_monitor",
+      "payload_hash": "edc414cf7959a858d010a27b3b791874c82ce81be5de39debe17143293399a8c",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/publication-monitor.json"
+    },
+    {
+      "artifact_type": "rdllm-publication-witness/v1",
+      "declared_hash": "af076ed804132552cf58d5c11c1b6bdc6292cb6ed16cdfe3c4cd38e231db5143",
+      "entry_hash": "e6ee7e42b0e215c34642a3a075b7aced9cc1ef999791b94298010c729322ed45",
+      "name": "publication_witness",
+      "payload_hash": "b2399a94290e0d512c606c25cddd3c819ad944812c7c03cf7e6d0a426252bac7",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/publication-witness.json"
+    },
+    {
+      "artifact_type": "rdllm-trust-registry/v1",
+      "declared_hash": "ab616c3d357526aacbd45e7835892ff71bddeafdeda1087720f2d462439e2be8",
+      "entry_hash": "48d2eeeb19b5c283c735dffde472e7abd87780ef7af0fc2cb3495bb1eaeeb0f0",
+      "name": "trust_registry",
+      "payload_hash": "c92720e3c735c21c780f8c13fc88fc598abe7ef6db7a49c7388621ca664c8815",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/trust-registry.json"
+    },
+    {
+      "artifact_type": "rdllm-certification-attestation/v1",
+      "declared_hash": "f9a9739c5684e7d2158e3c1c122e30fdfc62d686df7f0b7469bd265928d9acff",
+      "entry_hash": "94fcfdb2218a151274083123a7d2278486c0d23d593498c57b4648e46e1639ef",
+      "name": "certification_attestation",
+      "payload_hash": "e22020785a593bb942d5eadf329c80893066c0bf919b2f30d8548a5ec2105cd8",
+      "required": false,
+      "well_known_path": "/.well-known/rdllm/certification-attestation.json"
+    }
+  ],
+  "created_at": "2026-05-31T03:41:13Z",
+  "discovery": {
+    "answer_claim_coverage_report_path": "/.well-known/rdllm/answer-claim-coverage-report.json",
+    "assurance_bundle_path": "/.well-known/rdllm/assurance-bundle.json",
+    "attribution_capsule_path": "/.well-known/rdllm/attribution-capsule.json",
+    "attribution_exchange_path": "/.well-known/rdllm/attribution-exchange.json",
+    "audit_attestation_path": "/.well-known/rdllm/audit-attestation.json",
+    "calibrated_attribution_report_path": "/.well-known/rdllm/calibrated-attribution-report.json",
+    "certification_attestation_path": "/.well-known/rdllm/certification-attestation.json",
+    "certification_report_path": "/.well-known/rdllm/certification-report.json",
+    "change_policy": "material proof changes require a new manifest_hash",
+    "citation_footer_contract_path": "/.well-known/rdllm/citation-footer-contract.json",
+    "claim_verification_report_path": "/.well-known/rdllm/claim-verification-report.json",
+    "clearinghouse_report_path": "/.well-known/rdllm/clearinghouse-report.json",
+    "code_attribution_report_path": "/.well-known/rdllm/code-attribution-report.json",
+    "conformance_vector_pack_path": "/.well-known/rdllm/conformance-vector-pack.json",
+    "counterevidence_report_path": "/.well-known/rdllm/counterevidence-report.json",
+    "counterfactual_influence_report_path": "/.well-known/rdllm/counterfactual-influence-report.json",
+    "creator_license_contract_path": "/.well-known/rdllm/creator-license-contract.json",
+    "decision_provenance_report_path": "/.well-known/rdllm/decision-provenance-report.json",
+    "evidence_sufficiency_report_path": "/.well-known/rdllm/evidence-sufficiency-report.json",
+    "federation_handshake_path": "/.well-known/rdllm/federation-handshake.json",
+    "finance_ledger_attestation_path": "/.well-known/rdllm/finance-ledger-attestation.json",
+    "generation_context_closure_report_path": "/.well-known/rdllm/generation-context-closure-report.json",
+    "integration_profile_path": "/.well-known/rdllm/integration-profile.json",
+    "media_attribution_report_path": "/.well-known/rdllm/media-attribution-report.json",
+    "model_signal_attribution_report_path": "/.well-known/rdllm/model-signal-attribution-report.json",
+    "private_audit_challenge_path": "/.well-known/rdllm/private-audit-challenge.json",
+    "proof_carrying_response_path": "/.well-known/rdllm/proof-carrying-response.json",
+    "proof_dependency_graph_path": "/.well-known/rdllm/proof-dependency-graph.json",
+    "provenance_evaluation_report_path": "/.well-known/rdllm/provenance-evaluation-report.json",
+    "provider_card_path": "/.well-known/rdllm/provider-attribution-card.json",
+    "publication_monitor_path": "/.well-known/rdllm/publication-monitor.json",
+    "publication_witness_path": "/.well-known/rdllm/publication-witness.json",
+    "remittance_report_path": "/.well-known/rdllm/remittance-report.json",
+    "response_release_gate_path": "/.well-known/rdllm/release-gate.json",
+    "revenue_allocation_report_path": "/.well-known/rdllm/revenue-allocation-report.json",
+    "rights_remediation_report_path": "/.well-known/rdllm/rights-remediation-report.json",
+    "sample_response_envelope_path": "/.well-known/rdllm/sample-response-envelope.json",
+    "semantic_text_attribution_report_path": "/.well-known/rdllm/semantic-text-attribution-report.json",
+    "serving_gateway_report_path": "/.well-known/rdllm/serving-gateway-report.json",
+    "source_availability_report_path": "/.well-known/rdllm/source-availability-report.json",
+    "source_boundary_report_path": "/.well-known/rdllm/source-boundary-report.json",
+    "source_confidence_report_path": "/.well-known/rdllm/source-confidence-report.json",
+    "training_content_summary_path": "/.well-known/rdllm/training-content-summary.json",
+    "transitive_attribution_report_path": "/.well-known/rdllm/transitive-attribution-report.json",
+    "trust_registry_path": "/.well-known/rdllm/trust-registry.json",
+    "well_known_path": "/.well-known/rdllm.json"
+  },
+  "issuer": "rdllm-local-demo",
+  "manifest_hash": "f9a15bf5853cfb477129ea72463cbd9ed8b3df0f331176c025e46eee2ec2e867",
+  "manifest_version": "rdllm-discovery-manifest/v1",
+  "privacy": {
+    "artifact_payloads_embedded": false,
+    "manifest_uses_hashes_paths_and_contract_metadata": true,
+    "private_ledger_disclosed": false,
+    "private_prompt_payload_disclosed": false,
+    "private_source_corpus_disclosed": false
+  },
+  "provider": {
+    "id": "provider:reference",
+    "model_id": "rdllm-reference-python",
+    "model_version": "2026-05"
+  },
+  "readiness_checks": {
+    "all_required_artifacts_cataloged": true,
+    "answer_claim_coverage_hash_reproducible": true,
+    "artifact_hashes_reproducible": true,
+    "assurance_bundle_includes_integration_profile": true,
+    "assurance_bundle_includes_response_envelope": true,
+    "calibrated_attribution_hash_reproducible": true,
+    "certification_attestation_hash_reproducible": true,
+    "certification_level_at_least_l22": true,
+    "citation_footer_contract_hash_reproducible": true,
+    "claim_verification_hash_reproducible": true,
+    "clearinghouse_report_hash_reproducible": true,
+    "code_attribution_hash_reproducible": true,
+    "counterevidence_hash_reproducible": true,
+    "counterfactual_influence_hash_reproducible": true,
+    "creator_license_contract_hash_reproducible": true,
+    "decision_provenance_hash_reproducible": true,
+    "discovery_schema_declared": true,
+    "evidence_sufficiency_hash_reproducible": true,
+    "finance_ledger_attestation_hash_reproducible": true,
+    "generation_context_closure_hash_reproducible": true,
+    "integration_profile_ready": true,
+    "media_attribution_hash_reproducible": true,
+    "model_signal_hash_reproducible": true,
+    "private_audit_challenge_hash_reproducible": true,
+    "proof_dependency_graph_hash_reproducible": true,
+    "provenance_evaluation_hash_reproducible": true,
+    "provider_declares_discovery_surface": true,
+    "publication_monitor_hash_reproducible": true,
+    "publication_witness_hash_reproducible": true,
+    "remittance_report_hash_reproducible": true,
+    "revenue_allocation_report_hash_reproducible": true,
+    "rights_remediation_hash_reproducible": true,
+    "semantic_text_attribution_hash_reproducible": true,
+    "source_availability_hash_reproducible": true,
+    "source_boundary_hash_reproducible": true,
+    "source_confidence_report_hash_reproducible": true,
+    "transitive_attribution_report_hash_reproducible": true,
+    "trust_registry_hash_reproducible": true,
+    "well_known_paths_declared": true
+  },
+  "schemas": {
+    "answer_claim_coverage_report": "docs/schemas/answer_claim_coverage_report.schema.json",
+    "answer_provenance_card": "docs/schemas/answer_provenance_card.schema.json",
+    "assurance_bundle": "docs/schemas/assurance_bundle.schema.json",
+    "attribution_capsule": "docs/schemas/attribution_capsule.schema.json",
+    "attribution_challenge": "docs/schemas/attribution_challenge.schema.json",
+    "attribution_exchange": "docs/schemas/attribution_exchange.schema.json",
+    "attribution_gap_report": "docs/schemas/attribution_gap_report.schema.json",
+    "attribution_receipt": "docs/schemas/attribution_receipt.schema.json",
+    "audit_attestation": "docs/schemas/audit_attestation.schema.json",
+    "calibrated_attribution_report": "docs/schemas/calibrated_attribution_report.schema.json",
+    "certification_attestation": "docs/schemas/certification_attestation.schema.json",
+    "certification_report": "docs/schemas/certification_report.schema.json",
+    "citation_footer_contract": "docs/schemas/citation_footer_contract.schema.json",
+    "claim_verification_report": "docs/schemas/claim_verification_report.schema.json",
+    "clearinghouse_report": "docs/schemas/clearinghouse_report.schema.json",
+    "code_attribution_report": "docs/schemas/code_attribution_report.schema.json",
+    "conformance_vector_pack": "docs/schemas/conformance_vector_pack.schema.json",
+    "counterevidence_report": "docs/schemas/counterevidence_report.schema.json",
+    "counterfactual_influence_report": "docs/schemas/counterfactual_report.schema.json",
+    "creator_license_contract": "docs/schemas/creator_license_contract.schema.json",
+    "decision_provenance_report": "docs/schemas/decision_provenance_report.schema.json",
+    "discovery_manifest": "docs/schemas/discovery_manifest.schema.json",
+    "evidence_sufficiency_report": "docs/schemas/evidence_sufficiency_report.schema.json",
+    "federation_handshake": "docs/schemas/federation_handshake.schema.json",
+    "finance_ledger_attestation": "docs/schemas/finance_ledger_attestation.schema.json",
+    "generation_context_closure_report": "docs/schemas/generation_context_closure_report.schema.json",
+    "grounding_quality_report": "docs/schemas/grounding_quality_report.schema.json",
+    "integration_profile": "docs/schemas/integration_profile.schema.json",
+    "lineage_report": "docs/schemas/lineage_report.schema.json",
+    "media_attribution_report": "docs/schemas/media_attribution_report.schema.json",
+    "model_signal_attribution_report": "docs/schemas/model_signal_report.schema.json",
+    "private_audit_challenge": "docs/schemas/private_audit_challenge.schema.json",
+    "proof_carrying_response": "docs/schemas/proof_carrying_response.schema.json",
+    "proof_dependency_graph": "docs/schemas/proof_dependency_graph.schema.json",
+    "provenance_evaluation_report": "docs/schemas/provenance_evaluation_report.schema.json",
+    "provider_attribution_card": "docs/schemas/provider_attribution_card.schema.json",
+    "publication_monitor": "docs/schemas/publication_monitor.schema.json",
+    "publication_witness": "docs/schemas/publication_witness.schema.json",
+    "remittance_report": "docs/schemas/remittance_report.schema.json",
+    "response_envelope": "docs/schemas/response_envelope.schema.json",
+    "response_release_gate": "docs/schemas/release_gate.schema.json",
+    "revenue_allocation_report": "docs/schemas/revenue_allocation_report.schema.json",
+    "rights_remediation_report": "docs/schemas/rights_remediation_report.schema.json",
+    "royalty_statement": "docs/schemas/royalty_statement.schema.json",
+    "semantic_text_attribution_report": "docs/schemas/semantic_text_attribution_report.schema.json",
+    "serving_gateway_report": "docs/schemas/serving_gateway_report.schema.json",
+    "source_availability_report": "docs/schemas/source_availability_report.schema.json",
+    "source_boundary_report": "docs/schemas/source_boundary_report.schema.json",
+    "source_confidence_report": "docs/schemas/source_confidence_report.schema.json",
+    "source_verification_report": "docs/schemas/source_verification_report.schema.json",
+    "trace_exchange": "docs/schemas/trace_exchange.schema.json",
+    "training_content_summary": "docs/schemas/training_content_summary.schema.json",
+    "transitive_attribution_report": "docs/schemas/transitive_attribution_report.schema.json",
+    "trust_registry": "docs/schemas/trust_registry.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "e579d0dd3c11cd2a13ab3a16c769743796da45ed49038161066c08d42b00d622"
+  },
+  "summary": {
+    "artifact_count": 33,
+    "assurance_root": "5bf6f5b85b3f23c3577760c9db8cfbf570e481a0709c3ff25668c9c0146a7c8c",
+    "endpoint_count": 57,
+    "highest_level": "RDLLM-L63",
+    "offline_verification_supported": true,
+    "public_surface_count": 54,
+    "required_artifact_count": 5,
+    "schema_count": 54,
+    "status": "ready"
+  },
+  "verification": {
+    "minimum_certification_level": "RDLLM-L22",
+    "offline_verification_supported": true,
+    "reference_cli_commands": [
+      "verify-discovery-manifest",
+      "verify-integration-profile",
+      "verify-response-envelope",
+      "verify-source-verification",
+      "verify-answer-card",
+      "verify-provider-card",
+      "verify-provenance-evaluation",
+      "verify-counterfactual-report",
+      "verify-media-attribution",
+      "verify-model-signal-report",
+      "verify-rights-remediation",
+      "verify-semantic-text-attribution",
+      "verify-code-attribution-report",
+      "verify-claim-verification-report",
+      "verify-source-availability-report",
+      "verify-evidence-sufficiency-report",
+      "verify-counterevidence-report",
+      "verify-answer-claim-coverage-report",
+      "verify-generation-context-closure-report",
+      "verify-source-boundary-report",
+      "verify-decision-provenance-report",
+      "verify-calibrated-attribution-report",
+      "verify-attribution-exchange",
+      "verify-conformance-vector-pack",
+      "verify-federation-handshake",
+      "verify-attribution-capsule",
+      "verify-release-gate",
+      "verify-proof-carrying-response",
+      "verify-serving-gateway-report",
+      "verify-creator-license-contract",
+      "verify-source-confidence-report",
+      "verify-citation-footer-contract",
+      "verify-private-audit-challenge",
+      "verify-transitive-attribution-report",
+      "verify-clearinghouse-report",
+      "verify-remittance-report",
+      "verify-audit-attestation",
+      "verify-revenue-allocation-report",
+      "verify-finance-ledger-attestation",
+      "verify-proof-dependency-graph",
+      "verify-publication-monitor",
+      "verify-publication-witness",
+      "verify-trust-registry",
+      "verify-certification-attestation",
+      "verify-assurance-bundle",
+      "conformance"
+    ],
+    "required_failure_modes": [
+      "missing_well_known_surface",
+      "artifact_hash_drift",
+      "api_contract_drift",
+      "profile_readiness_regression",
+      "certification_regression",
+      "assurance_publication_gap",
+      "runtime_federation_downgrade",
+      "portable_capsule_marker_loss",
+      "response_release_gate_failure",
+      "proof_carrying_response_failure",
+      "serving_gateway_egress_failure",
+      "creator_license_contract_drift",
+      "source_confidence_drift",
+      "citation_footer_contract_drift",
+      "source_availability_or_archive_failure",
+      "evidence_sufficiency_or_decoy_failure",
+      "counterevidence_adjudication_failure",
+      "answer_claim_coverage_failure",
+      "generation_context_closure_failure",
+      "source_boundary_integrity_failure",
+      "decision_provenance_influence_graph_failure",
+      "calibrated_attribution_confidence_failure",
+      "private_audit_challenge_replay_or_opening_failure",
+      "transitive_attribution_marker_or_body_hash_failure",
+      "clearinghouse_duplicate_or_conservation_failure",
+      "remittance_instruction_or_privacy_failure",
+      "third_party_audit_attestation_failure",
+      "usage_revenue_allocation_failure",
+      "finance_ledger_attestation_failure",
+      "proof_dependency_cycle_or_replay_order_failure",
+      "publication_monitor_regression_or_append_only_failure",
+      "publication_witness_quorum_or_equivocation_failure",
+      "trust_registry_key_revocation_or_signature_failure",
+      "certification_attestation_signature_or_report_hash_failure",
+      "generated_code_source_or_license_attribution_failure",
+      "ownership_claim_verification_or_escrow_failure"
+    ]
+  }
+}

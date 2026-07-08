@@ -1,0 +1,34 @@
+{
+  "creators": [
+    {
+      "creator_id": "nora",
+      "name": "Nora Vale",
+      "payout_account": "acct_nora"
+    },
+    {
+      "creator_id": "omar",
+      "name": "Omar Stone",
+      "payout_account": "acct_omar"
+    }
+  ],
+  "works": [
+    {
+      "work_id": "nora-counterfactual-attribution",
+      "creator_id": "nora",
+      "title": "Counterfactual Attribution Source",
+      "license": "royalty-bearing",
+      "data_value_prior": 1.2,
+      "source_uri": "https://example.test/counterfactual-attribution-source",
+      "content": "Counterfactual attribution reports remove each credited work, replay the same prompt and answer, verify that source credit disappears after removal, and confirm that payout either reallocates to another eligible source or routes to escrow."
+    },
+    {
+      "work_id": "omar-ceramics-archive",
+      "creator_id": "omar",
+      "title": "Ceramics Archive Notes",
+      "license": "royalty-bearing",
+      "data_value_prior": 0.8,
+      "source_uri": "https://example.test/ceramics-archive-notes",
+      "content": "The ceramics archive records kiln temperatures, clay mineral notes, glaze catalog numbers, and exhibit shelf locations for historical pottery collections."
+    }
+  ]
+}

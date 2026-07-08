@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/live_emission_transparency.schema.json",
+  "title": "RDLLM Live Emission Transparency Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "transparency_log_bindings",
+    "live_subject_rows",
+    "log_snapshot_rows",
+    "append_only_consistency_rows",
+    "split_view_conflict_rows",
+    "required_subject_rows",
+    "checks",
+    "commitments",
+    "schemas",
+    "summary",
+    "privacy",
+    "live_emission_transparency_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-live-emission-transparency/v1" },
+    "issuer": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "requires_live_witness_report_inclusion",
+        "requires_witness_attestation_inclusion",
+        "requires_append_only_consistency",
+        "requires_split_view_absence"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-live-emission-transparency-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L85" },
+        "minimum_input_level": { "const": "RDLLM-L84" },
+        "requires_live_witness_report_inclusion": { "const": true },
+        "requires_witness_attestation_inclusion": { "const": true },
+        "requires_append_only_consistency": { "const": true },
+        "requires_split_view_absence": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "live_emission_witness_hash",
+        "live_emission_witness_payload_hash",
+        "live_emission_witness_hash_reproducible"
+      ],
+      "properties": {
+        "live_emission_witness_hash": { "type": "string", "minLength": 1 },
+        "live_emission_witness_payload_hash": { "type": "string", "minLength": 1 },
+        "live_emission_witness_hash_reproducible": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "transparency_log_bindings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "live_subject_rows": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "log_snapshot_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "append_only_consistency_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "split_view_conflict_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "required_subject_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "live_emission_witness_shape_valid",
+        "live_emission_witness_hash_reproducible",
+        "live_emission_witness_ready",
+        "live_emission_witness_target_l84",
+        "required_subjects_declared",
+        "transparency_logs_present",
+        "transparency_log_versions_supported",
+        "transparency_tree_sizes_match",
+        "transparency_roots_reproducible",
+        "transparency_entries_sequential",
+        "transparency_entry_hashes_reproducible",
+        "transparency_entries_have_required_hashes",
+        "append_only_prefix_consistency",
+        "split_view_absent",
+        "required_subjects_in_latest_log",
+        "required_subject_inclusion_proofs_valid",
+        "required_subject_payload_hashes_match",
+        "required_subject_entry_types_match",
+        "public_report_has_no_private_field_names"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "live_subject_root",
+        "log_snapshot_root",
+        "append_only_consistency_root",
+        "split_view_conflict_root",
+        "required_subject_root",
+        "transparency_log_binding_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "live_emission_transparency",
+        "live_emission_witness"
+      ],
+      "properties": {
+        "live_emission_transparency": {
+          "const": "docs/schemas/live_emission_transparency.schema.json"
+        },
+        "live_emission_witness": {
+          "const": "docs/schemas/live_emission_witness.schema.json"
+        }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "live_emission_transparency_included",
+        "live_subject_count",
+        "required_subject_count",
+        "missing_subject_count",
+        "transparency_log_count",
+        "latest_tree_size",
+        "append_only_violation_count",
+        "split_view_conflict_count"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L85" },
+        "minimum_input_level": { "const": "RDLLM-L84" },
+        "live_emission_transparency_included": { "type": "boolean" },
+        "live_subject_count": { "type": "integer", "minimum": 0 },
+        "required_subject_count": { "type": "integer", "minimum": 0 },
+        "missing_subject_count": { "type": "integer", "minimum": 0 },
+        "transparency_log_count": { "type": "integer", "minimum": 0 },
+        "latest_tree_size": { "type": "integer", "minimum": 0 },
+        "append_only_violation_count": { "type": "integer", "minimum": 0 },
+        "split_view_conflict_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "context_text_disclosed",
+        "prompt_text_disclosed",
+        "claim_text_disclosed",
+        "stream_chunk_text_disclosed",
+        "stores_hashes_log_roots_inclusion_proofs_and_counts_not_text"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "live_emission_transparency_hash": { "type": "string", "minLength": 1 },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "properties": {
+        "algorithm": { "enum": ["HMAC-SHA256", "UNSIGNED"] },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "hashRow": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

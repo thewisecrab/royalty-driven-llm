@@ -1,0 +1,257 @@
+{
+  "checks": {
+    "accepted_sources_in_training_summary": true,
+    "accepted_sources_training_allowed": true,
+    "all_parametric_claims_attributed": true,
+    "anti_documents_rejected": true,
+    "creator_pool_conserved": true,
+    "model_signal_or_probe_influence_bound": true,
+    "no_current_context_contamination": true,
+    "no_raw_private_text": true,
+    "training_summary_bound": true
+  },
+  "claim_attribution": [
+    {
+      "accepted_source_ids": [
+        "arjun-provenance-ledger"
+      ],
+      "claim_hash": "17474609d4be55c6c13538d9b7eb606d2c6d357d3a08fcd5a9a11faa86cf437d",
+      "claim_id": "claim:parametric-provenance-ledger",
+      "parametric_source_count": 1,
+      "rejected_source_ids": [
+        "maya-youtube-style-pool"
+      ],
+      "status": "parametric_grounded",
+      "total_attribution_score": 0.893125
+    }
+  ],
+  "claims": [
+    {
+      "claim_hash": "17474609d4be55c6c13538d9b7eb606d2c6d357d3a08fcd5a9a11faa86cf437d",
+      "claim_id": "claim:parametric-provenance-ledger",
+      "expected_parametric_source_ids": [
+        "arjun-provenance-ledger"
+      ],
+      "required_phrase_hashes": [
+        "f9713459ce71abe17a1fd10c2bd800136ba045c527b1b59c26e97c8b451598b8",
+        "8ff315e57f1cc5ea67e9969e6ef9cefd9c8b7b08beaf1e753c1fca24e817461d",
+        "16f3c5106768d94066315b9bf58a63d1fe12f6242ea5a0273e72f42587b3a074",
+        "eaeb5775b9bfe61fa78935ba503dfb1a7d95081cf1de3cc4f1096b0f10a6f598",
+        "f0f3c1ae93224eb179478e452a55b1a9c5342d726083dd18420440dbee8ac7fd"
+      ],
+      "requires_parametric_memory": true
+    }
+  ],
+  "created_at": "2026-05-31T00:00:00Z",
+  "economics": {
+    "creator_payouts": [
+      {
+        "amount": "0.550000",
+        "creator_id": "arjun"
+      }
+    ],
+    "creator_pool": "0.550000",
+    "creator_pool_rate": "0.55",
+    "escrow": "0.000000",
+    "gross_revenue": "1.000000",
+    "per_claim_pool": "0.550000",
+    "pool_conserved": true,
+    "source_payouts": [
+      {
+        "amount": "0.550000",
+        "creator_id": "arjun",
+        "source_id": "arjun-provenance-ledger",
+        "work_id": "arjun-provenance-ledger"
+      }
+    ],
+    "total_paid": "0.550000"
+  },
+  "event": {
+    "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+    "event_id": "evt_1ed43e106d466249",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05",
+    "prompt_hash": "3ff9b4d52e3ba4909f885835c6d362c80d35db9cafec55166ee62a73722aa7c6",
+    "response_hash": "069df2b36f4c12ee438a0edb55cc944c675fb5f3802cb70592907f047916ac51"
+  },
+  "footer": {
+    "claim_rows": [
+      {
+        "claim_id": "claim:parametric-provenance-ledger",
+        "source_ids": [
+          "arjun-provenance-ledger"
+        ],
+        "status": "parametric_grounded"
+      }
+    ],
+    "footer_hash": "17167acd29c8b8d3649ac3f2a394ed98a12e3e6690cfaaf1713d0ba50487c76d",
+    "source_row_count": 1,
+    "source_rows": [
+      {
+        "attribution_channel": "parametric_memory",
+        "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+        "creator_id": "arjun",
+        "source_id": "arjun-provenance-ledger",
+        "source_uri": "registered://works/arjun-provenance-ledger",
+        "title": "Provenance Ledgers for AI Outputs",
+        "work_id": "arjun-provenance-ledger"
+      }
+    ]
+  },
+  "issuer": "rdllm-local-demo",
+  "model_signal_binding": {
+    "accepted_signal_count": 1,
+    "report_hash": "2e7affc731037862e94043900d401d7b6bf79927602df5904ebd4e79596bda21",
+    "report_version": "rdllm-model-signal-attribution/v1",
+    "signal_count": 1,
+    "signal_row_root": "6a81d5d36539d5404ae9e4452db51e61911570d735925f622080d7685d2116db",
+    "status": "ready"
+  },
+  "parametric_attribution": [
+    {
+      "accepted": true,
+      "anti_source_margin": 0.82,
+      "attribution_score": 0.893125,
+      "claim_id": "claim:parametric-provenance-ledger",
+      "content_hash_matches_training_summary": true,
+      "creator_id": "arjun",
+      "current_context_contaminated": false,
+      "decision": "accepted_parametric_influence",
+      "failure_reasons": [],
+      "influence_probe_score": 0.64,
+      "memory_recall_score": 0.945,
+      "model_signal_score": 0.7825,
+      "source_id": "arjun-provenance-ledger",
+      "source_role": "training_candidate",
+      "support_score": 1.0,
+      "training_allowed": true,
+      "training_summary_member": true,
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "accepted": false,
+      "anti_source_margin": 1.0,
+      "attribution_score": 0.21544118,
+      "claim_id": "claim:parametric-provenance-ledger",
+      "content_hash_matches_training_summary": true,
+      "creator_id": "maya",
+      "current_context_contaminated": false,
+      "decision": "anti_document_rejected",
+      "failure_reasons": [
+        "source_marked_as_anti_document",
+        "insufficient_source_support",
+        "insufficient_memory_recall_evidence",
+        "insufficient_influence_evidence"
+      ],
+      "influence_probe_score": 0.0,
+      "memory_recall_score": 0.0,
+      "model_signal_score": 0.0,
+      "source_id": "maya-youtube-style-pool",
+      "source_role": "anti_source",
+      "support_score": 0.06176471,
+      "training_allowed": true,
+      "training_summary_member": true,
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "policy": {
+    "min_anti_margin": 0.2,
+    "min_influence": 0.25,
+    "min_memory": 0.45,
+    "min_support": 0.34,
+    "profile": "rdllm-parametric-memory-policy/v1",
+    "target_certification_level": "RDLLM-L89"
+  },
+  "probe_commitments": {
+    "probe_count": 3,
+    "probe_hashes": [
+      "d42edae61c54f621c0055ae3b0886435fd9c680f0c4b68f77bfdfebd59b90c3b",
+      "5741be252cb0b8d6c60cad42f11f273f5903f16fde769a38f34b1b9c85b08f4c",
+      "5e9c069f2e343190832a24b410d87b30386d75a258d7059d85c3c0bc8208c6a6"
+    ],
+    "probe_root": "197744f2324ecf1228f4a4eb69c8e59c4917ebaf1512aef60c8c2ac949511f13"
+  },
+  "report_hash": "b1e72aeebdece0fb2b8297f8cd00bf3cdbc4610fa814e0c9ac486334d629fd1d",
+  "report_version": "rdllm-parametric-memory-attribution/v1",
+  "schemas": {
+    "parametric_memory_attribution_report": "docs/schemas/parametric_memory_attribution_report.schema.json"
+  },
+  "signature": "28f3bc4a80a1521b29c651daeda023855bc0a411864f0bc48cae5ddae1d9b60b",
+  "source_training": [
+    {
+      "content_hash_matches_training_summary": true,
+      "creator_id": "arjun",
+      "policy_allowed": true,
+      "source_id": "arjun-provenance-ledger",
+      "source_role": "training_candidate",
+      "training_allowed": true,
+      "training_summary_member": true,
+      "training_value_root": "5089ed01b9cb3f2b364b572771007455ade7c58aa969057a079a9ed28ab8bff9",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "content_hash_matches_training_summary": true,
+      "creator_id": "maya",
+      "policy_allowed": true,
+      "source_id": "maya-youtube-style-pool",
+      "source_role": "anti_source",
+      "training_allowed": true,
+      "training_summary_member": true,
+      "training_value_root": "68c4851b1ca59158789fdf4256ca33372be4ee789019ea03a3652e678b57cc20",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "sources": [
+    {
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "creator_id": "arjun",
+      "creator_name": "Arjun Rao",
+      "modality": "text",
+      "policy_allowed": true,
+      "source_id": "arjun-provenance-ledger",
+      "source_role": "training_candidate",
+      "source_uri": "registered://works/arjun-provenance-ledger",
+      "title": "Provenance Ledgers for AI Outputs",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "creator_id": "maya",
+      "creator_name": "Maya Sen",
+      "modality": "text",
+      "policy_allowed": true,
+      "source_id": "maya-youtube-style-pool",
+      "source_role": "anti_source",
+      "source_uri": "registered://works/maya-youtube-style-pool",
+      "title": "Usage Pools for Creator Platforms",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "summary": {
+    "accepted_source_count": 1,
+    "anti_document_rejection_count": 1,
+    "claim_count": 1,
+    "context_contamination_rejection_count": 0,
+    "escrow_claim_count": 0,
+    "footer_hash": "17167acd29c8b8d3649ac3f2a394ed98a12e3e6690cfaaf1713d0ba50487c76d",
+    "parametric_grounded_claim_count": 1,
+    "probe_count": 3,
+    "rejected_source_count": 1,
+    "source_count": 2,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L89",
+    "training_summary_miss_count": 0
+  },
+  "training_summary_binding": {
+    "cohort_count": 3,
+    "cohort_root": "cb31560347fa38818cafbe8751e517c97385991a713cf4e9031cb9b792e2e0bf",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05",
+    "provider_id": "provider:rdllm-reference",
+    "summary_hash": "96d7b568363adf49f46b0cb6c2d36bcdc4482371f7a8c136825fcb3a52133ab7",
+    "summary_version": "rdllm-training-content-summary/v1",
+    "training_stage": "reference_corpus"
+  }
+}

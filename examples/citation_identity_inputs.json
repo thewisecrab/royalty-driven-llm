@@ -1,0 +1,88 @@
+{
+  "event": {
+    "event_id": "evt_citation_identity_demo",
+    "event_hash": "evt_hash_citation_identity_demo",
+    "prompt_text": "Explain how a royalty-driven LLM should make answer sources trustworthy.",
+    "response_text": "A royalty-driven LLM should verify that cited sources are real, metadata-faithful, and claim-supporting before placing them in the answer footer.",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05"
+  },
+  "claims": [
+    {
+      "claim_id": "claim_identity_1",
+      "claim_text": "Citation identity must reject fabricated or metadata-swapped citations before they appear in the public answer footer.",
+      "required_evidence_phrases": [
+        "citation hallucinations",
+        "metadata-swapped citations",
+        "public answer footer"
+      ],
+      "citation_ids": [
+        "cite_verified",
+        "cite_swapped",
+        "cite_fabricated"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "citation_id": "cite_verified",
+      "work_id": "work_citation_identity",
+      "chunk_id": "chunk_citation_identity_1",
+      "creator_id": "creator_citation_research",
+      "title": "Citation Identity for Grounded AI Attribution",
+      "authors": [
+        "Maya Shah",
+        "Ilya Novak"
+      ],
+      "year": "2026",
+      "doi": "10.5555/rdllm.citation.identity",
+      "source_uri": "https://example.test/papers/citation-identity",
+      "quoted_text": "Private verifier excerpt: citation hallucinations include fabricated, metadata-swapped citations that should not enter a public answer footer."
+    },
+    {
+      "citation_id": "cite_swapped",
+      "work_id": "work_citation_identity_swapped",
+      "chunk_id": "chunk_citation_identity_2",
+      "creator_id": "creator_wrong_metadata",
+      "title": "Synthetic Images and Attribution Markets",
+      "authors": [
+        "Not Maya Shah"
+      ],
+      "year": "2025",
+      "doi": "10.5555/rdllm.citation.identity",
+      "source_uri": "https://example.test/papers/wrong-paper",
+      "quoted_text": "Private verifier excerpt: unrelated text about synthetic image markets."
+    },
+    {
+      "citation_id": "cite_fabricated",
+      "work_id": "work_nonexistent",
+      "chunk_id": "chunk_nonexistent",
+      "creator_id": "creator_nonexistent",
+      "title": "A Nonexistent Study About Perfect LLM Citations",
+      "authors": [
+        "Fictional Author"
+      ],
+      "year": "2026",
+      "doi": "10.5555/fabricated.citation",
+      "source_uri": "https://example.test/papers/fabricated",
+      "quoted_text": "Private verifier excerpt: this fabricated citation has no authority record."
+    }
+  ],
+  "authority_records": [
+    {
+      "authority_id": "doi:10.5555/rdllm.citation.identity",
+      "canonical_title": "Citation Identity for Grounded AI Attribution",
+      "canonical_authors": [
+        "Maya Shah",
+        "Ilya Novak"
+      ],
+      "year": "2026",
+      "identifiers": {
+        "doi": "10.5555/rdllm.citation.identity",
+        "url": "https://example.test/papers/citation-identity"
+      },
+      "source_uri": "https://example.test/papers/citation-identity",
+      "abstract": "This authority record studies citation hallucinations in LLM answers and requires detection of fabricated citations, metadata-swapped citations, and claim-support failures before a source can appear in a public answer footer."
+    }
+  ]
+}

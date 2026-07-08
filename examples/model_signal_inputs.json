@@ -1,0 +1,100 @@
+{
+  "creators": [
+    {
+      "creator_id": "creator_research",
+      "name": "Research Owner",
+      "payout_account": "acct_research"
+    },
+    {
+      "creator_id": "creator_manual",
+      "name": "Manual Owner",
+      "payout_account": "acct_manual"
+    },
+    {
+      "creator_id": "creator_decoy",
+      "name": "Decoy Owner",
+      "payout_account": "acct_decoy"
+    }
+  ],
+  "event": {
+    "event_hash": "evt_hash_model_signal_demo",
+    "event_id": "evt_model_signal_demo",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05",
+    "output_hash": "output_hash_model_signal_demo",
+    "output_text": "The answer uses internal influence telemetry, source commitments, and escrow when weak model signals cannot justify owner payment.",
+    "prompt_hash": "prompt_hash_model_signal_demo",
+    "prompt_text": "How should a foundation model prove hidden-state source influence?"
+  },
+  "signals": [
+    {
+      "activation_similarity": 0.82,
+      "activation_vector": [
+        "layer24:0.12,0.44,0.87,0.21"
+      ],
+      "attention_mass": 0.67,
+      "content_hash": "sha256:research-note-model-signals",
+      "creator_id": "creator_research",
+      "gradient_influence": 0.76,
+      "hidden_state": "decoder-layer-24-source-cluster-research-note",
+      "license": "royalty-bearing",
+      "logprob_delta": 0.91,
+      "memorization_score": 0.18,
+      "policy_allowed": true,
+      "private_trace": "top internal source cluster aligned with the research note tokens and ablation changed answer likelihood",
+      "signal_id": "sig_research_note",
+      "source_uri": "https://example.test/model-signals/research-note",
+      "title": "Research Note on Model Signals",
+      "token_logits": [
+        "influence-logits-redacted:0.91"
+      ],
+      "work_id": "work_model_signal_research"
+    },
+    {
+      "activation_similarity": 0.74,
+      "activation_vector": [
+        "layer21:0.40,0.33,0.61,0.52"
+      ],
+      "attention_mass": 0.58,
+      "content_hash": "sha256:manual-model-signal-provenance",
+      "creator_id": "creator_manual",
+      "gradient_influence": 0.62,
+      "hidden_state": "decoder-layer-21-source-cluster-manual",
+      "license": "royalty-bearing",
+      "logprob_delta": 0.78,
+      "memorization_score": 0.16,
+      "policy_allowed": true,
+      "private_trace": "secondary internal source cluster aligned with manual provenance language and source-support tokens",
+      "signal_id": "sig_manual",
+      "source_uri": "https://example.test/model-signals/manual",
+      "title": "Manual on Source Provenance",
+      "token_logits": [
+        "influence-logits-redacted:0.78"
+      ],
+      "work_id": "work_model_signal_manual"
+    },
+    {
+      "activation_similarity": 0.22,
+      "activation_vector": [
+        "layer19:0.04,0.08,0.03,0.10"
+      ],
+      "attention_mass": 0.18,
+      "content_hash": "sha256:weak-decoy",
+      "creator_id": "creator_decoy",
+      "gradient_influence": 0.10,
+      "hidden_state": "decoder-layer-19-weak-decoy-cluster",
+      "license": "royalty-bearing",
+      "logprob_delta": 0.19,
+      "memorization_score": 0.05,
+      "policy_allowed": true,
+      "private_trace": "weak decoy cluster overlaps generic provenance vocabulary but fails influence threshold",
+      "signal_id": "sig_decoy",
+      "source_uri": "https://example.test/model-signals/decoy",
+      "title": "Weak Decoy Note",
+      "token_logits": [
+        "influence-logits-redacted:0.19"
+      ],
+      "work_id": "work_model_signal_decoy"
+    }
+  ]
+}

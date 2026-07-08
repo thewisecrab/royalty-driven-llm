@@ -1,0 +1,320 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_composition_receipt.schema.json",
+  "title": "RDLLM Universal Composition Receipt",
+  "type": "object",
+  "required": [
+    "composition_receipt_version",
+    "issuer",
+    "created_at",
+    "composition_policy",
+    "artifact_bindings",
+    "deployment_attestation_rows",
+    "composition_plan",
+    "provider_segments",
+    "telemetry_span_bindings",
+    "composition_decision",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_composition_receipt_hash",
+    "signature"
+  ],
+  "properties": {
+    "composition_receipt_version": {
+      "const": "rdllm-universal-composition-receipt/v1"
+    },
+    "issuer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "composition_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "minimum_segment_level",
+        "provider_segment_attestation_required",
+        "source_footer_preservation_required",
+        "telemetry_span_binding_required",
+        "provider_weight_conservation_required",
+        "on_unattested_segment",
+        "on_merge_hash_mismatch",
+        "on_source_footer_gap"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-composition-policy/v1"
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L130"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L129"
+        },
+        "minimum_segment_level": {
+          "const": "RDLLM-L129"
+        },
+        "provider_segment_attestation_required": {
+          "type": "boolean"
+        },
+        "source_footer_preservation_required": {
+          "type": "boolean"
+        },
+        "telemetry_span_binding_required": {
+          "type": "boolean"
+        },
+        "provider_weight_conservation_required": {
+          "type": "boolean"
+        },
+        "on_unattested_segment": {
+          "const": "block_display"
+        },
+        "on_merge_hash_mismatch": {
+          "const": "block_display"
+        },
+        "on_source_footer_gap": {
+          "const": "block_display"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "response_envelope",
+        "source_footer_delivery",
+        "composite_foundation_adapter",
+        "foundation_provider_conformance"
+      ],
+      "additionalProperties": {
+        "$ref": "#/$defs/artifactBinding"
+      }
+    },
+    "deployment_attestation_rows": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/hashRow"
+      }
+    },
+    "composition_plan": {
+      "type": "object",
+      "required": [
+        "composition_id",
+        "composition_mode",
+        "merge_policy",
+        "final_response_envelope_hash",
+        "final_rendered_output_hash",
+        "source_footer_delivery_hash",
+        "segment_ids",
+        "provider_families",
+        "segment_count",
+        "declared_segment_root",
+        "declared_composition_plan_hash",
+        "computed_segment_root",
+        "computed_composition_plan_hash"
+      ],
+      "additionalProperties": true
+    },
+    "provider_segments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/hashRow"
+      }
+    },
+    "telemetry_span_bindings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/hashRow"
+      }
+    },
+    "composition_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "release_authorized",
+        "failed_checks",
+        "failure_modes",
+        "safe_output_policy"
+      ],
+      "properties": {
+        "decision": {
+          "enum": [
+            "release",
+            "block_display"
+          ]
+        },
+        "release_authorized": {
+          "type": "boolean"
+        },
+        "failed_checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "failure_modes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "artifact_hashes_reproducible",
+        "deployment_attestations_released_l129",
+        "segment_count_positive",
+        "segment_ids_unique",
+        "segment_hashes_present",
+        "each_segment_has_single_matching_deployment_attestation",
+        "segment_provider_families_supported_by_composite_adapter",
+        "segment_provider_families_supported_by_conformance",
+        "composition_plan_hash_reproducible",
+        "segment_root_matches_plan",
+        "final_response_binds_response_envelope",
+        "source_footer_delivery_bound",
+        "provider_weights_conserve_unit",
+        "segment_claims_and_sources_declared",
+        "telemetry_spans_bind_segments",
+        "private_text_not_disclosed"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "required": [
+        "failed_checks",
+        "failure_modes",
+        "segment_ids_without_matching_attestation",
+        "duplicate_segment_ids",
+        "provider_families"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "deployment_attestation_root",
+        "provider_segment_root",
+        "telemetry_span_root",
+        "composition_plan_hash",
+        "final_response_envelope_hash",
+        "source_footer_delivery_hash",
+        "schema"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "universal_composition_receipt",
+        "foundation_model_deployment_attestation",
+        "response_envelope",
+        "source_footer_delivery",
+        "composite_foundation_adapter",
+        "foundation_provider_conformance"
+      ],
+      "properties": {
+        "universal_composition_receipt": {
+          "const": "docs/schemas/universal_composition_receipt.schema.json"
+        }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "composition_id",
+        "provider_segment_count",
+        "provider_family_count",
+        "deployment_attestation_count",
+        "failed_check_count",
+        "failure_mode_count",
+        "composite_answer_release_authorized",
+        "universal_multi_provider_composition_supported",
+        "source_footer_obligations_preserved",
+        "telemetry_bound",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "released",
+            "blocked"
+          ]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L130"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L129"
+        },
+        "provider_segment_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "provider_family_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "deployment_attestation_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed_check_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": true
+    },
+    "universal_composition_receipt_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signature": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "artifactBinding": {
+      "type": "object",
+      "required": [
+        "present",
+        "declared_hash",
+        "hash_reproducible",
+        "artifact_type"
+      ],
+      "additionalProperties": true
+    },
+    "hashRow": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

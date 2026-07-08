@@ -1,0 +1,116 @@
+{
+  "balances": {
+    "rights_conflict_escrow": "0.550000"
+  },
+  "events": [
+    {
+      "answer_text": "Royalty-aware answer:\nFor the prompt 'What does reserved source text say about retrieval and generation?', the strongest registered sources say:\n- Reserved source text can be indexed for retrieval but cannot be generated or externally attributed without a separate license. [S1]",
+      "claim_support": [
+        {
+          "chunk_id": "",
+          "claim": "Reserved source text can be indexed for retrieval but cannot be generated or externally attributed without a separate license.",
+          "evidence_end_char": -1,
+          "evidence_span_hash": "",
+          "evidence_start_char": -1,
+          "evidence_text": "",
+          "source_label": "",
+          "support_score": 0.0,
+          "supported": false,
+          "work_id": ""
+        }
+      ],
+      "creator_pool": "0.550000",
+      "creator_pool_rate": "0.55",
+      "event_hash": "7c6f6519bd37775664e0906d286c7e3cf3c6c3f4dbd5ca5b1fc98c7782106a9e",
+      "event_id": "evt_7c6f6519bd377756",
+      "gross_revenue": "1.000000",
+      "grounding_report": {
+        "coverage": 0.0,
+        "policy_denials": 1,
+        "policy_status": "blocked",
+        "source_count": 0,
+        "status": "rights_blocked",
+        "supported_claims": 0,
+        "total_claims": 1,
+        "unsupported_claims": 1
+      },
+      "output": "This response is blocked by rights policy for the requested use.\n\nSources\n[R1] Registered source match(es) were found but blocked by rights policy; creator pool assigned to rights-conflict escrow.\nGrounding: 0/1 claims supported; status=rights_blocked.\nRights: 1 registered source match(es) were blocked by policy; creator pool assigned to rights-conflict escrow.",
+      "policy_decisions": [
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": false,
+          "chunk_id": "reserved-text:c1",
+          "content_hash": "1e126c1db288369d58ab6b52bac1c6438b03fb614e19ef347470fb5dc810e295",
+          "jurisdiction": "GLOBAL",
+          "license": "retrieval-only-royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.55,
+          "policy_id": "policy:reserved-text",
+          "reasons": [
+            "deny:prohibited_use:generation",
+            "deny:not_permitted_use:generation"
+          ],
+          "source_uri": "registered://works/reserved-text#reserved-text:c1",
+          "target_id": "reserved-text:c1",
+          "target_type": "chunk",
+          "text_match_score": 1.0,
+          "use": "generation",
+          "work_id": "reserved-text"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "reserved-text:c1",
+          "content_hash": "1e126c1db288369d58ab6b52bac1c6438b03fb614e19ef347470fb5dc810e295",
+          "jurisdiction": "GLOBAL",
+          "license": "retrieval-only-royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.55,
+          "policy_id": "policy:reserved-text",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "registered://works/reserved-text#reserved-text:c1",
+          "target_id": "reserved-text:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "reserved-text"
+        }
+      ],
+      "prompt": "What does reserved source text say about retrieval and generation?",
+      "retrieval_hits": [
+        {
+          "chunk_id": "reserved-text:c1",
+          "content_hash": "1e126c1db288369d58ab6b52bac1c6438b03fb614e19ef347470fb5dc810e295",
+          "creator_id": "owner",
+          "rank": 1,
+          "score": 0.39223227,
+          "title": "Reserved Text",
+          "work_id": "reserved-text"
+        }
+      ],
+      "royalty_shares": [
+        {
+          "attribution_basis": {
+            "rights_conflict_escrow": 1.0
+          },
+          "chunk_id": "escrow:rights_conflict",
+          "citation_score": 0.0,
+          "content_hash": "703c03f93fabe1a5d2e0637a9f6bcee9757d1a01e392f89f50042d048971690b",
+          "contribution_weight": "1",
+          "creator_id": "rights_conflict_escrow",
+          "data_value_prior": 0.0,
+          "output_support": 0.0,
+          "payout": "0.550000",
+          "query_relevance": 0.0,
+          "retrieval_score": 0.0,
+          "text_match_score": 0.0,
+          "training_value_score": 0.0,
+          "work_id": "rights_conflict"
+        }
+      ],
+      "source_references": [],
+      "text_matches": []
+    }
+  ]
+}

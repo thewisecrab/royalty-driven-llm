@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/royalty_abuse_audit.schema.json",
+  "title": "RDLLM Royalty Abuse Audit",
+  "type": "object",
+  "required": [
+    "audit_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "settlement_window",
+    "artifact_bindings",
+    "source_abuse_rows",
+    "creator_abuse_rows",
+    "duplicate_abuse_rows",
+    "collusion_rows",
+    "settlement_rows",
+    "checks",
+    "commitments",
+    "schemas",
+    "summary",
+    "privacy",
+    "royalty_abuse_audit_hash",
+    "signature"
+  ],
+  "properties": {
+    "audit_version": {
+      "const": "rdllm-royalty-abuse-audit/v1"
+    },
+    "issuer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "target_certification_level",
+        "minimum_input_level",
+        "max_source_farm_risk",
+        "max_creator_payout_share",
+        "duplicate_similarity_threshold",
+        "suspicious_value_must_route_to_escrow"
+      ],
+      "properties": {
+        "target_certification_level": {
+          "const": "RDLLM-L117"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L116"
+        },
+        "max_source_farm_risk": {
+          "type": "string"
+        },
+        "max_creator_payout_share": {
+          "type": "string"
+        },
+        "duplicate_similarity_threshold": {
+          "type": "string"
+        },
+        "suspicious_value_must_route_to_escrow": {
+          "const": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "settlement_window": {
+      "type": "object",
+      "required": [
+        "settlement_window_id_hash",
+        "creator_pool_amount",
+        "direct_payout_total",
+        "escrow_total",
+        "settlement_total"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "source_abuse_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "creator_id_hash",
+          "content_hash",
+          "source_farm_risk_score",
+          "direct_payout",
+          "escrowed",
+          "suspicious_source",
+          "routed_to_abuse_escrow_if_suspicious",
+          "source_abuse_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "creator_abuse_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id_hash",
+          "verified_identity",
+          "total_payout_amount",
+          "direct_payout_amount",
+          "direct_payout_share",
+          "suspicious_creator",
+          "creator_direct_payout_allowed",
+          "creator_abuse_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "duplicate_abuse_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "duplicate_id",
+          "duplicate_match",
+          "both_duplicates_paid_directly",
+          "duplicate_value_escrowed",
+          "duplicate_abuse_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "collusion_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "relation_id",
+          "relation_type",
+          "high_risk_relation",
+          "participants_have_direct_payout",
+          "high_risk_relation_routed_to_escrow",
+          "collusion_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "settlement_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "settlement_id",
+          "source_id",
+          "payout_amount",
+          "settlement_action",
+          "direct_payout",
+          "escrowed",
+          "settlement_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "source_abuse_root",
+        "creator_abuse_root",
+        "duplicate_abuse_root",
+        "collusion_root",
+        "settlement_root",
+        "schema"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "royalty_abuse_audit"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "source_count",
+        "creator_count",
+        "settlement_row_count",
+        "suspicious_source_count",
+        "suspicious_creator_count",
+        "direct_payout_total",
+        "escrow_total",
+        "creator_pool_amount"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "ready",
+            "failed"
+          ]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L117"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L116"
+        }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_prompt_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_source_text_disclosed",
+        "raw_payment_account_disclosed",
+        "public_report_uses_hashes_scores_flags_and_amounts"
+      ],
+      "additionalProperties": true
+    },
+    "royalty_abuse_audit_hash": {
+      "type": "string",
+      "minLength": 12
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

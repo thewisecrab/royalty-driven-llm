@@ -1,0 +1,66 @@
+{
+  "event": {
+    "answer_hash": "069df2b36f4c12ee438a0edb55cc944c675fb5f3802cb70592907f047916ac51",
+    "event_hash": "e4c485a119b35bfb9ad1e9340ba186a4020db2540774e6b8fcd713c39cb1997f",
+    "event_id": "evt_e4c485a119b35bfb",
+    "prompt_hash": "3ff9b4d52e3ba4909f885835c6d362c80d35db9cafec55166ee62a73722aa7c6",
+    "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1"
+  },
+  "grounding_report": {
+    "coverage": 1.0,
+    "policy_denials": 0,
+    "policy_status": "allowed",
+    "source_count": 3,
+    "status": "grounded",
+    "supported_claims": 6,
+    "total_claims": 6,
+    "unsupported_claims": 0
+  },
+  "issued_at": "2026-05-29T17:17:54Z",
+  "issuer": "rdllm-local-demo",
+  "model": {
+    "id": "model:unspecified",
+    "route_id": "route:default",
+    "version": "unknown"
+  },
+  "protocol_version": "rdllm-attribution-receipt/v1",
+  "receipt_hash": "a4c302f4d1fc7f6214ba95d2658e7ee208ceef4d6602deaa91f9667fdf5e600c",
+  "rights": {
+    "policy_denials": 0,
+    "policy_status": "allowed"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "e57c54035fcafda78f70d1ee649d0be480a8753ed50cf49ef06f354cf50508fe"
+  },
+  "sources": [
+    {
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "contribution_weight": "0.333968",
+      "creator_id": "arjun",
+      "label": "S1",
+      "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_id": "lina-governance-disputes:c1",
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "contribution_weight": "0.228551",
+      "creator_id": "lina",
+      "label": "S2",
+      "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "contribution_weight": "0.437481",
+      "creator_id": "maya",
+      "label": "S3",
+      "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ]
+}

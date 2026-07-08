@@ -1,0 +1,373 @@
+{
+  "gateway_access_log": [
+    {
+      "gateway_event_id": "gateway:demo:l134",
+      "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+      "invocation_id": "invoke:demo:l133",
+      "native_provider_call_allowed": true,
+      "preflight_authorized": true,
+      "request_id": "req:demo:l133",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+      "source_footer_required": true
+    }
+  ],
+  "native_provider_meter_log": [
+    {
+      "billed_units": "1",
+      "creator_pool": "0.550000",
+      "gross_revenue": "1.000000",
+      "guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+      "invocation_id": "invoke:demo:l133",
+      "meter_event_id": "meter:demo:l134",
+      "native_model": "openai:responses-compatible",
+      "provider_family": "openai_responses",
+      "request_id": "req:demo:l133",
+      "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+      "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+      "route_id": "route:openai_responses"
+    }
+  ],
+  "private_strings": [
+    "private demo l134 prompt",
+    "private demo l134 source text"
+  ],
+  "provider_invoice_rows": [
+    {
+      "billed_units": "1",
+      "creator_pool": "0.550000",
+      "gross_revenue": "1.000000",
+      "invocation_id": "invoke:demo:l133",
+      "invoice_row_id": "invoice:demo:l134",
+      "meter_event_id": "meter:demo:l134",
+      "provider_family": "openai_responses"
+    }
+  ],
+  "universal_invocation_guards": [
+    {
+      "artifact_bindings": {
+        "foundation_model_deployment_attestation": {
+          "declared_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+          "hash_reproducible": true,
+          "name": "foundation_model_deployment_attestation",
+          "present": true,
+          "status": "released",
+          "target_level": "RDLLM-L129",
+          "version": "rdllm-foundation-model-deployment-attestation/v1"
+        },
+        "foundation_runtime_adapter": {
+          "declared_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+          "hash_reproducible": true,
+          "name": "foundation_runtime_adapter",
+          "present": true,
+          "status": "released",
+          "target_level": "RDLLM-L127",
+          "version": "rdllm-foundation-runtime-adapter/v1"
+        },
+        "foundation_runtime_router": {
+          "declared_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+          "hash_reproducible": true,
+          "name": "foundation_runtime_router",
+          "present": true,
+          "status": "released",
+          "target_level": "RDLLM-L128",
+          "version": "rdllm-foundation-runtime-router/v1"
+        },
+        "universal_foundation_model_contract": {
+          "declared_hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44",
+          "hash_reproducible": true,
+          "name": "universal_foundation_model_contract",
+          "present": true,
+          "status": "ready",
+          "target_level": "RDLLM-L132",
+          "version": "rdllm-universal-foundation-model-contract/v1"
+        }
+      },
+      "checks": {
+        "artifact_hashes_reproducible": true,
+        "deployment_attestation_released": true,
+        "l132_contract_ready": true,
+        "native_response_bound_to_deployment": true,
+        "otel_genai_span_bound": true,
+        "precall_checks_completed": true,
+        "preflight_allows_only_after_contract_ready": true,
+        "private_text_not_disclosed": true,
+        "request_projection_bound": true,
+        "required_artifacts_present": true,
+        "required_headers_present_and_bound": true,
+        "response_binding_bound": true,
+        "response_envelope_requirement_bound": true,
+        "route_bound_to_contract": true,
+        "runtime_adapter_released": true,
+        "runtime_router_released": true,
+        "source_footer_requirement_bound": true
+      },
+      "commitments": {
+        "artifact_binding_root": "b300f49ca76819e92dac185177ad51cb9f36fbe0b4945d5a7de4e56e8fbcd68f",
+        "boundary_binding_hash": "c955a1ee5658e67a76b951bc91bad6475c12d1460ce1e93ce038118fd5067a57",
+        "deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+        "header_contract_hash": "2b2d1fb5294b6ea5a8e5fb34ba3ab8054e055fdf7d35d10104b61e15b3462770",
+        "l132_contract_hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44",
+        "precall_check_root": "72e3a1a178ec22272b6ed88f4322b79af95cc981334f7d0ca6ad58dfed69649c",
+        "telemetry_binding_hash": "dd8d2b3446483b288ffd5795cd55c3e533ad1e238bfde37bb6ff024ee9176257"
+      },
+      "coverage_gaps": {
+        "failed_checks": [],
+        "mismatched_headers": [],
+        "mismatched_telemetry_attributes": [],
+        "missing_headers": [],
+        "missing_precall_checks": [],
+        "missing_telemetry_attributes": []
+      },
+      "created_at": "2026-06-01T21:13:42Z",
+      "guard_decision": {
+        "decision": "allow_provider_call",
+        "failed_checks": [],
+        "failure_modes": [],
+        "release_authorized": true,
+        "safe_call_policy": "invoke_only_with_l133_preflight_guard"
+      },
+      "guard_policy": {
+        "minimum_input_level": "RDLLM-L132",
+        "on_boundary_drift": "block_provider_call",
+        "on_header_drift": "block_provider_call",
+        "on_missing_contract": "block_provider_call",
+        "on_private_text_leak": "block_publication",
+        "on_route_drift": "block_provider_call",
+        "profile": "rdllm-universal-invocation-guard-policy/v1",
+        "required_precall_checks": [
+          "l132_contract_ready",
+          "route_bound_to_contract",
+          "deployment_attestation_released",
+          "request_projection_bound",
+          "response_binding_bound",
+          "source_footer_required",
+          "fail_closed_policy_bound"
+        ],
+        "required_precall_headers": [
+          "RDLLM-Attribution-Level",
+          "RDLLM-Universal-Foundation-Contract-Hash",
+          "RDLLM-Foundation-Runtime-Router-Hash",
+          "RDLLM-Foundation-Deployment-Attestation-Hash",
+          "RDLLM-Selected-Provider-Family",
+          "RDLLM-Selected-Route-ID",
+          "RDLLM-Request-Projection-Hash",
+          "RDLLM-Response-Binding-Hash",
+          "RDLLM-Fail-Closed"
+        ],
+        "required_telemetry_attributes": [
+          "gen_ai.provider.name",
+          "gen_ai.request.model",
+          "gen_ai.response.model",
+          "rdllm.contract_hash",
+          "rdllm.route_id",
+          "rdllm.request_projection_hash"
+        ],
+        "target_certification_level": "RDLLM-L133"
+      },
+      "guard_version": "rdllm-universal-invocation-guard/v1",
+      "invocation_subject": {
+        "contract_selected_provider_family": "openai_responses",
+        "contract_selected_route_id": "route:openai_responses",
+        "deployment_native_model": "openai:responses-compatible",
+        "deployment_native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+        "deployment_provider_family": "openai_responses",
+        "deployment_route_id": "route:openai_responses",
+        "expected_request_headers": {
+          "RDLLM-Attribution-Level": "RDLLM-L133",
+          "RDLLM-Fail-Closed": "true",
+          "RDLLM-Foundation-Deployment-Attestation-Hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+          "RDLLM-Foundation-Runtime-Router-Hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+          "RDLLM-Request-Projection-Hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+          "RDLLM-Response-Binding-Hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+          "RDLLM-Selected-Provider-Family": "openai_responses",
+          "RDLLM-Selected-Route-ID": "route:openai_responses",
+          "RDLLM-Universal-Foundation-Contract-Hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44"
+        },
+        "fail_closed": true,
+        "invocation_id": "invoke:demo:l133",
+        "native_api_version": "responses/v1",
+        "native_model": "openai:responses-compatible",
+        "precall_checks_completed": [
+          "l132_contract_ready",
+          "route_bound_to_contract",
+          "deployment_attestation_released",
+          "request_projection_bound",
+          "response_binding_bound",
+          "source_footer_required",
+          "fail_closed_policy_bound"
+        ],
+        "preflight_decision": "allow_provider_call",
+        "provider_family": "openai_responses",
+        "provider_id": "provider:openai-responses",
+        "request_headers": {
+          "RDLLM-Attribution-Level": "RDLLM-L133",
+          "RDLLM-Fail-Closed": "true",
+          "RDLLM-Foundation-Deployment-Attestation-Hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+          "RDLLM-Foundation-Runtime-Router-Hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+          "RDLLM-Request-Projection-Hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+          "RDLLM-Response-Binding-Hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+          "RDLLM-Selected-Provider-Family": "openai_responses",
+          "RDLLM-Selected-Route-ID": "route:openai_responses",
+          "RDLLM-Universal-Foundation-Contract-Hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44"
+        },
+        "request_id": "req:demo:l133",
+        "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+        "required_response_artifact_hashes": {
+          "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+          "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737"
+        },
+        "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+        "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "route_id": "route:openai_responses",
+        "router_selected_provider_family": "openai_responses",
+        "router_selected_route_id": "route:openai_responses",
+        "runtime_native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+        "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+        "telemetry_span": {
+          "gen_ai.provider.name": "openai_responses",
+          "gen_ai.request.model": "openai:responses-compatible",
+          "gen_ai.response.model": "openai:responses-compatible",
+          "rdllm.contract_hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44",
+          "rdllm.request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+          "rdllm.route_id": "route:openai_responses"
+        }
+      },
+      "issuer": "rdllm-local-demo",
+      "preflight_header_contract": {
+        "expected_header_values": {
+          "RDLLM-Attribution-Level": "RDLLM-L133",
+          "RDLLM-Fail-Closed": "true",
+          "RDLLM-Foundation-Deployment-Attestation-Hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+          "RDLLM-Foundation-Runtime-Router-Hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+          "RDLLM-Request-Projection-Hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+          "RDLLM-Response-Binding-Hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+          "RDLLM-Selected-Provider-Family": "openai_responses",
+          "RDLLM-Selected-Route-ID": "route:openai_responses",
+          "RDLLM-Universal-Foundation-Contract-Hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44"
+        },
+        "header_contract_hash": "2b2d1fb5294b6ea5a8e5fb34ba3ab8054e055fdf7d35d10104b61e15b3462770",
+        "mismatched_headers": [],
+        "missing_headers": [],
+        "observed_header_values": {
+          "RDLLM-Attribution-Level": "RDLLM-L133",
+          "RDLLM-Fail-Closed": "true",
+          "RDLLM-Foundation-Deployment-Attestation-Hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+          "RDLLM-Foundation-Runtime-Router-Hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+          "RDLLM-Request-Projection-Hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+          "RDLLM-Response-Binding-Hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+          "RDLLM-Selected-Provider-Family": "openai_responses",
+          "RDLLM-Selected-Route-ID": "route:openai_responses",
+          "RDLLM-Universal-Foundation-Contract-Hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44"
+        },
+        "profile": "rdllm-universal-invocation-header-contract/v1",
+        "required_headers": [
+          "RDLLM-Attribution-Level",
+          "RDLLM-Universal-Foundation-Contract-Hash",
+          "RDLLM-Foundation-Runtime-Router-Hash",
+          "RDLLM-Foundation-Deployment-Attestation-Hash",
+          "RDLLM-Selected-Provider-Family",
+          "RDLLM-Selected-Route-ID",
+          "RDLLM-Request-Projection-Hash",
+          "RDLLM-Response-Binding-Hash",
+          "RDLLM-Fail-Closed"
+        ]
+      },
+      "privacy": {
+        "hash_only_request_response_boundary": true,
+        "private_strings_absent": true,
+        "private_text_fields_excluded": true,
+        "raw_prompts_outputs_sources_excluded": true
+      },
+      "request_response_boundary_binding": {
+        "boundary_binding_hash": "c955a1ee5658e67a76b951bc91bad6475c12d1460ce1e93ce038118fd5067a57",
+        "deployment_native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+        "expected_request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+        "expected_response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+        "profile": "rdllm-universal-invocation-boundary-binding/v1",
+        "provider_families": [
+          "openai_responses"
+        ],
+        "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+        "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+        "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "route_ids": [
+          "route:openai_responses"
+        ],
+        "runtime_native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+        "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737"
+      },
+      "schemas": {
+        "foundation_model_deployment_attestation": "docs/schemas/foundation_model_deployment_attestation.schema.json",
+        "foundation_runtime_router": "docs/schemas/foundation_runtime_router.schema.json",
+        "universal_foundation_model_contract": "docs/schemas/universal_foundation_model_contract.schema.json",
+        "universal_invocation_guard": "docs/schemas/universal_invocation_guard.schema.json"
+      },
+      "signature": "4ed4aa0d7cf5aa44ce65a8e22e8a5b4c76ab038909875addf49225e75d15c750",
+      "summary": {
+        "deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+        "failed_check_count": 0,
+        "failure_mode_count": 0,
+        "invocation_id": "invoke:demo:l133",
+        "l132_contract_hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44",
+        "minimum_input_level": "RDLLM-L132",
+        "native_provider_call_allowed": true,
+        "preflight_authorized": true,
+        "privacy_preserved": true,
+        "request_id": "req:demo:l133",
+        "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+        "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+        "selected_provider_family": "openai_responses",
+        "selected_route_id": "route:openai_responses",
+        "source_footer_required": true,
+        "status": "ready",
+        "target_certification_level": "RDLLM-L133"
+      },
+      "telemetry_binding": {
+        "expected_attributes": {
+          "gen_ai.provider.name": "openai_responses",
+          "gen_ai.request.model": "openai:responses-compatible",
+          "gen_ai.response.model": "openai:responses-compatible",
+          "rdllm.contract_hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44",
+          "rdllm.request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+          "rdllm.route_id": "route:openai_responses"
+        },
+        "mismatched_attributes": [],
+        "missing_attributes": [],
+        "observed_attributes": {
+          "gen_ai.provider.name": "openai_responses",
+          "gen_ai.request.model": "openai:responses-compatible",
+          "gen_ai.response.model": "openai:responses-compatible",
+          "rdllm.contract_hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44",
+          "rdllm.request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+          "rdllm.route_id": "route:openai_responses"
+        },
+        "profile": "rdllm-universal-invocation-telemetry-binding/v1",
+        "required_attributes": [
+          "gen_ai.provider.name",
+          "gen_ai.request.model",
+          "gen_ai.response.model",
+          "rdllm.contract_hash",
+          "rdllm.route_id",
+          "rdllm.request_projection_hash"
+        ],
+        "telemetry_binding_hash": "dd8d2b3446483b288ffd5795cd55c3e533ad1e238bfde37bb6ff024ee9176257"
+      },
+      "universal_invocation_guard_binding": {
+        "boundary_binding_hash": "c955a1ee5658e67a76b951bc91bad6475c12d1460ce1e93ce038118fd5067a57",
+        "foundation_model_deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+        "foundation_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+        "foundation_runtime_router_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+        "guard_binding_hash": "432b532f81bc59e3a3f7e56f322731475083ed9b28a5bd947227c9437d7ef9fc",
+        "header_contract_hash": "2b2d1fb5294b6ea5a8e5fb34ba3ab8054e055fdf7d35d10104b61e15b3462770",
+        "invocation_id": "invoke:demo:l133",
+        "l132_contract_hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44",
+        "precall_check_root": "72e3a1a178ec22272b6ed88f4322b79af95cc981334f7d0ca6ad58dfed69649c",
+        "profile": "rdllm-universal-invocation-guard-binding/v1",
+        "request_id": "req:demo:l133",
+        "telemetry_binding_hash": "dd8d2b3446483b288ffd5795cd55c3e533ad1e238bfde37bb6ff024ee9176257"
+      },
+      "universal_invocation_guard_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d"
+    }
+  ]
+}

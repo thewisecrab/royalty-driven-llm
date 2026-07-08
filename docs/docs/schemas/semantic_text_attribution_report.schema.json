@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/semantic_text_attribution_report.schema.json",
+  "title": "RDLLM Semantic Text Attribution Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "economics",
+    "submitted_outputs",
+    "match_rows",
+    "royalty_shares",
+    "source_footers",
+    "commitments",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-semantic-text-attribution/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "creator_pool_rate",
+        "accept_threshold",
+        "min_decoy_margin",
+        "accepted_decision",
+        "ambiguous_decision",
+        "unmatched_decision",
+        "policy_block_decision"
+      ],
+      "additionalProperties": true
+    },
+    "economics": {
+      "type": "object",
+      "required": [
+        "default_gross_revenue_per_input",
+        "gross_revenue_total",
+        "creator_pool_total",
+        "payout_total",
+        "escrow_total"
+      ],
+      "additionalProperties": true
+    },
+    "submitted_outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "input_id",
+          "prompt_hash",
+          "output_hash",
+          "output_semantic_fingerprint",
+          "policy_use",
+          "gross_revenue"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "match_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "input_id",
+          "work_id",
+          "chunk_id",
+          "creator_id",
+          "title",
+          "source_uri",
+          "content_hash",
+          "scores",
+          "feature_commitment",
+          "rank",
+          "decoy_margin",
+          "policy_allowed",
+          "policy_reasons",
+          "decision"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "royalty_shares": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "input_id",
+          "creator_id",
+          "work_id",
+          "chunk_id",
+          "decision",
+          "payout",
+          "contribution_weight",
+          "decision_score"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "source_footers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "input_id",
+          "footer_status",
+          "sources",
+          "escrow",
+          "footer_text_hash",
+          "footer_text_preview"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "input_root",
+        "match_row_root",
+        "share_root",
+        "footer_root",
+        "policy_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "input_count",
+        "candidate_row_count",
+        "accepted_input_count",
+        "escrow_input_count",
+        "source_footer_count",
+        "rights_conflict_count",
+        "creator_pool_conserved",
+        "semantic_text_attribution"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "source_text_disclosed",
+        "prompt_text_disclosed",
+        "output_text_disclosed",
+        "matched_text_disclosed",
+        "footer_discloses_source_ids_not_text",
+        "semantic_fingerprints_disclosed_as_hashes",
+        "report_uses_scores_hashes_and_source_ids"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/private_audit_challenge.schema.json",
+  "title": "RDLLM Private Audit Challenge",
+  "type": "object",
+  "required": [
+    "audit_version",
+    "issuer",
+    "created_at",
+    "audit_challenge",
+    "subject",
+    "challenge_rows",
+    "verification",
+    "commitments",
+    "summary",
+    "schemas",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "audit_version": {
+      "const": "rdllm-private-audit-challenge/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "audit_challenge": {
+      "type": "object",
+      "required": [
+        "auditor_id",
+        "challenge_nonce",
+        "requested_paths",
+        "requested_path_root",
+        "challenge_binding_hash"
+      ],
+      "properties": {
+        "auditor_id": { "type": "string" },
+        "challenge_nonce": { "type": "string" },
+        "requested_paths": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "requested_path_root": { "type": "string" },
+        "challenge_binding_hash": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "subject": {
+      "type": "object",
+      "required": [
+        "receipt_hash",
+        "payload_hash",
+        "payload_disclosure_root",
+        "selective_disclosure_package_hash",
+        "public_receipt_hash"
+      ],
+      "additionalProperties": true
+    },
+    "challenge_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "category",
+          "disclosure_status",
+          "private_path",
+          "leaf_hash",
+          "value_hash",
+          "salt_hash",
+          "opening_commitment",
+          "checks",
+          "audit_row_hash"
+        ],
+        "properties": {
+          "path": { "type": "string" },
+          "category": { "type": "string" },
+          "disclosure_status": {
+            "enum": ["disclosed", "redacted", "missing"]
+          },
+          "private_path": { "type": "boolean" },
+          "leaf_hash": { "type": "string" },
+          "value_hash": { "type": "string" },
+          "salt_hash": { "type": "string" },
+          "opening_commitment": { "type": "string" },
+          "checks": {
+            "type": "object",
+            "required": [
+              "path_present_in_package",
+              "path_present_in_private_receipt",
+              "package_leaf_matches_private_leaf",
+              "commitment_nonce_bound",
+              "private_value_disclosed_in_report"
+            ],
+            "additionalProperties": { "type": "boolean" }
+          },
+          "audit_row_hash": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "selective_disclosure_package_verified",
+        "private_receipt_opened_by_authorized_verifier",
+        "all_requested_paths_committed",
+        "all_requested_paths_opened_from_private_receipt",
+        "all_package_leaves_match_private_receipt",
+        "all_opening_commitments_nonce_bound",
+        "challenge_rows_hash_reproducible",
+        "no_private_values_disclosed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "challenge_row_root",
+        "requested_path_root",
+        "package_hash",
+        "receipt_hash",
+        "payload_disclosure_root"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "requested_path_count",
+        "redacted_path_count",
+        "disclosed_path_count",
+        "missing_path_count",
+        "private_audit_supported",
+        "public_report_discloses_only_hashes_categories_and_status"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "private_audit_challenge",
+        "selective_disclosure_package",
+        "attribution_receipt"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_prompt_text_disclosed",
+        "private_answer_text_disclosed",
+        "private_source_text_disclosed",
+        "private_economics_disclosed",
+        "private_payout_accounts_disclosed",
+        "private_salts_disclosed",
+        "private_values_disclosed",
+        "paths_named_but_values_hidden",
+        "auditor_nonce_required"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

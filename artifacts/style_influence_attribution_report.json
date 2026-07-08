@@ -1,0 +1,225 @@
+{
+  "checks": {
+    "accepted_styles_have_footer_rows": true,
+    "anti_style_profiles_rejected": true,
+    "copy_overlap_routes_away_from_style_payout": true,
+    "creator_pool_conserved": true,
+    "public_report_does_not_embed_private_style_text": true,
+    "style_credit_requires_license": true,
+    "style_credit_requires_margin": true,
+    "style_credit_requires_threshold": true,
+    "style_credit_separated_from_anti_style": true
+  },
+  "commitments": {
+    "footer_root": "061ef7199846d16962d7dc7f098d910ce5bb0bba4562639d17b87521538956ee",
+    "output_root": "1f4b40c51b6db0e73e4370ecb17a86d03c975ae5c26f567df25f2c99278ba948",
+    "policy_root": "245f0fd5811ca23ed2676be4b330b26b15c5b0dafb4d2c40b2bc0f194f2976c2",
+    "profile_root": "c9d3e9fd934b0c9a74dc58c348b8d7a11b23b3fe642a6f888194be0174bd5a51",
+    "share_root": "3d211238ba8692de8ca095f49954677bee0cc7ed936f0cfe32e61f18b8fe45ba",
+    "style_attribution_root": "7ab71a7f9ff6ce9e012e32c24d533a8bcc18a665ecd1c039db20e9c0d5043064",
+    "style_input_root": "c294630dfb17fbe989cae521a81f9d87059086ed2ab0f72a5cd73259f743382b"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "economics": {
+    "creator_pool": "0.550000",
+    "escrow_total": "0.000000",
+    "gross_revenue": "1.000000",
+    "payout_total": "0.550000"
+  },
+  "event": {
+    "declared_style_creator_ids": [
+      "maya"
+    ],
+    "declared_style_profile_ids": [],
+    "event_hash": "19e57f35fbcce39c7d9a48dacb9bb07d057ba1d3edd4b5142d01087464550568",
+    "event_id": "event:artifact:style-influence",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05",
+    "output_hash": "19e57f35fbcce39c7d9a48dacb9bb07d057ba1d3edd4b5142d01087464550568",
+    "prompt_hash": "fad8e9b610006eb6bfd8bab2dc868a3b8ada3d0ee887ef140e1c1f09b41e3cd6"
+  },
+  "footer": {
+    "footer_hash": "061ef7199846d16962d7dc7f098d910ce5bb0bba4562639d17b87521538956ee",
+    "style_footer_count": 1,
+    "style_footer_rows": [
+      {
+        "attribution_channel": "style_influence",
+        "creator_id": "maya",
+        "footer_row_hash": "6cb7bc07c8f19021ba58bd7397930c3d7813690c0f67f39b2206a524d0202265",
+        "modality": "text",
+        "output_id": "event:artifact:style-influence",
+        "profile_id": "style:maya-prose",
+        "source_uri": "registered://styles/maya-prose",
+        "style_feature_commitment": "9a13020241015a9e882aee52da0a7c33a8c99eebf17686a0665d0ea3650f35b3",
+        "style_similarity": 0.99111747,
+        "title": "Maya Registered Prose Style",
+        "work_id": "maya-youtube-style-pool"
+      }
+    ]
+  },
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "accept_threshold": 0.42,
+    "accepted_decision": "accepted_style_influence",
+    "blend_window": 0.08,
+    "copy_overlap_decision": "copy_overlap_requires_semantic_attribution",
+    "creator_pool_rate": "0.55",
+    "license_block_decision": "style_rights_escrow",
+    "max_content_overlap": 0.35,
+    "min_anti_margin": 0.08,
+    "min_style_margin": 0.04,
+    "profile": "rdllm-style-influence-attribution-policy/v1",
+    "supported_modalities": [
+      "3d",
+      "audio",
+      "image",
+      "music",
+      "text",
+      "video"
+    ],
+    "target_certification_level": "RDLLM-L90",
+    "unattributed_decision": "style_unattributed_escrow"
+  },
+  "privacy": {
+    "feature_vectors_disclosed": false,
+    "output_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "raw_style_descriptor_disclosed": false,
+    "report_uses_hashes_scores_and_public_profile_metadata": true,
+    "style_example_text_disclosed": false
+  },
+  "report_hash": "4d82131a1595d2526f6923137b85761e5f4295d571ba4ce656e4ce326185086a",
+  "report_version": "rdllm-style-influence-attribution/v1",
+  "royalty_shares": [
+    {
+      "contribution_weight": 1.0,
+      "creator_id": "maya",
+      "decision": "accepted_style_influence",
+      "escrow_payout": "0.000000",
+      "output_id": "event:artifact:style-influence",
+      "payout": "0.550000",
+      "profile_id": "style:maya-prose",
+      "share_hash": "a64aaf7ed58a3ab23aea59ff735788ee44f4916a12c7bb9249424d248be4dab1",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "schemas": {
+    "style_influence_attribution_report": "docs/schemas/style_influence_attribution_report.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "a73077ca7e92985fbd5ba466db781aa929c22f10120b867977722b71efd5da3d"
+  },
+  "style_attribution": [
+    {
+      "anti_style_margin": 0.40710402,
+      "content_overlap_score": 0.30434783,
+      "copy_overlap_guard_passed": true,
+      "creator_id": "maya",
+      "decision": "accepted_style_influence",
+      "decision_score": 0.87395988,
+      "declared_intent_score": 1.0,
+      "failure_reasons": [],
+      "feature_commitment": "fa152dbbf5ac625fd72e3d93b2098dfdcf95a1b1e2750f90448224d8a6f69129",
+      "license_allowed": true,
+      "modality": "text",
+      "output_id": "event:artifact:style-influence",
+      "perceptual_similarity": 0.0,
+      "profile_id": "style:maya-prose",
+      "profile_role": "style_candidate",
+      "rank": 1,
+      "source_uri": "registered://styles/maya-prose",
+      "style_margin": 0.87395988,
+      "style_row_hash": "3565f60fabf266ef628f058029fafbf95bcf1e2f424058e1eac4fcc34ade9252",
+      "style_similarity": 0.99111747,
+      "title": "Maya Registered Prose Style",
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "anti_style_margin": 0.0,
+      "content_overlap_score": 0.09090909,
+      "copy_overlap_guard_passed": true,
+      "creator_id": "decoy-style-owner",
+      "decision": "anti_style_rejected",
+      "decision_score": 0.46685586,
+      "declared_intent_score": 0.0,
+      "failure_reasons": [
+        "profile_marked_as_anti_style"
+      ],
+      "feature_commitment": "caa68991b33f50464fa0089d5062c1fd533412950a9a40b60ab4bb8feccb11fe",
+      "license_allowed": true,
+      "modality": "text",
+      "output_id": "event:artifact:style-influence",
+      "perceptual_similarity": 0.0,
+      "profile_id": "style:blunt-decoy",
+      "profile_role": "anti_style",
+      "rank": 2,
+      "source_uri": "registered://styles/blunt-decoy",
+      "style_margin": 0.0,
+      "style_row_hash": "87c5dc24989c058a54be067ef39e330c39921c2d1de02eb2bc25838e11896d95",
+      "style_similarity": 0.68655273,
+      "title": "Blunt Decoy Style",
+      "work_id": "style:blunt-decoy"
+    }
+  ],
+  "style_outputs": [
+    {
+      "declared_style_creator_ids": [
+        "maya"
+      ],
+      "declared_style_profile_ids": [],
+      "gross_revenue": "1.000000",
+      "modality": "text",
+      "output_hash": "19e57f35fbcce39c7d9a48dacb9bb07d057ba1d3edd4b5142d01087464550568",
+      "output_id": "event:artifact:style-influence",
+      "output_row_hash": "f04ed669ef8ee8c51a78771b70d73affb961cc3d3e1db5bd74e5b6f65594af94",
+      "policy_use": "style_generation",
+      "style_feature_commitment": "167aeff4e12d4d128f1086efc75705a0156d78d139f4eb7d80ee3f68797bde07"
+    }
+  ],
+  "style_profiles": [
+    {
+      "creator_id": "maya",
+      "example_count": 2,
+      "license_status": "active",
+      "license_term_hash": "56604a8820c94723e88409e5a9e437dc007517ff4bd166118333f80c41e496c7",
+      "modality": "text",
+      "profile_id": "style:maya-prose",
+      "profile_role": "style_candidate",
+      "profile_row_hash": "c0ca2c3da30f533c96da4cbb0b1ff23050becfc9539b74e38a8f76303110390e",
+      "source_uri": "registered://styles/maya-prose",
+      "style_feature_commitment": "9a13020241015a9e882aee52da0a7c33a8c99eebf17686a0665d0ea3650f35b3",
+      "title": "Maya Registered Prose Style",
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "creator_id": "decoy-style-owner",
+      "example_count": 1,
+      "license_status": "active",
+      "license_term_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "modality": "text",
+      "profile_id": "style:blunt-decoy",
+      "profile_role": "anti_style",
+      "profile_row_hash": "9b44afebb6f6a1e6a58e5c658b7592ab72dfd0e50976c5952aa51e9a5610364a",
+      "source_uri": "registered://styles/blunt-decoy",
+      "style_feature_commitment": "3c1eb960d67f934ea4a767588d865c36674a2a60399a2584d88e9794f2671be7",
+      "title": "Blunt Decoy Style",
+      "work_id": "style:blunt-decoy"
+    }
+  ],
+  "summary": {
+    "accepted_style_count": 1,
+    "anti_style_rejection_count": 1,
+    "copy_overlap_rejection_count": 0,
+    "creator_pool_conserved": true,
+    "footer_hash": "061ef7199846d16962d7dc7f098d910ce5bb0bba4562639d17b87521538956ee",
+    "license_block_count": 0,
+    "output_count": 1,
+    "status": "ready",
+    "style_footer_count": 1,
+    "style_profile_count": 2,
+    "style_row_count": 2,
+    "target_certification_level": "RDLLM-L90"
+  }
+}

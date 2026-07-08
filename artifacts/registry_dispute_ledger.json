@@ -1,0 +1,461 @@
+{
+  "balances": {
+    "registry_dispute_escrow": "0.550000"
+  },
+  "events": [
+    {
+      "answer_text": "Royalty-aware answer:\nFor the prompt 'What should provenance records include for AI outputs?', the strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S2]",
+      "attribution_gap": {
+        "accessed_sources": [
+          {
+            "access_id": "srcacc_9fe340c7a6856762",
+            "access_type": "retrieval",
+            "chunk_id": "arjun-provenance-ledger:c1",
+            "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+            "creator_id": "arjun",
+            "decision_status": "blocked_by_registry",
+            "policy_allowed": true,
+            "rank": 1,
+            "registry_allowed": false,
+            "score": 0.24196696,
+            "use": "retrieval",
+            "work_id": "arjun-provenance-ledger"
+          },
+          {
+            "access_id": "srcacc_17303f3c34ecc286",
+            "access_type": "text_match",
+            "chunk_id": "arjun-provenance-ledger:c1",
+            "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+            "creator_id": "arjun",
+            "decision_status": "blocked_by_registry",
+            "policy_allowed": true,
+            "rank": 1,
+            "registry_allowed": false,
+            "score": 0.9,
+            "use": "generation",
+            "work_id": "arjun-provenance-ledger"
+          },
+          {
+            "access_id": "srcacc_d494a855bea7fdbc",
+            "access_type": "retrieval",
+            "chunk_id": "copycat-provenance-ledger:c1",
+            "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+            "creator_id": "copycat",
+            "decision_status": "blocked_by_registry",
+            "policy_allowed": true,
+            "rank": 2,
+            "registry_allowed": false,
+            "score": 0.24196696,
+            "use": "retrieval",
+            "work_id": "copycat-provenance-ledger"
+          },
+          {
+            "access_id": "srcacc_643810e926ac9b69",
+            "access_type": "text_match",
+            "chunk_id": "copycat-provenance-ledger:c1",
+            "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+            "creator_id": "copycat",
+            "decision_status": "blocked_by_registry",
+            "policy_allowed": true,
+            "rank": 2,
+            "registry_allowed": false,
+            "score": 0.9,
+            "use": "generation",
+            "work_id": "copycat-provenance-ledger"
+          }
+        ],
+        "classifications": {
+          "cited_without_access": [],
+          "consumed_without_credit": [],
+          "paid_hidden": [],
+          "policy_withheld": [],
+          "registry_withheld": [
+            "arjun-provenance-ledger:c1",
+            "copycat-provenance-ledger:c1"
+          ]
+        },
+        "gap_version": "rdllm-attribution-gap/v1",
+        "grounding_status": "registry_disputed",
+        "issues": [],
+        "policy_status": "allowed",
+        "registry_status": "disputed",
+        "report_hash": "8265d18fe02b4a2e3723c2fef7aab8402fe4857088c6a2002a6cef564d9aa1d7",
+        "scores": {
+          "allowed_credit_coverage": null,
+          "attribution_gap_rate": 0.0,
+          "citation_efficiency": 0.0,
+          "credit_efficiency": 1.0,
+          "payout_visibility": null
+        },
+        "summary": {
+          "access_record_count": 4,
+          "accessed_source_count": 2,
+          "allowed_accessed_source_count": 0,
+          "cited_without_access_count": 0,
+          "consumed_without_credit_count": 0,
+          "credited_source_count": 2,
+          "escrow_accounts": [
+            "registry_dispute_escrow"
+          ],
+          "paid_hidden_count": 0,
+          "paid_source_count": 0,
+          "policy_withheld_count": 0,
+          "registry_withheld_count": 2,
+          "visible_source_count": 0
+        },
+        "verdict": "escrowed"
+      },
+      "claim_support": [
+        {
+          "chunk_id": "",
+          "claim": "Every royalty bearing AI answer should have a provenance record.",
+          "evidence_end_char": -1,
+          "evidence_span_hash": "",
+          "evidence_start_char": -1,
+          "evidence_text": "",
+          "source_label": "",
+          "support_score": 0.0,
+          "supported": false,
+          "work_id": ""
+        },
+        {
+          "chunk_id": "",
+          "claim": "The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.",
+          "evidence_end_char": -1,
+          "evidence_span_hash": "",
+          "evidence_start_char": -1,
+          "evidence_text": "",
+          "source_label": "",
+          "support_score": 0.0,
+          "supported": false,
+          "work_id": ""
+        },
+        {
+          "chunk_id": "",
+          "claim": "Every royalty bearing AI answer should have a provenance record.",
+          "evidence_end_char": -1,
+          "evidence_span_hash": "",
+          "evidence_start_char": -1,
+          "evidence_text": "",
+          "source_label": "",
+          "support_score": 0.0,
+          "supported": false,
+          "work_id": ""
+        },
+        {
+          "chunk_id": "",
+          "claim": "The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.",
+          "evidence_end_char": -1,
+          "evidence_span_hash": "",
+          "evidence_start_char": -1,
+          "evidence_text": "",
+          "source_label": "",
+          "support_score": 0.0,
+          "supported": false,
+          "work_id": ""
+        }
+      ],
+      "creator_pool": "0.550000",
+      "creator_pool_rate": "0.55",
+      "event_hash": "658bea9b5306639b06069f062775fd68f2aa49990d7438e0f2bf6b85e8c2caf9",
+      "event_id": "evt_658bea9b5306639b",
+      "gross_revenue": "1.000000",
+      "grounding_quality": {
+        "issues": [],
+        "overall_score": 1.0,
+        "quality_version": "rdllm-grounding-quality/v1",
+        "scores": {
+          "citation_integrity": null,
+          "evidence_relevance": null,
+          "fact_support": null,
+          "payout_alignment": 1.0,
+          "policy_alignment": 1.0,
+          "source_accessibility": null
+        },
+        "summary": {
+          "claim_count": 4,
+          "footer_source_count": 0,
+          "footer_span_hash_count": 0,
+          "registry_conflicts": 1,
+          "source_count": 0,
+          "supported_claims": 0
+        },
+        "verdict": "blocked_by_registry"
+      },
+      "grounding_report": {
+        "coverage": 0.0,
+        "policy_denials": 0,
+        "policy_status": "allowed",
+        "registry_conflicts": 1,
+        "registry_report_hash": "3c48010352ebea9fa4c501a225d7292696fc25ce259c276681e5ab6a8039527d",
+        "registry_status": "disputed",
+        "source_count": 0,
+        "status": "registry_disputed",
+        "supported_claims": 0,
+        "total_claims": 4,
+        "unsupported_claims": 4
+      },
+      "output": "This response is held by ownership registry policy for the requested use.\n\nSources\n[D1] Registered source match(es) are under ownership dispute; creator pool assigned to registry-dispute escrow.\nGrounding: 0/4 claims supported; status=registry_disputed.\nRegistry: 1 ownership conflict(s) were open; creator pool assigned to registry-dispute escrow.",
+      "policy_decisions": [
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:arjun-provenance-ledger",
+          "reasons": [
+            "permit:generation"
+          ],
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "target_id": "arjun-provenance-ledger:c1",
+          "target_type": "chunk",
+          "text_match_score": 0.9,
+          "use": "generation",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:arjun-provenance-ledger",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "target_id": "arjun-provenance-ledger:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "copycat-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:copycat-provenance-ledger",
+          "reasons": [
+            "permit:generation"
+          ],
+          "source_uri": "registered://works/copycat-provenance-ledger#copycat-provenance-ledger:c1",
+          "target_id": "copycat-provenance-ledger:c1",
+          "target_type": "chunk",
+          "text_match_score": 0.9,
+          "use": "generation",
+          "work_id": "copycat-provenance-ledger"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "copycat-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:copycat-provenance-ledger",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "registered://works/copycat-provenance-ledger#copycat-provenance-ledger:c1",
+          "target_id": "copycat-provenance-ledger:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "copycat-provenance-ledger"
+        }
+      ],
+      "prompt": "What should provenance records include for AI outputs?",
+      "registry_decisions": [
+        {
+          "action": "escrow",
+          "allowed": false,
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "conflict_id": "conf_451172c810c96d60",
+          "conflict_score": 1.0,
+          "conflict_type": "duplicate_content",
+          "conflicted_work_ids": [
+            "arjun-provenance-ledger",
+            "copycat-provenance-ledger"
+          ],
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "arjun",
+          "escrow_account": "registry_dispute_escrow",
+          "reason": "registered work has an open ownership claim conflict",
+          "registry_report_hash": "3c48010352ebea9fa4c501a225d7292696fc25ce259c276681e5ab6a8039527d",
+          "registry_report_version": "rdllm-claim-registry/v1",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "action": "escrow",
+          "allowed": false,
+          "chunk_id": "copycat-provenance-ledger:c1",
+          "conflict_id": "conf_451172c810c96d60",
+          "conflict_score": 1.0,
+          "conflict_type": "duplicate_content",
+          "conflicted_work_ids": [
+            "arjun-provenance-ledger",
+            "copycat-provenance-ledger"
+          ],
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "copycat",
+          "escrow_account": "registry_dispute_escrow",
+          "reason": "registered work has an open ownership claim conflict",
+          "registry_report_hash": "3c48010352ebea9fa4c501a225d7292696fc25ce259c276681e5ab6a8039527d",
+          "registry_report_version": "rdllm-claim-registry/v1",
+          "work_id": "copycat-provenance-ledger"
+        }
+      ],
+      "retrieval_hits": [
+        {
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "arjun",
+          "rank": 1,
+          "score": 0.24196696,
+          "title": "Provenance Ledgers for AI Outputs",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "chunk_id": "copycat-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "copycat",
+          "rank": 2,
+          "score": 0.24196696,
+          "title": "Copied Provenance Ledger Claim",
+          "work_id": "copycat-provenance-ledger"
+        }
+      ],
+      "royalty_shares": [
+        {
+          "attribution_basis": {
+            "registry_dispute_escrow": 1.0
+          },
+          "chunk_id": "escrow:registry_dispute",
+          "citation_score": 0.0,
+          "content_hash": "75b2a03042d55514c2339697bf845fd14e64eaee897b7897d13fda30a0f3fb5f",
+          "contribution_weight": "1",
+          "creator_id": "registry_dispute_escrow",
+          "data_value_prior": 0.0,
+          "output_support": 0.0,
+          "payout": "0.550000",
+          "query_relevance": 0.0,
+          "retrieval_score": 0.0,
+          "text_match_score": 0.0,
+          "training_value_score": 0.0,
+          "work_id": "registry_dispute"
+        }
+      ],
+      "source_accesses": [
+        {
+          "access_id": "srcacc_9fe340c7a6856762",
+          "access_type": "retrieval",
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "arjun",
+          "decision_status": "blocked_by_registry",
+          "matched_text_hash": "",
+          "policy_allowed": true,
+          "rank": 1,
+          "registry_allowed": false,
+          "score": 0.24196696,
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "title": "Provenance Ledgers for AI Outputs",
+          "use": "retrieval",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "access_id": "srcacc_17303f3c34ecc286",
+          "access_type": "text_match",
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "arjun",
+          "decision_status": "blocked_by_registry",
+          "matched_text_hash": "57661e4428aec7462ebd95b77665d01fd6861283241dcb5246a6d09df8b67331",
+          "policy_allowed": true,
+          "rank": 1,
+          "registry_allowed": false,
+          "score": 0.9,
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "title": "Provenance Ledgers for AI Outputs",
+          "use": "generation",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "access_id": "srcacc_d494a855bea7fdbc",
+          "access_type": "retrieval",
+          "chunk_id": "copycat-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "copycat",
+          "decision_status": "blocked_by_registry",
+          "matched_text_hash": "",
+          "policy_allowed": true,
+          "rank": 2,
+          "registry_allowed": false,
+          "score": 0.24196696,
+          "source_uri": "registered://works/copycat-provenance-ledger#copycat-provenance-ledger:c1",
+          "title": "Copied Provenance Ledger Claim",
+          "use": "retrieval",
+          "work_id": "copycat-provenance-ledger"
+        },
+        {
+          "access_id": "srcacc_643810e926ac9b69",
+          "access_type": "text_match",
+          "chunk_id": "copycat-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "copycat",
+          "decision_status": "blocked_by_registry",
+          "matched_text_hash": "57661e4428aec7462ebd95b77665d01fd6861283241dcb5246a6d09df8b67331",
+          "policy_allowed": true,
+          "rank": 2,
+          "registry_allowed": false,
+          "score": 0.9,
+          "source_uri": "registered://works/copycat-provenance-ledger#copycat-provenance-ledger:c1",
+          "title": "Copied Provenance Ledger Claim",
+          "use": "generation",
+          "work_id": "copycat-provenance-ledger"
+        }
+      ],
+      "source_references": [],
+      "text_matches": [
+        {
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "arjun",
+          "exact_score": 0.57446809,
+          "longest_sequence_tokens": 27,
+          "matched_text": "every royalty bearing ai answer should provenance record record should include source identifiers content hashes retrieval scores output citations payout weights event hash allows auditors replay attribution",
+          "ngram_score": 0.53488372,
+          "rank": 1,
+          "score": 0.9,
+          "title": "Provenance Ledgers for AI Outputs",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "chunk_id": "copycat-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "copycat",
+          "exact_score": 0.57446809,
+          "longest_sequence_tokens": 27,
+          "matched_text": "every royalty bearing ai answer should provenance record record should include source identifiers content hashes retrieval scores output citations payout weights event hash allows auditors replay attribution",
+          "ngram_score": 0.53488372,
+          "rank": 2,
+          "score": 0.9,
+          "title": "Copied Provenance Ledger Claim",
+          "work_id": "copycat-provenance-ledger"
+        }
+      ]
+    }
+  ]
+}

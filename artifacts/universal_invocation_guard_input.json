@@ -1,0 +1,1147 @@
+{
+  "foundation_model_deployment_attestation": {
+    "artifact_bindings": {
+      "attested_runtime": {
+        "artifact_type": "",
+        "declared_hash": "",
+        "hash_reproducible": false,
+        "present": false
+      },
+      "foundation_runtime_adapter": {
+        "artifact_type": "rdllm-foundation-runtime-adapter/v1",
+        "declared_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "foundation_runtime_router": {
+        "artifact_type": "rdllm-foundation-runtime-router/v1",
+        "declared_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+        "hash_reproducible": true,
+        "present": true
+      }
+    },
+    "checks": {
+      "api_boundary_attestation_present": true,
+      "artifact_hashes_reproducible": true,
+      "deployment_statement_attestation_type_allowed": true,
+      "deployment_statement_binds_request_response_boundary": true,
+      "deployment_statement_hash_reproducible": true,
+      "deployment_statement_matches_selected_route": true,
+      "deployment_statement_model_commitments_present": true,
+      "deployment_statement_signature_valid": true,
+      "deployment_statement_valid_for_report_time": true,
+      "deployment_statement_version_supported": true,
+      "foundation_runtime_router_released_l128": true,
+      "private_text_not_disclosed": true,
+      "request_response_binding_complete": true,
+      "request_response_binding_matches_runtime_adapter": true,
+      "selected_route_binds_runtime_adapter": true,
+      "trusted_deployment_key_active": true
+    },
+    "commitments": {
+      "foundation_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+      "foundation_runtime_router_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+      "model_deployment_statement_hash": "de2de816bac68e305587680a01aa1be2b0167ce14662b8589d1599cf9d280bd4",
+      "request_response_binding_hash": "b6448e7bd58defc96aa5cd0ccd705c462b232699a8c808f92647fcb24baf7176",
+      "schema": "docs/schemas/foundation_model_deployment_attestation.schema.json",
+      "trusted_deployment_key_root": "69fa3257ebf8a827af1906dbdbfb12b6ab260aa23c15d4baed2e43b63b9a9bfd"
+    },
+    "coverage_gaps": {
+      "failed_checks": [],
+      "failure_modes": [],
+      "matched_deployment_key_id": "deployment-key:artifact-foundation-runtime",
+      "missing_model_commitments": []
+    },
+    "created_at": "2026-05-31T00:00:00Z",
+    "deployment_attestation_version": "rdllm-foundation-model-deployment-attestation/v1",
+    "deployment_decision": {
+      "decision": "release",
+      "failed_checks": [],
+      "failure_modes": [],
+      "release_authorized": true,
+      "safe_output_policy": "emit_attested_foundation_model_output"
+    },
+    "deployment_policy": {
+      "accepted_attestation_types": [
+        "provider_signed_deployment",
+        "api_boundary_attestation",
+        "tee_remote_attestation",
+        "third_party_deployment_audit",
+        "aex_api_boundary"
+      ],
+      "minimum_input_level": "RDLLM-L128",
+      "on_model_identity_mismatch": "block_display",
+      "on_request_response_boundary_mismatch": "block_display",
+      "on_unattested_deployment": "block_display",
+      "profile": "rdllm-foundation-model-deployment-attestation-policy/v1",
+      "raw_model_weights_disclosure_allowed": false,
+      "raw_request_or_response_disclosure_allowed": false,
+      "required_model_commitments": [
+        "model_manifest_hash",
+        "weights_commitment_hash",
+        "tokenizer_hash",
+        "inference_stack_hash",
+        "safety_policy_hash",
+        "attribution_policy_hash"
+      ],
+      "target_certification_level": "RDLLM-L129"
+    },
+    "foundation_model_deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+    "issuer": "rdllm-local-demo",
+    "model_deployment_statement": {
+      "api_boundary_attestation_hash": "c917760b05df8bb949b2450ff91e3d360427694f095c37090dfc2bba6aed6148",
+      "attestation_type": "provider_signed_deployment",
+      "attribution_policy_hash": "9babd2929d2172b9374700eabf10400c04d9c228944ddb3eef47e5344c845127",
+      "created_at": "2026-05-31T00:00:00Z",
+      "deployment_id": "deployment:artifact-foundation-runtime",
+      "deployment_key_id": "deployment-key:artifact-foundation-runtime",
+      "foundation_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+      "foundation_runtime_router_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+      "inference_stack_hash": "c16b60ca911b6009889c3e07041556d88efb4633dfd2d12e78d4643b73f5487b",
+      "model_manifest_hash": "0186d7e22031f7f4e8449800e075f85715e6d917416e2d85490c87ddb5378852",
+      "model_version": "2026-06-02",
+      "native_model": "openai:responses-compatible",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+      "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+      "route_decision_hash": "be7c1645424246ff54377b59bd6895ef9df1b7f6147a2392ace3a27f3eef51c2",
+      "safety_policy_hash": "9801dc39dd91bc273648221f1baf1763ecb38792c885190ce9ba3aae2b65d315",
+      "selected_route_id": "route:openai_responses",
+      "signature": {
+        "algorithm": "HMAC-SHA256",
+        "key_id": "deployment-key:artifact-foundation-runtime",
+        "value": "cf8e79dbff1ef9b2168c6f1e757a21c4bd77871ce1ca7fcc4c99d42452dcfefe"
+      },
+      "statement_hash": "de2de816bac68e305587680a01aa1be2b0167ce14662b8589d1599cf9d280bd4",
+      "statement_version": "rdllm-foundation-model-deployment-statement/v1",
+      "tokenizer_hash": "8719a6432f3cb39129deea31cdfc7a1de297bdb3d7252a3e8e77e41458ac17b3",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": "2026-12-31T23:59:59Z",
+      "weights_commitment_hash": "2c706137c82cdd0bc388c00a4e42b83825774584333f58e082bb0bd76d78d038"
+    },
+    "privacy": {
+      "deployment_key_secret_disclosed": false,
+      "hash_only_model_commitments": true,
+      "raw_model_weights_disclosed": false,
+      "raw_request_disclosed": false,
+      "raw_response_disclosed": false,
+      "raw_router_payload_disclosed": false
+    },
+    "request_response_binding": {
+      "api_boundary_attestation_hash": "c917760b05df8bb949b2450ff91e3d360427694f095c37090dfc2bba6aed6148",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_response_id": "runtime_rdllm_reference_response",
+      "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+      "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be"
+    },
+    "schemas": {
+      "attested_runtime": "docs/schemas/attested_runtime.schema.json",
+      "foundation_model_deployment_attestation": "docs/schemas/foundation_model_deployment_attestation.schema.json",
+      "foundation_runtime_adapter": "docs/schemas/foundation_runtime_adapter.schema.json",
+      "foundation_runtime_router": "docs/schemas/foundation_runtime_router.schema.json"
+    },
+    "selected_route_binding": {
+      "foundation_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+      "foundation_runtime_router_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+      "native_model": "openai:responses-compatible",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "route_decision_hash": "be7c1645424246ff54377b59bd6895ef9df1b7f6147a2392ace3a27f3eef51c2",
+      "route_id": "route:openai_responses"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "61b1eba9f22e2b5b13cd1345000dbc1a744f6d40fb49edcbf453067baf0cea2e"
+    },
+    "summary": {
+      "api_boundary_attested": true,
+      "attestation_type": "provider_signed_deployment",
+      "deployment_id": "deployment:artifact-foundation-runtime",
+      "deployment_release_authorized": true,
+      "failed_check_count": 0,
+      "failure_mode_count": 0,
+      "minimum_input_level": "RDLLM-L128",
+      "model_identity_bound": true,
+      "native_model": "openai:responses-compatible",
+      "privacy_preserved": true,
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "request_response_boundary_bound": true,
+      "status": "released",
+      "target_certification_level": "RDLLM-L129"
+    },
+    "trusted_deployment_key_rows": [
+      {
+        "deployment_key_hash": "1cfddf990906b928fda189222f7f0f779e93b8ab48be6e052ad1b7d1182812d3",
+        "deployment_key_id": "deployment-key:artifact-foundation-runtime",
+        "provider_family": "openai_responses",
+        "provider_id": "provider:openai-responses",
+        "status": "active",
+        "trusted_deployment_key_row_hash": "c3db55ba8e84b455d61bc41b4e1714723c01070ca608ebaac96108230b77a84d",
+        "valid_from": "2026-01-01T00:00:00Z",
+        "valid_until": "2026-12-31T23:59:59Z"
+      }
+    ]
+  },
+  "foundation_runtime_adapter": {
+    "adapter_binding": {
+      "citation_mapping_paths": [
+        "$.output[*].content[*].annotations",
+        "$.output[*].content[*].text.annotations"
+      ],
+      "native_output_path": "$.output_text",
+      "provider_adapter_row_hash": "823a04465f4e1b49e57e15f52f6779de3fbeb79c215d1e6f96e528148a92b8be",
+      "provider_family": "openai_responses",
+      "tool_mapping_paths": [
+        "$.output[*].tool_call",
+        "$.output[*].function_call"
+      ]
+    },
+    "artifact_bindings": {
+      "citation_url_health": {
+        "artifact_type": "rdllm-citation-url-health/v1",
+        "declared_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "composite_foundation_adapter": {
+        "artifact_type": "rdllm-composite-foundation-adapter/v1",
+        "declared_hash": "6656bbf9c9129bfe19120e2a2655d979890e87e457dd722280ea1c5d85e75864",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "discovery_manifest": {
+        "artifact_type": "rdllm-discovery-manifest/v1",
+        "declared_hash": "ef30383461749d41f25c23439b7fa299dd10e267eeed8cd3978fe438bc911600",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "foundation_api_profile": {
+        "artifact_type": "rdllm-foundation-attribution-profile/v1",
+        "declared_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "foundation_provider_conformance": {
+        "artifact_type": "rdllm-foundation-provider-conformance/v1",
+        "declared_hash": "db1fdda0749269946a8f5b65b2c86bcd42c54250e3c8a919a984f3558a2fad2f",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "response_envelope": {
+        "artifact_type": "rdllm-response-envelope/v1",
+        "declared_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "source_footer_delivery": {
+        "artifact_type": "rdllm-source-footer-delivery/v1",
+        "declared_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+        "hash_reproducible": true,
+        "present": true
+      }
+    },
+    "checks": {
+      "artifact_hashes_reproducible": true,
+      "citation_paths_observed": true,
+      "citation_url_health_ready_and_verified": true,
+      "claim_support_footer_bound": true,
+      "composite_foundation_adapter_ready_l125": true,
+      "conformance_capabilities_cover_runtime_modes": true,
+      "conformance_row_backs_adapter_row": true,
+      "foundation_provider_conformance_ready_l126": true,
+      "json_proof_fields_bind_embedded_artifacts": true,
+      "native_output_hash_matches_response_envelope": true,
+      "native_provider_identity_matches_adapter": true,
+      "negative_modes_have_fail_closed_fixtures": true,
+      "private_text_not_disclosed": true,
+      "provider_family_supported": true,
+      "required_header_values_bind_artifacts": true,
+      "required_headers_present": true,
+      "required_json_proof_fields_present": true,
+      "runtime_attribution_level_meets_minimum": true,
+      "runtime_observation_hash_present": true,
+      "stream_final_event_hashes_bind_artifacts": true,
+      "tool_paths_observed": true
+    },
+    "commitments": {
+      "adapter_row_hash": "823a04465f4e1b49e57e15f52f6779de3fbeb79c215d1e6f96e528148a92b8be",
+      "conformance_row_hash": "484a8dcc68b42483469227979d33ab9b1d6bb326e2623c5048808abdf9ef1c9f",
+      "native_response_observation_hash": "cc0bf386cb6834e052e79ac3c6d237a6a598b8feb8585372a318fc22402ca784",
+      "schema": "docs/schemas/foundation_runtime_adapter.schema.json"
+    },
+    "conformance_binding": {
+      "capabilities": {
+        "citation_or_grounding": true,
+        "claim_support_footer": true,
+        "fail_closed_errors": true,
+        "parametric_memory_fallback": true,
+        "streaming_response": true,
+        "structured_proof_fields": true,
+        "sync_response": true,
+        "tool_calling": true,
+        "url_health_binding": true
+      },
+      "foundation_provider_conformance_row_hash": "484a8dcc68b42483469227979d33ab9b1d6bb326e2623c5048808abdf9ef1c9f",
+      "negative_fixture_hashes": {
+        "missing_required_header": "150768dbd55e62f9f376fd97713573ceebf0a1fcfcf6e91f388dda9765fa68ea",
+        "native_output_hash_mismatch": "d4360ea59ec55979937fed2b3498f6268b9a904478a5de19862fd6718d3c64a3",
+        "private_text_leak": "f45b9c77144f8c35e132e88dc51fdf1d45332bece84a04ba46ff92ecd0acdac7",
+        "stream_final_hash_drift": "5a2accc3ff4b2c4afa16ae9137e7a1077b9a3aaf2d1927e0da12f809f6aa3d83",
+        "unsupported_claim_footer": "359a29a9b067c93c1963862340fefab4aebd57494f6cd1f0a1d96576078542ba",
+        "unverified_citation_url": "6b1ab2275a2055877d43a8fd7e24c229c422b4deeade0b23876f3368d9d57337"
+      },
+      "provider_adapter_row_hash": "823a04465f4e1b49e57e15f52f6779de3fbeb79c215d1e6f96e528148a92b8be"
+    },
+    "coverage_gaps": {
+      "failed_checks": [],
+      "failure_modes": [],
+      "missing_citation_paths": [],
+      "missing_headers": [],
+      "missing_json_proof_fields": [],
+      "missing_tool_paths": []
+    },
+    "created_at": "2026-05-31T00:00:00Z",
+    "foundation_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+    "issuer": "rdllm-local-demo",
+    "native_response_observation": {
+      "citation_path_observations": {
+        "$.output[*].content[*].annotations": true,
+        "$.output[*].content[*].text.annotations": true
+      },
+      "claim_support_footer_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+      "headers": {
+        "RDLLM-Attribution-Level": "RDLLM-L126",
+        "RDLLM-Discovery-Manifest-Hash": "ef30383461749d41f25c23439b7fa299dd10e267eeed8cd3978fe438bc911600",
+        "RDLLM-Foundation-Profile-Hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "RDLLM-Response-Envelope-Hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "RDLLM-Source-Footer-Delivery-Hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+        "RDLLM-Verification-Endpoint": "/.well-known/rdllm/foundation-attribution-profile.json"
+      },
+      "json_proof_hashes": {
+        "embedded_artifacts.response_envelope": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "embedded_artifacts.source_footer_delivery": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+        "response.rendered_output": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+        "response.source_labels": "a9bdc8449334f6cca8d1513238321f8be4eea2b18574ab1713a7d170bc114966",
+        "verification.foundation_attribution_profile": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "verification.verifier_commands": "78195938bee1e6c26c88156356becce3874497983f5d2c82b6f19b7064ba533b"
+      },
+      "native_api_version": "responses/v1",
+      "native_created_at": "2026-05-31T00:00:00Z",
+      "native_model": "openai:responses-compatible",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_response_id": "runtime_rdllm_reference_response",
+      "native_status": "completed",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "runtime_observation_hash": "e338ae07ff2b1578b79002da7afaf625b8211a2e81dffab5962b2309d8f83757",
+      "stream_final_event_hashes": {
+        "RDLLM-Citation-URL-Health-Hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+        "RDLLM-Foundation-Profile-Hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "RDLLM-Response-Envelope-Hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "RDLLM-Source-Footer-Delivery-Hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737"
+      },
+      "tool_path_observations": {
+        "$.output[*].function_call": true,
+        "$.output[*].tool_call": true
+      }
+    },
+    "normalized_rdllm_contract": {
+      "citation_url_health_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "foundation_profile_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "foundation_provider_conformance_hash": "db1fdda0749269946a8f5b65b2c86bcd42c54250e3c8a919a984f3558a2fad2f",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "profile": "rdllm-native-response-runtime-normalization/v1",
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737"
+    },
+    "policy": {
+      "minimum_attribution_level": "RDLLM-L126",
+      "minimum_input_level": "RDLLM-L126",
+      "native_response_payload_disclosure_allowed": false,
+      "on_runtime_adapter_failure": "block_display",
+      "profile": "rdllm-foundation-runtime-adapter-policy/v1",
+      "raw_prompt_or_source_text_disclosure_allowed": false,
+      "required_negative_modes": [
+        "missing_required_header",
+        "native_output_hash_mismatch",
+        "unverified_citation_url",
+        "unsupported_claim_footer",
+        "stream_final_hash_drift",
+        "private_text_leak"
+      ],
+      "target_certification_level": "RDLLM-L127"
+    },
+    "privacy": {
+      "hash_only_native_response_observation": true,
+      "raw_answer_text_disclosed": false,
+      "raw_native_response_disclosed": false,
+      "raw_prompt_text_disclosed": false,
+      "raw_source_text_disclosed": false
+    },
+    "runtime_adapter_version": "rdllm-foundation-runtime-adapter/v1",
+    "runtime_decision": {
+      "decision": "release",
+      "failed_checks": [],
+      "failure_modes": [],
+      "release_authorized": true,
+      "safe_output_policy": "emit_rdllm_proof_contract"
+    },
+    "schemas": {
+      "citation_url_health": "docs/schemas/citation_url_health.schema.json",
+      "composite_foundation_adapter": "docs/schemas/composite_foundation_adapter.schema.json",
+      "foundation_api_profile": "docs/schemas/foundation_attribution_profile.schema.json",
+      "foundation_provider_conformance": "docs/schemas/foundation_provider_conformance.schema.json",
+      "foundation_runtime_adapter": "docs/schemas/foundation_runtime_adapter.schema.json",
+      "response_envelope": "docs/schemas/response_envelope.schema.json",
+      "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "59c38ccf189838da78217a1f6be74ef2adb283f3d5fff1b10fe848a4a0f253f8"
+    },
+    "summary": {
+      "fail_closed_runtime_adapter_supported": true,
+      "failed_check_count": 0,
+      "failure_mode_count": 0,
+      "minimum_input_level": "RDLLM-L126",
+      "native_response_normalized_to_rdllm": true,
+      "privacy_preserved": true,
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "runtime_release_authorized": true,
+      "status": "released",
+      "target_certification_level": "RDLLM-L127"
+    }
+  },
+  "foundation_runtime_router": {
+    "artifact_bindings": {
+      "composite_foundation_adapter": {
+        "artifact_type": "rdllm-composite-foundation-adapter/v1",
+        "declared_hash": "6656bbf9c9129bfe19120e2a2655d979890e87e457dd722280ea1c5d85e75864",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "discovery_manifest": {
+        "artifact_type": "rdllm-discovery-manifest/v1",
+        "declared_hash": "ef30383461749d41f25c23439b7fa299dd10e267eeed8cd3978fe438bc911600",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "foundation_api_profile": {
+        "artifact_type": "rdllm-foundation-attribution-profile/v1",
+        "declared_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "foundation_provider_conformance": {
+        "artifact_type": "rdllm-foundation-provider-conformance/v1",
+        "declared_hash": "db1fdda0749269946a8f5b65b2c86bcd42c54250e3c8a919a984f3558a2fad2f",
+        "hash_reproducible": true,
+        "present": true
+      },
+      "foundation_runtime_adapter": {
+        "artifact_type": "rdllm-foundation-runtime-adapter/v1",
+        "declared_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+        "hash_reproducible": true,
+        "present": true
+      }
+    },
+    "candidate_route_bindings": [
+      {
+        "provider_family": "openai_responses",
+        "route_hash": "4fd6b1dc9e06f8de19aee36808309f06fb94a784d8535131b8e71a9075b70bcb",
+        "route_id": "route:openai_responses"
+      },
+      {
+        "provider_family": "anthropic_messages",
+        "route_hash": "cd1bfa0defc793cfc0fd03a69b42c2b5162888445bc851f833aad9139ecbe561",
+        "route_id": "route:anthropic_messages"
+      },
+      {
+        "provider_family": "google_gemini",
+        "route_hash": "d8c2484ebcb95abb6fa09c7d669f21b2a3702dff4d91897d463623eb46cee4f3",
+        "route_id": "route:google_gemini"
+      },
+      {
+        "provider_family": "meta_llama",
+        "route_hash": "ef023c00e320069d35a09c90d8414468cfd38bd0b988a4f944cc89aaaf638c98",
+        "route_id": "route:meta_llama"
+      },
+      {
+        "provider_family": "mistral_chat",
+        "route_hash": "7eb3b6c4ddba96797a576627f0779f90a5779a96f8a73dff0ede05ef4066a29b",
+        "route_id": "route:mistral_chat"
+      },
+      {
+        "provider_family": "cohere_chat",
+        "route_hash": "4937fc6ec6e38e6f5ba756446ef44ed720e87edade89c1e3f2bc90fe692a4072",
+        "route_id": "route:cohere_chat"
+      },
+      {
+        "provider_family": "xai_grok",
+        "route_hash": "0e990f3fa241e3111e3d1e6e6182b9f347c9460eb560a976a7b10896632e4892",
+        "route_id": "route:xai_grok"
+      },
+      {
+        "provider_family": "amazon_bedrock_converse",
+        "route_hash": "1f66ede4a0bce79e97fa9cd391fa7ff7582d843f087dfed4ebf168345bc4067d",
+        "route_id": "route:amazon_bedrock_converse"
+      },
+      {
+        "provider_family": "azure_openai_responses",
+        "route_hash": "30cb39bdd22f00c838bb28ae9cd7eaf8c741456ff7dfd68d3909922f5a89e4ee",
+        "route_id": "route:azure_openai_responses"
+      },
+      {
+        "provider_family": "openai_compatible_chat",
+        "route_hash": "a39911028c9bfdd22e7d9564ec7dd48d9637c2fa4afc09aee15edf1c7817b2fb",
+        "route_id": "route:openai_compatible_chat"
+      }
+    ],
+    "checks": {
+      "artifact_hashes_reproducible": true,
+      "candidate_routes_cover_required_families": true,
+      "candidate_routes_supported_by_adapter_and_conformance": true,
+      "fallback_paths_fail_closed": true,
+      "foundation_runtime_adapter_released_l127": true,
+      "non_selected_routes_not_released": true,
+      "private_text_not_disclosed": true,
+      "required_provider_families_declared": true,
+      "route_scores_and_health_are_committed": true,
+      "router_observation_hash_present": true,
+      "routes_meet_minimum_attribution_level": true,
+      "selected_route_declared_once": true,
+      "selected_route_matches_runtime_adapter": true,
+      "selected_route_release_authorized": true
+    },
+    "commitments": {
+      "candidate_route_root": "29c1f918a8a571ae35fd962f9cc90bcb8b3d590ed47b395939f516d6c924ccea",
+      "router_observation_hash": "aca3e885501e020f9aca55f8b4bbe596405d6a8b1674d3de826df67fa9a6734a",
+      "schema": "docs/schemas/foundation_runtime_router.schema.json",
+      "selected_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51"
+    },
+    "coverage_gaps": {
+      "failed_checks": [],
+      "failure_modes": [],
+      "missing_required_provider_families": [],
+      "released_non_selected_routes": [],
+      "unsupported_route_families": []
+    },
+    "created_at": "2026-05-31T00:00:00Z",
+    "foundation_runtime_router_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+    "issuer": "rdllm-local-demo",
+    "normalized_universal_contract": {
+      "citation_url_health_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "composite_foundation_adapter_hash": "6656bbf9c9129bfe19120e2a2655d979890e87e457dd722280ea1c5d85e75864",
+      "discovery_manifest_hash": "ef30383461749d41f25c23439b7fa299dd10e267eeed8cd3978fe438bc911600",
+      "foundation_profile_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "foundation_provider_conformance_hash": "db1fdda0749269946a8f5b65b2c86bcd42c54250e3c8a919a984f3558a2fad2f",
+      "foundation_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+      "profile": "rdllm-universal-foundation-runtime-routing/v1",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737"
+    },
+    "privacy": {
+      "hash_only_candidate_routes": true,
+      "raw_native_response_disclosed": false,
+      "raw_prompt_text_disclosed": false,
+      "raw_router_payload_disclosed": false,
+      "raw_source_text_disclosed": false
+    },
+    "router_decision": {
+      "decision": "release",
+      "failed_checks": [],
+      "failure_modes": [],
+      "release_authorized": true,
+      "safe_output_policy": "emit_selected_rdllm_runtime_contract",
+      "selected_provider_family": "openai_responses",
+      "selected_route_id": "route:openai_responses"
+    },
+    "routing_policy": {
+      "minimum_input_level": "RDLLM-L127",
+      "minimum_route_attribution_level": "RDLLM-L127",
+      "on_fallback_route_failure": "block_display",
+      "on_unverified_route": "block_display",
+      "profile": "rdllm-foundation-runtime-router-policy/v1",
+      "raw_router_payload_disclosure_allowed": false,
+      "required_provider_families": [
+        "openai_responses",
+        "anthropic_messages",
+        "google_gemini",
+        "meta_llama",
+        "mistral_chat",
+        "cohere_chat",
+        "xai_grok",
+        "amazon_bedrock_converse",
+        "azure_openai_responses",
+        "openai_compatible_chat"
+      ],
+      "selected_route_id": "route:openai_responses",
+      "selection_policy": "highest_verified_rdllm_route",
+      "target_certification_level": "RDLLM-L128"
+    },
+    "runtime_router_version": "rdllm-foundation-runtime-router/v1",
+    "schemas": {
+      "composite_foundation_adapter": "docs/schemas/composite_foundation_adapter.schema.json",
+      "discovery_manifest": "docs/schemas/discovery_manifest.schema.json",
+      "foundation_api_profile": "docs/schemas/foundation_attribution_profile.schema.json",
+      "foundation_provider_conformance": "docs/schemas/foundation_provider_conformance.schema.json",
+      "foundation_runtime_adapter": "docs/schemas/foundation_runtime_adapter.schema.json",
+      "foundation_runtime_router": "docs/schemas/foundation_runtime_router.schema.json"
+    },
+    "selected_route_binding": {
+      "foundation_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+      "native_api_version": "responses/v1",
+      "native_model": "openai:responses-compatible",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "route_decision_hash": "be7c1645424246ff54377b59bd6895ef9df1b7f6147a2392ace3a27f3eef51c2",
+      "route_id": "route:openai_responses"
+    },
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "043295cffc267eed7dea0d24ed45de5b12078609434e04160cff492a99462c4f"
+    },
+    "summary": {
+      "candidate_route_count": 10,
+      "covered_provider_family_count": 10,
+      "fail_closed_router_supported": true,
+      "failed_check_count": 0,
+      "failure_mode_count": 0,
+      "minimum_input_level": "RDLLM-L127",
+      "privacy_preserved": true,
+      "required_provider_family_count": 10,
+      "router_release_authorized": true,
+      "selected_provider_family": "openai_responses",
+      "status": "released",
+      "target_certification_level": "RDLLM-L128",
+      "universal_foundation_routing_supported": true
+    }
+  },
+  "invocation": {
+    "fail_closed": true,
+    "invocation_id": "invoke:demo:l133",
+    "native_api_version": "responses/v1",
+    "native_model": "openai:responses-compatible",
+    "precall_checks_completed": [
+      "l132_contract_ready",
+      "route_bound_to_contract",
+      "deployment_attestation_released",
+      "request_projection_bound",
+      "response_binding_bound",
+      "source_footer_required",
+      "fail_closed_policy_bound"
+    ],
+    "preflight_decision": "allow_provider_call",
+    "provider_family": "openai_responses",
+    "provider_id": "provider:openai-responses",
+    "request_headers": {
+      "RDLLM-Attribution-Level": "RDLLM-L133",
+      "RDLLM-Fail-Closed": "true",
+      "RDLLM-Foundation-Deployment-Attestation-Hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+      "RDLLM-Foundation-Runtime-Router-Hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+      "RDLLM-Request-Projection-Hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+      "RDLLM-Response-Binding-Hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+      "RDLLM-Selected-Provider-Family": "openai_responses",
+      "RDLLM-Selected-Route-ID": "route:openai_responses",
+      "RDLLM-Universal-Foundation-Contract-Hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44"
+    },
+    "request_id": "req:demo:l133",
+    "request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+    "required_response_artifact_hashes": {
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737"
+    },
+    "response_binding_hash": "eecbf581c7961e04f632dd4f8bb84b18c3f77db34ae0122a2dc08f6a169ec120",
+    "route_id": "route:openai_responses",
+    "telemetry_span": {
+      "gen_ai.provider.name": "openai_responses",
+      "gen_ai.request.model": "openai:responses-compatible",
+      "gen_ai.response.model": "openai:responses-compatible",
+      "rdllm.contract_hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44",
+      "rdllm.request_projection_hash": "bf844c24deba5303aa1a22087f6fd6cf77709b309935976475dd2d111b6ba7cf",
+      "rdllm.route_id": "route:openai_responses"
+    }
+  },
+  "private_strings": [
+    "demo private prompt must never appear in public guard"
+  ],
+  "universal_foundation_model_contract": {
+    "artifact_bindings": {
+      "composite_foundation_adapter": {
+        "declared_hash": "6656bbf9c9129bfe19120e2a2655d979890e87e457dd722280ea1c5d85e75864",
+        "hash_reproducible": true,
+        "name": "composite_foundation_adapter",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L125",
+        "version": "rdllm-composite-foundation-adapter/v1"
+      },
+      "discovery_manifest": {
+        "declared_hash": "ef30383461749d41f25c23439b7fa299dd10e267eeed8cd3978fe438bc911600",
+        "hash_reproducible": true,
+        "name": "discovery_manifest",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L131",
+        "version": "rdllm-discovery-manifest/v1"
+      },
+      "foundation_model_deployment_attestation": {
+        "declared_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+        "hash_reproducible": true,
+        "name": "foundation_model_deployment_attestation",
+        "present": true,
+        "status": "released",
+        "target_level": "RDLLM-L129",
+        "version": "rdllm-foundation-model-deployment-attestation/v1"
+      },
+      "foundation_provider_conformance": {
+        "declared_hash": "db1fdda0749269946a8f5b65b2c86bcd42c54250e3c8a919a984f3558a2fad2f",
+        "hash_reproducible": true,
+        "name": "foundation_provider_conformance",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L126",
+        "version": "rdllm-foundation-provider-conformance/v1"
+      },
+      "foundation_runtime_adapter": {
+        "declared_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+        "hash_reproducible": true,
+        "name": "foundation_runtime_adapter",
+        "present": true,
+        "status": "released",
+        "target_level": "RDLLM-L127",
+        "version": "rdllm-foundation-runtime-adapter/v1"
+      },
+      "foundation_runtime_router": {
+        "declared_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+        "hash_reproducible": true,
+        "name": "foundation_runtime_router",
+        "present": true,
+        "status": "released",
+        "target_level": "RDLLM-L128",
+        "version": "rdllm-foundation-runtime-router/v1"
+      },
+      "integration_profile": {
+        "declared_hash": "ce0c5fe1085f700dc54137f30861d1b5319e322b9a2d027c7902afbc4822cb98",
+        "hash_reproducible": true,
+        "name": "integration_profile",
+        "present": true,
+        "status": "ready",
+        "target_level": "",
+        "version": "rdllm-integration-profile/v1"
+      },
+      "proof_dependency_graph": {
+        "declared_hash": "6d997fcf641cae8a251d42f0d4641ee74eba20fd72bb390b7d07d6c9290fa745",
+        "hash_reproducible": true,
+        "name": "proof_dependency_graph",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L131",
+        "version": "rdllm-proof-dependency-graph/v1"
+      },
+      "provider_attribution_card": {
+        "declared_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+        "hash_reproducible": true,
+        "name": "provider_attribution_card",
+        "present": true,
+        "status": "",
+        "target_level": "",
+        "version": "rdllm-provider-attribution-card/v1"
+      },
+      "universal_composition_receipt": {
+        "declared_hash": "1a7f07d1b8ed7aa665531a4678f15e4ffe69a0d8f8f472bb459d361b3af46f07",
+        "hash_reproducible": true,
+        "name": "universal_composition_receipt",
+        "present": true,
+        "status": "released",
+        "target_level": "RDLLM-L130",
+        "version": "rdllm-universal-composition-receipt/v1"
+      },
+      "universal_composition_settlement": {
+        "declared_hash": "891ec7d627a812a0b26fea27e2a4fe68759aee39251b7660fd3a92334c29002a",
+        "hash_reproducible": true,
+        "name": "universal_composition_settlement",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L131",
+        "version": "rdllm-universal-composition-settlement/v1"
+      }
+    },
+    "checks": {
+      "artifact_hashes_reproducible": true,
+      "composite_adapter_ready_l125": true,
+      "creator_pool_conserved": true,
+      "discovery_profile_and_graph_publish_contract": true,
+      "fail_closed_router_policy": true,
+      "private_text_not_disclosed": true,
+      "provider_conformance_ready_l126": true,
+      "provider_families_cover_required_set": true,
+      "required_artifacts_present": true,
+      "required_public_surfaces_published": true,
+      "router_covers_all_provider_families": true,
+      "runtime_router_released_l128": true,
+      "selected_route_binds_runtime_and_deployment": true,
+      "source_footer_to_settlement_bound": true,
+      "universal_composition_released_l130": true,
+      "universal_composition_settlement_ready_l131": true
+    },
+    "commitments": {
+      "artifact_binding_root": "ee6ee1e0068711bd8697092cf4808c859be1f84178c879bdc2d2d90be6da9d47",
+      "l131_settlement_hash": "891ec7d627a812a0b26fea27e2a4fe68759aee39251b7660fd3a92334c29002a",
+      "provider_family_root": "c4027f95dc97a50d61b8df66068d61efe89443180b06d50dfce1753a5e1a1e4b",
+      "public_surface_binding_hash": "6a964cede25b5898eca8c6f16a8b96278c5419684243cca5c83f9b559f9207c4",
+      "selected_route_binding_hash": "2852c159d266dbf64505b2940d6a07835c680236a9029c966a74484541c089a0"
+    },
+    "contract_decision": {
+      "decision": "release_universal_contract",
+      "failed_checks": [],
+      "failure_modes": [],
+      "release_authorized": true,
+      "safe_output_policy": "emit_only_l132_universal_rdllm_contract"
+    },
+    "contract_policy": {
+      "minimum_discovery_level": "RDLLM-L131",
+      "minimum_input_level": "RDLLM-L131",
+      "minimum_proof_graph_level": "RDLLM-L131",
+      "on_missing_provider_family": "block_model_release",
+      "on_missing_public_surface": "block_model_release",
+      "on_private_text_leak": "block_publication",
+      "on_unreleased_runtime_chain": "block_model_release",
+      "on_unsettled_composition": "block_model_release",
+      "profile": "rdllm-universal-foundation-model-contract-policy/v1",
+      "required_chain_artifacts": [
+        "provider_attribution_card",
+        "integration_profile",
+        "discovery_manifest",
+        "proof_dependency_graph",
+        "composite_foundation_adapter",
+        "foundation_provider_conformance",
+        "foundation_runtime_adapter",
+        "foundation_runtime_router",
+        "foundation_model_deployment_attestation",
+        "universal_composition_receipt",
+        "universal_composition_settlement"
+      ],
+      "required_provider_families": [
+        "openai_responses",
+        "anthropic_messages",
+        "google_gemini",
+        "meta_llama",
+        "mistral_chat",
+        "cohere_chat",
+        "xai_grok",
+        "amazon_bedrock_converse",
+        "azure_openai_responses",
+        "openai_compatible_chat"
+      ],
+      "required_public_surfaces": [
+        "composite_foundation_adapter",
+        "foundation_provider_conformance",
+        "foundation_runtime_adapter",
+        "foundation_runtime_router",
+        "foundation_model_deployment_attestation",
+        "universal_composition_receipt",
+        "universal_composition_settlement"
+      ],
+      "target_certification_level": "RDLLM-L132"
+    },
+    "contract_version": "rdllm-universal-foundation-model-contract/v1",
+    "coverage_gaps": {
+      "failed_checks": [],
+      "missing_discovery_surfaces": [],
+      "missing_integration_surfaces": [],
+      "missing_provider_families": []
+    },
+    "created_at": "2026-06-01T20:47:30Z",
+    "issuer": "rdllm-local-demo",
+    "privacy": {
+      "hash_only_provider_fixtures": true,
+      "private_strings_absent": true,
+      "private_text_fields_excluded": true,
+      "raw_prompts_outputs_sources_excluded": true
+    },
+    "provider_family_rows": [
+      {
+        "capability_count": 9,
+        "covered_by_adapter": true,
+        "covered_by_conformance": true,
+        "covered_by_router": true,
+        "fail_closed_backed": true,
+        "foundation_provider_conformance_row_hash": "63c05cb630f511eb1a809b0de31b6d6012bd95c714205c2e77efd2a6385e1e19",
+        "native_api_version": "converse/v1",
+        "native_model": "aws:bedrock-converse-compatible",
+        "negative_fixture_count": 6,
+        "official_documentation_refs": [
+          "https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html"
+        ],
+        "provider_adapter_row_hash": "a9c903c9a42fe560e35e78d5378a8a781b5580fefa886c0847f242c85d2e2db5",
+        "provider_family": "amazon_bedrock_converse",
+        "provider_id": "provider:amazon-bedrock-converse",
+        "route_hash": "1f66ede4a0bce79e97fa9cd391fa7ff7582d843f087dfed4ebf168345bc4067d",
+        "route_id": "route:amazon_bedrock_converse",
+        "universal_provider_contract_row_hash": "6c58d50b073dde3609a952f9231a4d6b3b57e5dd1139e0b0565281f917666b4b"
+      },
+      {
+        "capability_count": 9,
+        "covered_by_adapter": true,
+        "covered_by_conformance": true,
+        "covered_by_router": true,
+        "fail_closed_backed": true,
+        "foundation_provider_conformance_row_hash": "3feee62d5008d7a867f77aa5965d88cd89e716d4aca00539a136af113dcdae93",
+        "native_api_version": "messages/v1",
+        "native_model": "anthropic:messages-compatible",
+        "negative_fixture_count": 6,
+        "official_documentation_refs": [
+          "https://docs.anthropic.com/en/api/messages"
+        ],
+        "provider_adapter_row_hash": "caebd2c7215d84c40b79f767c5aff42c95f2e90d99d511d6f9edc779a858b1a7",
+        "provider_family": "anthropic_messages",
+        "provider_id": "provider:anthropic-messages",
+        "route_hash": "cd1bfa0defc793cfc0fd03a69b42c2b5162888445bc851f833aad9139ecbe561",
+        "route_id": "route:anthropic_messages",
+        "universal_provider_contract_row_hash": "c7398a3a971308c8e62190c0b82b2a5f2af1ec4c12353e7517b70ef9900c388d"
+      },
+      {
+        "capability_count": 9,
+        "covered_by_adapter": true,
+        "covered_by_conformance": true,
+        "covered_by_router": true,
+        "fail_closed_backed": true,
+        "foundation_provider_conformance_row_hash": "869266d6dc51b146c98f442242b4225e745c263f31ba786b3dd4e19cfaaa9d36",
+        "native_api_version": "responses/v1",
+        "native_model": "azure-openai:responses-compatible",
+        "negative_fixture_count": 6,
+        "official_documentation_refs": [
+          "https://learn.microsoft.com/azure/ai-services/openai/how-to/responses"
+        ],
+        "provider_adapter_row_hash": "25308ab5279b151e6c2c2b1cafdb44b5d333fd53311f604bf9f187a040bf3548",
+        "provider_family": "azure_openai_responses",
+        "provider_id": "provider:azure-openai-responses",
+        "route_hash": "30cb39bdd22f00c838bb28ae9cd7eaf8c741456ff7dfd68d3909922f5a89e4ee",
+        "route_id": "route:azure_openai_responses",
+        "universal_provider_contract_row_hash": "6b61546234be34e30e93c3d5295208d708ec35a2926a3c28d050f27987f689f2"
+      },
+      {
+        "capability_count": 9,
+        "covered_by_adapter": true,
+        "covered_by_conformance": true,
+        "covered_by_router": true,
+        "fail_closed_backed": true,
+        "foundation_provider_conformance_row_hash": "418bc9c18902a5dd454f59098b31686ee781585eab35987f0c5263d5975d86be",
+        "native_api_version": "chat/v2",
+        "native_model": "cohere:chat-compatible",
+        "negative_fixture_count": 6,
+        "official_documentation_refs": [
+          "https://docs.cohere.com/reference/chat"
+        ],
+        "provider_adapter_row_hash": "4491924d84cc4cd7978d5a6bd0bb4a344c3b67bab6d9b6e3972bc5248b95ee86",
+        "provider_family": "cohere_chat",
+        "provider_id": "provider:cohere-chat",
+        "route_hash": "4937fc6ec6e38e6f5ba756446ef44ed720e87edade89c1e3f2bc90fe692a4072",
+        "route_id": "route:cohere_chat",
+        "universal_provider_contract_row_hash": "c7ecde76afa2f44a10c9a54fa113c5301ff3ef06eeaa05edff66994b3981faa0"
+      },
+      {
+        "capability_count": 9,
+        "covered_by_adapter": true,
+        "covered_by_conformance": true,
+        "covered_by_router": true,
+        "fail_closed_backed": true,
+        "foundation_provider_conformance_row_hash": "9086bdb8895735bc975078b8161cd1e80cbe6bee5038f543eb01436375288153",
+        "native_api_version": "generate-content/v1",
+        "native_model": "google:gemini-compatible",
+        "negative_fixture_count": 6,
+        "official_documentation_refs": [
+          "https://ai.google.dev/gemini-api/docs"
+        ],
+        "provider_adapter_row_hash": "205da1833b68232c81c3da8c42ac95b4fc01d42a45cf90103fe738cbda2313fa",
+        "provider_family": "google_gemini",
+        "provider_id": "provider:google-gemini",
+        "route_hash": "d8c2484ebcb95abb6fa09c7d669f21b2a3702dff4d91897d463623eb46cee4f3",
+        "route_id": "route:google_gemini",
+        "universal_provider_contract_row_hash": "7d606b9a5fede1b79310d6fc1b09a0c3143913f71b9d939fe0fa02269fd20716"
+      },
+      {
+        "capability_count": 9,
+        "covered_by_adapter": true,
+        "covered_by_conformance": true,
+        "covered_by_router": true,
+        "fail_closed_backed": true,
+        "foundation_provider_conformance_row_hash": "008233bd2ed402c312d2b9e8bc826ae9609d15cb153b571324033fddb4a44fcd",
+        "native_api_version": "chat-completions/v1",
+        "native_model": "meta:llama-openai-compatible",
+        "negative_fixture_count": 6,
+        "official_documentation_refs": [
+          "https://llama-stack.readthedocs.io/"
+        ],
+        "provider_adapter_row_hash": "cf00c8aca4aa11b92b0c11adf6409a2a25e45988e003e62b46dd7c2373f74b46",
+        "provider_family": "meta_llama",
+        "provider_id": "provider:meta-llama-openai-compatible",
+        "route_hash": "ef023c00e320069d35a09c90d8414468cfd38bd0b988a4f944cc89aaaf638c98",
+        "route_id": "route:meta_llama",
+        "universal_provider_contract_row_hash": "2a3fb26b85a6b7ca5f382afa10ced100e915c2f711c5cbd614af300bfe8d2816"
+      },
+      {
+        "capability_count": 9,
+        "covered_by_adapter": true,
+        "covered_by_conformance": true,
+        "covered_by_router": true,
+        "fail_closed_backed": true,
+        "foundation_provider_conformance_row_hash": "12ab6db9cf7269601a6d5630b389bf0793cf4c110ef9194dd984273ec964df46",
+        "native_api_version": "chat/v1",
+        "native_model": "mistral:chat-compatible",
+        "negative_fixture_count": 6,
+        "official_documentation_refs": [
+          "https://docs.mistral.ai/api/"
+        ],
+        "provider_adapter_row_hash": "cd5dedd74a4d45c07535360fa672c37bd08794b4971d086c5bdcf4cc2afa6024",
+        "provider_family": "mistral_chat",
+        "provider_id": "provider:mistral-chat",
+        "route_hash": "7eb3b6c4ddba96797a576627f0779f90a5779a96f8a73dff0ede05ef4066a29b",
+        "route_id": "route:mistral_chat",
+        "universal_provider_contract_row_hash": "5764f7ff5b194f934fb6c2bfb6347924b49253d28ce4fcb65d46197a4466c828"
+      },
+      {
+        "capability_count": 9,
+        "covered_by_adapter": true,
+        "covered_by_conformance": true,
+        "covered_by_router": true,
+        "fail_closed_backed": true,
+        "foundation_provider_conformance_row_hash": "50d35fbe50ee1514605ebfdf8cc02f3fdbb1cbd5f6b87fe6260d7b26b9897e3c",
+        "native_api_version": "chat-completions/v1",
+        "native_model": "openai-compatible:chat",
+        "negative_fixture_count": 6,
+        "official_documentation_refs": [
+          "https://platform.openai.com/docs/api-reference/chat"
+        ],
+        "provider_adapter_row_hash": "b7395858c1dc64d3cbd4835b17d83475d681808e87f79562be09be54c432d685",
+        "provider_family": "openai_compatible_chat",
+        "provider_id": "provider:openai-compatible-chat",
+        "route_hash": "a39911028c9bfdd22e7d9564ec7dd48d9637c2fa4afc09aee15edf1c7817b2fb",
+        "route_id": "route:openai_compatible_chat",
+        "universal_provider_contract_row_hash": "6fc1a785887baf1145fde4da0fcacc62a006ac8f9024eb5da06b4b8feecd68bf"
+      },
+      {
+        "capability_count": 9,
+        "covered_by_adapter": true,
+        "covered_by_conformance": true,
+        "covered_by_router": true,
+        "fail_closed_backed": true,
+        "foundation_provider_conformance_row_hash": "484a8dcc68b42483469227979d33ab9b1d6bb326e2623c5048808abdf9ef1c9f",
+        "native_api_version": "responses/v1",
+        "native_model": "openai:responses-compatible",
+        "negative_fixture_count": 6,
+        "official_documentation_refs": [
+          "https://platform.openai.com/docs/api-reference/responses"
+        ],
+        "provider_adapter_row_hash": "823a04465f4e1b49e57e15f52f6779de3fbeb79c215d1e6f96e528148a92b8be",
+        "provider_family": "openai_responses",
+        "provider_id": "provider:openai-responses",
+        "route_hash": "4fd6b1dc9e06f8de19aee36808309f06fb94a784d8535131b8e71a9075b70bcb",
+        "route_id": "route:openai_responses",
+        "universal_provider_contract_row_hash": "3d501a4b1d36941435ecbb19f627781e55666dbab80b9f9aaaf15ab897229ad1"
+      },
+      {
+        "capability_count": 9,
+        "covered_by_adapter": true,
+        "covered_by_conformance": true,
+        "covered_by_router": true,
+        "fail_closed_backed": true,
+        "foundation_provider_conformance_row_hash": "8ba3eb102654738e04f73a0226751b487875fa7f1956a4172d895d8020fe1c8d",
+        "native_api_version": "chat-completions/v1",
+        "native_model": "xai:grok-compatible",
+        "negative_fixture_count": 6,
+        "official_documentation_refs": [
+          "https://docs.x.ai/docs/api-reference"
+        ],
+        "provider_adapter_row_hash": "b0474f10b21945ac0062f7d268e728d9d1208216e8b0931815e61e7c203a63e9",
+        "provider_family": "xai_grok",
+        "provider_id": "provider:xai-grok",
+        "route_hash": "0e990f3fa241e3111e3d1e6e6182b9f347c9460eb560a976a7b10896632e4892",
+        "route_id": "route:xai_grok",
+        "universal_provider_contract_row_hash": "ab56b5f8affd3543abe57eabd7a364c23e8f98b9f720fd6e10ef21de1245ce59"
+      }
+    ],
+    "public_surface_binding": {
+      "discovery_highest_level": "RDLLM-L131",
+      "discovery_manifest_hash": "ef30383461749d41f25c23439b7fa299dd10e267eeed8cd3978fe438bc911600",
+      "discovery_status": "ready",
+      "integration_profile_hash": "ce0c5fe1085f700dc54137f30861d1b5319e322b9a2d027c7902afbc4822cb98",
+      "integration_status": "ready",
+      "missing_discovery_surfaces": [],
+      "missing_integration_surfaces": [],
+      "proof_dependency_graph_hash": "6d997fcf641cae8a251d42f0d4641ee74eba20fd72bb390b7d07d6c9290fa745",
+      "proof_graph_status": "ready",
+      "proof_graph_target_level": "RDLLM-L131",
+      "public_surface_binding_hash": "6a964cede25b5898eca8c6f16a8b96278c5419684243cca5c83f9b559f9207c4",
+      "required_public_surfaces": [
+        "composite_foundation_adapter",
+        "foundation_provider_conformance",
+        "foundation_runtime_adapter",
+        "foundation_runtime_router",
+        "foundation_model_deployment_attestation",
+        "universal_composition_receipt",
+        "universal_composition_settlement"
+      ]
+    },
+    "schemas": {
+      "foundation_provider_conformance": "docs/schemas/foundation_provider_conformance.schema.json",
+      "foundation_runtime_router": "docs/schemas/foundation_runtime_router.schema.json",
+      "universal_composition_settlement": "docs/schemas/universal_composition_settlement.schema.json",
+      "universal_foundation_model_contract": "docs/schemas/universal_foundation_model_contract.schema.json"
+    },
+    "selected_route_binding": {
+      "deployment_provider_family": "openai_responses",
+      "deployment_release_authorized": true,
+      "foundation_model_deployment_attestation_hash": "98d71bb8ee99504b9f000419d66d7e7326dc2a4d849f8eddf9837fe17b343ef0",
+      "foundation_runtime_adapter_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+      "foundation_runtime_router_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+      "router_release_authorized": true,
+      "runtime_adapter_provider_family": "openai_responses",
+      "runtime_release_authorized": true,
+      "selected_provider_family": "openai_responses",
+      "selected_route_id": "route:openai_responses"
+    },
+    "signature": "d4f5e2effd0afbd3e11f03d92f79413d3e0cce8ea24dda3c3795443e0bc6fd35",
+    "summary": {
+      "covered_provider_family_count": 10,
+      "creator_pool_conserved": true,
+      "failed_check_count": 0,
+      "failure_mode_count": 0,
+      "foundation_chain_release_authorized": true,
+      "l131_settlement_hash": "891ec7d627a812a0b26fea27e2a4fe68759aee39251b7660fd3a92334c29002a",
+      "minimum_input_level": "RDLLM-L131",
+      "privacy_preserved": true,
+      "provider_family_row_count": 10,
+      "required_provider_family_count": 10,
+      "selected_provider_family": "openai_responses",
+      "source_footer_to_settlement_bound": true,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L132",
+      "universal_contract_release_authorized": true
+    },
+    "universal_contract_binding": {
+      "artifact_binding_root": "ee6ee1e0068711bd8697092cf4808c859be1f84178c879bdc2d2d90be6da9d47",
+      "contract_binding_hash": "0859d0e2c138314dc2e8fcc3827e1b1da1b5fa60135dd37bd4e9dc57f018f830",
+      "discovery_manifest_hash": "ef30383461749d41f25c23439b7fa299dd10e267eeed8cd3978fe438bc911600",
+      "foundation_provider_conformance_hash": "db1fdda0749269946a8f5b65b2c86bcd42c54250e3c8a919a984f3558a2fad2f",
+      "foundation_runtime_router_hash": "60e336943123017eceea9e444c7b529cd7ff044ce2b6d8024217b0b6bbb62a27",
+      "profile": "rdllm-universal-foundation-model-contract-binding/v1",
+      "proof_dependency_graph_hash": "6d997fcf641cae8a251d42f0d4641ee74eba20fd72bb390b7d07d6c9290fa745",
+      "provider_family_root": "c4027f95dc97a50d61b8df66068d61efe89443180b06d50dfce1753a5e1a1e4b",
+      "public_surface_binding_hash": "6a964cede25b5898eca8c6f16a8b96278c5419684243cca5c83f9b559f9207c4",
+      "selected_route_binding_hash": "2852c159d266dbf64505b2940d6a07835c680236a9029c966a74484541c089a0",
+      "universal_composition_receipt_hash": "1a7f07d1b8ed7aa665531a4678f15e4ffe69a0d8f8f472bb459d361b3af46f07",
+      "universal_composition_settlement_hash": "891ec7d627a812a0b26fea27e2a4fe68759aee39251b7660fd3a92334c29002a"
+    },
+    "universal_foundation_model_contract_hash": "94e944c70ca08ea3bf50e12485dc6670887436865534749f24ad7f6ec6ef0c44"
+  }
+}

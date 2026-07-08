@@ -1,0 +1,247 @@
+{
+  "artifact_bindings": {
+    "answer_claim_coverage_bound": true,
+    "answer_claim_coverage_report_hash": "8be08f72cc541cc50a5b36934e91d9e59fa38053d110d29ee38417f31a93e7cd",
+    "source_verification_bound": true,
+    "source_verification_report_hash": "4abe7deebb2b87114f44b64fa5a7768abe747b608d3afaf78905bb23da07d0b7",
+    "trace_exchange_bound": true,
+    "trace_exchange_hash": "7c88187e9347104995eb98e888d9663d355391a186434162bd5a741aba9423b9"
+  },
+  "claim_context_rows": [
+    {
+      "answer_surface_covered": true,
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "claim_context_hash": "07eaf19dee4953e1e6c610aeef31629b44a6d7a1a6ace6174248ddd936478125",
+      "claim_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+      "claim_index": 1,
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "context_closed": true,
+      "evidence_span_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+      "evidence_span_in_context": true,
+      "matched_context_block_id": "ctx:srcacc_6b22e9d6e915c9c3",
+      "matched_source_access_id": "srcacc_6b22e9d6e915c9c3",
+      "retrieval_context_allowed": true,
+      "source_access_in_trace": true,
+      "source_label": "S1",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "answer_surface_covered": true,
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "claim_context_hash": "306c2c33088889ec9fc5535ce2d8dad6bd563f3ab70c48a7bce39ea4d0607603",
+      "claim_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+      "claim_index": 2,
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "context_closed": true,
+      "evidence_span_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+      "evidence_span_in_context": true,
+      "matched_context_block_id": "ctx:srcacc_6b22e9d6e915c9c3",
+      "matched_source_access_id": "srcacc_6b22e9d6e915c9c3",
+      "retrieval_context_allowed": true,
+      "source_access_in_trace": true,
+      "source_label": "S1",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "answer_surface_covered": true,
+      "chunk_id": "lina-governance-disputes:c1",
+      "claim_context_hash": "61218765cf7f6acc995f205ea55e350f2efc5b4bddb5a8b306b5f520c7004322",
+      "claim_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+      "claim_index": 3,
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "context_closed": true,
+      "evidence_span_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+      "evidence_span_in_context": true,
+      "matched_context_block_id": "ctx:srcacc_fd64f30ca810c405",
+      "matched_source_access_id": "srcacc_fd64f30ca810c405",
+      "retrieval_context_allowed": true,
+      "source_access_in_trace": true,
+      "source_label": "S2",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "answer_surface_covered": true,
+      "chunk_id": "lina-governance-disputes:c1",
+      "claim_context_hash": "109c8ca68a7af29c4a787cf7975edaf6e21cdcfb0a8099d085e32af94888bacf",
+      "claim_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+      "claim_index": 4,
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "context_closed": true,
+      "evidence_span_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+      "evidence_span_in_context": true,
+      "matched_context_block_id": "ctx:srcacc_fd64f30ca810c405",
+      "matched_source_access_id": "srcacc_fd64f30ca810c405",
+      "retrieval_context_allowed": true,
+      "source_access_in_trace": true,
+      "source_label": "S2",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "answer_surface_covered": true,
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "claim_context_hash": "741ad28e4c6bb83d4dcd0dd0402d1d294114a06f7c008f2923b40568b49639ed",
+      "claim_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+      "claim_index": 5,
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "context_closed": true,
+      "evidence_span_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+      "evidence_span_in_context": true,
+      "matched_context_block_id": "ctx:srcacc_ccd70e51018b0548",
+      "matched_source_access_id": "srcacc_ccd70e51018b0548",
+      "retrieval_context_allowed": true,
+      "source_access_in_trace": true,
+      "source_label": "S3",
+      "work_id": "maya-youtube-style-pool"
+    },
+    {
+      "answer_surface_covered": true,
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "claim_context_hash": "dbf2275be860187834da752d8da08749902230783ab93a49759076dcd4b7d302",
+      "claim_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+      "claim_index": 6,
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "context_closed": true,
+      "evidence_span_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+      "evidence_span_in_context": true,
+      "matched_context_block_id": "ctx:srcacc_ccd70e51018b0548",
+      "matched_source_access_id": "srcacc_ccd70e51018b0548",
+      "retrieval_context_allowed": true,
+      "source_access_in_trace": true,
+      "source_label": "S3",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "commitments": {
+    "artifact_binding_root": "0ebd28c2d78eebddad8e35fe7c1073db467dd884d459e617a1f79c30bec3964c",
+    "claim_context_root": "364eed90d0233907696847e16f6214d1b3a16ec57d2e2d4d8e8be41e29e6a527",
+    "context_block_root": "70c6e29dee92b5a836da3de86f90aa52db26edfeb0f9aea941c106ab3e0b64bc",
+    "issue_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "context_blocks": [
+    {
+      "access_type": "retrieval",
+      "block_index": 1,
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "context_block_hash": "828ede516024eeefc89fde2786144e549ee5b136ad8941427387c5914bb78f46",
+      "context_block_id": "ctx:srcacc_6b22e9d6e915c9c3",
+      "context_text_hash": "",
+      "creator_id": "arjun",
+      "decision_status": "allowed",
+      "included_claim_hashes": [
+        "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+        "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54"
+      ],
+      "included_evidence_span_hashes": [
+        "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+        "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54"
+      ],
+      "policy_allowed": true,
+      "registry_allowed": true,
+      "source_access_id": "srcacc_6b22e9d6e915c9c3",
+      "source_access_span_id": "7f0dbccedc187d55",
+      "use": "retrieval",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "access_type": "retrieval",
+      "block_index": 2,
+      "chunk_id": "lina-governance-disputes:c1",
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "context_block_hash": "ee2753423baafc99421de760660fe533a4995432ccd6be2026dc892431c61dd5",
+      "context_block_id": "ctx:srcacc_fd64f30ca810c405",
+      "context_text_hash": "",
+      "creator_id": "lina",
+      "decision_status": "allowed",
+      "included_claim_hashes": [
+        "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+        "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c"
+      ],
+      "included_evidence_span_hashes": [
+        "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+        "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c"
+      ],
+      "policy_allowed": true,
+      "registry_allowed": true,
+      "source_access_id": "srcacc_fd64f30ca810c405",
+      "source_access_span_id": "5f423cd8da39cc2f",
+      "use": "retrieval",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "access_type": "retrieval",
+      "block_index": 3,
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "context_block_hash": "46731b24213c6d2798e1a7b4eda42d90455add8fee2c1bb4c338b9229037a3ab",
+      "context_block_id": "ctx:srcacc_ccd70e51018b0548",
+      "context_text_hash": "",
+      "creator_id": "maya",
+      "decision_status": "allowed",
+      "included_claim_hashes": [
+        "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+        "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145"
+      ],
+      "included_evidence_span_hashes": [
+        "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+        "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145"
+      ],
+      "policy_allowed": true,
+      "registry_allowed": true,
+      "source_access_id": "srcacc_ccd70e51018b0548",
+      "source_access_span_id": "0cf47a855af53f89",
+      "use": "retrieval",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "created_at": "2026-06-03T00:00:00Z",
+  "event": {
+    "answer_hash": "283203d79fe9f38a76f38927a84e9d964d9be2ed9f9e88274461757e7af4fde4",
+    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
+    "event_id": "evt_b560c62bb49a73d0",
+    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+    "trace_hash": "7c88187e9347104995eb98e888d9663d355391a186434162bd5a741aba9423b9"
+  },
+  "issuer": "rdllm-local-demo",
+  "issues": [],
+  "policy": {
+    "allowed_context_uses": [
+      "generation_context",
+      "retrieval"
+    ],
+    "profile": "rdllm-generation-context-closure-policy/v1",
+    "requires_answer_claim_coverage": true,
+    "requires_pre_generation_context_manifest": true,
+    "requires_trace_source_access": true,
+    "target_certification_level": "RDLLM-L60"
+  },
+  "privacy": {
+    "answer_text_disclosed": false,
+    "claim_text_disclosed": false,
+    "context_text_disclosed": false,
+    "evidence_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "report_uses_hashes_and_trace_ids": true,
+    "source_text_disclosed": false
+  },
+  "report_hash": "3e015ce470ab46cde722f13331d5762b4c1e744adb4dc1db3d2fe53dfe9d6d3b",
+  "report_version": "rdllm-generation-context-closure-report/v1",
+  "schemas": {
+    "generation_context_closure_report": "docs/schemas/generation_context_closure_report.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "14455fc3be7ed851863ad9df7ac53bd1fc7436256e06d7d5f42026483e87a19c"
+  },
+  "summary": {
+    "all_supported_claims_in_generation_context": true,
+    "context_block_count": 3,
+    "context_closed_claim_count": 6,
+    "issue_count": 0,
+    "missing_context_claim_count": 0,
+    "status": "verified",
+    "supported_claim_count": 6,
+    "target_certification_level": "RDLLM-L60"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "batch_coverage_rows": [
+    {
+      "coverage_row_hash": "df730b3f23423246b777351f4c828cda16d7874fde750cc044c86fb48400beb1",
+      "processor_id": "processor:rdllm-reference-ach",
+      "processor_record_count": 3,
+      "processor_record_root": "ab34c7c6d071dec31b5e13b245f15f4319f19d119141526dc6c40f029cec8ba1",
+      "record_type": "payment_settlement",
+      "settlement_batch_hash": "0203e5726136a5dd64c12d622945f579fb83c74b9355489000986d1f4806cd64",
+      "signed_processor_attestation_present": true
+    }
+  ],
+  "checks": {
+    "all_execution_batches_have_signed_processor_attestations": true,
+    "all_processor_attestation_hashes_reproducible": true,
+    "all_processor_attestations_bind_payment_execution_report": true,
+    "all_processor_attestations_registered": true,
+    "all_processor_record_hashes_match_execution_report": true,
+    "all_processor_roles_allowed": true,
+    "all_processor_signatures_valid": true,
+    "all_processor_totals_match_execution_report": true,
+    "all_required_processors_registered": true,
+    "no_duplicate_or_unmatched_execution_records": true,
+    "payment_execution_report_hash_reproducible": true,
+    "payment_execution_report_ready": true,
+    "private_payment_rail_fields_absent": true,
+    "trust_registry_hash_reproducible": true,
+    "trust_registry_ready": true
+  },
+  "commitments": {
+    "batch_coverage_root": "2967e8e9c78c3f201ea1d38b68dbdde93914c90a16d0cb3865e501d7ff77fa9a",
+    "payment_execution_report_hash": "0f4d22a4d9c94e8d26366ae7828e28316b6b29159bcb845aedf9cb8ed68b87be",
+    "processor_attestation_input_root": "786dc15191d62b03dfba5fbcd3b5e331936d2fbf82b621c12508350b916059ea",
+    "processor_attestation_root": "e2aff3480a02d0340aea97e8734833ebea7d98e6f89a32f48302f9053d28b6fe",
+    "required_processor_root": "795a2b40348e5ad6c57840ce1cafeab26717c38729f80409daddae84cd9935fc",
+    "trust_registry_hash": "ca4bf6639b80b98dd0dffcf7b67855a0a9717e22ceca6576df57e0c029346974"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "answer_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "raw_customer_or_tax_records_disclosed": false,
+    "raw_payout_accounts_disclosed": false,
+    "raw_processor_records_disclosed": false,
+    "source_text_disclosed": false,
+    "uses_payment_rail_signatures": true,
+    "uses_processor_record_hashes": true
+  },
+  "processor_attestation_rows": [
+    {
+      "attestation_hash_reproducible": true,
+      "attestation_id": "processor-batch:1",
+      "attestation_row_hash": "1e0c922aa3ea6b0b773770a91f596208b2fd1b194db97e4507b45b26cfebed01",
+      "currency_match": true,
+      "expected_batch_present": true,
+      "payment_execution_report_hash": "0f4d22a4d9c94e8d26366ae7828e28316b6b29159bcb845aedf9cb8ed68b87be",
+      "payment_execution_report_hash_match": true,
+      "processor_id": "processor:rdllm-reference-ach",
+      "processor_key_active": true,
+      "processor_role": "payment_processor",
+      "processor_role_allowed": true,
+      "raw_processor_records_disclosed": false,
+      "record_count_match": true,
+      "record_hashes_match": true,
+      "record_row_hashes_match": true,
+      "record_type": "payment_settlement",
+      "registered_processor": true,
+      "settled_total_match": true,
+      "settlement_batch_hash": "0203e5726136a5dd64c12d622945f579fb83c74b9355489000986d1f4806cd64",
+      "settlement_status_match": true,
+      "signature_algorithm": "HMAC-SHA256",
+      "signature_issuer": "processor:rdllm-reference-ach",
+      "signature_present": true,
+      "signature_valid": true
+    }
+  ],
+  "rail_policy": {
+    "external_processor_signature_required": true,
+    "minimum_input_level": "RDLLM-L77",
+    "processor_roles_allowed": [
+      "escrow_processor",
+      "payment_processor",
+      "regulated_escrow_processor",
+      "regulated_payment_processor"
+    ],
+    "profile": "rdllm-trusted-payment-rail-attestation/v1",
+    "raw_payment_records_forbidden": true,
+    "target_certification_level": "RDLLM-L78",
+    "trust_registry_required": true
+  },
+  "report_hash": "ad4033937b1270860a4dc9c336e9ae23107153af17480af32bb748ff464c7a01",
+  "report_version": "rdllm-payment-rail-attestation/v1",
+  "required_processor_rows": [
+    {
+      "entry_hash": "b1ca66130a3ecae7c0d864164677546401d7e224df7eef3d59858e6a3dcba309",
+      "processor_id": "processor:rdllm-reference-ach",
+      "registered": true,
+      "required_processor_row_hash": "0a3baba5b575853bcd4d183e445af0de57aa7512191bf1dbff2008c7d526e703"
+    }
+  ],
+  "schemas": {
+    "payment_execution_report": "docs/schemas/payment_execution_report.schema.json",
+    "payment_rail_attestation": "docs/schemas/payment_rail_attestation.schema.json",
+    "trust_registry": "docs/schemas/trust_registry.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "33a45005dd11bfb77aabecddb71ba484422f88a2b4e5604279a7a440c65761b8"
+  },
+  "summary": {
+    "covered_batch_count": 1,
+    "processor_attestation_count": 1,
+    "required_batch_count": 1,
+    "required_processor_count": 1,
+    "signed_external_payment_rail_attested": true,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L78"
+  }
+}

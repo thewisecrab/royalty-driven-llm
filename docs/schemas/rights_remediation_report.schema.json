@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/rights_remediation_report.schema.json",
+  "title": "RDLLM Rights Remediation Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "economics",
+    "changed_works",
+    "historical_event_refs",
+    "enforcement_probes",
+    "commitments",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-rights-remediation/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "creator_pool_rate",
+        "uses_checked",
+        "changed_policy_detection",
+        "future_denial_action",
+        "historical_event_policy"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-rights-remediation-policy/v1" },
+        "creator_pool_rate": { "type": "string" },
+        "uses_checked": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "changed_policy_detection": { "type": "string" },
+        "future_denial_action": { "type": "string" },
+        "historical_event_policy": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "economics": {
+      "type": "object",
+      "required": [
+        "remediation_gross_revenue",
+        "creator_pool_rate",
+        "creator_pool_per_blocked_probe",
+        "blocked_probe_count",
+        "escrow_verified_total"
+      ],
+      "additionalProperties": true
+    },
+    "changed_works": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "work_id",
+          "creator_id",
+          "title",
+          "source_uri",
+          "previous_content_hash",
+          "updated_content_hash",
+          "previous_policy_hash",
+          "updated_policy_hash",
+          "previous_revoked",
+          "updated_revoked",
+          "revoked_at",
+          "change_reasons"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "historical_event_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "event_id",
+          "event_hash",
+          "work_ids",
+          "creator_pool",
+          "payout_to_changed_works",
+          "historical_event_preserved"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "enforcement_probes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "work_id",
+          "updated_content_hash",
+          "updated_policy_hash",
+          "policy_checks",
+          "denied_uses",
+          "retrieval_probe",
+          "blocked_output_probe",
+          "future_use_denied"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "previous_policy_root",
+        "updated_policy_root",
+        "changed_work_root",
+        "historical_event_root",
+        "enforcement_probe_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "changed_work_count",
+        "revoked_work_count",
+        "historical_event_count",
+        "future_denial_count",
+        "escrow_required_work_count",
+        "blocked_output_probe_count",
+        "rights_conflict_escrow_verified",
+        "historical_events_preserved",
+        "creator_pool_conserved",
+        "post_publication_rights_remediation"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "work_text_disclosed",
+        "prompt_text_disclosed",
+        "output_text_disclosed",
+        "claim_text_disclosed",
+        "matched_text_disclosed",
+        "private_ledger_disclosed",
+        "report_uses_hashes_policy_reasons_and_event_refs"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/publication_monitor.schema.json",
+  "title": "RDLLM Publication Monitor",
+  "type": "object",
+  "required": [
+    "monitor_version",
+    "issuer",
+    "created_at",
+    "monitor_profile",
+    "required_artifacts",
+    "current_snapshot",
+    "checkpoint_history",
+    "diff",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "publication_monitor_hash",
+    "signature"
+  ],
+  "properties": {
+    "monitor_version": {
+      "const": "rdllm-publication-monitor/v1"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "monitor_profile": {
+      "type": "object",
+      "required": [
+        "append_only_checkpoints",
+        "merkle_snapshot_roots",
+        "signed_checkpoint_history",
+        "artifact_payloads_redacted",
+        "certification_regression_blocking"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "required_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "current_snapshot": {
+      "type": "object",
+      "required": [
+        "snapshot_index",
+        "artifact_count",
+        "artifact_root",
+        "certification_level",
+        "artifacts",
+        "inclusion_proofs",
+        "snapshot_hash"
+      ],
+      "additionalProperties": true
+    },
+    "checkpoint_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "checkpoint_index",
+          "created_at",
+          "artifact_root",
+          "snapshot_hash",
+          "artifact_count",
+          "certification_level",
+          "previous_checkpoint_hash",
+          "checkpoint_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "diff": {
+      "type": "object",
+      "required": [
+        "added_artifacts",
+        "removed_artifacts",
+        "changed_artifacts",
+        "unchanged_artifacts",
+        "added_count",
+        "removed_count",
+        "changed_count",
+        "unchanged_count",
+        "previous_certification_level",
+        "current_certification_level",
+        "certification_regressed",
+        "removed_required_artifacts",
+        "removed_required_artifact_count"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "required_artifacts_present",
+        "artifact_names_unique",
+        "artifact_hashes_reproducible",
+        "snapshot_inclusion_proofs_valid",
+        "checkpoint_history_append_only",
+        "checkpoint_chain_valid",
+        "certification_not_regressed",
+        "required_artifacts_not_removed",
+        "private_input_fields_absent"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "current_artifact_root",
+        "current_snapshot_hash",
+        "latest_checkpoint_hash",
+        "schema"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "monitor_mode",
+        "checkpoint_count",
+        "current_checkpoint_index",
+        "artifact_count",
+        "current_certification_level",
+        "changed_artifact_count",
+        "removed_artifact_count",
+        "added_artifact_count",
+        "private_input_field_count"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "artifact_payloads_disclosed",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "evidence_text_disclosed",
+        "customer_or_payment_text_disclosed",
+        "monitor_uses_hashes_checkpoints_and_diff_metadata"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "publication_monitor_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

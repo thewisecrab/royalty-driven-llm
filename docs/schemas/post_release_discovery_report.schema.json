@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/post_release_discovery_report.schema.json",
+  "title": "RDLLM Post-Release Discovery Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "release_subject",
+    "artifact_catalog",
+    "publication_plan",
+    "verification",
+    "commitments",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "post_release_report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-post-release-discovery-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_output_binding_level",
+        "two_phase_publication_required",
+        "base_manifest_must_not_be_mutated_after_release",
+        "self_hash_excluded_from_artifact_catalog",
+        "late_artifacts_required"
+      ],
+      "additionalProperties": true
+    },
+    "release_subject": {
+      "type": "object",
+      "required": [
+        "base_discovery_manifest_hash",
+        "output_provenance_binding_report_hash",
+        "proof_dependency_graph_hash",
+        "integration_profile_hash",
+        "provider_card_hash",
+        "certification_report_hash",
+        "copied_output_hash",
+        "rendered_output_hash",
+        "output_binding_subject_hash",
+        "output_binding_status",
+        "output_binding_target_certification_level",
+        "proof_graph_status",
+        "proof_graph_target_certification_level",
+        "base_discovery_status",
+        "base_discovery_highest_level",
+        "certification_highest_level",
+        "release_subject_hash"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_catalog": {
+      "type": "object",
+      "required": [
+        "artifact_count",
+        "post_release_artifact_count",
+        "artifact_root",
+        "entries"
+      ],
+      "properties": {
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "artifact_type",
+              "well_known_path",
+              "publication_phase",
+              "required",
+              "declared_hash",
+              "payload_hash",
+              "hash_reproducible",
+              "bound_release_subject_hash",
+              "entry_hash"
+            ],
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "publication_plan": {
+      "type": "object",
+      "required": [
+        "base_manifest_path",
+        "post_release_report_path",
+        "publication_sequence",
+        "base_manifest_mutation_required",
+        "hash_cycle_prevented"
+      ],
+      "additionalProperties": true
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "output_provenance_binding_errors",
+        "graph_node_count",
+        "verification_rows"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "release_subject_hash",
+        "artifact_root",
+        "verification_root",
+        "schema"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "post_release_discovery_report",
+        "discovery_manifest",
+        "output_provenance_binding_report",
+        "proof_dependency_graph",
+        "proof_carrying_response",
+        "serving_gateway_report",
+        "attribution_capsule",
+        "watchtower_challenge_settlement_report",
+        "integration_profile",
+        "provider_attribution_card",
+        "certification_report"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "release_subject_hash",
+        "copied_output_hash",
+        "artifact_count",
+        "post_release_artifact_count",
+        "base_manifest_mutation_required",
+        "hash_cycle_prevented",
+        "raw_output_text_disclosed",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_output_text_disclosed",
+        "prompt_text_disclosed",
+        "source_text_disclosed",
+        "artifact_payloads_embedded",
+        "report_uses_hashes_paths_and_release_subjects",
+        "private_field_findings"
+      ],
+      "additionalProperties": true
+    },
+    "post_release_report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

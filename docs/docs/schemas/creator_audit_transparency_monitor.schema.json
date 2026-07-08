@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/creator_audit_transparency_monitor.schema.json",
+  "title": "RDLLM Creator Audit Transparency Monitor",
+  "type": "object",
+  "required": [
+    "monitor_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "monitor_query",
+    "transparency_report_rows",
+    "log_snapshot_rows",
+    "append_only_consistency_rows",
+    "observation_rows",
+    "new_observation_rows",
+    "conflict_rows",
+    "continuity",
+    "checks",
+    "commitments",
+    "schemas",
+    "summary",
+    "privacy",
+    "creator_audit_transparency_monitor_hash",
+    "signature"
+  ],
+  "properties": {
+    "monitor_version": {
+      "const": "rdllm-creator-audit-transparency-monitor/v1"
+    },
+    "issuer": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "requires_l112_transparency_reports",
+        "requires_append_only_log_monitoring",
+        "requires_inclusion_proofs_for_matching_entries",
+        "requires_query_equivocation_absence",
+        "requires_append_only_monitor_continuity",
+        "raw_creator_query_terms_prohibited"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-creator-audit-transparency-monitor-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L113" },
+        "minimum_input_level": { "const": "RDLLM-L112" },
+        "requires_l112_transparency_reports": { "const": true },
+        "requires_append_only_log_monitoring": { "const": true },
+        "requires_inclusion_proofs_for_matching_entries": { "const": true },
+        "requires_query_equivocation_absence": { "const": true },
+        "requires_append_only_monitor_continuity": { "const": true },
+        "raw_creator_query_terms_prohibited": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "monitor_query": {
+      "type": "object",
+      "required": [
+        "query_hashes",
+        "provider_set_hashes",
+        "expected_federation_hashes",
+        "expected_participant_index_hashes",
+        "expected_provider_ids",
+        "raw_query_terms_disclosed",
+        "raw_creator_or_work_identifiers_disclosed",
+        "query_commitment_hash"
+      ],
+      "additionalProperties": true
+    },
+    "transparency_report_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "log_snapshot_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "append_only_consistency_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "observation_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "new_observation_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "conflict_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "continuity": {
+      "type": "object",
+      "required": [
+        "monitor_mode",
+        "previous_monitor_hash",
+        "previous_query_commitment_hash",
+        "previous_observation_count",
+        "current_observation_count",
+        "new_observation_count",
+        "removed_previous_observation_hashes",
+        "removed_previous_observation_count"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "monitor_query_commitment_present",
+        "monitor_query_has_no_private_field_names",
+        "l112_transparency_reports_present",
+        "l112_transparency_report_versions_supported",
+        "l112_transparency_report_shapes_valid",
+        "l112_transparency_report_hashes_reproducible",
+        "l112_transparency_reports_ready",
+        "l112_transparency_reports_match_monitor_query",
+        "transparency_logs_present",
+        "transparency_log_versions_supported",
+        "transparency_tree_sizes_match",
+        "transparency_roots_reproducible",
+        "transparency_entries_sequential",
+        "transparency_entry_hashes_reproducible",
+        "transparency_entries_have_required_hashes",
+        "matching_observations_present",
+        "matching_observation_entry_hashes_reproducible",
+        "matching_observation_inclusion_proofs_valid",
+        "expected_federation_hashes_seen",
+        "expected_participant_index_hashes_seen",
+        "append_only_prefix_consistency",
+        "same_query_equivocation_absent",
+        "provider_index_equivocation_absent",
+        "previous_monitor_hash_reproducible",
+        "monitor_query_matches_previous",
+        "monitor_observations_append_only_with_previous",
+        "public_report_has_no_private_field_names",
+        "private_strings_absent"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "query_commitment_hash",
+        "transparency_report_root",
+        "log_snapshot_root",
+        "append_only_consistency_root",
+        "observation_root",
+        "new_observation_root",
+        "conflict_root",
+        "schema"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "creator_audit_transparency_monitor",
+        "creator_attribution_audit_federation_transparency",
+        "creator_attribution_audit_federation",
+        "creator_attribution_audit_index"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "monitor_mode",
+        "query_hash_count",
+        "provider_set_hash_count",
+        "transparency_report_count",
+        "transparency_log_count",
+        "matching_observation_count",
+        "new_observation_count",
+        "federation_observation_count",
+        "participant_index_observation_count",
+        "append_only_violation_count",
+        "conflict_count",
+        "missing_expected_federation_count",
+        "missing_expected_participant_index_count"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L113" },
+        "minimum_input_level": { "const": "RDLLM-L112" },
+        "monitor_mode": { "enum": ["genesis", "append"] }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "query_terms_disclosed",
+        "creator_identifiers_disclosed",
+        "work_identifiers_disclosed",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "notice_text_disclosed",
+        "license_text_disclosed",
+        "payment_text_disclosed",
+        "stores_hashes_log_roots_inclusion_proofs_counts_and_diffs_not_text"
+      ],
+      "additionalProperties": true
+    },
+    "creator_audit_transparency_monitor_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "hashRow": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

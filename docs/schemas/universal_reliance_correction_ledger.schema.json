@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_reliance_correction_ledger.schema.json",
+  "title": "RDLLM Universal Reliance Correction Ledger",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "reliance_correction_version",
+    "issuer",
+    "created_at",
+    "reliance_correction_policy",
+    "artifact_bindings",
+    "reliance_status_rows",
+    "correction_broadcast_rows",
+    "revalidation_rows",
+    "settlement_correction_rows",
+    "standard_control_rows",
+    "failure_case_rows",
+    "evidence_commitments",
+    "checks",
+    "correction_decision",
+    "verifier_commands",
+    "standards_controls",
+    "privacy",
+    "summary",
+    "universal_reliance_correction_ledger_hash"
+  ],
+  "properties": {
+    "reliance_correction_version": {
+      "const": "rdllm-universal-reliance-correction-ledger/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "reliance_correction_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_reliance_level",
+        "well_known_path",
+        "required_core_artifacts",
+        "required_reliance_status_types",
+        "required_correction_broadcast_channels",
+        "required_revalidation_checks",
+        "required_settlement_correction_scopes",
+        "required_standard_controls",
+        "required_failure_cases"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L155" },
+        "minimum_reliance_level": { "const": "RDLLM-L154" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-reliance-correction-ledger.json"
+        },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_reliance_status_types": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_correction_broadcast_channels": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_revalidation_checks": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_settlement_correction_scopes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_standard_controls": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_failure_cases": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["artifact_count", "artifact_binding_root", "bindings"]
+    },
+    "reliance_status_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "status_type",
+          "subject_hash",
+          "l154_contract_hash",
+          "status_list_hash",
+          "status",
+          "display_action",
+          "settlement_action",
+          "ready",
+          "reliance_status_row_hash"
+        ]
+      }
+    },
+    "correction_broadcast_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "channel",
+          "endpoint_hash",
+          "status_list_hash",
+          "latest_checkpoint_hash",
+          "delivered",
+          "machine_readable",
+          "ready",
+          "correction_broadcast_row_hash"
+        ]
+      }
+    },
+    "revalidation_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "check_id",
+          "evidence_hash",
+          "last_run_hash",
+          "next_due_hash",
+          "interval_seconds",
+          "passed",
+          "continuous",
+          "ready",
+          "revalidation_row_hash"
+        ]
+      }
+    },
+    "settlement_correction_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "scope",
+          "allocation_report_hash",
+          "finance_attestation_hash",
+          "status_list_hash",
+          "funds_held_or_adjusted",
+          "finance_reconciled",
+          "ready",
+          "settlement_correction_row_hash"
+        ]
+      }
+    },
+    "standard_control_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "control",
+          "control_evidence_hash",
+          "verifier_command",
+          "ready",
+          "standard_control_row_hash"
+        ]
+      }
+    },
+    "failure_case_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "case_id",
+          "fixture_hash",
+          "verifier_command",
+          "expected_block",
+          "observed_block",
+          "ready",
+          "failure_case_row_hash"
+        ]
+      }
+    },
+    "evidence_commitments": { "type": "object" },
+    "checks": { "type": "object" },
+    "correction_decision": {
+      "type": "object",
+      "required": [
+        "reliance_correction_ledger_authorized",
+        "live_reliance_status_required",
+        "revoked_footer_display_allowed",
+        "uncorrected_cache_reuse_allowed",
+        "settlement_after_revocation_allowed",
+        "copied_output_without_status_link_allowed",
+        "failure_modes"
+      ],
+      "properties": {
+        "revoked_footer_display_allowed": { "const": false },
+        "uncorrected_cache_reuse_allowed": { "const": false },
+        "settlement_after_revocation_allowed": { "const": false },
+        "copied_output_without_status_link_allowed": { "const": false }
+      }
+    },
+    "verifier_commands": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "standards_controls": { "type": "object" },
+    "privacy": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": ["status", "target_certification_level"],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L155" },
+        "minimum_reliance_level": { "const": "RDLLM-L154" }
+      }
+    },
+    "universal_reliance_correction_ledger_hash": { "type": "string" }
+  }
+}

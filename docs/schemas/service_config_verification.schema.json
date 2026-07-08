@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/service_config_verification.schema.json",
+  "title": "RDLLM Service Config Verification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "errors",
+    "schema_status",
+    "runtime_status",
+    "service_config",
+    "runtime_readiness"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-service-config-verification/v1"
+    },
+    "status": {
+      "enum": ["ready", "blocked"]
+    },
+    "errors": {
+      "$ref": "#/$defs/error_array"
+    },
+    "schema_status": {
+      "enum": ["passed", "failed"]
+    },
+    "runtime_status": {
+      "enum": ["ready", "blocked", "skipped"]
+    },
+    "service_config": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "runtime_readiness": {
+      "anyOf": [
+        { "type": "object" },
+        { "type": "null" }
+      ]
+    },
+    "template_resource": {
+      "type": "string",
+      "minLength": 1
+    },
+    "config_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "root": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "ready" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "maxItems": 0 },
+          "schema_status": { "const": "passed" },
+          "runtime_status": { "enum": ["ready", "skipped"] },
+          "service_config": {
+            "properties": {
+              "schema": { "const": "rdllm-service-config/v1" }
+            },
+            "required": ["schema"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "blocked" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "minItems": 1 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "schema_status": { "const": "failed" }
+        },
+        "required": ["schema_status"]
+      },
+      "then": {
+        "properties": {
+          "status": { "const": "blocked" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "runtime_status": { "const": "blocked" }
+        },
+        "required": ["runtime_status"]
+      },
+      "then": {
+        "properties": {
+          "status": { "const": "blocked" },
+          "runtime_readiness": { "type": "object" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "runtime_status": { "const": "skipped" }
+        },
+        "required": ["runtime_status"]
+      },
+      "then": {
+        "properties": {
+          "runtime_readiness": { "type": "null" }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "error_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

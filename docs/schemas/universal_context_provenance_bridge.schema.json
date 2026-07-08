@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_context_provenance_bridge.schema.json",
+  "title": "RDLLM Universal Context Provenance Bridge",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "context_bridge_version",
+    "issuer",
+    "created_at",
+    "bridge_policy",
+    "artifact_bindings",
+    "bridge_surface_rows",
+    "protocol_adapter_rows",
+    "standards_mapping_rows",
+    "context_access_rows",
+    "agent_step_rows",
+    "royalty_projection_rows",
+    "failure_case_rows",
+    "verifier_command_rows",
+    "commitments",
+    "checks",
+    "bridge_decision",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_context_provenance_bridge_hash",
+    "signature"
+  ],
+  "properties": {
+    "context_bridge_version": {
+      "const": "rdllm-universal-context-provenance-bridge/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "bridge_policy": {
+      "type": "object",
+      "required": [
+        "target_certification_level",
+        "minimum_input_level",
+        "required_core_artifacts",
+        "required_context_protocols",
+        "required_bridge_surfaces",
+        "required_standards_mappings",
+        "required_failure_cases",
+        "required_verifier_commands"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L140" },
+        "minimum_input_level": { "const": "RDLLM-L139" },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_context_protocols": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_bridge_surfaces": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_standards_mappings": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_failure_cases": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_verifier_commands": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["artifact_count", "artifact_binding_root", "bindings"]
+    },
+    "bridge_surface_rows": { "type": "array" },
+    "protocol_adapter_rows": { "type": "array" },
+    "standards_mapping_rows": { "type": "array" },
+    "context_access_rows": { "type": "array" },
+    "agent_step_rows": { "type": "array" },
+    "royalty_projection_rows": { "type": "array" },
+    "failure_case_rows": { "type": "array" },
+    "verifier_command_rows": { "type": "array" },
+    "commitments": { "type": "object" },
+    "checks": { "type": "object" },
+    "bridge_decision": { "type": "object" },
+    "schemas": {
+      "type": "object",
+      "required": ["universal_context_provenance_bridge"],
+      "properties": {
+        "universal_context_provenance_bridge": {
+          "const": "docs/schemas/universal_context_provenance_bridge.schema.json"
+        }
+      }
+    },
+    "privacy": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "context_protocol_count",
+        "bridge_surface_count",
+        "standards_mapping_count",
+        "context_access_count",
+        "agent_step_count",
+        "royalty_projection_count",
+        "failure_case_count",
+        "verifier_command_count",
+        "failed_check_count",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L140" },
+        "minimum_input_level": { "const": "RDLLM-L139" },
+        "context_protocol_count": { "type": "integer" },
+        "bridge_surface_count": { "type": "integer" },
+        "standards_mapping_count": { "type": "integer" },
+        "context_access_count": { "type": "integer" },
+        "agent_step_count": { "type": "integer" },
+        "royalty_projection_count": { "type": "integer" },
+        "failure_case_count": { "type": "integer" },
+        "verifier_command_count": { "type": "integer" },
+        "failed_check_count": { "type": "integer" },
+        "privacy_preserved": { "type": "boolean" }
+      }
+    },
+    "universal_context_provenance_bridge_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

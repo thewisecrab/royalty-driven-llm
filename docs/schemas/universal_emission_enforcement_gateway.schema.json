@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_emission_enforcement_gateway.schema.json",
+  "title": "RDLLM Universal Emission Enforcement Gateway",
+  "type": "object",
+  "required": [
+    "gateway_version",
+    "issuer",
+    "created_at",
+    "runtime_policy",
+    "artifact_bindings",
+    "provider_family_rows",
+    "emission_channel_rows",
+    "enforcement_stage_rows",
+    "failure_case_rows",
+    "research_alignment_rows",
+    "commitments",
+    "checks",
+    "emission_decision",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_emission_enforcement_gateway_hash",
+    "signature"
+  ],
+  "properties": {
+    "gateway_version": {
+      "const": "rdllm-universal-emission-enforcement-gateway/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "runtime_policy": { "type": "object" },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["artifact_count", "artifact_binding_root", "bindings"]
+    },
+    "provider_family_rows": { "type": "array", "items": { "type": "object" } },
+    "emission_channel_rows": { "type": "array", "items": { "type": "object" } },
+    "enforcement_stage_rows": { "type": "array", "items": { "type": "object" } },
+    "failure_case_rows": { "type": "array", "items": { "type": "object" } },
+    "research_alignment_rows": { "type": "array", "items": { "type": "object" } },
+    "commitments": { "type": "object" },
+    "checks": {
+      "type": "object",
+      "required": [
+        "required_runtime_artifacts_present",
+        "artifact_hashes_reproducible",
+        "l146_root_ready_and_authorizes_attribution",
+        "release_gate_emits_authorized_output",
+        "proof_carrying_response_released_and_bound",
+        "serving_gateway_released_and_matches_proof",
+        "response_envelope_verified_with_visible_footer",
+        "source_footer_delivery_ready_and_complete",
+        "emission_evidence_ready_and_gateway_bound",
+        "live_witness_and_transparency_ready",
+        "universal_invocation_nonrepudiation_ready",
+        "client_display_enforces_source_footer",
+        "failure_cases_fail_closed",
+        "private_strings_absent"
+      ]
+    },
+    "emission_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "emission_authorized",
+        "source_footer_delivery_required",
+        "creator_settlement_authorized",
+        "client_display_authorized",
+        "failed_checks",
+        "failure_modes"
+      ]
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["universal_emission_enforcement_gateway"]
+    },
+    "privacy": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_root_level",
+        "runtime_artifact_count",
+        "provider_family_count",
+        "emission_channel_count",
+        "enforcement_stage_count",
+        "failed_check_count",
+        "offline_verification_supported",
+        "privacy_preserved"
+      ]
+    },
+    "universal_emission_enforcement_gateway_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

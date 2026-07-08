@@ -1,0 +1,88 @@
+{
+  "attribution_gap": {
+    "report_hash": "8265d18fe02b4a2e3723c2fef7aab8402fe4857088c6a2002a6cef564d9aa1d7",
+    "summary": {
+      "access_record_count": 4,
+      "accessed_source_count": 2,
+      "allowed_accessed_source_count": 0,
+      "cited_without_access_count": 0,
+      "consumed_without_credit_count": 0,
+      "credited_source_count": 2,
+      "escrow_accounts": [
+        "registry_dispute_escrow"
+      ],
+      "paid_hidden_count": 0,
+      "paid_source_count": 0,
+      "policy_withheld_count": 0,
+      "registry_withheld_count": 2,
+      "visible_source_count": 0
+    },
+    "verdict": "escrowed"
+  },
+  "event": {
+    "answer_hash": "16bfc2ebe407b69536fd702e343f95147dce2182ad069470ba29f7690e554ec2",
+    "event_hash": "658bea9b5306639b06069f062775fd68f2aa49990d7438e0f2bf6b85e8c2caf9",
+    "event_id": "evt_658bea9b5306639b",
+    "prompt_hash": "7bc45786358d6c9cfdce97ee2eed540a69e0b65c8f53f5557141b36c2d53ed4b",
+    "rendered_output_hash": "9584d0078d4fa396cb6dcf0620a2e72027f40bcd2b15964f8f453964124d8808"
+  },
+  "grounding_quality": {
+    "issues": [],
+    "overall_score": 1.0,
+    "quality_version": "rdllm-grounding-quality/v1",
+    "scores": {
+      "citation_integrity": null,
+      "evidence_relevance": null,
+      "fact_support": null,
+      "payout_alignment": 1.0,
+      "policy_alignment": 1.0,
+      "source_accessibility": null
+    },
+    "summary": {
+      "claim_count": 4,
+      "footer_source_count": 0,
+      "footer_span_hash_count": 0,
+      "registry_conflicts": 1,
+      "source_count": 0,
+      "supported_claims": 0
+    },
+    "verdict": "blocked_by_registry"
+  },
+  "grounding_report": {
+    "coverage": 0.0,
+    "policy_denials": 0,
+    "policy_status": "allowed",
+    "registry_conflicts": 1,
+    "registry_report_hash": "3c48010352ebea9fa4c501a225d7292696fc25ce259c276681e5ab6a8039527d",
+    "registry_status": "disputed",
+    "source_count": 0,
+    "status": "registry_disputed",
+    "supported_claims": 0,
+    "total_claims": 4,
+    "unsupported_claims": 4
+  },
+  "issued_at": "2026-05-29T18:20:04Z",
+  "issuer": "rdllm-local-demo",
+  "model": {
+    "id": "rdllm-reference-python",
+    "route_id": "route:registry-dispute",
+    "version": "0.1.0"
+  },
+  "protocol_version": "rdllm-attribution-receipt/v1",
+  "receipt_hash": "cb6badcd528b3195bc5ac8201bf249de27208f7d1b832a307cbdd8e1b9b10170",
+  "registry": {
+    "registry_conflicts": 1,
+    "registry_report_hash": "3c48010352ebea9fa4c501a225d7292696fc25ce259c276681e5ab6a8039527d",
+    "registry_status": "disputed"
+  },
+  "rights": {
+    "policy_denials": 0,
+    "policy_status": "allowed"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "d5d582898dfc241500b63059f1382c786f23dc513a51a58616161514a1074db7"
+  },
+  "sources": []
+}

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/operator_recovery_verification.schema.json",
+  "title": "RDLLM Operator Recovery Verification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "errors",
+    "checked_count",
+    "missing_count",
+    "mismatch_count",
+    "manifest_file_count",
+    "restored_total_bytes"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-operator-recovery-verification/v1"
+    },
+    "status": {
+      "enum": ["passed", "failed"]
+    },
+    "errors": {
+      "$ref": "#/$defs/error_array"
+    },
+    "checked_count": { "type": "integer", "minimum": 0 },
+    "missing_count": { "type": "integer", "minimum": 0 },
+    "mismatch_count": { "type": "integer", "minimum": 0 },
+    "manifest_file_count": { "type": "integer", "minimum": 0 },
+    "restored_total_bytes": { "type": "integer", "minimum": 0 }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "passed" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "maxItems": 0 },
+          "missing_count": { "const": 0 },
+          "mismatch_count": { "const": 0 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "failed" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "minItems": 1 }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "error_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

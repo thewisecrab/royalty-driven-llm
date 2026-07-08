@@ -1,0 +1,31 @@
+{
+  "schema": "rdllm-service-config/v1",
+  "host": "127.0.0.1",
+  "port": 8765,
+  "corpus": "examples/sample_corpus.json",
+  "creator_pool_rate": "0.55",
+  "top_k": 3,
+  "jurisdiction": "GLOBAL",
+  "default_gross_revenue": "1.00",
+  "audit_log_path": "runtime/rdllm_service_audit.jsonl",
+  "auth": {
+    "mode": "shared_token_sha256",
+    "token_sha256_env": "RDLLM_SERVICE_TOKEN_SHA256"
+  },
+  "limits": {
+    "max_request_bytes": 65536,
+    "max_prompt_chars": 4000,
+    "max_output_chars": 16000,
+    "rate_limit_requests_per_window": 120,
+    "rate_limit_window_seconds": 60
+  },
+  "artifacts": {
+    "certification_report": "artifacts/certification_report.json",
+    "discovery_manifest": "artifacts/discovery_manifest.json",
+    "provider_attribution_card": "artifacts/provider_attribution_card.json",
+    "production_readiness_report": "artifacts/production_readiness_report.json",
+    "universal_production_invocation_admission": "artifacts/universal_production_invocation_admission.json",
+    "universal_runtime_conformance_receipt": "artifacts/universal_runtime_conformance_receipt.json",
+    "universal_source_grounded_response_receipt": "artifacts/universal_source_grounded_response_receipt.json"
+  }
+}

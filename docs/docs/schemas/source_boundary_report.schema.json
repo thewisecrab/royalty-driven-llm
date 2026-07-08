@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/source_boundary_report.schema.json",
+  "title": "RDLLM Source Boundary Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "event",
+    "artifact_bindings",
+    "source_boundary_rows",
+    "summary",
+    "commitments",
+    "schemas",
+    "privacy",
+    "issues",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-source-boundary-report/v1" },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": { "type": "object" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "answer_hash",
+        "trace_hash",
+        "generation_context_closure_report_hash"
+      ],
+      "properties": {
+        "event_id": { "type": "string" },
+        "event_hash": { "type": "string" },
+        "rendered_output_hash": { "type": "string" },
+        "answer_hash": { "type": "string" },
+        "trace_hash": { "type": "string" },
+        "generation_context_closure_report_hash": { "type": "string" }
+      }
+    },
+    "artifact_bindings": { "type": "object" },
+    "source_boundary_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "context_block_id",
+          "context_block_hash",
+          "source_access_id",
+          "source_access_span_id",
+          "chunk_id",
+          "work_id",
+          "creator_id",
+          "content_hash",
+          "source_access_in_trace",
+          "span_matches_context",
+          "boundary_profile",
+          "source_role",
+          "evidence_role_declared",
+          "control_channel_blocked",
+          "instruction_channel_blocked",
+          "source_cannot_modify_attribution",
+          "source_cannot_modify_payout",
+          "content_hash_bound",
+          "content_hash_matches_context",
+          "packet_hash_matches_profile",
+          "source_boundary_closed",
+          "source_boundary_hash"
+        ]
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "context_block_count",
+        "boundary_closed_block_count",
+        "boundary_violation_count",
+        "all_context_blocks_boundary_isolated",
+        "issue_count"
+      ],
+      "properties": {
+        "status": { "type": "string" },
+        "target_certification_level": { "const": "RDLLM-L61" },
+        "context_block_count": { "type": "integer" },
+        "boundary_closed_block_count": { "type": "integer" },
+        "boundary_violation_count": { "type": "integer" },
+        "all_context_blocks_boundary_isolated": { "type": "boolean" },
+        "issue_count": { "type": "integer" }
+      }
+    },
+    "commitments": { "type": "object" },
+    "schemas": { "type": "object" },
+    "privacy": { "type": "object" },
+    "issues": { "type": "array", "items": { "type": "string" } },
+    "report_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

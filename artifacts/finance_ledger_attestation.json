@@ -1,0 +1,148 @@
+{
+  "attestation_hash": "bf9213efed842b864f119fc30fcfd464e6f4df7ce8845bfe2677530d7d973ef0",
+  "attestation_version": "rdllm-finance-ledger-attestation/v1",
+  "checks": {
+    "all_allocation_sources_have_finance_records": true,
+    "all_finance_records_map_to_allocation_sources": true,
+    "finance_record_hashes_present": true,
+    "finance_record_rows_hash_bound": true,
+    "finance_records_present": true,
+    "no_duplicate_finance_record_rows": true,
+    "private_finance_fields_absent_from_input": true,
+    "private_finance_fields_absent_from_report": true,
+    "revenue_allocation_report_ready": true,
+    "rollup_rows_hash_bound": true,
+    "single_currency_report": true,
+    "source_totals_match_revenue_allocation": true,
+    "total_gross_matches_revenue_allocation": true
+  },
+  "commitments": {
+    "external_system_root": "aee673664feb831748c23e57b26a10665b67c233d324cfdc44fe9a564e76c45b",
+    "finance_gross_revenue_total": "1.000000",
+    "finance_record_root": "13824f5483b2be07ee5a54dad8ffdbca3fb2745f10055b9a8351360bbbdcc55b",
+    "revenue_allocation_gross_revenue_total": "1.000000",
+    "revenue_allocation_report_hash": "e583e9d86aaa694243787b892d40754eedaf7e3cfba23f8b9752222db6ecb987",
+    "revenue_allocation_source_root": "799710e9ed08cf6da334a4491a859269be834e16d255a311669220bdb01c31a3",
+    "revenue_source_rollup_root": "495c2d76e39b899ec97a6ef7eaea4e66ed795ece6db0bab1b8f334d3fef7a628"
+  },
+  "created_at": "2026-05-30T13:46:07Z",
+  "finance_record_rows": [
+    {
+      "adjustment_type": "gross",
+      "currency": "USD",
+      "external_record_hash_supplied": true,
+      "external_system": "api_gateway_metering",
+      "finance_record_id": "finrec:api:meter:2026-05:001",
+      "finance_record_row_hash": "6855ea8ae78cb4ba798628492348f876acf940dfbefc09b384c01f9d7c46f648",
+      "gross_revenue": "0.250000",
+      "invoice_text_disclosed": false,
+      "payment_identifier_disclosed": false,
+      "period_end": "2026-05-31",
+      "period_start": "2026-05-01",
+      "raw_customer_record_disclosed": false,
+      "raw_finance_record_disclosed": false,
+      "record_hashes": {
+        "export_batch_hash": "sha256:api-metering-export-batch-2026-05",
+        "invoice_hash": "sha256:api-invoice-commitment-001",
+        "meter_event_root": "sha256:api-meter-event-root-2026-05",
+        "record_hash": "sha256:api-metering-export-row-001"
+      },
+      "record_type": "metered_api_usage",
+      "revenue_source_id": "revenue:api-meter:demo"
+    },
+    {
+      "adjustment_type": "gross",
+      "currency": "USD",
+      "external_record_hash_supplied": true,
+      "external_system": "stripe",
+      "finance_record_id": "finrec:stripe:sub:2026-05:001",
+      "finance_record_row_hash": "0717043744bd27093e0909d1f2369729161c7e062ee7b74a1747a1dbfe739da2",
+      "gross_revenue": "0.750000",
+      "invoice_text_disclosed": false,
+      "payment_identifier_disclosed": false,
+      "period_end": "2026-05-31",
+      "period_start": "2026-05-01",
+      "raw_customer_record_disclosed": false,
+      "raw_finance_record_disclosed": false,
+      "record_hashes": {
+        "customer_id_hash": "sha256:customer-commitment-001",
+        "export_batch_hash": "sha256:stripe-export-batch-2026-05",
+        "invoice_hash": "sha256:invoice-commitment-001",
+        "record_hash": "sha256:subscription-invoice-export-row-001"
+      },
+      "record_type": "subscription_invoice",
+      "revenue_source_id": "revenue:subscription:demo"
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "answer_text_disclosed": false,
+    "finance_rows_use_hashes_amounts_and_source_ids": true,
+    "invoice_text_disclosed": false,
+    "payment_identifier_disclosed": false,
+    "prompt_text_disclosed": false,
+    "raw_customer_account_disclosed": false,
+    "raw_finance_records_disclosed": false,
+    "source_text_disclosed": false
+  },
+  "revenue_source_rollups": [
+    {
+      "allocation_source_present": true,
+      "currency": "USD",
+      "external_systems": [
+        "api_gateway_metering"
+      ],
+      "finance_gross_revenue": "0.250000",
+      "finance_record_root": "549ffb7916d3bca0ec09fe7af86cfdda859ea4d3875714dd5e8f8d8ac72230ee",
+      "finance_records_present": true,
+      "gross_revenue_matches_revenue_allocation": true,
+      "record_count": 1,
+      "revenue_allocation_gross_revenue": "0.250000",
+      "revenue_source_id": "revenue:api-meter:demo",
+      "rollup_row_hash": "48e44dc30b0c2bf56108b7ac2078ff11dd4360db4350ae44c0816ec68e97dce8",
+      "source_row_hash": "6a88583f42d2d912817945aea75b835e844876f9589be1594d076ba397a8008b",
+      "source_type": "api_metering"
+    },
+    {
+      "allocation_source_present": true,
+      "currency": "USD",
+      "external_systems": [
+        "stripe"
+      ],
+      "finance_gross_revenue": "0.750000",
+      "finance_record_root": "eacbe59ae873f3feb5a63d343a6cb8b3f30a95eceeb8904f5522c359cd7844e6",
+      "finance_records_present": true,
+      "gross_revenue_matches_revenue_allocation": true,
+      "record_count": 1,
+      "revenue_allocation_gross_revenue": "0.750000",
+      "revenue_source_id": "revenue:subscription:demo",
+      "rollup_row_hash": "11653fc8e442b6a6a6e6e3c975e04eddb9b7b4b9ab899f38929a39d3a2904b9a",
+      "source_row_hash": "1b6903ac8bf04ef5bef62081e68fb4e19643716143e6f0a13129f866cd3bc004",
+      "source_type": "subscription_pool"
+    }
+  ],
+  "schemas": {
+    "finance_ledger_attestation": "docs/schemas/finance_ledger_attestation.schema.json",
+    "revenue_allocation_report": "docs/schemas/revenue_allocation_report.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "0bd8caa43e79a790db6347270fe5299b26a57312c29bd48538de83456282c358"
+  },
+  "summary": {
+    "currency": "USD",
+    "external_system_count": 2,
+    "finance_gross_revenue_total": "1.000000",
+    "finance_record_count": 2,
+    "private_input_field_paths": [],
+    "private_report_field_paths": [],
+    "revenue_allocation_gross_revenue_total": "1.000000",
+    "revenue_allocation_shape_errors": [],
+    "revenue_source_count": 2,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L47",
+    "unbacked_allocation_source_count": 0,
+    "unmatched_finance_source_count": 0
+  }
+}

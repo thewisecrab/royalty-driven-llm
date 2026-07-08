@@ -1,0 +1,288 @@
+{
+  "balances": {
+    "nora": "0.550000"
+  },
+  "events": [
+    {
+      "answer_text": "Counterfactual attribution reports remove each credited work, replay the same prompt and answer, verify that source credit disappears after removal, and confirm that payout either reallocates to another eligible source or routes to escrow.",
+      "attribution_gap": {
+        "accessed_sources": [
+          {
+            "access_id": "srcacc_7b44da451d069041",
+            "access_type": "retrieval",
+            "chunk_id": "nora-counterfactual-attribution:c1",
+            "content_hash": "ec1bf112acf8f4f864c589a52f9b8b4bff345b1dde9639336481ed4c61900b99",
+            "creator_id": "nora",
+            "decision_status": "allowed",
+            "policy_allowed": true,
+            "rank": 1,
+            "registry_allowed": true,
+            "score": 0.28259248,
+            "use": "retrieval",
+            "work_id": "nora-counterfactual-attribution"
+          },
+          {
+            "access_id": "srcacc_4750d0b4da15fd24",
+            "access_type": "text_match",
+            "chunk_id": "nora-counterfactual-attribution:c1",
+            "content_hash": "ec1bf112acf8f4f864c589a52f9b8b4bff345b1dde9639336481ed4c61900b99",
+            "creator_id": "nora",
+            "decision_status": "allowed",
+            "policy_allowed": true,
+            "rank": 1,
+            "registry_allowed": true,
+            "score": 1.0,
+            "use": "external_attribution",
+            "work_id": "nora-counterfactual-attribution"
+          }
+        ],
+        "classifications": {
+          "cited_without_access": [],
+          "consumed_without_credit": [],
+          "paid_hidden": [],
+          "policy_withheld": [],
+          "registry_withheld": []
+        },
+        "gap_version": "rdllm-attribution-gap/v1",
+        "grounding_status": "grounded",
+        "issues": [],
+        "policy_status": "allowed",
+        "registry_status": "clear",
+        "report_hash": "89cd5fd4374425cc29d3ae432f1a8b67236a434686fd03e78fdc88ab9df1993e",
+        "scores": {
+          "allowed_credit_coverage": 1.0,
+          "attribution_gap_rate": 0.0,
+          "citation_efficiency": 1.0,
+          "credit_efficiency": 1.0,
+          "payout_visibility": 1.0
+        },
+        "summary": {
+          "access_record_count": 2,
+          "accessed_source_count": 1,
+          "allowed_accessed_source_count": 1,
+          "cited_without_access_count": 0,
+          "consumed_without_credit_count": 0,
+          "credited_source_count": 1,
+          "escrow_accounts": [],
+          "paid_hidden_count": 0,
+          "paid_source_count": 1,
+          "policy_withheld_count": 0,
+          "registry_withheld_count": 0,
+          "visible_source_count": 1
+        },
+        "verdict": "closed"
+      },
+      "claim_support": [
+        {
+          "chunk_id": "nora-counterfactual-attribution:c1",
+          "claim": "Counterfactual attribution reports remove each credited work, replay the same prompt and answer, verify that source credit disappears after removal, and confirm that payout either reallocates to another eligible source or routes to escrow.",
+          "evidence_end_char": 239,
+          "evidence_span_hash": "ec1bf112acf8f4f864c589a52f9b8b4bff345b1dde9639336481ed4c61900b99",
+          "evidence_start_char": 0,
+          "evidence_text": "Counterfactual attribution reports remove each credited work, replay the same prompt and answer, verify that source credit disappears after removal, and confirm that payout either reallocates to another eligible source or routes to escrow.",
+          "source_label": "S1",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "nora-counterfactual-attribution"
+        }
+      ],
+      "creator_pool": "0.550000",
+      "creator_pool_rate": "0.55",
+      "event_hash": "bba5b72909a804841ac156888044c75d03aea130387a36994954ef8ccf565599",
+      "event_id": "evt_bba5b72909a80484",
+      "gross_revenue": "1.000000",
+      "grounding_quality": {
+        "issues": [],
+        "overall_score": 1.0,
+        "quality_version": "rdllm-grounding-quality/v1",
+        "scores": {
+          "citation_integrity": 1.0,
+          "evidence_relevance": 1.0,
+          "fact_support": 1.0,
+          "payout_alignment": 1.0,
+          "policy_alignment": 1.0,
+          "source_accessibility": 1.0
+        },
+        "summary": {
+          "claim_count": 1,
+          "footer_source_count": 1,
+          "footer_span_hash_count": 1,
+          "source_count": 1,
+          "supported_claims": 1
+        },
+        "verdict": "verified"
+      },
+      "grounding_report": {
+        "coverage": 1.0,
+        "policy_denials": 0,
+        "policy_status": "allowed",
+        "registry_conflicts": 0,
+        "registry_report_hash": "",
+        "registry_status": "clear",
+        "source_count": 1,
+        "status": "grounded",
+        "supported_claims": 1,
+        "total_claims": 1,
+        "unsupported_claims": 0
+      },
+      "output": "Counterfactual attribution reports remove each credited work, replay the same prompt and answer, verify that source credit disappears after removal, and confirm that payout either reallocates to another eligible source or routes to escrow.\n\nSources\n[S1] Counterfactual Attribution Source - Nora Vale; chunk=nora-counterfactual-attribution:c1; uri=https://example.test/counterfactual-attribution-source; support=1.000; text_match=1.000; hash=ec1bf112acf8.\n    Evidence: span_hashes=ec1bf112acf8. Counterfactual attribution reports remove each credited work, replay the same prompt and answer, verify that source credit disappears after removal, and confirm that payout either reallocates to another eligible source or routes to escrow.\nGrounding: 1/1 claims supported; status=grounded.\nClaim Evidence\n[C1] S1; span=ec1bf112acf8; chars=0-239.",
+      "policy_decisions": [
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "nora-counterfactual-attribution:c1",
+          "content_hash": "ec1bf112acf8f4f864c589a52f9b8b4bff345b1dde9639336481ed4c61900b99",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:nora-counterfactual-attribution",
+          "reasons": [
+            "permit:external_attribution"
+          ],
+          "source_uri": "https://example.test/counterfactual-attribution-source",
+          "target_id": "nora-counterfactual-attribution:c1",
+          "target_type": "chunk",
+          "text_match_score": 1.0,
+          "use": "external_attribution",
+          "work_id": "nora-counterfactual-attribution"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "nora-counterfactual-attribution:c1",
+          "content_hash": "ec1bf112acf8f4f864c589a52f9b8b4bff345b1dde9639336481ed4c61900b99",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:nora-counterfactual-attribution",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "https://example.test/counterfactual-attribution-source",
+          "target_id": "nora-counterfactual-attribution:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "nora-counterfactual-attribution"
+        }
+      ],
+      "prompt": "How can a provider prove a credited source actually mattered?",
+      "registry_decisions": [],
+      "retrieval_hits": [
+        {
+          "chunk_id": "nora-counterfactual-attribution:c1",
+          "content_hash": "ec1bf112acf8f4f864c589a52f9b8b4bff345b1dde9639336481ed4c61900b99",
+          "creator_id": "nora",
+          "rank": 1,
+          "score": 0.28259248,
+          "title": "Counterfactual Attribution Source",
+          "work_id": "nora-counterfactual-attribution"
+        }
+      ],
+      "royalty_shares": [
+        {
+          "attribution_basis": {
+            "citation": 0.0,
+            "output_support": 1.0,
+            "prompt_overlap": 0.06896552,
+            "retrieval": 0.28259248,
+            "text_match": 1.0,
+            "training_value": 1.20686924
+          },
+          "chunk_id": "nora-counterfactual-attribution:c1",
+          "citation_score": 0.0,
+          "content_hash": "ec1bf112acf8f4f864c589a52f9b8b4bff345b1dde9639336481ed4c61900b99",
+          "contribution_weight": "1",
+          "creator_id": "nora",
+          "data_value_prior": 1.2,
+          "output_support": 1.0,
+          "payout": "0.550000",
+          "query_relevance": 0.06896552,
+          "retrieval_score": 0.28259248,
+          "text_match_score": 1.0,
+          "training_value_score": 1.20686924,
+          "work_id": "nora-counterfactual-attribution"
+        }
+      ],
+      "source_accesses": [
+        {
+          "access_id": "srcacc_7b44da451d069041",
+          "access_type": "retrieval",
+          "chunk_id": "nora-counterfactual-attribution:c1",
+          "content_hash": "ec1bf112acf8f4f864c589a52f9b8b4bff345b1dde9639336481ed4c61900b99",
+          "creator_id": "nora",
+          "decision_status": "allowed",
+          "matched_text_hash": "",
+          "policy_allowed": true,
+          "rank": 1,
+          "registry_allowed": true,
+          "score": 0.28259248,
+          "source_uri": "https://example.test/counterfactual-attribution-source",
+          "title": "Counterfactual Attribution Source",
+          "use": "retrieval",
+          "work_id": "nora-counterfactual-attribution"
+        },
+        {
+          "access_id": "srcacc_4750d0b4da15fd24",
+          "access_type": "text_match",
+          "chunk_id": "nora-counterfactual-attribution:c1",
+          "content_hash": "ec1bf112acf8f4f864c589a52f9b8b4bff345b1dde9639336481ed4c61900b99",
+          "creator_id": "nora",
+          "decision_status": "allowed",
+          "matched_text_hash": "0b4bc8d52cff648ce4d84ef3531f553f4fd293835ef1a489b736a872230c4a17",
+          "policy_allowed": true,
+          "rank": 1,
+          "registry_allowed": true,
+          "score": 1.0,
+          "source_uri": "https://example.test/counterfactual-attribution-source",
+          "title": "Counterfactual Attribution Source",
+          "use": "external_attribution",
+          "work_id": "nora-counterfactual-attribution"
+        }
+      ],
+      "source_references": [
+        {
+          "chunk_id": "nora-counterfactual-attribution:c1",
+          "citation_score": 0.0,
+          "content_hash": "ec1bf112acf8f4f864c589a52f9b8b4bff345b1dde9639336481ed4c61900b99",
+          "contribution_weight": "1",
+          "creator_id": "nora",
+          "creator_name": "Nora Vale",
+          "evidence_span_hashes": [
+            "ec1bf112acf8f4f864c589a52f9b8b4bff345b1dde9639336481ed4c61900b99"
+          ],
+          "jurisdiction": "GLOBAL",
+          "label": "S1",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "output_support": 1.0,
+          "payout": "0.550000",
+          "policy_id": "policy:nora-counterfactual-attribution",
+          "policy_use": "external_attribution",
+          "quote": "Counterfactual attribution reports remove each credited work, replay the same prompt and answer, verify that source credit disappears after removal, and confirm that payout either reallocates to another eligible source or routes to escrow.",
+          "retrieval_score": 0.28259248,
+          "source_uri": "https://example.test/counterfactual-attribution-source",
+          "text_match_score": 1.0,
+          "title": "Counterfactual Attribution Source",
+          "work_id": "nora-counterfactual-attribution"
+        }
+      ],
+      "text_matches": [
+        {
+          "chunk_id": "nora-counterfactual-attribution:c1",
+          "content_hash": "ec1bf112acf8f4f864c589a52f9b8b4bff345b1dde9639336481ed4c61900b99",
+          "creator_id": "nora",
+          "exact_score": 1.0,
+          "longest_sequence_tokens": 26,
+          "matched_text": "counterfactual attribution reports remove each credited work replay same prompt answer verify source credit disappears after removal confirm payout either reallocates another eligible source routes escrow",
+          "ngram_score": 1.0,
+          "rank": 1,
+          "score": 1.0,
+          "title": "Counterfactual Attribution Source",
+          "work_id": "nora-counterfactual-attribution"
+        }
+      ]
+    }
+  ]
+}

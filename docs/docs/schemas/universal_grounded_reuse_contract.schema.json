@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_grounded_reuse_contract.schema.json",
+  "title": "RDLLM Universal Grounded Reuse Contract",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "grounded_reuse_contract_version",
+    "issuer",
+    "created_at",
+    "reuse_policy",
+    "artifact_bindings",
+    "provider_family_rows",
+    "reuse_dimension_rows",
+    "reuse_decision_rows",
+    "failure_case_rows",
+    "verifier_command_rows",
+    "commitments",
+    "checks",
+    "reuse_decision",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_grounded_reuse_contract_hash",
+    "signature"
+  ],
+  "properties": {
+    "grounded_reuse_contract_version": {
+      "const": "rdllm-universal-grounded-reuse-contract/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "reuse_policy": {
+      "type": "object",
+      "required": [
+        "target_certification_level",
+        "minimum_input_level",
+        "required_core_artifacts",
+        "required_provider_families",
+        "required_reuse_dimensions",
+        "required_failure_cases",
+        "required_verifier_commands"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L142" },
+        "minimum_input_level": { "const": "RDLLM-L141" },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_reuse_dimensions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_failure_cases": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_verifier_commands": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["artifact_count", "artifact_binding_root", "bindings"]
+    },
+    "provider_family_rows": { "type": "array" },
+    "reuse_dimension_rows": { "type": "array" },
+    "reuse_decision_rows": { "type": "array" },
+    "failure_case_rows": { "type": "array" },
+    "verifier_command_rows": { "type": "array" },
+    "commitments": { "type": "object" },
+    "checks": { "type": "object" },
+    "reuse_decision": { "type": "object" },
+    "schemas": {
+      "type": "object",
+      "required": ["universal_grounded_reuse_contract"],
+      "properties": {
+        "universal_grounded_reuse_contract": {
+          "const": "docs/schemas/universal_grounded_reuse_contract.schema.json"
+        }
+      }
+    },
+    "privacy": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "provider_family_count",
+        "reuse_dimension_count",
+        "reuse_decision_count",
+        "l141_source_label_count",
+        "reuse_source_label_count",
+        "failure_case_count",
+        "verifier_command_count",
+        "failed_check_count",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L142" },
+        "minimum_input_level": { "const": "RDLLM-L141" },
+        "provider_family_count": { "type": "integer" },
+        "reuse_dimension_count": { "type": "integer" },
+        "reuse_decision_count": { "type": "integer" },
+        "l141_source_label_count": { "type": "integer" },
+        "reuse_source_label_count": { "type": "integer" },
+        "failure_case_count": { "type": "integer" },
+        "verifier_command_count": { "type": "integer" },
+        "failed_check_count": { "type": "integer" },
+        "privacy_preserved": { "type": "boolean" }
+      }
+    },
+    "universal_grounded_reuse_contract_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

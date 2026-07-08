@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/evidence_preview_footer.schema.json",
+  "title": "RDLLM Evidence Preview Footer",
+  "type": "object",
+  "required": [
+    "preview_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "footer_display",
+    "source_preview_rows",
+    "claim_preview_rows",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "evidence_preview_footer_hash",
+    "signature"
+  ],
+  "properties": {
+    "preview_version": {
+      "const": "rdllm-evidence-preview-footer/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "max_excerpt_words",
+        "max_excerpt_chars",
+        "allowed_excerpt_license_statuses",
+        "verified_claims_require_preview",
+        "public_source_uri_required",
+        "origin_and_settlement_labels_required",
+        "raw_full_source_text_disclosure_allowed"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "source_origin_lineage",
+        "warranted_source_footer",
+        "grounded_source_footer"
+      ],
+      "additionalProperties": true
+    },
+    "footer_display": {
+      "type": "object",
+      "required": [
+        "profile",
+        "source_line_count",
+        "claim_line_count",
+        "source_lines",
+        "claim_lines",
+        "source_preview_root",
+        "claim_preview_root"
+      ],
+      "additionalProperties": true
+    },
+    "source_preview_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "display_order",
+          "label",
+          "display_label",
+          "title",
+          "creator_id",
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "content_hash_prefix",
+          "origin_class",
+          "lineage_status",
+          "settlement_action",
+          "source_origin_row_hash",
+          "display_line",
+          "source_preview_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "claim_preview_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "display_order",
+          "source_label",
+          "display_anchor",
+          "claim_hash",
+          "evidence_span_prefix",
+          "excerpt_text",
+          "excerpt_hash",
+          "declared_excerpt_hash",
+          "excerpt_word_count",
+          "excerpt_char_count",
+          "excerpt_permission",
+          "excerpt_license_status",
+          "source_uri",
+          "location",
+          "warrant_status",
+          "support_score",
+          "confidence",
+          "claim_warrant_row_hash",
+          "display_line",
+          "claim_preview_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "required": [
+        "failed_checks",
+        "missing_preview_claim_keys",
+        "overlong_excerpt_claim_hashes",
+        "unlicensed_excerpt_claim_hashes"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "artifact_binding_root",
+        "source_preview_root",
+        "claim_preview_root",
+        "footer_display_hash",
+        "schema"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "evidence_preview_footer",
+        "source_origin_lineage",
+        "warranted_source_footer",
+        "grounded_source_footer"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "short_evidence_excerpt_text_disclosed",
+        "raw_full_source_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_claim_text_disclosed",
+        "raw_prompt_text_disclosed",
+        "payment_account_disclosed",
+        "excerpt_word_limit",
+        "excerpt_char_limit"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "visible_source_count",
+        "claim_preview_count",
+        "excerpt_word_limit",
+        "excerpt_char_limit",
+        "permissioned_excerpt_count",
+        "failed_check_count",
+        "human_inspectable_footer_supported",
+        "source_preview_text_supported",
+        "footer_grounding_confidence_supported",
+        "privacy_preserved"
+      ],
+      "additionalProperties": true
+    },
+    "evidence_preview_footer_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

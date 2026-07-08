@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/creator_audit_private_watch.schema.json",
+  "title": "RDLLM Creator Audit Private Watch",
+  "type": "object",
+  "required": [
+    "watch_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "watch_binding",
+    "monitor_binding",
+    "query_token_rows",
+    "observation_token_rows",
+    "checks",
+    "commitments",
+    "schemas",
+    "summary",
+    "privacy",
+    "creator_audit_private_watch_hash",
+    "signature"
+  ],
+  "properties": {
+    "watch_version": { "const": "rdllm-creator-audit-private-watch/v1" },
+    "issuer": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "requires_l113_monitor",
+        "requires_private_watch_secret",
+        "requires_keyed_watch_tokens",
+        "raw_query_identifiers_prohibited",
+        "raw_subject_identifiers_prohibited",
+        "oprf_upgrade_path"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-creator-audit-private-watch-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L114" },
+        "minimum_input_level": { "const": "RDLLM-L113" },
+        "requires_l113_monitor": { "const": true },
+        "requires_private_watch_secret": { "const": true },
+        "requires_keyed_watch_tokens": { "const": true },
+        "raw_query_identifiers_prohibited": { "const": true },
+        "raw_subject_identifiers_prohibited": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "watch_binding": {
+      "type": "object",
+      "required": [
+        "watch_id_hash",
+        "watch_key_hash",
+        "watch_context_hash",
+        "token_scheme",
+        "recommended_production_scheme"
+      ],
+      "additionalProperties": true
+    },
+    "monitor_binding": {
+      "type": "object",
+      "required": [
+        "monitor_version",
+        "monitor_hash",
+        "monitor_payload_hash",
+        "monitor_hash_reproducible",
+        "monitor_status",
+        "monitor_target_level",
+        "query_identifier_count",
+        "provider_set_identifier_count",
+        "matching_observation_count",
+        "new_observation_count",
+        "conflict_count",
+        "append_only_violation_count",
+        "monitor_binding_hash"
+      ],
+      "additionalProperties": true
+    },
+    "query_token_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/tokenRow" }
+    },
+    "observation_token_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/tokenRow" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "l113_monitor_shape_valid",
+        "l113_monitor_hash_reproducible",
+        "l113_monitor_ready",
+        "l113_monitor_has_no_conflicts",
+        "watch_secret_present",
+        "watch_key_commitment_present",
+        "query_tokens_present",
+        "observation_tokens_present",
+        "all_observation_tokens_have_valid_inclusion",
+        "tokens_unique",
+        "raw_identifiers_absent",
+        "public_report_has_no_private_field_names",
+        "private_strings_absent"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "monitor_binding_hash",
+        "query_token_root",
+        "observation_token_root",
+        "schema"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "creator_audit_private_watch",
+        "creator_audit_transparency_monitor"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "monitor_status",
+        "query_token_count",
+        "observation_token_count",
+        "new_observation_token_count",
+        "matching_observation_count",
+        "conflict_count",
+        "raw_identifier_count_checked"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L114" },
+        "minimum_input_level": { "const": "RDLLM-L113" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "stable_query_identifiers_disclosed",
+        "stable_subject_identifiers_disclosed",
+        "provider_ids_disclosed",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "notice_text_disclosed",
+        "license_text_disclosed",
+        "payment_text_disclosed",
+        "watch_secret_disclosed",
+        "public_artifact_uses_keyed_tokens_counts_roots_and_monitor_hashes"
+      ],
+      "additionalProperties": true
+    },
+    "creator_audit_private_watch_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "tokenRow": {
+      "type": "object",
+      "required": ["watch_token", "token_row_hash"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

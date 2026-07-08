@@ -1,0 +1,266 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_native_source_annotation_contract.schema.json",
+  "title": "RDLLM Universal Native Source Annotation Contract",
+  "type": "object",
+  "required": [
+    "universal_native_source_annotation_contract_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "artifact_bindings",
+    "native_annotation_format_rows",
+    "normalization_field_rows",
+    "route_annotation_rows",
+    "footer_binding_rows",
+    "negative_native_annotation_rows",
+    "evidence_roots",
+    "checks",
+    "native_source_annotation_decision",
+    "coverage",
+    "privacy",
+    "summary",
+    "universal_native_source_annotation_contract_hash"
+  ],
+  "properties": {
+    "universal_native_source_annotation_contract_version": {
+      "const": "rdllm-universal-native-source-annotation-contract/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_native_source_annotation_contract.schema.json"
+    },
+    "created_at": { "type": "string", "minLength": 1 },
+    "issuer": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_live_capability_discovery_level",
+        "minimum_verified_source_footer_level",
+        "provider_native_annotations_must_be_normalized",
+        "footer_rows_must_bind_native_annotation_hashes",
+        "streaming_citation_deltas_must_finalize",
+        "router_and_rag_annotations_must_preserve_source_identity",
+        "posthoc_footer_insertion_fails_closed"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-native-source-annotation-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L183" },
+        "minimum_live_capability_discovery_level": { "const": "RDLLM-L182" },
+        "minimum_verified_source_footer_level": { "const": "RDLLM-L180" },
+        "provider_native_annotations_must_be_normalized": { "const": true },
+        "footer_rows_must_bind_native_annotation_hashes": { "const": true },
+        "streaming_citation_deltas_must_finalize": { "const": true },
+        "router_and_rag_annotations_must_preserve_source_identity": { "const": true },
+        "posthoc_footer_insertion_fails_closed": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-native-source-annotation-contract.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-native-source-annotation-contract/v1"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "universal_live_capability_discovery_contract",
+        "universal_verified_source_footer_contract"
+      ],
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "present",
+          "artifact_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "status",
+          "level",
+          "minimum_level",
+          "ready"
+        ],
+        "properties": {
+          "present": { "type": "boolean" },
+          "artifact_hash": { "type": "string" },
+          "payload_hash": { "type": "string" },
+          "hash_reproducible": { "type": "boolean" },
+          "status": { "type": "string" },
+          "level": { "type": "string" },
+          "minimum_level": { "type": "string" },
+          "ready": { "type": "boolean" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "native_annotation_format_rows": {
+      "type": "object",
+      "minProperties": 17,
+      "additionalProperties": { "type": "object" }
+    },
+    "normalization_field_rows": {
+      "type": "object",
+      "minProperties": 12,
+      "additionalProperties": { "type": "object" }
+    },
+    "route_annotation_rows": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "object" }
+    },
+    "footer_binding_rows": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "object" }
+    },
+    "negative_native_annotation_rows": {
+      "type": "object",
+      "minProperties": 20,
+      "additionalProperties": { "type": "object" }
+    },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "native_annotation_format_root",
+        "normalization_field_root",
+        "route_annotation_root",
+        "footer_binding_root",
+        "negative_native_annotation_root",
+        "combined_native_source_annotation_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "live_capability_discovery_l182_ready",
+        "verified_source_footer_l180_ready",
+        "native_annotation_format_rows_complete",
+        "normalization_field_rows_complete",
+        "route_annotation_rows_complete",
+        "footer_binding_rows_complete",
+        "negative_native_annotation_fixtures_reject",
+        "contract_signed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "native_source_annotation_decision": {
+      "type": "object",
+      "required": [
+        "universal_native_source_annotation_ready",
+        "provider_native_annotations_normalized",
+        "source_footer_binding_allowed",
+        "model_invocation_allowed",
+        "response_release_allowed",
+        "source_footer_reliance_allowed",
+        "creator_settlement_allowed",
+        "native_annotation_drop_blocked",
+        "posthoc_footer_blocked",
+        "unsupported_annotation_blocked",
+        "failure_modes"
+      ],
+      "properties": {
+        "universal_native_source_annotation_ready": { "type": "boolean" },
+        "provider_native_annotations_normalized": { "type": "boolean" },
+        "source_footer_binding_allowed": { "type": "boolean" },
+        "model_invocation_allowed": { "type": "boolean" },
+        "response_release_allowed": { "type": "boolean" },
+        "source_footer_reliance_allowed": { "type": "boolean" },
+        "creator_settlement_allowed": { "type": "boolean" },
+        "native_annotation_drop_blocked": { "const": true },
+        "posthoc_footer_blocked": { "const": true },
+        "unsupported_annotation_blocked": { "const": true },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "coverage": { "type": "object" },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payloads_excluded",
+        "private_prompts_excluded",
+        "private_outputs_excluded",
+        "private_provider_annotations_excluded",
+        "private_source_text_excluded",
+        "public_contract_uses_hashes_annotation_types_routes_and_footer_rows"
+      ],
+      "properties": {
+        "private_payloads_excluded": { "const": true },
+        "private_prompts_excluded": { "const": true },
+        "private_outputs_excluded": { "const": true },
+        "private_provider_annotations_excluded": { "const": true },
+        "private_source_text_excluded": { "const": true },
+        "public_contract_uses_hashes_annotation_types_routes_and_footer_rows": {
+          "const": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_live_capability_discovery_level",
+        "minimum_verified_source_footer_level",
+        "native_annotation_format_count",
+        "ready_native_annotation_format_count",
+        "normalization_field_count",
+        "ready_normalization_field_count",
+        "l182_route_count",
+        "ready_route_annotation_count",
+        "ready_footer_binding_count",
+        "negative_native_annotation_failure_count",
+        "ready_negative_native_annotation_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_native_source_annotation_contract"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L183" },
+        "minimum_live_capability_discovery_level": { "const": "RDLLM-L182" },
+        "minimum_verified_source_footer_level": { "const": "RDLLM-L180" },
+        "native_annotation_format_count": { "const": 17 },
+        "ready_native_annotation_format_count": { "type": "integer", "minimum": 0 },
+        "normalization_field_count": { "const": 12 },
+        "ready_normalization_field_count": { "type": "integer", "minimum": 0 },
+        "l182_route_count": { "type": "integer", "minimum": 1 },
+        "ready_route_annotation_count": { "type": "integer", "minimum": 0 },
+        "ready_footer_binding_count": { "type": "integer", "minimum": 0 },
+        "negative_native_annotation_failure_count": { "const": 20 },
+        "ready_negative_native_annotation_failure_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failure_mode_count": { "type": "integer", "minimum": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_native_source_annotation_contract": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "universal_native_source_annotation_contract_hash": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "signature": { "type": "object" }
+  },
+  "additionalProperties": true
+}

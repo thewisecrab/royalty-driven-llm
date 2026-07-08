@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_claim_provenance_envelope.schema.json",
+  "title": "RDLLM Universal Claim Provenance Envelope",
+  "type": "object",
+  "required": [
+    "envelope_version",
+    "issuer",
+    "created_at",
+    "claim_provenance_policy",
+    "artifact_bindings",
+    "claim_provenance_rows",
+    "render_surface_rows",
+    "failure_case_rows",
+    "evidence_commitments",
+    "checks",
+    "relation_coverage",
+    "display_decision",
+    "verifier_commands",
+    "research_controls",
+    "privacy",
+    "summary",
+    "universal_claim_provenance_envelope_hash"
+  ],
+  "properties": {
+    "envelope_version": {
+      "const": "rdllm-universal-claim-provenance-envelope/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "claim_provenance_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_runtime_level",
+        "well_known_path",
+        "required_core_artifacts",
+        "required_support_relations",
+        "required_render_surfaces",
+        "required_failure_cases"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-claim-provenance-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L150" },
+        "minimum_runtime_level": { "const": "RDLLM-L149" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-claim-provenance-envelope.json"
+        },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_support_relations": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_render_surfaces": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_failure_cases": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["artifact_count", "artifact_binding_root", "bindings"],
+      "properties": {
+        "artifact_count": { "type": "integer" },
+        "artifact_binding_root": { "type": "string" },
+        "bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "declared_hash",
+              "payload_hash",
+              "hash_reproducible",
+              "present",
+              "artifact_binding_hash"
+            ],
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "claim_provenance_rows": { "type": "array" },
+    "render_surface_rows": { "type": "array" },
+    "failure_case_rows": { "type": "array" },
+    "evidence_commitments": { "type": "object" },
+    "checks": { "type": "object" },
+    "relation_coverage": { "type": "object" },
+    "display_decision": {
+      "type": "object",
+      "required": [
+        "claim_provenance_envelope_authorized",
+        "answer_display_allowed",
+        "verified_source_footer_allowed",
+        "direct_creator_settlement_allowed",
+        "posthoc_citation_only_allowed",
+        "failure_modes"
+      ],
+      "properties": {
+        "posthoc_citation_only_allowed": { "const": false }
+      },
+      "additionalProperties": true
+    },
+    "verifier_commands": {
+      "type": "array",
+      "items": { "type": "string" },
+      "contains": {
+        "const": "verify-universal-claim-provenance-envelope"
+      }
+    },
+    "research_controls": { "type": "object" },
+    "privacy": {
+      "type": "object",
+      "properties": {
+        "public_envelope_contains_private_prompts": { "const": false },
+        "public_envelope_contains_private_outputs": { "const": false },
+        "public_envelope_contains_source_text": { "const": false },
+        "public_envelope_contains_tool_payloads": { "const": false },
+        "hash_only_claim_and_source_commitments": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_runtime_level",
+        "failed_check_count",
+        "core_artifact_count",
+        "claim_provenance_row_count",
+        "support_relation_count",
+        "render_surface_count",
+        "failure_case_count",
+        "offline_verification_supported",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L150" },
+        "minimum_runtime_level": { "const": "RDLLM-L149" }
+      },
+      "additionalProperties": true
+    },
+    "universal_claim_provenance_envelope_hash": { "type": "string" },
+    "signature": { "type": "string" }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,212 @@
+{
+  "checks": {
+    "all_cleared_value_accounted_for": true,
+    "clearinghouse_hash_reproducible": true,
+    "clearinghouse_held_rows_preserved": true,
+    "clearinghouse_report_ready": true,
+    "creator_license_contract_hash_reproducible": true,
+    "escrow_instructions_conserve_escrow_total": true,
+    "instruction_only_no_bank_settlement_asserted": true,
+    "missing_payment_account_holds_empty": true,
+    "no_private_payment_account_disclosed": true,
+    "payable_rows_have_active_license_terms": true,
+    "payable_rows_have_payout_account_hashes": true,
+    "payment_instructions_conserve_payable_total": true,
+    "payment_instructions_cover_all_payable_rows": true
+  },
+  "commitments": {
+    "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+    "creator_license_contract_hash": "b72a02031cb195f1899bdec74f511d38b390d7d03e68409c567e1e3724e2fe08",
+    "escrow_instruction_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "payment_instruction_root": "90cdf29f575654de7ec139622185e087b58d943f8144784eb4529fd64c588c6d",
+    "payment_rail_policy_hash": "a15bc3fda32f9e49403b26399a68eac31648b0f1e2bdbb99aef92d82747bdfd3",
+    "remittance_hold_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "escrow_instruction_rows": [],
+  "issuer": "rdllm-local-demo",
+  "payment_instruction_rows": [
+    {
+      "amount": "0.183682",
+      "chunk_ids": [
+        "arjun-provenance-ledger:c1"
+      ],
+      "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+      "clearinghouse_settlement_row_hash": "018f77d8ce822986016db519dc00cf4b16b76571ae4b2e18a8fcb2bda1db0d87",
+      "creator_license_contract_hash": "b72a02031cb195f1899bdec74f511d38b390d7d03e68409c567e1e3724e2fe08",
+      "currency": "USD",
+      "end_to_end_id": "RDLLM-4349aee8d2d7413ee95cc7355b29a",
+      "instruction_row_hash": "e8d31fc4234e3a7a2476e4aaae4de6b303849f70e1ce6b8326e5aa7d9b77b340",
+      "instruction_status": "ready_for_payment_file",
+      "license_status": "active",
+      "license_term_hash": "cbcb535107e8bdeb9f9c64a7325e4b4c9e46c5f3c36740bbd42c3fc524bc8dd1",
+      "obligation_count": 1,
+      "origin_hashes": [
+        "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42"
+      ],
+      "payment_instruction_id": "4349aee8d2d7413ee95cc7355b29a3320a63605dd127a387fa017ace062d8c38",
+      "payment_rail": "iso20022-pain001-compatible",
+      "payment_rail_fields": {
+        "creditor_account_hash": "36046f2f9ba53892df7e7815fe5e2f5c5635908722ff258bdb6798aaca33f993",
+        "currency": "USD",
+        "end_to_end_id": "RDLLM-4349aee8d2d7413ee95cc7355b29a",
+        "instructed_amount": "0.183682",
+        "message_family": "ISO 20022 Payments Initiation",
+        "message_type": "pain.001-compatible-credit-transfer",
+        "remittance_information": {
+          "clearinghouse_reference": "1560d7e8d5526d4564dd3ef7be839d81",
+          "settlement_row_reference": "018f77d8ce822986016db519dc00cf4b",
+          "structured_reference": "4349aee8d2d7413ee95cc7355b29a332",
+          "structured_reference_type": "RDLLM"
+        },
+        "ultimate_creditor_id": "arjun"
+      },
+      "payout_account_disclosed": false,
+      "payout_account_hash": "36046f2f9ba53892df7e7815fe5e2f5c5635908722ff258bdb6798aaca33f993",
+      "recipient_creator_id": "arjun",
+      "recipient_creator_name": "Arjun Rao",
+      "recipient_kind": "creator",
+      "remittance_reference": "RDLLM royalty 4349aee8d2d7413e",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "amount": "0.125703",
+      "chunk_ids": [
+        "lina-governance-disputes:c1"
+      ],
+      "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+      "clearinghouse_settlement_row_hash": "00c6fe28f3be74304e5c95a081614caf5be61dc4088ef07ed920ef2b0767ea70",
+      "creator_license_contract_hash": "b72a02031cb195f1899bdec74f511d38b390d7d03e68409c567e1e3724e2fe08",
+      "currency": "USD",
+      "end_to_end_id": "RDLLM-aeebfbc8deb5684735cb631bc46a2",
+      "instruction_row_hash": "cad5a7eea457dc73d4414d99f62d3c83fd26bd9c204594991c0f886ba61ccf6f",
+      "instruction_status": "ready_for_payment_file",
+      "license_status": "active",
+      "license_term_hash": "9a704be10d700f08f46f97990c6efdf946312817343eb70317143ce60a140df0",
+      "obligation_count": 1,
+      "origin_hashes": [
+        "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42"
+      ],
+      "payment_instruction_id": "aeebfbc8deb5684735cb631bc46a204f77c2aec11b5087d0efbdd3dd4b99813b",
+      "payment_rail": "iso20022-pain001-compatible",
+      "payment_rail_fields": {
+        "creditor_account_hash": "e40e0e769e8810ddee05459d531a117078b5d3c0df0838ecc0d527d8ae9efb24",
+        "currency": "USD",
+        "end_to_end_id": "RDLLM-aeebfbc8deb5684735cb631bc46a2",
+        "instructed_amount": "0.125703",
+        "message_family": "ISO 20022 Payments Initiation",
+        "message_type": "pain.001-compatible-credit-transfer",
+        "remittance_information": {
+          "clearinghouse_reference": "1560d7e8d5526d4564dd3ef7be839d81",
+          "settlement_row_reference": "00c6fe28f3be74304e5c95a081614caf",
+          "structured_reference": "aeebfbc8deb5684735cb631bc46a204f",
+          "structured_reference_type": "RDLLM"
+        },
+        "ultimate_creditor_id": "lina"
+      },
+      "payout_account_disclosed": false,
+      "payout_account_hash": "e40e0e769e8810ddee05459d531a117078b5d3c0df0838ecc0d527d8ae9efb24",
+      "recipient_creator_id": "lina",
+      "recipient_creator_name": "Lina Park",
+      "recipient_kind": "creator",
+      "remittance_reference": "RDLLM royalty aeebfbc8deb56847",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "amount": "0.240615",
+      "chunk_ids": [
+        "maya-youtube-style-pool:c1"
+      ],
+      "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+      "clearinghouse_settlement_row_hash": "91941eac964e45bce7068b559761f632cb05014061ff89aa104ea830459df8a3",
+      "creator_license_contract_hash": "b72a02031cb195f1899bdec74f511d38b390d7d03e68409c567e1e3724e2fe08",
+      "currency": "USD",
+      "end_to_end_id": "RDLLM-aec86cb4615425ad5074de5614193",
+      "instruction_row_hash": "a64e748c25559c676b9e18d09e25088cd2fcb4ae5191acb4d4e3a70e4a184907",
+      "instruction_status": "ready_for_payment_file",
+      "license_status": "active",
+      "license_term_hash": "de302176c9eccd11587c84a39617633e839230c34772a704d23bf437e39b0b2a",
+      "obligation_count": 1,
+      "origin_hashes": [
+        "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42"
+      ],
+      "payment_instruction_id": "aec86cb4615425ad5074de56141939e4f874e0cc9bae0632b01bfb6c5713f180",
+      "payment_rail": "iso20022-pain001-compatible",
+      "payment_rail_fields": {
+        "creditor_account_hash": "093ef537c9af164c23f6868280281b5be3bbc058642bd017153126dc407fda1e",
+        "currency": "USD",
+        "end_to_end_id": "RDLLM-aec86cb4615425ad5074de5614193",
+        "instructed_amount": "0.240615",
+        "message_family": "ISO 20022 Payments Initiation",
+        "message_type": "pain.001-compatible-credit-transfer",
+        "remittance_information": {
+          "clearinghouse_reference": "1560d7e8d5526d4564dd3ef7be839d81",
+          "settlement_row_reference": "91941eac964e45bce7068b559761f632",
+          "structured_reference": "aec86cb4615425ad5074de56141939e4",
+          "structured_reference_type": "RDLLM"
+        },
+        "ultimate_creditor_id": "maya"
+      },
+      "payout_account_disclosed": false,
+      "payout_account_hash": "093ef537c9af164c23f6868280281b5be3bbc058642bd017153126dc407fda1e",
+      "recipient_creator_id": "maya",
+      "recipient_creator_name": "Maya Sen",
+      "recipient_kind": "creator",
+      "remittance_reference": "RDLLM royalty aec86cb4615425ad",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "privacy": {
+    "answer_text_disclosed": false,
+    "escrow_account_disclosed": false,
+    "payout_account_disclosed": false,
+    "prompt_text_disclosed": false,
+    "source_text_disclosed": false,
+    "uses_payment_reconciliation_hashes": true,
+    "uses_payout_account_hashes": true
+  },
+  "remittance_hold_rows": [],
+  "remittance_policy": {
+    "clearinghouse_report_hash": "1560d7e8d5526d4564dd3ef7be839d811720cbac65957c606fda20c325770211",
+    "creator_license_contract_hash": "b72a02031cb195f1899bdec74f511d38b390d7d03e68409c567e1e3724e2fe08",
+    "minimum_input_level": "RDLLM-L43",
+    "payment_execution_mode": "instruction_only",
+    "payment_rail": "iso20022-pain001-compatible",
+    "profile": "rdllm-verifiable-remittance/v1",
+    "raw_payout_accounts_forbidden": true,
+    "standards_alignment": {
+      "payment_initiation": "ISO 20022 pain.001-compatible",
+      "provenance": "W3C PROV-shaped",
+      "remittance_advice": "ISO 20022 remt.001-compatible",
+      "verifiable_claims": "W3C Verifiable Credentials 2.0-shaped"
+    },
+    "target_certification_level": "RDLLM-L44"
+  },
+  "report_hash": "cf0452556b8b35f5317a3fbb6b8f0f391c8ae90bc331f3a9274e7b3e690cdd28",
+  "report_version": "rdllm-remittance-report/v1",
+  "schemas": {
+    "clearinghouse_report": "docs/schemas/clearinghouse_report.schema.json",
+    "creator_license_contract": "docs/schemas/creator_license_contract.schema.json",
+    "remittance_report": "docs/schemas/remittance_report.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "2e2d92a3e633acd993ee36574225f69b90f99b8e3e5e174dd07d0b010c01a261"
+  },
+  "summary": {
+    "accounted_total": "0.550000",
+    "clearinghouse_held_total": "0.000000",
+    "escrow_instruction_count": 0,
+    "escrow_instruction_total": "0.000000",
+    "expected_clearing_total": "0.550000",
+    "instruction_only": true,
+    "missing_account_hold_total": "0.000000",
+    "payment_instruction_count": 3,
+    "payment_rail": "iso20022-pain001-compatible",
+    "payment_total": "0.550000",
+    "remittance_hold_count": 0,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L44"
+  }
+}

@@ -1,0 +1,501 @@
+{
+  "benchmark": {
+    "case_count": 5,
+    "case_root": "96896abc83a8c6583ef2af651c85a6143f4f0999cc2c5ce227cf55c50cbdbe4f",
+    "coverage": {
+      "clean_source": true,
+      "derivative_lineage": true,
+      "hard_decoy": true,
+      "paraphrase": true,
+      "unattributed_escrow": true
+    },
+    "profile": "rdllm-provenance-benchmark/v1"
+  },
+  "cases": [
+    {
+      "audit_errors": [],
+      "case_id": "clean-ledger-source",
+      "case_input": {
+        "case_id": "clean-ledger-source",
+        "expect_escrow": false,
+        "expected_upstream_work_ids": [],
+        "expected_work_ids": [
+          "ledger-proof-source"
+        ],
+        "forbidden_work_ids": [],
+        "output_hash": "70060575e0da4fc447d11a33c55c0d777a35f1748027c31fdd4cc3ae85063965",
+        "prompt_hash": "fab64f9718a8fd904dc5e6f828c3a71dc9edf2bb62905d212ea404338d866810",
+        "require_grounding": true,
+        "scenario": "clean_source"
+      },
+      "checks": {
+        "attribution_gap_closed": true,
+        "audit_clean": true,
+        "escrow_expected_pool": true,
+        "expected_paid": true,
+        "expected_upstream_visible_or_paid": true,
+        "expected_visible_or_paid": true,
+        "forbidden_not_top1": true,
+        "forbidden_ranked_below_expected": true,
+        "grounding_verified": true,
+        "top1_expected": true
+      },
+      "errors": [],
+      "event": {
+        "claim_count": 1,
+        "creator_pool": "0.550000",
+        "escrow_payout": "0.000000",
+        "event_hash": "e3f52481a9b119771e3123b3e23e6023f3a3c73ae07bdc1377420716a528754b",
+        "event_id": "evt_e3f52481a9b11977",
+        "source_count": 3,
+        "supported_claim_count": 1
+      },
+      "metrics": {
+        "decoy_rank_margin": 0,
+        "expected_best_rank": 1,
+        "expected_recall": 1.0,
+        "forbidden_best_rank": 0,
+        "grounding_quality_score": 1.0,
+        "paid_source_precision": 0.33333333
+      },
+      "ranked_sources": [
+        {
+          "chunk_id": "ledger-proof-source:c1",
+          "content_hash": "015c61d513d3522bca4681ae196d50580524a01e9142cdcdae1ca97672172bc5",
+          "creator_id": "ada",
+          "decision_score": 0.80595586,
+          "rank": 1,
+          "signals": {
+            "access_count": 2,
+            "claim_support_score": 0.9,
+            "contribution_weight": 0.663137,
+            "output_support": 1.0,
+            "payout": "0.364725",
+            "retrieval_score": 0.27321081,
+            "royalty_share_count": 1,
+            "source_reference_count": 1,
+            "text_match_score": 1.0
+          },
+          "work_id": "ledger-proof-source"
+        },
+        {
+          "chunk_id": "derived-ledger-summary:c1",
+          "content_hash": "2fd1338834181e57b3769bbfcaeee40ea3692399fbe2796f76d582c9563aa1e1",
+          "creator_id": "dina",
+          "decision_score": 0.22732678,
+          "rank": 2,
+          "signals": {
+            "access_count": 2,
+            "claim_support_score": 0.0,
+            "contribution_weight": 0.217069,
+            "output_support": 0.34615385,
+            "payout": "0.119388",
+            "retrieval_score": 0.24246594,
+            "royalty_share_count": 1,
+            "source_reference_count": 1,
+            "text_match_score": 0.23529412
+          },
+          "work_id": "derived-ledger-summary"
+        },
+        {
+          "chunk_id": "ledger-dashboard-decoy:c1",
+          "content_hash": "8cd90738e810741a94dcaf07e7c8c015f4ed49fe1d6ee2adc07d9f7ebde65345",
+          "creator_id": "cyra",
+          "decision_score": 0.21724023,
+          "rank": 3,
+          "signals": {
+            "access_count": 2,
+            "claim_support_score": 0.0,
+            "contribution_weight": 0.119794,
+            "output_support": 0.35483871,
+            "payout": "0.065887",
+            "retrieval_score": 0.12623404,
+            "royalty_share_count": 1,
+            "source_reference_count": 1,
+            "text_match_score": 0.30434783
+          },
+          "work_id": "ledger-dashboard-decoy"
+        }
+      ],
+      "scenario": "clean_source",
+      "status": "passed"
+    },
+    {
+      "audit_errors": [],
+      "case_id": "paraphrased-consent-market",
+      "case_input": {
+        "case_id": "paraphrased-consent-market",
+        "expect_escrow": false,
+        "expected_upstream_work_ids": [],
+        "expected_work_ids": [
+          "consent-market-source"
+        ],
+        "forbidden_work_ids": [],
+        "output_hash": "693df9d0dd1de2bbbd30fc4b1ecb1f9dfeded28703e5bddaf81cb4d7fb1e51d6",
+        "prompt_hash": "9379fdaae954af29d77dbc0af2421b46ac4450a8781ec8a61c13f5d6c0a023e9",
+        "require_grounding": true,
+        "scenario": "paraphrase"
+      },
+      "checks": {
+        "attribution_gap_closed": true,
+        "audit_clean": true,
+        "escrow_expected_pool": true,
+        "expected_paid": true,
+        "expected_upstream_visible_or_paid": true,
+        "expected_visible_or_paid": true,
+        "forbidden_not_top1": true,
+        "forbidden_ranked_below_expected": true,
+        "grounding_verified": true,
+        "top1_expected": true
+      },
+      "errors": [],
+      "event": {
+        "claim_count": 1,
+        "creator_pool": "0.550000",
+        "escrow_payout": "0.000000",
+        "event_hash": "ffd5c8783fa912e00f4ee6b1ec95c99008df099b6e991c63824cd5eac6e941a5",
+        "event_id": "evt_ffd5c8783fa912e0",
+        "source_count": 1,
+        "supported_claim_count": 1
+      },
+      "metrics": {
+        "decoy_rank_margin": 0,
+        "expected_best_rank": 1,
+        "expected_recall": 1.0,
+        "forbidden_best_rank": 0,
+        "grounding_quality_score": 0.91111111,
+        "paid_source_precision": 1.0
+      },
+      "ranked_sources": [
+        {
+          "chunk_id": "consent-market-source:c1",
+          "content_hash": "472c45a13d26ff6f9f4e61d14c6c7bfe3cee7c7da53619a83c94c068dc1fcd51",
+          "creator_id": "ben",
+          "decision_score": 0.52148997,
+          "rank": 1,
+          "signals": {
+            "access_count": 2,
+            "claim_support_score": 0.46305556,
+            "contribution_weight": 1.0,
+            "output_support": 0.55555556,
+            "payout": "0.550000",
+            "retrieval_score": 0.45207739,
+            "royalty_share_count": 1,
+            "source_reference_count": 1,
+            "text_match_score": 0.40909091
+          },
+          "work_id": "consent-market-source"
+        }
+      ],
+      "scenario": "paraphrase",
+      "status": "passed"
+    },
+    {
+      "audit_errors": [],
+      "case_id": "hard-decoy-ledger",
+      "case_input": {
+        "case_id": "hard-decoy-ledger",
+        "expect_escrow": false,
+        "expected_upstream_work_ids": [],
+        "expected_work_ids": [
+          "ledger-proof-source"
+        ],
+        "forbidden_work_ids": [
+          "ledger-dashboard-decoy"
+        ],
+        "output_hash": "1198eb81f45dad5e02826d3670b77b2ac78a7b8be148953ae20708422f163942",
+        "prompt_hash": "1face6b17bbc5e9d7e41415873560094de84d567427eb79b3c285106a311ff9a",
+        "require_grounding": true,
+        "scenario": "hard_decoy"
+      },
+      "checks": {
+        "attribution_gap_closed": true,
+        "audit_clean": true,
+        "escrow_expected_pool": true,
+        "expected_paid": true,
+        "expected_upstream_visible_or_paid": true,
+        "expected_visible_or_paid": true,
+        "forbidden_not_top1": true,
+        "forbidden_ranked_below_expected": true,
+        "grounding_verified": true,
+        "top1_expected": true
+      },
+      "errors": [],
+      "event": {
+        "claim_count": 1,
+        "creator_pool": "0.550000",
+        "escrow_payout": "0.000000",
+        "event_hash": "748473b85d70debfeec2175a822a8f04ced486f308fd216aa0fa58f4123c5665",
+        "event_id": "evt_748473b85d70debf",
+        "source_count": 3,
+        "supported_claim_count": 1
+      },
+      "metrics": {
+        "decoy_rank_margin": 1,
+        "expected_best_rank": 1,
+        "expected_recall": 1.0,
+        "forbidden_best_rank": 2,
+        "grounding_quality_score": 0.91818182,
+        "paid_source_precision": 0.33333333
+      },
+      "ranked_sources": [
+        {
+          "chunk_id": "ledger-proof-source:c1",
+          "content_hash": "015c61d513d3522bca4681ae196d50580524a01e9142cdcdae1ca97672172bc5",
+          "creator_id": "ada",
+          "decision_score": 0.42426951,
+          "rank": 1,
+          "signals": {
+            "access_count": 2,
+            "claim_support_score": 0.478125,
+            "contribution_weight": 0.435538,
+            "output_support": 0.59090909,
+            "payout": "0.239546",
+            "retrieval_score": 0.32907572,
+            "royalty_share_count": 1,
+            "source_reference_count": 1,
+            "text_match_score": 0.31818182
+          },
+          "work_id": "ledger-proof-source"
+        },
+        {
+          "chunk_id": "ledger-dashboard-decoy:c1",
+          "content_hash": "8cd90738e810741a94dcaf07e7c8c015f4ed49fe1d6ee2adc07d9f7ebde65345",
+          "creator_id": "cyra",
+          "decision_score": 0.27723795,
+          "rank": 2,
+          "signals": {
+            "access_count": 2,
+            "claim_support_score": 0.0,
+            "contribution_weight": 0.211124,
+            "output_support": 0.48,
+            "payout": "0.116118",
+            "retrieval_score": 0.22410602,
+            "royalty_share_count": 1,
+            "source_reference_count": 1,
+            "text_match_score": 0.30434783
+          },
+          "work_id": "ledger-dashboard-decoy"
+        },
+        {
+          "chunk_id": "derived-ledger-summary:c1",
+          "content_hash": "2fd1338834181e57b3769bbfcaeee40ea3692399fbe2796f76d582c9563aa1e1",
+          "creator_id": "dina",
+          "decision_score": 0.26522243,
+          "rank": 3,
+          "signals": {
+            "access_count": 2,
+            "claim_support_score": 0.0,
+            "contribution_weight": 0.353338,
+            "output_support": 0.42857143,
+            "payout": "0.194336",
+            "retrieval_score": 0.26078768,
+            "royalty_share_count": 1,
+            "source_reference_count": 1,
+            "text_match_score": 0.23529412
+          },
+          "work_id": "derived-ledger-summary"
+        }
+      ],
+      "scenario": "hard_decoy",
+      "status": "passed"
+    },
+    {
+      "audit_errors": [],
+      "case_id": "unmatched-escrow",
+      "case_input": {
+        "case_id": "unmatched-escrow",
+        "expect_escrow": true,
+        "expected_upstream_work_ids": [],
+        "expected_work_ids": [],
+        "forbidden_work_ids": [],
+        "output_hash": "b0b2052b5cc2bb2e37e599fd338098b809dea5ce34b206ceb4991548a0eebf59",
+        "prompt_hash": "b1f31f8c439cc27d704aa75c1d1cc475a5b3e3b3e06d54b6d6e6822bcaf32bee",
+        "require_grounding": false,
+        "scenario": "unattributed_escrow"
+      },
+      "checks": {
+        "attribution_gap_closed": true,
+        "audit_clean": true,
+        "escrow_expected_pool": true,
+        "expected_paid": true,
+        "expected_upstream_visible_or_paid": true,
+        "expected_visible_or_paid": true,
+        "forbidden_not_top1": true,
+        "forbidden_ranked_below_expected": true,
+        "grounding_verified": true,
+        "top1_expected": true
+      },
+      "errors": [],
+      "event": {
+        "claim_count": 1,
+        "creator_pool": "0.550000",
+        "escrow_payout": "0.550000",
+        "event_hash": "f2675c986641d5c817637f709815c0bc7833329fac8e9a8fe323f7c87df55407",
+        "event_id": "evt_f2675c986641d5c8",
+        "source_count": 0,
+        "supported_claim_count": 0
+      },
+      "metrics": {
+        "decoy_rank_margin": 0,
+        "expected_best_rank": 0,
+        "expected_recall": 1.0,
+        "forbidden_best_rank": 0,
+        "grounding_quality_score": 0.35,
+        "paid_source_precision": 1.0
+      },
+      "ranked_sources": [],
+      "scenario": "unattributed_escrow",
+      "status": "passed"
+    },
+    {
+      "audit_errors": [],
+      "case_id": "derived-summary-lineage",
+      "case_input": {
+        "case_id": "derived-summary-lineage",
+        "expect_escrow": false,
+        "expected_upstream_work_ids": [
+          "ledger-proof-source"
+        ],
+        "expected_work_ids": [
+          "derived-ledger-summary"
+        ],
+        "forbidden_work_ids": [],
+        "output_hash": "65014de872b3a8e70d5e06e39a63e9c995575eb69032f832e9833347254736f1",
+        "prompt_hash": "6929c3320cb02cb5fbd3a78d3a93cbdd7692eb3dbf6a99a967469d7d02915d88",
+        "require_grounding": true,
+        "scenario": "derivative_lineage"
+      },
+      "checks": {
+        "attribution_gap_closed": true,
+        "audit_clean": true,
+        "escrow_expected_pool": true,
+        "expected_paid": true,
+        "expected_upstream_visible_or_paid": true,
+        "expected_visible_or_paid": true,
+        "forbidden_not_top1": true,
+        "forbidden_ranked_below_expected": true,
+        "grounding_verified": true,
+        "top1_expected": true
+      },
+      "errors": [],
+      "event": {
+        "claim_count": 1,
+        "creator_pool": "0.550000",
+        "escrow_payout": "0.000000",
+        "event_hash": "295fce0beafdd0fcb4a1751266050fd9435f36dbe4b96aaca69548ae81fdfaf7",
+        "event_id": "evt_295fce0beafdd0fc",
+        "source_count": 3,
+        "supported_claim_count": 1
+      },
+      "metrics": {
+        "decoy_rank_margin": 0,
+        "expected_best_rank": 1,
+        "expected_recall": 1.0,
+        "forbidden_best_rank": 0,
+        "grounding_quality_score": 1.0,
+        "paid_source_precision": 0.33333333
+      },
+      "ranked_sources": [
+        {
+          "chunk_id": "derived-ledger-summary:c1",
+          "content_hash": "2fd1338834181e57b3769bbfcaeee40ea3692399fbe2796f76d582c9563aa1e1",
+          "creator_id": "dina",
+          "decision_score": 0.86933252,
+          "rank": 1,
+          "signals": {
+            "access_count": 2,
+            "claim_support_score": 0.9,
+            "contribution_weight": 0.778056,
+            "output_support": 1.0,
+            "payout": "0.427931",
+            "retrieval_score": 0.53263462,
+            "royalty_share_count": 1,
+            "source_reference_count": 1,
+            "text_match_score": 1.0
+          },
+          "work_id": "derived-ledger-summary"
+        },
+        {
+          "chunk_id": "ledger-proof-source:c1",
+          "content_hash": "015c61d513d3522bca4681ae196d50580524a01e9142cdcdae1ca97672172bc5",
+          "creator_id": "ada",
+          "decision_score": 0.17013451,
+          "rank": 2,
+          "signals": {
+            "access_count": 2,
+            "claim_support_score": 0.0,
+            "contribution_weight": 0.147459,
+            "output_support": 0.34615385,
+            "payout": "0.081102",
+            "retrieval_score": 0.07152345,
+            "royalty_share_count": 1,
+            "source_reference_count": 1,
+            "text_match_score": 0.18181818
+          },
+          "work_id": "ledger-proof-source"
+        },
+        {
+          "chunk_id": "ledger-dashboard-decoy:c1",
+          "content_hash": "8cd90738e810741a94dcaf07e7c8c015f4ed49fe1d6ee2adc07d9f7ebde65345",
+          "creator_id": "cyra",
+          "decision_score": 0.1395299,
+          "rank": 3,
+          "signals": {
+            "access_count": 2,
+            "claim_support_score": 0.0,
+            "contribution_weight": 0.074485,
+            "output_support": 0.23333333,
+            "payout": "0.040967",
+            "retrieval_score": 0.10787078,
+            "royalty_share_count": 1,
+            "source_reference_count": 1,
+            "text_match_score": 0.17391304
+          },
+          "work_id": "ledger-dashboard-decoy"
+        }
+      ],
+      "scenario": "derivative_lineage",
+      "status": "passed"
+    }
+  ],
+  "created_at": "2026-05-30T08:47:13Z",
+  "evaluation_version": "rdllm-provenance-evaluation/v1",
+  "evidence_roots": {
+    "case_result_root": "53092e6ede1f3c5be50846f35cd26a95a4488d273cc9dc05f48eeb7bcfdbbb49",
+    "event_hash_root": "0ebca431e0a3254374245d5ba58107c43b60b29e21d3ec5086f36efaec8060b2",
+    "ranked_source_root": "8d6b3170fd4ed859a8380803d87ffb8e5d34df34e2abd81e1e8bf462c838eeab"
+  },
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "answer_text_disclosed": false,
+    "benchmark_inputs_disclosed_as_hashes": true,
+    "claim_evidence_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "source_text_disclosed": false
+  },
+  "provider": {
+    "id": "provider:rdllm-reference",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05"
+  },
+  "report_hash": "cb2df8911c05283092e1a7f70ddeaf2bbb8316c6d1f0eb8adbed6646d4d6cd7a",
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "9515fd7ca3d4eb80a6ee1dc124d22f4cee6a09084c1d21e20b79a24cfd4109e2"
+  },
+  "summary": {
+    "case_count": 5,
+    "decoy_resistance_rate": 1.0,
+    "escrow_accuracy": 1.0,
+    "failed": 0,
+    "grounding_verified_rate": 1.0,
+    "mean_expected_recall": 1.0,
+    "mean_paid_source_precision": 0.6,
+    "passed": 5,
+    "score": 1.0,
+    "status": "passed",
+    "top1_accuracy": 1.0
+  }
+}

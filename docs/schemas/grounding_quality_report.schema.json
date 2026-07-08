@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rdllm/schemas/grounding_quality_report.schema.json",
+  "title": "RDLLM Grounding Quality Report",
+  "type": "object",
+  "required": [
+    "event_id",
+    "event_hash",
+    "grounding_report",
+    "grounding_quality",
+    "audit_errors"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "event_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "grounding_report": {
+      "type": "object"
+    },
+    "grounding_quality": {
+      "type": "object",
+      "required": [
+        "quality_version",
+        "verdict",
+        "overall_score",
+        "scores",
+        "summary",
+        "issues"
+      ],
+      "properties": {
+        "quality_version": {
+          "const": "rdllm-grounding-quality/v1"
+        },
+        "verdict": {
+          "enum": ["verified", "warning", "failed", "unattributed", "blocked_by_policy", "blocked_by_registry"]
+        },
+        "overall_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "scores": {
+          "type": "object",
+          "properties": {
+            "source_accessibility": {
+              "type": ["number", "null"],
+              "minimum": 0,
+              "maximum": 1
+            },
+            "citation_integrity": {
+              "type": ["number", "null"],
+              "minimum": 0,
+              "maximum": 1
+            },
+            "evidence_relevance": {
+              "type": ["number", "null"],
+              "minimum": 0,
+              "maximum": 1
+            },
+            "fact_support": {
+              "type": ["number", "null"],
+              "minimum": 0,
+              "maximum": 1
+            },
+            "policy_alignment": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "payout_alignment": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "additionalProperties": true
+        },
+        "summary": {
+          "type": "object"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "audit_errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

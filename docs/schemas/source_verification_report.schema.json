@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/source_verification_report.schema.json",
+  "title": "RDLLM Source Verification Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "event",
+    "answer_card",
+    "summary",
+    "sources",
+    "claims",
+    "commitments",
+    "verification",
+    "privacy",
+    "issues",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-source-verification-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "answer_hash"
+      ],
+      "additionalProperties": true
+    },
+    "answer_card": {
+      "type": "object",
+      "required": [
+        "answer_card_hash",
+        "answer_card_bound",
+        "event_id_matches_card",
+        "event_hash_matches_card",
+        "rendered_output_hash_matches_card"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "source_count",
+        "claim_count",
+        "supported_claim_count",
+        "materialized_source_count",
+        "materialized_supported_claim_count",
+        "unresolved_source_count",
+        "unverified_supported_claim_count",
+        "all_sources_materialized",
+        "all_supported_claims_materialized",
+        "answer_card_bound"
+      ],
+      "additionalProperties": true
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "work_id",
+          "chunk_id",
+          "creator_id",
+          "source_uri",
+          "content_hash",
+          "registered_chunk_found",
+          "content_hash_matches_registry",
+          "content_hash_reproducible",
+          "quote_hash",
+          "quote_present_in_registered_chunk",
+          "materialized",
+          "source_entry_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_index",
+          "claim_hash",
+          "source_label",
+          "supported",
+          "evidence_span_hash",
+          "registered_chunk_found",
+          "source_label_resolves",
+          "evidence_hash_reproducible",
+          "evidence_span_in_registered_chunk",
+          "visible_footer_span_prefix",
+          "materialized",
+          "claim_entry_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "registered_chunk_root",
+        "source_materialization_root",
+        "claim_materialization_root",
+        "visible_footer_label_root",
+        "visible_footer_span_root",
+        "answer_card_hash"
+      ],
+      "additionalProperties": true
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "registered_source_corpus_checked",
+        "source_hashes_recomputed_from_registered_text",
+        "claim_evidence_hashes_recomputed_from_registered_text",
+        "visible_footer_checked",
+        "answer_card_bound",
+        "requires_private_prompt",
+        "requires_public_source_text_in_report"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "source_quote_text_disclosed",
+        "claim_text_disclosed",
+        "claim_evidence_text_disclosed",
+        "report_uses_hashes_and_booleans"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "issues": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

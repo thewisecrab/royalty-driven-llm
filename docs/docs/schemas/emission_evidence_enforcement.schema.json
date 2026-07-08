@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/emission_evidence_enforcement.schema.json",
+  "title": "RDLLM Emission Evidence Enforcement Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "emission_policy",
+    "artifact_bindings",
+    "emission_subject",
+    "emission_timing",
+    "emission_unit_rows",
+    "checks",
+    "summary",
+    "privacy",
+    "schemas",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-emission-evidence-enforcement/v1" },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "emission_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "block_chunk_without_satisfied_evidence_lock",
+        "streaming_gateway_and_proof_response_must_bind_same_output",
+        "raw_answer_text_forbidden",
+        "raw_source_text_forbidden",
+        "raw_context_text_forbidden"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-emission-evidence-enforcement-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L83" },
+        "minimum_input_level": { "const": "RDLLM-L82" }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "response_envelope_hash",
+        "answer_claim_coverage_report_hash",
+        "evidence_locked_generation_hash",
+        "proof_carrying_response_hash",
+        "serving_gateway_report_hash",
+        "streaming_attribution_manifest_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "emission_subject": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "copied_output_hash",
+        "streamed_output_hash",
+        "proof_response_hash",
+        "gateway_report_hash",
+        "streaming_manifest_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "emission_timing": {
+      "type": "object",
+      "required": [
+        "lock_created_at",
+        "generation_started_at",
+        "proof_verified_at",
+        "gateway_verified_at",
+        "stream_started_at",
+        "stream_completed_at"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "emission_unit_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "unit_index",
+          "unit_hash",
+          "unit_text_hash",
+          "claim_index",
+          "source_label",
+          "evidence_span_prefix",
+          "evidence_lock_row_hash",
+          "proof_response_hash",
+          "gateway_report_hash",
+          "streaming_manifest_hash",
+          "answer_unit_covered",
+          "matching_lock_found",
+          "matching_lock_satisfied",
+          "unit_text_hash_matches_lock",
+          "source_label_matches_lock",
+          "evidence_prefix_matches_lock",
+          "stream_chain_bound",
+          "emission_authorized",
+          "emission_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "certification_level_reaches_l82",
+        "response_envelope_verified",
+        "answer_claim_coverage_verified",
+        "evidence_locked_generation_ready",
+        "proof_carrying_response_released",
+        "serving_gateway_served",
+        "streaming_manifest_committed",
+        "rendered_output_hash_bound_across_envelope_lock_and_proof",
+        "stream_output_hash_bound_across_proof_gateway_and_stream",
+        "proof_response_hash_bound_to_gateway_and_stream",
+        "gateway_report_hash_bound_to_stream",
+        "proof_and_gateway_verified_before_first_chunk",
+        "evidence_lock_precedes_generation_and_stream",
+        "all_support_units_have_satisfied_locks",
+        "stream_chunks_replayable_and_contiguous",
+        "input_hashes_reproducible"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "support_required_unit_count",
+        "emission_unit_count",
+        "authorized_emission_unit_count",
+        "streamed_chunk_count",
+        "final_chain_hash",
+        "serving_emission_enforced"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L83" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "context_text_disclosed",
+        "prompt_text_disclosed",
+        "claim_text_disclosed",
+        "stream_chunk_text_disclosed",
+        "stores_hashes_ids_counts_and_booleans_not_text"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "emission_evidence_enforcement",
+        "response_envelope",
+        "answer_claim_coverage_report",
+        "evidence_locked_generation",
+        "proof_carrying_response",
+        "serving_gateway_report",
+        "streaming_attribution_manifest"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

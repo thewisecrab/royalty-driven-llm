@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/service_config.schema.json",
+  "title": "RDLLM Service Config",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "host",
+    "port",
+    "corpus",
+    "creator_pool_rate",
+    "top_k",
+    "jurisdiction",
+    "default_gross_revenue",
+    "audit_log_path",
+    "auth",
+    "limits",
+    "artifacts"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-service-config/v1"
+    },
+    "host": {
+      "type": "string",
+      "minLength": 1
+    },
+    "port": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65535
+    },
+    "corpus": {
+      "type": "string",
+      "minLength": 1
+    },
+    "creator_pool_rate": {
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[0-9]+)?$"
+    },
+    "top_k": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "jurisdiction": {
+      "type": "string",
+      "minLength": 1
+    },
+    "default_gross_revenue": {
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[0-9]+)?$"
+    },
+    "audit_log_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "auth": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "token_sha256_env"],
+      "properties": {
+        "mode": {
+          "const": "shared_token_sha256"
+        },
+        "token_sha256_env": {
+          "type": "string",
+          "minLength": 1
+        },
+        "token_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "max_request_bytes",
+        "max_prompt_chars",
+        "max_output_chars",
+        "rate_limit_requests_per_window",
+        "rate_limit_window_seconds"
+      ],
+      "properties": {
+        "max_request_bytes": {
+          "type": "integer",
+          "minimum": 1024
+        },
+        "max_prompt_chars": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_output_chars": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "rate_limit_requests_per_window": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "rate_limit_window_seconds": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "certification_report",
+        "discovery_manifest",
+        "provider_attribution_card",
+        "production_readiness_report",
+        "universal_production_invocation_admission",
+        "universal_runtime_conformance_receipt",
+        "universal_source_grounded_response_receipt"
+      ],
+      "properties": {
+        "certification_report": {
+          "type": "string",
+          "minLength": 1
+        },
+        "discovery_manifest": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provider_attribution_card": {
+          "type": "string",
+          "minLength": 1
+        },
+        "production_readiness_report": {
+          "type": "string",
+          "minLength": 1
+        },
+        "universal_production_invocation_admission": {
+          "type": "string",
+          "minLength": 1
+        },
+        "universal_runtime_conformance_receipt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "universal_source_grounded_response_receipt": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "enforce_registry": {
+      "type": "boolean"
+    },
+    "providers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "provider_id",
+          "family",
+          "base_url",
+          "model",
+          "api_key_env"
+        ],
+        "properties": {
+          "provider_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "family": {
+            "const": "openai_compatible_chat"
+          },
+          "base_url": {
+            "type": "string",
+            "minLength": 1
+          },
+          "model": {
+            "type": "string",
+            "minLength": 1
+          },
+          "api_key_env": {
+            "type": "string",
+            "minLength": 1
+          },
+          "timeout_seconds": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 120
+          },
+          "max_response_bytes": {
+            "type": "integer",
+            "minimum": 1024
+          }
+        }
+      }
+    }
+  }
+}

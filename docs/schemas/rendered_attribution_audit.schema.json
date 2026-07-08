@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/rendered_attribution_audit.schema.json",
+  "title": "RDLLM Rendered Attribution Audit",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "audit_policy",
+    "displayed_response",
+    "parsed_markdown",
+    "artifact_bindings",
+    "checks",
+    "summary",
+    "privacy",
+    "schemas",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-rendered-attribution-audit/v1" },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "audit_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "parser",
+        "raw_answer_text_forbidden",
+        "raw_source_text_forbidden",
+        "every_inline_source_marker_must_bind_footer_source",
+        "every_claim_span_must_bind_coverage_and_footer"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L80" },
+        "minimum_input_level": { "const": "RDLLM-L79" }
+      },
+      "additionalProperties": true
+    },
+    "displayed_response": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "answer_body_hash",
+        "source_footer_hash",
+        "claim_evidence_hash",
+        "line_count"
+      ],
+      "additionalProperties": true
+    },
+    "parsed_markdown": {
+      "type": "object",
+      "required": [
+        "source_marker_rows",
+        "source_footer_rows",
+        "claim_evidence_rows",
+        "parse_warning_hashes",
+        "body_source_label_root",
+        "footer_source_label_root",
+        "claim_span_root"
+      ],
+      "properties": {
+        "source_marker_rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "label",
+              "body_occurrence_count",
+              "first_body_line_hash",
+              "marker_row_hash"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "source_footer_rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "label",
+              "title_hash",
+              "chunk_id",
+              "source_uri",
+              "support",
+              "text_match",
+              "content_hash_prefix",
+              "evidence_span_prefixes",
+              "footer_line_hash",
+              "source_footer_row_hash"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "claim_evidence_rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "claim_index",
+              "source_label",
+              "evidence_span_prefix",
+              "start_char",
+              "end_char",
+              "claim_evidence_line_hash",
+              "claim_evidence_row_hash"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "parse_warning_hashes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "response_envelope_hash",
+        "citation_footer_contract_hash",
+        "source_availability_report_hash",
+        "evidence_sufficiency_report_hash",
+        "counterevidence_report_hash",
+        "answer_claim_coverage_report_hash"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "rendered_output_hash_matches_response",
+        "markdown_sources_section_present",
+        "markdown_claim_evidence_section_present",
+        "markdown_parser_has_no_warnings",
+        "body_citations_match_response_labels",
+        "footer_sources_match_body_citations",
+        "footer_sources_match_contract_sources",
+        "all_footer_rows_have_uri_and_content_hash",
+        "claim_evidence_rows_cover_answer_claims",
+        "claim_evidence_rows_bind_footer_spans",
+        "citation_footer_contract_verified",
+        "source_availability_verified",
+        "evidence_sufficiency_verified",
+        "counterevidence_adjudicated",
+        "answer_claim_coverage_verified",
+        "input_hashes_reproducible"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "body_citation_label_count",
+        "footer_source_count",
+        "claim_evidence_row_count",
+        "covered_claim_pair_count",
+        "parse_warning_count",
+        "rendered_markdown_attribution_verified"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L80" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "prompt_text_disclosed",
+        "claim_text_disclosed",
+        "stores_line_hashes_not_lines",
+        "stores_source_metadata_not_source_text"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "rendered_attribution_audit",
+        "response_envelope",
+        "citation_footer_contract",
+        "source_availability_report",
+        "evidence_sufficiency_report",
+        "counterevidence_report",
+        "answer_claim_coverage_report"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "report_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

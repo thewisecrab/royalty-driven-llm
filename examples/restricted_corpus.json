@@ -1,0 +1,26 @@
+{
+  "creators": [
+    {
+      "creator_id": "owner",
+      "name": "Rights Owner",
+      "payout_account": "acct_owner"
+    }
+  ],
+  "works": [
+    {
+      "work_id": "reserved-text",
+      "creator_id": "owner",
+      "title": "Reserved Text",
+      "license": "retrieval-only-royalty-bearing",
+      "policy_id": "policy:reserved-text",
+      "allowed_uses": ["training", "retrieval"],
+      "prohibited_uses": ["generation", "external_attribution"],
+      "jurisdictions": ["GLOBAL"],
+      "requires_attribution": true,
+      "requires_royalty": true,
+      "minimum_creator_pool_rate": 0.55,
+      "data_value_prior": 1.0,
+      "content": "Reserved source text can be indexed for retrieval but cannot be generated or externally attributed without a separate license."
+    }
+  ]
+}

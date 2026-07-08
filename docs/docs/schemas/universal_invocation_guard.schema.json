@@ -1,0 +1,283 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_invocation_guard.schema.json",
+  "title": "RDLLM Universal Invocation Guard",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "guard_version",
+    "issuer",
+    "created_at",
+    "guard_policy",
+    "artifact_bindings",
+    "invocation_subject",
+    "preflight_header_contract",
+    "telemetry_binding",
+    "request_response_boundary_binding",
+    "universal_invocation_guard_binding",
+    "guard_decision",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_invocation_guard_hash",
+    "signature"
+  ],
+  "properties": {
+    "guard_version": {
+      "const": "rdllm-universal-invocation-guard/v1"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "guard_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "required_precall_headers",
+        "required_precall_checks"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-invocation-guard-policy/v1"
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L133"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L132"
+        },
+        "required_precall_headers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "required_precall_checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "artifact_bindings": {
+      "type": "object"
+    },
+    "invocation_subject": {
+      "type": "object",
+      "required": [
+        "invocation_id",
+        "request_id",
+        "route_id",
+        "provider_family",
+        "native_model",
+        "request_projection_hash",
+        "response_binding_hash",
+        "request_headers",
+        "expected_request_headers",
+        "precall_checks_completed",
+        "telemetry_span"
+      ],
+      "properties": {
+        "invocation_id": {
+          "type": "string"
+        },
+        "request_id": {
+          "type": "string"
+        },
+        "route_id": {
+          "type": "string"
+        },
+        "provider_family": {
+          "type": "string"
+        },
+        "native_model": {
+          "type": "string"
+        },
+        "request_projection_hash": {
+          "type": "string"
+        },
+        "response_binding_hash": {
+          "type": "string"
+        },
+        "request_headers": {
+          "type": "object"
+        },
+        "expected_request_headers": {
+          "type": "object"
+        },
+        "precall_checks_completed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "telemetry_span": {
+          "type": "object"
+        }
+      }
+    },
+    "preflight_header_contract": {
+      "type": "object",
+      "required": [
+        "profile",
+        "required_headers",
+        "expected_header_values",
+        "observed_header_values",
+        "missing_headers",
+        "mismatched_headers",
+        "header_contract_hash"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-invocation-header-contract/v1"
+        },
+        "missing_headers": {
+          "type": "array"
+        },
+        "mismatched_headers": {
+          "type": "array"
+        },
+        "header_contract_hash": {
+          "type": "string"
+        }
+      }
+    },
+    "telemetry_binding": {
+      "type": "object",
+      "required": [
+        "profile",
+        "required_attributes",
+        "expected_attributes",
+        "observed_attributes",
+        "missing_attributes",
+        "mismatched_attributes",
+        "telemetry_binding_hash"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-invocation-telemetry-binding/v1"
+        },
+        "telemetry_binding_hash": {
+          "type": "string"
+        }
+      }
+    },
+    "request_response_boundary_binding": {
+      "type": "object",
+      "required": [
+        "profile",
+        "route_ids",
+        "provider_families",
+        "request_projection_hash",
+        "response_binding_hash",
+        "boundary_binding_hash"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-invocation-boundary-binding/v1"
+        },
+        "boundary_binding_hash": {
+          "type": "string"
+        }
+      }
+    },
+    "universal_invocation_guard_binding": {
+      "type": "object",
+      "required": [
+        "profile",
+        "l132_contract_hash",
+        "foundation_runtime_router_hash",
+        "foundation_runtime_adapter_hash",
+        "foundation_model_deployment_attestation_hash",
+        "guard_binding_hash"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-invocation-guard-binding/v1"
+        },
+        "guard_binding_hash": {
+          "type": "string"
+        }
+      }
+    },
+    "guard_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "release_authorized",
+        "failed_checks",
+        "failure_modes",
+        "safe_call_policy"
+      ]
+    },
+    "checks": {
+      "type": "object"
+    },
+    "coverage_gaps": {
+      "type": "object"
+    },
+    "commitments": {
+      "type": "object"
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "universal_invocation_guard"
+      ],
+      "properties": {
+        "universal_invocation_guard": {
+          "const": "docs/schemas/universal_invocation_guard.schema.json"
+        }
+      }
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "preflight_authorized",
+        "native_provider_call_allowed",
+        "failed_check_count"
+      ],
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L133"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L132"
+        },
+        "preflight_authorized": {
+          "type": "boolean"
+        },
+        "native_provider_call_allowed": {
+          "type": "boolean"
+        },
+        "failed_check_count": {
+          "type": "integer"
+        }
+      }
+    },
+    "universal_invocation_guard_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    }
+  }
+}

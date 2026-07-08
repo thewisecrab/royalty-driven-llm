@@ -1,0 +1,443 @@
+{
+  "payload": {
+    "economics": {
+      "creator_pool": "0.550000",
+      "creator_pool_rate": "0.55",
+      "gross_revenue": "1.000000",
+      "shares": [
+        {
+          "attribution_basis": {
+            "registry_dispute_escrow": 1.0
+          },
+          "chunk_id": "escrow:registry_dispute",
+          "citation_score": 0.0,
+          "content_hash": "75b2a03042d55514c2339697bf845fd14e64eaee897b7897d13fda30a0f3fb5f",
+          "contribution_weight": "1",
+          "creator_id": "registry_dispute_escrow",
+          "data_value_prior": 0.0,
+          "output_support": 0.0,
+          "payout": "0.550000",
+          "query_relevance": 0.0,
+          "retrieval_score": 0.0,
+          "text_match_score": 0.0,
+          "training_value_score": 0.0,
+          "work_id": "registry_dispute"
+        }
+      ]
+    },
+    "event": {
+      "answer_hash": "16bfc2ebe407b69536fd702e343f95147dce2182ad069470ba29f7690e554ec2",
+      "event_hash": "658bea9b5306639b06069f062775fd68f2aa49990d7438e0f2bf6b85e8c2caf9",
+      "event_id": "evt_658bea9b5306639b",
+      "prompt_hash": "7bc45786358d6c9cfdce97ee2eed540a69e0b65c8f53f5557141b36c2d53ed4b",
+      "rendered_output_hash": "9584d0078d4fa396cb6dcf0620a2e72027f40bcd2b15964f8f453964124d8808"
+    },
+    "grounding": {
+      "attribution_gap": {
+        "accessed_sources": [
+          {
+            "access_id": "srcacc_9fe340c7a6856762",
+            "access_type": "retrieval",
+            "chunk_id": "arjun-provenance-ledger:c1",
+            "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+            "creator_id": "arjun",
+            "decision_status": "blocked_by_registry",
+            "policy_allowed": true,
+            "rank": 1,
+            "registry_allowed": false,
+            "score": 0.24196696,
+            "use": "retrieval",
+            "work_id": "arjun-provenance-ledger"
+          },
+          {
+            "access_id": "srcacc_17303f3c34ecc286",
+            "access_type": "text_match",
+            "chunk_id": "arjun-provenance-ledger:c1",
+            "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+            "creator_id": "arjun",
+            "decision_status": "blocked_by_registry",
+            "policy_allowed": true,
+            "rank": 1,
+            "registry_allowed": false,
+            "score": 0.9,
+            "use": "generation",
+            "work_id": "arjun-provenance-ledger"
+          },
+          {
+            "access_id": "srcacc_d494a855bea7fdbc",
+            "access_type": "retrieval",
+            "chunk_id": "copycat-provenance-ledger:c1",
+            "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+            "creator_id": "copycat",
+            "decision_status": "blocked_by_registry",
+            "policy_allowed": true,
+            "rank": 2,
+            "registry_allowed": false,
+            "score": 0.24196696,
+            "use": "retrieval",
+            "work_id": "copycat-provenance-ledger"
+          },
+          {
+            "access_id": "srcacc_643810e926ac9b69",
+            "access_type": "text_match",
+            "chunk_id": "copycat-provenance-ledger:c1",
+            "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+            "creator_id": "copycat",
+            "decision_status": "blocked_by_registry",
+            "policy_allowed": true,
+            "rank": 2,
+            "registry_allowed": false,
+            "score": 0.9,
+            "use": "generation",
+            "work_id": "copycat-provenance-ledger"
+          }
+        ],
+        "classifications": {
+          "cited_without_access": [],
+          "consumed_without_credit": [],
+          "paid_hidden": [],
+          "policy_withheld": [],
+          "registry_withheld": [
+            "arjun-provenance-ledger:c1",
+            "copycat-provenance-ledger:c1"
+          ]
+        },
+        "gap_version": "rdllm-attribution-gap/v1",
+        "grounding_status": "registry_disputed",
+        "issues": [],
+        "policy_status": "allowed",
+        "registry_status": "disputed",
+        "report_hash": "8265d18fe02b4a2e3723c2fef7aab8402fe4857088c6a2002a6cef564d9aa1d7",
+        "scores": {
+          "allowed_credit_coverage": null,
+          "attribution_gap_rate": 0.0,
+          "citation_efficiency": 0.0,
+          "credit_efficiency": 1.0,
+          "payout_visibility": null
+        },
+        "summary": {
+          "access_record_count": 4,
+          "accessed_source_count": 2,
+          "allowed_accessed_source_count": 0,
+          "cited_without_access_count": 0,
+          "consumed_without_credit_count": 0,
+          "credited_source_count": 2,
+          "escrow_accounts": [
+            "registry_dispute_escrow"
+          ],
+          "paid_hidden_count": 0,
+          "paid_source_count": 0,
+          "policy_withheld_count": 0,
+          "registry_withheld_count": 2,
+          "visible_source_count": 0
+        },
+        "verdict": "escrowed"
+      },
+      "claims": [
+        {
+          "chunk_id": "",
+          "claim": "Every royalty bearing AI answer should have a provenance record.",
+          "evidence_end_char": -1,
+          "evidence_span_hash": "",
+          "evidence_start_char": -1,
+          "evidence_text": "",
+          "source_label": "",
+          "support_score": 0.0,
+          "supported": false,
+          "work_id": ""
+        },
+        {
+          "chunk_id": "",
+          "claim": "The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.",
+          "evidence_end_char": -1,
+          "evidence_span_hash": "",
+          "evidence_start_char": -1,
+          "evidence_text": "",
+          "source_label": "",
+          "support_score": 0.0,
+          "supported": false,
+          "work_id": ""
+        },
+        {
+          "chunk_id": "",
+          "claim": "Every royalty bearing AI answer should have a provenance record.",
+          "evidence_end_char": -1,
+          "evidence_span_hash": "",
+          "evidence_start_char": -1,
+          "evidence_text": "",
+          "source_label": "",
+          "support_score": 0.0,
+          "supported": false,
+          "work_id": ""
+        },
+        {
+          "chunk_id": "",
+          "claim": "The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.",
+          "evidence_end_char": -1,
+          "evidence_span_hash": "",
+          "evidence_start_char": -1,
+          "evidence_text": "",
+          "source_label": "",
+          "support_score": 0.0,
+          "supported": false,
+          "work_id": ""
+        }
+      ],
+      "quality": {
+        "issues": [],
+        "overall_score": 1.0,
+        "quality_version": "rdllm-grounding-quality/v1",
+        "scores": {
+          "citation_integrity": null,
+          "evidence_relevance": null,
+          "fact_support": null,
+          "payout_alignment": 1.0,
+          "policy_alignment": 1.0,
+          "source_accessibility": null
+        },
+        "summary": {
+          "claim_count": 4,
+          "footer_source_count": 0,
+          "footer_span_hash_count": 0,
+          "registry_conflicts": 1,
+          "source_count": 0,
+          "supported_claims": 0
+        },
+        "verdict": "blocked_by_registry"
+      },
+      "report": {
+        "coverage": 0.0,
+        "policy_denials": 0,
+        "policy_status": "allowed",
+        "registry_conflicts": 1,
+        "registry_report_hash": "3c48010352ebea9fa4c501a225d7292696fc25ce259c276681e5ab6a8039527d",
+        "registry_status": "disputed",
+        "source_count": 0,
+        "status": "registry_disputed",
+        "supported_claims": 0,
+        "total_claims": 4,
+        "unsupported_claims": 4
+      },
+      "source_accesses": [
+        {
+          "access_id": "srcacc_9fe340c7a6856762",
+          "access_type": "retrieval",
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "arjun",
+          "decision_status": "blocked_by_registry",
+          "matched_text_hash": "",
+          "policy_allowed": true,
+          "rank": 1,
+          "registry_allowed": false,
+          "score": 0.24196696,
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "title": "Provenance Ledgers for AI Outputs",
+          "use": "retrieval",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "access_id": "srcacc_17303f3c34ecc286",
+          "access_type": "text_match",
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "arjun",
+          "decision_status": "blocked_by_registry",
+          "matched_text_hash": "57661e4428aec7462ebd95b77665d01fd6861283241dcb5246a6d09df8b67331",
+          "policy_allowed": true,
+          "rank": 1,
+          "registry_allowed": false,
+          "score": 0.9,
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "title": "Provenance Ledgers for AI Outputs",
+          "use": "generation",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "access_id": "srcacc_d494a855bea7fdbc",
+          "access_type": "retrieval",
+          "chunk_id": "copycat-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "copycat",
+          "decision_status": "blocked_by_registry",
+          "matched_text_hash": "",
+          "policy_allowed": true,
+          "rank": 2,
+          "registry_allowed": false,
+          "score": 0.24196696,
+          "source_uri": "registered://works/copycat-provenance-ledger#copycat-provenance-ledger:c1",
+          "title": "Copied Provenance Ledger Claim",
+          "use": "retrieval",
+          "work_id": "copycat-provenance-ledger"
+        },
+        {
+          "access_id": "srcacc_643810e926ac9b69",
+          "access_type": "text_match",
+          "chunk_id": "copycat-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "copycat",
+          "decision_status": "blocked_by_registry",
+          "matched_text_hash": "57661e4428aec7462ebd95b77665d01fd6861283241dcb5246a6d09df8b67331",
+          "policy_allowed": true,
+          "rank": 2,
+          "registry_allowed": false,
+          "score": 0.9,
+          "source_uri": "registered://works/copycat-provenance-ledger#copycat-provenance-ledger:c1",
+          "title": "Copied Provenance Ledger Claim",
+          "use": "generation",
+          "work_id": "copycat-provenance-ledger"
+        }
+      ],
+      "sources": []
+    },
+    "issued_at": "2026-05-29T18:20:04Z",
+    "issuer": "rdllm-local-demo",
+    "model": {
+      "id": "rdllm-reference-python",
+      "route_id": "route:registry-dispute",
+      "version": "0.1.0"
+    },
+    "privacy": {
+      "answer_disclosed": false,
+      "prompt_disclosed": false,
+      "selective_disclosure": "hash commitments expose prompt/output integrity without disclosing private prompts",
+      "source_quotes_disclosed": true
+    },
+    "protocol_version": "rdllm-attribution-receipt/v1",
+    "registry": {
+      "decisions": [
+        {
+          "action": "escrow",
+          "allowed": false,
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "conflict_id": "conf_451172c810c96d60",
+          "conflict_score": 1.0,
+          "conflict_type": "duplicate_content",
+          "conflicted_work_ids": [
+            "arjun-provenance-ledger",
+            "copycat-provenance-ledger"
+          ],
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "arjun",
+          "escrow_account": "registry_dispute_escrow",
+          "reason": "registered work has an open ownership claim conflict",
+          "registry_report_hash": "3c48010352ebea9fa4c501a225d7292696fc25ce259c276681e5ab6a8039527d",
+          "registry_report_version": "rdllm-claim-registry/v1",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "action": "escrow",
+          "allowed": false,
+          "chunk_id": "copycat-provenance-ledger:c1",
+          "conflict_id": "conf_451172c810c96d60",
+          "conflict_score": 1.0,
+          "conflict_type": "duplicate_content",
+          "conflicted_work_ids": [
+            "arjun-provenance-ledger",
+            "copycat-provenance-ledger"
+          ],
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "creator_id": "copycat",
+          "escrow_account": "registry_dispute_escrow",
+          "reason": "registered work has an open ownership claim conflict",
+          "registry_report_hash": "3c48010352ebea9fa4c501a225d7292696fc25ce259c276681e5ab6a8039527d",
+          "registry_report_version": "rdllm-claim-registry/v1",
+          "work_id": "copycat-provenance-ledger"
+        }
+      ],
+      "registry_conflicts": 1,
+      "registry_report_hash": "3c48010352ebea9fa4c501a225d7292696fc25ce259c276681e5ab6a8039527d",
+      "registry_status": "disputed"
+    },
+    "rights": {
+      "decisions": [
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:arjun-provenance-ledger",
+          "reasons": [
+            "permit:generation"
+          ],
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "target_id": "arjun-provenance-ledger:c1",
+          "target_type": "chunk",
+          "text_match_score": 0.9,
+          "use": "generation",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:arjun-provenance-ledger",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "target_id": "arjun-provenance-ledger:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "copycat-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:copycat-provenance-ledger",
+          "reasons": [
+            "permit:generation"
+          ],
+          "source_uri": "registered://works/copycat-provenance-ledger#copycat-provenance-ledger:c1",
+          "target_id": "copycat-provenance-ledger:c1",
+          "target_type": "chunk",
+          "text_match_score": 0.9,
+          "use": "generation",
+          "work_id": "copycat-provenance-ledger"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "copycat-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:copycat-provenance-ledger",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "registered://works/copycat-provenance-ledger#copycat-provenance-ledger:c1",
+          "target_id": "copycat-provenance-ledger:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "copycat-provenance-ledger"
+        }
+      ],
+      "policy_denials": 0,
+      "policy_status": "allowed"
+    }
+  },
+  "receipt_hash": "cb6badcd528b3195bc5ac8201bf249de27208f7d1b832a307cbdd8e1b9b10170",
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "d5d582898dfc241500b63059f1382c786f23dc513a51a58616161514a1074db7"
+  }
+}

@@ -1,0 +1,761 @@
+{
+  "adapter_version": "rdllm-composite-foundation-adapter/v1",
+  "artifact_bindings": {
+    "citation_url_health": {
+      "artifact_type": "rdllm-citation-url-health/v1",
+      "declared_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "discovery_manifest": {
+      "artifact_type": "rdllm-discovery-manifest/v1",
+      "declared_hash": "ef30383461749d41f25c23439b7fa299dd10e267eeed8cd3978fe438bc911600",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "foundation_api_profile": {
+      "artifact_type": "rdllm-foundation-attribution-profile/v1",
+      "declared_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "integration_profile": {
+      "artifact_type": "rdllm-integration-profile/v1",
+      "declared_hash": "ce0c5fe1085f700dc54137f30861d1b5319e322b9a2d027c7902afbc4822cb98",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "provider_attribution_card": {
+      "artifact_type": "rdllm-provider-attribution-card/v1",
+      "declared_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "response_envelope": {
+      "artifact_type": "rdllm-response-envelope/v1",
+      "declared_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "source_footer_delivery": {
+      "artifact_type": "rdllm-source-footer-delivery/v1",
+      "declared_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+      "hash_reproducible": true,
+      "present": true
+    }
+  },
+  "checks": {
+    "adapter_row_hashes_present": true,
+    "adapter_rows_bind_citation_url_health": true,
+    "adapter_rows_bind_foundation_profile": true,
+    "adapter_rows_bind_response_envelope": true,
+    "adapter_rows_cover_required_provider_families": true,
+    "adapter_rows_have_native_identity": true,
+    "artifact_hashes_reproducible": true,
+    "citation_url_health_ready_l124": true,
+    "failure_policy_blocks_display": true,
+    "foundation_api_profile_ready_l104": true,
+    "native_citation_and_tool_paths_declared": true,
+    "native_output_hashes_match_rdllm": true,
+    "private_text_not_disclosed": true,
+    "required_headers_mapped": true,
+    "required_json_fields_mapped": true,
+    "response_envelope_hash_reproducible": true,
+    "streaming_final_events_bind_rdllm_hashes": true
+  },
+  "commitments": {
+    "adapter_row_root": "79039dce1e35ce41c0e4cd7591481f2bb4604aa4b3432e8c3648f5c51f5f14c1",
+    "artifact_binding_root": "d7a2970bb218ead4c0420ee134d8d988beaaa48773252f2c0a745ebacdfdb6fc",
+    "provider_family_root": "681dae02d82eeecd6f28c211938726c48488901d4d8030af211b7a72817dd8eb",
+    "schema": "docs/schemas/composite_foundation_adapter.schema.json"
+  },
+  "composite_contract": {
+    "adapter_row_root": "79039dce1e35ce41c0e4cd7591481f2bb4604aa4b3432e8c3648f5c51f5f14c1",
+    "adoption_target": "foundation-model-provider-neutral",
+    "portable_attribution_footer": "rdllm-source-footer-delivery/v1",
+    "portable_response_object": "rdllm-response-envelope/v1",
+    "portable_url_health": "rdllm-citation-url-health/v1",
+    "profile": "rdllm-universal-foundation-model-contract/v1",
+    "provider_families": [
+      "amazon_bedrock_converse",
+      "anthropic_messages",
+      "azure_openai_responses",
+      "cohere_chat",
+      "google_gemini",
+      "meta_llama",
+      "mistral_chat",
+      "openai_compatible_chat",
+      "openai_responses",
+      "xai_grok"
+    ],
+    "required_provider_families": [
+      "amazon_bedrock_converse",
+      "anthropic_messages",
+      "azure_openai_responses",
+      "cohere_chat",
+      "google_gemini",
+      "meta_llama",
+      "mistral_chat",
+      "openai_compatible_chat",
+      "openai_responses",
+      "xai_grok"
+    ]
+  },
+  "composite_foundation_adapter_hash": "6656bbf9c9129bfe19120e2a2655d979890e87e457dd722280ea1c5d85e75864",
+  "coverage_gaps": {
+    "failed_checks": [],
+    "missing_header_mapping_providers": [],
+    "missing_json_mapping_providers": [],
+    "missing_provider_families": [],
+    "missing_stream_binding_providers": [],
+    "native_output_hash_mismatch_providers": [],
+    "non_fail_closed_providers": []
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "citation_and_tool_paths_required": true,
+    "fail_closed_on_adapter_failure": true,
+    "minimum_input_level": "RDLLM-L124",
+    "native_output_hash_match_required": true,
+    "profile": "rdllm-composite-foundation-adapter-policy/v1",
+    "raw_native_response_disclosure_allowed": false,
+    "raw_prompt_or_source_text_disclosure_allowed": false,
+    "required_json_maps_fields": true,
+    "required_metadata_maps_headers": true,
+    "required_provider_families": [
+      "openai_responses",
+      "anthropic_messages",
+      "google_gemini",
+      "meta_llama",
+      "mistral_chat",
+      "cohere_chat",
+      "xai_grok",
+      "amazon_bedrock_converse",
+      "azure_openai_responses",
+      "openai_compatible_chat"
+    ],
+    "streaming_final_event_hashes_required": true,
+    "target_certification_level": "RDLLM-L125"
+  },
+  "privacy": {
+    "hash_only_native_output_commitments": true,
+    "raw_answer_text_disclosed": false,
+    "raw_native_response_disclosed": false,
+    "raw_prompt_text_disclosed": false,
+    "raw_source_text_disclosed": false,
+    "raw_tool_output_disclosed": false
+  },
+  "provider_adapter_rows": [
+    {
+      "citation_mapping_paths": [
+        "$.output[*].content[*].annotations",
+        "$.output[*].content[*].text.annotations"
+      ],
+      "citation_paths_declared": true,
+      "citation_url_health_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "display_order": 1,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "on_hash_mismatch": "block_display",
+        "on_missing_rdllm_metadata": "block_display",
+        "on_unverified_citation": "block_display"
+      },
+      "foundation_profile_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "header_mappings": {
+        "RDLLM-Attribution-Level": "native.headers.RDLLM-Attribution-Level",
+        "RDLLM-Discovery-Manifest-Hash": "native.headers.RDLLM-Discovery-Manifest-Hash",
+        "RDLLM-Foundation-Profile-Hash": "native.headers.RDLLM-Foundation-Profile-Hash",
+        "RDLLM-Response-Envelope-Hash": "native.headers.RDLLM-Response-Envelope-Hash",
+        "RDLLM-Source-Footer-Delivery-Hash": "native.headers.RDLLM-Source-Footer-Delivery-Hash",
+        "RDLLM-Verification-Endpoint": "native.headers.RDLLM-Verification-Endpoint"
+      },
+      "json_field_mappings": {
+        "embedded_artifacts.response_envelope": "native.body.embedded_artifacts.response_envelope",
+        "embedded_artifacts.source_footer_delivery": "native.body.embedded_artifacts.source_footer_delivery",
+        "response.rendered_output": "native.body.response.rendered_output",
+        "response.source_labels": "native.body.response.source_labels",
+        "verification.foundation_attribution_profile": "native.body.verification.foundation_attribution_profile",
+        "verification.verifier_commands": "native.body.verification.verifier_commands"
+      },
+      "native_api_version": "responses/v1",
+      "native_created_at": "2026-05-31T00:00:00Z",
+      "native_model": "openai:responses-compatible",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_output_hash_matches_rdllm": true,
+      "native_output_path": "$.output_text",
+      "native_response_id": "resp_rdllm_openai_reference",
+      "native_response_shape_hash": "fdd4b18ef711b1333a377f24f6c6daf2e92218664bcfd26a34cca136dcab679c",
+      "native_status": "completed",
+      "provider_adapter_row_hash": "823a04465f4e1b49e57e15f52f6779de3fbeb79c215d1e6f96e528148a92b8be",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "rdllm_event_id": "evt_1ed43e106d466249",
+      "rdllm_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "required_headers_mapped": true,
+      "required_json_fields_mapped": true,
+      "stream_final_event_binds_hashes": true,
+      "stream_final_event_hashes": {
+        "RDLLM-Citation-URL-Health-Hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+        "RDLLM-Foundation-Profile-Hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "RDLLM-Response-Envelope-Hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be"
+      },
+      "tool_mapping_paths": [
+        "$.output[*].tool_call",
+        "$.output[*].function_call"
+      ],
+      "tool_paths_declared": true
+    },
+    {
+      "citation_mapping_paths": [
+        "$.content[*].citations"
+      ],
+      "citation_paths_declared": true,
+      "citation_url_health_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "display_order": 2,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "on_hash_mismatch": "block_display",
+        "on_missing_rdllm_metadata": "block_display",
+        "on_unverified_citation": "block_display"
+      },
+      "foundation_profile_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "header_mappings": {
+        "RDLLM-Attribution-Level": "native.headers.RDLLM-Attribution-Level",
+        "RDLLM-Discovery-Manifest-Hash": "native.headers.RDLLM-Discovery-Manifest-Hash",
+        "RDLLM-Foundation-Profile-Hash": "native.headers.RDLLM-Foundation-Profile-Hash",
+        "RDLLM-Response-Envelope-Hash": "native.headers.RDLLM-Response-Envelope-Hash",
+        "RDLLM-Source-Footer-Delivery-Hash": "native.headers.RDLLM-Source-Footer-Delivery-Hash",
+        "RDLLM-Verification-Endpoint": "native.headers.RDLLM-Verification-Endpoint"
+      },
+      "json_field_mappings": {
+        "embedded_artifacts.response_envelope": "native.body.embedded_artifacts.response_envelope",
+        "embedded_artifacts.source_footer_delivery": "native.body.embedded_artifacts.source_footer_delivery",
+        "response.rendered_output": "native.body.response.rendered_output",
+        "response.source_labels": "native.body.response.source_labels",
+        "verification.foundation_attribution_profile": "native.body.verification.foundation_attribution_profile",
+        "verification.verifier_commands": "native.body.verification.verifier_commands"
+      },
+      "native_api_version": "messages/v1",
+      "native_created_at": "2026-05-31T00:00:00Z",
+      "native_model": "anthropic:messages-compatible",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_output_hash_matches_rdllm": true,
+      "native_output_path": "$.content[?(@.type=='text')].text",
+      "native_response_id": "msg_rdllm_anthropic_reference",
+      "native_response_shape_hash": "201ce0d81b144ae00965215eb6792dacf45d3eb598996dc6d85ee71db2d39159",
+      "native_status": "completed",
+      "provider_adapter_row_hash": "caebd2c7215d84c40b79f767c5aff42c95f2e90d99d511d6f9edc779a858b1a7",
+      "provider_family": "anthropic_messages",
+      "provider_id": "provider:anthropic-messages",
+      "rdllm_event_id": "evt_1ed43e106d466249",
+      "rdllm_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "required_headers_mapped": true,
+      "required_json_fields_mapped": true,
+      "stream_final_event_binds_hashes": true,
+      "stream_final_event_hashes": {
+        "RDLLM-Citation-URL-Health-Hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+        "RDLLM-Foundation-Profile-Hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "RDLLM-Response-Envelope-Hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be"
+      },
+      "tool_mapping_paths": [
+        "$.content[?(@.type=='tool_use')]"
+      ],
+      "tool_paths_declared": true
+    },
+    {
+      "citation_mapping_paths": [
+        "$.candidates[0].groundingMetadata.groundingSupports",
+        "$.candidates[0].groundingMetadata.groundingChunks"
+      ],
+      "citation_paths_declared": true,
+      "citation_url_health_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "display_order": 3,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "on_hash_mismatch": "block_display",
+        "on_missing_rdllm_metadata": "block_display",
+        "on_unverified_citation": "block_display"
+      },
+      "foundation_profile_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "header_mappings": {
+        "RDLLM-Attribution-Level": "native.headers.RDLLM-Attribution-Level",
+        "RDLLM-Discovery-Manifest-Hash": "native.headers.RDLLM-Discovery-Manifest-Hash",
+        "RDLLM-Foundation-Profile-Hash": "native.headers.RDLLM-Foundation-Profile-Hash",
+        "RDLLM-Response-Envelope-Hash": "native.headers.RDLLM-Response-Envelope-Hash",
+        "RDLLM-Source-Footer-Delivery-Hash": "native.headers.RDLLM-Source-Footer-Delivery-Hash",
+        "RDLLM-Verification-Endpoint": "native.headers.RDLLM-Verification-Endpoint"
+      },
+      "json_field_mappings": {
+        "embedded_artifacts.response_envelope": "native.body.embedded_artifacts.response_envelope",
+        "embedded_artifacts.source_footer_delivery": "native.body.embedded_artifacts.source_footer_delivery",
+        "response.rendered_output": "native.body.response.rendered_output",
+        "response.source_labels": "native.body.response.source_labels",
+        "verification.foundation_attribution_profile": "native.body.verification.foundation_attribution_profile",
+        "verification.verifier_commands": "native.body.verification.verifier_commands"
+      },
+      "native_api_version": "generate-content/v1",
+      "native_created_at": "2026-05-31T00:00:00Z",
+      "native_model": "google:gemini-compatible",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_output_hash_matches_rdllm": true,
+      "native_output_path": "$.candidates[0].content.parts[*].text",
+      "native_response_id": "gemini_rdllm_reference",
+      "native_response_shape_hash": "a6815d214e929e5f8d9057ad81b7fc5c2583186cf08b40319444619f588eaf80",
+      "native_status": "completed",
+      "provider_adapter_row_hash": "205da1833b68232c81c3da8c42ac95b4fc01d42a45cf90103fe738cbda2313fa",
+      "provider_family": "google_gemini",
+      "provider_id": "provider:google-gemini",
+      "rdllm_event_id": "evt_1ed43e106d466249",
+      "rdllm_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "required_headers_mapped": true,
+      "required_json_fields_mapped": true,
+      "stream_final_event_binds_hashes": true,
+      "stream_final_event_hashes": {
+        "RDLLM-Citation-URL-Health-Hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+        "RDLLM-Foundation-Profile-Hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "RDLLM-Response-Envelope-Hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be"
+      },
+      "tool_mapping_paths": [
+        "$.candidates[0].content.parts[*].functionCall"
+      ],
+      "tool_paths_declared": true
+    },
+    {
+      "citation_mapping_paths": [
+        "$.choices[0].message.annotations"
+      ],
+      "citation_paths_declared": true,
+      "citation_url_health_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "display_order": 4,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "on_hash_mismatch": "block_display",
+        "on_missing_rdllm_metadata": "block_display",
+        "on_unverified_citation": "block_display"
+      },
+      "foundation_profile_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "header_mappings": {
+        "RDLLM-Attribution-Level": "native.headers.RDLLM-Attribution-Level",
+        "RDLLM-Discovery-Manifest-Hash": "native.headers.RDLLM-Discovery-Manifest-Hash",
+        "RDLLM-Foundation-Profile-Hash": "native.headers.RDLLM-Foundation-Profile-Hash",
+        "RDLLM-Response-Envelope-Hash": "native.headers.RDLLM-Response-Envelope-Hash",
+        "RDLLM-Source-Footer-Delivery-Hash": "native.headers.RDLLM-Source-Footer-Delivery-Hash",
+        "RDLLM-Verification-Endpoint": "native.headers.RDLLM-Verification-Endpoint"
+      },
+      "json_field_mappings": {
+        "embedded_artifacts.response_envelope": "native.body.embedded_artifacts.response_envelope",
+        "embedded_artifacts.source_footer_delivery": "native.body.embedded_artifacts.source_footer_delivery",
+        "response.rendered_output": "native.body.response.rendered_output",
+        "response.source_labels": "native.body.response.source_labels",
+        "verification.foundation_attribution_profile": "native.body.verification.foundation_attribution_profile",
+        "verification.verifier_commands": "native.body.verification.verifier_commands"
+      },
+      "native_api_version": "chat-completions/v1",
+      "native_created_at": "2026-05-31T00:00:00Z",
+      "native_model": "meta:llama-openai-compatible",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_output_hash_matches_rdllm": true,
+      "native_output_path": "$.choices[0].message.content",
+      "native_response_id": "chatcmpl_rdllm_meta_reference",
+      "native_response_shape_hash": "bd60a2be78d70dceb8159a7db8c4ee31828deff3a0b7ef30143739b83adb7c9f",
+      "native_status": "completed",
+      "provider_adapter_row_hash": "cf00c8aca4aa11b92b0c11adf6409a2a25e45988e003e62b46dd7c2373f74b46",
+      "provider_family": "meta_llama",
+      "provider_id": "provider:meta-llama-openai-compatible",
+      "rdllm_event_id": "evt_1ed43e106d466249",
+      "rdllm_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "required_headers_mapped": true,
+      "required_json_fields_mapped": true,
+      "stream_final_event_binds_hashes": true,
+      "stream_final_event_hashes": {
+        "RDLLM-Citation-URL-Health-Hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+        "RDLLM-Foundation-Profile-Hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "RDLLM-Response-Envelope-Hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be"
+      },
+      "tool_mapping_paths": [
+        "$.choices[0].message.tool_calls"
+      ],
+      "tool_paths_declared": true
+    },
+    {
+      "citation_mapping_paths": [
+        "$.choices[0].message.citations"
+      ],
+      "citation_paths_declared": true,
+      "citation_url_health_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "display_order": 5,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "on_hash_mismatch": "block_display",
+        "on_missing_rdllm_metadata": "block_display",
+        "on_unverified_citation": "block_display"
+      },
+      "foundation_profile_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "header_mappings": {
+        "RDLLM-Attribution-Level": "native.headers.RDLLM-Attribution-Level",
+        "RDLLM-Discovery-Manifest-Hash": "native.headers.RDLLM-Discovery-Manifest-Hash",
+        "RDLLM-Foundation-Profile-Hash": "native.headers.RDLLM-Foundation-Profile-Hash",
+        "RDLLM-Response-Envelope-Hash": "native.headers.RDLLM-Response-Envelope-Hash",
+        "RDLLM-Source-Footer-Delivery-Hash": "native.headers.RDLLM-Source-Footer-Delivery-Hash",
+        "RDLLM-Verification-Endpoint": "native.headers.RDLLM-Verification-Endpoint"
+      },
+      "json_field_mappings": {
+        "embedded_artifacts.response_envelope": "native.body.embedded_artifacts.response_envelope",
+        "embedded_artifacts.source_footer_delivery": "native.body.embedded_artifacts.source_footer_delivery",
+        "response.rendered_output": "native.body.response.rendered_output",
+        "response.source_labels": "native.body.response.source_labels",
+        "verification.foundation_attribution_profile": "native.body.verification.foundation_attribution_profile",
+        "verification.verifier_commands": "native.body.verification.verifier_commands"
+      },
+      "native_api_version": "chat/v1",
+      "native_created_at": "2026-05-31T00:00:00Z",
+      "native_model": "mistral:chat-compatible",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_output_hash_matches_rdllm": true,
+      "native_output_path": "$.choices[0].message.content",
+      "native_response_id": "mistral_rdllm_reference",
+      "native_response_shape_hash": "2f8f71fa63de0a10580618bea5911a40331c0492226e5af12ccb4564d7afa5f5",
+      "native_status": "completed",
+      "provider_adapter_row_hash": "cd5dedd74a4d45c07535360fa672c37bd08794b4971d086c5bdcf4cc2afa6024",
+      "provider_family": "mistral_chat",
+      "provider_id": "provider:mistral-chat",
+      "rdllm_event_id": "evt_1ed43e106d466249",
+      "rdllm_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "required_headers_mapped": true,
+      "required_json_fields_mapped": true,
+      "stream_final_event_binds_hashes": true,
+      "stream_final_event_hashes": {
+        "RDLLM-Citation-URL-Health-Hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+        "RDLLM-Foundation-Profile-Hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "RDLLM-Response-Envelope-Hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be"
+      },
+      "tool_mapping_paths": [
+        "$.choices[0].message.tool_calls"
+      ],
+      "tool_paths_declared": true
+    },
+    {
+      "citation_mapping_paths": [
+        "$.message.citations"
+      ],
+      "citation_paths_declared": true,
+      "citation_url_health_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "display_order": 6,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "on_hash_mismatch": "block_display",
+        "on_missing_rdllm_metadata": "block_display",
+        "on_unverified_citation": "block_display"
+      },
+      "foundation_profile_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "header_mappings": {
+        "RDLLM-Attribution-Level": "native.headers.RDLLM-Attribution-Level",
+        "RDLLM-Discovery-Manifest-Hash": "native.headers.RDLLM-Discovery-Manifest-Hash",
+        "RDLLM-Foundation-Profile-Hash": "native.headers.RDLLM-Foundation-Profile-Hash",
+        "RDLLM-Response-Envelope-Hash": "native.headers.RDLLM-Response-Envelope-Hash",
+        "RDLLM-Source-Footer-Delivery-Hash": "native.headers.RDLLM-Source-Footer-Delivery-Hash",
+        "RDLLM-Verification-Endpoint": "native.headers.RDLLM-Verification-Endpoint"
+      },
+      "json_field_mappings": {
+        "embedded_artifacts.response_envelope": "native.body.embedded_artifacts.response_envelope",
+        "embedded_artifacts.source_footer_delivery": "native.body.embedded_artifacts.source_footer_delivery",
+        "response.rendered_output": "native.body.response.rendered_output",
+        "response.source_labels": "native.body.response.source_labels",
+        "verification.foundation_attribution_profile": "native.body.verification.foundation_attribution_profile",
+        "verification.verifier_commands": "native.body.verification.verifier_commands"
+      },
+      "native_api_version": "chat/v2",
+      "native_created_at": "2026-05-31T00:00:00Z",
+      "native_model": "cohere:chat-compatible",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_output_hash_matches_rdllm": true,
+      "native_output_path": "$.message.content[*].text",
+      "native_response_id": "cohere_rdllm_reference",
+      "native_response_shape_hash": "b1257ded834eaf649fbc05b7291310b18f48c68bac21a72fc769ef3880d8150e",
+      "native_status": "completed",
+      "provider_adapter_row_hash": "4491924d84cc4cd7978d5a6bd0bb4a344c3b67bab6d9b6e3972bc5248b95ee86",
+      "provider_family": "cohere_chat",
+      "provider_id": "provider:cohere-chat",
+      "rdllm_event_id": "evt_1ed43e106d466249",
+      "rdllm_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "required_headers_mapped": true,
+      "required_json_fields_mapped": true,
+      "stream_final_event_binds_hashes": true,
+      "stream_final_event_hashes": {
+        "RDLLM-Citation-URL-Health-Hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+        "RDLLM-Foundation-Profile-Hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "RDLLM-Response-Envelope-Hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be"
+      },
+      "tool_mapping_paths": [
+        "$.message.tool_calls"
+      ],
+      "tool_paths_declared": true
+    },
+    {
+      "citation_mapping_paths": [
+        "$.choices[0].message.citations"
+      ],
+      "citation_paths_declared": true,
+      "citation_url_health_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "display_order": 7,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "on_hash_mismatch": "block_display",
+        "on_missing_rdllm_metadata": "block_display",
+        "on_unverified_citation": "block_display"
+      },
+      "foundation_profile_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "header_mappings": {
+        "RDLLM-Attribution-Level": "native.headers.RDLLM-Attribution-Level",
+        "RDLLM-Discovery-Manifest-Hash": "native.headers.RDLLM-Discovery-Manifest-Hash",
+        "RDLLM-Foundation-Profile-Hash": "native.headers.RDLLM-Foundation-Profile-Hash",
+        "RDLLM-Response-Envelope-Hash": "native.headers.RDLLM-Response-Envelope-Hash",
+        "RDLLM-Source-Footer-Delivery-Hash": "native.headers.RDLLM-Source-Footer-Delivery-Hash",
+        "RDLLM-Verification-Endpoint": "native.headers.RDLLM-Verification-Endpoint"
+      },
+      "json_field_mappings": {
+        "embedded_artifacts.response_envelope": "native.body.embedded_artifacts.response_envelope",
+        "embedded_artifacts.source_footer_delivery": "native.body.embedded_artifacts.source_footer_delivery",
+        "response.rendered_output": "native.body.response.rendered_output",
+        "response.source_labels": "native.body.response.source_labels",
+        "verification.foundation_attribution_profile": "native.body.verification.foundation_attribution_profile",
+        "verification.verifier_commands": "native.body.verification.verifier_commands"
+      },
+      "native_api_version": "chat-completions/v1",
+      "native_created_at": "2026-05-31T00:00:00Z",
+      "native_model": "xai:grok-compatible",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_output_hash_matches_rdllm": true,
+      "native_output_path": "$.choices[0].message.content",
+      "native_response_id": "grok_rdllm_reference",
+      "native_response_shape_hash": "7f5edb456f5458d4189168367b206e9e6ca5fdbd0f829e76e36a3708dd7b9903",
+      "native_status": "completed",
+      "provider_adapter_row_hash": "b0474f10b21945ac0062f7d268e728d9d1208216e8b0931815e61e7c203a63e9",
+      "provider_family": "xai_grok",
+      "provider_id": "provider:xai-grok",
+      "rdllm_event_id": "evt_1ed43e106d466249",
+      "rdllm_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "required_headers_mapped": true,
+      "required_json_fields_mapped": true,
+      "stream_final_event_binds_hashes": true,
+      "stream_final_event_hashes": {
+        "RDLLM-Citation-URL-Health-Hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+        "RDLLM-Foundation-Profile-Hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "RDLLM-Response-Envelope-Hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be"
+      },
+      "tool_mapping_paths": [
+        "$.choices[0].message.tool_calls"
+      ],
+      "tool_paths_declared": true
+    },
+    {
+      "citation_mapping_paths": [
+        "$.output.message.content[*].citations"
+      ],
+      "citation_paths_declared": true,
+      "citation_url_health_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "display_order": 8,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "on_hash_mismatch": "block_display",
+        "on_missing_rdllm_metadata": "block_display",
+        "on_unverified_citation": "block_display"
+      },
+      "foundation_profile_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "header_mappings": {
+        "RDLLM-Attribution-Level": "native.headers.RDLLM-Attribution-Level",
+        "RDLLM-Discovery-Manifest-Hash": "native.headers.RDLLM-Discovery-Manifest-Hash",
+        "RDLLM-Foundation-Profile-Hash": "native.headers.RDLLM-Foundation-Profile-Hash",
+        "RDLLM-Response-Envelope-Hash": "native.headers.RDLLM-Response-Envelope-Hash",
+        "RDLLM-Source-Footer-Delivery-Hash": "native.headers.RDLLM-Source-Footer-Delivery-Hash",
+        "RDLLM-Verification-Endpoint": "native.headers.RDLLM-Verification-Endpoint"
+      },
+      "json_field_mappings": {
+        "embedded_artifacts.response_envelope": "native.body.embedded_artifacts.response_envelope",
+        "embedded_artifacts.source_footer_delivery": "native.body.embedded_artifacts.source_footer_delivery",
+        "response.rendered_output": "native.body.response.rendered_output",
+        "response.source_labels": "native.body.response.source_labels",
+        "verification.foundation_attribution_profile": "native.body.verification.foundation_attribution_profile",
+        "verification.verifier_commands": "native.body.verification.verifier_commands"
+      },
+      "native_api_version": "converse/v1",
+      "native_created_at": "2026-05-31T00:00:00Z",
+      "native_model": "aws:bedrock-converse-compatible",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_output_hash_matches_rdllm": true,
+      "native_output_path": "$.output.message.content[*].text",
+      "native_response_id": "bedrock_rdllm_reference",
+      "native_response_shape_hash": "a8a9caf3b793d4fbc0c33554b87ec1a78c1e3fa8e736cf3cd1c9b3bdf91704fc",
+      "native_status": "completed",
+      "provider_adapter_row_hash": "a9c903c9a42fe560e35e78d5378a8a781b5580fefa886c0847f242c85d2e2db5",
+      "provider_family": "amazon_bedrock_converse",
+      "provider_id": "provider:amazon-bedrock-converse",
+      "rdllm_event_id": "evt_1ed43e106d466249",
+      "rdllm_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "required_headers_mapped": true,
+      "required_json_fields_mapped": true,
+      "stream_final_event_binds_hashes": true,
+      "stream_final_event_hashes": {
+        "RDLLM-Citation-URL-Health-Hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+        "RDLLM-Foundation-Profile-Hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "RDLLM-Response-Envelope-Hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be"
+      },
+      "tool_mapping_paths": [
+        "$.output.message.content[*].toolUse"
+      ],
+      "tool_paths_declared": true
+    },
+    {
+      "citation_mapping_paths": [
+        "$.output[*].content[*].annotations"
+      ],
+      "citation_paths_declared": true,
+      "citation_url_health_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "display_order": 9,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "on_hash_mismatch": "block_display",
+        "on_missing_rdllm_metadata": "block_display",
+        "on_unverified_citation": "block_display"
+      },
+      "foundation_profile_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "header_mappings": {
+        "RDLLM-Attribution-Level": "native.headers.RDLLM-Attribution-Level",
+        "RDLLM-Discovery-Manifest-Hash": "native.headers.RDLLM-Discovery-Manifest-Hash",
+        "RDLLM-Foundation-Profile-Hash": "native.headers.RDLLM-Foundation-Profile-Hash",
+        "RDLLM-Response-Envelope-Hash": "native.headers.RDLLM-Response-Envelope-Hash",
+        "RDLLM-Source-Footer-Delivery-Hash": "native.headers.RDLLM-Source-Footer-Delivery-Hash",
+        "RDLLM-Verification-Endpoint": "native.headers.RDLLM-Verification-Endpoint"
+      },
+      "json_field_mappings": {
+        "embedded_artifacts.response_envelope": "native.body.embedded_artifacts.response_envelope",
+        "embedded_artifacts.source_footer_delivery": "native.body.embedded_artifacts.source_footer_delivery",
+        "response.rendered_output": "native.body.response.rendered_output",
+        "response.source_labels": "native.body.response.source_labels",
+        "verification.foundation_attribution_profile": "native.body.verification.foundation_attribution_profile",
+        "verification.verifier_commands": "native.body.verification.verifier_commands"
+      },
+      "native_api_version": "responses/v1",
+      "native_created_at": "2026-05-31T00:00:00Z",
+      "native_model": "azure-openai:responses-compatible",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_output_hash_matches_rdllm": true,
+      "native_output_path": "$.output_text",
+      "native_response_id": "azure_resp_rdllm_reference",
+      "native_response_shape_hash": "c83e8432f205c6c2065deea94062a3f8ccc4005713531e946c2055ada51f7b9b",
+      "native_status": "completed",
+      "provider_adapter_row_hash": "25308ab5279b151e6c2c2b1cafdb44b5d333fd53311f604bf9f187a040bf3548",
+      "provider_family": "azure_openai_responses",
+      "provider_id": "provider:azure-openai-responses",
+      "rdllm_event_id": "evt_1ed43e106d466249",
+      "rdllm_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "required_headers_mapped": true,
+      "required_json_fields_mapped": true,
+      "stream_final_event_binds_hashes": true,
+      "stream_final_event_hashes": {
+        "RDLLM-Citation-URL-Health-Hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+        "RDLLM-Foundation-Profile-Hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "RDLLM-Response-Envelope-Hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be"
+      },
+      "tool_mapping_paths": [
+        "$.output[*].tool_call",
+        "$.output[*].function_call"
+      ],
+      "tool_paths_declared": true
+    },
+    {
+      "citation_mapping_paths": [
+        "$.choices[0].message.annotations"
+      ],
+      "citation_paths_declared": true,
+      "citation_url_health_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+      "display_order": 10,
+      "fail_closed_policy_declared": true,
+      "failure_policy": {
+        "on_hash_mismatch": "block_display",
+        "on_missing_rdllm_metadata": "block_display",
+        "on_unverified_citation": "block_display"
+      },
+      "foundation_profile_hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+      "header_mappings": {
+        "RDLLM-Attribution-Level": "native.headers.RDLLM-Attribution-Level",
+        "RDLLM-Discovery-Manifest-Hash": "native.headers.RDLLM-Discovery-Manifest-Hash",
+        "RDLLM-Foundation-Profile-Hash": "native.headers.RDLLM-Foundation-Profile-Hash",
+        "RDLLM-Response-Envelope-Hash": "native.headers.RDLLM-Response-Envelope-Hash",
+        "RDLLM-Source-Footer-Delivery-Hash": "native.headers.RDLLM-Source-Footer-Delivery-Hash",
+        "RDLLM-Verification-Endpoint": "native.headers.RDLLM-Verification-Endpoint"
+      },
+      "json_field_mappings": {
+        "embedded_artifacts.response_envelope": "native.body.embedded_artifacts.response_envelope",
+        "embedded_artifacts.source_footer_delivery": "native.body.embedded_artifacts.source_footer_delivery",
+        "response.rendered_output": "native.body.response.rendered_output",
+        "response.source_labels": "native.body.response.source_labels",
+        "verification.foundation_attribution_profile": "native.body.verification.foundation_attribution_profile",
+        "verification.verifier_commands": "native.body.verification.verifier_commands"
+      },
+      "native_api_version": "chat-completions/v1",
+      "native_created_at": "2026-05-31T00:00:00Z",
+      "native_model": "openai-compatible:chat",
+      "native_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "native_output_hash_matches_rdllm": true,
+      "native_output_path": "$.choices[0].message.content",
+      "native_response_id": "chatcmpl_rdllm_openai_compatible",
+      "native_response_shape_hash": "2514b46ce0c8429374bc47aca6ea547481aca7ecd19d6536f7c568bdefdcd256",
+      "native_status": "completed",
+      "provider_adapter_row_hash": "b7395858c1dc64d3cbd4835b17d83475d681808e87f79562be09be54c432d685",
+      "provider_family": "openai_compatible_chat",
+      "provider_id": "provider:openai-compatible-chat",
+      "rdllm_event_id": "evt_1ed43e106d466249",
+      "rdllm_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "required_headers_mapped": true,
+      "required_json_fields_mapped": true,
+      "stream_final_event_binds_hashes": true,
+      "stream_final_event_hashes": {
+        "RDLLM-Citation-URL-Health-Hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+        "RDLLM-Foundation-Profile-Hash": "2a65045bad171b3260a97ad4fde4f6dec076319af0b7694ad952f930c1f53e2d",
+        "RDLLM-Response-Envelope-Hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be"
+      },
+      "tool_mapping_paths": [
+        "$.choices[0].message.tool_calls"
+      ],
+      "tool_paths_declared": true
+    }
+  ],
+  "schemas": {
+    "citation_url_health": "docs/schemas/citation_url_health.schema.json",
+    "composite_foundation_adapter": "docs/schemas/composite_foundation_adapter.schema.json",
+    "foundation_api_profile": "docs/schemas/foundation_attribution_profile.schema.json",
+    "response_envelope": "docs/schemas/response_envelope.schema.json",
+    "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "d9050430981c7328e3d9b086ecd65b2d9567cf6c1d859008948f5af1edddc2d4"
+  },
+  "summary": {
+    "covered_provider_family_count": 10,
+    "failed_check_count": 0,
+    "minimum_input_level": "RDLLM-L124",
+    "native_response_hash_binding_supported": true,
+    "privacy_preserved": true,
+    "provider_adapter_count": 10,
+    "provider_neutral_metadata_supported": true,
+    "required_provider_family_count": 10,
+    "status": "ready",
+    "streaming_adapter_supported": true,
+    "target_certification_level": "RDLLM-L125",
+    "universal_foundation_model_contract_supported": true
+  }
+}

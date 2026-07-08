@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/citation_footer_contract.schema.json",
+  "title": "RDLLM Citation Footer Contract",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "issuer",
+    "created_at",
+    "event",
+    "display_profile",
+    "sources",
+    "claims",
+    "rendered_footer",
+    "verification",
+    "commitments",
+    "summary",
+    "schemas",
+    "privacy",
+    "contract_hash",
+    "signature"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "rdllm-citation-footer-contract/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "response_boundary_hash",
+        "answer_card_hash",
+        "source_verification_report_hash",
+        "source_confidence_report_hash",
+        "creator_license_contract_hash"
+      ],
+      "additionalProperties": true
+    },
+    "display_profile": {
+      "type": "object",
+      "required": [
+        "profile",
+        "render_location",
+        "required_source_label_pattern",
+        "required_claim_anchor_pattern",
+        "client_must_render_source_confidence",
+        "client_must_render_license_and_royalty_status",
+        "client_must_preserve_display_order"
+      ],
+      "additionalProperties": true
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "display_order",
+          "label",
+          "display_label",
+          "title",
+          "creator_name",
+          "work_id",
+          "source_uri",
+          "confidence_level",
+          "confidence_score",
+          "license_status",
+          "royalty_status",
+          "display_text",
+          "display_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_index",
+          "claim_hash",
+          "source_label",
+          "display_anchor",
+          "evidence_span_prefix",
+          "confidence_level",
+          "claim_display_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "rendered_footer": {
+      "type": "object",
+      "required": [
+        "profile",
+        "source_lines",
+        "claim_lines",
+        "footer_text",
+        "source_label_order",
+        "claim_span_prefixes",
+        "source_line_count",
+        "claim_line_count",
+        "footer_hash"
+      ],
+      "additionalProperties": true
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "response_boundary_hash",
+        "source_display_root",
+        "claim_display_root",
+        "rendered_footer_hash",
+        "source_confidence_report_hash",
+        "creator_license_contract_hash"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "source_count",
+        "claim_count",
+        "verified_source_count",
+        "verified_claim_count",
+        "minimum_source_confidence",
+        "minimum_claim_confidence",
+        "footer_line_count",
+        "display_contract_verification_supported",
+        "source_footer_rendering_required"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "citation_footer_contract",
+        "response_envelope",
+        "source_confidence_report",
+        "creator_license_contract"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "footer_text_disclosed",
+        "answer_text_disclosed",
+        "prompt_text_disclosed",
+        "source_text_disclosed",
+        "source_quote_text_disclosed",
+        "claim_text_disclosed",
+        "claim_evidence_text_disclosed",
+        "payout_account_disclosed",
+        "contract_uses_hashes_metadata_scores_and_statuses"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "contract_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

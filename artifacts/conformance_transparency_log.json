@@ -1,0 +1,61 @@
+{
+  "entries": [
+    {
+      "index": 0,
+      "payload_hash": "bfadff19151024fc224e41d66631ec8f40b8bb1242b4d4c945012150e2cca845",
+      "receipt_envelope_hash": "7fc3f58df6ae8d70cd688aea74a7e808ee3f66d49bef86a39db92005534c6250",
+      "receipt_hash": "bfadff19151024fc224e41d66631ec8f40b8bb1242b4d4c945012150e2cca845"
+    },
+    {
+      "index": 1,
+      "payload_hash": "7f4c54ba986a83579411b8d81f19e5be0157192d31279cd1b5b0fbd07e641814",
+      "receipt_envelope_hash": "1b7939abee99e2e322771c10c0e0144ac5a37b08980e104999cf007749772fa9",
+      "receipt_hash": "7f4c54ba986a83579411b8d81f19e5be0157192d31279cd1b5b0fbd07e641814"
+    },
+    {
+      "index": 2,
+      "payload_hash": "18125936c044fa4ad82d70c27f3dfe2de011a188f395188715594772e4754a3c",
+      "receipt_envelope_hash": "4e8242ae3ee7fd089360d2b84fb8b08d8d240cfa6bc8585dae795fc454b03297",
+      "receipt_hash": "18125936c044fa4ad82d70c27f3dfe2de011a188f395188715594772e4754a3c"
+    },
+    {
+      "index": 3,
+      "payload_hash": "deb93ac13675bfe1afdea35688794c0a9b77a86c9c82ab396f18829a8403b948",
+      "receipt_envelope_hash": "af4cf976128fb48e47ee4ad9fdfafb5dd7e7cc6a101979287df5d30a08fe1580",
+      "receipt_hash": "deb93ac13675bfe1afdea35688794c0a9b77a86c9c82ab396f18829a8403b948"
+    },
+    {
+      "index": 4,
+      "payload_hash": "a11d8313662bd7f4080a6d7aaa809ae80fd251f4a5e2b1e6c5e9b3965b7d5f9f",
+      "receipt_envelope_hash": "24e63f661568be68f202746258259d92a40cefc52fbc461f69e3c2904f8dec8e",
+      "receipt_hash": "a11d8313662bd7f4080a6d7aaa809ae80fd251f4a5e2b1e6c5e9b3965b7d5f9f"
+    },
+    {
+      "index": 5,
+      "payload_hash": "72c99e8fe6b5a9709acfc9e65cd5f45fa0bd61a4f4e61514f7b3205dc4284f6f",
+      "receipt_envelope_hash": "8780f318ba6440d24a8fe6a8456f4f567f144cc62f8c0b7675c1919d60800c60",
+      "receipt_hash": "72c99e8fe6b5a9709acfc9e65cd5f45fa0bd61a4f4e61514f7b3205dc4284f6f"
+    },
+    {
+      "index": 6,
+      "payload_hash": "65ef394871de5d4a1ebd0fe8fd3d14d6cbd335c277ddcf0ad262b481f45600f7",
+      "receipt_envelope_hash": "14f15c4e6b6f2e5228bc677de571ec69a5cc7c1e0f90e509e4725b2b1058c961",
+      "receipt_hash": "65ef394871de5d4a1ebd0fe8fd3d14d6cbd335c277ddcf0ad262b481f45600f7"
+    },
+    {
+      "index": 7,
+      "payload_hash": "2fe7a4d242b2b173ca46d2beaa2629179218dfd154250b930c0c86358b8eb812",
+      "receipt_envelope_hash": "1c5c4fe6d35d537d930084e6bd8e1ab869f8f4ee9b621931289355a1099da0df",
+      "receipt_hash": "2fe7a4d242b2b173ca46d2beaa2629179218dfd154250b930c0c86358b8eb812"
+    },
+    {
+      "index": 8,
+      "payload_hash": "07eb5116619eb8dd4221c2eb5d7694e9954d9bcdcbb0b17b2d53f8d02ed37c42",
+      "receipt_envelope_hash": "24098232d04c2767e8ef2bfa78f2a958986f704d890c2529850564173bd80c03",
+      "receipt_hash": "07eb5116619eb8dd4221c2eb5d7694e9954d9bcdcbb0b17b2d53f8d02ed37c42"
+    }
+  ],
+  "log_version": "rdllm-transparency-log/v1",
+  "root": "fe6563193a226dc492689da72fffce98a11378d7e0fe99dbd7a31386ad4fdd4a",
+  "tree_size": 9
+}

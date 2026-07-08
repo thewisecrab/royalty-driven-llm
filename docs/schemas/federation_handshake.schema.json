@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/federation_handshake.schema.json",
+  "title": "RDLLM Federation Handshake",
+  "type": "object",
+  "required": [
+    "handshake_version",
+    "issuer",
+    "created_at",
+    "request",
+    "acceptance",
+    "runtime_contract",
+    "artifact_bindings",
+    "schemas",
+    "commitments",
+    "readiness_checks",
+    "summary",
+    "privacy",
+    "handshake_hash",
+    "signature"
+  ],
+  "properties": {
+    "handshake_version": {
+      "const": "rdllm-federation-handshake/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "request": {
+      "type": "object",
+      "required": [
+        "requester",
+        "minimum_certification_level",
+        "accepted_protocol_versions",
+        "required_capabilities"
+      ],
+      "additionalProperties": true
+    },
+    "acceptance": {
+      "type": "object",
+      "required": [
+        "accepted",
+        "provider",
+        "provider_highest_certification_level",
+        "negotiated_certification_level",
+        "rejection_reason"
+      ],
+      "additionalProperties": true
+    },
+    "runtime_contract": {
+      "type": "object",
+      "required": [
+        "profile",
+        "well_known_path",
+        "api_endpoint",
+        "required_response_format",
+        "minimum_accepted_certification_level",
+        "required_headers",
+        "required_artifacts",
+        "required_verifier_commands",
+        "relay_obligations",
+        "downgrade_policy",
+        "provider_declared_headers"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "artifact_type",
+          "schema",
+          "required",
+          "declared_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "entry_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "attribution_receipt",
+        "answer_provenance_card",
+        "source_verification_report",
+        "response_envelope",
+        "provider_attribution_card",
+        "creator_license_contract",
+        "semantic_text_attribution_report",
+        "attribution_exchange",
+        "conformance_vector_pack",
+        "federation_handshake",
+        "attribution_capsule",
+        "response_release_gate",
+        "proof_carrying_response",
+        "serving_gateway_report",
+        "streaming_attribution_manifest",
+        "assurance_bundle",
+        "certification_report",
+        "integration_profile",
+        "discovery_manifest"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "artifact_binding_root",
+        "runtime_contract_hash",
+        "schema_root",
+        "request_hash",
+        "provider_card_hash",
+        "certification_report_hash",
+        "integration_profile_hash",
+        "discovery_manifest_hash",
+        "response_envelope_hash",
+        "assurance_bundle_hash",
+        "semantic_text_attribution_report_hash",
+        "creator_license_contract_hash",
+        "attribution_exchange_hash",
+        "conformance_vector_pack_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "readiness_checks": {
+      "type": "object",
+      "required": [
+        "all_required_artifacts_bound",
+        "certification_meets_requested_minimum",
+        "provider_declares_federation_surface",
+        "provider_declares_runtime_federation_channel",
+        "integration_declares_federation_schema",
+        "integration_declares_federation_endpoint",
+        "integration_declares_federation_verifier",
+        "discovery_declares_federation_path",
+        "response_envelope_verified",
+        "attribution_exchange_ready",
+        "creator_license_contract_verified",
+        "conformance_vector_pack_ready",
+        "source_footer_relay_enabled",
+        "escrow_relay_enabled",
+        "runtime_headers_declared",
+        "downgrade_protection_enabled",
+        "artifact_hashes_reproducible",
+        "privacy_promises_preserved"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_requested_level",
+        "negotiated_level",
+        "provider_highest_level",
+        "artifact_count",
+        "required_artifact_count",
+        "runtime_header_count",
+        "schema_count",
+        "offline_verification_supported",
+        "downgrade_protection"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "artifact_payloads_embedded",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "matched_text_disclosed",
+        "hidden_state_disclosed",
+        "handshake_uses_hashes_headers_and_contract_metadata"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "handshake_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

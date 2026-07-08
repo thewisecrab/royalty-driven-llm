@@ -1,0 +1,275 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_provider_meter_normalization_contract.schema.json",
+  "title": "RDLLM Universal Provider Meter Normalization Contract",
+  "type": "object",
+  "required": [
+    "universal_provider_meter_normalization_contract_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "artifact_bindings",
+    "provider_meter_surface_rows",
+    "normalized_meter_field_rows",
+    "route_provider_meter_rows",
+    "settlement_meter_rows",
+    "negative_provider_meter_rows",
+    "evidence_roots",
+    "checks",
+    "provider_meter_normalization_decision",
+    "coverage",
+    "privacy",
+    "summary",
+    "universal_provider_meter_normalization_contract_hash"
+  ],
+  "properties": {
+    "universal_provider_meter_normalization_contract_version": {
+      "const": "rdllm-universal-provider-meter-normalization-contract/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_provider_meter_normalization_contract.schema.json"
+    },
+    "created_at": { "type": "string", "minLength": 1 },
+    "issuer": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_claim_evidence_footer_level",
+        "minimum_live_capability_discovery_level",
+        "minimum_runtime_route_binding_level",
+        "provider_usage_must_be_observed_or_zero_metered",
+        "native_usage_fields_must_map_to_settlement_meter",
+        "pricing_snapshot_must_be_bound",
+        "provider_invoice_rows_must_reconcile",
+        "router_pass_through_usage_must_not_double_count",
+        "missing_or_stale_metering_fails_closed"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-provider-meter-normalization-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L185" },
+        "minimum_claim_evidence_footer_level": { "const": "RDLLM-L184" },
+        "minimum_live_capability_discovery_level": { "const": "RDLLM-L182" },
+        "minimum_runtime_route_binding_level": { "const": "RDLLM-L179" },
+        "provider_usage_must_be_observed_or_zero_metered": { "const": true },
+        "native_usage_fields_must_map_to_settlement_meter": { "const": true },
+        "pricing_snapshot_must_be_bound": { "const": true },
+        "provider_invoice_rows_must_reconcile": { "const": true },
+        "router_pass_through_usage_must_not_double_count": { "const": true },
+        "missing_or_stale_metering_fails_closed": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-provider-meter-normalization-contract.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-provider-meter-normalization-contract/v1"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "universal_claim_evidence_footer_verification_contract",
+        "universal_live_capability_discovery_contract",
+        "universal_runtime_route_binding_contract"
+      ],
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "present",
+          "artifact_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "status",
+          "level",
+          "minimum_level",
+          "ready"
+        ],
+        "properties": {
+          "present": { "type": "boolean" },
+          "artifact_hash": { "type": "string" },
+          "payload_hash": { "type": "string" },
+          "hash_reproducible": { "type": "boolean" },
+          "status": { "type": "string" },
+          "level": { "type": "string" },
+          "minimum_level": { "type": "string" },
+          "ready": { "type": "boolean" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "provider_meter_surface_rows": {
+      "type": "object",
+      "minProperties": 24,
+      "additionalProperties": { "type": "object" }
+    },
+    "normalized_meter_field_rows": {
+      "type": "object",
+      "minProperties": 19,
+      "additionalProperties": { "type": "object" }
+    },
+    "route_provider_meter_rows": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "object" }
+    },
+    "settlement_meter_rows": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "object" }
+    },
+    "negative_provider_meter_rows": {
+      "type": "object",
+      "minProperties": 20,
+      "additionalProperties": { "type": "object" }
+    },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "provider_meter_surface_root",
+        "normalized_meter_field_root",
+        "route_provider_meter_root",
+        "settlement_meter_root",
+        "negative_provider_meter_root",
+        "combined_provider_meter_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "claim_evidence_footer_l184_ready",
+        "live_capability_discovery_l182_ready",
+        "runtime_route_binding_l179_ready",
+        "provider_meter_surface_rows_complete",
+        "normalized_meter_field_rows_complete",
+        "route_provider_meter_rows_complete",
+        "settlement_meter_rows_complete",
+        "negative_provider_meter_fixtures_reject",
+        "contract_signed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "provider_meter_normalization_decision": {
+      "type": "object",
+      "required": [
+        "universal_provider_meter_normalization_ready",
+        "provider_usage_meters_normalized",
+        "model_invocation_allowed",
+        "response_release_allowed",
+        "source_footer_reliance_allowed",
+        "creator_settlement_allowed",
+        "missing_usage_blocked",
+        "stale_pricing_blocked",
+        "double_counted_usage_blocked",
+        "private_billing_payload_blocked",
+        "failure_modes"
+      ],
+      "properties": {
+        "universal_provider_meter_normalization_ready": { "type": "boolean" },
+        "provider_usage_meters_normalized": { "type": "boolean" },
+        "model_invocation_allowed": { "type": "boolean" },
+        "response_release_allowed": { "type": "boolean" },
+        "source_footer_reliance_allowed": { "type": "boolean" },
+        "creator_settlement_allowed": { "type": "boolean" },
+        "missing_usage_blocked": { "const": true },
+        "stale_pricing_blocked": { "const": true },
+        "double_counted_usage_blocked": { "const": true },
+        "private_billing_payload_blocked": { "const": true },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "coverage": { "type": "object" },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payloads_excluded",
+        "private_prompts_excluded",
+        "private_outputs_excluded",
+        "private_source_text_excluded",
+        "private_billing_payloads_excluded",
+        "private_provider_usage_payloads_excluded",
+        "public_contract_uses_hashes_routes_meter_classes_and_verdicts"
+      ],
+      "properties": {
+        "private_payloads_excluded": { "const": true },
+        "private_prompts_excluded": { "const": true },
+        "private_outputs_excluded": { "const": true },
+        "private_source_text_excluded": { "const": true },
+        "private_billing_payloads_excluded": { "const": true },
+        "private_provider_usage_payloads_excluded": { "const": true },
+        "public_contract_uses_hashes_routes_meter_classes_and_verdicts": {
+          "const": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_claim_evidence_footer_level",
+        "minimum_live_capability_discovery_level",
+        "minimum_runtime_route_binding_level",
+        "provider_meter_surface_count",
+        "ready_provider_meter_surface_count",
+        "normalized_meter_field_count",
+        "ready_normalized_meter_field_count",
+        "route_count",
+        "ready_route_provider_meter_count",
+        "ready_settlement_meter_count",
+        "negative_provider_meter_failure_count",
+        "ready_negative_provider_meter_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_provider_meter_normalization_contract"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L185" },
+        "minimum_claim_evidence_footer_level": { "const": "RDLLM-L184" },
+        "minimum_live_capability_discovery_level": { "const": "RDLLM-L182" },
+        "minimum_runtime_route_binding_level": { "const": "RDLLM-L179" },
+        "provider_meter_surface_count": { "type": "integer", "minimum": 24 },
+        "ready_provider_meter_surface_count": { "type": "integer", "minimum": 0 },
+        "normalized_meter_field_count": { "type": "integer", "minimum": 19 },
+        "ready_normalized_meter_field_count": { "type": "integer", "minimum": 0 },
+        "route_count": { "type": "integer", "minimum": 1 },
+        "ready_route_provider_meter_count": { "type": "integer", "minimum": 0 },
+        "ready_settlement_meter_count": { "type": "integer", "minimum": 0 },
+        "negative_provider_meter_failure_count": { "type": "integer", "minimum": 20 },
+        "ready_negative_provider_meter_failure_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failure_mode_count": { "type": "integer", "minimum": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_provider_meter_normalization_contract": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "universal_provider_meter_normalization_contract_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "signature": { "type": "object" }
+  },
+  "additionalProperties": true
+}

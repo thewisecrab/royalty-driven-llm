@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_provider_wire_protocol.schema.json",
+  "title": "RDLLM Universal Provider Wire Protocol",
+  "type": "object",
+  "required": [
+    "wire_protocol_version",
+    "issuer",
+    "created_at",
+    "provider_wire_policy",
+    "artifact_bindings",
+    "provider_wire_rows",
+    "wire_surface_rows",
+    "transform_rows",
+    "failure_case_rows",
+    "evidence_commitments",
+    "checks",
+    "provider_family_coverage",
+    "wire_decision",
+    "verifier_commands",
+    "research_controls",
+    "privacy",
+    "summary",
+    "universal_provider_wire_protocol_hash"
+  ],
+  "properties": {
+    "wire_protocol_version": {
+      "const": "rdllm-universal-provider-wire-protocol/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "provider_wire_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_claim_provenance_level",
+        "minimum_runtime_level",
+        "well_known_path"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-universal-provider-wire-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L151" },
+        "minimum_claim_provenance_level": { "const": "RDLLM-L150" },
+        "minimum_runtime_level": { "const": "RDLLM-L149" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-provider-wire-protocol.json"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": { "type": "object" },
+    "provider_wire_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "api_binding",
+          "provider_family",
+          "expected_provider_family",
+          "l150_envelope_hash",
+          "l149_receipt_hash",
+          "ready",
+          "provider_wire_row_hash"
+        ],
+        "properties": {
+          "api_binding": { "type": "string" },
+          "provider_family": { "type": "string" },
+          "expected_provider_family": { "type": "string" },
+          "l150_envelope_hash": { "type": "string" },
+          "l149_receipt_hash": { "type": "string" },
+          "ready": { "type": "boolean" },
+          "provider_wire_row_hash": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "wire_surface_rows": { "type": "array" },
+    "transform_rows": { "type": "array" },
+    "failure_case_rows": { "type": "array" },
+    "evidence_commitments": { "type": "object" },
+    "checks": { "type": "object" },
+    "provider_family_coverage": { "type": "object" },
+    "wire_decision": {
+      "type": "object",
+      "required": [
+        "universal_wire_protocol_authorized",
+        "provider_invocation_allowed",
+        "streaming_display_allowed",
+        "proxy_or_aggregator_routing_allowed",
+        "direct_creator_settlement_allowed",
+        "out_of_band_attribution_allowed",
+        "failure_modes"
+      ],
+      "properties": {
+        "universal_wire_protocol_authorized": { "type": "boolean" },
+        "provider_invocation_allowed": { "type": "boolean" },
+        "streaming_display_allowed": { "type": "boolean" },
+        "proxy_or_aggregator_routing_allowed": { "type": "boolean" },
+        "direct_creator_settlement_allowed": { "type": "boolean" },
+        "out_of_band_attribution_allowed": { "const": false },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "verifier_commands": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "research_controls": { "type": "object" },
+    "privacy": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_claim_provenance_level",
+        "minimum_runtime_level",
+        "provider_binding_count",
+        "wire_surface_count",
+        "transform_mode_count",
+        "failure_case_count",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L151" },
+        "minimum_claim_provenance_level": { "const": "RDLLM-L150" },
+        "minimum_runtime_level": { "const": "RDLLM-L149" },
+        "provider_binding_count": { "type": "integer" },
+        "wire_surface_count": { "type": "integer" },
+        "transform_mode_count": { "type": "integer" },
+        "failure_case_count": { "type": "integer" },
+        "privacy_preserved": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "universal_provider_wire_protocol_hash": { "type": "string" },
+    "signature": { "type": ["string", "object"] }
+  },
+  "additionalProperties": true
+}

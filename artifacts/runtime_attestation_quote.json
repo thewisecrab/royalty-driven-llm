@@ -1,0 +1,61 @@
+{
+  "attestor_id": "attestor-alpha",
+  "attestor_key_hash": "b9d11a8e6864723dc78ea6ef515cb69afc223a78aea0fd74da00f3ad1182cde9",
+  "capabilities": {
+    "creator_pool_conservation_enforced": true,
+    "evidence_lock_enforced_before_generation": true,
+    "live_transparency_required_before_release": true,
+    "live_witness_required_before_release": true,
+    "private_text_redaction_enforced": true,
+    "release_gate_enforced_before_delivery": true,
+    "serving_gateway_bound_to_proof_response": true,
+    "source_footer_required_for_supported_claims": true,
+    "streaming_chunks_bound_to_gateway_output": true
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "expires_at": "2026-06-01T00:00:00Z",
+  "nonce": "c98f3312cee02aa33b953162d23a2370f07b9c505616022a6c169d61cfa7f97e",
+  "platform_id": "platform-tee-alpha",
+  "platform_type": "rdllm-conformance-tee",
+  "quote_hash": "ea81f6c187a89151767f6e357aa9209411b1171bc033572bbb1d473358f7cb5d",
+  "quote_version": "rdllm-runtime-attestation-quote/v1",
+  "runtime_measurement": {
+    "container_image_hash": "a3ed91579aef6422a571b3de3030a0ed5e2bbcc24f57471c640433f971ad3ce6",
+    "enforcement_binary_hash": "e98ff9b059ac44a2c946083b5b338dc90e67626fc2778fe7955b61a6faa1b85e",
+    "measurement_hash": "08b6c4bd0aaee9273c741f9d9ea4acf3a856fd31e3b7fa6096699c1fd6a7b664",
+    "model_binding_hash": "641a27f2bfd7e953ef21f01b7c45de5dcae4b91c302bcaf012ac6cd97cfd0557",
+    "policy_bundle_hash": "e52512e9ffc370b47da23045190f64a9035c973b8fea8b29d09c7d6b19e42b2c",
+    "required_capabilities": [
+      "evidence_lock_enforced_before_generation",
+      "release_gate_enforced_before_delivery",
+      "serving_gateway_bound_to_proof_response",
+      "streaming_chunks_bound_to_gateway_output",
+      "live_witness_required_before_release",
+      "live_transparency_required_before_release",
+      "source_footer_required_for_supported_claims",
+      "creator_pool_conservation_enforced",
+      "private_text_redaction_enforced"
+    ],
+    "runtime_id": "runtime:rdllm-reference",
+    "runtime_version": "rdllm-reference-runtime/2026-06",
+    "source_commit_hash": "259a980e99ab4e5318b938913c9bc1247b8f495d7b4ab975c104e619cc31f5f8",
+    "verifier_bundle_hash": "404ff4aa103bf0d72b921e69a6b3a81a4b49db53cab48753a177af5f17004dcb"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "attestor_id": "attestor-alpha",
+    "value": "7b0df4d8e802db3a6d5b07e8ab6d86bd0f5578211916ab1b93bce083dce4b2f5"
+  },
+  "subject_bindings": {
+    "delivered_output_hash": "dad739af040ffff4288e04fc4178287c632a3509e89a107feefff9882344cb5b",
+    "evidence_locked_generation_hash": "0b3640e03dd3a4782a9e076d0595bbb4bbee6f4257ea64370595cfe88dcccc2f",
+    "gateway_report_hash": "e610b412a692e607ad0b5b3c3da2c53fa46954d3cea66adead9958f3dc1df82d",
+    "live_emission_transparency_hash": "ea1cfa5da400063356bc87e7cad777632d281706a02cb1d2699e805127370a6f",
+    "live_emission_witness_hash": "327f3e4d72864edf22031434f163340dd64db765023551b85dd59c58994b60fa",
+    "live_subject_root": "635419a36932e2c4cddb8512d822d28fd0f1316f71075ddd2f95caf4e9e7f57d",
+    "proof_response_hash": "e651c5ed4d1069bcf624a4b04c7cda35fa01518f435ff0e063c6b9b31de58ed4",
+    "release_gate_hash": "aa0a718db8f25a8200acc6be83f7abbb405f27bf828326a25383504a66148d98",
+    "subject_binding_root": "1c797350ca66cb2ef88f70ba4b69838d604d1722be965147dd2fbd29f866d63b",
+    "transparency_log_binding_root": "e25c612d0bb690f8a1f95558f5ab34c4196aa1b205ed7d0816c748a02e8da80c"
+  }
+}

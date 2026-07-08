@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/counterfactual_report.schema.json",
+  "title": "RDLLM Counterfactual Influence Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "event",
+    "policy",
+    "baseline_sources",
+    "interventions",
+    "commitments",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-counterfactual-influence/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "creator_pool",
+        "subject_work_count"
+      ],
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "intervention",
+        "min_impact_margin",
+        "same_prompt_and_answer_replayed",
+        "event_text_committed_not_disclosed"
+      ],
+      "additionalProperties": true
+    },
+    "baseline_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "work_id",
+          "creator_id",
+          "chunk_id",
+          "content_hash",
+          "rank",
+          "decision_score",
+          "signals"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "interventions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "work_id",
+          "creator_id",
+          "content_hash",
+          "baseline",
+          "intervention",
+          "best_substitute",
+          "impact",
+          "intervention_hash"
+        ],
+        "properties": {
+          "intervention": {
+            "type": "object",
+            "required": [
+              "type",
+              "removed_work_id",
+              "ablation_event_id",
+              "ablation_event_hash",
+              "source_absent_after_ablation",
+              "payout_reallocated_or_escrowed",
+              "audit_errors"
+            ],
+            "additionalProperties": true
+          },
+          "impact": {
+            "type": "object",
+            "required": [
+              "impact_margin",
+              "min_required_margin",
+              "role",
+              "passes_margin",
+              "replacement_pressure"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "event_hash",
+        "baseline_source_root",
+        "intervention_root",
+        "ablation_event_root"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "subject_work_count",
+        "decisive_source_count",
+        "replaceable_or_weak_source_count",
+        "average_impact_margin",
+        "all_sources_counterfactually_removed",
+        "audit_error_count",
+        "min_impact_margin"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "claim_evidence_text_disclosed",
+        "report_uses_hashes_scores_and_work_ids"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,47 @@
+{
+  "trusted_issuers": [
+    "issuer:rdllm-registry"
+  ],
+  "issuer_keys": {
+    "issuer:rdllm-registry": "registry-secret",
+    "issuer:untrusted-self-registry": "copycat-secret"
+  },
+  "attestations": [
+    {
+      "attestation_id": "attest_maya_usage_pool_verified_001",
+      "work_id": "maya-youtube-style-pool",
+      "creator_id": "maya",
+      "claim_type": "registry_verified",
+      "issuer": "issuer:rdllm-registry",
+      "issued_at": "2026-05-29T00:00:00Z",
+      "evidence_uri": "registered://claims/maya-youtube-style-pool",
+      "evidence_hash": "b5252784167a745d73b14444de1d68c88cc1aff6d484b3ee750d272e81dd2c1e",
+      "signature": "4e4c4fd40ecc8139e37da92cbeab2a99f522a080af76969acc08e42e6a85989a",
+      "status": "active"
+    },
+    {
+      "attestation_id": "attest_arjun_provenance_verified_001",
+      "work_id": "arjun-provenance-ledger",
+      "creator_id": "arjun",
+      "claim_type": "registry_verified",
+      "issuer": "issuer:rdllm-registry",
+      "issued_at": "2026-05-29T00:00:00Z",
+      "evidence_uri": "registered://claims/arjun-provenance-ledger",
+      "evidence_hash": "3769f3a69dcc09217d8e38bf169e8ac88fa988dfb7d4daf09c7eefa7714f94d9",
+      "signature": "1f00e66a3639e43658b43e1e5c1cf4f4621da52f8b94bc7648b5e4ca2bdeb867",
+      "status": "active"
+    },
+    {
+      "attestation_id": "attest_copycat_provenance_self_001",
+      "work_id": "copycat-provenance-ledger",
+      "creator_id": "copycat",
+      "claim_type": "self_asserted",
+      "issuer": "issuer:untrusted-self-registry",
+      "issued_at": "2026-05-29T00:01:00Z",
+      "evidence_uri": "registered://claims/copycat-provenance-ledger",
+      "evidence_hash": "f2270ae8ef855d55b512a227c3f5455bc26a94a3196976dff988a393ceb9cc99",
+      "signature": "4b35d6bb120687a0ed3fc81dedf645bb7c89c955f36112d86760ebc712a087c0",
+      "status": "active"
+    }
+  ]
+}

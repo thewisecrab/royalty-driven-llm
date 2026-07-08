@@ -1,0 +1,396 @@
+{
+  "payload": {
+    "economics": {
+      "creator_pool": "0.550000",
+      "creator_pool_rate": "0.55",
+      "gross_revenue": "1.000000",
+      "shares": [
+        {
+          "attribution_basis": {
+            "citation": 1.0,
+            "output_support": 0.30337079,
+            "prompt_overlap": 0.1,
+            "retrieval": 0.35438998,
+            "text_match": 0.9,
+            "training_value": 0.9221343
+          },
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "citation_score": 1.0,
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "contribution_weight": "0.333968",
+          "creator_id": "arjun",
+          "data_value_prior": 1.1,
+          "output_support": 0.30337079,
+          "payout": "0.183682",
+          "query_relevance": 0.1,
+          "retrieval_score": 0.35438998,
+          "text_match_score": 0.9,
+          "training_value_score": 0.9221343,
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "attribution_basis": {
+            "citation": 1.0,
+            "output_support": 0.20408163,
+            "prompt_overlap": 0.02222222,
+            "retrieval": 0.04959596,
+            "text_match": 0.63333333,
+            "training_value": 0.90441756
+          },
+          "chunk_id": "lina-governance-disputes:c1",
+          "citation_score": 1.0,
+          "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+          "contribution_weight": "0.228551",
+          "creator_id": "lina",
+          "data_value_prior": 1.0,
+          "output_support": 0.20408163,
+          "payout": "0.125703",
+          "query_relevance": 0.02222222,
+          "retrieval_score": 0.04959596,
+          "text_match_score": 0.63333333,
+          "training_value_score": 0.90441756,
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "attribution_basis": {
+            "citation": 1.0,
+            "output_support": 0.33333333,
+            "prompt_overlap": 0.02325581,
+            "retrieval": 0.04504011,
+            "text_match": 0.93333333,
+            "training_value": 1.25727853
+          },
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "citation_score": 1.0,
+          "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+          "contribution_weight": "0.437481",
+          "creator_id": "maya",
+          "data_value_prior": 1.0,
+          "output_support": 0.33333333,
+          "payout": "0.240615",
+          "query_relevance": 0.02325581,
+          "retrieval_score": 0.04504011,
+          "text_match_score": 0.93333333,
+          "training_value_score": 1.25727853,
+          "work_id": "maya-youtube-style-pool"
+        }
+      ]
+    },
+    "event": {
+      "answer_hash": "069df2b36f4c12ee438a0edb55cc944c675fb5f3802cb70592907f047916ac51",
+      "event_hash": "e4c485a119b35bfb9ad1e9340ba186a4020db2540774e6b8fcd713c39cb1997f",
+      "event_id": "evt_e4c485a119b35bfb",
+      "prompt_hash": "3ff9b4d52e3ba4909f885835c6d362c80d35db9cafec55166ee62a73722aa7c6",
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1"
+    },
+    "grounding": {
+      "claims": [
+        {
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "claim": "Every royalty bearing AI answer should have a provenance record.",
+          "evidence_end_char": 64,
+          "evidence_span_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+          "evidence_start_char": 0,
+          "evidence_text": "Every royalty bearing AI answer should have a provenance record.",
+          "source_label": "S1",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "claim": "The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.",
+          "evidence_end_char": 244,
+          "evidence_span_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+          "evidence_start_char": 65,
+          "evidence_text": "The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.",
+          "source_label": "S1",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "chunk_id": "lina-governance-disputes:c1",
+          "claim": "Royalty systems need governance as much as scoring.",
+          "evidence_end_char": 51,
+          "evidence_span_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+          "evidence_start_char": 0,
+          "evidence_text": "Royalty systems need governance as much as scoring.",
+          "source_label": "S2",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "chunk_id": "lina-governance-disputes:c1",
+          "claim": "Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.",
+          "evidence_end_char": 164,
+          "evidence_span_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+          "evidence_start_char": 52,
+          "evidence_text": "Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.",
+          "source_label": "S2",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "claim": "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage.",
+          "evidence_end_char": 136,
+          "evidence_span_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+          "evidence_start_char": 0,
+          "evidence_text": "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage.",
+          "source_label": "S3",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "maya-youtube-style-pool"
+        },
+        {
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "claim": "Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.",
+          "evidence_end_char": 262,
+          "evidence_span_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+          "evidence_start_char": 137,
+          "evidence_text": "Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.",
+          "source_label": "S3",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "maya-youtube-style-pool"
+        }
+      ],
+      "report": {
+        "coverage": 1.0,
+        "policy_denials": 0,
+        "policy_status": "allowed",
+        "source_count": 3,
+        "status": "grounded",
+        "supported_claims": 6,
+        "total_claims": 6,
+        "unsupported_claims": 0
+      },
+      "sources": [
+        {
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "citation_score": 1.0,
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "contribution_weight": "0.333968",
+          "creator_id": "arjun",
+          "creator_name": "Arjun Rao",
+          "evidence_span_hashes": [
+            "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+            "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54"
+          ],
+          "jurisdiction": "GLOBAL",
+          "label": "S1",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "output_support": 0.30337079,
+          "payout": "0.183682",
+          "policy_id": "policy:arjun-provenance-ledger",
+          "policy_use": "generation",
+          "quote": "Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.",
+          "retrieval_score": 0.35438998,
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "text_match_score": 0.9,
+          "title": "Provenance Ledgers for AI Outputs",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "chunk_id": "lina-governance-disputes:c1",
+          "citation_score": 1.0,
+          "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+          "contribution_weight": "0.228551",
+          "creator_id": "lina",
+          "creator_name": "Lina Park",
+          "evidence_span_hashes": [
+            "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+            "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c"
+          ],
+          "jurisdiction": "GLOBAL",
+          "label": "S2",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "output_support": 0.20408163,
+          "payout": "0.125703",
+          "policy_id": "policy:lina-governance-disputes",
+          "policy_use": "generation",
+          "quote": "Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.",
+          "retrieval_score": 0.04959596,
+          "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+          "text_match_score": 0.63333333,
+          "title": "Creator Governance for AI Licensing",
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "citation_score": 1.0,
+          "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+          "contribution_weight": "0.437481",
+          "creator_id": "maya",
+          "creator_name": "Maya Sen",
+          "evidence_span_hashes": [
+            "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+            "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145"
+          ],
+          "jurisdiction": "GLOBAL",
+          "label": "S3",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "output_support": 0.33333333,
+          "payout": "0.240615",
+          "policy_id": "policy:maya-youtube-style-pool",
+          "policy_use": "generation",
+          "quote": "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.",
+          "retrieval_score": 0.04504011,
+          "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+          "text_match_score": 0.93333333,
+          "title": "Usage Pools for Creator Platforms",
+          "work_id": "maya-youtube-style-pool"
+        }
+      ]
+    },
+    "issued_at": "2026-05-29T17:17:54Z",
+    "issuer": "rdllm-local-demo",
+    "model": {
+      "id": "model:unspecified",
+      "route_id": "route:default",
+      "version": "unknown"
+    },
+    "privacy": {
+      "answer_disclosed": false,
+      "prompt_disclosed": false,
+      "selective_disclosure": "hash commitments expose prompt/output integrity without disclosing private prompts",
+      "source_quotes_disclosed": true
+    },
+    "protocol_version": "rdllm-attribution-receipt/v1",
+    "rights": {
+      "decisions": [
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:arjun-provenance-ledger",
+          "reasons": [
+            "permit:generation"
+          ],
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "target_id": "arjun-provenance-ledger:c1",
+          "target_type": "chunk",
+          "text_match_score": 0.9,
+          "use": "generation",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "arjun-provenance-ledger:c1",
+          "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:arjun-provenance-ledger",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+          "target_id": "arjun-provenance-ledger:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "arjun-provenance-ledger"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "lina-governance-disputes:c1",
+          "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:lina-governance-disputes",
+          "reasons": [
+            "permit:generation"
+          ],
+          "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+          "target_id": "lina-governance-disputes:c1",
+          "target_type": "chunk",
+          "text_match_score": 0.63333333,
+          "use": "generation",
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "lina-governance-disputes:c1",
+          "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:lina-governance-disputes",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+          "target_id": "lina-governance-disputes:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "lina-governance-disputes"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:maya-youtube-style-pool",
+          "reasons": [
+            "permit:generation"
+          ],
+          "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+          "target_id": "maya-youtube-style-pool:c1",
+          "target_type": "chunk",
+          "text_match_score": 0.93333333,
+          "use": "generation",
+          "work_id": "maya-youtube-style-pool"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "maya-youtube-style-pool:c1",
+          "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:maya-youtube-style-pool",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+          "target_id": "maya-youtube-style-pool:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "maya-youtube-style-pool"
+        }
+      ],
+      "policy_denials": 0,
+      "policy_status": "allowed"
+    }
+  },
+  "receipt_hash": "a4c302f4d1fc7f6214ba95d2658e7ee208ceef4d6602deaa91f9667fdf5e600c",
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "e57c54035fcafda78f70d1ee649d0be480a8753ed50cf49ef06f354cf50508fe"
+  }
+}

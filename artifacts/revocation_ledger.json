@@ -1,0 +1,288 @@
+{
+  "balances": {
+    "creator_revocable": "0.550000"
+  },
+  "events": [
+    {
+      "answer_text": "Revocable source text proves that creators can revoke future AI uses while historical royalty events remain preserved.",
+      "attribution_gap": {
+        "accessed_sources": [
+          {
+            "access_id": "srcacc_af0771117720b880",
+            "access_type": "retrieval",
+            "chunk_id": "revocable-rights-source:c1",
+            "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+            "creator_id": "creator_revocable",
+            "decision_status": "allowed",
+            "policy_allowed": true,
+            "rank": 1,
+            "registry_allowed": true,
+            "score": 0.23904572,
+            "use": "retrieval",
+            "work_id": "revocable-rights-source"
+          },
+          {
+            "access_id": "srcacc_2f9827586733bd2e",
+            "access_type": "text_match",
+            "chunk_id": "revocable-rights-source:c1",
+            "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+            "creator_id": "creator_revocable",
+            "decision_status": "allowed",
+            "policy_allowed": true,
+            "rank": 1,
+            "registry_allowed": true,
+            "score": 1.0,
+            "use": "external_attribution",
+            "work_id": "revocable-rights-source"
+          }
+        ],
+        "classifications": {
+          "cited_without_access": [],
+          "consumed_without_credit": [],
+          "paid_hidden": [],
+          "policy_withheld": [],
+          "registry_withheld": []
+        },
+        "gap_version": "rdllm-attribution-gap/v1",
+        "grounding_status": "grounded",
+        "issues": [],
+        "policy_status": "allowed",
+        "registry_status": "clear",
+        "report_hash": "fc74c5653e560667caa7e14009e8c3ea25f930faf87350061ebf82a1d86d2551",
+        "scores": {
+          "allowed_credit_coverage": 1.0,
+          "attribution_gap_rate": 0.0,
+          "citation_efficiency": 1.0,
+          "credit_efficiency": 1.0,
+          "payout_visibility": 1.0
+        },
+        "summary": {
+          "access_record_count": 2,
+          "accessed_source_count": 1,
+          "allowed_accessed_source_count": 1,
+          "cited_without_access_count": 0,
+          "consumed_without_credit_count": 0,
+          "credited_source_count": 1,
+          "escrow_accounts": [],
+          "paid_hidden_count": 0,
+          "paid_source_count": 1,
+          "policy_withheld_count": 0,
+          "registry_withheld_count": 0,
+          "visible_source_count": 1
+        },
+        "verdict": "closed"
+      },
+      "claim_support": [
+        {
+          "chunk_id": "revocable-rights-source:c1",
+          "claim": "Revocable source text proves that creators can revoke future AI uses while historical royalty events remain preserved.",
+          "evidence_end_char": 118,
+          "evidence_span_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "evidence_start_char": 0,
+          "evidence_text": "Revocable source text proves that creators can revoke future AI uses while historical royalty events remain preserved.",
+          "source_label": "S1",
+          "support_score": 0.9,
+          "supported": true,
+          "work_id": "revocable-rights-source"
+        }
+      ],
+      "creator_pool": "0.550000",
+      "creator_pool_rate": "0.55",
+      "event_hash": "e3c22b08b718090f4abc2487fe488ac4b6798382d9cd2d1749218a172850a10c",
+      "event_id": "evt_e3c22b08b718090f",
+      "gross_revenue": "1.000000",
+      "grounding_quality": {
+        "issues": [],
+        "overall_score": 1.0,
+        "quality_version": "rdllm-grounding-quality/v1",
+        "scores": {
+          "citation_integrity": 1.0,
+          "evidence_relevance": 1.0,
+          "fact_support": 1.0,
+          "payout_alignment": 1.0,
+          "policy_alignment": 1.0,
+          "source_accessibility": 1.0
+        },
+        "summary": {
+          "claim_count": 1,
+          "footer_source_count": 1,
+          "footer_span_hash_count": 1,
+          "source_count": 1,
+          "supported_claims": 1
+        },
+        "verdict": "verified"
+      },
+      "grounding_report": {
+        "coverage": 1.0,
+        "policy_denials": 0,
+        "policy_status": "allowed",
+        "registry_conflicts": 0,
+        "registry_report_hash": "",
+        "registry_status": "clear",
+        "source_count": 1,
+        "status": "grounded",
+        "supported_claims": 1,
+        "total_claims": 1,
+        "unsupported_claims": 0
+      },
+      "output": "Revocable source text proves that creators can revoke future AI uses while historical royalty events remain preserved.\n\nSources\n[S1] Revocable Rights Source - Revocable Rights Owner; chunk=revocable-rights-source:c1; uri=https://example.test/rights/revocable-source; support=1.000; text_match=1.000; hash=a37a7bf76eab.\n    Evidence: span_hashes=a37a7bf76eab. Revocable source text proves that creators can revoke future AI uses while historical royalty events remain preserved.\nGrounding: 1/1 claims supported; status=grounded.\nClaim Evidence\n[C1] S1; span=a37a7bf76eab; chars=0-118.",
+      "policy_decisions": [
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "revocable-rights-source:c1",
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:revocable-rights-source",
+          "reasons": [
+            "permit:external_attribution"
+          ],
+          "source_uri": "https://example.test/rights/revocable-source",
+          "target_id": "revocable-rights-source:c1",
+          "target_type": "chunk",
+          "text_match_score": 1.0,
+          "use": "external_attribution",
+          "work_id": "revocable-rights-source"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "revocable-rights-source:c1",
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "jurisdiction": "GLOBAL",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.0,
+          "policy_id": "policy:revocable-rights-source",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "https://example.test/rights/revocable-source",
+          "target_id": "revocable-rights-source:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "revocable-rights-source"
+        }
+      ],
+      "prompt": "Attribute the revocable source before revocation",
+      "registry_decisions": [],
+      "retrieval_hits": [
+        {
+          "chunk_id": "revocable-rights-source:c1",
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "creator_id": "creator_revocable",
+          "rank": 1,
+          "score": 0.23904572,
+          "title": "Revocable Rights Source",
+          "work_id": "revocable-rights-source"
+        }
+      ],
+      "royalty_shares": [
+        {
+          "attribution_basis": {
+            "citation": 0.0,
+            "output_support": 1.0,
+            "prompt_overlap": 0.11764706,
+            "retrieval": 0.23904572,
+            "text_match": 1.0,
+            "training_value": 1.0
+          },
+          "chunk_id": "revocable-rights-source:c1",
+          "citation_score": 0.0,
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "contribution_weight": "1",
+          "creator_id": "creator_revocable",
+          "data_value_prior": 1.0,
+          "output_support": 1.0,
+          "payout": "0.550000",
+          "query_relevance": 0.11764706,
+          "retrieval_score": 0.23904572,
+          "text_match_score": 1.0,
+          "training_value_score": 1.0,
+          "work_id": "revocable-rights-source"
+        }
+      ],
+      "source_accesses": [
+        {
+          "access_id": "srcacc_af0771117720b880",
+          "access_type": "retrieval",
+          "chunk_id": "revocable-rights-source:c1",
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "creator_id": "creator_revocable",
+          "decision_status": "allowed",
+          "matched_text_hash": "",
+          "policy_allowed": true,
+          "rank": 1,
+          "registry_allowed": true,
+          "score": 0.23904572,
+          "source_uri": "https://example.test/rights/revocable-source",
+          "title": "Revocable Rights Source",
+          "use": "retrieval",
+          "work_id": "revocable-rights-source"
+        },
+        {
+          "access_id": "srcacc_2f9827586733bd2e",
+          "access_type": "text_match",
+          "chunk_id": "revocable-rights-source:c1",
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "creator_id": "creator_revocable",
+          "decision_status": "allowed",
+          "matched_text_hash": "72d9e6770d520ba2d97c1a5abe57739f2a99771e77be7e910ef29668434ca281",
+          "policy_allowed": true,
+          "rank": 1,
+          "registry_allowed": true,
+          "score": 1.0,
+          "source_uri": "https://example.test/rights/revocable-source",
+          "title": "Revocable Rights Source",
+          "use": "external_attribution",
+          "work_id": "revocable-rights-source"
+        }
+      ],
+      "source_references": [
+        {
+          "chunk_id": "revocable-rights-source:c1",
+          "citation_score": 0.0,
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "contribution_weight": "1",
+          "creator_id": "creator_revocable",
+          "creator_name": "Revocable Rights Owner",
+          "evidence_span_hashes": [
+            "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544"
+          ],
+          "jurisdiction": "GLOBAL",
+          "label": "S1",
+          "license": "royalty-bearing",
+          "license_uri": "",
+          "output_support": 1.0,
+          "payout": "0.550000",
+          "policy_id": "policy:revocable-rights-source",
+          "policy_use": "external_attribution",
+          "quote": "Revocable source text proves that creators can revoke future AI uses while historical royalty events remain preserved.",
+          "retrieval_score": 0.23904572,
+          "source_uri": "https://example.test/rights/revocable-source",
+          "text_match_score": 1.0,
+          "title": "Revocable Rights Source",
+          "work_id": "revocable-rights-source"
+        }
+      ],
+      "text_matches": [
+        {
+          "chunk_id": "revocable-rights-source:c1",
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "creator_id": "creator_revocable",
+          "exact_score": 1.0,
+          "longest_sequence_tokens": 14,
+          "matched_text": "revocable source text proves creators revoke future ai while historical royalty events remain preserved",
+          "ngram_score": 1.0,
+          "rank": 1,
+          "score": 1.0,
+          "title": "Revocable Rights Source",
+          "work_id": "revocable-rights-source"
+        }
+      ]
+    }
+  ]
+}

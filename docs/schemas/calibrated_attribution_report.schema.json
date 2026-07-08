@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/calibrated_attribution_report.schema.json",
+  "title": "RDLLM Calibrated Attribution Confidence Report",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "event",
+    "policy",
+    "artifact_status",
+    "calibration_evidence",
+    "claims",
+    "sources",
+    "checks",
+    "issues",
+    "commitments",
+    "summary",
+    "schemas",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-calibrated-attribution-confidence/v1" },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "response_envelope_hash",
+        "source_confidence_report_hash",
+        "evidence_sufficiency_report_hash",
+        "provenance_evaluation_report_hash",
+        "decision_provenance_report_hash"
+      ]
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_calibration_cases",
+        "minimum_claim_lower_bound",
+        "minimum_footer_lower_bound",
+        "minimum_payout_lower_bound"
+      ],
+      "properties": {
+        "policy_version": { "const": "rdllm-calibrated-attribution-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L63" }
+      }
+    },
+    "artifact_status": { "type": "object" },
+    "calibration_evidence": {
+      "type": "object",
+      "required": [
+        "benchmark_profile",
+        "benchmark_case_count",
+        "benchmark_case_root",
+        "calibration_method",
+        "metric_bounds",
+        "global_lower_bounds",
+        "calibration_evidence_hash"
+      ]
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_index",
+          "claim_hash",
+          "source_label",
+          "calibrated_lower_bound",
+          "release_mode",
+          "claim_calibration_hash"
+        ]
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "work_id",
+          "calibrated_footer_lower_bound",
+          "calibrated_payout_lower_bound",
+          "footer_mode",
+          "payout_mode",
+          "source_calibration_hash"
+        ]
+      }
+    },
+    "checks": { "type": "object" },
+    "issues": { "type": "array" },
+    "commitments": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "claim_count",
+        "source_count",
+        "calibration_case_count",
+        "issue_count"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L63" }
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["calibrated_attribution_report"]
+    },
+    "privacy": { "type": "object" },
+    "report_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/answer_provenance_card.schema.json",
+  "title": "RDLLM Answer Provenance Card",
+  "type": "object",
+  "required": [
+    "card_version",
+    "issuer",
+    "created_at",
+    "event",
+    "grounding",
+    "sources",
+    "claims",
+    "footer_checks",
+    "commitments",
+    "verification",
+    "privacy",
+    "card_hash",
+    "signature"
+  ],
+  "properties": {
+    "card_version": {
+      "const": "rdllm-answer-provenance-card/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "answer_hash",
+        "rendered_output_hash",
+        "receipt_hash",
+        "trace_hash"
+      ],
+      "additionalProperties": true
+    },
+    "grounding": {
+      "type": "object",
+      "required": [
+        "status",
+        "quality_verdict",
+        "quality_score",
+        "attribution_gap_verdict",
+        "policy_status",
+        "registry_status",
+        "source_count",
+        "claim_count",
+        "supported_claim_count",
+        "unsupported_claim_count"
+      ],
+      "additionalProperties": true
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "title",
+          "creator_id",
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "content_hash",
+          "source_entry_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_index",
+          "claim_hash",
+          "source_label",
+          "support_score",
+          "supported",
+          "evidence_span_hash",
+          "claim_entry_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "footer_checks": {
+      "type": "object",
+      "required": [
+        "source_labels",
+        "expected_source_labels",
+        "source_labels_match",
+        "omitted_source_labels",
+        "unexpected_source_labels",
+        "attribution_suppression_detected",
+        "attribution_suppression_count",
+        "claim_span_prefixes",
+        "expected_claim_span_prefixes",
+        "claim_span_prefixes_match"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "source_root",
+        "claim_root",
+        "footer_checks_hash",
+        "rendered_output_hash",
+        "receipt_hash",
+        "trace_hash"
+      ],
+      "additionalProperties": true
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "receipt_bound",
+        "trace_bound",
+        "sources_match_visible_footer",
+        "claims_match_visible_footer",
+        "requires_private_prompt",
+        "requires_private_source_text",
+        "public_user_can_verify_footer"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_quote_text_disclosed",
+        "claim_text_disclosed",
+        "evidence_text_disclosed",
+        "full_receipt_payload_disclosed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "card_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

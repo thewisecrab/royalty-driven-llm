@@ -1,0 +1,349 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/production_readiness_repository_report.schema.json",
+  "title": "RDLLM Repository Production Readiness Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "errors",
+    "summary",
+    "profile_report",
+    "profile_matrix",
+    "acceptance_matrix",
+    "repository_report_hash"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-production-readiness-repository-report/v1"
+    },
+    "status": {
+      "enum": ["ready", "blocked"]
+    },
+    "errors": {
+      "$ref": "#/$defs/error_array"
+    },
+    "summary": {
+      "$ref": "#/$defs/summary"
+    },
+    "profile_report": {
+      "type": "object",
+      "required": ["schema", "profile_hash", "summary", "control_rows", "blocked_controls"],
+      "properties": {
+        "schema": {
+          "const": "rdllm-production-readiness-report/v1"
+        }
+      },
+      "additionalProperties": true
+    },
+    "profile_matrix": {
+      "$ref": "#/$defs/profile_matrix"
+    },
+    "acceptance_matrix": {
+      "$ref": "#/$defs/acceptance_matrix"
+    },
+    "repository_report_hash": {
+      "$ref": "#/$defs/hash64"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "ready" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "maxItems": 0 },
+          "summary": {
+            "properties": {
+              "profile_status": { "const": "ready" },
+              "profile_matrix_status": { "const": "passed" },
+              "profile_matrix_profile_count": { "const": 5 },
+              "acceptance_matrix_status": { "const": "passed" },
+              "acceptance_matrix_operator_template_count": { "const": 5 },
+              "acceptance_matrix_passed_count": { "const": 5 },
+              "acceptance_matrix_production_acceptance_allowed_count": { "const": 5 },
+              "production_grade_claim_allowed": { "const": true }
+            }
+          },
+          "profile_matrix": {
+            "properties": {
+              "status": { "const": "passed" },
+              "errors": { "maxItems": 0 },
+              "summary": {
+                "properties": {
+                  "profile_count": { "const": 5 },
+                  "direct_settlement_profile_count": { "minimum": 1 },
+                  "no_payment_profile_count": { "minimum": 1 },
+                  "public_sector_profile_count": { "minimum": 2 }
+                }
+              }
+            }
+          },
+          "acceptance_matrix": {
+            "properties": {
+              "status": { "const": "passed" },
+              "errors": { "maxItems": 0 },
+              "summary": {
+                "properties": {
+                  "operator_template_count": { "const": 5 },
+                  "passed_count": { "const": 5 },
+                  "failed_count": { "const": 0 },
+                  "production_acceptance_allowed_count": { "const": 5 },
+                  "direct_settlement_template_count": { "minimum": 1 },
+                  "no_direct_settlement_template_count": { "minimum": 1 },
+                  "public_sector_template_count": { "minimum": 2 },
+                  "runtime_checked": { "const": true }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "blocked" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "minItems": 1 }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "acceptance_matrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "errors", "summary", "rows"],
+      "properties": {
+        "status": { "enum": ["passed", "failed"] },
+        "errors": { "$ref": "#/$defs/error_array" },
+        "summary": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "operator_template_count",
+            "passed_count",
+            "failed_count",
+            "operator_templates",
+            "settlement_modes",
+            "direct_settlement_template_count",
+            "no_direct_settlement_template_count",
+            "public_sector_template_count",
+            "production_acceptance_allowed_count",
+            "runtime_checked"
+          ],
+          "properties": {
+            "operator_template_count": { "type": "integer", "minimum": 0 },
+            "passed_count": { "type": "integer", "minimum": 0 },
+            "failed_count": { "type": "integer", "minimum": 0 },
+            "operator_templates": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/operator_template" },
+              "uniqueItems": true
+            },
+            "settlement_modes": {
+              "type": "array",
+              "items": {
+                "enum": ["escrow_only", "instruction_only", "processor_attested"]
+              },
+              "uniqueItems": true
+            },
+            "direct_settlement_template_count": { "type": "integer", "minimum": 0 },
+            "no_direct_settlement_template_count": { "type": "integer", "minimum": 0 },
+            "public_sector_template_count": { "type": "integer", "minimum": 0 },
+            "production_acceptance_allowed_count": { "type": "integer", "minimum": 0 },
+            "runtime_checked": { "type": "boolean" }
+          }
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/acceptance_row" }
+        }
+      }
+    },
+    "acceptance_row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "operator_template",
+        "status",
+        "acceptance_status",
+        "acceptance_verification_status",
+        "production_acceptance_decision",
+        "settlement_mode",
+        "direct_creator_settlement_allowed",
+        "public_sector_use_supported",
+        "source_grounding_acceptance_status",
+        "audit_response_binding_status",
+        "recovery_verification_status"
+      ],
+      "properties": {
+        "operator_template": { "$ref": "#/$defs/operator_template" },
+        "status": { "enum": ["passed", "failed", "unknown"] },
+        "acceptance_status": { "type": "string" },
+        "acceptance_verification_status": { "type": "string" },
+        "production_acceptance_decision": { "enum": ["allow", "block", "unknown"] },
+        "settlement_mode": { "type": "string" },
+        "direct_creator_settlement_allowed": { "type": "boolean" },
+        "public_sector_use_supported": { "type": "boolean" },
+        "source_grounding_acceptance_status": { "type": "string" },
+        "audit_response_binding_status": { "type": "string" },
+        "recovery_verification_status": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": { "const": "passed" }
+            },
+            "required": ["status"]
+          },
+          "then": {
+            "properties": {
+              "acceptance_status": { "const": "ready" },
+              "acceptance_verification_status": { "const": "passed" },
+              "production_acceptance_decision": { "const": "allow" },
+              "source_grounding_acceptance_status": { "const": "passed" },
+              "audit_response_binding_status": { "const": "passed" },
+              "recovery_verification_status": { "const": "passed" }
+            }
+          }
+        }
+      ]
+    },
+    "error_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "hash64": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "operator_template": {
+      "enum": ["company", "government", "individual", "institution", "public_sector"]
+    },
+    "profile_matrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "errors", "summary", "profiles"],
+      "properties": {
+        "status": { "enum": ["passed", "failed"] },
+        "errors": { "$ref": "#/$defs/error_array" },
+        "summary": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "profile_count",
+            "operator_types",
+            "settlement_modes",
+            "direct_settlement_profile_count",
+            "no_payment_profile_count",
+            "public_sector_profile_count"
+          ],
+          "properties": {
+            "profile_count": { "type": "integer", "minimum": 0 },
+            "operator_types": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/operator_template" },
+              "uniqueItems": true
+            },
+            "settlement_modes": {
+              "type": "array",
+              "items": {
+                "enum": ["escrow_only", "instruction_only", "processor_attested"]
+              },
+              "uniqueItems": true
+            },
+            "direct_settlement_profile_count": { "type": "integer", "minimum": 0 },
+            "no_payment_profile_count": { "type": "integer", "minimum": 0 },
+            "public_sector_profile_count": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "profiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+              "path",
+              "status",
+              "operator_type",
+              "settlement_mode",
+              "direct_creator_settlement_allowed",
+              "public_sector_use_supported",
+              "profile_hash"
+            ],
+            "properties": {
+              "path": { "type": "string" },
+              "status": { "enum": ["ready", "blocked"] },
+              "operator_type": { "$ref": "#/$defs/operator_template" },
+              "settlement_mode": {
+                "enum": ["escrow_only", "instruction_only", "processor_attested"]
+              },
+              "direct_creator_settlement_allowed": { "type": "boolean" },
+              "public_sector_use_supported": { "type": "boolean" },
+              "profile_hash": { "$ref": "#/$defs/hash64" }
+            }
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "operator_document_count",
+        "artifact_gate_count",
+        "profile_control_count",
+        "profile_status",
+        "profile_matrix_status",
+        "profile_matrix_profile_count",
+        "acceptance_matrix_status",
+        "acceptance_matrix_operator_template_count",
+        "acceptance_matrix_passed_count",
+        "acceptance_matrix_production_acceptance_allowed_count",
+        "settlement_mode",
+        "direct_payout_enabled",
+        "payment_processor_attested",
+        "production_grade_claim_allowed",
+        "direct_creator_settlement_allowed",
+        "public_sector_use_supported"
+      ],
+      "properties": {
+        "operator_document_count": { "type": "integer", "minimum": 0 },
+        "artifact_gate_count": { "type": "integer", "minimum": 0 },
+        "profile_control_count": { "type": "integer", "minimum": 1 },
+        "profile_status": { "enum": ["ready", "blocked"] },
+        "profile_matrix_status": { "enum": ["passed", "failed"] },
+        "profile_matrix_profile_count": { "type": "integer", "minimum": 0 },
+        "acceptance_matrix_status": { "enum": ["passed", "failed"] },
+        "acceptance_matrix_operator_template_count": { "type": "integer", "minimum": 0 },
+        "acceptance_matrix_passed_count": { "type": "integer", "minimum": 0 },
+        "acceptance_matrix_production_acceptance_allowed_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "settlement_mode": {
+          "type": ["string", "null"],
+          "enum": ["processor_attested", "instruction_only", "escrow_only", null]
+        },
+        "direct_payout_enabled": { "type": ["boolean", "null"] },
+        "payment_processor_attested": { "type": ["boolean", "null"] },
+        "production_grade_claim_allowed": { "type": "boolean" },
+        "direct_creator_settlement_allowed": { "type": "boolean" },
+        "public_sector_use_supported": { "type": "boolean" }
+      }
+    }
+  }
+}

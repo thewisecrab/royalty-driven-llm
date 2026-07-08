@@ -1,0 +1,129 @@
+{
+  "payload": {
+    "economics": {
+      "creator_pool": "0.550000",
+      "creator_pool_rate": "0.55",
+      "gross_revenue": "1.000000",
+      "shares": [
+        {
+          "attribution_basis": {
+            "rights_conflict_escrow": 1.0
+          },
+          "chunk_id": "escrow:rights_conflict",
+          "citation_score": 0.0,
+          "content_hash": "703c03f93fabe1a5d2e0637a9f6bcee9757d1a01e392f89f50042d048971690b",
+          "contribution_weight": "1",
+          "creator_id": "rights_conflict_escrow",
+          "data_value_prior": 0.0,
+          "output_support": 0.0,
+          "payout": "0.550000",
+          "query_relevance": 0.0,
+          "retrieval_score": 0.0,
+          "text_match_score": 0.0,
+          "training_value_score": 0.0,
+          "work_id": "rights_conflict"
+        }
+      ]
+    },
+    "event": {
+      "answer_hash": "2ddb9718d4c702437c9aefd16babe47c42e38dd87ac0d56280b75d063e91e3d5",
+      "event_hash": "7c6f6519bd37775664e0906d286c7e3cf3c6c3f4dbd5ca5b1fc98c7782106a9e",
+      "event_id": "evt_7c6f6519bd377756",
+      "prompt_hash": "9b60743eb560fd0a449d3805c2e5b2f980775091d4f55f78e645c692be019e9c",
+      "rendered_output_hash": "4baf904873bfdef2bc9ac560c01146e64602bab7445f5e06538b3989b3a9db4e"
+    },
+    "grounding": {
+      "claims": [
+        {
+          "chunk_id": "",
+          "claim": "Reserved source text can be indexed for retrieval but cannot be generated or externally attributed without a separate license.",
+          "evidence_end_char": -1,
+          "evidence_span_hash": "",
+          "evidence_start_char": -1,
+          "evidence_text": "",
+          "source_label": "",
+          "support_score": 0.0,
+          "supported": false,
+          "work_id": ""
+        }
+      ],
+      "report": {
+        "coverage": 0.0,
+        "policy_denials": 1,
+        "policy_status": "blocked",
+        "source_count": 0,
+        "status": "rights_blocked",
+        "supported_claims": 0,
+        "total_claims": 1,
+        "unsupported_claims": 1
+      },
+      "sources": []
+    },
+    "issued_at": "2026-05-29T17:17:54Z",
+    "issuer": "rdllm-local-demo",
+    "model": {
+      "id": "model:unspecified",
+      "route_id": "route:default",
+      "version": "unknown"
+    },
+    "privacy": {
+      "answer_disclosed": false,
+      "prompt_disclosed": false,
+      "selective_disclosure": "hash commitments expose prompt/output integrity without disclosing private prompts",
+      "source_quotes_disclosed": true
+    },
+    "protocol_version": "rdllm-attribution-receipt/v1",
+    "rights": {
+      "decisions": [
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": false,
+          "chunk_id": "reserved-text:c1",
+          "content_hash": "1e126c1db288369d58ab6b52bac1c6438b03fb614e19ef347470fb5dc810e295",
+          "jurisdiction": "GLOBAL",
+          "license": "retrieval-only-royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.55,
+          "policy_id": "policy:reserved-text",
+          "reasons": [
+            "deny:prohibited_use:generation",
+            "deny:not_permitted_use:generation"
+          ],
+          "source_uri": "registered://works/reserved-text#reserved-text:c1",
+          "target_id": "reserved-text:c1",
+          "target_type": "chunk",
+          "text_match_score": 1.0,
+          "use": "generation",
+          "work_id": "reserved-text"
+        },
+        {
+          "actual_creator_pool_rate": 0.55,
+          "allowed": true,
+          "chunk_id": "reserved-text:c1",
+          "content_hash": "1e126c1db288369d58ab6b52bac1c6438b03fb614e19ef347470fb5dc810e295",
+          "jurisdiction": "GLOBAL",
+          "license": "retrieval-only-royalty-bearing",
+          "license_uri": "",
+          "minimum_creator_pool_rate": 0.55,
+          "policy_id": "policy:reserved-text",
+          "reasons": [
+            "permit:retrieval"
+          ],
+          "source_uri": "registered://works/reserved-text#reserved-text:c1",
+          "target_id": "reserved-text:c1",
+          "target_type": "chunk",
+          "use": "retrieval",
+          "work_id": "reserved-text"
+        }
+      ],
+      "policy_denials": 1,
+      "policy_status": "blocked"
+    }
+  },
+  "receipt_hash": "77d83e0833c093b1eca619aedeb256c695f9e221366051d2ed69effb9e432509",
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "051e6660733d9d2f8b012856af33f3ecf60f06e8d7e12191619fd908dd13acc9"
+  }
+}

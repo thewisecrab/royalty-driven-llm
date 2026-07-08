@@ -1,0 +1,87 @@
+{
+  "attribution_gap": {
+    "report_hash": "dd92b532d35a42daf53be3fed8c749d1b4e9f949798d6b4c25638aecdc8798fe",
+    "summary": {
+      "access_record_count": 2,
+      "accessed_source_count": 1,
+      "allowed_accessed_source_count": 0,
+      "cited_without_access_count": 0,
+      "consumed_without_credit_count": 0,
+      "credited_source_count": 1,
+      "escrow_accounts": [
+        "rights_conflict_escrow"
+      ],
+      "paid_hidden_count": 0,
+      "paid_source_count": 0,
+      "policy_withheld_count": 1,
+      "registry_withheld_count": 0,
+      "visible_source_count": 0
+    },
+    "verdict": "escrowed"
+  },
+  "event": {
+    "answer_hash": "2ddb9718d4c702437c9aefd16babe47c42e38dd87ac0d56280b75d063e91e3d5",
+    "event_hash": "ba500959cce35f395b22f84b36454684258582da7ea26913c1e39aa553b27f4f",
+    "event_id": "evt_ba500959cce35f39",
+    "prompt_hash": "9b60743eb560fd0a449d3805c2e5b2f980775091d4f55f78e645c692be019e9c",
+    "rendered_output_hash": "4baf904873bfdef2bc9ac560c01146e64602bab7445f5e06538b3989b3a9db4e"
+  },
+  "grounding_quality": {
+    "issues": [],
+    "overall_score": 1.0,
+    "quality_version": "rdllm-grounding-quality/v1",
+    "scores": {
+      "citation_integrity": null,
+      "evidence_relevance": null,
+      "fact_support": null,
+      "payout_alignment": 1.0,
+      "policy_alignment": 1.0,
+      "source_accessibility": null
+    },
+    "summary": {
+      "claim_count": 1,
+      "footer_source_count": 0,
+      "footer_span_hash_count": 0,
+      "source_count": 0,
+      "supported_claims": 0
+    },
+    "verdict": "blocked_by_policy"
+  },
+  "grounding_report": {
+    "coverage": 0.0,
+    "policy_denials": 1,
+    "policy_status": "blocked",
+    "registry_conflicts": 0,
+    "registry_report_hash": "",
+    "registry_status": "clear",
+    "source_count": 0,
+    "status": "rights_blocked",
+    "supported_claims": 0,
+    "total_claims": 1,
+    "unsupported_claims": 1
+  },
+  "issued_at": "2026-05-29T18:16:31Z",
+  "issuer": "rdllm-local-demo",
+  "model": {
+    "id": "rdllm-reference-python",
+    "route_id": "route:restricted",
+    "version": "0.1.0"
+  },
+  "protocol_version": "rdllm-attribution-receipt/v1",
+  "receipt_hash": "c37080fd4652824ab0dbdf2f16ba8df9af57a81132d5c18de6e0fc73ed81523a",
+  "registry": {
+    "registry_conflicts": 0,
+    "registry_report_hash": "",
+    "registry_status": "clear"
+  },
+  "rights": {
+    "policy_denials": 1,
+    "policy_status": "blocked"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "f0dbef1ecb7cc19f5140ce1da5636c4e4d849a732500b1f6f5488ff698bc6f14"
+  },
+  "sources": []
+}

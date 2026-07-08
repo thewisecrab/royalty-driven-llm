@@ -1,0 +1,263 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/consent_revocation_propagation.schema.json",
+  "title": "RDLLM Consent Revocation Propagation Audit",
+  "type": "object",
+  "required": [
+    "propagation_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "rights_event_rows",
+    "propagation_rows",
+    "future_use_rows",
+    "historical_event_rows",
+    "downstream_notice_rows",
+    "coverage_gaps",
+    "checks",
+    "commitments",
+    "schemas",
+    "summary",
+    "privacy",
+    "consent_revocation_propagation_hash",
+    "signature"
+  ],
+  "properties": {
+    "propagation_version": {
+      "const": "rdllm-consent-revocation-propagation/v1"
+    },
+    "issuer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "target_certification_level",
+        "minimum_input_level",
+        "max_propagation_seconds",
+        "required_surfaces",
+        "future_revoked_use_action",
+        "historical_event_policy",
+        "downstream_notice_policy"
+      ],
+      "properties": {
+        "target_certification_level": {
+          "const": "RDLLM-L118"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L117"
+        },
+        "max_propagation_seconds": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "required_surfaces": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "rights_event_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "event_id",
+          "event_type",
+          "effective_at",
+          "source_id",
+          "work_id_hash",
+          "creator_id_hash",
+          "content_hash",
+          "event_link_hash",
+          "effective_time_present",
+          "policy_hash_changed_or_revoked",
+          "rights_event_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "propagation_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "propagation_id",
+          "event_id",
+          "surface",
+          "action",
+          "status",
+          "completed_at",
+          "latency_seconds",
+          "within_sla",
+          "evidence_hash",
+          "propagated",
+          "propagation_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "future_use_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "future_use_id",
+          "event_id",
+          "used_at",
+          "use_type",
+          "after_effective_time",
+          "outcome",
+          "settlement_action",
+          "source_selected",
+          "direct_payout",
+          "blocked_or_escrowed_after_revocation",
+          "future_use_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "historical_event_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "historical_id",
+          "event_id",
+          "usage_event_hash",
+          "used_at",
+          "before_effective_time",
+          "historical_event_preserved",
+          "rewritten",
+          "historical_event_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "downstream_notice_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "notice_id",
+          "event_id",
+          "downstream_provider_hash",
+          "notice_sent_at",
+          "acknowledged_at",
+          "status",
+          "notice_within_sla",
+          "ack_within_sla",
+          "acknowledgement_hash",
+          "acknowledged",
+          "downstream_notice_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "required": [
+        "missing_surface_rows",
+        "missing_downstream_acknowledgements"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "rights_event_root",
+        "propagation_root",
+        "future_use_root",
+        "historical_event_root",
+        "downstream_notice_root",
+        "schema"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "consent_revocation_propagation"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "rights_event_count",
+        "propagation_row_count",
+        "future_use_row_count",
+        "historical_event_count",
+        "downstream_notice_count",
+        "missing_surface_event_count",
+        "missing_downstream_acknowledgement_count",
+        "max_observed_latency_seconds"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "ready",
+            "failed"
+          ]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L118"
+        },
+        "minimum_input_level": {
+          "const": "RDLLM-L117"
+        }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_prompt_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_source_text_disclosed",
+        "raw_creator_identity_disclosed",
+        "raw_payment_account_disclosed",
+        "public_report_uses_hashes_times_states_and_surface_names"
+      ],
+      "additionalProperties": true
+    },
+    "consent_revocation_propagation_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

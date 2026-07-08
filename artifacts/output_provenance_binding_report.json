@@ -1,0 +1,230 @@
+{
+  "artifact_bindings": {
+    "artifact_binding_root": "05256f40e6f4ea7bac5e39f6c6c3bac5bd874e0e4b31b92f913261ab1da861c2",
+    "artifact_count": 6,
+    "bindings": [
+      {
+        "artifact_type": "rdllm-proof-carrying-response/v1",
+        "binding_hash": "bf50ec21ca9da3b0dbc91ab6391ec2a04478b7e33e09637d798beacad6c8c11c",
+        "declared_hash": "e651c5ed4d1069bcf624a4b04c7cda35fa01518f435ff0e063c6b9b31de58ed4",
+        "hash_reproducible": true,
+        "name": "proof_carrying_response",
+        "payload_hash": "847a6e66473edcee58b6a2335f1a681d48726a3a790b67aa5c1da7af8f080130"
+      },
+      {
+        "artifact_type": "rdllm-serving-gateway-report/v1",
+        "binding_hash": "104a340d31a1b02cb1e76aecd5cc065ef17668dcde678d99e12e6181211836ae",
+        "declared_hash": "e610b412a692e607ad0b5b3c3da2c53fa46954d3cea66adead9958f3dc1df82d",
+        "hash_reproducible": true,
+        "name": "serving_gateway_report",
+        "payload_hash": "bedd4944f2fae33c6d002b80551d093549bd6b5163eb7eb17ecade21990b1afe"
+      },
+      {
+        "artifact_type": "rdllm-attribution-capsule/v1",
+        "binding_hash": "912d36c849c08d45464f7ee2ecb3c017f50b8cf97415990ae4fb8a3f08ecf366",
+        "declared_hash": "ed1f87386630aef7a418af4e4d6bf077e519bfa1661ff1579c8c1409b072d3be",
+        "hash_reproducible": true,
+        "name": "attribution_capsule",
+        "payload_hash": "acf2817d854c9cd0e408cdade0e966aec3bc2a569804a6264179101967d1cd8d"
+      },
+      {
+        "artifact_type": "rdllm-watchtower-challenge-settlement-report/v1",
+        "binding_hash": "f15d674bc48655a9d434a610dc6d5d6323de86788960efde813853a6a0ef2a2b",
+        "declared_hash": "776da742308aeabc71b281e1b88fb38b60f7644133f046c1af8cc454f3a32cd7",
+        "hash_reproducible": true,
+        "name": "watchtower_challenge_settlement_report",
+        "payload_hash": "0c02f3bc8770ea9ff33d527d2f847fb93b729b751da17a7708b93deb4354c8db"
+      },
+      {
+        "artifact_type": "rdllm-provider-attribution-card/v1",
+        "binding_hash": "6b544856630eef88c31960a89a7de570fc879ad431c0979b15e9f2a3e829794a",
+        "declared_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+        "hash_reproducible": true,
+        "name": "provider_attribution_card",
+        "payload_hash": "4b5559fda1ff496ff9c85b4fd9c264963da95f686ca32f4bde0cc337cc1d0d48"
+      },
+      {
+        "artifact_type": "rdllm-certification/v1",
+        "binding_hash": "82d0e8ea094a3eae73d6501abbddc172d0ad29d064425b01f77a95e3dd10b0d3",
+        "declared_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+        "hash_reproducible": true,
+        "name": "certification_report",
+        "payload_hash": "c90d268a46ee16f3059c1597b1524eebf002393cae74ec2d4a74f273c5fc3495"
+      }
+    ]
+  },
+  "binding_report_hash": "471cd005df0c111a7c113e86dc9f18d298339c5ca1d0a396e07edc039455532d",
+  "binding_subject": {
+    "attribution_capsule_hash": "ed1f87386630aef7a418af4e4d6bf077e519bfa1661ff1579c8c1409b072d3be",
+    "attribution_footer_hash": "c9378129a0faa40c44cf389021b4bb08465e5b8d8c3d60c9b7f8b0bde5743276",
+    "certification_highest_level": "RDLLM-L131",
+    "certification_report_hash": "0e332ea7e38ecca87ebeee573f0735c4b7c151f1a843e83e7db8ba45cf8fcbb1",
+    "copied_output_hash": "dad739af040ffff4288e04fc4178287c632a3509e89a107feefff9882344cb5b",
+    "gateway_delivered_output_hash": "dad739af040ffff4288e04fc4178287c632a3509e89a107feefff9882344cb5b",
+    "gateway_delivery_status": "released",
+    "proof_delivery_status": "released",
+    "proof_release_decision": "emit",
+    "proof_response_hash": "e651c5ed4d1069bcf624a4b04c7cda35fa01518f435ff0e063c6b9b31de58ed4",
+    "provider_card_hash": "0398c33b05576334b856a44b3089a1093bcf0c4ada39656cb40fb504810eeba6",
+    "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+    "serving_gateway_report_hash": "e610b412a692e607ad0b5b3c3da2c53fa46954d3cea66adead9958f3dc1df82d",
+    "subject_hash": "4970e1ffd9dd72f411f8892d97aa1ada22ea440c12f9d144a668532790065d4b",
+    "watchtower_challenge_settlement_report_hash": "776da742308aeabc71b281e1b88fb38b60f7644133f046c1af8cc454f3a32cd7",
+    "watchtower_direct_settlement_ready": true,
+    "watchtower_status": "ready",
+    "watchtower_target_certification_level": "RDLLM-L74"
+  },
+  "checks": {
+    "artifact_hashes_reproducible": true,
+    "capsule_has_content_credential_assertion": true,
+    "certification_level_at_least_l74": true,
+    "content_credentials_bind_output_proof_capsule_and_watchtower": true,
+    "durable_signals_cover_output_and_proof": true,
+    "gateway_delivered_bound_output": true,
+    "proof_response_released": true,
+    "provider_declares_output_provenance_channel": true,
+    "provider_declares_output_provenance_surface": true,
+    "public_report_has_no_private_field_names": true,
+    "public_verification_surfaces_declared": true,
+    "watchtower_settlement_ready": true
+  },
+  "commitments": {
+    "artifact_binding_root": "05256f40e6f4ea7bac5e39f6c6c3bac5bd874e0e4b31b92f913261ab1da861c2",
+    "content_credential_root": "741f0977abc7f61cc86ec07d81fd2d9cb918ec71590ed9b9f8b8e23886a5f7f3",
+    "durable_signal_root": "c71f29472a113f613e0d27071e0d08f150b3193286de7cf0201783a215b88f5b",
+    "public_verification_root": "9817d562b448584a3ea442bee1ee56c90ed8a0bd3077777bb1dc5045f95d2e6a",
+    "subject_hash": "4970e1ffd9dd72f411f8892d97aa1ada22ea440c12f9d144a668532790065d4b"
+  },
+  "content_credential_rows": [
+    {
+      "ai_generated": true,
+      "assertion_label": "org.rdllm.attribution.v1",
+      "bound_attribution_capsule_hash": "ed1f87386630aef7a418af4e4d6bf077e519bfa1661ff1579c8c1409b072d3be",
+      "bound_output_hash": "dad739af040ffff4288e04fc4178287c632a3509e89a107feefff9882344cb5b",
+      "bound_proof_response_hash": "e651c5ed4d1069bcf624a4b04c7cda35fa01518f435ff0e063c6b9b31de58ed4",
+      "bound_rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "bound_watchtower_report_hash": "776da742308aeabc71b281e1b88fb38b60f7644133f046c1af8cc454f3a32cd7",
+      "credential_payload_hash": "701b9d8737635fda6a23d3a5211c96143479deff34ef6d2a9eae56a7d21a5833",
+      "credential_row_hash": "741f0977abc7f61cc86ec07d81fd2d9cb918ec71590ed9b9f8b8e23886a5f7f3",
+      "manifest_id": "rdllm-cc-dad739af040ffff4",
+      "manifest_profile": "c2pa-compatible-rdllm-attribution-assertion/v1",
+      "not_a_tdm_rights_assertion": true,
+      "provenance_pointer": "/.well-known/rdllm/attribution-capsule.json",
+      "raw_output_text_disclosed": false,
+      "signature": "3389e793953f242a7f260ca4a5d411c23ee575f30a9f0736acee5f20dcdec90a",
+      "signature_algorithm": "HMAC-SHA256",
+      "subject_hash": "4970e1ffd9dd72f411f8892d97aa1ada22ea440c12f9d144a668532790065d4b",
+      "verified": true
+    }
+  ],
+  "created_at": "2026-05-31T00:00:00Z",
+  "durable_signal_rows": [
+    {
+      "bound_output_hash": "dad739af040ffff4288e04fc4178287c632a3509e89a107feefff9882344cb5b",
+      "bound_proof_response_hash": "e651c5ed4d1069bcf624a4b04c7cda35fa01518f435ff0e063c6b9b31de58ed4",
+      "confidence": "1.000000",
+      "purpose": "credential payload binds output hash to RDLLM proof root",
+      "raw_output_text_disclosed": false,
+      "signal_id": "cb3882955fb07acbf2160043015fae9a2992dcb3c4411028f8d280cb22dd536e",
+      "signal_present": true,
+      "signal_row_hash": "ef32cc99ebc4bfaff8103b3ac61221dd8f73dad299fa4d7e5a32f24dc174942d",
+      "signal_type": "content_credential",
+      "subject_hash": "4970e1ffd9dd72f411f8892d97aa1ada22ea440c12f9d144a668532790065d4b",
+      "verifier": "cryptographic_manifest"
+    },
+    {
+      "bound_output_hash": "dad739af040ffff4288e04fc4178287c632a3509e89a107feefff9882344cb5b",
+      "bound_proof_response_hash": "e651c5ed4d1069bcf624a4b04c7cda35fa01518f435ff0e063c6b9b31de58ed4",
+      "confidence": "1.000000",
+      "purpose": "watermark detector result is hash-bound without exposing text",
+      "raw_output_text_disclosed": false,
+      "signal_id": "e2ccbb3fe1300db530bb54ea2a42ff698050df733ad68090d07d10bd772e2ca5",
+      "signal_present": true,
+      "signal_row_hash": "ce1af15bbe805a6a9ab4d4a7a3efaf3c70d6dee2d279f8e01b5c23cb50df9ee5",
+      "signal_type": "watermark_commitment",
+      "subject_hash": "4970e1ffd9dd72f411f8892d97aa1ada22ea440c12f9d144a668532790065d4b",
+      "verifier": "provider_watermark_or_detector"
+    },
+    {
+      "bound_output_hash": "dad739af040ffff4288e04fc4178287c632a3509e89a107feefff9882344cb5b",
+      "bound_proof_response_hash": "e651c5ed4d1069bcf624a4b04c7cda35fa01518f435ff0e063c6b9b31de58ed4",
+      "confidence": "1.000000",
+      "purpose": "copy/repost search can match output hash or fuzzy fingerprint",
+      "raw_output_text_disclosed": false,
+      "signal_id": "a881baa6e3c2b376479c9f8bf2929ce9f889aa6425dde2708289e3511eef072d",
+      "signal_present": true,
+      "signal_row_hash": "f85696156841f6ca199f85484dca508aed119153b001d114314040bb9aad9ad1",
+      "signal_type": "fingerprint_registry",
+      "subject_hash": "4970e1ffd9dd72f411f8892d97aa1ada22ea440c12f9d144a668532790065d4b",
+      "verifier": "copy_detection_fingerprint"
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "exported_output_requires": [
+      "proof_carrying_response_hash",
+      "serving_gateway_output_hash",
+      "attribution_capsule_hash",
+      "watchtower_challenge_settlement_hash",
+      "content_credential_assertion",
+      "watermark_or_fingerprint_signal",
+      "public_verification_surface"
+    ],
+    "minimum_watchtower_level": "RDLLM-L74",
+    "profile": "rdllm-output-provenance-binding-policy/v1",
+    "raw_output_text_must_not_be_embedded": true,
+    "target_certification_level": "RDLLM-L75"
+  },
+  "privacy": {
+    "private_field_findings": [],
+    "prompt_text_disclosed": false,
+    "raw_output_text_disclosed": false,
+    "report_uses_hashes_credentials_and_public_verification_paths": true,
+    "source_text_disclosed": false
+  },
+  "public_verification_rows": [
+    {
+      "bound_subject_hash": "4970e1ffd9dd72f411f8892d97aa1ada22ea440c12f9d144a668532790065d4b",
+      "path": "/.well-known/rdllm/output-provenance-binding-report.json",
+      "required": true,
+      "surface": "well_known",
+      "verification_row_hash": "f6b38728714f3a11dacd3cd5c7b4ea2b6bcbf692fb6948a43b2885fe1d5826fc",
+      "verifier_command": "verify-output-provenance-binding-report"
+    },
+    {
+      "bound_subject_hash": "4970e1ffd9dd72f411f8892d97aa1ada22ea440c12f9d144a668532790065d4b",
+      "path": "embedded-rdllm-attribution-capsule-marker",
+      "required": true,
+      "surface": "response_footer",
+      "verification_row_hash": "ebb793244a5d360b264b6984420ca5361b63735eaf288e695c5365145f735b3b",
+      "verifier_command": "verify-proof-carrying-response"
+    }
+  ],
+  "report_version": "rdllm-output-provenance-binding-report/v1",
+  "schemas": {
+    "attribution_capsule": "docs/schemas/attribution_capsule.schema.json",
+    "certification_report": "docs/schemas/certification_report.schema.json",
+    "output_provenance_binding_report": "docs/schemas/output_provenance_binding_report.schema.json",
+    "proof_carrying_response": "docs/schemas/proof_carrying_response.schema.json",
+    "provider_attribution_card": "docs/schemas/provider_attribution_card.schema.json",
+    "serving_gateway_report": "docs/schemas/serving_gateway_report.schema.json",
+    "watchtower_challenge_settlement_report": "docs/schemas/watchtower_challenge_settlement_report.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "ed73eca6a2bd6fcdc3890fdd4cf2865404b19f87c18b26196b7bb92361193e82"
+  },
+  "summary": {
+    "copied_output_hash": "dad739af040ffff4288e04fc4178287c632a3509e89a107feefff9882344cb5b",
+    "credential_count": 1,
+    "durable_signal_count": 3,
+    "offline_verification_supported": true,
+    "public_verification_surface_count": 2,
+    "raw_output_text_disclosed": false,
+    "status": "ready",
+    "subject_hash": "4970e1ffd9dd72f411f8892d97aa1ada22ea440c12f9d144a668532790065d4b",
+    "target_certification_level": "RDLLM-L75",
+    "watchtower_settlement_ready": true
+  }
+}

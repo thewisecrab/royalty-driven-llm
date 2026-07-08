@@ -1,0 +1,301 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_foundation_provider_binding_matrix.schema.json",
+  "title": "Universal Foundation Provider Binding Matrix",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "universal_foundation_provider_binding_matrix_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "composite_contract_binding",
+    "provider_binding_rows",
+    "negative_provider_binding_rows",
+    "evidence_roots",
+    "checks",
+    "provider_binding_decision",
+    "provider_coverage",
+    "privacy",
+    "summary",
+    "universal_foundation_provider_binding_matrix_hash"
+  ],
+  "properties": {
+    "universal_foundation_provider_binding_matrix_version": {
+      "const": "rdllm-universal-foundation-provider-binding-matrix/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_foundation_provider_binding_matrix.schema.json"
+    },
+    "created_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_composite_contract_level",
+        "named_provider_bindings_required",
+        "native_api_mapping_required",
+        "provider_claim_requires_binding_matrix",
+        "unbound_provider_invocation_blocked",
+        "source_footer_reliance_requires_provider_binding",
+        "creator_settlement_requires_provider_binding"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-foundation-provider-binding-matrix-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L168" },
+        "minimum_composite_contract_level": { "const": "RDLLM-L167" },
+        "named_provider_bindings_required": { "const": true },
+        "native_api_mapping_required": { "const": true },
+        "provider_claim_requires_binding_matrix": { "const": true },
+        "unbound_provider_invocation_blocked": { "const": true },
+        "source_footer_reliance_requires_provider_binding": { "const": true },
+        "creator_settlement_requires_provider_binding": { "const": true }
+      }
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-foundation-provider-binding-matrix.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-foundation-provider-binding-matrix/v1"
+        }
+      }
+    },
+    "composite_contract_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 32 },
+        "payload_hash": { "type": "string", "minLength": 32 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L167" }
+      }
+    },
+    "provider_binding_rows": {
+      "type": "object",
+      "required": [
+        "openai_responses",
+        "anthropic_messages",
+        "google_gemini_generate_content",
+        "google_vertex_ai",
+        "meta_llama_stack",
+        "mistral_chat",
+        "cohere_chat",
+        "xai_grok",
+        "deepseek_chat",
+        "azure_openai",
+        "aws_bedrock",
+        "openrouter_compatible",
+        "local_open_weight_runtime",
+        "enterprise_gateway_proxy",
+        "rag_native_provider",
+        "mcp_agent_tool_runtime"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/providerBindingRow" }
+    },
+    "negative_provider_binding_rows": {
+      "type": "object",
+      "required": [
+        "provider_family_not_listed",
+        "model_alias_drift",
+        "native_route_unbound_to_l167",
+        "streaming_chunk_without_footer_binding",
+        "tool_call_loses_source_context",
+        "retrieval_adapter_drops_locator",
+        "sdk_response_shape_mismatch",
+        "cloud_gateway_rewrites_response",
+        "local_runtime_without_attestation",
+        "fallback_model_without_passport",
+        "telemetry_or_meter_gap",
+        "settlement_provider_mismatch",
+        "private_payload_leak"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/negativeProviderFailureRow" }
+    },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "provider_binding_root",
+        "domain_binding_root",
+        "capability_root",
+        "negative_provider_binding_root"
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "composite_contract_bound",
+        "composite_contract_l167_ready",
+        "provider_families_complete",
+        "provider_domain_bindings_complete",
+        "native_capabilities_complete",
+        "negative_provider_binding_fixtures_reject",
+        "provider_binding_matrix_signed"
+      ]
+    },
+    "provider_binding_decision": {
+      "type": "object",
+      "required": [
+        "provider_binding_matrix_ready",
+        "universal_provider_adoption_claim_allowed",
+        "bound_provider_invocation_allowed",
+        "source_footer_reliance_allowed",
+        "cross_provider_procurement_allowed",
+        "creator_settlement_allowed_for_bound_providers",
+        "unbound_provider_claims_blocked",
+        "failure_modes"
+      ],
+      "properties": {
+        "provider_binding_matrix_ready": { "const": true },
+        "universal_provider_adoption_claim_allowed": { "const": true },
+        "bound_provider_invocation_allowed": { "const": true },
+        "source_footer_reliance_allowed": { "const": true },
+        "cross_provider_procurement_allowed": { "const": true },
+        "creator_settlement_allowed_for_bound_providers": { "const": true },
+        "unbound_provider_claims_blocked": { "const": true },
+        "failure_modes": { "type": "array", "maxItems": 0 }
+      }
+    },
+    "provider_coverage": {
+      "type": "object",
+      "required": [
+        "required_provider_family_count",
+        "ready_provider_family_count",
+        "required_binding_domain_count",
+        "required_native_capability_count",
+        "covered_domains",
+        "covered_capabilities"
+      ],
+      "properties": {
+        "required_provider_family_count": { "const": 16 },
+        "ready_provider_family_count": { "const": 16 },
+        "required_binding_domain_count": { "const": 16 },
+        "required_native_capability_count": { "const": 12 }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payload_fields",
+        "private_strings_absent",
+        "private_payloads_excluded"
+      ],
+      "properties": {
+        "private_payload_fields": { "type": "array", "maxItems": 0 },
+        "private_strings_absent": { "const": true },
+        "private_payloads_excluded": { "const": true }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_composite_contract_level",
+        "provider_family_count",
+        "ready_provider_family_count",
+        "binding_domain_count",
+        "native_capability_count",
+        "negative_provider_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_provider_binding_matrix"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L168" },
+        "minimum_composite_contract_level": { "const": "RDLLM-L167" },
+        "provider_family_count": { "const": 16 },
+        "ready_provider_family_count": { "const": 16 },
+        "binding_domain_count": { "const": 16 },
+        "native_capability_count": { "const": 12 },
+        "negative_provider_failure_count": { "const": 13 },
+        "failure_mode_count": { "const": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_provider_binding_matrix": { "const": true }
+      }
+    },
+    "universal_foundation_provider_binding_matrix_hash": {
+      "type": "string",
+      "minLength": 32
+    },
+    "signature": { "type": "object" }
+  },
+  "$defs": {
+    "providerBindingRow": {
+      "type": "object",
+      "required": [
+        "provider_binding_hash",
+        "native_api_contract_hash",
+        "adapter_hash",
+        "conformance_fixture_hash",
+        "drift_canary_hash",
+        "telemetry_mapping_hash",
+        "settlement_meter_hash",
+        "revocation_status_hash",
+        "public_verifier_hash",
+        "capabilities",
+        "domain_bindings",
+        "provider_family_supported",
+        "native_api_bound_to_l167",
+        "all_required_capabilities_supported",
+        "domain_bindings_complete",
+        "fail_closed",
+        "private_payloads_excluded"
+      ],
+      "properties": {
+        "provider_family_supported": { "const": true },
+        "native_api_bound_to_l167": { "const": true },
+        "all_required_capabilities_supported": { "const": true },
+        "domain_bindings_complete": { "const": true },
+        "fail_closed": { "const": true },
+        "private_payloads_excluded": { "const": true },
+        "capabilities": { "type": "object" },
+        "domain_bindings": { "type": "object" }
+      }
+    },
+    "negativeProviderFailureRow": {
+      "type": "object",
+      "required": [
+        "fixture_hash",
+        "expected_reject",
+        "observed_reject",
+        "provider_claim_blocked",
+        "invocation_blocked",
+        "response_release_blocked",
+        "source_footer_reliance_blocked",
+        "settlement_held",
+        "public_status_marked_failed"
+      ],
+      "properties": {
+        "fixture_hash": { "type": "string", "minLength": 32 },
+        "expected_reject": { "const": true },
+        "observed_reject": { "const": true },
+        "provider_claim_blocked": { "const": true },
+        "invocation_blocked": { "const": true },
+        "response_release_blocked": { "const": true },
+        "source_footer_reliance_blocked": { "const": true },
+        "settlement_held": { "const": true },
+        "public_status_marked_failed": { "const": true }
+      }
+    }
+  }
+}

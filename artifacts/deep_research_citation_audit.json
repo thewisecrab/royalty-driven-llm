@@ -1,0 +1,242 @@
+{
+  "answer_binding": {
+    "answer_id_hash": "ad2888578e8d6e50d9cff32c4a9b07f5025389e00944dadf2ae9584464450293",
+    "citation_marker_count": 4,
+    "claim_count": 2,
+    "rendered_text_hash": "b101f78f835be0c5b74d4e032c033e48eaa6b7fcd972a9254c9d4bb9fe30bf1c",
+    "rendered_text_length": 392,
+    "source_count": 2
+  },
+  "artifact_bindings": {
+    "claim_source_attribution_report_hash": "8ae89a164bb0bf6169a0e163b09ad98dd9bd19cbc3a460cdc09c82bb32546a6a",
+    "claim_source_attribution_report_hash_reproducible": true,
+    "grounded_source_footer_hash": "7a0be33bb5f4598f94085c26cfcb57b09627c4a20e81a5f7fcb160ecb0c0d78e",
+    "grounded_source_footer_hash_reproducible": true,
+    "rendered_attribution_audit_hash": "78658d18c49302c5a8312c04136c311895dbc44f281aea216f6960d3d1a89017",
+    "rendered_attribution_audit_hash_reproducible": true,
+    "source_availability_report_hash": "a42d96bcc238d04cc845dec1e3ffd7688467d8518deb92882b2d19901b7d4df7",
+    "source_availability_report_hash_reproducible": true,
+    "source_confidence_report_hash": "e5b8a300ca61aa2afc07afc5e37ed246d51bd4435cc76a9859a7ccb39d991265",
+    "source_confidence_report_hash_reproducible": true,
+    "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+    "source_footer_delivery_hash_reproducible": true
+  },
+  "audit_version": "rdllm-deep-research-citation-audit/v1",
+  "checks": {
+    "artifact_bindings_hash_reproducible": true,
+    "citation_markers_present": true,
+    "claim_rows_present": true,
+    "every_cited_source_link_materialized": true,
+    "every_claim_has_resolved_citations": true,
+    "every_claim_is_factually_supported": true,
+    "every_marker_resolves_to_materialized_source": true,
+    "footer_rows_cover_all_cited_sources": true,
+    "private_strings_absent": true,
+    "public_report_has_no_private_field_names": true,
+    "rendered_text_hash_present": true,
+    "source_rows_present": true
+  },
+  "citation_marker_rows": [
+    {
+      "char_end": 90,
+      "char_start": 86,
+      "context_hash": "0ff15b4653a8bada1668b8d1849317f127ce8b2ca051274c2c0f7aa227838a7e",
+      "label": "S1",
+      "marker": "[S1]",
+      "marker_hash": "3058bc9a9a2b08997357b99a586d2281c2b92ca4e72f0e7736c7e94bd66e6aca",
+      "marker_type": "source_label",
+      "occurrence": 1,
+      "resolved": true
+    },
+    {
+      "char_end": 225,
+      "char_start": 221,
+      "context_hash": "7b22fa483af3d954bf446559f7f0637e17142746e8ea5df8f718f5b76c017067",
+      "label": "S2",
+      "marker": "[S2]",
+      "marker_hash": "61905f2b7e87fbdc7ccfa069c90f3d6aa440db511f2d283941f1452233427fdc",
+      "marker_type": "source_label",
+      "occurrence": 2,
+      "resolved": true
+    },
+    {
+      "char_end": 240,
+      "char_start": 236,
+      "context_hash": "a294b317ee468c6639304558c191983fee8b387473a9c0f0e6e2144dc2227946",
+      "label": "S1",
+      "marker": "[S1]",
+      "marker_hash": "4df77e4aa03da01ae9893d86f3f5c1530b125ffa945f3e2cb97894bbf0c9ee18",
+      "marker_type": "source_label",
+      "occurrence": 3,
+      "resolved": true
+    },
+    {
+      "char_end": 333,
+      "char_start": 329,
+      "context_hash": "62304a58eab5a39300d543795b0a85c7ab5f94b9e35d204cfe3b0d0c2cc111b3",
+      "label": "S2",
+      "marker": "[S2]",
+      "marker_hash": "346130d3259259534c7f4f7dec4ad3024603871040a6062877bd8348fe756768",
+      "marker_type": "source_label",
+      "occurrence": 4,
+      "resolved": true
+    }
+  ],
+  "claim_support_rows": [
+    {
+      "all_citations_resolved": true,
+      "citation_labels": [
+        "S2"
+      ],
+      "claim_has_citation": true,
+      "claim_hash": "1d24b1421bdf094ea98ca8c7ceb722c49f11e272b95b2a62c4cd02cd37a1a9d3",
+      "claim_id": "claim:link-not-support",
+      "claim_row_hash": "30e9bbd78cf8473169b5c7e32c5da00155eb119f920ad861f7fb4e82dda04a6e",
+      "claim_supported": true,
+      "evidence_hashes_present": true,
+      "evidence_span_hash": "2664af05ed93f183f0527bf93b92e517c5a6005e03b9a6266d412a8905c8e032",
+      "factual_support_score": 0.9,
+      "factual_support_threshold_met": true,
+      "relevance_score": 0.92,
+      "relevance_threshold_met": true,
+      "resolved_citation_labels": [
+        "S2"
+      ],
+      "source_quote_hash": "43da2717fcedaf42451920e734f299cc9943674375a0faae1e65a75977e715ae",
+      "support_status": "verified",
+      "support_status_accepted": true,
+      "unresolved_citation_labels": []
+    },
+    {
+      "all_citations_resolved": true,
+      "citation_labels": [
+        "S1"
+      ],
+      "claim_has_citation": true,
+      "claim_hash": "a08df11c19e2023294c9ff3dc37f4b8e0ae7a2fa021ba62b23e5a6ace61864ab",
+      "claim_id": "claim:source-footer-binding",
+      "claim_row_hash": "944d9dd60d50f4e57ba96510917729b2dbc2988947bf3b66c93f1481733f780e",
+      "claim_supported": true,
+      "evidence_hashes_present": true,
+      "evidence_span_hash": "fff4c4a26147169aedfcfd91798ad116aae63979cde54c6213e1badd083e8360",
+      "factual_support_score": 0.91,
+      "factual_support_threshold_met": true,
+      "relevance_score": 0.94,
+      "relevance_threshold_met": true,
+      "resolved_citation_labels": [
+        "S1"
+      ],
+      "source_quote_hash": "f0daef5b8767696cc78189e4329b5bfd2cd3a66f65349ba58c6b6f380fbbbad6",
+      "support_status": "supported",
+      "support_status_accepted": true,
+      "unresolved_citation_labels": []
+    }
+  ],
+  "commitments": {
+    "citation_marker_root": "c40a78749b3cb5c688aaf1af028d0f51ac25e3ddacc406b7d210b2e07696a364",
+    "claim_support_root": "aa393689f391cbbe4a0e6dfb5bbed4703ba67428a722652cbfe00e99649d0a75",
+    "footer_row_root": "81ada869f68dd46225608ad1d5a52c3cd9bd18cfd239ac5d5725aabe5f49d9e0",
+    "schema": "docs/schemas/deep_research_citation_audit.schema.json",
+    "source_row_root": "bc7f46f15c3fd5471b1c744e53d265c2527d5f18d4d1b3c07328464732996041"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "deep_research_citation_audit_hash": "eadb1dda9282f3d8b167cbd970afcb0631e2f70383503762962cb4eb0c3a6078",
+  "footer_rows": [
+    {
+      "content_hash": "b3bd3ffc0e4ba0191a03827cefc5feceb6c6d23a656467fed931490daa3b4597",
+      "display_order": 1,
+      "footer_row_hash": "7a99cea184c6a2eab227d5d02d8f8879c56677c0f924b5ccb25ad00373410ae1",
+      "label": "S1",
+      "link_materialized": true,
+      "minimum_claim_support_score": 0.91,
+      "source_row_hash": "9978c3ee806addd153a86f09768b595b902072dd4b57e664363736adebd0fa8b",
+      "source_uri": "https://arxiv.org/abs/2507.04480",
+      "supported_claim_count": 1,
+      "title": "Source Attribution in Retrieval-Augmented Generation",
+      "visible_marker_count": 2
+    },
+    {
+      "content_hash": "7067f86117749c47a1cd818e5afe737064443dceab00649d96f8e170197ea05c",
+      "display_order": 2,
+      "footer_row_hash": "eff0a213e4ca6a51ef538cc633b9cd64237ba4f8338164b0d165969db98cc3fc",
+      "label": "S2",
+      "link_materialized": true,
+      "minimum_claim_support_score": 0.9,
+      "source_row_hash": "ff737b60afded1a2465978da4930ba73572595546acc1ac879c7f6427bc9cc77",
+      "source_uri": "https://arxiv.org/abs/2605.06635",
+      "supported_claim_count": 1,
+      "title": "Cited but Not Verified",
+      "visible_marker_count": 2
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "citation_markers_must_resolve": true,
+    "claim_support_must_clear_thresholds": true,
+    "min_factual_support_score": 0.7,
+    "min_relevance_score": 0.7,
+    "minimum_input_level": "RDLLM-L103",
+    "profile": "rdllm-deep-research-citation-audit-policy/v1",
+    "source_links_must_be_materialized": true,
+    "target_certification_level": "RDLLM-L115"
+  },
+  "privacy": {
+    "payment_text_disclosed": false,
+    "public_report_uses_hashes_scores_uris_and_titles": true,
+    "raw_answer_text_disclosed": false,
+    "raw_evidence_text_disclosed": false,
+    "raw_prompt_text_disclosed": false,
+    "raw_source_text_disclosed": false
+  },
+  "schemas": {
+    "claim_source_attribution_report": "docs/schemas/claim_source_attribution_report.schema.json",
+    "deep_research_citation_audit": "docs/schemas/deep_research_citation_audit.schema.json",
+    "rendered_attribution_audit": "docs/schemas/rendered_attribution_audit.schema.json",
+    "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "82190817168bcff22877e1eb15e748dc1e0d42d71d2dbe28309f1c4dd3147c84"
+  },
+  "source_rows": [
+    {
+      "archive_uri": "",
+      "claim_count_declared": 1,
+      "content_hash": "b3bd3ffc0e4ba0191a03827cefc5feceb6c6d23a656467fed931490daa3b4597",
+      "label": "S1",
+      "license_status": "reference_allowed",
+      "link_materialized": true,
+      "retrieval_status": "accessible",
+      "retrieved_at": "2026-05-31T00:00:00Z",
+      "source_row_hash": "9978c3ee806addd153a86f09768b595b902072dd4b57e664363736adebd0fa8b",
+      "source_uri": "https://arxiv.org/abs/2507.04480",
+      "title": "Source Attribution in Retrieval-Augmented Generation"
+    },
+    {
+      "archive_uri": "https://arxiv.org/abs/2605.06635",
+      "claim_count_declared": 1,
+      "content_hash": "7067f86117749c47a1cd818e5afe737064443dceab00649d96f8e170197ea05c",
+      "label": "S2",
+      "license_status": "reference_allowed",
+      "link_materialized": true,
+      "retrieval_status": "archived",
+      "retrieved_at": "2026-05-31T00:00:00Z",
+      "source_row_hash": "ff737b60afded1a2465978da4930ba73572595546acc1ac879c7f6427bc9cc77",
+      "source_uri": "https://arxiv.org/abs/2605.06635",
+      "title": "Cited but Not Verified"
+    }
+  ],
+  "summary": {
+    "citation_marker_count": 4,
+    "claim_count": 2,
+    "footer_source_count": 2,
+    "minimum_input_level": "RDLLM-L103",
+    "resolved_citation_marker_count": 4,
+    "source_count": 2,
+    "status": "ready",
+    "supported_claim_count": 2,
+    "target_certification_level": "RDLLM-L115",
+    "verified_source_count": 2
+  }
+}

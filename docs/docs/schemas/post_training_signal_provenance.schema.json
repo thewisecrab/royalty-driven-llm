@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/post_training_signal_provenance.schema.json",
+  "title": "RDLLM Post-Training Signal Provenance Receipt",
+  "type": "object",
+  "required": [
+    "version",
+    "issued_at",
+    "issuer",
+    "case",
+    "post_training_system",
+    "artifact_bindings",
+    "post_training_policy",
+    "post_training_signals",
+    "royalty_obligations",
+    "verification_errors",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "post_training_signal_provenance_hash",
+    "signature"
+  ],
+  "properties": {
+    "version": { "const": "rdllm-post-training-signal-provenance/v1" },
+    "issued_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "case": {
+      "type": "object",
+      "required": ["case_id", "status"],
+      "additionalProperties": true
+    },
+    "post_training_system": {
+      "type": "object",
+      "required": [
+        "provider",
+        "model_id",
+        "model_version",
+        "run_id",
+        "stage",
+        "minimum_private_reasoning_level",
+        "minimum_model_lineage_level"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "private_reasoning_attribution_hash",
+        "private_reasoning_attribution_hash_reproducible",
+        "model_lineage_attribution_hash",
+        "model_lineage_attribution_hash_reproducible",
+        "signal_row_root",
+        "signal_input_hash",
+        "royalty_obligation_root"
+      ],
+      "additionalProperties": true
+    },
+    "post_training_policy": {
+      "type": "object",
+      "required": [
+        "policy_id",
+        "requires_signal_lineage",
+        "requires_source_carry_forward",
+        "requires_reward_commitments",
+        "requires_annotator_or_verifier_attestation",
+        "requires_synthetic_disclosure",
+        "requires_royalty_carry_forward",
+        "requires_model_lineage_settlement",
+        "requires_no_raw_signal_text",
+        "policy_hash"
+      ],
+      "additionalProperties": true
+    },
+    "post_training_signals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "signal_id",
+          "sequence",
+          "signal_type",
+          "post_training_stage",
+          "signal_payload_hash",
+          "reward_commitment_hash",
+          "update_commitment_hash",
+          "input_artifact_hashes",
+          "source_labels",
+          "creator_ids",
+          "work_ids",
+          "annotator_attestation_hash",
+          "reward_model_id_hash",
+          "verifier_id_hash",
+          "synthetic_input",
+          "synthetic_disclosed",
+          "license_terms_hash",
+          "used_for_update",
+          "escrow_if_unattributed",
+          "raw_signal_text_disclosed",
+          "signal_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "royalty_obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_label",
+          "creator_id",
+          "work_id",
+          "share",
+          "settlement_state",
+          "basis",
+          "obligation_hash",
+          "royalty_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "verification_errors": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "private_reasoning_attribution_verified",
+        "model_lineage_attribution_verified",
+        "artifact_hashes_reproducible",
+        "post_training_signal_rows_present",
+        "signals_have_payload_reward_and_update_commitments",
+        "signals_bind_upstream_artifacts",
+        "signal_source_labels_declared",
+        "signal_source_labels_bound_to_upstream_provenance",
+        "signal_royalty_obligations_cover_sources",
+        "signals_have_license_terms",
+        "annotator_or_verifier_attestations_present",
+        "synthetic_signal_inputs_disclosed",
+        "raw_signal_text_not_disclosed",
+        "post_training_policy_is_fail_closed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_signal_text_disclosed",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "feedback_text_disclosed",
+        "reward_explanation_disclosed",
+        "payment_data_disclosed",
+        "receipt_uses_hashes_labels_and_commitments"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "post_training_signal_provenance",
+        "private_reasoning_attribution",
+        "model_lineage_attribution_report"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_private_reasoning_level",
+        "minimum_model_lineage_level",
+        "signal_count",
+        "source_label_count",
+        "synthetic_signal_count",
+        "royalty_obligation_count",
+        "failed_check_count",
+        "post_training_signal_provenance_ready",
+        "privacy_preserved"
+      ],
+      "additionalProperties": true
+    },
+    "post_training_signal_provenance_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,177 @@
+{
+  "artifact_bindings": {
+    "certification_report_hash": "dc1e7090d04e2ab7240ea7675cc965f789d31c5d7518d0e18a5a7f35f60631ec",
+    "certification_report_hash_reproducible": true,
+    "delivered_output_hash": "dd37b330c28adcddd35ea3de9d96b9f84736510b82d6486c0ce52b383ce36e94",
+    "discovery_manifest_hash": "ceab40a4fb7b3829680b8b79e6e22507c16effe0683528d5258bdfcc3795c363",
+    "discovery_manifest_hash_reproducible": true,
+    "grounded_source_footer_hash": "85246ef655a8d4feb604f9daa87564faa2bf31ef88b3a2e0a78db3e23e86a70d",
+    "integration_profile_hash": "88a249a6054b067fd8f1dafdc798be572b137b7a998f3cef9f13fe75ac582df6",
+    "integration_profile_hash_reproducible": true,
+    "provider_attribution_card_hash": "461be8e9acd24c00504972ab2480806c5ae3ca157fa1dea47a6137f40dae8289",
+    "provider_attribution_card_hash_reproducible": true,
+    "response_envelope_hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243",
+    "response_envelope_hash_reproducible": true,
+    "source_footer_delivery_hash": "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+    "source_footer_delivery_hash_reproducible": true
+  },
+  "case": {
+    "case_id": "artifact:foundation-api-profile",
+    "status": "ready"
+  },
+  "checks": {
+    "artifact_hashes_reproducible": true,
+    "certification_passed_l103_or_higher": true,
+    "delivered_output_hash_bound_to_response_subject": true,
+    "discovery_exposes_required_paths": true,
+    "discovery_manifest_ready": true,
+    "integration_exposes_required_endpoints": true,
+    "integration_profile_verified": true,
+    "minimum_json_fields_declared": true,
+    "minimum_response_headers_declared": true,
+    "private_text_not_disclosed": true,
+    "provider_card_declares_required_surfaces": true,
+    "provider_card_shape_valid": true,
+    "response_envelope_hash_bound_to_delivery": true,
+    "response_envelope_verified": true,
+    "source_footer_delivery_targets_l103": true,
+    "source_footer_delivery_verified": true,
+    "verifier_commands_declared": true
+  },
+  "client_failure_policy": {
+    "below_minimum_level": "label_unattributed_or_refuse",
+    "license_or_reliance_gap": "route_to_escrow",
+    "missing_or_failed_source_footer_delivery": "block_display",
+    "missing_profile": "block_display",
+    "response_hash_drift": "block_display"
+  },
+  "foundation_profile_hash": "88cfbe2e7a6bf70030a4ce736987e46aa08a51ca19518a3597406acc152c80d7",
+  "interoperability_targets": {
+    "agent_tool_runtime": true,
+    "content_credentials_or_scitt_bridge": true,
+    "cross_provider_relay": true,
+    "generic_model_api": true,
+    "search_answer_engine": true,
+    "streaming_api": true
+  },
+  "issued_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "answer_text_disclosed": false,
+    "evidence_text_disclosed": false,
+    "hash_only_response_commitments": true,
+    "payment_data_disclosed": false,
+    "prompt_text_disclosed": false,
+    "source_text_disclosed": false
+  },
+  "response_metadata_contract": {
+    "header_values": {
+      "RDLLM-Attribution-Level": "RDLLM-L103",
+      "RDLLM-Discovery-Manifest-Hash": "ceab40a4fb7b3829680b8b79e6e22507c16effe0683528d5258bdfcc3795c363",
+      "RDLLM-Foundation-Profile-Hash": "88cfbe2e7a6bf70030a4ce736987e46aa08a51ca19518a3597406acc152c80d7",
+      "RDLLM-Response-Envelope-Hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243",
+      "RDLLM-Source-Footer-Delivery-Hash": "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+      "RDLLM-Verification-Endpoint": "/.well-known/rdllm/foundation-attribution-profile.json"
+    },
+    "minimum_certification_level": "RDLLM-L103",
+    "profile": "rdllm-foundation-api-minimum/2026-06",
+    "required_embedded_artifacts": [
+      "response_envelope",
+      "source_footer_delivery"
+    ],
+    "required_http_headers": [
+      "RDLLM-Attribution-Level",
+      "RDLLM-Foundation-Profile-Hash",
+      "RDLLM-Discovery-Manifest-Hash",
+      "RDLLM-Response-Envelope-Hash",
+      "RDLLM-Source-Footer-Delivery-Hash",
+      "RDLLM-Verification-Endpoint"
+    ],
+    "required_json_fields": [
+      "response.rendered_output",
+      "response.source_labels",
+      "embedded_artifacts.response_envelope",
+      "embedded_artifacts.source_footer_delivery",
+      "verification.foundation_attribution_profile",
+      "verification.verifier_commands"
+    ],
+    "streaming_requirement": "final stream message must carry the same response envelope hash and source footer delivery hash"
+  },
+  "response_subject": {
+    "delivered_output_hash": "dd37b330c28adcddd35ea3de9d96b9f84736510b82d6486c0ce52b383ce36e94",
+    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
+    "event_id": "evt_b560c62bb49a73d0",
+    "grounded_source_footer_hash": "85246ef655a8d4feb604f9daa87564faa2bf31ef88b3a2e0a78db3e23e86a70d",
+    "model_id": "rdllm-reference-model",
+    "model_version": "2026-06",
+    "provider": "provider:rdllm-reference",
+    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+    "response_envelope_hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243",
+    "source_footer_delivery_hash": "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9"
+  },
+  "schemas": {
+    "discovery_manifest": "docs/schemas/discovery_manifest.schema.json",
+    "foundation_api_profile": "docs/schemas/foundation_attribution_profile.schema.json",
+    "integration_profile": "docs/schemas/integration_profile.schema.json",
+    "provider_attribution_card": "docs/schemas/provider_attribution_card.schema.json",
+    "response_envelope": "docs/schemas/response_envelope.schema.json",
+    "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "6047f795c5af274d934fcfaa5045df77b53d350d183979281c165af2b58fa74c"
+  },
+  "summary": {
+    "failed_check_count": 0,
+    "foundation_api_ready": true,
+    "minimum_source_level": "RDLLM-L103",
+    "privacy_preserved": true,
+    "required_header_count": 6,
+    "required_json_field_count": 6,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L104",
+    "verifier_command_count": 5
+  },
+  "verification_contract": {
+    "client_verifier_flow": [
+      "fetch /.well-known/rdllm.json",
+      "verify discovery manifest hash and signature",
+      "verify integration profile and response envelope",
+      "verify source footer delivery receipt",
+      "compare response headers to embedded artifact hashes",
+      "render answer only if all checks pass"
+    ],
+    "public_paths": {
+      "certification_report_path": "/.well-known/rdllm/certification-report.json",
+      "foundation_api_profile_path": "/.well-known/rdllm/foundation-attribution-profile.json",
+      "integration_profile_path": "/.well-known/rdllm/integration-profile.json",
+      "provider_card_path": "/.well-known/rdllm/provider-attribution-card.json",
+      "sample_response_envelope_path": "/.well-known/rdllm/sample-response-envelope.json",
+      "source_footer_delivery_path": "/.well-known/rdllm/source-footer-delivery.json"
+    },
+    "required_failure_modes": [
+      "block_display_on_missing_profile",
+      "block_display_on_source_footer_delivery_failure",
+      "block_display_on_response_hash_drift",
+      "label_unattributed_below_minimum_level",
+      "route_license_or_reliance_gap_to_escrow"
+    ],
+    "verifier_commands": [
+      "verify-discovery-manifest",
+      "verify-integration-profile",
+      "verify-response-envelope",
+      "verify-source-footer-delivery",
+      "verify-foundation-api-profile"
+    ],
+    "well_known_path": "/.well-known/rdllm/foundation-attribution-profile.json"
+  },
+  "verification_errors": {
+    "discovery_manifest_error_count": 0,
+    "integration_profile_error_count": 0,
+    "provider_card_error_count": 0,
+    "response_envelope_error_count": 0,
+    "source_footer_delivery_error_count": 0
+  },
+  "version": "rdllm-foundation-attribution-profile/v1"
+}

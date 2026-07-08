@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_accountability_witness_quorum.schema.json",
+  "title": "RDLLM Universal Accountability Witness Quorum",
+  "type": "object",
+  "required": [
+    "witness_quorum_version",
+    "issuer",
+    "created_at",
+    "witness_quorum_policy",
+    "artifact_bindings",
+    "checkpoint_rows",
+    "transparency_log_rows",
+    "witness_signature_rows",
+    "monitor_rows",
+    "integrity_control_rows",
+    "failure_case_rows",
+    "evidence_commitments",
+    "checks",
+    "witness_role_coverage",
+    "witness_decision",
+    "verifier_commands",
+    "standards_controls",
+    "privacy",
+    "summary",
+    "universal_accountability_witness_quorum_hash"
+  ],
+  "properties": {
+    "witness_quorum_version": {
+      "const": "rdllm-universal-accountability-witness-quorum/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "witness_quorum_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_accountability_level",
+        "minimum_provider_wire_level",
+        "well_known_path",
+        "minimum_independent_witnesses"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-accountability-witness-quorum-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L153" },
+        "minimum_accountability_level": { "const": "RDLLM-L152" },
+        "minimum_provider_wire_level": { "const": "RDLLM-L151" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-accountability-witness-quorum.json"
+        },
+        "minimum_independent_witnesses": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": { "type": "object" },
+    "checkpoint_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "checkpoint_type",
+          "checkpoint_sequence",
+          "l152_audit_trail_hash",
+          "checkpoint_hash",
+          "signed_checkpoint_hash",
+          "inclusion_proof_hash",
+          "consistency_proof_hash",
+          "ready",
+          "checkpoint_row_hash"
+        ],
+        "properties": {
+          "checkpoint_type": { "type": "string" },
+          "checkpoint_sequence": { "type": "integer" },
+          "l152_audit_trail_hash": { "type": "string" },
+          "checkpoint_hash": { "type": "string" },
+          "signed_checkpoint_hash": { "type": "string" },
+          "inclusion_proof_hash": { "type": "string" },
+          "consistency_proof_hash": { "type": "string" },
+          "ready": { "type": "boolean" },
+          "checkpoint_row_hash": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "transparency_log_rows": { "type": "array" },
+    "witness_signature_rows": { "type": "array" },
+    "monitor_rows": { "type": "array" },
+    "integrity_control_rows": { "type": "array" },
+    "failure_case_rows": { "type": "array" },
+    "evidence_commitments": { "type": "object" },
+    "checks": { "type": "object" },
+    "witness_role_coverage": { "type": "object" },
+    "witness_decision": {
+      "type": "object",
+      "required": [
+        "universal_accountability_witness_quorum_authorized",
+        "provider_publication_trusted",
+        "customer_acceptance_allowed",
+        "creator_query_settlement_allowed",
+        "regulator_reliance_allowed",
+        "unwitnessed_audit_trail_allowed",
+        "split_view_risk_accepted",
+        "failure_modes"
+      ],
+      "properties": {
+        "universal_accountability_witness_quorum_authorized": { "type": "boolean" },
+        "provider_publication_trusted": { "type": "boolean" },
+        "customer_acceptance_allowed": { "type": "boolean" },
+        "creator_query_settlement_allowed": { "type": "boolean" },
+        "regulator_reliance_allowed": { "type": "boolean" },
+        "unwitnessed_audit_trail_allowed": { "const": false },
+        "split_view_risk_accepted": { "const": false },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "verifier_commands": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "standards_controls": { "type": "object" },
+    "privacy": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_accountability_level",
+        "minimum_provider_wire_level",
+        "checkpoint_count",
+        "transparency_log_count",
+        "witness_role_count",
+        "independent_ready_witness_count",
+        "minimum_independent_witnesses",
+        "monitor_count",
+        "failure_case_count",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L153" },
+        "minimum_accountability_level": { "const": "RDLLM-L152" },
+        "minimum_provider_wire_level": { "const": "RDLLM-L151" },
+        "checkpoint_count": { "type": "integer" },
+        "transparency_log_count": { "type": "integer" },
+        "witness_role_count": { "type": "integer" },
+        "independent_ready_witness_count": { "type": "integer" },
+        "minimum_independent_witnesses": { "type": "integer" },
+        "monitor_count": { "type": "integer" },
+        "failure_case_count": { "type": "integer" },
+        "privacy_preserved": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "universal_accountability_witness_quorum_hash": { "type": "string" },
+    "signature": { "type": ["string", "object"] }
+  },
+  "additionalProperties": true
+}

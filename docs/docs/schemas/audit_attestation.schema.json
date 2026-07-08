@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/audit_attestation.schema.json",
+  "title": "RDLLM Third-Party Audit Attestation",
+  "type": "object",
+  "required": [
+    "attestation_version",
+    "issuer",
+    "created_at",
+    "audit_scope",
+    "audited_artifacts",
+    "readiness_checks",
+    "verifier_contract",
+    "commitments",
+    "summary",
+    "privacy",
+    "schemas",
+    "attestation_hash",
+    "signature"
+  ],
+  "properties": {
+    "attestation_version": {
+      "const": "rdllm-third-party-audit-attestation/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "audit_scope": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "provider_id",
+        "model_id",
+        "model_version",
+        "auditor_id",
+        "verifier_id",
+        "auditor_must_be_independent_of_provider",
+        "provider_self_attestation_only"
+      ],
+      "additionalProperties": true
+    },
+    "audited_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "artifact_type",
+          "declared_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "artifact_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "readiness_checks": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "verifier_contract": {
+      "type": "object",
+      "required": [
+        "offline_replay_required",
+        "reference_verifier_id",
+        "minimum_required_artifact_count",
+        "required_cli_verifiers",
+        "required_negative_controls"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "artifact_root",
+        "readiness_root",
+        "audit_scope_hash",
+        "provider_card_hash",
+        "certification_report_hash",
+        "certification_attestation_hash",
+        "integration_profile_hash",
+        "discovery_manifest_hash",
+        "assurance_bundle_hash",
+        "assurance_bundle_root",
+        "response_envelope_hash",
+        "clearinghouse_report_hash",
+        "remittance_report_hash",
+        "payment_execution_report_hash",
+        "revenue_allocation_report_hash",
+        "finance_ledger_attestation_hash"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "audited_artifact_count",
+        "passed_check_count",
+        "failed_check_count",
+        "highest_provider_level",
+        "provider_self_attestation_only",
+        "independent_audit_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "artifact_payloads_embedded",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "claim_evidence_text_disclosed",
+        "payout_account_disclosed",
+        "attestation_uses_hashes_statuses_and_counts"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["audit_attestation"],
+      "additionalProperties": true
+    },
+    "attestation_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

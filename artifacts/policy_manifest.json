@@ -1,0 +1,369 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "creator_id": "arjun",
+      "policy_id": "policy:arjun-provenance-ledger",
+      "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+      "title": "Provenance Ledgers for AI Outputs",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_id": "lina-governance-disputes:c1",
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "creator_id": "lina",
+      "policy_id": "policy:lina-governance-disputes",
+      "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+      "title": "Creator Governance for AI Licensing",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "creator_id": "maya",
+      "policy_id": "policy:maya-youtube-style-pool",
+      "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+      "title": "Usage Pools for Creator Platforms",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "creators": [
+    {
+      "creator_id": "arjun",
+      "name": "Arjun Rao",
+      "payout_account": "acct_arjun"
+    },
+    {
+      "creator_id": "lina",
+      "name": "Lina Park",
+      "payout_account": "acct_lina"
+    },
+    {
+      "creator_id": "maya",
+      "name": "Maya Sen",
+      "payout_account": "acct_maya"
+    }
+  ],
+  "manifest_hash": "75bafc28b434cbc588d4d48cf947f0977b111675c199ad55663c6d2bb87a7e0b",
+  "manifest_version": "rdllm-rights-manifest/v1",
+  "profiles": {
+    "croissant": "https://mlcommons.org/croissant/",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "spdx": "https://spdx.org/rdf/3.0.1/terms/"
+  },
+  "summary": {
+    "chunk_count": 3,
+    "creator_count": 3,
+    "work_count": 3
+  },
+  "works": [
+    {
+      "chunks": [
+        "arjun-provenance-ledger:c1"
+      ],
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "creator_id": "arjun",
+      "creator_name": "Arjun Rao",
+      "croissant": {
+        "prov:wasAttributedTo": "arjun",
+        "prov:wasDerivedFrom": "registered://works/arjun-provenance-ledger",
+        "sc:license": "royalty-bearing",
+        "usageRestrictions": {
+          "allowedUses": [
+            "training",
+            "retrieval",
+            "generation",
+            "display",
+            "quote",
+            "external_attribution"
+          ],
+          "jurisdictions": [
+            "GLOBAL"
+          ],
+          "prohibitedUses": []
+        }
+      },
+      "license": "royalty-bearing",
+      "license_uri": "",
+      "odrl": {
+        "asset": "registered://works/arjun-provenance-ledger",
+        "duty": [
+          {
+            "action": "attribute"
+          },
+          {
+            "action": "compensate"
+          }
+        ],
+        "permission": [
+          {
+            "action": "display"
+          },
+          {
+            "action": "external_attribution"
+          },
+          {
+            "action": "generation"
+          },
+          {
+            "action": "quote"
+          },
+          {
+            "action": "retrieval"
+          },
+          {
+            "action": "training"
+          }
+        ],
+        "prohibition": []
+      },
+      "policy": {
+        "allowed_uses": [
+          "training",
+          "retrieval",
+          "generation",
+          "display",
+          "quote",
+          "external_attribution"
+        ],
+        "jurisdictions": [
+          "GLOBAL"
+        ],
+        "minimum_creator_pool_rate": 0.0,
+        "policy_id": "policy:arjun-provenance-ledger",
+        "prohibited_uses": [],
+        "requires_attribution": true,
+        "requires_royalty": true,
+        "revoked": false,
+        "revoked_at": ""
+      },
+      "source_uri": "registered://works/arjun-provenance-ledger",
+      "spdx": {
+        "externalRef": "registered://works/arjun-provenance-ledger",
+        "intendedUse": [
+          "training",
+          "retrieval",
+          "generation",
+          "display",
+          "quote",
+          "external_attribution"
+        ],
+        "name": "Provenance Ledgers for AI Outputs",
+        "verifiedUsing": [
+          {
+            "algorithm": "SHA256",
+            "hashValue": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f"
+          }
+        ]
+      },
+      "title": "Provenance Ledgers for AI Outputs",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunks": [
+        "lina-governance-disputes:c1"
+      ],
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "creator_id": "lina",
+      "creator_name": "Lina Park",
+      "croissant": {
+        "prov:wasAttributedTo": "lina",
+        "prov:wasDerivedFrom": "registered://works/lina-governance-disputes",
+        "sc:license": "royalty-bearing",
+        "usageRestrictions": {
+          "allowedUses": [
+            "training",
+            "retrieval",
+            "generation",
+            "display",
+            "quote",
+            "external_attribution"
+          ],
+          "jurisdictions": [
+            "GLOBAL"
+          ],
+          "prohibitedUses": []
+        }
+      },
+      "license": "royalty-bearing",
+      "license_uri": "",
+      "odrl": {
+        "asset": "registered://works/lina-governance-disputes",
+        "duty": [
+          {
+            "action": "attribute"
+          },
+          {
+            "action": "compensate"
+          }
+        ],
+        "permission": [
+          {
+            "action": "display"
+          },
+          {
+            "action": "external_attribution"
+          },
+          {
+            "action": "generation"
+          },
+          {
+            "action": "quote"
+          },
+          {
+            "action": "retrieval"
+          },
+          {
+            "action": "training"
+          }
+        ],
+        "prohibition": []
+      },
+      "policy": {
+        "allowed_uses": [
+          "training",
+          "retrieval",
+          "generation",
+          "display",
+          "quote",
+          "external_attribution"
+        ],
+        "jurisdictions": [
+          "GLOBAL"
+        ],
+        "minimum_creator_pool_rate": 0.0,
+        "policy_id": "policy:lina-governance-disputes",
+        "prohibited_uses": [],
+        "requires_attribution": true,
+        "requires_royalty": true,
+        "revoked": false,
+        "revoked_at": ""
+      },
+      "source_uri": "registered://works/lina-governance-disputes",
+      "spdx": {
+        "externalRef": "registered://works/lina-governance-disputes",
+        "intendedUse": [
+          "training",
+          "retrieval",
+          "generation",
+          "display",
+          "quote",
+          "external_attribution"
+        ],
+        "name": "Creator Governance for AI Licensing",
+        "verifiedUsing": [
+          {
+            "algorithm": "SHA256",
+            "hashValue": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac"
+          }
+        ]
+      },
+      "title": "Creator Governance for AI Licensing",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunks": [
+        "maya-youtube-style-pool:c1"
+      ],
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "creator_id": "maya",
+      "creator_name": "Maya Sen",
+      "croissant": {
+        "prov:wasAttributedTo": "maya",
+        "prov:wasDerivedFrom": "registered://works/maya-youtube-style-pool",
+        "sc:license": "royalty-bearing",
+        "usageRestrictions": {
+          "allowedUses": [
+            "training",
+            "retrieval",
+            "generation",
+            "display",
+            "quote",
+            "external_attribution"
+          ],
+          "jurisdictions": [
+            "GLOBAL"
+          ],
+          "prohibitedUses": []
+        }
+      },
+      "license": "royalty-bearing",
+      "license_uri": "",
+      "odrl": {
+        "asset": "registered://works/maya-youtube-style-pool",
+        "duty": [
+          {
+            "action": "attribute"
+          },
+          {
+            "action": "compensate"
+          }
+        ],
+        "permission": [
+          {
+            "action": "display"
+          },
+          {
+            "action": "external_attribution"
+          },
+          {
+            "action": "generation"
+          },
+          {
+            "action": "quote"
+          },
+          {
+            "action": "retrieval"
+          },
+          {
+            "action": "training"
+          }
+        ],
+        "prohibition": []
+      },
+      "policy": {
+        "allowed_uses": [
+          "training",
+          "retrieval",
+          "generation",
+          "display",
+          "quote",
+          "external_attribution"
+        ],
+        "jurisdictions": [
+          "GLOBAL"
+        ],
+        "minimum_creator_pool_rate": 0.0,
+        "policy_id": "policy:maya-youtube-style-pool",
+        "prohibited_uses": [],
+        "requires_attribution": true,
+        "requires_royalty": true,
+        "revoked": false,
+        "revoked_at": ""
+      },
+      "source_uri": "registered://works/maya-youtube-style-pool",
+      "spdx": {
+        "externalRef": "registered://works/maya-youtube-style-pool",
+        "intendedUse": [
+          "training",
+          "retrieval",
+          "generation",
+          "display",
+          "quote",
+          "external_attribution"
+        ],
+        "name": "Usage Pools for Creator Platforms",
+        "verifiedUsing": [
+          {
+            "algorithm": "SHA256",
+            "hashValue": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7"
+          }
+        ]
+      },
+      "title": "Usage Pools for Creator Platforms",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ]
+}

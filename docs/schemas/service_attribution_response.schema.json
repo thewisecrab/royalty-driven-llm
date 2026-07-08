@@ -1,0 +1,516 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/service_attribution_response.schema.json",
+  "title": "RDLLM Service Attribution Response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "summary",
+    "source_footer",
+    "display",
+    "audit_errors",
+    "event"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-service-attribution-response/v1"
+    },
+    "status": {
+      "enum": ["ready", "blocked"]
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "event_id",
+        "event_hash",
+        "source_count",
+        "source_footer_hash",
+        "display_hash",
+        "royalty_share_count",
+        "grounding_verdict",
+        "attribution_gap_verdict"
+      ],
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_hash": {
+          "$ref": "#/$defs/hash64"
+        },
+        "source_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_footer_hash": {
+          "$ref": "#/$defs/hash64"
+        },
+        "display_hash": {
+          "$ref": "#/$defs/hash64"
+        },
+        "royalty_share_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "grounding_verdict": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attribution_gap_verdict": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provider_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provider_response_hash": {
+          "$ref": "#/$defs/hash64"
+        }
+      }
+    },
+    "source_footer": {
+      "$ref": "#/$defs/source_footer"
+    },
+    "display": {
+      "$ref": "#/$defs/display"
+    },
+    "provider_generation": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "audit_errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "event_id",
+        "event_hash",
+        "answer_text",
+        "output",
+        "source_references",
+        "claim_support",
+        "grounding_quality",
+        "attribution_gap"
+      ],
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_hash": {
+          "$ref": "#/$defs/hash64"
+        },
+        "answer_text": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "source_references": {
+          "type": "array"
+        },
+        "claim_support": {
+          "type": "array"
+        },
+        "grounding_quality": {
+          "type": "object"
+        },
+        "attribution_gap": {
+          "type": "object"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "hash64": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "decimal_string": {
+      "type": "string",
+      "pattern": "^-?[0-9]+(\\.[0-9]+)?$"
+    },
+    "source_footer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "status",
+        "event_id",
+        "event_hash",
+        "source_count",
+        "claim_count",
+        "source_rows",
+        "claim_rows",
+        "rendered_text",
+        "public_verifier",
+        "footer_hash"
+      ],
+      "properties": {
+        "schema": {
+          "const": "rdllm-service-source-footer/v1"
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_hash": {
+          "$ref": "#/$defs/hash64"
+        },
+        "source_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "claim_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_rows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source_row"
+          }
+        },
+        "claim_rows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/claim_row"
+          }
+        },
+        "rendered_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "public_verifier": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "event_hash",
+            "grounding_verdict",
+            "attribution_gap_verdict"
+          ],
+          "properties": {
+            "event_hash": {
+              "$ref": "#/$defs/hash64"
+            },
+            "grounding_verdict": {
+              "type": "string"
+            },
+            "attribution_gap_verdict": {
+              "type": "string"
+            }
+          }
+        },
+        "footer_hash": {
+          "$ref": "#/$defs/hash64"
+        }
+      }
+    },
+    "display": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "status",
+        "event_id",
+        "event_hash",
+        "answer_text_hash",
+        "source_footer_hash",
+        "render_policy",
+        "rendered_text",
+        "rendered_text_hash"
+      ],
+      "properties": {
+        "schema": {
+          "const": "rdllm-service-display/v1"
+        },
+        "status": {
+          "enum": ["ready", "blocked"]
+        },
+        "event_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_hash": {
+          "$ref": "#/$defs/hash64"
+        },
+        "answer_text_hash": {
+          "$ref": "#/$defs/hash64"
+        },
+        "source_footer_hash": {
+          "$ref": "#/$defs/hash64"
+        },
+        "render_policy": {
+          "const": "answer_plus_verified_source_footer"
+        },
+        "rendered_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rendered_text_hash": {
+          "$ref": "#/$defs/hash64"
+        }
+      }
+    },
+    "source_row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "display_label",
+        "title",
+        "creator_id",
+        "creator_name",
+        "work_id",
+        "chunk_id",
+        "source_uri",
+        "license",
+        "license_uri",
+        "content_hash",
+        "content_hash_prefix",
+        "verification_handle",
+        "evidence_span_hashes",
+        "supported_claim_count",
+        "minimum_support_score",
+        "confidence",
+        "why",
+        "settlement_status",
+        "payout",
+        "contribution_weight",
+        "output_support",
+        "text_match_score",
+        "retrieval_score",
+        "citation_score",
+        "evidence_preview",
+        "usage_metric_profile",
+        "usage_metric_scope",
+        "support_metric_method",
+        "text_match_metric_method",
+        "weight_metric_method",
+        "payout_metric_method",
+        "row_hash"
+      ],
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "display_label": { "type": "string", "minLength": 1 },
+        "title": { "type": "string" },
+        "creator_id": { "type": "string" },
+        "creator_name": { "type": "string" },
+        "work_id": { "type": "string" },
+        "chunk_id": { "type": "string" },
+        "source_uri": { "type": "string" },
+        "license": { "type": "string" },
+        "license_uri": { "type": "string" },
+        "content_hash": { "$ref": "#/$defs/hash64" },
+        "content_hash_prefix": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{12}$"
+        },
+        "verification_handle": {
+          "type": "string",
+          "pattern": "^rdllm://verify/source-footer/.+"
+        },
+        "evidence_span_hashes": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/hash64" }
+        },
+        "supported_claim_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "minimum_support_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "confidence": {
+          "enum": ["verified", "warning"]
+        },
+        "why": {
+          "type": "string",
+          "minLength": 1
+        },
+        "settlement_status": {
+          "enum": ["allocated_not_executed", "not_allocated"]
+        },
+        "payout": {
+          "$ref": "#/$defs/decimal_string"
+        },
+        "contribution_weight": {
+          "$ref": "#/$defs/decimal_string"
+        },
+        "output_support": { "type": "number", "minimum": 0 },
+        "text_match_score": { "type": "number", "minimum": 0 },
+        "retrieval_score": { "type": "number", "minimum": 0 },
+        "citation_score": { "type": "number", "minimum": 0 },
+        "evidence_preview": { "type": "string" },
+        "usage_metric_profile": {
+          "const": "rdllm-observable-source-usage-metrics/v1"
+        },
+        "usage_metric_scope": {
+          "const": "observable_support_allocation_not_model_internal_reliance"
+        },
+        "support_metric_method": {
+          "const": "rdllm-claim-overlap-support/v1"
+        },
+        "text_match_metric_method": {
+          "const": "rdllm-ngram-lcs-text-match/v1"
+        },
+        "weight_metric_method": {
+          "const": "rdllm-normalized-source-utility-weight/v1"
+        },
+        "payout_metric_method": {
+          "const": "rdllm-creator-pool-weighted-allocation/v1"
+        },
+        "row_hash": { "$ref": "#/$defs/hash64" }
+      }
+    },
+    "claim_row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_index",
+        "source_label",
+        "claim_preview",
+        "claim_hash",
+        "claim_hash_prefix",
+        "support_score",
+        "supported",
+        "work_id",
+        "chunk_id",
+        "evidence_span_hash",
+        "evidence_span_hash_prefix",
+        "evidence_start_char",
+        "evidence_end_char",
+        "evidence_preview",
+        "claim_warrant_profile",
+        "claim_force_flags",
+        "evidence_force_flags",
+        "warrant_mismatch_flags",
+        "warrant_strength_status",
+        "source_disagreement_profile",
+        "agreement_source_labels",
+        "disagreement_source_labels",
+        "source_disagreement_status",
+        "row_hash"
+      ],
+      "properties": {
+        "claim_index": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source_label": {
+          "type": "string"
+        },
+        "claim_preview": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_hash": {
+          "$ref": "#/$defs/hash64"
+        },
+        "claim_hash_prefix": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{12}$"
+        },
+        "support_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "supported": {
+          "type": "boolean"
+        },
+        "work_id": {
+          "type": "string"
+        },
+        "chunk_id": {
+          "type": "string"
+        },
+        "evidence_span_hash": {
+          "type": "string",
+          "pattern": "^$|^[0-9a-f]{64}$"
+        },
+        "evidence_span_hash_prefix": {
+          "type": "string",
+          "pattern": "^$|^[0-9a-f]{12}$"
+        },
+        "evidence_start_char": {
+          "type": "integer",
+          "minimum": -1
+        },
+        "evidence_end_char": {
+          "type": "integer",
+          "minimum": -1
+        },
+        "evidence_preview": {
+          "type": "string"
+        },
+        "claim_warrant_profile": {
+          "const": "rdllm-evidence-force-calibration/v1"
+        },
+        "claim_force_flags": {
+          "$ref": "#/$defs/claim_warrant_flags"
+        },
+        "evidence_force_flags": {
+          "$ref": "#/$defs/claim_warrant_flags"
+        },
+        "warrant_mismatch_flags": {
+          "$ref": "#/$defs/claim_warrant_flags"
+        },
+        "warrant_strength_status": {
+          "enum": ["passed", "failed", "not_checked"]
+        },
+        "source_disagreement_profile": {
+          "const": "rdllm-visible-source-disagreement/v1"
+        },
+        "agreement_source_labels": {
+          "$ref": "#/$defs/source_label_array"
+        },
+        "disagreement_source_labels": {
+          "$ref": "#/$defs/source_label_array"
+        },
+        "source_disagreement_status": {
+          "enum": ["passed", "failed", "not_checked"]
+        },
+        "row_hash": {
+          "$ref": "#/$defs/hash64"
+        }
+      }
+    },
+    "claim_warrant_flags": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "relation",
+          "modality",
+          "scope",
+          "temporal_validity",
+          "numeric_specificity"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "source_label_array": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^S[0-9]+$"
+      },
+      "uniqueItems": true
+    }
+  }
+}

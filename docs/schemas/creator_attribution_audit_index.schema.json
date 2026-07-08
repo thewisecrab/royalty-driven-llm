@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/creator_attribution_audit_index.schema.json",
+  "title": "RDLLM Creator Attribution Audit Index",
+  "type": "object",
+  "required": [
+    "version",
+    "issued_at",
+    "issuer",
+    "case",
+    "artifact_bindings",
+    "creator_work_rows",
+    "surface_rows",
+    "non_inclusion_rows",
+    "commitments",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "creator_attribution_audit_index_hash",
+    "signature"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "version": { "const": "rdllm-creator-attribution-audit-index/v1" },
+    "issued_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "case": {
+      "type": "object",
+      "required": ["case_id", "query_commitment", "minimum_certification_level"],
+      "additionalProperties": true,
+      "properties": {
+        "minimum_certification_level": { "const": "RDLLM-L109" },
+        "query_commitment": {
+          "type": "object",
+          "required": [
+            "query_hash",
+            "creator_id_count",
+            "work_id_count",
+            "chunk_id_count",
+            "content_hash_count",
+            "source_label_count",
+            "raw_query_terms_disclosed"
+          ],
+          "additionalProperties": true
+        }
+      }
+    },
+    "artifact_bindings": { "type": "object" },
+    "creator_work_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "work_id",
+          "surface_count",
+          "surfaces",
+          "artifact_names",
+          "creator_work_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "surface_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "surface",
+          "artifact_name",
+          "artifact_type",
+          "artifact_hash",
+          "source_label_namespace",
+          "surface_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "non_inclusion_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["term_type", "term_hash", "matched", "non_inclusion_row_hash"],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "certification_report_verified_l109_or_higher",
+        "provider_card_declares_creator_audit_surface",
+        "attribution_bom_ready_and_hash_reproducible",
+        "query_commitment_present",
+        "creator_query_matches_public_rows",
+        "matched_rows_have_artifact_bindings",
+        "source_identity_namespaced_by_artifact",
+        "abom_rows_have_notice_and_license_hashes",
+        "visible_footer_rows_have_delivery_proof",
+        "post_training_rows_have_royalty_obligations",
+        "payout_or_obligation_rows_cover_matched_works",
+        "notices_and_private_text_not_disclosed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_query_terms_disclosed",
+        "raw_prompt_disclosed",
+        "raw_answer_disclosed",
+        "raw_source_text_disclosed",
+        "raw_feedback_text_disclosed",
+        "raw_notice_text_disclosed",
+        "raw_license_text_disclosed",
+        "raw_payment_data_disclosed"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "creator_attribution_audit_index",
+        "attribution_bom",
+        "grounded_source_footer",
+        "post_training_signal_provenance"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_certification_level",
+        "creator_work_count",
+        "surface_row_count",
+        "artifact_binding_count",
+        "non_inclusion_row_count",
+        "failed_check_count",
+        "creator_audit_index_ready",
+        "privacy_preserved"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L110" },
+        "minimum_certification_level": { "const": "RDLLM-L109" },
+        "creator_work_count": { "type": "integer", "minimum": 0 },
+        "surface_row_count": { "type": "integer", "minimum": 0 },
+        "artifact_binding_count": { "type": "integer", "minimum": 0 },
+        "non_inclusion_row_count": { "type": "integer", "minimum": 0 },
+        "failed_check_count": { "type": "integer", "minimum": 0 },
+        "creator_audit_index_ready": { "type": "boolean" },
+        "privacy_preserved": { "type": "boolean" }
+      }
+    },
+    "creator_attribution_audit_index_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  }
+}

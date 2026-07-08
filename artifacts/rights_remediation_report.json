@@ -1,0 +1,190 @@
+{
+  "changed_works": [
+    {
+      "change_reasons": [
+        "allowed_uses_changed",
+        "license_changed",
+        "prohibited_uses_changed",
+        "revoked_at_changed",
+        "revoked_changed",
+        "rights_revoked"
+      ],
+      "creator_id": "creator_revocable",
+      "previous_content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+      "previous_policy_hash": "174c6670c6ab31f06caa863dce0b59c65320aef855d3e4385cf09b37bebd290d",
+      "previous_revoked": false,
+      "revoked_at": "2026-05-30T00:00:00Z",
+      "source_uri": "https://example.test/rights/revocable-source",
+      "title": "Revocable Rights Source",
+      "updated_content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+      "updated_policy_hash": "fee059cbc9be7ed9f41865b5cb9dc685885c9f88b04b220de12e9272761f5e84",
+      "updated_revoked": true,
+      "work_id": "revocable-rights-source"
+    }
+  ],
+  "commitments": {
+    "changed_work_root": "a4c650ec336398eb80b4ece98e560e6340edbea774197e750d1a1324fbea4145",
+    "enforcement_probe_root": "d3c091180f8a6b6b04b6ad01ee1765629d123acc48b1baf36fa8d2b81776be13",
+    "historical_event_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "previous_policy_root": "1d36816bdfdd02221789167ad9455bb58fbaf8fd242769448b1972558247d776",
+    "updated_policy_root": "c38dc6f4d6e75ff3318ce7605929c87249a817700e3e15c1f6d980d1de3727b7"
+  },
+  "created_at": "2026-05-30T08:47:02Z",
+  "economics": {
+    "blocked_probe_count": 1,
+    "creator_pool_per_blocked_probe": "0.550000",
+    "creator_pool_rate": "0.55",
+    "escrow_verified_total": "0.550000",
+    "remediation_gross_revenue": "1.000000"
+  },
+  "enforcement_probes": [
+    {
+      "blocked_output_probe": {
+        "creator_pool": "0.550000",
+        "escrow_accounts": [
+          "rights_conflict_escrow"
+        ],
+        "grounding_status": "rights_blocked",
+        "output_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+        "payout_total": "0.550000",
+        "policy_status": "blocked",
+        "probe_event_hash": "94ecde580333b454793545e0f03ec3ce1a976b912f30f08363a99bc87104fb74",
+        "probe_event_id": "evt_94ecde580333b454",
+        "rights_conflict_escrow_verified": true,
+        "work_id": "revocable-rights-source"
+      },
+      "denied_uses": [
+        "training",
+        "retrieval",
+        "generation",
+        "external_attribution",
+        "display",
+        "quote"
+      ],
+      "future_use_denied": true,
+      "policy_checks": [
+        {
+          "allowed": false,
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "policy_hash": "fee059cbc9be7ed9f41865b5cb9dc685885c9f88b04b220de12e9272761f5e84",
+          "reasons": [
+            "deny:revoked:2026-05-30T00:00:00Z",
+            "deny:prohibited_use:training"
+          ],
+          "use": "training",
+          "work_id": "revocable-rights-source"
+        },
+        {
+          "allowed": false,
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "policy_hash": "fee059cbc9be7ed9f41865b5cb9dc685885c9f88b04b220de12e9272761f5e84",
+          "reasons": [
+            "deny:revoked:2026-05-30T00:00:00Z",
+            "deny:prohibited_use:retrieval"
+          ],
+          "use": "retrieval",
+          "work_id": "revocable-rights-source"
+        },
+        {
+          "allowed": false,
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "policy_hash": "fee059cbc9be7ed9f41865b5cb9dc685885c9f88b04b220de12e9272761f5e84",
+          "reasons": [
+            "deny:revoked:2026-05-30T00:00:00Z",
+            "deny:prohibited_use:generation"
+          ],
+          "use": "generation",
+          "work_id": "revocable-rights-source"
+        },
+        {
+          "allowed": false,
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "policy_hash": "fee059cbc9be7ed9f41865b5cb9dc685885c9f88b04b220de12e9272761f5e84",
+          "reasons": [
+            "deny:revoked:2026-05-30T00:00:00Z",
+            "deny:prohibited_use:external_attribution"
+          ],
+          "use": "external_attribution",
+          "work_id": "revocable-rights-source"
+        },
+        {
+          "allowed": false,
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "policy_hash": "fee059cbc9be7ed9f41865b5cb9dc685885c9f88b04b220de12e9272761f5e84",
+          "reasons": [
+            "deny:revoked:2026-05-30T00:00:00Z",
+            "deny:prohibited_use:display"
+          ],
+          "use": "display",
+          "work_id": "revocable-rights-source"
+        },
+        {
+          "allowed": false,
+          "content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+          "policy_hash": "fee059cbc9be7ed9f41865b5cb9dc685885c9f88b04b220de12e9272761f5e84",
+          "reasons": [
+            "deny:revoked:2026-05-30T00:00:00Z",
+            "deny:prohibited_use:quote"
+          ],
+          "use": "quote",
+          "work_id": "revocable-rights-source"
+        }
+      ],
+      "retrieval_probe": {
+        "retrieval_hit_count": 0,
+        "retrieval_policy_enforced": true,
+        "retrieved_changed_work": false,
+        "work_id": "revocable-rights-source"
+      },
+      "updated_content_hash": "a37a7bf76eab9b7e2eba0d236309c11bd2a7d4fc896401420a9c5f121f4ce544",
+      "updated_policy_hash": "fee059cbc9be7ed9f41865b5cb9dc685885c9f88b04b220de12e9272761f5e84",
+      "work_id": "revocable-rights-source"
+    }
+  ],
+  "historical_event_refs": [],
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "changed_policy_detection": "hash_previous_and_updated_policy_records",
+    "creator_pool_rate": "0.55",
+    "future_denial_action": "deny_or_route_to_rights_conflict_escrow",
+    "historical_event_policy": "preserve_event_hashes_and_issue_forward_remediation",
+    "profile": "rdllm-rights-remediation-policy/v1",
+    "uses_checked": [
+      "training",
+      "retrieval",
+      "generation",
+      "external_attribution",
+      "display",
+      "quote"
+    ]
+  },
+  "privacy": {
+    "claim_text_disclosed": false,
+    "matched_text_disclosed": false,
+    "output_text_disclosed": false,
+    "private_ledger_disclosed": false,
+    "prompt_text_disclosed": false,
+    "report_uses_hashes_policy_reasons_and_event_refs": true,
+    "work_text_disclosed": false
+  },
+  "report_hash": "24fc8bf8ef2f39b8d7512c8c5b3cff45e7a8f19116416ecc51f755fb7b307700",
+  "report_version": "rdllm-rights-remediation/v1",
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "4489d56d1c923558cb7de68b657f69e8f207b43e979a21b7e5c316090bc41de2"
+  },
+  "summary": {
+    "blocked_output_probe_count": 1,
+    "changed_work_count": 1,
+    "creator_pool_conserved": true,
+    "escrow_required_work_count": 1,
+    "future_denial_count": 6,
+    "historical_event_count": 0,
+    "historical_events_preserved": true,
+    "post_publication_rights_remediation": true,
+    "revoked_work_count": 1,
+    "rights_conflict_escrow_verified": true,
+    "status": "ready"
+  }
+}

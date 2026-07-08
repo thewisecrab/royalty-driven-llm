@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Royalty Driven LLM</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --accent: #0f766e;
+        --border: #cbd5e1;
+        --muted: #475569;
+        --bg: #f8fafc;
+        --fg: #0f172a;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --accent: #5eead4;
+          --border: #334155;
+          --muted: #cbd5e1;
+          --bg: #020617;
+          --fg: #e2e8f0;
+        }
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+      main {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 48px 20px 72px;
+      }
+      h1 {
+        font-size: clamp(2rem, 5vw, 4rem);
+        line-height: 1;
+        margin: 0 0 16px;
+      }
+      h2 {
+        margin-top: 40px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+      }
+      p {
+        max-width: 760px;
+      }
+      a {
+        color: var(--accent);
+        font-weight: 650;
+      }
+      .lead {
+        font-size: 1.18rem;
+        color: var(--muted);
+      }
+      .grid {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        margin-top: 20px;
+      }
+      .card {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 16px;
+        background: color-mix(in srgb, var(--bg) 88%, var(--fg) 12%);
+      }
+      .card strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Royalty Driven LLM</h1>
+      <p class="lead">
+        RDLLM is an open-source, provider-neutral attribution, source-footer, and
+        royalty-settlement platform for LLM outputs. It verifies which sources
+        support an answer, whether creator rights permit use, and whether
+        settlement can be released or must be held.
+      </p>
+
+      <h2>Production Baseline</h2>
+      <p>
+        The reference artifact set certifies through <code>RDLLM-L186</code>. The
+        top-level gate normalizes provider response states so blocked, filtered,
+        refused, truncated, tool-only, errored, or unknown model outputs cannot be
+        presented as grounded answers with confident source footers.
+      </p>
+
+      <div class="grid">
+        <a class="card" href="github_start_here.md"><strong>Start Here</strong>GitHub-ready quickstart, live use cases, API clients, and multilingual docs.</a>
+        <a class="card" href="first_5_minutes.md"><strong>First 5 Minutes</strong>Install, run one command, read the output, and fix common beginner issues.</a>
+        <a class="card" href="../examples/live_use_cases/README.md"><strong>Live Use Cases</strong>Fifteen copyable runtime paths with screenshot-backed source-footer examples.</a>
+        <a class="card" href="public_explainer.md"><strong>Public Explainer</strong>ELI5, simple, non-technical, and technical explanations in 15 languages.</a>
+        <a class="card" href="../paper/rdllm_white_paper.md"><strong>White Paper</strong>State-of-the-art concept paper for grounded attribution and royalty settlement.</a>
+        <a class="card" href="project_attribution.md"><strong>Attribution Map</strong>What RDLLM was built from and how source claims are verified.</a>
+        <a class="card" href="mechanism.md"><strong>Mechanism</strong>Architecture, formulas, and audit flow.</a>
+        <a class="card" href="evidence.md"><strong>Evidence Map</strong>How the proof system maps to prior work and policy.</a>
+        <a class="card" href="recent_research.md"><strong>Recent Research</strong>Papers and provider docs that shaped the design.</a>
+        <a class="card" href="provider_onboarding.md"><strong>Provider Onboarding</strong>How any model provider maps into RDLLM contracts.</a>
+        <a class="card" href="provider_compatibility_matrix.md"><strong>Provider Matrix</strong>Supported provider families and required adapter surfaces.</a>
+        <a class="card" href="adopter_quickstart.md"><strong>Adopter Quickstart</strong>Role-based install, launch gate, acceptance, and support bundle path.</a>
+        <a class="card" href="deployment.md"><strong>Deployment</strong>Service deployment, readiness probes, logs, and rollout gates.</a>
+        <a class="card" href="service_api.md"><strong>Service API</strong>HTTP endpoints for attribution, readiness, metrics, and discovery.</a>
+        <a class="card" href="production_readiness.md"><strong>Production Readiness</strong>Operator controls for production-grade open-source deployments.</a>
+        <a class="card" href="operator_runbook.md"><strong>Operator Runbook</strong>Deployment, incident, settlement, and upgrade procedures.</a>
+        <a class="card" href="release_checklist.md"><strong>Release Checklist</strong>Commands and evidence required before shipping.</a>
+        <a class="card" href=".well-known/rdllm.json"><strong>Discovery Manifest</strong>Hosted well-known entry point for public proof artifacts.</a>
+        <a class="card" href="references.md"><strong>References</strong>Source index for papers, standards, and provider docs.</a>
+        <a class="card" href="hosting.md"><strong>Hosting</strong>GitHub Pages and static hosting instructions.</a>
+      </div>
+
+      <h2>Verifier Command</h2>
+      <p>
+        From the repository root, run the full shipping gate and production gate:
+      </p>
+      <pre><code>PYTHONPATH=src python tools/ship_check.py
+PYTHONPATH=src python tools/production_readiness.py</code></pre>
+    </main>
+  </body>
+</html>

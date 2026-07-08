@@ -1,0 +1,363 @@
+{
+  "artifact_bindings": {
+    "attribution_consensus_report_hash": "42e4eb97b47a238a111f6feade0ab62e72dae98285be0619e84a45e36a44331a",
+    "attribution_consensus_report_hash_reproducible": true,
+    "creator_attribution_audit_index_hash": "2f496b48660fd9bf24eb2b44b82fb7401b9f3b275846b21a9b8f05c40ed60271",
+    "creator_attribution_audit_index_hash_reproducible": true,
+    "source_authenticity_report_hash": "b4d53ec02b5e3520c0c8aef51734121ebd7f7d23206aa1a871631c698f03f354",
+    "source_authenticity_report_hash_reproducible": true,
+    "source_confidence_report_hash": "e5b8a300ca61aa2afc07afc5e37ed246d51bd4435cc76a9859a7ccb39d991265",
+    "source_confidence_report_hash_reproducible": true,
+    "source_freshness_audit_hash": "252e757a16d2c5711e88bf72fa4a8f93935efcb1b03ab6b663ebb2f0f3143a74",
+    "source_freshness_audit_hash_reproducible": true,
+    "valuation_method_audit_report_hash": "f860e8c67c2052e3db0bd149b25c941409f8fae7fecd187b8b0ceb4a75c066b3",
+    "valuation_method_audit_report_hash_reproducible": true
+  },
+  "audit_version": "rdllm-royalty-abuse-audit/v1",
+  "checks": {
+    "artifact_bindings_hash_reproducible": true,
+    "collusion_relations_block_direct_payout": true,
+    "creator_pool_conserved": true,
+    "creator_rows_present": true,
+    "duplicate_source_direct_double_pay_blocked": true,
+    "duplicate_value_routes_to_escrow": true,
+    "every_high_risk_source_routed_to_escrow": true,
+    "every_synthetic_or_unverified_source_routed_to_escrow": true,
+    "every_unverified_or_linked_creator_direct_payout_blocked": true,
+    "payout_concentration_within_policy": true,
+    "private_strings_absent": true,
+    "public_report_has_no_private_field_names": true,
+    "required_artifact_bindings_present": true,
+    "settlement_rows_present": true,
+    "settlement_window_present": true,
+    "source_rows_have_abuse_signals": true,
+    "source_rows_present": true
+  },
+  "collusion_rows": [
+    {
+      "collusion_row_hash": "fd5cab4afacf863882fd1e3faf7f8b8a1ae4665b4ed55a29d599aa17a83ff71d",
+      "evidence_hash": "ccae9cbec3c386a2350c7ca932c08dd6a63af3e3fa45b21d7b8a6015723d6375",
+      "high_risk_relation": true,
+      "high_risk_relation_routed_to_escrow": true,
+      "participant_creator_hashes": [
+        "5bbc49225f2550e8bdb22c45b621785d00a6046c171b23073a4bdb4fd92160b7",
+        "a2537b2bb133eb899f402e13c58dba1789ee95f18d5032c839e9770c62291eb6"
+      ],
+      "participants_have_direct_payout": false,
+      "relation_id": "relationship:ring",
+      "relation_type": "reciprocal_citation_ring",
+      "relation_weight": "0.93000000",
+      "source_ids": [
+        "source:duplicate",
+        "source:farm"
+      ]
+    }
+  ],
+  "commitments": {
+    "collusion_root": "d8b03146def100d944b829657c9d89e037181055638c5747d7281d0f773fd69c",
+    "creator_abuse_root": "0d8d502d03d1909244999377984224f1719a44f5ca396522150ad7cef2368859",
+    "duplicate_abuse_root": "991b338ceae4a6449f6b23dda0c4560f6bf097753ceecb6da50addc1d80b6bcf",
+    "schema": "docs/schemas/royalty_abuse_audit.schema.json",
+    "settlement_root": "ce6a798b493552259c1c6fa7733a3fa83239c9c58a467886e7abbfcf2e3300fc",
+    "source_abuse_root": "5c89f3e4bf05e51083e273b76b0ebb221c14fa96506e96aa9afbc737b800ae0c"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "creator_abuse_rows": [
+    {
+      "account_age_days": 400,
+      "creator_abuse_hash": "a56359675a7b53538cbffc8f39bcbe3a28295670c72cf81d945df59b602a230c",
+      "creator_direct_payout_allowed": true,
+      "creator_id_hash": "59c288dc161710789eeed01bc53fa06efb3c2ea01f98729ea9e993c4b14866b8",
+      "direct_payout_amount": "0.700000",
+      "direct_payout_share": "0.70000000",
+      "linked_account_hashes": [],
+      "payout_account_hash": "5eff74e0a956ab6694908944ce9b35f603b9165168776f98a1d95ca5311506fa",
+      "payout_concentration_ok": true,
+      "payout_share": "0.70000000",
+      "prior_abuse_strikes": 0,
+      "source_count": 2,
+      "suspicious_creator": false,
+      "total_payout_amount": "0.700000",
+      "verified_identity": true
+    },
+    {
+      "account_age_days": 12,
+      "creator_abuse_hash": "d5a213ce8e224454d19222e0d36ecb5014ad9bbb28a5ea7324c67bb3c45b3dfb",
+      "creator_direct_payout_allowed": true,
+      "creator_id_hash": "5bbc49225f2550e8bdb22c45b621785d00a6046c171b23073a4bdb4fd92160b7",
+      "direct_payout_amount": "0.000000",
+      "direct_payout_share": "0E-8",
+      "linked_account_hashes": [
+        "83d72a08b86ead9cd8e27d7312533e6ec73c7456efc2c1395631b41a0c553f86"
+      ],
+      "payout_account_hash": "44ff0fbcee43b6c04f0ee9aa5e7223b1118db107e65210a2e6dae9b1367c8933",
+      "payout_concentration_ok": true,
+      "payout_share": "0.10000000",
+      "prior_abuse_strikes": 0,
+      "source_count": 1,
+      "suspicious_creator": true,
+      "total_payout_amount": "0.100000",
+      "verified_identity": true
+    },
+    {
+      "account_age_days": 3,
+      "creator_abuse_hash": "2da27f123ec4f2001c88827c16cedf609799cf84ec6d939f3d959529167b21b9",
+      "creator_direct_payout_allowed": true,
+      "creator_id_hash": "a2537b2bb133eb899f402e13c58dba1789ee95f18d5032c839e9770c62291eb6",
+      "direct_payout_amount": "0.000000",
+      "direct_payout_share": "0E-8",
+      "linked_account_hashes": [],
+      "payout_account_hash": "83d72a08b86ead9cd8e27d7312533e6ec73c7456efc2c1395631b41a0c553f86",
+      "payout_concentration_ok": true,
+      "payout_share": "0.20000000",
+      "prior_abuse_strikes": 1,
+      "source_count": 1,
+      "suspicious_creator": true,
+      "total_payout_amount": "0.200000",
+      "verified_identity": false
+    }
+  ],
+  "duplicate_abuse_rows": [
+    {
+      "both_duplicates_paid_directly": false,
+      "content_hash_match": true,
+      "duplicate_abuse_hash": "c40d3432c2c75b372a4db3ec700080ee748b7dd1030812d7c0027aed9ea256dd",
+      "duplicate_id": "duplicate:farm-copy",
+      "duplicate_match": true,
+      "duplicate_value_escrowed": true,
+      "owner_overlap": true,
+      "same_payout_account": false,
+      "similarity": "0.97000000",
+      "source_a": "source:farm",
+      "source_b": "source:duplicate"
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "duplicate_similarity_threshold": "0.92000000",
+    "high_risk_relation_types": [
+      "coordinated_citation_ring",
+      "reciprocal_boost",
+      "reciprocal_citation_ring",
+      "self_dealing",
+      "shared_payout_account",
+      "sybil_cluster",
+      "undisclosed_common_control"
+    ],
+    "max_creator_payout_share": "0.70000000",
+    "max_source_farm_risk": "0.20000000",
+    "minimum_input_level": "RDLLM-L116",
+    "profile": "rdllm-royalty-abuse-audit-policy/v1",
+    "suspicious_value_must_route_to_escrow": true,
+    "target_certification_level": "RDLLM-L117"
+  },
+  "privacy": {
+    "public_report_uses_hashes_scores_flags_and_amounts": true,
+    "raw_answer_text_disclosed": false,
+    "raw_payment_account_disclosed": false,
+    "raw_prompt_text_disclosed": false,
+    "raw_source_text_disclosed": false
+  },
+  "royalty_abuse_audit_hash": "e7df79380ce7f7e50212c001e330cad14f72bfe6e8a727c64db6bbaacf447b99",
+  "schemas": {
+    "attribution_consensus_report": "docs/schemas/attribution_consensus_report.schema.json",
+    "royalty_abuse_audit": "docs/schemas/royalty_abuse_audit.schema.json",
+    "source_authenticity_report": "docs/schemas/source_authenticity_report.schema.json",
+    "source_freshness_audit": "docs/schemas/source_freshness_audit.schema.json"
+  },
+  "settlement_rows": [
+    {
+      "creator_id_hash": "59c288dc161710789eeed01bc53fa06efb3c2ea01f98729ea9e993c4b14866b8",
+      "direct_payout": true,
+      "escrowed": false,
+      "payout_account_hash": "5eff74e0a956ab6694908944ce9b35f603b9165168776f98a1d95ca5311506fa",
+      "payout_amount": "0.400000",
+      "reason_code": "",
+      "recipient_creator_id_hash": "59c288dc161710789eeed01bc53fa06efb3c2ea01f98729ea9e993c4b14866b8",
+      "settlement_action": "direct_payout",
+      "settlement_id": "settlement:clean:1",
+      "settlement_row_hash": "3a4cad0dc949f29556ce1d21cfbca3f56d443e8ebb0d57655838cf07d68a1a8a",
+      "source_id": "source:clean:1"
+    },
+    {
+      "creator_id_hash": "59c288dc161710789eeed01bc53fa06efb3c2ea01f98729ea9e993c4b14866b8",
+      "direct_payout": true,
+      "escrowed": false,
+      "payout_account_hash": "5eff74e0a956ab6694908944ce9b35f603b9165168776f98a1d95ca5311506fa",
+      "payout_amount": "0.300000",
+      "reason_code": "",
+      "recipient_creator_id_hash": "59c288dc161710789eeed01bc53fa06efb3c2ea01f98729ea9e993c4b14866b8",
+      "settlement_action": "direct_payout",
+      "settlement_id": "settlement:clean:2",
+      "settlement_row_hash": "0d16518b84084fbc2ec5d8f922716318e3905a9d7dc29e3a079ba19fae314d30",
+      "source_id": "source:clean:2"
+    },
+    {
+      "creator_id_hash": "5bbc49225f2550e8bdb22c45b621785d00a6046c171b23073a4bdb4fd92160b7",
+      "direct_payout": false,
+      "escrowed": true,
+      "payout_account_hash": "44ff0fbcee43b6c04f0ee9aa5e7223b1118db107e65210a2e6dae9b1367c8933",
+      "payout_amount": "0.100000",
+      "reason_code": "duplicate_source_cluster",
+      "recipient_creator_id_hash": "5bbc49225f2550e8bdb22c45b621785d00a6046c171b23073a4bdb4fd92160b7",
+      "settlement_action": "duplicate_review_escrow",
+      "settlement_id": "settlement:duplicate",
+      "settlement_row_hash": "9ba248e3c5bd7ceaeac71686b2a95bcd7d075c772f085e16d79896983ea39e95",
+      "source_id": "source:duplicate"
+    },
+    {
+      "creator_id_hash": "a2537b2bb133eb899f402e13c58dba1789ee95f18d5032c839e9770c62291eb6",
+      "direct_payout": false,
+      "escrowed": true,
+      "payout_account_hash": "83d72a08b86ead9cd8e27d7312533e6ec73c7456efc2c1395631b41a0c553f86",
+      "payout_amount": "0.200000",
+      "reason_code": "source_farm_and_unverified_creator",
+      "recipient_creator_id_hash": "a2537b2bb133eb899f402e13c58dba1789ee95f18d5032c839e9770c62291eb6",
+      "settlement_action": "escrow_abuse_review",
+      "settlement_id": "settlement:farm",
+      "settlement_row_hash": "54b22dc4e72d8d1a9d2fb739e7fa6eb084b813200b66cefcc1bbfe3f2de40e20",
+      "source_id": "source:farm"
+    }
+  ],
+  "settlement_window": {
+    "creator_pool_amount": "1.000000",
+    "direct_payout_total": "0.700000",
+    "escrow_total": "0.300000",
+    "settlement_total": "1.000000",
+    "settlement_window_id_hash": "258d7d3787eca9a825003088092a5799818e2845109e39e22124c25fd2e09558"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "3ae89bbd2d0ddfd18c6c6651cdcb6b6e549df215b4f6940effc859482ef832dc"
+  },
+  "source_abuse_rows": [
+    {
+      "ai_generated_disclosed": false,
+      "citation_count": 4,
+      "claim_count": 2,
+      "content_hash": "a4d269ef35bb20e3d98c1496caf719604e2b7ee4323a63fbc2f7e9e8cd3e4b9e",
+      "creator_id_hash": "59c288dc161710789eeed01bc53fa06efb3c2ea01f98729ea9e993c4b14866b8",
+      "direct_payout": true,
+      "domain_hash": "af56947e92130f21f14113bd9310944d340766904d27db19e10bf3c2d07f46e7",
+      "escrowed": false,
+      "high_source_farm_risk": false,
+      "label": "S1",
+      "origin_signature_verified": true,
+      "routed_to_abuse_escrow_if_suspicious": true,
+      "settlement_hashes": [
+        "3a4cad0dc949f29556ce1d21cfbca3f56d443e8ebb0d57655838cf07d68a1a8a"
+      ],
+      "source_abuse_hash": "beea21b47e8b3e1dd3c0a791b752adfe4e15d758144eea2b3142d7309c862cad",
+      "source_authenticity_status": "verified_human_origin",
+      "source_farm_risk_score": "0.03000000",
+      "source_freshness_status": "ready",
+      "source_id": "source:clean:1",
+      "source_uri_hash": "1545d1ebf0ec4b33d308120120e1bd49a56cd3247a50f0097cfa644e4568aac6",
+      "suspicious_source": false,
+      "synthetic_or_ai_generated_source": false,
+      "synthetic_source": false,
+      "unverified_origin_or_dependency": false,
+      "work_id_hash": "bc0595640c969bde32a00a9df7e4a7857608ef01eae248c6c0aaebfab7de0851"
+    },
+    {
+      "ai_generated_disclosed": false,
+      "citation_count": 3,
+      "claim_count": 2,
+      "content_hash": "4d3f7cc954be18f94143f5a3c5b0bb9a29986a592bd30522a7930e275fabdd1b",
+      "creator_id_hash": "59c288dc161710789eeed01bc53fa06efb3c2ea01f98729ea9e993c4b14866b8",
+      "direct_payout": true,
+      "domain_hash": "af56947e92130f21f14113bd9310944d340766904d27db19e10bf3c2d07f46e7",
+      "escrowed": false,
+      "high_source_farm_risk": false,
+      "label": "S2",
+      "origin_signature_verified": true,
+      "routed_to_abuse_escrow_if_suspicious": true,
+      "settlement_hashes": [
+        "0d16518b84084fbc2ec5d8f922716318e3905a9d7dc29e3a079ba19fae314d30"
+      ],
+      "source_abuse_hash": "170333901390c925aae97429e86c377f4407c75d7f620fe827934c5e612062f4",
+      "source_authenticity_status": "verified_human_origin",
+      "source_farm_risk_score": "0.04000000",
+      "source_freshness_status": "ready",
+      "source_id": "source:clean:2",
+      "source_uri_hash": "16887d1c151ace7bd472010bcea3f371b919a9462c52cd56384b09e6283c6ac6",
+      "suspicious_source": false,
+      "synthetic_or_ai_generated_source": false,
+      "synthetic_source": false,
+      "unverified_origin_or_dependency": false,
+      "work_id_hash": "efe1cebf5f1ae57f3b7d4c588edf152f7726b4420d76a364cdde1d23564c4c09"
+    },
+    {
+      "ai_generated_disclosed": false,
+      "citation_count": 11,
+      "claim_count": 1,
+      "content_hash": "3104b33fbe76670710530fb7460fee8fe773ffd775ed4de5b6d497f8d9286c4d",
+      "creator_id_hash": "5bbc49225f2550e8bdb22c45b621785d00a6046c171b23073a4bdb4fd92160b7",
+      "direct_payout": false,
+      "domain_hash": "65c23a36212f1af0bf0c2c2203ac4584a97045a32b1f17410cfda4724d61c49d",
+      "escrowed": true,
+      "high_source_farm_risk": true,
+      "label": "S4",
+      "origin_signature_verified": false,
+      "routed_to_abuse_escrow_if_suspicious": true,
+      "settlement_hashes": [
+        "9ba248e3c5bd7ceaeac71686b2a95bcd7d075c772f085e16d79896983ea39e95"
+      ],
+      "source_abuse_hash": "69ff91dfc6edadfaedb9addb276ceda1bf1bbbafa477c8ca55e8065575002094",
+      "source_authenticity_status": "source_farm_risk",
+      "source_farm_risk_score": "0.68000000",
+      "source_freshness_status": "ready",
+      "source_id": "source:duplicate",
+      "source_uri_hash": "c4d6fbd1a4de5d9d71bf975074f26f0f5e71f3de3538836ea608a49179f85bf4",
+      "suspicious_source": true,
+      "synthetic_or_ai_generated_source": true,
+      "synthetic_source": true,
+      "unverified_origin_or_dependency": true,
+      "work_id_hash": "58867c31fc0fb5951d380568aa814b80c50caf501cdcefe80bea68743be172e5"
+    },
+    {
+      "ai_generated_disclosed": false,
+      "citation_count": 19,
+      "claim_count": 1,
+      "content_hash": "3104b33fbe76670710530fb7460fee8fe773ffd775ed4de5b6d497f8d9286c4d",
+      "creator_id_hash": "a2537b2bb133eb899f402e13c58dba1789ee95f18d5032c839e9770c62291eb6",
+      "direct_payout": false,
+      "domain_hash": "5da3b356f96b080799c9302a16d5cc300b71f8d7bf73d722dd051a20de10a329",
+      "escrowed": true,
+      "high_source_farm_risk": true,
+      "label": "S3",
+      "origin_signature_verified": false,
+      "routed_to_abuse_escrow_if_suspicious": true,
+      "settlement_hashes": [
+        "54b22dc4e72d8d1a9d2fb739e7fa6eb084b813200b66cefcc1bbfe3f2de40e20"
+      ],
+      "source_abuse_hash": "06254ca723c0988300a87b1f92e84049b313b232059578f822b826bd8309c81f",
+      "source_authenticity_status": "source_farm_risk",
+      "source_farm_risk_score": "0.91000000",
+      "source_freshness_status": "ready",
+      "source_id": "source:farm",
+      "source_uri_hash": "4ae2df83ba9d4ce14a409b0c275c9dc76576ae11c54d9405ae8b6ade33d9d768",
+      "suspicious_source": true,
+      "synthetic_or_ai_generated_source": true,
+      "synthetic_source": true,
+      "unverified_origin_or_dependency": true,
+      "work_id_hash": "ed7526a5278379c52e93b84bcc965e20fcedfe59b24340767976959f3a65fd41"
+    }
+  ],
+  "summary": {
+    "creator_count": 3,
+    "creator_pool_amount": "1.000000",
+    "direct_payout_total": "0.700000",
+    "duplicate_match_count": 1,
+    "escrow_total": "0.300000",
+    "high_risk_relation_count": 1,
+    "minimum_input_level": "RDLLM-L116",
+    "settlement_row_count": 4,
+    "source_count": 4,
+    "status": "ready",
+    "suspicious_creator_count": 2,
+    "suspicious_source_count": 2,
+    "target_certification_level": "RDLLM-L117"
+  }
+}

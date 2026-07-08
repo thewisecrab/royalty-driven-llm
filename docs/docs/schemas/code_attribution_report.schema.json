@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/code_attribution_report.schema.json",
+  "title": "RDLLM Code Attribution Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "submitted_outputs",
+    "match_rows",
+    "royalty_shares",
+    "payout_rows",
+    "obligations",
+    "commitments",
+    "summary",
+    "privacy",
+    "schemas",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-code-attribution-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "accept_threshold",
+        "strong_copy_threshold",
+        "creator_pool_rate",
+        "default_gross_revenue_per_output",
+        "license_compatibility_profile",
+        "release_policy"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-code-attribution-policy/v1" },
+        "accept_threshold": { "type": "number" },
+        "strong_copy_threshold": { "type": "number" },
+        "creator_pool_rate": { "type": "string" },
+        "default_gross_revenue_per_output": { "type": "string" },
+        "license_compatibility_profile": { "type": "string" },
+        "release_policy": { "type": "object" }
+      }
+    },
+    "submitted_outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "output_id",
+          "language",
+          "generated_code_hash",
+          "generated_line_count",
+          "generated_line_hash_root",
+          "generated_token_fingerprint",
+          "generated_identifier_fingerprint",
+          "intended_license",
+          "distribution",
+          "policy_use",
+          "gross_revenue"
+        ]
+      }
+    },
+    "match_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "output_id",
+          "work_id",
+          "chunk_id",
+          "creator_id",
+          "title",
+          "source_uri",
+          "content_hash",
+          "source_license",
+          "matched_line_count",
+          "matched_line_hash_root",
+          "matched_sequence_hash",
+          "scores",
+          "feature_commitment",
+          "rank",
+          "policy_allowed",
+          "policy_reasons",
+          "license_check",
+          "decision"
+        ]
+      }
+    },
+    "royalty_shares": { "type": "array" },
+    "payout_rows": { "type": "array" },
+    "obligations": { "type": "array" },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "submitted_output_root",
+        "match_root",
+        "royalty_share_root",
+        "payout_root",
+        "obligation_root",
+        "policy_root"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "output_count",
+        "candidate_row_count",
+        "accepted_share_count",
+        "license_conflict_count",
+        "escrow_output_count",
+        "creator_pool_total",
+        "payable_total",
+        "escrow_total",
+        "creator_pool_conserved",
+        "copied_code_attribution_supported",
+        "spdx_license_compatibility_checked"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L53" },
+        "creator_pool_conserved": { "const": true },
+        "copied_code_attribution_supported": { "const": true },
+        "spdx_license_compatibility_checked": { "const": true }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "generated_code_disclosed",
+        "source_code_disclosed",
+        "matched_code_disclosed",
+        "line_hashes_disclosed_as_roots",
+        "identifier_sets_disclosed_as_hashes",
+        "report_uses_hashes_scores_source_ids_and_license_status"
+      ],
+      "properties": {
+        "generated_code_disclosed": { "const": false },
+        "source_code_disclosed": { "const": false },
+        "matched_code_disclosed": { "const": false },
+        "line_hashes_disclosed_as_roots": { "const": true },
+        "identifier_sets_disclosed_as_hashes": { "const": true }
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["code_attribution_report"]
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"]
+    }
+  }
+}

@@ -1,0 +1,649 @@
+{
+  "artifact_bindings": {
+    "citation_footer_contract": {
+      "artifact_type": "rdllm-citation-footer-contract/v1",
+      "declared_hash": "b18a8cc93a4974ead44bf84e5a76f2b0f00b2fc0d588ec9b5e32b6ea188450eb",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "evidence_force_calibration": {
+      "artifact_type": "rdllm-evidence-force-calibration/v1",
+      "declared_hash": "b0fbf063d3da88b93cb1590c4fc224d7328b8b68318adb0049a2084185e24be7",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "grounded_source_footer": {
+      "artifact_type": "",
+      "declared_hash": "7a0be33bb5f4598f94085c26cfcb57b09627c4a20e81a5f7fcb160ecb0c0d78e",
+      "hash_reproducible": true,
+      "present": true
+    },
+    "rendered_attribution_audit": {
+      "artifact_type": "rdllm-rendered-attribution-audit/v1",
+      "declared_hash": "78658d18c49302c5a8312c04136c311895dbc44f281aea216f6960d3d1a89017",
+      "hash_reproducible": true,
+      "present": true
+    }
+  },
+  "checks": {
+    "artifact_hashes_reproducible": true,
+    "citation_footer_contract_verified": true,
+    "evidence_force_calibration_ready_l119": true,
+    "footer_display_hash_reproducible": true,
+    "grounded_source_footer_ready": true,
+    "private_text_not_disclosed": true,
+    "rendered_attribution_audit_ready": true,
+    "source_rows_visible_and_verified": true,
+    "verified_footer_rows_show_only_calibrated_warrants": true,
+    "visible_footer_claims_covered_by_l119": true,
+    "visible_verified_claims_force_calibrated": true,
+    "warrant_rows_cover_visible_footer_claims": true,
+    "warrant_rows_include_required_force_axes": true
+  },
+  "claim_warrant_rows": [
+    {
+      "axis_rows": [
+        {
+          "axis": "relation",
+          "axis_row_hash": "a5c41cd54c43f122d807f2dfb7124b8b9f224a687c83c892e478720d5e537bcd",
+          "calibrated": true,
+          "claim_force": "supports",
+          "claim_rank": 3,
+          "evidence_force": "supports",
+          "evidence_rank": 3,
+          "force_gap": 0
+        },
+        {
+          "axis": "modality",
+          "axis_row_hash": "756758eb0f6f181befeb6d27cb6e37818966d6b350230b44cca94ca7de7446e7",
+          "calibrated": true,
+          "claim_force": "asserted",
+          "claim_rank": 4,
+          "evidence_force": "asserted",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "scope",
+          "axis_row_hash": "7f5299e71b286af149837b183a78e8d12cf6838177431062325c4b9cdc444574",
+          "calibrated": true,
+          "claim_force": "sample",
+          "claim_rank": 3,
+          "evidence_force": "population",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "temporal",
+          "axis_row_hash": "486875cba0f102f72152bc07d9fa32493e77c2092400c0f4cf7293a25791b978",
+          "calibrated": true,
+          "claim_force": "current",
+          "claim_rank": 4,
+          "evidence_force": "current",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "numeric",
+          "axis_row_hash": "44da5fbf187c91c4c18329fe9f9f559783dfa775089f74c038c3f6a55e83df2c",
+          "calibrated": true,
+          "claim_force": "approximate",
+          "claim_rank": 2,
+          "evidence_force": "range",
+          "evidence_rank": 3,
+          "force_gap": 0
+        }
+      ],
+      "calibrated": true,
+      "claim_hash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+      "claim_index": 1,
+      "claim_warrant_row_hash": "370b3756070d555968794f0f8bf05d5d337c45a04d1752fb3d29e09e79852e95",
+      "confidence": 1.0,
+      "covered_by_force_row": true,
+      "display_anchor": "[S1:span=399e7ff82b80]",
+      "display_text": "claim 1 [S1:span=399e7ff82b80] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=399e7ff82b80",
+      "evidence_span_prefix": "399e7ff82b80",
+      "footer_claim_verified": true,
+      "footer_status": "verified",
+      "matched_claim_ids": [
+        "claim:footer:S1:1"
+      ],
+      "matched_force_row_hashes": [
+        "29d11b5415157ccaeb5c53a719fd9696400dee33c506eda0c4bf208f79b815e1"
+      ],
+      "settlement_action": "direct_payout_allowed",
+      "source_label": "S1",
+      "support_score": 0.9,
+      "violation_axes": [],
+      "visible_claim_key": "c91a39c21b4676a5ff0e52f80a9711023e705f2d8b52c9eefa61eda8a71020d3",
+      "warrant_status": "calibrated"
+    },
+    {
+      "axis_rows": [
+        {
+          "axis": "relation",
+          "axis_row_hash": "a5c41cd54c43f122d807f2dfb7124b8b9f224a687c83c892e478720d5e537bcd",
+          "calibrated": true,
+          "claim_force": "supports",
+          "claim_rank": 3,
+          "evidence_force": "supports",
+          "evidence_rank": 3,
+          "force_gap": 0
+        },
+        {
+          "axis": "modality",
+          "axis_row_hash": "756758eb0f6f181befeb6d27cb6e37818966d6b350230b44cca94ca7de7446e7",
+          "calibrated": true,
+          "claim_force": "asserted",
+          "claim_rank": 4,
+          "evidence_force": "asserted",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "scope",
+          "axis_row_hash": "7f5299e71b286af149837b183a78e8d12cf6838177431062325c4b9cdc444574",
+          "calibrated": true,
+          "claim_force": "sample",
+          "claim_rank": 3,
+          "evidence_force": "population",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "temporal",
+          "axis_row_hash": "486875cba0f102f72152bc07d9fa32493e77c2092400c0f4cf7293a25791b978",
+          "calibrated": true,
+          "claim_force": "current",
+          "claim_rank": 4,
+          "evidence_force": "current",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "numeric",
+          "axis_row_hash": "44da5fbf187c91c4c18329fe9f9f559783dfa775089f74c038c3f6a55e83df2c",
+          "calibrated": true,
+          "claim_force": "approximate",
+          "claim_rank": 2,
+          "evidence_force": "range",
+          "evidence_rank": 3,
+          "force_gap": 0
+        }
+      ],
+      "calibrated": true,
+      "claim_hash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+      "claim_index": 2,
+      "claim_warrant_row_hash": "49b125b035bdcc697668633b36a8c5e34682560daba9c6a822e4860052de4b3e",
+      "confidence": 1.0,
+      "covered_by_force_row": true,
+      "display_anchor": "[S1:span=6ea90fbdd0fb]",
+      "display_text": "claim 2 [S1:span=6ea90fbdd0fb] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=6ea90fbdd0fb",
+      "evidence_span_prefix": "6ea90fbdd0fb",
+      "footer_claim_verified": true,
+      "footer_status": "verified",
+      "matched_claim_ids": [
+        "claim:footer:S1:2"
+      ],
+      "matched_force_row_hashes": [
+        "83dd192df824f30d8d047a307a809d22bf0c454128b8a3ade675f7b973107cd9"
+      ],
+      "settlement_action": "direct_payout_allowed",
+      "source_label": "S1",
+      "support_score": 0.9,
+      "violation_axes": [],
+      "visible_claim_key": "5c4d1a08969d55860b1affece9257587fec99771e1f9a87fc75ecb2208da1481",
+      "warrant_status": "calibrated"
+    },
+    {
+      "axis_rows": [
+        {
+          "axis": "relation",
+          "axis_row_hash": "a5c41cd54c43f122d807f2dfb7124b8b9f224a687c83c892e478720d5e537bcd",
+          "calibrated": true,
+          "claim_force": "supports",
+          "claim_rank": 3,
+          "evidence_force": "supports",
+          "evidence_rank": 3,
+          "force_gap": 0
+        },
+        {
+          "axis": "modality",
+          "axis_row_hash": "756758eb0f6f181befeb6d27cb6e37818966d6b350230b44cca94ca7de7446e7",
+          "calibrated": true,
+          "claim_force": "asserted",
+          "claim_rank": 4,
+          "evidence_force": "asserted",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "scope",
+          "axis_row_hash": "7f5299e71b286af149837b183a78e8d12cf6838177431062325c4b9cdc444574",
+          "calibrated": true,
+          "claim_force": "sample",
+          "claim_rank": 3,
+          "evidence_force": "population",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "temporal",
+          "axis_row_hash": "486875cba0f102f72152bc07d9fa32493e77c2092400c0f4cf7293a25791b978",
+          "calibrated": true,
+          "claim_force": "current",
+          "claim_rank": 4,
+          "evidence_force": "current",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "numeric",
+          "axis_row_hash": "44da5fbf187c91c4c18329fe9f9f559783dfa775089f74c038c3f6a55e83df2c",
+          "calibrated": true,
+          "claim_force": "approximate",
+          "claim_rank": 2,
+          "evidence_force": "range",
+          "evidence_rank": 3,
+          "force_gap": 0
+        }
+      ],
+      "calibrated": true,
+      "claim_hash": "71e11e089ebe72376e5099eb3f9ade96cf587ca11a6e9d3d60bfd49ca0423baa",
+      "claim_index": 3,
+      "claim_warrant_row_hash": "9bbff5b59b3fca186ef47b2584030a2df1176a650e8ced5ac66c4c95d70ca88c",
+      "confidence": 1.0,
+      "covered_by_force_row": true,
+      "display_anchor": "[S2:span=71e11e089ebe]",
+      "display_text": "claim 3 [S2:span=71e11e089ebe] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=71e11e089ebe",
+      "evidence_span_prefix": "71e11e089ebe",
+      "footer_claim_verified": true,
+      "footer_status": "verified",
+      "matched_claim_ids": [
+        "claim:footer:S2:3"
+      ],
+      "matched_force_row_hashes": [
+        "e70bbf7ae7400bd48ba50ab606574d5636adccc00d2a54e5136d2cdf2530c5e3"
+      ],
+      "settlement_action": "direct_payout_allowed",
+      "source_label": "S2",
+      "support_score": 0.9,
+      "violation_axes": [],
+      "visible_claim_key": "79f2854833fd5bd1d0ea487f5645019fd7ae6f58a96f6835c02b1c6ca82fe552",
+      "warrant_status": "calibrated"
+    },
+    {
+      "axis_rows": [
+        {
+          "axis": "relation",
+          "axis_row_hash": "a5c41cd54c43f122d807f2dfb7124b8b9f224a687c83c892e478720d5e537bcd",
+          "calibrated": true,
+          "claim_force": "supports",
+          "claim_rank": 3,
+          "evidence_force": "supports",
+          "evidence_rank": 3,
+          "force_gap": 0
+        },
+        {
+          "axis": "modality",
+          "axis_row_hash": "756758eb0f6f181befeb6d27cb6e37818966d6b350230b44cca94ca7de7446e7",
+          "calibrated": true,
+          "claim_force": "asserted",
+          "claim_rank": 4,
+          "evidence_force": "asserted",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "scope",
+          "axis_row_hash": "7f5299e71b286af149837b183a78e8d12cf6838177431062325c4b9cdc444574",
+          "calibrated": true,
+          "claim_force": "sample",
+          "claim_rank": 3,
+          "evidence_force": "population",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "temporal",
+          "axis_row_hash": "486875cba0f102f72152bc07d9fa32493e77c2092400c0f4cf7293a25791b978",
+          "calibrated": true,
+          "claim_force": "current",
+          "claim_rank": 4,
+          "evidence_force": "current",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "numeric",
+          "axis_row_hash": "44da5fbf187c91c4c18329fe9f9f559783dfa775089f74c038c3f6a55e83df2c",
+          "calibrated": true,
+          "claim_force": "approximate",
+          "claim_rank": 2,
+          "evidence_force": "range",
+          "evidence_rank": 3,
+          "force_gap": 0
+        }
+      ],
+      "calibrated": true,
+      "claim_hash": "82b19c7059e78ab87624c79ca85b89461095efd5a20dc0a2a50c16643ab4a26c",
+      "claim_index": 4,
+      "claim_warrant_row_hash": "a3f632654eea494e407056797c47abf1c0034e1d93b16f4f7dbced05d6e2e77e",
+      "confidence": 1.0,
+      "covered_by_force_row": true,
+      "display_anchor": "[S2:span=82b19c7059e7]",
+      "display_text": "claim 4 [S2:span=82b19c7059e7] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=82b19c7059e7",
+      "evidence_span_prefix": "82b19c7059e7",
+      "footer_claim_verified": true,
+      "footer_status": "verified",
+      "matched_claim_ids": [
+        "claim:footer:S2:4"
+      ],
+      "matched_force_row_hashes": [
+        "e9d1850942ef30cd8c48b61c47309f55636241d0ce736fdeda1960f224e826e0"
+      ],
+      "settlement_action": "direct_payout_allowed",
+      "source_label": "S2",
+      "support_score": 0.9,
+      "violation_axes": [],
+      "visible_claim_key": "385115f2ee7fcf8b3a5493bdcd6830ca8bfb9c0c3b5744146e8d53aea85b127d",
+      "warrant_status": "calibrated"
+    },
+    {
+      "axis_rows": [
+        {
+          "axis": "relation",
+          "axis_row_hash": "a5c41cd54c43f122d807f2dfb7124b8b9f224a687c83c892e478720d5e537bcd",
+          "calibrated": true,
+          "claim_force": "supports",
+          "claim_rank": 3,
+          "evidence_force": "supports",
+          "evidence_rank": 3,
+          "force_gap": 0
+        },
+        {
+          "axis": "modality",
+          "axis_row_hash": "756758eb0f6f181befeb6d27cb6e37818966d6b350230b44cca94ca7de7446e7",
+          "calibrated": true,
+          "claim_force": "asserted",
+          "claim_rank": 4,
+          "evidence_force": "asserted",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "scope",
+          "axis_row_hash": "7f5299e71b286af149837b183a78e8d12cf6838177431062325c4b9cdc444574",
+          "calibrated": true,
+          "claim_force": "sample",
+          "claim_rank": 3,
+          "evidence_force": "population",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "temporal",
+          "axis_row_hash": "486875cba0f102f72152bc07d9fa32493e77c2092400c0f4cf7293a25791b978",
+          "calibrated": true,
+          "claim_force": "current",
+          "claim_rank": 4,
+          "evidence_force": "current",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "numeric",
+          "axis_row_hash": "44da5fbf187c91c4c18329fe9f9f559783dfa775089f74c038c3f6a55e83df2c",
+          "calibrated": true,
+          "claim_force": "approximate",
+          "claim_rank": 2,
+          "evidence_force": "range",
+          "evidence_rank": 3,
+          "force_gap": 0
+        }
+      ],
+      "calibrated": true,
+      "claim_hash": "28528b6fc0dbfca22581220c07e210b8b25f663a5ac1108ef3b1d2a69801cdce",
+      "claim_index": 5,
+      "claim_warrant_row_hash": "926e5caaa28bc2f94db5de01c2ecc7e4994c8427acccdaa4eff1917e22898fc2",
+      "confidence": 1.0,
+      "covered_by_force_row": true,
+      "display_anchor": "[S3:span=28528b6fc0db]",
+      "display_text": "claim 5 [S3:span=28528b6fc0db] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=28528b6fc0db",
+      "evidence_span_prefix": "28528b6fc0db",
+      "footer_claim_verified": true,
+      "footer_status": "verified",
+      "matched_claim_ids": [
+        "claim:footer:S3:5"
+      ],
+      "matched_force_row_hashes": [
+        "473d75728df3259024fcac582916fe64f10053f2a7784352a35f52d38c6132db"
+      ],
+      "settlement_action": "direct_payout_allowed",
+      "source_label": "S3",
+      "support_score": 0.9,
+      "violation_axes": [],
+      "visible_claim_key": "1cba8bdc2339f30422a2af08420fbfa9cc4773dc534c3ebbe835dd2e0708a897",
+      "warrant_status": "calibrated"
+    },
+    {
+      "axis_rows": [
+        {
+          "axis": "relation",
+          "axis_row_hash": "a5c41cd54c43f122d807f2dfb7124b8b9f224a687c83c892e478720d5e537bcd",
+          "calibrated": true,
+          "claim_force": "supports",
+          "claim_rank": 3,
+          "evidence_force": "supports",
+          "evidence_rank": 3,
+          "force_gap": 0
+        },
+        {
+          "axis": "modality",
+          "axis_row_hash": "756758eb0f6f181befeb6d27cb6e37818966d6b350230b44cca94ca7de7446e7",
+          "calibrated": true,
+          "claim_force": "asserted",
+          "claim_rank": 4,
+          "evidence_force": "asserted",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "scope",
+          "axis_row_hash": "7f5299e71b286af149837b183a78e8d12cf6838177431062325c4b9cdc444574",
+          "calibrated": true,
+          "claim_force": "sample",
+          "claim_rank": 3,
+          "evidence_force": "population",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "temporal",
+          "axis_row_hash": "486875cba0f102f72152bc07d9fa32493e77c2092400c0f4cf7293a25791b978",
+          "calibrated": true,
+          "claim_force": "current",
+          "claim_rank": 4,
+          "evidence_force": "current",
+          "evidence_rank": 4,
+          "force_gap": 0
+        },
+        {
+          "axis": "numeric",
+          "axis_row_hash": "44da5fbf187c91c4c18329fe9f9f559783dfa775089f74c038c3f6a55e83df2c",
+          "calibrated": true,
+          "claim_force": "approximate",
+          "claim_rank": 2,
+          "evidence_force": "range",
+          "evidence_rank": 3,
+          "force_gap": 0
+        }
+      ],
+      "calibrated": true,
+      "claim_hash": "a9ed8431a2594a128f8d8b335e103649ebdfe5c322e03c84a6f270852f1a7145",
+      "claim_index": 6,
+      "claim_warrant_row_hash": "2ce4d6ff565f29d322c0e5d58d437287706d81b40a6e03255d3d331548c20ddd",
+      "confidence": 1.0,
+      "covered_by_force_row": true,
+      "display_anchor": "[S3:span=a9ed8431a259]",
+      "display_text": "claim 6 [S3:span=a9ed8431a259] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=a9ed8431a259",
+      "evidence_span_prefix": "a9ed8431a259",
+      "footer_claim_verified": true,
+      "footer_status": "verified",
+      "matched_claim_ids": [
+        "claim:footer:S3:6"
+      ],
+      "matched_force_row_hashes": [
+        "8c1e604badf74142245125fe448178a371d291243a5823eef8054fc7d17c3376"
+      ],
+      "settlement_action": "direct_payout_allowed",
+      "source_label": "S3",
+      "support_score": 0.9,
+      "violation_axes": [],
+      "visible_claim_key": "207b4d4083b5595d43ca466be7118912af3856d08a202be8272ac47602f05247",
+      "warrant_status": "calibrated"
+    }
+  ],
+  "commitments": {
+    "artifact_binding_root": "de9b7c9274e4a25e1dcadb5a380a3c1dcdf9461893efa4b1cf0f7014c66c3dd0",
+    "claim_warrant_root": "9049182ba65a143387ad5307e04a02f3e281f32b51cffc8ce7503e6840a72520",
+    "footer_display_hash": "7479c5df707e0dae21a60ae5377baecd6309996027e4ac9e2afc89efd1513fdd",
+    "schema": "docs/schemas/warranted_source_footer.schema.json",
+    "source_row_root": "e7b89d0271d2129c54bd30e52199441cc6aa8fdc6c3327f446ae77773564a085"
+  },
+  "coverage_gaps": {
+    "failed_checks": [],
+    "uncalibrated_visible_claim_keys": [],
+    "uncovered_visible_claim_keys": []
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "footer_display": {
+    "claim_warrant_root": "9049182ba65a143387ad5307e04a02f3e281f32b51cffc8ce7503e6840a72520",
+    "footer_hash": "7479c5df707e0dae21a60ae5377baecd6309996027e4ac9e2afc89efd1513fdd",
+    "line_count": 6,
+    "profile": "rdllm-visible-warranted-source-footer/v1",
+    "visible_claim_key_root": "95119504d40b97426fa388373a4e4608af7fbf540dc433fa55a9b46b1ee343a1",
+    "warrant_lines": [
+      "claim 1 [S1:span=399e7ff82b80] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=399e7ff82b80",
+      "claim 2 [S1:span=6ea90fbdd0fb] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=6ea90fbdd0fb",
+      "claim 3 [S2:span=71e11e089ebe] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=71e11e089ebe",
+      "claim 4 [S2:span=82b19c7059e7] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=82b19c7059e7",
+      "claim 5 [S3:span=28528b6fc0db] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=28528b6fc0db",
+      "claim 6 [S3:span=a9ed8431a259] warrant=calibrated; relation=supports; modality=asserted; scope=sample; temporal=current; numeric=approximate; claim_hash=a9ed8431a259"
+    ]
+  },
+  "footer_version": "rdllm-warranted-source-footer/v1",
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "minimum_input_level": "RDLLM-L119",
+    "profile": "rdllm-visible-warrant-disclosure-policy/v1",
+    "raw_claim_text_disclosure_allowed": false,
+    "raw_evidence_text_disclosure_allowed": false,
+    "required_axes": [
+      "relation",
+      "modality",
+      "scope",
+      "temporal",
+      "numeric"
+    ],
+    "target_certification_level": "RDLLM-L120",
+    "verified_footer_requires_visible_warrant_label": true
+  },
+  "privacy": {
+    "footer_warrant_labels_disclosed": true,
+    "payment_account_disclosed": false,
+    "public_report_uses_hashes_force_labels_scores_and_statuses": true,
+    "raw_answer_text_disclosed": false,
+    "raw_claim_text_disclosed": false,
+    "raw_evidence_text_disclosed": false,
+    "raw_prompt_text_disclosed": false,
+    "raw_source_text_disclosed": false
+  },
+  "schemas": {
+    "citation_footer_contract": "docs/schemas/citation_footer_contract.schema.json",
+    "evidence_force_calibration": "docs/schemas/evidence_force_calibration.schema.json",
+    "grounded_source_footer": "docs/schemas/grounded_source_footer.schema.json",
+    "rendered_attribution_audit": "docs/schemas/rendered_attribution_audit.schema.json",
+    "warranted_source_footer": "docs/schemas/warranted_source_footer.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "c764bf96b23938a854010cfc505ff37ed47d6964d03386722d7368681f08a189"
+  },
+  "source_rows": [
+    {
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "confidence_level": "verified",
+      "content_hash_prefix": "e94efa6d9bb3",
+      "creator_id": "arjun",
+      "creator_name": "Arjun Rao",
+      "display_label": "[S1]",
+      "display_order": 1,
+      "grounded_footer_row_hash": "13f23ce638ce0dc5acca751dba853051b4730ee961f540da3dbbf06da726e73e",
+      "label": "S1",
+      "license_status": "active",
+      "royalty_status": "active",
+      "source_available": true,
+      "source_confidence_verified": true,
+      "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+      "title": "Provenance Ledgers for AI Outputs",
+      "warranted_source_row_hash": "1f7349b17b054ad644e51d6949bd09d7351987aa302482ae6069beec36b5695c",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_id": "lina-governance-disputes:c1",
+      "confidence_level": "verified",
+      "content_hash_prefix": "2e332f176133",
+      "creator_id": "lina",
+      "creator_name": "Lina Park",
+      "display_label": "[S2]",
+      "display_order": 2,
+      "grounded_footer_row_hash": "2ab4f208a5cde3cf0fd377f16426a6b062c36877d6af05defd436a02d9d9fc89",
+      "label": "S2",
+      "license_status": "active",
+      "royalty_status": "active",
+      "source_available": true,
+      "source_confidence_verified": true,
+      "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+      "title": "Creator Governance for AI Licensing",
+      "warranted_source_row_hash": "b524ab5ff5f810bcc2fdc86cc10d894cd4204bea806f21b7be68885af85af2b5",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "confidence_level": "verified",
+      "content_hash_prefix": "6029417218e9",
+      "creator_id": "maya",
+      "creator_name": "Maya Sen",
+      "display_label": "[S3]",
+      "display_order": 3,
+      "grounded_footer_row_hash": "0e20922764d295c15de61d0b5218267c21345fbacaaadb6eb704c14bee06e0d9",
+      "label": "S3",
+      "license_status": "active",
+      "royalty_status": "active",
+      "source_available": true,
+      "source_confidence_verified": true,
+      "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+      "title": "Usage Pools for Creator Platforms",
+      "warranted_source_row_hash": "e41c1918e04a1df790af59e8af3153b606dd392c504685f750e49f7c1190dad2",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "summary": {
+    "calibrated_visible_claim_count": 6,
+    "failed_check_count": 0,
+    "minimum_input_level": "RDLLM-L119",
+    "privacy_preserved": true,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L120",
+    "uncalibrated_visible_claim_count": 0,
+    "uncovered_visible_claim_count": 0,
+    "user_visible_warrant_labels_supported": true,
+    "verified_footer_warrant_disclosure_supported": true,
+    "visible_claim_count": 6,
+    "visible_source_count": 3,
+    "warrant_line_count": 6
+  },
+  "warranted_source_footer_hash": "43259a4501439a5a53494e65fdbb239e216d39544c96c364b89566dd8ca76ea2"
+}

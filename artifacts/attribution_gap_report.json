@@ -1,0 +1,128 @@
+{
+  "attribution_gap": {
+    "accessed_sources": [
+      {
+        "access_id": "srcacc_eb8be2e5f81f584a",
+        "access_type": "retrieval",
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+        "creator_id": "arjun",
+        "decision_status": "allowed",
+        "policy_allowed": true,
+        "rank": 1,
+        "registry_allowed": true,
+        "score": 0.35438998,
+        "use": "retrieval",
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "access_id": "srcacc_d9635a87ed8484ea",
+        "access_type": "text_match",
+        "chunk_id": "arjun-provenance-ledger:c1",
+        "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+        "creator_id": "arjun",
+        "decision_status": "allowed",
+        "policy_allowed": true,
+        "rank": 2,
+        "registry_allowed": true,
+        "score": 0.9,
+        "use": "generation",
+        "work_id": "arjun-provenance-ledger"
+      },
+      {
+        "access_id": "srcacc_e03ebd4f8ce27747",
+        "access_type": "retrieval",
+        "chunk_id": "lina-governance-disputes:c1",
+        "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+        "creator_id": "lina",
+        "decision_status": "allowed",
+        "policy_allowed": true,
+        "rank": 2,
+        "registry_allowed": true,
+        "score": 0.04959596,
+        "use": "retrieval",
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "access_id": "srcacc_76ffab5b44eec222",
+        "access_type": "text_match",
+        "chunk_id": "lina-governance-disputes:c1",
+        "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+        "creator_id": "lina",
+        "decision_status": "allowed",
+        "policy_allowed": true,
+        "rank": 3,
+        "registry_allowed": true,
+        "score": 0.63333333,
+        "use": "generation",
+        "work_id": "lina-governance-disputes"
+      },
+      {
+        "access_id": "srcacc_84aa95aef7a2d31d",
+        "access_type": "retrieval",
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+        "creator_id": "maya",
+        "decision_status": "allowed",
+        "policy_allowed": true,
+        "rank": 3,
+        "registry_allowed": true,
+        "score": 0.04504011,
+        "use": "retrieval",
+        "work_id": "maya-youtube-style-pool"
+      },
+      {
+        "access_id": "srcacc_91e6112b13639d49",
+        "access_type": "text_match",
+        "chunk_id": "maya-youtube-style-pool:c1",
+        "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+        "creator_id": "maya",
+        "decision_status": "allowed",
+        "policy_allowed": true,
+        "rank": 1,
+        "registry_allowed": true,
+        "score": 0.93333333,
+        "use": "generation",
+        "work_id": "maya-youtube-style-pool"
+      }
+    ],
+    "classifications": {
+      "cited_without_access": [],
+      "consumed_without_credit": [],
+      "paid_hidden": [],
+      "policy_withheld": [],
+      "registry_withheld": []
+    },
+    "gap_version": "rdllm-attribution-gap/v1",
+    "grounding_status": "grounded",
+    "issues": [],
+    "policy_status": "allowed",
+    "registry_status": "clear",
+    "report_hash": "3df52ddd9cb8048a8f85b97525ddf8decfb5f10a335491728613c0c06a55db6b",
+    "scores": {
+      "allowed_credit_coverage": 1.0,
+      "attribution_gap_rate": 0.0,
+      "citation_efficiency": 1.0,
+      "credit_efficiency": 1.0,
+      "payout_visibility": 1.0
+    },
+    "summary": {
+      "access_record_count": 6,
+      "accessed_source_count": 3,
+      "allowed_accessed_source_count": 3,
+      "cited_without_access_count": 0,
+      "consumed_without_credit_count": 0,
+      "credited_source_count": 3,
+      "escrow_accounts": [],
+      "paid_hidden_count": 0,
+      "paid_source_count": 3,
+      "policy_withheld_count": 0,
+      "registry_withheld_count": 0,
+      "visible_source_count": 3
+    },
+    "verdict": "closed"
+  },
+  "audit_errors": [],
+  "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+  "event_id": "evt_1ed43e106d466249"
+}

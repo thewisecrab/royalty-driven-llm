@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_provider_adapter_harness.schema.json",
+  "title": "Universal Provider Adapter Harness",
+  "type": "object",
+  "required": [
+    "adapter_harness_version",
+    "issuer",
+    "created_at",
+    "adapter_harness_policy",
+    "artifact_bindings",
+    "provider_mode_rows",
+    "normalized_field_rows",
+    "negative_fixture_rows",
+    "evidence_commitments",
+    "checks",
+    "harness_decision",
+    "verifier_commands",
+    "research_controls",
+    "privacy",
+    "summary",
+    "universal_provider_adapter_harness_hash"
+  ],
+  "properties": {
+    "adapter_harness_version": {
+      "const": "rdllm-universal-provider-adapter-harness/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "adapter_harness_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_adoption_level",
+        "well_known_path",
+        "required_core_artifacts",
+        "required_provider_families",
+        "required_fixture_modes",
+        "required_normalized_response_fields",
+        "required_negative_fixtures"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-universal-provider-adapter-harness-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L157" },
+        "minimum_adoption_level": { "const": "RDLLM-L156" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-provider-adapter-harness.json"
+        },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_fixture_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_normalized_response_fields": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_negative_fixtures": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["artifact_count", "artifact_binding_root", "bindings"],
+      "properties": {
+        "artifact_count": { "type": "integer", "minimum": 1 },
+        "artifact_binding_root": { "type": "string" },
+        "bindings": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/artifact_binding" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "provider_mode_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/provider_mode_row" }
+    },
+    "normalized_field_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/normalized_field_row" }
+    },
+    "negative_fixture_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/negative_fixture_row" }
+    },
+    "evidence_commitments": {
+      "type": "object",
+      "required": [
+        "artifact_binding_root",
+        "provider_mode_root",
+        "normalized_field_root",
+        "negative_fixture_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "harness_decision": {
+      "type": "object",
+      "required": [
+        "universal_provider_adapter_harness_authorized",
+        "native_provider_output_without_normalization_allowed",
+        "stream_final_without_footer_allowed",
+        "tool_call_without_claim_binding_allowed",
+        "copy_export_without_status_link_allowed",
+        "direct_settlement_without_adapter_harness_allowed",
+        "failure_modes"
+      ],
+      "properties": {
+        "universal_provider_adapter_harness_authorized": { "type": "boolean" },
+        "native_provider_output_without_normalization_allowed": { "const": false },
+        "stream_final_without_footer_allowed": { "const": false },
+        "tool_call_without_claim_binding_allowed": { "const": false },
+        "copy_export_without_status_link_allowed": { "const": false },
+        "direct_settlement_without_adapter_harness_allowed": { "const": false },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "verifier_commands": {
+      "type": "object",
+      "required": ["create", "verify", "well_known_path", "schema"],
+      "properties": {
+        "create": { "const": "universal-provider-adapter-harness" },
+        "verify": { "const": "verify-universal-provider-adapter-harness" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-provider-adapter-harness.json"
+        },
+        "schema": {
+          "const": "docs/schemas/universal_provider_adapter_harness.schema.json"
+        }
+      },
+      "additionalProperties": true
+    },
+    "research_controls": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_field_paths",
+        "private_strings_absent",
+        "raw_prompts_outputs_sources_or_provider_payloads_embedded",
+        "hash_only_native_fixture_commitments"
+      ],
+      "properties": {
+        "private_field_paths": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "private_strings_absent": { "type": "boolean" },
+        "raw_prompts_outputs_sources_or_provider_payloads_embedded": {
+          "const": false
+        },
+        "hash_only_native_fixture_commitments": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_adoption_level",
+        "provider_mode_count",
+        "normalized_field_count",
+        "negative_fixture_count",
+        "offline_verification_supported"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L157" },
+        "minimum_adoption_level": { "const": "RDLLM-L156" },
+        "provider_mode_count": { "type": "integer", "minimum": 0 },
+        "normalized_field_count": { "type": "integer", "minimum": 0 },
+        "negative_fixture_count": { "type": "integer", "minimum": 0 },
+        "offline_verification_supported": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "universal_provider_adapter_harness_hash": { "type": "string" },
+    "signature": { "type": "string" }
+  },
+  "$defs": {
+    "artifact_binding": {
+      "type": "object",
+      "required": [
+        "name",
+        "declared_hash",
+        "hash_reproducible",
+        "present",
+        "artifact_binding_hash"
+      ],
+      "additionalProperties": true
+    },
+    "provider_mode_row": {
+      "type": "object",
+      "required": [
+        "provider_family",
+        "fixture_mode",
+        "native_fixture_hash",
+        "adapter_spec_hash",
+        "normalized_response_hash",
+        "kernel_hash",
+        "wire_protocol_hash",
+        "claim_provenance_hash",
+        "source_footer_delivery_hash",
+        "status_resolver_hash",
+        "client_enforcement_hash",
+        "settlement_meter_hash",
+        "telemetry_trace_hash",
+        "copy_status_link_hash",
+        "ready",
+        "provider_mode_row_hash"
+      ],
+      "additionalProperties": true
+    },
+    "normalized_field_row": {
+      "type": "object",
+      "required": [
+        "field",
+        "field_path_hash",
+        "adapter_spec_root",
+        "covered_provider_family_count",
+        "covered_fixture_mode_count",
+        "ready",
+        "normalized_field_row_hash"
+      ],
+      "additionalProperties": true
+    },
+    "negative_fixture_row": {
+      "type": "object",
+      "required": [
+        "case_id",
+        "fixture_hash",
+        "verifier_command",
+        "expected_block",
+        "observed_block",
+        "ready",
+        "negative_fixture_row_hash"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/receipt_transparency_consistency_report.schema.json",
+  "title": "RDLLM Receipt Transparency Consistency Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "transparency_log_bindings",
+    "log_snapshot_rows",
+    "append_only_consistency_rows",
+    "split_view_conflict_rows",
+    "required_receipt_rows",
+    "settlement_gate",
+    "settlement_rows",
+    "commitments",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-receipt-transparency-consistency-report/v1"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "direct_settlement_requires",
+        "failure_route"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "artifact_count",
+        "bindings",
+        "artifact_binding_root",
+        "transparency_log_binding_root",
+        "verifier_accountability_report_hash",
+        "provider_card_hash",
+        "certification_report_hash"
+      ],
+      "additionalProperties": true
+    },
+    "transparency_log_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "log_id",
+          "payload_hash",
+          "declared_root",
+          "tree_size",
+          "entry_count",
+          "binding_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "log_snapshot_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "log_id",
+          "declared_tree_size",
+          "computed_tree_size",
+          "declared_root",
+          "computed_root",
+          "root_matches_entries",
+          "tree_size_matches_entries",
+          "entries_are_sequential",
+          "snapshot_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "append_only_consistency_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "previous_log_id",
+          "current_log_id",
+          "previous_tree_size",
+          "current_tree_size",
+          "prefix_consistent",
+          "decision",
+          "consistency_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "split_view_conflict_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "conflict_type",
+          "conflict_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "required_receipt_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "receipt_hash",
+          "latest_log_id",
+          "latest_tree_size",
+          "present",
+          "entry_index",
+          "payload_hash_matches",
+          "receipt_envelope_hash_matches",
+          "inclusion_proof",
+          "inclusion_proof_valid",
+          "receipt_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "settlement_gate": {
+      "type": "object",
+      "required": [
+        "decision",
+        "direct_settlement_ready",
+        "split_view_conflict_count",
+        "append_only_violation_count",
+        "missing_receipt_count"
+      ],
+      "additionalProperties": true
+    },
+    "settlement_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "work_id",
+          "payout",
+          "escrow_amount",
+          "settlement_decision",
+          "settlement_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "log_snapshot_root",
+        "append_only_consistency_root",
+        "split_view_conflict_root",
+        "required_receipt_root",
+        "settlement_row_root"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "receipt_transparency_consistency_report",
+        "verifier_accountability_report",
+        "provider_attribution_card",
+        "certification_report"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "transparency_snapshot_count",
+        "latest_tree_size",
+        "required_receipt_count",
+        "missing_receipt_count",
+        "append_only_violation_count",
+        "split_view_conflict_count",
+        "settlement_decision",
+        "direct_settlement_ready",
+        "settlement_row_count",
+        "payout_total",
+        "escrow_total",
+        "creator_pool_conserved_or_escrowed",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "report_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

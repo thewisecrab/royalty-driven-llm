@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/release_gate.schema.json",
+  "title": "RDLLM Response Release Gate",
+  "type": "object",
+  "required": [
+    "gate_version",
+    "issuer",
+    "created_at",
+    "subject",
+    "policy",
+    "artifact_bindings",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "gate_hash",
+    "signature"
+  ],
+  "properties": {
+    "gate_version": {
+      "const": "rdllm-response-release-gate/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "subject": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "envelope_hash",
+        "capsule_hash",
+        "creator_license_contract_hash",
+        "answer_card_hash",
+        "source_verification_report_hash",
+        "quality_verdict",
+        "quality_score",
+        "grounding_status",
+        "unsupported_claim_count",
+        "source_count",
+        "claim_count",
+        "source_availability_report_hash",
+        "evidence_sufficiency_report_hash",
+        "counterevidence_report_hash",
+        "answer_claim_coverage_report_hash",
+        "generation_context_closure_report_hash",
+        "source_boundary_report_hash",
+        "source_authenticity_report_hash"
+      ],
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "minimum_certification_level",
+        "full_grounding_closure_level",
+        "allowed_release_modes",
+        "unsupported_claims_allowed",
+        "minimum_grounded_quality_score",
+        "requires_response_envelope_verification",
+        "requires_source_materialization",
+        "requires_footer_claim_span_coverage",
+        "requires_capsule_delivery_contract",
+        "requires_creator_license_contract",
+        "requires_public_provider_surface",
+        "requires_source_availability_for_l55",
+        "requires_evidence_sufficiency_for_l56",
+        "requires_counterevidence_for_l57",
+        "requires_answer_claim_coverage_for_l59",
+        "requires_generation_context_closure_for_l60",
+        "requires_source_boundary_for_l61",
+        "requires_source_authenticity_for_l64"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "response_envelope_hash",
+        "attribution_capsule_hash",
+        "creator_license_contract_hash",
+        "provider_card_hash",
+        "certification_report_hash",
+        "answer_card_hash",
+        "source_verification_report_hash",
+        "source_availability_report_hash",
+        "evidence_sufficiency_report_hash",
+        "counterevidence_report_hash",
+        "answer_claim_coverage_report_hash",
+        "generation_context_closure_report_hash",
+        "source_boundary_report_hash",
+        "source_authenticity_report_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "response_envelope_verified",
+        "answer_card_shape_valid",
+        "source_verification_shape_valid",
+        "provider_card_shape_valid",
+        "attribution_capsule_shape_valid",
+        "creator_license_contract_verified",
+        "source_terms_cover_answer_sources",
+        "release_mode_allowed",
+        "grounded_quality_sufficient",
+        "no_unsupported_claims",
+        "source_materialization_verified",
+        "source_availability_release_verified",
+        "evidence_sufficiency_release_verified",
+        "counterevidence_release_verified",
+        "response_envelope_binds_late_grounding_reports",
+        "answer_claim_coverage_release_verified",
+        "generation_context_closure_release_verified",
+        "source_boundary_release_verified",
+        "source_authenticity_release_verified",
+        "footer_sources_verified",
+        "footer_claim_spans_verified",
+        "capsule_binds_response_output",
+        "capsule_delivery_contract_verified",
+        "provider_declares_release_gate_surface",
+        "certification_meets_gate_minimum",
+        "private_text_not_disclosed_by_gate"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "response_release_gate",
+        "response_envelope",
+        "attribution_capsule",
+        "creator_license_contract",
+        "provider_attribution_card",
+        "certification_report",
+        "answer_provenance_card",
+        "source_verification_report",
+        "source_availability_report",
+        "evidence_sufficiency_report",
+        "counterevidence_report",
+        "answer_claim_coverage_report",
+        "generation_context_closure_report",
+        "source_boundary_report",
+        "source_authenticity_report"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "decision",
+        "release_mode",
+        "target_certification_level",
+        "minimum_upstream_level",
+        "passed_check_count",
+        "check_count",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed_by_gate",
+        "source_text_disclosed",
+        "matched_text_disclosed",
+        "hidden_state_disclosed",
+        "gate_uses_hashes_scores_and_decisions"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "gate_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_runtime_conformance_receipt.schema.json",
+  "title": "RDLLM Universal Runtime Conformance Receipt",
+  "type": "object",
+  "required": [
+    "receipt_version",
+    "issuer",
+    "created_at",
+    "runtime_conformance_policy",
+    "artifact_bindings",
+    "provider_runtime_rows",
+    "api_route_rows",
+    "runtime_entrypoint_rows",
+    "source_attribution_rows",
+    "enforcement_control_rows",
+    "sdk_surface_rows",
+    "failure_case_rows",
+    "evidence_commitments",
+    "checks",
+    "runtime_decision",
+    "verifier_commands",
+    "research_controls",
+    "privacy",
+    "summary",
+    "universal_runtime_conformance_receipt_hash"
+  ],
+  "properties": {
+    "receipt_version": {
+      "const": "rdllm-universal-runtime-conformance-receipt/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "runtime_conformance_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_profile_level",
+        "minimum_gateway_level",
+        "well_known_path",
+        "required_core_artifacts",
+        "required_provider_families",
+        "required_api_bindings",
+        "required_runtime_entrypoints",
+        "required_source_attribution_modes",
+        "required_enforcement_controls",
+        "required_sdk_surfaces",
+        "required_failure_cases"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-runtime-conformance-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L149" },
+        "minimum_profile_level": { "const": "RDLLM-L148" },
+        "minimum_gateway_level": { "const": "RDLLM-L147" },
+        "well_known_path": {
+          "const": "/.well-known/rdllm/universal-runtime-conformance-receipt.json"
+        },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_api_bindings": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_runtime_entrypoints": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_source_attribution_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_enforcement_controls": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_sdk_surfaces": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_failure_cases": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["artifact_count", "artifact_binding_root", "bindings"],
+      "properties": {
+        "artifact_count": { "type": "integer" },
+        "artifact_binding_root": { "type": "string" },
+        "bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "declared_hash",
+              "payload_hash",
+              "hash_reproducible",
+              "present",
+              "artifact_binding_hash"
+            ],
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "provider_runtime_rows": { "type": "array" },
+    "api_route_rows": { "type": "array" },
+    "runtime_entrypoint_rows": { "type": "array" },
+    "source_attribution_rows": { "type": "array" },
+    "enforcement_control_rows": { "type": "array" },
+    "sdk_surface_rows": { "type": "array" },
+    "failure_case_rows": { "type": "array" },
+    "evidence_commitments": { "type": "object" },
+    "checks": { "type": "object" },
+    "runtime_decision": {
+      "type": "object",
+      "required": [
+        "runtime_conformance_authorized",
+        "provider_invocation_allowed",
+        "response_display_allowed",
+        "verified_source_footer_allowed",
+        "creator_settlement_allowed",
+        "failure_modes"
+      ],
+      "additionalProperties": true
+    },
+    "verifier_commands": {
+      "type": "array",
+      "items": { "type": "string" },
+      "contains": {
+        "const": "verify-universal-runtime-conformance-receipt"
+      }
+    },
+    "research_controls": { "type": "object" },
+    "privacy": {
+      "type": "object",
+      "properties": {
+        "public_receipt_contains_private_prompts": { "const": false },
+        "public_receipt_contains_private_outputs": { "const": false },
+        "public_receipt_contains_source_text": { "const": false },
+        "public_receipt_contains_customer_identifiers": { "const": false },
+        "hash_only_artifact_commitments": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_profile_level",
+        "minimum_gateway_level",
+        "failed_check_count",
+        "core_artifact_count",
+        "provider_family_count",
+        "api_binding_count",
+        "runtime_entrypoint_count",
+        "source_attribution_mode_count",
+        "enforcement_control_count",
+        "sdk_surface_count",
+        "failure_case_count",
+        "offline_verification_supported",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L149" },
+        "minimum_profile_level": { "const": "RDLLM-L148" },
+        "minimum_gateway_level": { "const": "RDLLM-L147" }
+      },
+      "additionalProperties": true
+    },
+    "universal_runtime_conformance_receipt_hash": { "type": "string" },
+    "signature": { "type": "string" }
+  },
+  "additionalProperties": true
+}

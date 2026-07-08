@@ -1,0 +1,203 @@
+{
+  "commitments": {
+    "claim_support_root": "985058998e4b2ed663ec1fc153cbd9822fe8431e4438a658e2bbbd1001ef93f4",
+    "creator_statement_root": "674ce7f209b3318f8638094d0435f1e415be4c72f6f4963ecad71c121edab868",
+    "escrow_statement_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "event_root": "ae2c43e2bc6ce546b563269e1dae1cb17a0c3a1a385f31ce1d24608fbb615543",
+    "ledger_hash": "594fe2b60c121e1678897cc0957c3bc7e1c0904e3d6096fa0b4fa6c83e775222",
+    "receipt_root": "fc7f767003e3d43d807b1b6c295c0bad5f79ed4724bfa32421bbcf7bf1024d5d",
+    "share_root": "dc55a0ef2bcaac4c74fe697f0913e1a8a731922f46977d957cd4aee72b1d881d",
+    "source_access_root": "20d2873988c0c1b48a0f141e2ed1412a883119ce0103dcbbc0ee839d21fb0131",
+    "source_reference_root": "0b412be7fbe72864b77752b1ddcc3611e23f0e2389c9007b6ce50e9b19702300",
+    "source_usage_root": "2009186cc9b7a20cedf4f62af0863336f6ddc99e383432c6d99aad9a47dab14f",
+    "trace_root": "a902ba340ff11690a0cdede8a251bd3af585e5dd28c63cf47507a4841e10e63c",
+    "work_statement_root": "74307578901aee35ba34da25ca5da113952ccafd51251623fdf7b5d0fbaffcdb"
+  },
+  "creator_statements": [
+    {
+      "chunk_count": 1,
+      "creator_id": "arjun",
+      "event_count": 1,
+      "kind": "creator",
+      "source_access_count": 2,
+      "supported_claim_count": 2,
+      "total_payout": "0.183682",
+      "visible_source_count": 1,
+      "work_count": 1,
+      "work_statement_hash": "709c11492ee68c8efb44ebbc85ea42e8e96b4fe04686143540e274452b20e06b"
+    },
+    {
+      "chunk_count": 1,
+      "creator_id": "lina",
+      "event_count": 1,
+      "kind": "creator",
+      "source_access_count": 2,
+      "supported_claim_count": 2,
+      "total_payout": "0.125703",
+      "visible_source_count": 1,
+      "work_count": 1,
+      "work_statement_hash": "6e06905a38e0268cc7deea219b3e7f6c48f4471e43add5ef33a31cebd5753ada"
+    },
+    {
+      "chunk_count": 1,
+      "creator_id": "maya",
+      "event_count": 1,
+      "kind": "creator",
+      "source_access_count": 2,
+      "supported_claim_count": 2,
+      "total_payout": "0.240615",
+      "visible_source_count": 1,
+      "work_count": 1,
+      "work_statement_hash": "0a4dcd5b2e076271500fb95fab7ec19f00cd234922ba859f55de87eb64c0c99d"
+    }
+  ],
+  "escrow_statements": [],
+  "event_rollups": [
+    {
+      "attribution_gap_verdict": "closed",
+      "creator_pool": "0.550000",
+      "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+      "event_id": "evt_1ed43e106d466249",
+      "gross_revenue": "1.000000",
+      "grounding_status": "grounded",
+      "receipt_hash": "7ef41a3a1bfec56cb00fa6c463a0c717330490ceffd119bab9c5d7de2a480bd1",
+      "source_access_count": 6,
+      "supported_claim_count": 6,
+      "trace_hash": "eda2e39bd680af623068b57223ca87b9af2f46b266ca3e1ed1c48a8758de7442",
+      "visible_source_count": 3
+    }
+  ],
+  "issued_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "period": {
+    "end": "",
+    "start": ""
+  },
+  "privacy": {
+    "answer_disclosed": false,
+    "evidence_text_disclosed": false,
+    "matched_text_disclosed": false,
+    "prompt_disclosed": false,
+    "public_fields": [
+      "event hashes",
+      "receipt hashes",
+      "trace hashes",
+      "creator totals",
+      "work totals",
+      "source usage counts",
+      "claim counts",
+      "payout totals"
+    ],
+    "source_quotes_disclosed": false
+  },
+  "receipt_rollups": [
+    {
+      "claim_support_trace_hash": "5405f1c9f37f039cf49a48a2705b45fc8c5f20e9603c43c8c682f9105b302111",
+      "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+      "event_id": "evt_1ed43e106d466249",
+      "receipt_hash": "7ef41a3a1bfec56cb00fa6c463a0c717330490ceffd119bab9c5d7de2a480bd1",
+      "source_access_trace_hash": "9a585e20f993e8459f624551c8530f197912d3a7b79b2fc695962d0c19001d40",
+      "source_reference_trace_hash": "d259ae4a9a16ee41ccf8a5a46822b255e1a12c3ced83d77d5806dc31b9115a91"
+    }
+  ],
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "0824abcf201c77dec4e54e38443129dbe8fb05ed9f004f4df4302341106bb90d"
+  },
+  "source_usage": [
+    {
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "creator_id": "arjun",
+      "source_access_count": 2,
+      "supported_claim_count": 2,
+      "total_payout": "0.183682",
+      "visible_source_count": 1,
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_id": "lina-governance-disputes:c1",
+      "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+      "creator_id": "lina",
+      "source_access_count": 2,
+      "supported_claim_count": 2,
+      "total_payout": "0.125703",
+      "visible_source_count": 1,
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+      "creator_id": "maya",
+      "source_access_count": 2,
+      "supported_claim_count": 2,
+      "total_payout": "0.240615",
+      "visible_source_count": 1,
+      "work_id": "maya-youtube-style-pool"
+    }
+  ],
+  "statement_hash": "79b7bcb40f2a65a771eef68cc02a516ca950dc9588992912a6d35a5c2b24bf42",
+  "statement_version": "rdllm-royalty-statement/v1",
+  "summary": {
+    "attribution_gap_event_count": 0,
+    "creator_count": 3,
+    "creator_pool_total": "0.550000",
+    "direct_creator_total": "0.550000",
+    "escrow_account_count": 0,
+    "escrow_total": "0.000000",
+    "event_count": 1,
+    "gross_revenue_total": "1.000000",
+    "payout_total": "0.550000",
+    "receipt_count": 1,
+    "source_access_count": 6,
+    "supported_claim_count": 6,
+    "trace_count": 1,
+    "visible_source_count": 3
+  },
+  "trace_rollups": [
+    {
+      "claim_count": 6,
+      "claim_support_trace_hash": "5405f1c9f37f039cf49a48a2705b45fc8c5f20e9603c43c8c682f9105b302111",
+      "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+      "event_id": "evt_1ed43e106d466249",
+      "source_access_count": 6,
+      "source_access_trace_hash": "9a585e20f993e8459f624551c8530f197912d3a7b79b2fc695962d0c19001d40",
+      "source_reference_trace_hash": "d259ae4a9a16ee41ccf8a5a46822b255e1a12c3ced83d77d5806dc31b9115a91",
+      "trace_hash": "eda2e39bd680af623068b57223ca87b9af2f46b266ca3e1ed1c48a8758de7442",
+      "visible_source_count": 3
+    }
+  ],
+  "work_statements": [
+    {
+      "chunk_count": 1,
+      "creator_id": "arjun",
+      "event_count": 1,
+      "source_access_count": 2,
+      "supported_claim_count": 2,
+      "total_payout": "0.183682",
+      "visible_source_count": 1,
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "chunk_count": 1,
+      "creator_id": "lina",
+      "event_count": 1,
+      "source_access_count": 2,
+      "supported_claim_count": 2,
+      "total_payout": "0.125703",
+      "visible_source_count": 1,
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "chunk_count": 1,
+      "creator_id": "maya",
+      "event_count": 1,
+      "source_access_count": 2,
+      "supported_claim_count": 2,
+      "total_payout": "0.240615",
+      "visible_source_count": 1,
+      "work_id": "maya-youtube-style-pool"
+    }
+  ]
+}

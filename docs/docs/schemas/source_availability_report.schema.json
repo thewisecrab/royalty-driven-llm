@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/source_availability_report.schema.json",
+  "title": "RDLLM Source Availability Report",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "event",
+    "artifact_bindings",
+    "summary",
+    "sources",
+    "snapshot_commitments",
+    "commitments",
+    "schemas",
+    "privacy",
+    "issues",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-source-availability-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "requires_reachable_or_archived_source",
+        "requires_registered_content_hash_match",
+        "requires_claim_span_coverage",
+        "requires_footer_binding",
+        "requires_source_materialization"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-source-availability-policy/v1" },
+        "requires_reachable_or_archived_source": { "const": true },
+        "requires_registered_content_hash_match": { "const": true },
+        "requires_claim_span_coverage": { "const": true },
+        "requires_footer_binding": { "const": true },
+        "requires_source_materialization": { "const": true }
+      }
+    },
+    "event": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "answer_hash"
+      ]
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "answer_card_hash",
+        "source_verification_report_hash",
+        "citation_footer_contract_hash",
+        "citation_footer_version",
+        "answer_card_bound",
+        "source_verification_bound",
+        "citation_footer_bound"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "source_count",
+        "snapshot_count",
+        "inspectable_source_count",
+        "reachable_source_count",
+        "archived_source_count",
+        "unavailable_source_count",
+        "footer_bound_source_count",
+        "content_hash_match_count",
+        "claim_span_coverage_count",
+        "all_public_sources_inspectable",
+        "issue_count"
+      ],
+      "properties": {
+        "status": { "enum": ["verified", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L55" },
+        "source_count": { "type": "integer", "minimum": 0 },
+        "snapshot_count": { "type": "integer", "minimum": 0 },
+        "inspectable_source_count": { "type": "integer", "minimum": 0 },
+        "reachable_source_count": { "type": "integer", "minimum": 0 },
+        "archived_source_count": { "type": "integer", "minimum": 0 },
+        "unavailable_source_count": { "type": "integer", "minimum": 0 },
+        "footer_bound_source_count": { "type": "integer", "minimum": 0 },
+        "content_hash_match_count": { "type": "integer", "minimum": 0 },
+        "claim_span_coverage_count": { "type": "integer", "minimum": 0 },
+        "all_public_sources_inspectable": { "type": "boolean" },
+        "issue_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "content_hash",
+          "snapshot_content_hash",
+          "snapshot_hash",
+          "footer_bound",
+          "reachable",
+          "archived",
+          "content_hash_matches_registry",
+          "claim_span_coverage",
+          "inspectable",
+          "resolution_status",
+          "availability_row_hash"
+        ]
+      }
+    },
+    "snapshot_commitments": { "type": "array" },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "source_availability_root",
+        "snapshot_root",
+        "event_hash",
+        "artifact_binding_root",
+        "issue_root"
+      ]
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["source_availability_report"]
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "claim_evidence_text_disclosed",
+        "raw_snapshot_body_disclosed",
+        "full_snapshot_payload_disclosed"
+      ],
+      "properties": {
+        "prompt_text_disclosed": { "const": false },
+        "answer_text_disclosed": { "const": false },
+        "source_text_disclosed": { "const": false },
+        "claim_evidence_text_disclosed": { "const": false },
+        "raw_snapshot_body_disclosed": { "const": false },
+        "full_snapshot_payload_disclosed": { "const": false }
+      }
+    },
+    "issues": { "type": "array", "items": { "type": "string" } },
+    "report_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

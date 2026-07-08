@@ -1,0 +1,455 @@
+{
+  "adjustment_case_id": "adjustment:rdllm-post-adjudication:001",
+  "basis_adjudication_report": {
+    "adjudicated_footer_rows": [
+      {
+        "basis": "adjudicated_attribution_footer",
+        "chunk_id": "maya-youtube-transcript:chunk:0",
+        "claim_id": "claim:rdllm-dispute:1",
+        "creator_id": "maya",
+        "decision": "accepted",
+        "source_row_hash": "2c1109cc4fb4acf59ddd5a61daaa0f8ea232fd9d7246891c0679878ef660c4ed",
+        "supporting_evidence_score": "0.950000",
+        "work_id": "maya-youtube-transcript"
+      },
+      {
+        "basis": "adjudicated_attribution_footer",
+        "chunk_id": "jaron-data-dignity:chunk:0",
+        "claim_id": "claim:rdllm-dispute:2",
+        "creator_id": "jaron",
+        "decision": "accepted",
+        "source_row_hash": "3286243e03b40609372e4bd6ffa287b6106175858f99ba1e1779ccc02de440b0",
+        "supporting_evidence_score": "0.950000",
+        "work_id": "jaron-data-dignity"
+      }
+    ],
+    "appeal": {
+      "appeal_filed": false,
+      "closes_at": "2026-06-07T00:00:00Z",
+      "opened_at": "2026-05-31T00:00:00Z",
+      "state": "closed"
+    },
+    "bounty_rows": [
+      {
+        "amount": "0.500000",
+        "basis": "successful_attribution_dispute_or_bad_faith_detection",
+        "bounty_id": "bounty:1",
+        "bounty_row_hash": "8a7da9f50b3a4247080b82e54d18deaff71c0e7bf4384ce8b955693a378adf0f",
+        "recipient_id": "maya",
+        "slash_id": "slash:provider-funded-vote"
+      }
+    ],
+    "case": {
+      "attribution_contract": {
+        "contract_hash": "bf753435badeaba12b8a7896cbfa6a8389431600548c45134bc7a5c64c3c46eb",
+        "counterfactual_question": "Would attribution or payout materially change if the disputed source were removed?",
+        "eligible_feature_classes": [
+          "black_box_probe",
+          "model_lineage",
+          "source_rows"
+        ],
+        "held_fixed": [
+          "challenged_model_hash",
+          "prompt_hash"
+        ],
+        "output_explained_hash": "5ca6189954f6bf14570fe40a6ebf49ee3d81649014bfce18fb408e86c414ca79",
+        "score_definition": "claim_evidence_rebuttal_and_bonded_quorum"
+      },
+      "case_id": "case:rdllm-attribution-dispute:001",
+      "case_type": "black_box_model_provenance_dispute",
+      "opened_at": "2026-05-31T00:00:00Z",
+      "status": "ready",
+      "subject": {
+        "artifact_hash": "b5ae2a8e51d4049cd77c55f2a5cbee9c998bd9766c402649d8cc85ca0e8a1672",
+        "artifact_type": "black_box_model_provenance_report",
+        "event_hash": "35c5b7ac36b439f0e881be4ae3ab698c54140e5cba01fadda3c8680d41bfbaab",
+        "hash_reproducible": true,
+        "model_hash": "d166c120b0e3590f3ecd4b0f8f37406eab527c97cb1652341e0a19aff8e2d1c0",
+        "output_hash": "5ca6189954f6bf14570fe40a6ebf49ee3d81649014bfce18fb408e86c414ca79",
+        "payload_hash": "b5ae2a8e51d4049cd77c55f2a5cbee9c998bd9766c402649d8cc85ca0e8a1672",
+        "provider_id": "provider:downstream-reference",
+        "public_locator_hash": "20218c6fd0cd7c607a2cb5ac49ae9a0cd375c5a2aa8743da7d81c7ae7615c70f",
+        "subject_hash": "279b1140d049b36132a0feb83f46106a2902a19da551146ad678e4274fe96259"
+      }
+    },
+    "checks": {
+      "appeal_window_enforced": true,
+      "attribution_contract_complete": true,
+      "claimants_and_respondents_have_notice": true,
+      "conflicted_votes_excluded_from_quorum": true,
+      "escrow_conserved": true,
+      "evidence_commitments_present": true,
+      "private_text_not_disclosed": true,
+      "settlement_rows_match_decision": true,
+      "slash_and_bounty_bounded_by_bond": true,
+      "subject_artifact_hash_reproducible": true,
+      "verifier_quorum_met": true
+    },
+    "claimant_rows": [
+      {
+        "basis_hash": "",
+        "chunk_id": "maya-youtube-transcript:chunk:0",
+        "claim_hash": "8722e4c4196ed3ac8d7c5e2921843f4bd14ffe1a92964182eb04ec25924f2497",
+        "claim_id": "claim:rdllm-dispute:1",
+        "claim_type": "undisclosed_derivative_model_upstream_creator",
+        "claimant_id": "maya",
+        "claimed_amount": "0.385000",
+        "claimed_share": "0.000000",
+        "creator_id": "maya",
+        "creator_name": "Maya Rao",
+        "notice_sent": true,
+        "source_row_hash": "2c1109cc4fb4acf59ddd5a61daaa0f8ea232fd9d7246891c0679878ef660c4ed",
+        "standing_evidence_hash": "321fb94223c6137ee8f9da83a458ef34ff92e0365baa7e9724fca4f6fb24d0fc",
+        "work_id": "maya-youtube-transcript"
+      },
+      {
+        "basis_hash": "",
+        "chunk_id": "jaron-data-dignity:chunk:0",
+        "claim_hash": "744f13d0a304be34a854e44503c9d8c0e03bd874a00721afa4f47a953880e1e0",
+        "claim_id": "claim:rdllm-dispute:2",
+        "claim_type": "undisclosed_derivative_model_upstream_creator",
+        "claimant_id": "jaron",
+        "claimed_amount": "0.165000",
+        "claimed_share": "0.000000",
+        "creator_id": "jaron",
+        "creator_name": "Jaron Lanier",
+        "notice_sent": true,
+        "source_row_hash": "3286243e03b40609372e4bd6ffa287b6106175858f99ba1e1779ccc02de440b0",
+        "standing_evidence_hash": "50b388a6954962bc36246fbc137a99b5ece01445d5a9cf9a511373dccb789ab2",
+        "work_id": "jaron-data-dignity"
+      }
+    ],
+    "decision_rows": [
+      {
+        "acceptance_ratio": "1.000000",
+        "accepted_vote_count": 2,
+        "chunk_id": "maya-youtube-transcript:chunk:0",
+        "claim_hash": "8722e4c4196ed3ac8d7c5e2921843f4bd14ffe1a92964182eb04ec25924f2497",
+        "claim_id": "claim:rdllm-dispute:1",
+        "claimed_amount": "0.385000",
+        "creator_id": "maya",
+        "decision": "accepted",
+        "decision_hash": "97fa910ce3e3bfe1e800f3036e4b135170e2584ad234ebde688927f44ac44ed2",
+        "eligible_verifier_count": 2,
+        "rebuttal_evidence_score": "0.200000",
+        "rejected_vote_count": 0,
+        "source_row_hash": "2c1109cc4fb4acf59ddd5a61daaa0f8ea232fd9d7246891c0679878ef660c4ed",
+        "supporting_evidence_score": "0.950000",
+        "work_id": "maya-youtube-transcript"
+      },
+      {
+        "acceptance_ratio": "1.000000",
+        "accepted_vote_count": 2,
+        "chunk_id": "jaron-data-dignity:chunk:0",
+        "claim_hash": "744f13d0a304be34a854e44503c9d8c0e03bd874a00721afa4f47a953880e1e0",
+        "claim_id": "claim:rdllm-dispute:2",
+        "claimed_amount": "0.165000",
+        "creator_id": "jaron",
+        "decision": "accepted",
+        "decision_hash": "93bab1d44839cfbfe0ca8b84580d83096033accce5a6a8ba3e2d5616ba684788",
+        "eligible_verifier_count": 2,
+        "rebuttal_evidence_score": "0.200000",
+        "rejected_vote_count": 0,
+        "source_row_hash": "3286243e03b40609372e4bd6ffa287b6106175858f99ba1e1779ccc02de440b0",
+        "supporting_evidence_score": "0.950000",
+        "work_id": "jaron-data-dignity"
+      }
+    ],
+    "escrow": {
+      "amount": "0.550000",
+      "currency": "USD",
+      "escrow_account_hash": "69ba730a9baeda32952f42664b13597f1e3ae7e72e31b32668b0d977ef9a4998",
+      "escrow_id": "escrow:black-box-model-provenance:1",
+      "frozen_total": "0.000000",
+      "released_total": "0.550000"
+    },
+    "escrow_freeze_rows": [],
+    "evidence_rows": [
+      {
+        "artifact_hash": "b5ae2a8e51d4049cd77c55f2a5cbee9c998bd9766c402649d8cc85ca0e8a1672",
+        "artifact_type": "rdllm-black-box-model-provenance/v1",
+        "evidence_hash": "4b4b03b5dc11d14fe95593b570977fce56e04f5a2ffee41fb32227451c9a9af6",
+        "evidence_id": "evidence:black-box-provenance-report",
+        "evidence_row_hash": "9220638ff49e3aa4f3f7c33641f7699d8ebd07c15bb323d9f3153e050e605674",
+        "evidence_type": "black_box_model_provenance_report",
+        "independent": true,
+        "probative_score": "0.940000",
+        "rebuts_claim_ids": [],
+        "relevance_score": "0.950000",
+        "replayable": true,
+        "source_row_hash": "",
+        "submitted_by": "auditor:rdllm-independent-lab",
+        "supports_claim_ids": [
+          "claim:rdllm-dispute:1",
+          "claim:rdllm-dispute:2"
+        ]
+      },
+      {
+        "artifact_hash": "",
+        "artifact_type": "",
+        "evidence_hash": "5a14659db3449e138e406e233e74f63edbfc1ed50904539d818a098c9bd77620",
+        "evidence_id": "evidence:downstream-rebuttal",
+        "evidence_row_hash": "1da2c83beac21627c5d2131ce05c7c3b3cfb5c355848aef85d7c689bf3ed021f",
+        "evidence_type": "provider_rebuttal",
+        "independent": false,
+        "probative_score": "0.200000",
+        "rebuts_claim_ids": [
+          "claim:rdllm-dispute:1",
+          "claim:rdllm-dispute:2"
+        ],
+        "relevance_score": "0.200000",
+        "replayable": true,
+        "source_row_hash": "",
+        "submitted_by": "provider:downstream-reference",
+        "supports_claim_ids": []
+      }
+    ],
+    "issued_at": "2026-05-31T00:00:00Z",
+    "issuer": "rdllm-local-demo",
+    "policy": {
+      "acceptance_threshold": "0.66",
+      "bounty_fraction": "0.50",
+      "minimum_evidence_score": "0.70",
+      "required_quorum": 2,
+      "slash_fraction": "0.10"
+    },
+    "privacy": {
+      "public_report_uses_hash_commitments": true,
+      "raw_evidence_text_disclosed": false,
+      "raw_output_disclosed": false,
+      "raw_prompt_disclosed": false,
+      "raw_source_text_disclosed": false
+    },
+    "report_hash": "7489ccc3650e383026c7932eeba3cf89513c7eb2436251fe079f495409163584",
+    "respondent_rows": [
+      {
+        "notice_sent": true,
+        "position": "rebut",
+        "provider_id": "provider:downstream-reference",
+        "rebuttal_evidence_hash": "5a14659db3449e138e406e233e74f63edbfc1ed50904539d818a098c9bd77620",
+        "rebuttal_strength": "0.200000",
+        "rebutted_claim_ids": [
+          "claim:rdllm-dispute:1",
+          "claim:rdllm-dispute:2"
+        ],
+        "respondent_id": "provider:downstream-reference",
+        "response_hash": "e00f7ebb0c3041a35fb1f320c4e81f9718cce72b6dd74511c0e78caeff9fc6bc",
+        "response_id": "response:downstream-provider"
+      }
+    ],
+    "schemas": {
+      "attribution_dispute_adjudication_report": "docs/schemas/attribution_dispute_adjudication_report.schema.json"
+    },
+    "settlement_release_rows": [
+      {
+        "amount": "0.385000",
+        "basis": "final_attribution_dispute_adjudication",
+        "chunk_id": "maya-youtube-transcript:chunk:0",
+        "claim_hash": "8722e4c4196ed3ac8d7c5e2921843f4bd14ffe1a92964182eb04ec25924f2497",
+        "claim_id": "claim:rdllm-dispute:1",
+        "currency": "USD",
+        "escrow_account_hash": "69ba730a9baeda32952f42664b13597f1e3ae7e72e31b32668b0d977ef9a4998",
+        "recipient_creator_id": "maya",
+        "release_id": "release:attribution-dispute:1",
+        "release_row_hash": "2548b132af8fc087bbb4b91a2f250b42ed54acd73381e70318a5a5b83df96271",
+        "source_row_hash": "2c1109cc4fb4acf59ddd5a61daaa0f8ea232fd9d7246891c0679878ef660c4ed",
+        "work_id": "maya-youtube-transcript"
+      },
+      {
+        "amount": "0.165000",
+        "basis": "final_attribution_dispute_adjudication",
+        "chunk_id": "jaron-data-dignity:chunk:0",
+        "claim_hash": "744f13d0a304be34a854e44503c9d8c0e03bd874a00721afa4f47a953880e1e0",
+        "claim_id": "claim:rdllm-dispute:2",
+        "currency": "USD",
+        "escrow_account_hash": "69ba730a9baeda32952f42664b13597f1e3ae7e72e31b32668b0d977ef9a4998",
+        "recipient_creator_id": "jaron",
+        "release_id": "release:attribution-dispute:2",
+        "release_row_hash": "2f46e1ab014a18326cb05c260eabbd97323f788ad6c57170889f561817c227a7",
+        "source_row_hash": "3286243e03b40609372e4bd6ffa287b6106175858f99ba1e1779ccc02de440b0",
+        "work_id": "jaron-data-dignity"
+      }
+    ],
+    "signature": {
+      "algorithm": "HMAC-SHA256",
+      "issuer": "rdllm-local-demo",
+      "value": "1af77e0b0ec5ff9e56556fd353ef3ffbcd20b4343caaf18367db47b1f2cb1def"
+    },
+    "slash_rows": [
+      {
+        "bond_amount": "10.000000",
+        "misconduct_hash": "c5e8b22834881059d6805bf2a802e7f1d310fb07d27c33629de5bb1143eaa6af",
+        "misconduct_type": "conflicted_rebuttal_vote",
+        "party_id": "auditor:provider-funded",
+        "party_role": "auditor",
+        "slash_amount": "1.000000",
+        "slash_fraction": "0.10",
+        "slash_id": "slash:provider-funded-vote",
+        "slash_row_hash": "f49e4891f0f7e1c530990446905343ee118fc3de002faf60e74e1a2d2b555b05"
+      }
+    ],
+    "summary": {
+      "accepted_claim_count": 2,
+      "appeal_state": "closed",
+      "bounty_row_count": 1,
+      "case_id": "case:rdllm-attribution-dispute:001",
+      "claim_count": 2,
+      "creator_pool_conserved": true,
+      "eligible_verifier_count": 2,
+      "escrow_amount": "0.550000",
+      "escrow_freeze_count": 0,
+      "evidence_count": 2,
+      "footer_row_count": 2,
+      "frozen_total": "0.000000",
+      "rejected_claim_count": 0,
+      "released_total": "0.550000",
+      "respondent_count": 1,
+      "settlement_release_count": 2,
+      "slash_row_count": 1,
+      "status": "ready",
+      "target_certification_level": "RDLLM-L93",
+      "verifier_vote_count": 3
+    },
+    "verifier_vote_rows": [
+      {
+        "accepted_claim_ids": [
+          "claim:rdllm-dispute:1",
+          "claim:rdllm-dispute:2"
+        ],
+        "bond_amount": "10.000000",
+        "confidence": "0.920000",
+        "conflict_disclosures": [],
+        "conflicted": false,
+        "eligible_for_quorum": true,
+        "reasoning_hash": "6c5641e5e7bf8546a99a5a45296b2da314568ced8088c5b4826d436d1af37048",
+        "rejected_claim_ids": [],
+        "verifier_id": "watchtower_alpha",
+        "verifier_role": "watchtower",
+        "vote_id": "vote:watchtower-alpha",
+        "vote_row_hash": "670ee4cab022446ae40f44ef0de7f250190d50b752395bd74d7537cee0d902c1",
+        "vote_signature_hash": "d93924426aa461b3aaa8f9d65efa607be791b82dde8837ae396e8ecd9dd4a2cd"
+      },
+      {
+        "accepted_claim_ids": [
+          "claim:rdllm-dispute:1",
+          "claim:rdllm-dispute:2"
+        ],
+        "bond_amount": "10.000000",
+        "confidence": "0.890000",
+        "conflict_disclosures": [],
+        "conflicted": false,
+        "eligible_for_quorum": true,
+        "reasoning_hash": "b10e7830bb2b256c9a6737cb4fa64a8b5b678c43375c8468d03f4ceed1e324d2",
+        "rejected_claim_ids": [],
+        "verifier_id": "watchtower_beta",
+        "verifier_role": "watchtower",
+        "vote_id": "vote:watchtower-beta",
+        "vote_row_hash": "69354c6348a25d05c8b2a828f2f69d45c7e50883fd45d5f403f2bb44398aa827",
+        "vote_signature_hash": "05c8eba9f60780d83f94d9a15a82e3e1df68f8b3cf120a9c23a3f57c4b7a376c"
+      },
+      {
+        "accepted_claim_ids": [],
+        "bond_amount": "10.000000",
+        "confidence": "0.800000",
+        "conflict_disclosures": [
+          "funded_by_respondent"
+        ],
+        "conflicted": true,
+        "eligible_for_quorum": false,
+        "reasoning_hash": "4c96742c633a60ed23a2d8e4fa3a59bbb40aeabd8455affb2c29da7f26ef2cbb",
+        "rejected_claim_ids": [
+          "claim:rdllm-dispute:1",
+          "claim:rdllm-dispute:2"
+        ],
+        "verifier_id": "auditor:provider-funded",
+        "verifier_role": "auditor",
+        "vote_id": "vote:provider-conflict",
+        "vote_row_hash": "dfc1adfce72d49bf7339351c08cf88c242efe58e5e82818530df8b5f50034833",
+        "vote_signature_hash": "d7e8eb2087e29ed2748b73e2a7fc87a71eda213f60ec468e5f0d3d3940a83753"
+      }
+    ],
+    "version": "rdllm-attribution-dispute-adjudication-report/v1"
+  },
+  "case_type": "post_adjudication_settlement_adjustment",
+  "corrected_entitlement_rows": [
+    {
+      "chunk_id": "maya-youtube-transcript:chunk:0",
+      "corrected_amount": "0.435000",
+      "currency": "USD",
+      "decision_hash": "716ae9e2da94984b61103e50b6973e84533e120ab11a84fdeb3640ba2ee1f720",
+      "entitlement_id": "entitlement:post-adjudication:1",
+      "recipient_creator_id": "maya",
+      "source_row_hash": "2c1109cc4fb4acf59ddd5a61daaa0f8ea232fd9d7246891c0679878ef660c4ed",
+      "source_text": "Private corrected entitlement evidence.",
+      "work_id": "maya-youtube-transcript"
+    },
+    {
+      "chunk_id": "jaron-data-dignity:chunk:0",
+      "corrected_amount": "0.115000",
+      "currency": "USD",
+      "decision_hash": "03364ba5b6399210077120a729d5ce4f9bd0863295277a0cb8405e5008eb580c",
+      "entitlement_id": "entitlement:post-adjudication:2",
+      "recipient_creator_id": "jaron",
+      "source_row_hash": "3286243e03b40609372e4bd6ffa287b6106175858f99ba1e1779ccc02de440b0",
+      "source_text": "Private corrected entitlement evidence.",
+      "work_id": "jaron-data-dignity"
+    }
+  ],
+  "escrow_rows": [
+    {
+      "amount": "0.050000",
+      "currency": "USD",
+      "escrow_account_hash": "725351687fde265dc7f2dacc09efecbbfbed977ddd7e4cbedeca71a4dc13803c",
+      "escrow_id": "escrow:post-adjudication-adjustment"
+    }
+  ],
+  "future_payable_rows": [
+    {
+      "amount": "0.200000",
+      "currency": "USD",
+      "payable_hash": "5d9622ef8007acd506ababe42490dc6edba635e8377556c1e7e0ed27dd33515c",
+      "payable_id": "future-payable:post-adjudication:recoupment",
+      "payable_period": "2026-06",
+      "recipient_creator_id": "jaron"
+    }
+  ],
+  "opened_at": "2026-05-31T00:00:00Z",
+  "policy": {
+    "appeal_state": "closed",
+    "historical_payment_policy": "append_only_forward_adjustment_no_rewrite",
+    "minimum_adjustment": "0.000001",
+    "recoupment_cap_rate": "0.50"
+  },
+  "previously_paid_rows": [
+    {
+      "amount": "0.385000",
+      "chunk_id": "maya-youtube-transcript:chunk:0",
+      "creator_payout_receipt_hash": "49f52d43acad7944e8d1960270372a4c87e729c07a1b5d59f0af094de9774786",
+      "currency": "USD",
+      "payment_execution_hash": "0f4d22a4d9c94e8d26366ae7828e28316b6b29159bcb845aedf9cb8ed68b87be",
+      "payment_id": "payment:post-adjudication:1",
+      "payment_method": "Private payment processor detail.",
+      "recipient_creator_id": "maya",
+      "release_row_hash": "2548b132af8fc087bbb4b91a2f250b42ed54acd73381e70318a5a5b83df96271",
+      "source_row_hash": "2c1109cc4fb4acf59ddd5a61daaa0f8ea232fd9d7246891c0679878ef660c4ed",
+      "work_id": "maya-youtube-transcript"
+    },
+    {
+      "amount": "0.165000",
+      "chunk_id": "jaron-data-dignity:chunk:0",
+      "creator_payout_receipt_hash": "49f52d43acad7944e8d1960270372a4c87e729c07a1b5d59f0af094de9774786",
+      "currency": "USD",
+      "payment_execution_hash": "0f4d22a4d9c94e8d26366ae7828e28316b6b29159bcb845aedf9cb8ed68b87be",
+      "payment_id": "payment:post-adjudication:2",
+      "payment_method": "Private payment processor detail.",
+      "recipient_creator_id": "jaron",
+      "release_row_hash": "2f46e1ab014a18326cb05c260eabbd97323f788ad6c57170889f561817c227a7",
+      "source_row_hash": "3286243e03b40609372e4bd6ffa287b6106175858f99ba1e1779ccc02de440b0",
+      "work_id": "jaron-data-dignity"
+    }
+  ],
+  "private_strings": [
+    "Private payment processor detail.",
+    "Private corrected entitlement evidence."
+  ]
+}

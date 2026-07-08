@@ -1,0 +1,238 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/source_access_lease_report.schema.json",
+  "title": "RDLLM Source Access Lease Report",
+  "type": "object",
+  "required": [
+    "version",
+    "issued_at",
+    "issuer",
+    "case",
+    "policy",
+    "artifact_bindings",
+    "source_usage_rows",
+    "lease_rows",
+    "access_log_rows",
+    "coverage_rows",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "lease_report_hash",
+    "signature"
+  ],
+  "properties": {
+    "version": {
+      "const": "rdllm-source-access-lease/v1"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "case": {
+      "type": "object",
+      "required": ["case_id", "status"],
+      "properties": {
+        "case_id": {
+          "type": "string"
+        },
+        "status": {
+          "enum": ["ready", "needs_review"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "require_source_issued_leases",
+        "require_access_logs",
+        "require_license_contract_terms",
+        "require_lease_before_access",
+        "require_usage_purpose_allowed",
+        "require_minimum_creator_pool_rate",
+        "require_region_binding_for_direct_sources",
+        "require_denied_sources_escrowed"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "response_envelope_hash",
+        "creator_license_contract_hash",
+        "source_availability_report_hash",
+        "evidence_region_binding_report_hash",
+        "response_envelope_hash_reproducible",
+        "creator_license_contract_hash_reproducible",
+        "source_availability_hash_reproducible",
+        "evidence_region_binding_hash_reproducible"
+      ],
+      "additionalProperties": true
+    },
+    "source_usage_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_usage_id",
+          "source_label",
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "content_hash",
+          "usage_purpose",
+          "settlement_status",
+          "direct_settlement",
+          "escrowed",
+          "usage_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "lease_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "lease_id",
+          "lease_issuer",
+          "creator_id",
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "content_hash",
+          "allowed_uses",
+          "prohibited_uses",
+          "issued_at",
+          "revoked",
+          "minimum_creator_pool_rate",
+          "source_signature",
+          "source_signature_present",
+          "lease_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "access_log_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "access_event_id",
+          "lease_id",
+          "provider_id",
+          "access_method",
+          "usage_purpose",
+          "accessed_at",
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "content_hash",
+          "request_nonce_hash",
+          "response_snapshot_hash",
+          "metering_event_hash",
+          "access_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "coverage_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_usage_id",
+          "source_label",
+          "work_id",
+          "chunk_id",
+          "usage_purpose",
+          "direct_settlement",
+          "escrowed",
+          "matching_lease_count",
+          "matching_access_log_count",
+          "active_lease_count",
+          "accepted_lease_ids",
+          "license_contract_term_present",
+          "license_contract_term_allows_use",
+          "region_binding_present",
+          "covered_for_direct_settlement",
+          "denied_or_unleased_escrowed",
+          "coverage_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "artifact_hashes_reproducible",
+        "source_issued_leases_present",
+        "access_logs_present",
+        "license_contract_terms_present",
+        "license_contract_terms_allow_use",
+        "direct_sources_have_active_leases",
+        "direct_sources_have_region_binding",
+        "direct_sources_have_access_logs",
+        "no_direct_settlement_without_active_lease",
+        "denied_or_unleased_sources_escrowed",
+        "private_text_not_disclosed",
+        "direct_source_count_positive"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "source_access_lease_report",
+        "creator_license_contract",
+        "source_availability_report",
+        "evidence_region_binding_report"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "source_usage_count",
+        "direct_source_usage_count",
+        "lease_count",
+        "access_log_count",
+        "coverage_row_count",
+        "covered_direct_source_count",
+        "escrowed_denied_or_unleased_count",
+        "failed_check_count",
+        "source_access_lease_supported",
+        "creator_side_access_audit_supported",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["ready", "needs_review"]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L98"
+        }
+      },
+      "additionalProperties": true
+    },
+    "lease_report_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

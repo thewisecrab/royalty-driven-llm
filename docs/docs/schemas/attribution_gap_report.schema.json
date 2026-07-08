@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rdllm/schemas/attribution_gap_report.schema.json",
+  "title": "RDLLM Attribution Gap Report",
+  "type": "object",
+  "required": ["event_id", "event_hash", "attribution_gap", "audit_errors"],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "event_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "attribution_gap": {
+      "type": "object",
+      "required": [
+        "gap_version",
+        "verdict",
+        "summary",
+        "scores",
+        "accessed_sources",
+        "classifications",
+        "grounding_status",
+        "policy_status",
+        "registry_status",
+        "issues",
+        "report_hash"
+      ],
+      "properties": {
+        "gap_version": {
+          "const": "rdllm-attribution-gap/v1"
+        },
+        "verdict": {
+          "enum": ["closed", "open_gap", "escrowed", "unattributed"]
+        },
+        "summary": {
+          "type": "object",
+          "required": [
+            "access_record_count",
+            "accessed_source_count",
+            "allowed_accessed_source_count",
+            "visible_source_count",
+            "paid_source_count",
+            "credited_source_count",
+            "consumed_without_credit_count",
+            "cited_without_access_count",
+            "paid_hidden_count",
+            "policy_withheld_count",
+            "registry_withheld_count",
+            "escrow_accounts"
+          ],
+          "properties": {
+            "access_record_count": { "type": "integer", "minimum": 0 },
+            "accessed_source_count": { "type": "integer", "minimum": 0 },
+            "allowed_accessed_source_count": { "type": "integer", "minimum": 0 },
+            "visible_source_count": { "type": "integer", "minimum": 0 },
+            "paid_source_count": { "type": "integer", "minimum": 0 },
+            "credited_source_count": { "type": "integer", "minimum": 0 },
+            "consumed_without_credit_count": { "type": "integer", "minimum": 0 },
+            "cited_without_access_count": { "type": "integer", "minimum": 0 },
+            "paid_hidden_count": { "type": "integer", "minimum": 0 },
+            "policy_withheld_count": { "type": "integer", "minimum": 0 },
+            "registry_withheld_count": { "type": "integer", "minimum": 0 },
+            "escrow_accounts": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "additionalProperties": true
+        },
+        "scores": {
+          "type": "object",
+          "properties": {
+            "citation_efficiency": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+            "credit_efficiency": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+            "allowed_credit_coverage": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+            "payout_visibility": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+            "attribution_gap_rate": { "type": ["number", "null"], "minimum": 0, "maximum": 1 }
+          },
+          "additionalProperties": true
+        },
+        "accessed_sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "access_id",
+              "access_type",
+              "use",
+              "chunk_id",
+              "work_id",
+              "creator_id",
+              "content_hash",
+              "score",
+              "rank",
+              "policy_allowed",
+              "registry_allowed",
+              "decision_status"
+            ],
+            "properties": {
+              "access_id": { "type": "string" },
+              "access_type": { "enum": ["retrieval", "text_match"] },
+              "use": { "type": "string" },
+              "chunk_id": { "type": "string" },
+              "work_id": { "type": "string" },
+              "creator_id": { "type": "string" },
+              "content_hash": { "type": "string" },
+              "score": { "type": "number" },
+              "rank": { "type": "integer" },
+              "policy_allowed": { "type": "boolean" },
+              "registry_allowed": { "type": "boolean" },
+              "decision_status": { "type": "string" }
+            },
+            "additionalProperties": true
+          }
+        },
+        "classifications": {
+          "type": "object",
+          "required": [
+            "consumed_without_credit",
+            "cited_without_access",
+            "paid_hidden",
+            "policy_withheld",
+            "registry_withheld"
+          ],
+          "properties": {
+            "consumed_without_credit": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "cited_without_access": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "paid_hidden": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "policy_withheld": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "registry_withheld": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "additionalProperties": true
+        },
+        "grounding_status": {
+          "type": "string"
+        },
+        "policy_status": {
+          "type": "string"
+        },
+        "registry_status": {
+          "type": "string"
+        },
+        "issues": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "report_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "additionalProperties": true
+    },
+    "audit_errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

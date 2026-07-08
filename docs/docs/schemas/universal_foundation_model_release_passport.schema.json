@@ -1,0 +1,363 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_foundation_model_release_passport.schema.json",
+  "title": "RDLLM Universal Foundation Model Release Passport",
+  "type": "object",
+  "required": [
+    "universal_foundation_model_release_passport_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "artifact_bindings",
+    "model_release_rows",
+    "provider_route_rows",
+    "release_lifecycle_rows",
+    "compliance_mapping_rows",
+    "negative_model_release_rows",
+    "evidence_roots",
+    "checks",
+    "release_decision",
+    "privacy",
+    "summary",
+    "universal_foundation_model_release_passport_hash",
+    "signature"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "universal_foundation_model_release_passport_version": {
+      "const": "rdllm-universal-foundation-model-release-passport/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_foundation_model_release_passport.schema.json"
+    },
+    "created_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_live_attribution_level",
+        "minimum_reference_distribution_level",
+        "model_release_claim_requires_passport",
+        "provider_invocation_requires_passport",
+        "source_footer_reliance_requires_live_passport",
+        "creator_settlement_requires_model_release_binding",
+        "training_summary_and_copyright_policy_required",
+        "closed_weight_models_require_attested_model_identity",
+        "unsupported_provider_routes_fail_closed"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-foundation-model-release-passport-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L166" },
+        "minimum_live_attribution_level": { "const": "RDLLM-L165" },
+        "minimum_reference_distribution_level": { "const": "RDLLM-L164" },
+        "model_release_claim_requires_passport": { "const": true },
+        "provider_invocation_requires_passport": { "const": true },
+        "source_footer_reliance_requires_live_passport": { "const": true },
+        "creator_settlement_requires_model_release_binding": { "const": true },
+        "training_summary_and_copyright_policy_required": { "const": true },
+        "closed_weight_models_require_attested_model_identity": { "const": true },
+        "unsupported_provider_routes_fail_closed": { "const": true }
+      }
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-foundation-model-release-passport.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-foundation-model-release-passport/v1"
+        }
+      }
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "artifact",
+          "present",
+          "artifact_hash",
+          "payload_hash",
+          "hash_reproducible"
+        ],
+        "properties": {
+          "artifact": { "type": "string" },
+          "present": { "type": "boolean" },
+          "artifact_hash": { "type": "string" },
+          "payload_hash": { "type": "string" },
+          "hash_reproducible": { "type": "boolean" },
+          "status": { "type": "string" },
+          "level": { "type": "string" }
+        }
+      }
+    },
+    "model_release_rows": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "provider_family",
+          "model_id",
+          "model_version",
+          "release_status",
+          "provider_subject_hash",
+          "model_identity_hash",
+          "model_artifact_or_attestation_hash",
+          "model_signing_hash",
+          "training_summary_hash",
+          "copyright_policy_hash",
+          "tdm_reservation_policy_hash",
+          "post_training_lineage_hash",
+          "live_attribution_proof_hash",
+          "settlement_contract_hash",
+          "revocation_status_hash",
+          "downstream_documentation_hash",
+          "model_id_bound",
+          "provider_subject_verified",
+          "model_version_bound",
+          "signed_model_or_closed_weight_attested",
+          "training_content_summary_published",
+          "copyright_policy_bound",
+          "tdm_opt_out_policy_enforced",
+          "post_training_lineage_bound",
+          "live_attribution_required_for_all_outputs",
+          "downstream_docs_available",
+          "settlement_policy_bound",
+          "revocation_policy_bound",
+          "private_payloads_excluded"
+        ],
+        "properties": {
+          "provider_family": { "type": "string" },
+          "model_id": { "type": "string" },
+          "model_version": { "type": "string" },
+          "release_status": { "const": "ready" },
+          "model_id_bound": { "type": "boolean" },
+          "provider_subject_verified": { "type": "boolean" },
+          "model_version_bound": { "type": "boolean" },
+          "signed_model_or_closed_weight_attested": { "type": "boolean" },
+          "training_content_summary_published": { "type": "boolean" },
+          "copyright_policy_bound": { "type": "boolean" },
+          "tdm_opt_out_policy_enforced": { "type": "boolean" },
+          "post_training_lineage_bound": { "type": "boolean" },
+          "live_attribution_required_for_all_outputs": { "type": "boolean" },
+          "downstream_docs_available": { "type": "boolean" },
+          "settlement_policy_bound": { "type": "boolean" },
+          "revocation_policy_bound": { "type": "boolean" },
+          "private_payloads_excluded": { "type": "boolean" }
+        }
+      }
+    },
+    "provider_route_rows": {
+      "type": "object",
+      "required": [
+        "openai_responses_api",
+        "anthropic_messages_api",
+        "google_gemini_generate_content",
+        "meta_llama_stack",
+        "mistral_chat_api",
+        "cohere_chat_api",
+        "xai_grok_api",
+        "deepseek_chat_api",
+        "azure_openai_responses",
+        "aws_bedrock_converse",
+        "openrouter_chat_completions",
+        "local_openai_compatible_runtime",
+        "open_weight_runtime",
+        "enterprise_gateway_proxy"
+      ],
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "route_contract_hash",
+          "adapter_hash",
+          "telemetry_hash",
+          "source_footer_hash",
+          "live_proof_hash",
+          "settlement_meter_hash",
+          "refusal_path_hash",
+          "route_supported",
+          "adapter_verified",
+          "live_attribution_enforced",
+          "streaming_and_batch_covered",
+          "copy_export_covered",
+          "fallback_routes_blocked",
+          "settlement_meter_bound",
+          "private_payloads_excluded"
+        ],
+        "properties": {
+          "route_supported": { "type": "boolean" },
+          "adapter_verified": { "type": "boolean" },
+          "live_attribution_enforced": { "type": "boolean" },
+          "streaming_and_batch_covered": { "type": "boolean" },
+          "copy_export_covered": { "type": "boolean" },
+          "fallback_routes_blocked": { "type": "boolean" },
+          "settlement_meter_bound": { "type": "boolean" },
+          "private_payloads_excluded": { "type": "boolean" }
+        }
+      }
+    },
+    "release_lifecycle_rows": {
+      "type": "object",
+      "required": [
+        "model_identity",
+        "training_content_transparency",
+        "copyright_and_tdm_policy",
+        "post_training_lineage",
+        "distillation_and_synthetic_data",
+        "adapter_and_fine_tune_deltas",
+        "evaluation_and_safety",
+        "live_attribution_enforcement",
+        "source_footer_delivery",
+        "royalty_settlement",
+        "revocation_and_correction",
+        "downstream_developer_documentation"
+      ]
+    },
+    "compliance_mapping_rows": {
+      "type": "object",
+      "required": [
+        "eu_ai_act_gpai_transparency",
+        "nist_ai_rmf_genai_profile",
+        "model_cards_and_downstream_docs",
+        "openssf_model_signing",
+        "slsa_in_toto_supply_chain",
+        "c2pa_content_credentials",
+        "scitt_transparency_statements",
+        "opentelemetry_genai",
+        "aibom_cyclonedx_spdx",
+        "w3c_verifiable_credentials"
+      ]
+    },
+    "negative_model_release_rows": {
+      "type": "object",
+      "required": [
+        "unregistered_model_version",
+        "model_hash_or_attestation_mismatch",
+        "missing_training_summary",
+        "copyright_policy_unbound",
+        "tdm_opt_out_not_enforced",
+        "post_training_lineage_gap",
+        "unsupported_provider_route",
+        "route_without_live_attribution",
+        "sdk_or_gateway_strips_release_passport",
+        "revoked_model_release_still_served",
+        "settlement_without_model_passport",
+        "private_training_or_customer_payload_leak"
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "core_artifacts_bound",
+        "certification_l165_or_higher_passed",
+        "reference_distribution_l164_ready",
+        "live_attribution_l165_ready",
+        "model_release_rows_ready",
+        "model_identity_unique",
+        "release_claims_bound_to_model_versions",
+        "provider_route_coverage_complete",
+        "release_lifecycle_controls_complete",
+        "compliance_mappings_complete",
+        "settlement_and_revocation_bound",
+        "negative_model_release_fixtures_reject",
+        "model_release_passport_signed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "release_decision": {
+      "type": "object",
+      "required": [
+        "model_release_passport_ready",
+        "model_release_claim_allowed",
+        "provider_invocation_allowed",
+        "source_footer_reliance_allowed",
+        "creator_settlement_release_allowed",
+        "failure_modes"
+      ],
+      "properties": {
+        "model_release_passport_ready": { "type": "boolean" },
+        "model_release_claim_allowed": { "type": "boolean" },
+        "provider_invocation_allowed": { "type": "boolean" },
+        "source_footer_reliance_allowed": { "type": "boolean" },
+        "creator_settlement_release_allowed": { "type": "boolean" },
+        "failure_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_prompt_disclosed",
+        "raw_answer_disclosed",
+        "raw_training_text_disclosed",
+        "raw_customer_record_disclosed",
+        "private_fields_absent",
+        "private_strings_absent",
+        "public_rows_are_hash_status_and_policy_only"
+      ],
+      "properties": {
+        "raw_prompt_disclosed": { "const": false },
+        "raw_answer_disclosed": { "const": false },
+        "raw_training_text_disclosed": { "const": false },
+        "raw_customer_record_disclosed": { "const": false },
+        "private_fields_absent": { "type": "boolean" },
+        "private_strings_absent": { "type": "boolean" },
+        "public_rows_are_hash_status_and_policy_only": { "const": true }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_live_attribution_level",
+        "minimum_reference_distribution_level",
+        "model_release_count",
+        "ready_model_release_count",
+        "provider_route_count",
+        "release_lifecycle_domain_count",
+        "compliance_mapping_count",
+        "negative_release_failure_count",
+        "failure_mode_count",
+        "signed_model_release_passport",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L166" },
+        "minimum_live_attribution_level": { "const": "RDLLM-L165" },
+        "minimum_reference_distribution_level": { "const": "RDLLM-L164" },
+        "provider_route_count": { "const": 14 },
+        "release_lifecycle_domain_count": { "const": 12 },
+        "compliance_mapping_count": { "const": 10 },
+        "negative_release_failure_count": { "const": 12 },
+        "signed_model_release_passport": { "const": true },
+        "privacy_preserved": { "type": "boolean" }
+      }
+    },
+    "universal_foundation_model_release_passport_hash": {
+      "type": "string",
+      "minLength": 32
+    },
+    "signature": {
+      "type": "object",
+      "required": ["issuer", "algorithm", "value"],
+      "properties": {
+        "issuer": { "type": "string" },
+        "algorithm": { "const": "HMAC-SHA256" },
+        "value": { "type": "string", "minLength": 32 }
+      }
+    }
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/citation_reliance_receipt.schema.json",
+  "title": "RDLLM Citation Reliance Receipt",
+  "type": "object",
+  "required": [
+    "version",
+    "issued_at",
+    "issuer",
+    "case",
+    "policy",
+    "artifact_bindings",
+    "visible_source_rows",
+    "source_reliance_rows",
+    "claim_reliance_rows",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "citation_reliance_receipt_hash",
+    "signature"
+  ],
+  "properties": {
+    "version": {
+      "const": "rdllm-citation-reliance-receipt/v1"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "case": {
+      "type": "object",
+      "required": ["case_id", "status"],
+      "properties": {
+        "case_id": {
+          "type": "string"
+        },
+        "status": {
+          "enum": ["ready", "needs_review"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "require_rendered_footer_rows",
+        "require_pre_generation_evidence_locks",
+        "require_claim_source_replay",
+        "require_causal_utility",
+        "require_current_turn_trace",
+        "require_access_lease_and_protocol_for_direct_sources",
+        "require_no_paid_hidden_sources"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "evidence_locked_generation_report_hash",
+        "claim_source_attribution_report_hash",
+        "evidence_utility_attribution_report_hash",
+        "rendered_attribution_audit_hash",
+        "source_access_lease_report_hash",
+        "content_protocol_ingestion_report_hash",
+        "evidence_locked_generation_report_hash_reproducible",
+        "claim_source_attribution_report_hash_reproducible",
+        "evidence_utility_attribution_report_hash_reproducible",
+        "rendered_attribution_audit_hash_reproducible",
+        "source_access_lease_report_hash_reproducible",
+        "content_protocol_ingestion_report_hash_reproducible"
+      ],
+      "additionalProperties": true
+    },
+    "visible_source_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_label",
+          "source_id",
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "content_hash_prefix",
+          "source_reliance_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "source_reliance_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_label",
+          "source_id",
+          "body_occurrence_count",
+          "evidence_lock_count",
+          "satisfied_lock_count",
+          "rendered_claim_count",
+          "causal_utility_count",
+          "current_turn_trace_present",
+          "source_usage_count",
+          "direct_settlement_count",
+          "source_access_covered",
+          "content_protocol_covered",
+          "covered_for_faithful_reliance",
+          "source_reliance_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "claim_reliance_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "source_label",
+          "source_id",
+          "claim_source_decision",
+          "rendered_claim_evidence_present",
+          "evidence_lock_count",
+          "satisfied_lock_count",
+          "causal_utility_count",
+          "covered_for_faithful_reliance",
+          "claim_reliance_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "artifact_hashes_reproducible",
+        "rendered_footer_rows_present",
+        "rendered_attribution_audit_ready",
+        "evidence_locks_precede_generation",
+        "every_visible_source_has_satisfied_lock",
+        "every_visible_source_has_claim_source_replay",
+        "every_visible_source_has_causal_utility",
+        "every_grounded_claim_has_reliance_proof",
+        "visible_sources_are_in_current_turn_trace",
+        "source_access_and_protocol_cover_direct_sources",
+        "no_paid_source_without_visible_footer",
+        "claim_source_report_ready",
+        "evidence_utility_report_ready",
+        "source_access_lease_ready",
+        "content_protocol_ingestion_ready",
+        "private_text_not_disclosed",
+        "direct_source_count_positive"
+      ],
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "privacy": {
+      "type": "object"
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "citation_reliance_receipt",
+        "evidence_locked_generation",
+        "claim_source_attribution_report",
+        "evidence_utility_attribution_report",
+        "rendered_attribution_audit",
+        "source_access_lease_report",
+        "content_protocol_ingestion_report"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "visible_source_count",
+        "source_reliance_row_count",
+        "claim_reliance_row_count",
+        "faithfully_covered_source_count",
+        "faithfully_covered_claim_count",
+        "failed_check_count",
+        "post_hoc_citation_blocked",
+        "footer_grounding_reliance_supported",
+        "direct_settlement_reliance_supported",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["ready", "needs_review"]
+        },
+        "target_certification_level": {
+          "const": "RDLLM-L100"
+        }
+      },
+      "additionalProperties": true
+    },
+    "citation_reliance_receipt_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

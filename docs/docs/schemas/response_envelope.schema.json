@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/response_envelope.schema.json",
+  "title": "RDLLM Response Envelope",
+  "type": "object",
+  "required": [
+    "envelope_version",
+    "issuer",
+    "created_at",
+    "response",
+    "embedded_artifacts",
+    "artifact_index",
+    "certification",
+    "commitments",
+    "verification",
+    "summary",
+    "privacy",
+    "envelope_hash",
+    "signature"
+  ],
+  "properties": {
+    "envelope_version": {
+      "const": "rdllm-response-envelope/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "response": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output",
+        "rendered_output_hash",
+        "answer_hash",
+        "source_labels",
+        "claim_span_prefixes"
+      ],
+      "additionalProperties": true
+    },
+    "embedded_artifacts": {
+      "type": "object",
+      "required": [
+        "answer_provenance_card",
+        "source_verification_report"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_index": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "artifact_type",
+          "declared_hash",
+          "payload_hash",
+          "entry_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "certification": {
+      "type": "object",
+      "required": [
+        "report_hash",
+        "status",
+        "highest_level",
+        "case_count",
+        "passed",
+        "failed"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "rendered_output_hash",
+        "footer_label_root",
+        "footer_span_root",
+        "artifact_root",
+        "answer_card_hash",
+        "source_verification_report_hash",
+        "source_confidence_report_hash",
+        "creator_license_contract_hash",
+        "citation_footer_contract_hash",
+        "source_availability_report_hash",
+        "evidence_sufficiency_report_hash",
+        "counterevidence_report_hash",
+        "answer_claim_coverage_report_hash",
+        "trace_exchange_hash",
+        "generation_context_closure_report_hash",
+        "source_boundary_report_hash",
+        "source_authenticity_report_hash"
+      ],
+      "additionalProperties": true
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "rendered_output_hash_matches_answer_card",
+        "rendered_output_hash_matches_source_report",
+        "footer_source_labels_match_answer_card",
+        "footer_span_prefixes_cover_answer_card",
+        "source_report_bound_to_answer_card",
+        "source_report_verified",
+        "source_confidence_report_verified",
+        "citation_footer_contract_verified",
+        "source_availability_report_verified",
+        "evidence_sufficiency_report_verified",
+        "counterevidence_report_verified",
+        "late_grounding_reports_bound",
+        "answer_claim_coverage_report_verified",
+        "generation_context_closure_report_verified",
+        "source_boundary_report_verified",
+        "source_authenticity_report_verified",
+        "provider_discloses_response_surface",
+        "certification_meets_source_materialization_level"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "public_verification_profile",
+        "artifact_count",
+        "source_count",
+        "claim_count",
+        "visible_footer_source_count",
+        "visible_footer_span_count"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "rendered_output_disclosed",
+        "prompt_text_disclosed",
+        "private_prompt_payload_disclosed",
+        "private_ledger_disclosed",
+        "private_source_corpus_disclosed",
+        "full_private_receipt_disclosed",
+        "additional_private_source_text_disclosed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "envelope_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

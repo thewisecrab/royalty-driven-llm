@@ -1,0 +1,555 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/service_response_verification.schema.json",
+  "title": "RDLLM Service Response Verification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "errors",
+    "response_status",
+    "production_display_ready",
+    "display_text_status",
+    "display_text_hash",
+    "display_text_path",
+    "source_grounding_acceptance",
+    "event_id",
+    "event_hash",
+    "footer_hash",
+    "display_hash",
+    "source_count",
+    "claim_count",
+    "grounding_verdict",
+    "attribution_gap_verdict"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-service-response-verification/v1"
+    },
+    "status": {
+      "enum": ["passed", "failed"]
+    },
+    "errors": {
+      "$ref": "#/$defs/error_array"
+    },
+    "response_status": {
+      "type": "string"
+    },
+    "production_display_ready": {
+      "type": "boolean"
+    },
+    "display_text_status": {
+      "enum": ["not_checked", "passed", "failed"]
+    },
+    "display_text_hash": {
+      "type": "string"
+    },
+    "display_text_path": {
+      "type": "string"
+    },
+    "source_grounding_acceptance": {
+      "$ref": "#/$defs/source_grounding_acceptance"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "event_hash": {
+      "type": "string"
+    },
+    "footer_hash": {
+      "type": "string"
+    },
+    "display_hash": {
+      "type": "string"
+    },
+    "source_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "claim_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "grounding_verdict": {
+      "type": "string"
+    },
+    "attribution_gap_verdict": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "passed" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "maxItems": 0 },
+          "response_status": { "enum": ["ready", "blocked"] },
+          "event_id": { "pattern": "^evt_[0-9a-f]{16}$" },
+          "event_hash": { "$ref": "#/$defs/hash64" },
+          "footer_hash": { "$ref": "#/$defs/hash64" },
+          "display_hash": { "$ref": "#/$defs/hash64" },
+          "display_text_status": { "enum": ["not_checked", "passed"] }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "failed" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "minItems": 1 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "display_text_status": { "const": "passed" }
+        },
+        "required": ["display_text_status"]
+      },
+      "then": {
+        "properties": {
+          "display_text_hash": { "$ref": "#/$defs/hash64" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "production_display_ready": { "const": true }
+        },
+        "required": ["production_display_ready"]
+      },
+      "then": {
+        "properties": {
+          "status": { "const": "passed" },
+          "response_status": { "const": "ready" },
+          "source_grounding_acceptance": {
+            "properties": {
+              "status": { "const": "passed" }
+            },
+            "required": ["status"]
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "error_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "hash64": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "acceptance_status": {
+      "enum": ["passed", "failed"]
+    },
+    "source_grounding_acceptance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "status",
+        "errors",
+        "policy",
+        "source_count",
+        "verified_source_count",
+        "source_uri_count",
+        "verification_handle_count",
+        "source_locator_count",
+        "source_identity_count",
+        "source_temporal_metadata_count",
+        "source_usage_metric_names",
+        "source_usage_metric_profile",
+        "source_usage_metric_scope",
+        "source_usage_metric_methods",
+        "source_usage_metric_row_count",
+        "source_usage_metric_provenance_count",
+        "answer_citation_markers",
+        "resolved_answer_citation_markers",
+        "unresolved_answer_citation_markers",
+        "answer_link_uris",
+        "resolved_answer_link_uris",
+        "unresolved_answer_link_uris",
+        "answer_citation_marker_count",
+        "resolved_answer_citation_marker_count",
+        "answer_link_uri_count",
+        "resolved_answer_link_uri_count",
+        "unresolved_answer_link_uri_count",
+        "temporal_claim_markers",
+        "temporal_claim_marker_count",
+        "answer_claim_unit_count",
+        "answer_claim_row_coverage_count",
+        "uncovered_answer_claim_hashes",
+        "extra_claim_row_hashes",
+        "model_reliance_claim_markers",
+        "model_reliance_claim_marker_count",
+        "claim_count",
+        "supported_claim_count",
+        "unsupported_claim_count",
+        "claim_evidence_row_count",
+        "claim_warrant_profile",
+        "claim_warrant_strength_count",
+        "source_disagreement_profile",
+        "claim_source_disagreement_count",
+        "claim_source_closure_count",
+        "minimum_support_score",
+        "average_support_score",
+        "royalty_share_count",
+        "royalty_covered_source_count",
+        "attribution_gap_verdict",
+        "attribution_gap_accessed_source_count",
+        "attribution_gap_allowed_accessed_source_count",
+        "attribution_gap_credited_source_count",
+        "attribution_gap_consumed_without_credit_count",
+        "attribution_gap_cited_without_access_count",
+        "attribution_gap_paid_hidden_count",
+        "source_materialization_status",
+        "source_locator_status",
+        "fact_support_status",
+        "royalty_attribution_status",
+        "attribution_gap_status",
+        "display_binding_status",
+        "citation_marker_status",
+        "source_usage_metric_status",
+        "source_usage_metric_provenance_status",
+        "source_identity_status",
+        "temporal_grounding_status",
+        "answer_link_status",
+        "answer_claim_coverage_status",
+        "model_reliance_claim_status",
+        "claim_evidence_status",
+        "claim_warrant_strength_status",
+        "claim_source_disagreement_status",
+        "claim_source_closure_status",
+        "display_footer_bound",
+        "display_rendered_with_footer",
+        "footer_contains_source_section",
+        "footer_contains_claim_evidence"
+      ],
+      "properties": {
+        "schema": {
+          "const": "rdllm-service-source-grounding-acceptance/v1"
+        },
+        "status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "errors": {
+          "$ref": "#/$defs/error_array"
+        },
+        "policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "minimum_source_count",
+            "minimum_supported_claim_count",
+            "minimum_support_score",
+            "required_render_policy",
+            "unresolved_inline_citation_markers_blocked",
+            "source_usage_metrics_required",
+            "claim_evidence_rows_required",
+            "claim_source_closure_required",
+            "source_locators_required",
+            "attribution_gap_closed_required",
+            "source_identity_binding_required",
+            "temporal_claims_require_source_freshness_metadata",
+            "answer_source_links_must_match_footer_sources",
+            "answer_claim_rows_must_cover_answer_text",
+            "model_internal_reliance_claims_blocked",
+            "source_usage_metric_provenance_required",
+            "claim_warrant_strength_required",
+            "claim_source_disagreement_required"
+          ],
+          "properties": {
+            "minimum_source_count": { "const": 1 },
+            "minimum_supported_claim_count": { "const": 1 },
+            "minimum_support_score": { "const": 0.75 },
+            "required_render_policy": {
+              "const": "answer_plus_verified_source_footer"
+            },
+            "unresolved_inline_citation_markers_blocked": { "const": true },
+            "source_usage_metrics_required": { "const": true },
+            "claim_evidence_rows_required": { "const": true },
+            "claim_source_closure_required": { "const": true },
+            "source_locators_required": { "const": true },
+            "attribution_gap_closed_required": { "const": true },
+            "source_identity_binding_required": { "const": true },
+            "temporal_claims_require_source_freshness_metadata": { "const": true },
+            "answer_source_links_must_match_footer_sources": { "const": true },
+            "answer_claim_rows_must_cover_answer_text": { "const": true },
+            "model_internal_reliance_claims_blocked": { "const": true },
+            "source_usage_metric_provenance_required": { "const": true },
+            "claim_warrant_strength_required": { "const": true },
+            "claim_source_disagreement_required": { "const": true }
+          }
+        },
+        "source_count": { "type": "integer", "minimum": 0 },
+        "verified_source_count": { "type": "integer", "minimum": 0 },
+        "source_uri_count": { "type": "integer", "minimum": 0 },
+        "verification_handle_count": { "type": "integer", "minimum": 0 },
+        "source_locator_count": { "type": "integer", "minimum": 0 },
+        "source_identity_count": { "type": "integer", "minimum": 0 },
+        "source_temporal_metadata_count": { "type": "integer", "minimum": 0 },
+        "source_usage_metric_names": { "$ref": "#/$defs/marker_array" },
+        "source_usage_metric_profile": {
+          "const": "rdllm-observable-source-usage-metrics/v1"
+        },
+        "source_usage_metric_scope": {
+          "const": "observable_support_allocation_not_model_internal_reliance"
+        },
+        "source_usage_metric_methods": {
+          "$ref": "#/$defs/source_usage_metric_methods"
+        },
+        "source_usage_metric_row_count": { "type": "integer", "minimum": 0 },
+        "source_usage_metric_provenance_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "answer_citation_markers": { "$ref": "#/$defs/marker_array" },
+        "resolved_answer_citation_markers": { "$ref": "#/$defs/marker_array" },
+        "unresolved_answer_citation_markers": { "$ref": "#/$defs/marker_array" },
+        "answer_link_uris": { "$ref": "#/$defs/marker_array" },
+        "resolved_answer_link_uris": { "$ref": "#/$defs/marker_array" },
+        "unresolved_answer_link_uris": { "$ref": "#/$defs/marker_array" },
+        "answer_citation_marker_count": { "type": "integer", "minimum": 0 },
+        "resolved_answer_citation_marker_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "answer_link_uri_count": { "type": "integer", "minimum": 0 },
+        "resolved_answer_link_uri_count": { "type": "integer", "minimum": 0 },
+        "unresolved_answer_link_uri_count": { "type": "integer", "minimum": 0 },
+        "temporal_claim_markers": { "$ref": "#/$defs/marker_array" },
+        "temporal_claim_marker_count": { "type": "integer", "minimum": 0 },
+        "answer_claim_unit_count": { "type": "integer", "minimum": 0 },
+        "answer_claim_row_coverage_count": { "type": "integer", "minimum": 0 },
+        "uncovered_answer_claim_hashes": { "$ref": "#/$defs/hash_array" },
+        "extra_claim_row_hashes": { "$ref": "#/$defs/hash_array" },
+        "model_reliance_claim_markers": { "$ref": "#/$defs/marker_array" },
+        "model_reliance_claim_marker_count": { "type": "integer", "minimum": 0 },
+        "claim_count": { "type": "integer", "minimum": 0 },
+        "supported_claim_count": { "type": "integer", "minimum": 0 },
+        "unsupported_claim_count": { "type": "integer", "minimum": 0 },
+        "claim_evidence_row_count": { "type": "integer", "minimum": 0 },
+        "claim_warrant_profile": {
+          "const": "rdllm-evidence-force-calibration/v1"
+        },
+        "claim_warrant_strength_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_disagreement_profile": {
+          "const": "rdllm-visible-source-disagreement/v1"
+        },
+        "claim_source_disagreement_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "claim_source_closure_count": { "type": "integer", "minimum": 0 },
+        "minimum_support_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "average_support_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "royalty_share_count": { "type": "integer", "minimum": 0 },
+        "royalty_covered_source_count": { "type": "integer", "minimum": 0 },
+        "attribution_gap_verdict": { "type": "string" },
+        "attribution_gap_accessed_source_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "attribution_gap_allowed_accessed_source_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "attribution_gap_credited_source_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "attribution_gap_consumed_without_credit_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "attribution_gap_cited_without_access_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "attribution_gap_paid_hidden_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_materialization_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "source_locator_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "fact_support_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "royalty_attribution_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "attribution_gap_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "display_binding_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "citation_marker_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "source_usage_metric_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "source_usage_metric_provenance_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "source_identity_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "temporal_grounding_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "answer_link_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "answer_claim_coverage_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "model_reliance_claim_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "claim_evidence_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "claim_warrant_strength_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "claim_source_disagreement_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "claim_source_closure_status": {
+          "$ref": "#/$defs/acceptance_status"
+        },
+        "display_footer_bound": { "type": "boolean" },
+        "display_rendered_with_footer": { "type": "boolean" },
+        "footer_contains_source_section": { "type": "boolean" },
+        "footer_contains_claim_evidence": { "type": "boolean" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": { "const": "passed" }
+            },
+            "required": ["status"]
+          },
+          "then": {
+            "properties": {
+              "errors": { "maxItems": 0 },
+              "source_materialization_status": { "const": "passed" },
+              "source_locator_status": { "const": "passed" },
+              "fact_support_status": { "const": "passed" },
+              "royalty_attribution_status": { "const": "passed" },
+              "attribution_gap_status": { "const": "passed" },
+              "display_binding_status": { "const": "passed" },
+              "citation_marker_status": { "const": "passed" },
+              "source_usage_metric_status": { "const": "passed" },
+              "source_usage_metric_provenance_status": { "const": "passed" },
+              "source_identity_status": { "const": "passed" },
+              "temporal_grounding_status": { "const": "passed" },
+              "answer_link_status": { "const": "passed" },
+              "answer_claim_coverage_status": { "const": "passed" },
+              "model_reliance_claim_status": { "const": "passed" },
+              "claim_evidence_status": { "const": "passed" },
+              "claim_warrant_strength_status": { "const": "passed" },
+              "claim_source_disagreement_status": { "const": "passed" },
+              "claim_source_closure_status": { "const": "passed" },
+              "source_count": { "minimum": 1 },
+              "verified_source_count": { "minimum": 1 },
+              "source_uri_count": { "minimum": 1 },
+              "verification_handle_count": { "minimum": 1 },
+              "source_locator_count": { "minimum": 1 },
+              "source_identity_count": { "minimum": 1 },
+              "source_usage_metric_row_count": { "minimum": 1 },
+              "source_usage_metric_provenance_count": { "minimum": 1 },
+              "answer_claim_unit_count": { "minimum": 1 },
+              "answer_claim_row_coverage_count": { "minimum": 1 },
+              "uncovered_answer_claim_hashes": { "maxItems": 0 },
+              "extra_claim_row_hashes": { "maxItems": 0 },
+              "model_reliance_claim_markers": { "maxItems": 0 },
+              "model_reliance_claim_marker_count": { "const": 0 },
+              "supported_claim_count": { "minimum": 1 },
+              "claim_evidence_row_count": { "minimum": 1 },
+              "claim_warrant_strength_count": { "minimum": 1 },
+              "claim_source_disagreement_count": { "minimum": 1 },
+              "claim_source_closure_count": { "minimum": 1 },
+              "unsupported_claim_count": { "const": 0 },
+              "minimum_support_score": { "minimum": 0.75 },
+              "attribution_gap_verdict": { "const": "closed" },
+              "attribution_gap_consumed_without_credit_count": { "const": 0 },
+              "attribution_gap_cited_without_access_count": { "const": 0 },
+              "attribution_gap_paid_hidden_count": { "const": 0 },
+              "royalty_covered_source_count": { "minimum": 1 },
+              "display_footer_bound": { "const": true },
+              "display_rendered_with_footer": { "const": true },
+              "footer_contains_source_section": { "const": true },
+              "footer_contains_claim_evidence": { "const": true }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": { "const": "failed" }
+            },
+            "required": ["status"]
+          },
+          "then": {
+            "properties": {
+              "errors": { "minItems": 1 }
+            }
+          }
+        }
+      ]
+    },
+    "source_usage_metric_methods": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["support", "text_match", "weight", "payout"],
+      "properties": {
+        "support": { "const": "rdllm-claim-overlap-support/v1" },
+        "text_match": { "const": "rdllm-ngram-lcs-text-match/v1" },
+        "weight": { "const": "rdllm-normalized-source-utility-weight/v1" },
+        "payout": { "const": "rdllm-creator-pool-weighted-allocation/v1" }
+      }
+    },
+    "marker_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "hash_array": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hash64" }
+    }
+  }
+}

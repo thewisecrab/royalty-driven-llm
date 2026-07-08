@@ -1,0 +1,125 @@
+{
+  "attribution_contract": {
+    "attributed_score": "weighted_model_signal_decision_score",
+    "claim": "registered_work_influence_on_generated_output",
+    "contract_version": "rdllm-attribution-contract/v1",
+    "eligible_features": [
+      "registered_work_signal_rows",
+      "provider_retrieval_or_memory_signals",
+      "training_or_finetuning_influence_signals"
+    ],
+    "excluded_features": [
+      "raw_hidden_states",
+      "raw_token_logits",
+      "private_prompt_text",
+      "private_output_text",
+      "chain_of_thought"
+    ],
+    "explained_output": "event.output_hash",
+    "feature_granularity": "registered_work",
+    "generative_process": "autoregressive_or_equivalent_generation_trace",
+    "held_fixed": [
+      "model_id",
+      "model_version",
+      "prompt_hash",
+      "output_hash",
+      "signal_input_root",
+      "rights_policy_profile"
+    ],
+    "public_claim_limit": "scores_and_commitments_prove_replayable_attribution_without_disclosing_private_telemetry"
+  },
+  "commitments": {
+    "model_signal_input_root": "bdf8d379094bdcd4f8ed56818a83d58cd5da05b289b1cc80b187e6a518bbc630",
+    "share_root": "376986f78a27dc9bd98c3bf34fe61f4608a3a27bcf031a4f99d6506a236bccde",
+    "signal_row_root": "6a81d5d36539d5404ae9e4452db51e61911570d735925f622080d7685d2116db"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "economics": {
+    "creator_pool": "0.550000",
+    "escrow_total": "0.000000",
+    "gross_revenue": "1.000000",
+    "payout_total": "0.550000"
+  },
+  "event": {
+    "event_hash": "1ed43e106d466249fb8efc2e529d4c5b81271493b74c3947fd6eda07bdd5b515",
+    "event_id": "evt_1ed43e106d466249",
+    "model_id": "model:rdllm-reference",
+    "model_version": "2026-05",
+    "output_hash": "069df2b36f4c12ee438a0edb55cc944c675fb5f3802cb70592907f047916ac51",
+    "prompt_hash": "3ff9b4d52e3ba4909f885835c6d362c80d35db9cafec55166ee62a73722aa7c6"
+  },
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "accept_threshold": 0.5,
+    "accepted_decision": "accepted",
+    "creator_pool_rate": "0.55",
+    "profile": "rdllm-model-signal-policy/v1",
+    "rejected_decision": "model_signal_escrow",
+    "signal_weights": {
+      "activation_similarity": 0.25,
+      "attention_mass": 0.15,
+      "gradient_influence": 0.2,
+      "logprob_delta": 0.3,
+      "memorization_score": 0.1
+    }
+  },
+  "privacy": {
+    "output_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "raw_hidden_states_disclosed": false,
+    "raw_private_trace_disclosed": false,
+    "raw_token_logits_disclosed": false,
+    "report_uses_commitments_scores_and_source_ids": true
+  },
+  "report_hash": "2e7affc731037862e94043900d401d7b6bf79927602df5904ebd4e79596bda21",
+  "report_version": "rdllm-model-signal-attribution/v1",
+  "royalty_shares": [
+    {
+      "contribution_weight": 1.0,
+      "creator_id": "arjun",
+      "payout": "0.550000",
+      "signal_ids": [
+        "signal:arjun-provenance-ledger"
+      ],
+      "work_id": "arjun-provenance-ledger"
+    }
+  ],
+  "signal_rows": [
+    {
+      "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+      "creator_id": "arjun",
+      "creator_name": "Arjun Rao",
+      "decision": "accepted",
+      "decision_score": 0.7825,
+      "policy_allowed": true,
+      "rank": 1,
+      "signal_commitment": "f6a5c40386a20081237e2e2271f75547a10810c6b798ab825bd1372796725751",
+      "signal_id": "signal:arjun-provenance-ledger",
+      "signal_scores": {
+        "activation_similarity": 0.82,
+        "attention_mass": 0.71,
+        "gradient_influence": 0.74,
+        "logprob_delta": 0.86,
+        "memorization_score": 0.65
+      },
+      "source_uri": "registered://works/arjun-provenance-ledger",
+      "title": "Provenance Ledgers for AI Outputs",
+      "work_id": "arjun-provenance-ledger"
+    }
+  ],
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "aa51764435959c777c02957d4e9399eebed7b311b86ada8b304d9014d36ceffb"
+  },
+  "summary": {
+    "accepted_signal_count": 1,
+    "creator_count": 1,
+    "creator_pool_conserved": true,
+    "escrow_signal_count": 0,
+    "model_internal_signal_attribution": true,
+    "signal_count": 1,
+    "status": "ready",
+    "work_count": 1
+  }
+}

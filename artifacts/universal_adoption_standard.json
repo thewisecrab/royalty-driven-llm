@@ -1,0 +1,849 @@
+{
+  "artifact_bindings": {
+    "artifact_binding_root": "0e8ed0818bb0a62c1e86b10170c6de94dc885b38b4a2b12e22bfa19b4ef81b6d",
+    "artifact_count": 9,
+    "bindings": [
+      {
+        "artifact_binding_hash": "e042002eead794fa23368009195153dd6f1b2ff45e81678e28e08c319ad8baad",
+        "declared_hash": "27dd6b91be5eeb66d7721deeeb2946477f688ef4b0f095caf5b689ffea300dcc",
+        "hash_reproducible": true,
+        "name": "universal_rdllm_passport",
+        "payload_hash": "fd7c7da99d8ce7c10c7a132ac31ad9de04ef71fd66495e7736ae2cd2a8ae2e43",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L137",
+        "version": "rdllm-universal-rdllm-passport/v1"
+      },
+      {
+        "artifact_binding_hash": "95ea619bc0f58812e1a81f64a507d9f78f519de9c48bee8afca527d5298dc06d",
+        "declared_hash": "45f93cf72c2251c32a40e92cd3942229040ca5999735aa80051e059aa588fd52",
+        "hash_reproducible": true,
+        "name": "conformance_vector_pack",
+        "payload_hash": "863be4f9654364bd269cd490bcd45efe289b688d4515422a35fbef89e688fafc",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L32",
+        "version": "rdllm-conformance-vector-pack/v1"
+      },
+      {
+        "artifact_binding_hash": "50895af7b1c0f69f323180b9552e10f2a98bd25452a6acfe2bb40e7fe7acbd7a",
+        "declared_hash": "e7a0c893355e17a2448052a106de7ebf294754f4a377429a7376367e73088566",
+        "hash_reproducible": true,
+        "name": "integration_profile",
+        "payload_hash": "46c85002370b8f2914ff1370fb5261613c6de4c8f554787c899add1cfd060dc5",
+        "present": true,
+        "status": "ready",
+        "target_level": "",
+        "version": "rdllm-integration-profile/v1"
+      },
+      {
+        "artifact_binding_hash": "fc0c37c3bbf4dd3155f10af1c627999111461915d7a3220be40a8d5dfb03b3a5",
+        "declared_hash": "f458f403884f2d62654a853061785ff9c765c6806407f4ac97c14aa763b87690",
+        "hash_reproducible": true,
+        "name": "discovery_manifest",
+        "payload_hash": "2628d2de2dd90580c8067a1d0bf963212a768e2b2f01ad25c8c91ea8d902a2e4",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L139",
+        "version": "rdllm-discovery-manifest/v1"
+      },
+      {
+        "artifact_binding_hash": "a0ab9fa7c90f8127425e1a2bad399e1552cf3d7bca486b50f4066ebf90fddaff",
+        "declared_hash": "1d387850f5affb058814f41daea8890eeebeee3abbd5dcfa224fa2d84464d196",
+        "hash_reproducible": true,
+        "name": "provider_attribution_card",
+        "payload_hash": "5a9d6183aa02fea6861e2ea8c98cd8f46163ab3c98264563055917468c94df58",
+        "present": true,
+        "status": "",
+        "target_level": "",
+        "version": "rdllm-provider-attribution-card/v1"
+      },
+      {
+        "artifact_binding_hash": "7604f49cb5c81392309b5755fce1da167d1daa5678cfc8d31d95047823e7d48d",
+        "declared_hash": "d5c49b4aebe0b012145dc3f2ca7b7def44393b683f025298ee11d2c98090cb37",
+        "hash_reproducible": true,
+        "name": "certification_report",
+        "payload_hash": "181b00b608b3a29f36b87550f896402f624a879da8395877bb057df095ba86d1",
+        "present": true,
+        "status": "passed",
+        "target_level": "RDLLM-L139",
+        "version": "rdllm-certification/v1"
+      },
+      {
+        "artifact_binding_hash": "a739832165d98b4363db8a7edaaf487275e5b42df200cfa5b3fcf6e44ee18b21",
+        "declared_hash": "8d623c337757694bd54e602c2a8b1800ab2cdbd5745932371e04c483b7d13f9d",
+        "hash_reproducible": true,
+        "name": "attribution_exchange",
+        "payload_hash": "7db5c6f303925ade878920ebbbd1720a8386023467cd69a7ab671d693aa5197a",
+        "present": true,
+        "status": "ready",
+        "target_level": "",
+        "version": "rdllm-attribution-exchange/v1"
+      },
+      {
+        "artifact_binding_hash": "9c75cc8f89ebe45988a44f33622a214d67eef9e76bd93c81014393df83b4d5e4",
+        "declared_hash": "b2734f2278af2c36df05195508231a9f8e121a535cbec6dae9a37691f57c7b91",
+        "hash_reproducible": true,
+        "name": "federation_handshake",
+        "payload_hash": "764b45757acb6d59d883b08fb2caf01e3516e78ebb8f57cc85ec2ab4b8d8f1c7",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L33",
+        "version": "rdllm-federation-handshake/v1"
+      },
+      {
+        "artifact_binding_hash": "aae2b44de93e3299f8fb050866ab57fca150d5c93dd59e5798aba8825494bc6e",
+        "declared_hash": "ca4bf6639b80b98dd0dffcf7b67855a0a9717e22ceca6576df57e0c029346974",
+        "hash_reproducible": true,
+        "name": "trust_registry",
+        "payload_hash": "13b69e349e4e0d309d4ee9af06382b4f8e0a1328d39b33bbfd0d5ab66cb65fc0",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L51",
+        "version": "rdllm-trust-registry/v1"
+      }
+    ]
+  },
+  "checks": {
+    "all_provider_families_standardized": true,
+    "artifact_hashes_reproducible": true,
+    "attribution_exchange_and_federation_ready": true,
+    "certification_level_at_least_l137": true,
+    "conformance_vector_pack_ready": true,
+    "discovery_manifest_exposes_standard_path": true,
+    "implementer_roles_complete": true,
+    "offline_verification_supported": true,
+    "private_strings_absent": true,
+    "procurement_gates_pass": true,
+    "public_report_has_no_private_field_names": true,
+    "public_standard_surfaces_published": true,
+    "public_verifier_commands_declared": true,
+    "required_core_artifacts_present": true,
+    "sdk_surfaces_complete": true,
+    "standards_mappings_complete": true,
+    "trust_registry_ready": true,
+    "universal_passport_ready_l137": true
+  },
+  "commitments": {
+    "artifact_binding_root": "0e8ed0818bb0a62c1e86b10170c6de94dc885b38b4a2b12e22bfa19b4ef81b6d",
+    "conformance_vector_pack_hash": "45f93cf72c2251c32a40e92cd3942229040ca5999735aa80051e059aa588fd52",
+    "discovery_manifest_hash": "f458f403884f2d62654a853061785ff9c765c6806407f4ac97c14aa763b87690",
+    "implementer_role_root": "f13af5667990d0ca7221f7e628293d71718b302396d86068842d0ece402fe9da",
+    "integration_profile_hash": "e7a0c893355e17a2448052a106de7ebf294754f4a377429a7376367e73088566",
+    "procurement_gate_root": "b88c89a69bbcb88783c0033ba9c9297025aea8877ab866c32a7399dacf02c085",
+    "provider_family_root": "53eee11a52af17f8fa587151017652b3c5e5f4d0bab064d38487f3bade0e4783",
+    "public_surface_root": "beab8b9d0503c1c2ba15d34d7cbe70bcb5d998050b042cf70717cdcf6d229c4c",
+    "sdk_surface_root": "cf0b0c995689a88b2cbb32048955415d7528625a3c1094dfb70c0749a8681380",
+    "standard_commitment_hash": "64fa2313f59174eccc89b4de3340f47d93bcd80b927a3dd285ecabca0f94fd37",
+    "standards_mapping_root": "097e6ac15160a01af42ead6ed8dde41b7bfc6611d3cffb83400d056f9d3c1168",
+    "universal_rdllm_passport_hash": "27dd6b91be5eeb66d7721deeeb2946477f688ef4b0f095caf5b689ffea300dcc"
+  },
+  "created_at": "2026-06-01T23:45:28Z",
+  "implementer_role_rows": [
+    {
+      "implementer_role_row_hash": "b51c41adf2a03973bdfaf6373d1e8164016719427f129a4a4724a48689238c5e",
+      "ready": true,
+      "required": true,
+      "required_sdk_surfaces": [
+        "well_known_discovery",
+        "offline_verifier_bundle"
+      ],
+      "required_verifier_commands": [
+        "verify-attribution-exchange",
+        "verify-universal-rdllm-passport"
+      ],
+      "role": "clearinghouse_or_payment_rail",
+      "sdk_surfaces_ready": true,
+      "verifier_commands_ready": true
+    },
+    {
+      "implementer_role_row_hash": "8857d91ce93017426b0c5a221ad05b63b23192c2dd1da4c37519b53aa9041fc9",
+      "ready": true,
+      "required": true,
+      "required_sdk_surfaces": [
+        "well_known_discovery",
+        "offline_verifier_bundle"
+      ],
+      "required_verifier_commands": [
+        "verify-attribution-exchange",
+        "verify-trust-registry"
+      ],
+      "role": "creator_registry_or_cmo",
+      "sdk_surfaces_ready": true,
+      "verifier_commands_ready": true
+    },
+    {
+      "implementer_role_row_hash": "f77aef1dd7e2d09176677a96be4355d076399f158119ce2dcc879a6354189edc",
+      "ready": true,
+      "required": true,
+      "required_sdk_surfaces": [
+        "well_known_discovery",
+        "response_envelope",
+        "offline_verifier_bundle"
+      ],
+      "required_verifier_commands": [
+        "verify-discovery-manifest",
+        "verify-universal-adoption-standard"
+      ],
+      "role": "enterprise_customer_client",
+      "sdk_surfaces_ready": true,
+      "verifier_commands_ready": true
+    },
+    {
+      "implementer_role_row_hash": "2a74d295dbf43b2fbd91dde21e52a7b886c76ae3849e9c4f38b93654b675b81b",
+      "ready": true,
+      "required": true,
+      "required_sdk_surfaces": [
+        "universal_passport",
+        "invocation_guard_middleware",
+        "provider_meter_reconciliation",
+        "content_credential_export"
+      ],
+      "required_verifier_commands": [
+        "verify-universal-rdllm-passport",
+        "verify-universal-adoption-standard"
+      ],
+      "role": "foundation_model_provider",
+      "sdk_surfaces_ready": true,
+      "verifier_commands_ready": true
+    },
+    {
+      "implementer_role_row_hash": "7ad3adcfed4f0ce38a7ac0565c477cbcdc2158f5af6eac88862c61b3bb5ec456",
+      "ready": true,
+      "required": true,
+      "required_sdk_surfaces": [
+        "conformance_vector_runner",
+        "offline_verifier_bundle"
+      ],
+      "required_verifier_commands": [
+        "verify-conformance-vector-pack",
+        "verify-universal-adoption-standard"
+      ],
+      "role": "independent_auditor_or_watchtower",
+      "sdk_surfaces_ready": true,
+      "verifier_commands_ready": true
+    },
+    {
+      "implementer_role_row_hash": "463c89ed0a8a6b01bb19fa375ee019a0647e511a6be88419dacf6fd594ce5a37",
+      "ready": true,
+      "required": true,
+      "required_sdk_surfaces": [
+        "well_known_discovery",
+        "invocation_guard_middleware",
+        "provider_meter_reconciliation",
+        "offline_verifier_bundle"
+      ],
+      "required_verifier_commands": [
+        "verify-federation-handshake",
+        "verify-universal-rdllm-passport"
+      ],
+      "role": "model_gateway_or_broker",
+      "sdk_surfaces_ready": true,
+      "verifier_commands_ready": true
+    },
+    {
+      "implementer_role_row_hash": "8d2505ebe2e3cbd5949e2bc336b80be48ad8f8fcd5caabda1fc045431e839ce5",
+      "ready": true,
+      "required": true,
+      "required_sdk_surfaces": [
+        "source_footer_renderer",
+        "content_credential_export"
+      ],
+      "required_verifier_commands": [
+        "verify-universal-rdllm-passport"
+      ],
+      "role": "response_renderer",
+      "sdk_surfaces_ready": true,
+      "verifier_commands_ready": true
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "hash_only_standard_bindings": true,
+    "private_field_findings": [],
+    "private_payment_details_disclosed": false,
+    "private_strings_absent": true,
+    "raw_output_text_disclosed": false,
+    "raw_prompt_text_disclosed": false,
+    "raw_source_text_disclosed": false
+  },
+  "procurement_gate_rows": [
+    {
+      "failure_action": "block_procurement_approval",
+      "gate": "all_native_calls_guarded_and_witnessed",
+      "passed": true,
+      "procurement_gate_row_hash": "680c336c377c6540ff925b9117177f42d8db0a3ba2fa29139480ec79a9b21cdd",
+      "required": true
+    },
+    {
+      "failure_action": "block_procurement_approval",
+      "gate": "all_provider_families_covered",
+      "passed": true,
+      "procurement_gate_row_hash": "2c55628850af9b3dde6faca0685ed1382716a518f2af658013acefd980e29f63",
+      "required": true
+    },
+    {
+      "failure_action": "block_procurement_approval",
+      "gate": "conformance_vectors_must_pass",
+      "passed": true,
+      "procurement_gate_row_hash": "d20a289c10dea32763b4f253c8372cecc29e6348f8170caff77f5d0e0212906f",
+      "required": true
+    },
+    {
+      "failure_action": "block_procurement_approval",
+      "gate": "content_credential_required_for_export",
+      "passed": true,
+      "procurement_gate_row_hash": "afa41c829af20c847bbe8c8d42a40f208fb80d0d27b9b516e911b31bc50ee0ce",
+      "required": true
+    },
+    {
+      "failure_action": "block_procurement_approval",
+      "gate": "creator_challenge_and_clearing_required",
+      "passed": true,
+      "procurement_gate_row_hash": "5677cab7da1d0768822afbe10af6872d4c9b2cc71cfcc302560011528fa63ef0",
+      "required": true
+    },
+    {
+      "failure_action": "block_procurement_approval",
+      "gate": "no_l137_passport_no_rdllm_claim",
+      "passed": true,
+      "procurement_gate_row_hash": "b85956e19578d2f9718592f4f8a138405a2567aaba74b982e4173940bf58890e",
+      "required": true
+    },
+    {
+      "failure_action": "block_procurement_approval",
+      "gate": "private_text_must_not_enter_public_proofs",
+      "passed": true,
+      "procurement_gate_row_hash": "e56c0099aee0f46b4c9a7685e696d375e8e0d2e91bbe684abc5abc5774e0863d",
+      "required": true
+    },
+    {
+      "failure_action": "block_procurement_approval",
+      "gate": "public_discovery_and_verifiers_required",
+      "passed": true,
+      "procurement_gate_row_hash": "64c44bfc4dea3ec53aaf5609e136862e0ac8629792a2bfa18d1be2aa78c56a14",
+      "required": true
+    },
+    {
+      "failure_action": "block_procurement_approval",
+      "gate": "visible_source_footer_required",
+      "passed": true,
+      "procurement_gate_row_hash": "51c060c056bed0f558c02aeda3780a8ae82ae1eaed65b1159900bb8c30527ab1",
+      "required": true
+    }
+  ],
+  "provider_family_rows": [
+    {
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "native_api_version": "converse/v1",
+      "official_documentation_refs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html"
+      ],
+      "passport_provider_family_row_hash": "bfb584c5553ee44049d2f8cce9849025f8c35ce11c940b6ff0f0eca97deabfa4",
+      "provider_family": "amazon_bedrock_converse",
+      "provider_id": "provider:amazon-bedrock-converse",
+      "standard_provider_family_row_hash": "abed3bcaf43d498d0e9f9b1fdad1bc330b4d53457fe748ea1a76237e48b69676"
+    },
+    {
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "native_api_version": "messages/v1",
+      "official_documentation_refs": [
+        "https://docs.anthropic.com/en/api/messages"
+      ],
+      "passport_provider_family_row_hash": "f3aeb3b3b9e7763dc97d945ca04af210d675d017f9e85b3804407f54d843de38",
+      "provider_family": "anthropic_messages",
+      "provider_id": "provider:anthropic-messages",
+      "standard_provider_family_row_hash": "1a0836d679e7f5d53adcf38f6fac079028cf9a63f919cc4c5b8b5d6689949475"
+    },
+    {
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "native_api_version": "responses/v1",
+      "official_documentation_refs": [
+        "https://learn.microsoft.com/azure/ai-services/openai/how-to/responses"
+      ],
+      "passport_provider_family_row_hash": "6c3c7e1669690292cfd322addd9db8cce97cdb4ef19d64de2bbe537b932ed86f",
+      "provider_family": "azure_openai_responses",
+      "provider_id": "provider:azure-openai-responses",
+      "standard_provider_family_row_hash": "951a9f0f47385bea2445f1b8bba74035c53e54224f2f075b2becb290e2ec732b"
+    },
+    {
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "native_api_version": "chat/v2",
+      "official_documentation_refs": [
+        "https://docs.cohere.com/reference/chat"
+      ],
+      "passport_provider_family_row_hash": "3c35dfad947c776e2f1af8ab0e5daf8c617219edfc2fd5eedf8237a5bf3cf544",
+      "provider_family": "cohere_chat",
+      "provider_id": "provider:cohere-chat",
+      "standard_provider_family_row_hash": "f9fbe316d5b9376bec6521378b5af0aad943067b3165044caa32accca40877e7"
+    },
+    {
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "native_api_version": "generate-content/v1",
+      "official_documentation_refs": [
+        "https://ai.google.dev/gemini-api/docs"
+      ],
+      "passport_provider_family_row_hash": "aa18e69201190ac0ac0a0c6ac77488a6588e76d3e37761be1cecf0a187890b89",
+      "provider_family": "google_gemini",
+      "provider_id": "provider:google-gemini",
+      "standard_provider_family_row_hash": "a4709c8ea28b6c498f88b4bd1590c67701e80203fc1d3564c3ab386d9d4db764"
+    },
+    {
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "native_api_version": "chat-completions/v1",
+      "official_documentation_refs": [
+        "https://llama-stack.readthedocs.io/"
+      ],
+      "passport_provider_family_row_hash": "f064ac2b144aeab2108c377dd0a245c7da614892453266e401d4fa1f5c0905b5",
+      "provider_family": "meta_llama",
+      "provider_id": "provider:meta-llama-openai-compatible",
+      "standard_provider_family_row_hash": "25e22e6aebaac772a3c5a2e2bb4d23981867b8d5bd2c9789e528be0bec0df63f"
+    },
+    {
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "native_api_version": "chat/v1",
+      "official_documentation_refs": [
+        "https://docs.mistral.ai/api/"
+      ],
+      "passport_provider_family_row_hash": "12be5e05b012e375385a41de49f6c44393c5636875df7d18939342f86302799c",
+      "provider_family": "mistral_chat",
+      "provider_id": "provider:mistral-chat",
+      "standard_provider_family_row_hash": "3e94ce38a74390745fef5a5fdfee2aed81f09505e0de0166f69d5b1ae48fd6f2"
+    },
+    {
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "native_api_version": "chat-completions/v1",
+      "official_documentation_refs": [
+        "https://platform.openai.com/docs/api-reference/chat"
+      ],
+      "passport_provider_family_row_hash": "7d381dd31c8de4a838803b259d5361d5a1d6084c755fd68e0157b01b0e42e4a7",
+      "provider_family": "openai_compatible_chat",
+      "provider_id": "provider:openai-compatible-chat",
+      "standard_provider_family_row_hash": "e4d4623c8bfd9d9d54926142c712f31a72dbaacff4ab9e13af48b713cb44f547"
+    },
+    {
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "native_api_version": "responses/v1",
+      "official_documentation_refs": [
+        "https://platform.openai.com/docs/api-reference/responses"
+      ],
+      "passport_provider_family_row_hash": "cb5c02b92c28ef118cc73aa69c2dce09f419fc2fef4c039ba1b8e4edf61ab7cc",
+      "provider_family": "openai_responses",
+      "provider_id": "provider:openai-responses",
+      "standard_provider_family_row_hash": "10d610e12a0f3adf892998549387f2a732a8291633f0da87ef89f2aa3f2d1fdc"
+    },
+    {
+      "covered_by_adapter": true,
+      "covered_by_conformance": true,
+      "covered_by_contract": true,
+      "fail_closed_backed": true,
+      "native_api_version": "chat-completions/v1",
+      "official_documentation_refs": [
+        "https://docs.x.ai/docs/api-reference"
+      ],
+      "passport_provider_family_row_hash": "897d4a63fd6b27cfb22f1e0346be509bae31f6996a9026976b0928889467943e",
+      "provider_family": "xai_grok",
+      "provider_id": "provider:xai-grok",
+      "standard_provider_family_row_hash": "04fd3cd8df3010b2825f17f386f78416439569e6f708811b7604cb2c060b82f5"
+    }
+  ],
+  "public_surface_rows": [
+    {
+      "discovery_path": "/.well-known/rdllm/conformance-vector-pack.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "public_surface_row_hash": "db5ba0ef83c465a1370a5cfd7528310f63f2e7153217ac953a74d4da36b1d10b",
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "conformance_vector_pack"
+    },
+    {
+      "discovery_path": "/.well-known/rdllm.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "public_surface_row_hash": "a05d3d7da4108f43b1963403f1a1c36d95457def3ece798d468d5b1f1e0696b5",
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "discovery_manifest"
+    },
+    {
+      "discovery_path": "/.well-known/rdllm/integration-profile.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "public_surface_row_hash": "4af3ff92e2cd511729811dde6913569b9726c8c861031849d9540995dc83d73d",
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "integration_profile"
+    },
+    {
+      "discovery_path": "/.well-known/rdllm/provider-attribution-card.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "public_surface_row_hash": "ba994b74719d85ea2f29dc8bc4d336e801fe03afe10588a1db48d073376ccb50",
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "provider_attribution_card"
+    },
+    {
+      "discovery_path": "/.well-known/rdllm/universal-adoption-standard.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "public_surface_row_hash": "093535e36322ca31d018e3729f12d1e18a0cc007793af695019985b8a8c66d1c",
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "universal_adoption_standard"
+    },
+    {
+      "discovery_path": "/.well-known/rdllm/universal-rdllm-passport.json",
+      "discovery_path_declared": true,
+      "integration_surface_declared": true,
+      "provider_disclosure_declared": true,
+      "public_surface_row_hash": "8a5f1b22191e839847c4bcdd4fe835e9bcc1fe89586eeb3da300c3e2c3ff5125",
+      "published": true,
+      "required": true,
+      "schema_declared": true,
+      "surface": "universal_rdllm_passport"
+    }
+  ],
+  "schemas": {
+    "conformance_vector_pack": "docs/schemas/conformance_vector_pack.schema.json",
+    "discovery_manifest": "docs/schemas/discovery_manifest.schema.json",
+    "integration_profile": "docs/schemas/integration_profile.schema.json",
+    "provider_attribution_card": "docs/schemas/provider_attribution_card.schema.json",
+    "universal_adoption_standard": "docs/schemas/universal_adoption_standard.schema.json",
+    "universal_rdllm_passport": "docs/schemas/universal_rdllm_passport.schema.json"
+  },
+  "sdk_surface_rows": [
+    {
+      "endpoint_declared": false,
+      "ready": true,
+      "required": true,
+      "schema_declared": false,
+      "sdk_surface_row_hash": "8413932a59bf7940f27306a016b133de288828721531b5383c1974922a0bb3ae",
+      "surface": "conformance_vector_runner"
+    },
+    {
+      "endpoint_declared": false,
+      "ready": true,
+      "required": true,
+      "schema_declared": false,
+      "sdk_surface_row_hash": "e1729e7b8742c47a1df07a2413fb783a8368f2a9add4f1661e39219680fafc8d",
+      "surface": "content_credential_export"
+    },
+    {
+      "endpoint_declared": false,
+      "ready": true,
+      "required": true,
+      "schema_declared": false,
+      "sdk_surface_row_hash": "c12b88fff405dfaef25204c18e1b996775a4b7e5ffedf03c31660e5c725af721",
+      "surface": "invocation_guard_middleware"
+    },
+    {
+      "endpoint_declared": true,
+      "ready": true,
+      "required": true,
+      "schema_declared": true,
+      "sdk_surface_row_hash": "1b436a45fea5679bdfc9e5d1c6935eca8b5a3f6d20a3c6ce83a2e13aa449d1fe",
+      "surface": "offline_verifier_bundle"
+    },
+    {
+      "endpoint_declared": true,
+      "ready": true,
+      "required": true,
+      "schema_declared": true,
+      "sdk_surface_row_hash": "82748e9ddea8b8f00c0b1af7c10b19895c06ec4f501e976a2c455818d2ed32ac",
+      "surface": "provider_meter_reconciliation"
+    },
+    {
+      "endpoint_declared": false,
+      "ready": true,
+      "required": true,
+      "schema_declared": true,
+      "sdk_surface_row_hash": "85b6fd5b99cf7a26c41e41621fbf6f77319ace9f4a31b31a5ebed083ac3fec14",
+      "surface": "response_envelope"
+    },
+    {
+      "endpoint_declared": true,
+      "ready": true,
+      "required": true,
+      "schema_declared": true,
+      "sdk_surface_row_hash": "11c602811e20081b682697a1f7bbae577205d00c9ad4175f6194caf908364721",
+      "surface": "source_footer_renderer"
+    },
+    {
+      "endpoint_declared": true,
+      "ready": true,
+      "required": true,
+      "schema_declared": true,
+      "sdk_surface_row_hash": "418a5852a5d1b08549688ea181d12f0acd375092d05c1f52ff4b44cc82ebd843",
+      "surface": "universal_adoption_standard"
+    },
+    {
+      "endpoint_declared": false,
+      "ready": true,
+      "required": true,
+      "schema_declared": false,
+      "sdk_surface_row_hash": "1ac4516295d73d9c869c6abd4c471b3e013c53608f5e24e5b55dd79ea7c5192b",
+      "surface": "universal_passport"
+    },
+    {
+      "endpoint_declared": true,
+      "ready": true,
+      "required": true,
+      "schema_declared": true,
+      "sdk_surface_row_hash": "5114c0066767ba7bf5a4371a786b427bdfa3f45e241be1356d523c7f35cd4114",
+      "surface": "well_known_discovery"
+    }
+  ],
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "dc58a1bddd2f663aca75aa7de25a09744ad990db3666455c46a6a11df2e1fa8a"
+  },
+  "standard_decision": {
+    "decision": "publish_universal_adoption_standard",
+    "failed_checks": [],
+    "failure_modes": [],
+    "procurement_approved": true,
+    "publication_authorized": true,
+    "safe_output_policy": "publish_l138_standard_and_l137_passport"
+  },
+  "standard_policy": {
+    "minimum_input_level": "RDLLM-L137",
+    "on_failed_procurement_gate": "block_procurement_approval",
+    "on_missing_l137_passport": "reject_rdllm_compatibility_claim",
+    "on_missing_provider_family": "reject_universal_provider_claim",
+    "on_missing_sdk_surface": "block_standard_publication",
+    "on_private_text_leak": "block_publication",
+    "profile": "rdllm-universal-adoption-standard-policy/v1",
+    "required_core_artifacts": [
+      "universal_rdllm_passport",
+      "conformance_vector_pack",
+      "integration_profile",
+      "discovery_manifest",
+      "provider_attribution_card",
+      "certification_report",
+      "attribution_exchange",
+      "federation_handshake",
+      "trust_registry"
+    ],
+    "required_implementer_roles": [
+      "foundation_model_provider",
+      "model_gateway_or_broker",
+      "enterprise_customer_client",
+      "response_renderer",
+      "creator_registry_or_cmo",
+      "independent_auditor_or_watchtower",
+      "clearinghouse_or_payment_rail"
+    ],
+    "required_procurement_gates": [
+      "no_l137_passport_no_rdllm_claim",
+      "all_provider_families_covered",
+      "all_native_calls_guarded_and_witnessed",
+      "visible_source_footer_required",
+      "content_credential_required_for_export",
+      "conformance_vectors_must_pass",
+      "public_discovery_and_verifiers_required",
+      "creator_challenge_and_clearing_required",
+      "private_text_must_not_enter_public_proofs"
+    ],
+    "required_provider_families": [
+      "openai_responses",
+      "anthropic_messages",
+      "google_gemini",
+      "meta_llama",
+      "mistral_chat",
+      "cohere_chat",
+      "xai_grok",
+      "amazon_bedrock_converse",
+      "azure_openai_responses",
+      "openai_compatible_chat"
+    ],
+    "required_public_surfaces": [
+      "universal_adoption_standard",
+      "universal_rdllm_passport",
+      "conformance_vector_pack",
+      "integration_profile",
+      "discovery_manifest",
+      "provider_attribution_card"
+    ],
+    "required_sdk_surfaces": [
+      "well_known_discovery",
+      "universal_passport",
+      "universal_adoption_standard",
+      "response_envelope",
+      "source_footer_renderer",
+      "content_credential_export",
+      "invocation_guard_middleware",
+      "provider_meter_reconciliation",
+      "conformance_vector_runner",
+      "offline_verifier_bundle"
+    ],
+    "required_standard_references": [
+      "c2pa_content_credentials",
+      "w3c_vc_data_integrity",
+      "opentelemetry_genai",
+      "model_context_protocol",
+      "scitt_transparency",
+      "iso_20022_remittance",
+      "odrl_croissant_spdx_rights"
+    ],
+    "required_verifier_commands": [
+      "verify-universal-rdllm-passport",
+      "verify-conformance-vector-pack",
+      "verify-integration-profile",
+      "verify-discovery-manifest",
+      "verify-attribution-exchange",
+      "verify-federation-handshake",
+      "verify-trust-registry",
+      "verify-universal-adoption-standard"
+    ],
+    "target_certification_level": "RDLLM-L138"
+  },
+  "standard_version": "rdllm-universal-adoption-standard/v1",
+  "standards_mapping_rows": [
+    {
+      "control": "content credentials bind exported AI assets to RDLLM proof handles",
+      "evidence_artifacts": [
+        "universal_content_credential",
+        "universal_rdllm_passport"
+      ],
+      "mapped": true,
+      "reference": "c2pa_content_credentials",
+      "reference_url": "https://spec.c2pa.org/",
+      "required": true,
+      "standard_mapping_row_hash": "11c0ab714a31f08560656d613683db3f57ff2c884d1e7928900b26304a493f48"
+    },
+    {
+      "control": "cleared creator obligations can map to structured remittance instructions",
+      "evidence_artifacts": [
+        "clearinghouse_report",
+        "remittance_report",
+        "payment_execution_report"
+      ],
+      "mapped": true,
+      "reference": "iso_20022_remittance",
+      "reference_url": "https://www.iso20022.org/iso-20022-message-definitions",
+      "required": true,
+      "standard_mapping_row_hash": "4c41af42efa7b32d81bdad09357c14559aa5e887de07e413286170adc5bf64d7"
+    },
+    {
+      "control": "provider-neutral discovery and verifier commands can be exposed as resources and tools",
+      "evidence_artifacts": [
+        "discovery_manifest",
+        "integration_profile"
+      ],
+      "mapped": true,
+      "reference": "model_context_protocol",
+      "reference_url": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "required": true,
+      "standard_mapping_row_hash": "0845561811bdd7219f6523de4aac3cfb6e946c753e3d6694af8f41952c106f10"
+    },
+    {
+      "control": "rights, corpus metadata, and software/license duties remain machine-readable",
+      "evidence_artifacts": [
+        "creator_license_contract",
+        "training_content_summary",
+        "code_attribution_report"
+      ],
+      "mapped": true,
+      "reference": "odrl_croissant_spdx_rights",
+      "reference_url": "https://www.w3.org/TR/odrl-model/",
+      "required": true,
+      "standard_mapping_row_hash": "8b0b9575fe2d592066d460297c34a01f5c8afb71ba7b7767de6345e31a3db1fa"
+    },
+    {
+      "control": "native provider calls bind to GenAI telemetry, coverage, and witnesses",
+      "evidence_artifacts": [
+        "universal_invocation_coverage",
+        "universal_invocation_witness"
+      ],
+      "mapped": true,
+      "reference": "opentelemetry_genai",
+      "reference_url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+      "required": true,
+      "standard_mapping_row_hash": "ba75909198b3ab793f09841c0f82261043aae79edb443a280fc3e89729ef04be"
+    },
+    {
+      "control": "publication and witness proofs provide transparency-log style consistency",
+      "evidence_artifacts": [
+        "publication_monitor",
+        "publication_witness",
+        "trust_registry"
+      ],
+      "mapped": true,
+      "reference": "scitt_transparency",
+      "reference_url": "https://datatracker.ietf.org/wg/scitt/about/",
+      "required": true,
+      "standard_mapping_row_hash": "f28a18355c915b6b0f5c30e9ff891c24cf721ec6d7dbb3b14f3f73fc16f22086"
+    },
+    {
+      "control": "portable signed proof objects use replayable hash commitments",
+      "evidence_artifacts": [
+        "universal_rdllm_passport",
+        "universal_adoption_standard"
+      ],
+      "mapped": true,
+      "reference": "w3c_vc_data_integrity",
+      "reference_url": "https://www.w3.org/TR/vc-data-integrity/",
+      "required": true,
+      "standard_mapping_row_hash": "27cd6e6e71ab89b743abcabce7d7c03b68255c594c393c277ff832dd1cdd14fa"
+    }
+  ],
+  "summary": {
+    "conformance_vector_pack_hash": "45f93cf72c2251c32a40e92cd3942229040ca5999735aa80051e059aa588fd52",
+    "failed_check_count": 0,
+    "failure_mode_count": 0,
+    "implementer_role_count": 7,
+    "minimum_input_level": "RDLLM-L137",
+    "offline_verification_supported": true,
+    "privacy_preserved": true,
+    "procurement_gate_count": 9,
+    "provider_family_count": 10,
+    "public_surface_count": 6,
+    "sdk_surface_count": 10,
+    "standard_commitment_hash": "64fa2313f59174eccc89b4de3340f47d93bcd80b927a3dd285ecabca0f94fd37",
+    "standards_mapping_count": 7,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L138",
+    "universal_rdllm_passport_hash": "27dd6b91be5eeb66d7721deeeb2946477f688ef4b0f095caf5b689ffea300dcc"
+  },
+  "universal_adoption_standard_hash": "6dd940cb306fe8658f76b2ddedea075e2bd396063c5eee24eb609643334619ca"
+}

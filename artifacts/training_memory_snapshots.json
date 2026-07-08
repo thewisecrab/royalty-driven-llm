@@ -1,0 +1,43 @@
+{
+  "snapshots": [
+    {
+      "archived_uri": "https://archive.example.org/arjun-provenance-ledger/arjun-provenance-ledger:c1",
+      "body_text": "Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. Hashes do not prove legal ownership by themselves, but they do prove that a payout was tied to a specific registered text at a specific point in the ledger.",
+      "canonical_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+      "chunk_id": "arjun-provenance-ledger:c1",
+      "http_status": 200,
+      "media_type": "text/plain",
+      "resolver_id": "resolver:rdllm-reference",
+      "retrieval_method": "provider_snapshot",
+      "retrieved_at": "2026-05-31T00:00:00Z",
+      "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+      "work_id": "arjun-provenance-ledger"
+    },
+    {
+      "archived_uri": "https://archive.example.org/lina-governance-disputes/lina-governance-disputes:c1",
+      "body_text": "Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. A practical AI licensing marketplace can combine direct opt in registration with collective management for works whose owners are difficult to contact, while maintaining public summaries of training content and private audit trails.",
+      "canonical_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+      "chunk_id": "lina-governance-disputes:c1",
+      "http_status": 200,
+      "media_type": "text/plain",
+      "resolver_id": "resolver:rdllm-reference",
+      "retrieval_method": "provider_snapshot",
+      "retrieved_at": "2026-05-31T00:00:00Z",
+      "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+      "work_id": "lina-governance-disputes"
+    },
+    {
+      "archived_uri": "https://archive.example.org/maya-youtube-style-pool/maya-youtube-style-pool:c1",
+      "body_text": "A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. A royalty driven LLM should use the same business idea but replace video views with generation events, retrieved source use, and output support.",
+      "canonical_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+      "chunk_id": "maya-youtube-style-pool:c1",
+      "http_status": 200,
+      "media_type": "text/plain",
+      "resolver_id": "resolver:rdllm-reference",
+      "retrieval_method": "provider_snapshot",
+      "retrieved_at": "2026-05-31T00:00:00Z",
+      "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+      "work_id": "maya-youtube-style-pool"
+    }
+  ]
+}

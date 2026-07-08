@@ -1,0 +1,300 @@
+{
+  "bundle_hash": "a3f9547b26674d8d2bbef598c1ea4ff2703c1dbbafeeace82a920460f2428ed1",
+  "interop_version": "rdllm-interop/v1",
+  "receipt_credential": {
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2",
+      "https://rdllm.local/contexts/rdllm/v1"
+    ],
+    "credentialSubject": {
+      "answerHash": "16bfc2ebe407b69536fd702e343f95147dce2182ad069470ba29f7690e554ec2",
+      "attributionGapCommitment": "69a3515aa66cb4d989e5aa7af1d129df0f12f5722560d323f0da5b15e5dd7969",
+      "attributionGapVerdict": "escrowed",
+      "claimCommitment": "f490795d4d659e79a059e904a5ac889c5368643a7692a8a339cf534dd2652aa2",
+      "claimCount": 4,
+      "creatorPool": "0.550000",
+      "creatorPoolRate": "0.55",
+      "eventHash": "658bea9b5306639b06069f062775fd68f2aa49990d7438e0f2bf6b85e8c2caf9",
+      "groundingQualityVerdict": "blocked_by_registry",
+      "groundingStatus": "registry_disputed",
+      "id": "urn:rdllm:event:evt_658bea9b5306639b",
+      "model": {
+        "id": "rdllm-reference-python",
+        "route_id": "route:registry-dispute",
+        "version": "0.1.0"
+      },
+      "policyStatus": "allowed",
+      "promptHash": "7bc45786358d6c9cfdce97ee2eed540a69e0b65c8f53f5557141b36c2d53ed4b",
+      "receiptHash": "cb6badcd528b3195bc5ac8201bf249de27208f7d1b832a307cbdd8e1b9b10170",
+      "registryCommitment": "52c7706c3adc75614d971a76bd4908d2094ae8a60555ccea2e975ee8e333a356",
+      "registryStatus": "disputed",
+      "renderedOutputHash": "9584d0078d4fa396cb6dcf0620a2e72027f40bcd2b15964f8f453964124d8808",
+      "rightsCommitment": "86dd3455121895ecad74cc3b444ea42b6842b181c0c9601bfaada317790c3f1f",
+      "shareCommitment": "37956f8232a57d959fb528b32efc9a8f50283bf98aabe29f7d75592ff606dbef",
+      "sourceAccessCommitment": "19ba6878c63a223602c7bb2e34def94493bc1bbe3c6bcc9875dd8054f44965f9",
+      "sourceAccessCount": 4,
+      "sourceCommitment": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceCount": 0
+    },
+    "evidence": [
+      {
+        "chunkId": "",
+        "claimHash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+        "claimId": "claim:1",
+        "evidenceSpanHash": "",
+        "sourceLabel": "",
+        "supported": false,
+        "type": "RDLLMClaimEvidence",
+        "workId": ""
+      },
+      {
+        "chunkId": "",
+        "claimHash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+        "claimId": "claim:2",
+        "evidenceSpanHash": "",
+        "sourceLabel": "",
+        "supported": false,
+        "type": "RDLLMClaimEvidence",
+        "workId": ""
+      },
+      {
+        "chunkId": "",
+        "claimHash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+        "claimId": "claim:3",
+        "evidenceSpanHash": "",
+        "sourceLabel": "",
+        "supported": false,
+        "type": "RDLLMClaimEvidence",
+        "workId": ""
+      },
+      {
+        "chunkId": "",
+        "claimHash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+        "claimId": "claim:4",
+        "evidenceSpanHash": "",
+        "sourceLabel": "",
+        "supported": false,
+        "type": "RDLLMClaimEvidence",
+        "workId": ""
+      }
+    ],
+    "id": "urn:rdllm:receipt:cb6badcd528b3195bc5ac8201bf249de27208f7d1b832a307cbdd8e1b9b10170",
+    "issuer": "rdllm-local-demo",
+    "proof": {
+      "created": "2026-05-29T18:20:04Z",
+      "cryptosuite": "rdllm-hmac-sha256-2026",
+      "proofPurpose": "assertionMethod",
+      "proofValue": "cf03b6feb1319b949015687711b325aad381fbf2cea5cff2f8b346eb4803cf7a",
+      "type": "DataIntegrityProof",
+      "verificationMethod": "rdllm-local-demo#rdllm-attribution-key"
+    },
+    "type": [
+      "VerifiableCredential",
+      "RDLLMAttributionReceiptCredential"
+    ],
+    "validFrom": "2026-05-29T18:20:04Z"
+  },
+  "receipt_hash": "cb6badcd528b3195bc5ac8201bf249de27208f7d1b832a307cbdd8e1b9b10170",
+  "receipt_prov_graph": {
+    "@context": {
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdllm": "https://rdllm.local/ns#"
+    },
+    "activities": [
+      {
+        "generated": "urn:rdllm:answer:9584d0078d4fa396cb6dcf0620a2e72027f40bcd2b15964f8f453964124d8808",
+        "groundingStatus": "registry_disputed",
+        "id": "urn:rdllm:activity:evt_658bea9b5306639b",
+        "model": {
+          "id": "rdllm-reference-python",
+          "route_id": "route:registry-dispute",
+          "version": "0.1.0"
+        },
+        "startedAtTime": "2026-05-29T18:20:04Z",
+        "type": "rdllm:GenerationAttribution",
+        "used": [
+          "urn:rdllm:prompt:7bc45786358d6c9cfdce97ee2eed540a69e0b65c8f53f5557141b36c2d53ed4b"
+        ]
+      }
+    ],
+    "agents": [
+      {
+        "id": "urn:rdllm:issuer:97d133d2a78bd60a",
+        "name": "rdllm-local-demo",
+        "role": "issuer",
+        "type": "prov:Agent"
+      },
+      {
+        "id": "urn:rdllm:model:dbd7930999f68adf",
+        "name": "rdllm-reference-python",
+        "routeId": "route:registry-dispute",
+        "type": "prov:SoftwareAgent",
+        "version": "0.1.0"
+      }
+    ],
+    "entities": [
+      {
+        "id": "urn:rdllm:prompt:7bc45786358d6c9cfdce97ee2eed540a69e0b65c8f53f5557141b36c2d53ed4b",
+        "promptHash": "7bc45786358d6c9cfdce97ee2eed540a69e0b65c8f53f5557141b36c2d53ed4b",
+        "type": "rdllm:PromptCommitment"
+      },
+      {
+        "answerHash": "16bfc2ebe407b69536fd702e343f95147dce2182ad069470ba29f7690e554ec2",
+        "id": "urn:rdllm:answer:9584d0078d4fa396cb6dcf0620a2e72027f40bcd2b15964f8f453964124d8808",
+        "renderedOutputHash": "9584d0078d4fa396cb6dcf0620a2e72027f40bcd2b15964f8f453964124d8808",
+        "type": "rdllm:RenderedOutput"
+      },
+      {
+        "chunkId": "",
+        "claimHash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+        "evidenceEndChar": -1,
+        "evidenceSpanHash": "",
+        "evidenceStartChar": -1,
+        "id": "urn:rdllm:claim:evt_658bea9b5306639b:1",
+        "sourceLabel": "",
+        "supportScore": 0.0,
+        "type": "rdllm:UnsupportedClaim",
+        "workId": ""
+      },
+      {
+        "chunkId": "",
+        "claimHash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+        "evidenceEndChar": -1,
+        "evidenceSpanHash": "",
+        "evidenceStartChar": -1,
+        "id": "urn:rdllm:claim:evt_658bea9b5306639b:2",
+        "sourceLabel": "",
+        "supportScore": 0.0,
+        "type": "rdllm:UnsupportedClaim",
+        "workId": ""
+      },
+      {
+        "chunkId": "",
+        "claimHash": "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e",
+        "evidenceEndChar": -1,
+        "evidenceSpanHash": "",
+        "evidenceStartChar": -1,
+        "id": "urn:rdllm:claim:evt_658bea9b5306639b:3",
+        "sourceLabel": "",
+        "supportScore": 0.0,
+        "type": "rdllm:UnsupportedClaim",
+        "workId": ""
+      },
+      {
+        "chunkId": "",
+        "claimHash": "6ea90fbdd0fb8fcc7aec2615c76ef5e5238e82e459f62189f265905639462c54",
+        "evidenceEndChar": -1,
+        "evidenceSpanHash": "",
+        "evidenceStartChar": -1,
+        "id": "urn:rdllm:claim:evt_658bea9b5306639b:4",
+        "sourceLabel": "",
+        "supportScore": 0.0,
+        "type": "rdllm:UnsupportedClaim",
+        "workId": ""
+      }
+    ],
+    "event_hash": "658bea9b5306639b06069f062775fd68f2aa49990d7438e0f2bf6b85e8c2caf9",
+    "graph_hash": "e148235e147e7644f9b70f21b1d366c8474c37a18d508542724dbe2ba4b586a4",
+    "id": "urn:rdllm:prov:cb6badcd528b3195bc5ac8201bf249de27208f7d1b832a307cbdd8e1b9b10170",
+    "receipt_hash": "cb6badcd528b3195bc5ac8201bf249de27208f7d1b832a307cbdd8e1b9b10170",
+    "relations": [
+      {
+        "activity": "urn:rdllm:activity:evt_658bea9b5306639b",
+        "entity": "urn:rdllm:answer:9584d0078d4fa396cb6dcf0620a2e72027f40bcd2b15964f8f453964124d8808",
+        "type": "prov:wasGeneratedBy"
+      },
+      {
+        "activity": "urn:rdllm:activity:evt_658bea9b5306639b",
+        "chunkId": "escrow:registry_dispute",
+        "contentHash": "75b2a03042d55514c2339697bf845fd14e64eaee897b7897d13fda30a0f3fb5f",
+        "contributionWeight": "1",
+        "creator": "urn:rdllm:creator:registry_dispute_escrow",
+        "payout": "0.550000",
+        "type": "rdllm:paidShare",
+        "workId": "registry_dispute"
+      },
+      {
+        "activity": "urn:rdllm:activity:evt_658bea9b5306639b",
+        "decisionHash": "3ebd18de214ae75401019994df0c9f7f2f3795a0e81c4e7360c71dd98ab7c257",
+        "policyStatus": "allowed",
+        "type": "rdllm:rightsDecision"
+      },
+      {
+        "activity": "urn:rdllm:activity:evt_658bea9b5306639b",
+        "decisionHash": "3c2bf18c0ced4b6acce1fe3a7b488b893acea4f384d14304280258c85a970583",
+        "policyStatus": "allowed",
+        "type": "rdllm:rightsDecision"
+      },
+      {
+        "activity": "urn:rdllm:activity:evt_658bea9b5306639b",
+        "decisionHash": "023a79e3c3e13c2a728209ecacb50932fd201ba207bb6f985a6e873569252e88",
+        "policyStatus": "allowed",
+        "type": "rdllm:rightsDecision"
+      },
+      {
+        "activity": "urn:rdllm:activity:evt_658bea9b5306639b",
+        "decisionHash": "40c51fbe752103a87f60bee0cb73b72570c8c70d086767b0ba0dccfba1e5f67f",
+        "policyStatus": "allowed",
+        "type": "rdllm:rightsDecision"
+      },
+      {
+        "activity": "urn:rdllm:activity:evt_658bea9b5306639b",
+        "decisionHash": "c82039260906e6a0e92b7d890c8bae158f1e8bd021e7093f9db6aa0a34ff03d1",
+        "registryStatus": "disputed",
+        "type": "rdllm:registryDecision"
+      },
+      {
+        "activity": "urn:rdllm:activity:evt_658bea9b5306639b",
+        "decisionHash": "2a08fb77b74de64d5a4322c21158c3de5b6935eebb496da7556ab49eae81837c",
+        "registryStatus": "disputed",
+        "type": "rdllm:registryDecision"
+      },
+      {
+        "activity": "urn:rdllm:activity:evt_658bea9b5306639b",
+        "consumedWithoutCredit": 0,
+        "reportHash": "8265d18fe02b4a2e3723c2fef7aab8402fe4857088c6a2002a6cef564d9aa1d7",
+        "sourceAccessCount": 4,
+        "type": "rdllm:attributionGapDecision",
+        "verdict": "escrowed"
+      }
+    ],
+    "type": "RDLLMProvenanceGraph"
+  },
+  "settlement_credential": {
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2",
+      "https://rdllm.local/contexts/rdllm/v1"
+    ],
+    "credentialSubject": {
+      "balancesAfterCommitment": "fcbfef94425e3753d9fa5f6310ee447f4052ae504b984fa498284862eb165daa",
+      "conflictId": "conf_451172c810c96d60",
+      "id": "urn:rdllm:settlement:ecc7a1c5b1cd3b9e9399b07467174e1b1ce7efe63635f67f1087dd59c9a30038",
+      "registryReportHash": "3c48010352ebea9fa4c501a225d7292696fc25ce259c276681e5ab6a8039527d",
+      "releaseBalancesCommitment": "fcbfef94425e3753d9fa5f6310ee447f4052ae504b984fa498284862eb165daa",
+      "releaseCommitment": "11d8db489c7d4ef6156e67a3bd37259f470acf2fdedd6f7bd912e86168175db0",
+      "releaseCount": 1,
+      "reportHash": "ecc7a1c5b1cd3b9e9399b07467174e1b1ce7efe63635f67f1087dd59c9a30038",
+      "resolutionCommitment": "70f89f11ab752df58fbeaf2371b507cf58b6026d9d92d58838672eba4ab5f038",
+      "resolutionId": "res_conf_451172c810c96d60_001",
+      "settlementStatus": "ok",
+      "sourceLedgerHash": "f261197f6c2cf04dbccef3327193f6940725e7f7f4501041160afd443f645eba",
+      "totalReleased": "0.550000"
+    },
+    "id": "urn:rdllm:settlement-credential:ecc7a1c5b1cd3b9e9399b07467174e1b1ce7efe63635f67f1087dd59c9a30038",
+    "issuer": "rdllm-demo-review-board",
+    "proof": {
+      "created": "2026-05-29T00:00:00Z",
+      "cryptosuite": "rdllm-hmac-sha256-2026",
+      "proofPurpose": "assertionMethod",
+      "proofValue": "689372db35d596099e311dff2f104cadc55567a8bc2305b21cfb4c03bcccebfb",
+      "type": "DataIntegrityProof",
+      "verificationMethod": "rdllm-demo-review-board#rdllm-settlement-key"
+    },
+    "type": [
+      "VerifiableCredential",
+      "RDLLMEscrowSettlementCredential"
+    ],
+    "validFrom": "2026-05-29T00:00:00Z"
+  },
+  "settlement_report_hash": "ecc7a1c5b1cd3b9e9399b07467174e1b1ce7efe63635f67f1087dd59c9a30038"
+}

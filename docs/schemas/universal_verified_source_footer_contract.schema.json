@@ -1,0 +1,233 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_verified_source_footer_contract.schema.json",
+  "title": "RDLLM Universal Verified Source Footer Contract",
+  "type": "object",
+  "required": [
+    "universal_verified_source_footer_contract_version",
+    "schema",
+    "policy",
+    "well_known",
+    "artifact_bindings",
+    "footer_verification_stage_rows",
+    "verified_footer_field_rows",
+    "footer_response_surface_rows",
+    "support_dimension_rows",
+    "verified_footer_rows",
+    "negative_footer_reliance_rows",
+    "evidence_roots",
+    "checks",
+    "source_footer_reliance_decision",
+    "coverage",
+    "privacy",
+    "summary",
+    "universal_verified_source_footer_contract_hash"
+  ],
+  "properties": {
+    "universal_verified_source_footer_contract_version": {
+      "const": "rdllm-universal-verified-source-footer-contract/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_verified_source_footer_contract.schema.json"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_runtime_route_binding_level",
+        "minimum_source_footer_enforcement_level",
+        "minimum_source_grounded_response_level",
+        "minimum_citation_verification_level",
+        "link_health_relevance_and_fact_support_required",
+        "footer_rows_must_be_visible_and_machine_readable",
+        "used_sources_must_be_displayed_or_escrowed",
+        "posthoc_footer_reliance_blocked",
+        "copy_export_must_preserve_footer"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-verified-source-footer-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L180" },
+        "minimum_runtime_route_binding_level": { "const": "RDLLM-L179" },
+        "minimum_source_footer_enforcement_level": { "const": "RDLLM-L177" },
+        "minimum_source_grounded_response_level": { "const": "RDLLM-L171" },
+        "minimum_citation_verification_level": { "const": "RDLLM-L141" },
+        "link_health_relevance_and_fact_support_required": { "const": true },
+        "footer_rows_must_be_visible_and_machine_readable": { "const": true },
+        "used_sources_must_be_displayed_or_escrowed": { "const": true },
+        "posthoc_footer_reliance_blocked": { "const": true },
+        "copy_export_must_preserve_footer": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-verified-source-footer-contract.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-verified-source-footer-contract/v1"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "universal_runtime_route_binding_contract",
+        "universal_source_footer_enforcement_contract",
+        "universal_source_grounded_response_receipt",
+        "universal_citation_verification_contract"
+      ],
+      "additionalProperties": true
+    },
+    "footer_verification_stage_rows": {
+      "type": "object",
+      "minProperties": 12
+    },
+    "verified_footer_field_rows": {
+      "type": "object",
+      "minProperties": 15
+    },
+    "footer_response_surface_rows": {
+      "type": "object",
+      "minProperties": 10
+    },
+    "support_dimension_rows": {
+      "type": "object",
+      "minProperties": 8
+    },
+    "verified_footer_rows": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "negative_footer_reliance_rows": {
+      "type": "object",
+      "minProperties": 16
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "runtime_route_binding_l179_ready",
+        "source_footer_enforcement_l177_ready",
+        "source_grounded_response_l171_ready",
+        "citation_verification_l141_ready",
+        "footer_verification_stage_rows_complete",
+        "verified_footer_field_rows_complete",
+        "footer_response_surface_rows_complete",
+        "support_dimension_rows_complete",
+        "verified_footer_rows_complete",
+        "negative_footer_reliance_fixtures_reject",
+        "contract_signed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "source_footer_reliance_decision": {
+      "type": "object",
+      "required": [
+        "universal_verified_source_footer_ready",
+        "response_release_allowed",
+        "user_source_footer_reliance_allowed",
+        "claim_source_reliance_allowed",
+        "copy_export_allowed",
+        "creator_settlement_allowed",
+        "fabricated_or_unsupported_sources_blocked",
+        "used_but_omitted_sources_blocked_or_escrowed",
+        "posthoc_footer_reliance_blocked"
+      ],
+      "properties": {
+        "universal_verified_source_footer_ready": { "const": true },
+        "response_release_allowed": { "const": true },
+        "user_source_footer_reliance_allowed": { "const": true },
+        "claim_source_reliance_allowed": { "const": true },
+        "copy_export_allowed": { "const": true },
+        "creator_settlement_allowed": { "const": true },
+        "fabricated_or_unsupported_sources_blocked": { "const": true },
+        "used_but_omitted_sources_blocked_or_escrowed": { "const": true },
+        "posthoc_footer_reliance_blocked": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payloads_excluded",
+        "private_prompts_excluded",
+        "private_outputs_excluded",
+        "private_source_text_excluded",
+        "private_evidence_text_excluded",
+        "public_contract_uses_hashes_labels_locators_and_scores"
+      ],
+      "properties": {
+        "private_payloads_excluded": { "const": true },
+        "private_prompts_excluded": { "const": true },
+        "private_outputs_excluded": { "const": true },
+        "private_source_text_excluded": { "const": true },
+        "private_evidence_text_excluded": { "const": true },
+        "public_contract_uses_hashes_labels_locators_and_scores": {
+          "const": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_runtime_route_binding_level",
+        "minimum_source_footer_enforcement_level",
+        "minimum_source_grounded_response_level",
+        "minimum_citation_verification_level",
+        "footer_verification_stage_count",
+        "ready_footer_verification_stage_count",
+        "verified_footer_field_count",
+        "ready_verified_footer_field_count",
+        "footer_response_surface_count",
+        "ready_footer_response_surface_count",
+        "support_dimension_count",
+        "ready_support_dimension_count",
+        "verified_footer_row_count",
+        "ready_verified_footer_row_count",
+        "negative_footer_reliance_failure_count",
+        "ready_negative_footer_reliance_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_verified_source_footer_contract"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L180" },
+        "minimum_runtime_route_binding_level": { "const": "RDLLM-L179" },
+        "minimum_source_footer_enforcement_level": { "const": "RDLLM-L177" },
+        "minimum_source_grounded_response_level": { "const": "RDLLM-L171" },
+        "minimum_citation_verification_level": { "const": "RDLLM-L141" },
+        "footer_verification_stage_count": { "const": 12 },
+        "ready_footer_verification_stage_count": { "const": 12 },
+        "verified_footer_field_count": { "const": 15 },
+        "ready_verified_footer_field_count": { "const": 15 },
+        "footer_response_surface_count": { "const": 10 },
+        "ready_footer_response_surface_count": { "const": 10 },
+        "support_dimension_count": { "const": 8 },
+        "ready_support_dimension_count": { "const": 8 },
+        "verified_footer_row_count": { "type": "integer", "minimum": 1 },
+        "ready_verified_footer_row_count": { "type": "integer", "minimum": 1 },
+        "negative_footer_reliance_failure_count": { "const": 16 },
+        "ready_negative_footer_reliance_failure_count": { "const": 16 },
+        "failure_mode_count": { "const": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_verified_source_footer_contract": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "universal_verified_source_footer_contract_hash": {
+      "type": "string",
+      "minLength": 64
+    }
+  },
+  "additionalProperties": true
+}

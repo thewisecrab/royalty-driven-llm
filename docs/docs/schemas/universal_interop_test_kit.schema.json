@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_interop_test_kit.schema.json",
+  "title": "RDLLM Universal Interop Test Kit",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "interop_kit_version",
+    "issuer",
+    "created_at",
+    "interop_policy",
+    "artifact_bindings",
+    "kit_component_rows",
+    "sdk_binding_rows",
+    "execution_target_rows",
+    "provider_fixture_rows",
+    "failure_case_rows",
+    "verifier_command_rows",
+    "commitments",
+    "checks",
+    "interop_decision",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_interop_test_kit_hash",
+    "signature"
+  ],
+  "properties": {
+    "interop_kit_version": {
+      "const": "rdllm-universal-interop-test-kit/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "interop_policy": {
+      "type": "object",
+      "required": [
+        "target_certification_level",
+        "minimum_input_level",
+        "required_core_artifacts",
+        "required_provider_families",
+        "required_kit_components",
+        "required_sdk_bindings",
+        "required_execution_targets",
+        "required_failure_cases",
+        "required_verifier_commands"
+      ],
+      "properties": {
+        "target_certification_level": { "const": "RDLLM-L139" },
+        "minimum_input_level": { "const": "RDLLM-L138" },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_kit_components": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_sdk_bindings": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_execution_targets": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_failure_cases": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_verifier_commands": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["artifact_count", "artifact_binding_root", "bindings"]
+    },
+    "kit_component_rows": { "type": "array" },
+    "sdk_binding_rows": { "type": "array" },
+    "execution_target_rows": { "type": "array" },
+    "provider_fixture_rows": { "type": "array" },
+    "failure_case_rows": { "type": "array" },
+    "verifier_command_rows": { "type": "array" },
+    "commitments": { "type": "object" },
+    "checks": { "type": "object" },
+    "interop_decision": { "type": "object" },
+    "schemas": {
+      "type": "object",
+      "required": ["universal_interop_test_kit"],
+      "properties": {
+        "universal_interop_test_kit": {
+          "const": "docs/schemas/universal_interop_test_kit.schema.json"
+        }
+      }
+    },
+    "privacy": { "type": "object" },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "provider_family_count",
+        "kit_component_count",
+        "sdk_binding_count",
+        "execution_target_count",
+        "failure_case_count",
+        "verifier_command_count",
+        "failed_check_count",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L139" },
+        "minimum_input_level": { "const": "RDLLM-L138" },
+        "provider_family_count": { "type": "integer" },
+        "kit_component_count": { "type": "integer" },
+        "sdk_binding_count": { "type": "integer" },
+        "execution_target_count": { "type": "integer" },
+        "failure_case_count": { "type": "integer" },
+        "verifier_command_count": { "type": "integer" },
+        "failed_check_count": { "type": "integer" },
+        "privacy_preserved": { "type": "boolean" }
+      }
+    },
+    "universal_interop_test_kit_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/foundation_provider_conformance.schema.json",
+  "title": "RDLLM Foundation Provider Conformance",
+  "type": "object",
+  "required": [
+    "conformance_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "provider_conformance_rows",
+    "conformance_matrix",
+    "checks",
+    "coverage_gaps",
+    "commitments",
+    "schemas",
+    "privacy",
+    "summary",
+    "foundation_provider_conformance_hash",
+    "signature"
+  ],
+  "properties": {
+    "conformance_version": {
+      "const": "rdllm-foundation-provider-conformance/v1"
+    },
+    "issuer": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "required_provider_families",
+        "required_capabilities",
+        "required_negative_fixtures",
+        "required_rdllm_artifacts",
+        "fail_closed_on_conformance_failure"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-foundation-provider-conformance-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L126" },
+        "minimum_input_level": { "const": "RDLLM-L125" },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "required_capabilities": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "required_negative_fixtures": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "required_rdllm_artifacts": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "official_documentation_required": { "type": "boolean" },
+        "adapter_row_backing_required": { "type": "boolean" },
+        "hash_only_fixture_commitments_required": { "type": "boolean" },
+        "fail_closed_on_conformance_failure": { "type": "boolean" },
+        "claim_support_and_footer_required": { "type": "boolean" },
+        "parametric_memory_fallback_required": { "type": "boolean" },
+        "raw_prompt_or_source_text_disclosure_allowed": { "const": false }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "present",
+          "declared_hash",
+          "hash_reproducible",
+          "artifact_type"
+        ],
+        "properties": {
+          "present": { "type": "boolean" },
+          "declared_hash": { "type": "string" },
+          "hash_reproducible": { "type": "boolean" },
+          "artifact_type": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "provider_conformance_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "provider_id",
+          "provider_family",
+          "native_api_version",
+          "native_model",
+          "provider_adapter_row_hash",
+          "adapter_row_hash_matches_composite",
+          "capabilities",
+          "positive_fixture_hashes",
+          "negative_fixture_hashes",
+          "rdllm_artifacts_supported",
+          "official_documentation_refs",
+          "failure_policy",
+          "foundation_provider_conformance_row_hash"
+        ],
+        "properties": {
+          "display_order": { "type": "integer", "minimum": 1 },
+          "provider_id": { "type": "string", "minLength": 1 },
+          "provider_family": { "type": "string", "minLength": 1 },
+          "native_api_version": { "type": "string", "minLength": 1 },
+          "native_model": { "type": "string", "minLength": 1 },
+          "certification_profile": { "type": "string" },
+          "provider_adapter_row_hash": { "type": "string", "minLength": 1 },
+          "adapter_row_hash_matches_composite": { "type": "boolean" },
+          "capabilities": {
+            "type": "object",
+            "additionalProperties": { "type": "boolean" }
+          },
+          "positive_fixture_hashes": {
+            "type": "object",
+            "additionalProperties": { "type": "string", "minLength": 1 }
+          },
+          "negative_fixture_hashes": {
+            "type": "object",
+            "additionalProperties": { "type": "string", "minLength": 1 }
+          },
+          "rdllm_artifacts_supported": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "official_documentation_refs": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "failure_policy": {
+            "type": "object",
+            "additionalProperties": { "type": "string", "minLength": 1 }
+          },
+          "conformance_vector_pack_hash": { "type": "string" },
+          "capability_coverage_count": { "type": "integer", "minimum": 0 },
+          "positive_fixture_coverage_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "negative_fixture_coverage_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "fail_closed_policy_declared": { "type": "boolean" },
+          "foundation_provider_conformance_row_hash": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "conformance_matrix": {
+      "type": "object",
+      "required": [
+        "profile",
+        "provider_families",
+        "required_provider_families",
+        "required_capabilities",
+        "required_negative_fixtures",
+        "row_root",
+        "positive_fixture_root",
+        "negative_fixture_root",
+        "adoption_target"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-universal-foundation-provider-conformance/v1" },
+        "provider_families": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "required_capabilities": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "required_negative_fixtures": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "row_root": { "type": "string" },
+        "positive_fixture_root": { "type": "string" },
+        "negative_fixture_root": { "type": "string" },
+        "adoption_target": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "coverage_gaps": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [ "foundation_provider_conformance" ],
+      "additionalProperties": { "type": "string" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_fixture_payloads_disclosed",
+        "raw_prompt_text_disclosed",
+        "raw_source_text_disclosed",
+        "raw_answer_text_disclosed",
+        "hash_only_fixture_commitments"
+      ],
+      "properties": {
+        "raw_fixture_payloads_disclosed": { "const": false },
+        "raw_prompt_text_disclosed": { "const": false },
+        "raw_source_text_disclosed": { "const": false },
+        "raw_answer_text_disclosed": { "const": false },
+        "hash_only_fixture_commitments": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "provider_conformance_row_count",
+        "required_provider_family_count",
+        "covered_provider_family_count",
+        "failed_check_count"
+      ],
+      "properties": {
+        "status": { "enum": [ "ready", "failed" ] },
+        "target_certification_level": { "const": "RDLLM-L126" },
+        "minimum_input_level": { "const": "RDLLM-L125" },
+        "provider_conformance_row_count": { "type": "integer", "minimum": 0 },
+        "required_provider_family_count": { "type": "integer", "minimum": 0 },
+        "covered_provider_family_count": { "type": "integer", "minimum": 0 },
+        "required_capability_count": { "type": "integer", "minimum": 0 },
+        "required_negative_fixture_count": { "type": "integer", "minimum": 0 },
+        "failed_check_count": { "type": "integer", "minimum": 0 },
+        "universal_provider_conformance_supported": { "type": "boolean" },
+        "grounded_footer_attribution_supported": { "type": "boolean" },
+        "parametric_memory_fallback_supported": { "type": "boolean" },
+        "hash_only_conformance_fixtures_supported": { "type": "boolean" },
+        "fail_closed_conformance_supported": { "type": "boolean" },
+        "privacy_preserved": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "foundation_provider_conformance_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signature": {
+      "type": "object",
+      "required": [ "algorithm", "issuer", "value" ],
+      "properties": {
+        "algorithm": { "type": "string" },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

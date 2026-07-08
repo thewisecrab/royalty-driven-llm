@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rdllm-service
+  labels:
+    app.kubernetes.io/name: rdllm
+    app.kubernetes.io/component: service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: rdllm
+      app.kubernetes.io/component: service
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: rdllm
+        app.kubernetes.io/component: service
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: rdllm-service
+          image: ghcr.io/thewisecrab/royalty-driven-llm:1.0.0
+          imagePullPolicy: IfNotPresent
+          args:
+            - "--config"
+            - "/etc/rdllm/service_config.json"
+            - "--host"
+            - "0.0.0.0"
+            - "--port"
+            - "8765"
+          env:
+            - name: RDLLM_SERVICE_TOKEN_SHA256
+              valueFrom:
+                secretKeyRef:
+                  name: rdllm-service-secret
+                  key: token_sha256
+          ports:
+            - name: http
+              containerPort: 8765
+          readinessProbe:
+            httpGet:
+              path: /readyz
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+          volumeMounts:
+            - name: service-config
+              mountPath: /etc/rdllm
+              readOnly: true
+            - name: audit
+              mountPath: /var/lib/rdllm/audit
+            - name: tmp
+              mountPath: /tmp
+      volumes:
+        - name: service-config
+          configMap:
+            name: rdllm-service-config
+        - name: audit
+          persistentVolumeClaim:
+            claimName: rdllm-audit
+        - name: tmp
+          emptyDir: {}

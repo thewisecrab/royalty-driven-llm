@@ -1,0 +1,922 @@
+{
+  "agent_step_rows": [
+    {
+      "agent_step_row_hash": "0541beef04c04924c52171082ec995b0ab4ac2625693386010e832195dc2dc25",
+      "context_access_hashes": [
+        "35172a61508b4bbe9c91560271fbbc5adbeb6a92e8360933107240fdc71b0a3c"
+      ],
+      "decision": "use_with_attribution",
+      "hallucination_risk_control": "cite_only_bound_context",
+      "protocol": "model_context_protocol_http",
+      "ready": true,
+      "rendered_output_hash": "c66b2c1422709b0dbfcd955f72a60589dc625e19b870129120fe494bdae442b1",
+      "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "sequence": 1,
+      "source_labels": [
+        "S1"
+      ],
+      "status": "passed",
+      "step_id": "agent:step:artifact-mcp-source-s1",
+      "step_type": "mcp_tool_read",
+      "tool_result_hash": "31dbce653c351fab312e0e256e17388810bd884c6bbe7ad66b63de313f537593"
+    }
+  ],
+  "artifact_bindings": {
+    "artifact_binding_root": "548931fd5390e8399bc81216feccf805802919d87a9aedc715ff1a2b135cf3dd",
+    "artifact_count": 15,
+    "bindings": [
+      {
+        "artifact_binding_hash": "dbc538b590402ca2784eb3ff0e4ae30edae61383af89a0eb28a07eee5f4944a7",
+        "declared_hash": "dcbfbd1a083d3df5f9b1d2ae51406ae7a35df9004bed17a0cb88e4293089d82d",
+        "hash_reproducible": true,
+        "name": "universal_interop_test_kit",
+        "payload_hash": "c3dfa29b9c1552ce33bfbb9a918b51a72a120ccc953bea4fbcd3fde16210255b",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L139",
+        "version": "rdllm-universal-interop-test-kit/v1"
+      },
+      {
+        "artifact_binding_hash": "2160875f5f0f6229be1b3e873960e55035257980388ae1a590424868f5b34077",
+        "declared_hash": "6dd940cb306fe8658f76b2ddedea075e2bd396063c5eee24eb609643334619ca",
+        "hash_reproducible": true,
+        "name": "universal_adoption_standard",
+        "payload_hash": "1a2f62f6a4d7096fadc3957623d346a96aaaf46a1039a374f86aeea672c9c44d",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L138",
+        "version": "rdllm-universal-adoption-standard/v1"
+      },
+      {
+        "artifact_binding_hash": "e042002eead794fa23368009195153dd6f1b2ff45e81678e28e08c319ad8baad",
+        "declared_hash": "27dd6b91be5eeb66d7721deeeb2946477f688ef4b0f095caf5b689ffea300dcc",
+        "hash_reproducible": true,
+        "name": "universal_rdllm_passport",
+        "payload_hash": "fd7c7da99d8ce7c10c7a132ac31ad9de04ef71fd66495e7736ae2cd2a8ae2e43",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L137",
+        "version": "rdllm-universal-rdllm-passport/v1"
+      },
+      {
+        "artifact_binding_hash": "12de81290ed819d83e3e9fcdab00908ab41da58017d402d5134d061296885edf",
+        "declared_hash": "0c4048f2fb8560dbef8c0794424cdfd491b8387a032896e5ce2179aaa6102218",
+        "hash_reproducible": true,
+        "name": "integration_profile",
+        "payload_hash": "ff06af5cd1a9f0cfdc1bb7674f0cd7b0a883c0b1eb0c7e5df66027fe57772ada",
+        "present": true,
+        "status": "ready",
+        "target_level": "",
+        "version": "rdllm-integration-profile/v1"
+      },
+      {
+        "artifact_binding_hash": "f293afc4d683d79c1fbf919970e30aab887448c1dc95f8be2d15c6029cbb6bb6",
+        "declared_hash": "20f14e088025b8bfb12d3747c0335c0a1a22b2bad4a7f0d6ea028fa0a9224f75",
+        "hash_reproducible": true,
+        "name": "discovery_manifest",
+        "payload_hash": "e514f976107ed428d8e0e34f992e414a5180b1559cba8b50d891d4d5ebe1a923",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L140",
+        "version": "rdllm-discovery-manifest/v1"
+      },
+      {
+        "artifact_binding_hash": "118e66e6ef265a2304a0c709168bcbedd69369f2a48f79ef5d61c86d39aeb1bc",
+        "declared_hash": "424f4fd4ee3139d9b7b81c89d35c0bf24a855369784f253d95507394f6c9a4a0",
+        "hash_reproducible": true,
+        "name": "provider_attribution_card",
+        "payload_hash": "167df396fb691570c9600f21297219cf8e88e6645a07426d566fca51a50a1e9b",
+        "present": true,
+        "status": "",
+        "target_level": "",
+        "version": "rdllm-provider-attribution-card/v1"
+      },
+      {
+        "artifact_binding_hash": "e4caeda1ba04d9c671e130438763ded93b6aa197f2eb5a573b831c1f9859503f",
+        "declared_hash": "af1b3ec48344991af7a7c056fb87d09269aff950447a7752e2d9b474cf1aa1d8",
+        "hash_reproducible": true,
+        "name": "certification_report",
+        "payload_hash": "d9d57bdfcc6db67aff5fb1155673ef027eea04959ee2920a08ba3f9c0ac7c098",
+        "present": true,
+        "status": "passed",
+        "target_level": "RDLLM-L141",
+        "version": "rdllm-certification/v1"
+      },
+      {
+        "artifact_binding_hash": "bf6309bd35b3e565114cb7fe217d6b0951c4610e9b4f496f68fc251f32a035d4",
+        "declared_hash": "137937a37b62c8a562fe89b4617377e02396557159d16324bb076cab94a75c51",
+        "hash_reproducible": true,
+        "name": "foundation_runtime_adapter",
+        "payload_hash": "6d0b65304db8a76cf8450c166aad41bc95366142a6b596aa9a39e6c50ea8b3ff",
+        "present": true,
+        "status": "released",
+        "target_level": "RDLLM-L127",
+        "version": "rdllm-foundation-runtime-adapter/v1"
+      },
+      {
+        "artifact_binding_hash": "e99ac661cae8c4bd67fba720e7243b13224126757d6eb76a4651dbff20878dc1",
+        "declared_hash": "8278542a91de303dca2c308cd16b3662be5cc03393fde116439724f8bf4ec63d",
+        "hash_reproducible": true,
+        "name": "universal_invocation_guard",
+        "payload_hash": "588b39591f2eaa1ed7c0681919416a376cc360426629810a5d688dac19ab31b3",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L133",
+        "version": "rdllm-universal-invocation-guard/v1"
+      },
+      {
+        "artifact_binding_hash": "9b6da4576931b6773ec3cecc0d37f3a5dc2dd72576acd0dabf16a56e10091d58",
+        "declared_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+        "hash_reproducible": true,
+        "name": "source_footer_delivery",
+        "payload_hash": "fc37fa57d1222e209fb68925041a40ff67db7cb02397acb63fc43fe1924c6929",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L103",
+        "version": ""
+      },
+      {
+        "artifact_binding_hash": "0849babae89bc131e4e088abf7264f64032c35df8ebf004d0707823dfe671a2a",
+        "declared_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "hash_reproducible": true,
+        "name": "response_envelope",
+        "payload_hash": "50ed97d811e60b08febfb00cd3b751d4a3fc89951df8837c8b25f19cd98e3460",
+        "present": true,
+        "status": "verified",
+        "target_level": "",
+        "version": "rdllm-response-envelope/v1"
+      },
+      {
+        "artifact_binding_hash": "f6b79b2ec6dac7652dda9d27a336a7d16ade01fcef16ecd07ff201cdb5b99133",
+        "declared_hash": "af65e299bda8094ade379c4765b813211ac8cd55e45a0972f27d05b0fcaf8433",
+        "hash_reproducible": true,
+        "name": "private_reasoning_attribution",
+        "payload_hash": "a914602a2ddd789bab0d7ec1529393ba0a87e109bdcfaacb3dbf8beef987865d",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L107",
+        "version": ""
+      },
+      {
+        "artifact_binding_hash": "aaf04890ad25cfc8d348417b38eee465c0bc2a0e8f2d67575163037f8ac8dc4b",
+        "declared_hash": "0ec77296e9b82aa6d863f8f8c38181ab233b0ec1ce359b8e4301cf9c69048416",
+        "hash_reproducible": true,
+        "name": "persistent_memory_provenance",
+        "payload_hash": "db6f458105135da019c3a658ffb8cd168394f0352c5365c1c164041032804c68",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L106",
+        "version": ""
+      },
+      {
+        "artifact_binding_hash": "21bd722649d76b1bb1c8487d06fb29288f9dc37ae8de18412ecd10c1920ae3cf",
+        "declared_hash": "c5b8e5cab487846f4f2acf26c87417c46e1a543cdc44930a47367ba639a7c877",
+        "hash_reproducible": true,
+        "name": "post_training_signal_provenance",
+        "payload_hash": "b852a190912045ac6639e6da3c81ff9a1e52b8cd0b4ef6edfa340fa4e63c988a",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L108",
+        "version": ""
+      },
+      {
+        "artifact_binding_hash": "aae2b44de93e3299f8fb050866ab57fca150d5c93dd59e5798aba8825494bc6e",
+        "declared_hash": "ca4bf6639b80b98dd0dffcf7b67855a0a9717e22ceca6576df57e0c029346974",
+        "hash_reproducible": true,
+        "name": "trust_registry",
+        "payload_hash": "13b69e349e4e0d309d4ee9af06382b4f8e0a1328d39b33bbfd0d5ab66cb65fc0",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L51",
+        "version": "rdllm-trust-registry/v1"
+      }
+    ]
+  },
+  "bridge_decision": {
+    "agent_response_release_approved": true,
+    "decision": "publish_universal_context_provenance_bridge",
+    "failed_checks": [],
+    "failure_modes": [],
+    "publication_authorized": true,
+    "runtime_context_access_authorized": true,
+    "safe_output_policy": "publish_l140_context_bridge_and_require_context_bound_footers"
+  },
+  "bridge_policy": {
+    "minimum_input_level": "RDLLM-L139",
+    "on_denied_or_expired_context_rights": "block_context_use_and_route_to_escrow",
+    "on_missing_l139_kit": "reject_runtime_context_adoption_claim",
+    "on_private_context_leak": "block_publication",
+    "on_unattributed_context_access": "block_model_response_release",
+    "on_unbound_agent_step": "block_agent_trace_publication",
+    "profile": "rdllm-universal-context-provenance-bridge-policy/v1",
+    "required_bridge_surfaces": [
+      "context_access_manifest",
+      "context_license_negotiation",
+      "source_claim_projection",
+      "footer_delivery_projection",
+      "royalty_event_projection",
+      "agent_step_attribution",
+      "consent_revocation_projection",
+      "audit_log_export",
+      "zero_trust_authorization",
+      "offline_replay_fixture"
+    ],
+    "required_context_protocols": [
+      "model_context_protocol_http",
+      "model_context_protocol_stdio",
+      "web_retrieval",
+      "vector_database",
+      "file_search",
+      "browser_search",
+      "agent_tool_call",
+      "creator_license_endpoint",
+      "enterprise_connector",
+      "media_content_credential"
+    ],
+    "required_core_artifacts": [
+      "universal_interop_test_kit",
+      "universal_adoption_standard",
+      "universal_rdllm_passport",
+      "integration_profile",
+      "discovery_manifest",
+      "provider_attribution_card",
+      "certification_report",
+      "foundation_runtime_adapter",
+      "universal_invocation_guard",
+      "source_footer_delivery",
+      "response_envelope",
+      "private_reasoning_attribution",
+      "persistent_memory_provenance",
+      "post_training_signal_provenance",
+      "trust_registry"
+    ],
+    "required_failure_cases": [
+      "unauthorized_context_access",
+      "tool_result_without_source_claim",
+      "retrieval_used_without_footer_citation",
+      "hallucinated_tool_citation",
+      "stale_context_lease",
+      "rights_denied_context",
+      "mcp_token_audience_mismatch",
+      "agent_step_not_attributed",
+      "private_context_text_leak",
+      "connector_without_audit_log"
+    ],
+    "required_standards_mappings": [
+      "model_context_protocol",
+      "oauth2_1_audience_bound_tokens",
+      "w3c_verifiable_credentials_data_integrity",
+      "w3c_prov",
+      "c2pa_content_credentials",
+      "eu_gpai_copyright_transparency",
+      "rdllm_source_footer"
+    ],
+    "required_verifier_commands": [
+      "verify-universal-interop-test-kit",
+      "verify-universal-adoption-standard",
+      "verify-universal-rdllm-passport",
+      "verify-foundation-runtime-adapter",
+      "verify-universal-invocation-guard",
+      "verify-source-footer-delivery",
+      "verify-response-envelope",
+      "verify-private-reasoning-attribution",
+      "verify-post-training-signal-provenance",
+      "verify-universal-context-provenance-bridge"
+    ],
+    "target_certification_level": "RDLLM-L140"
+  },
+  "bridge_surface_rows": [
+    {
+      "bridge_surface_row_hash": "df5f7b305f5204b32f3b59c5322ebe0b836443e9b0fac52542b4c653266bac76",
+      "endpoint_path": "/.well-known/rdllm/context/agent_step_attribution.json",
+      "fail_closed": true,
+      "offline_replay_supported": true,
+      "ready": true,
+      "required": true,
+      "schema_hash": "90743691b584789f7518a78656f66888c2518e66e60f166e202abed579108a48",
+      "surface": "agent_step_attribution",
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "bridge_surface_row_hash": "695df5c942e8b416a21a24f819aeb6b041102c398dccc1e72585d4e4c815b5ca",
+      "endpoint_path": "/.well-known/rdllm/context/audit_log_export.json",
+      "fail_closed": true,
+      "offline_replay_supported": true,
+      "ready": true,
+      "required": true,
+      "schema_hash": "833578e48edc3591114da689dd1531b536d564eca0e478277ee7b059ea184176",
+      "surface": "audit_log_export",
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "bridge_surface_row_hash": "fc22502e92db02332ef4ddf394063cbb7e5399d15f0e911ab92132c7acf5a3b9",
+      "endpoint_path": "/.well-known/rdllm/context/consent_revocation_projection.json",
+      "fail_closed": true,
+      "offline_replay_supported": true,
+      "ready": true,
+      "required": true,
+      "schema_hash": "0f73099604f64328358c2f250f3daab894ef53a414911fdb889a547c2617300b",
+      "surface": "consent_revocation_projection",
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "bridge_surface_row_hash": "6a62d0fe0b12d7da3741945da6c655f0772793bb63e2d47cc1a88730cecf6f95",
+      "endpoint_path": "/.well-known/rdllm/context/context_access_manifest.json",
+      "fail_closed": true,
+      "offline_replay_supported": true,
+      "ready": true,
+      "required": true,
+      "schema_hash": "f36162f88329c291ab2681f9a763a69d31c125e1fad31c50c5e5baa5e01e83a5",
+      "surface": "context_access_manifest",
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "bridge_surface_row_hash": "c4fc71ac8dd83c2d0c35d1447f116bb602b65035412ad1ee7f592eb140abc406",
+      "endpoint_path": "/.well-known/rdllm/context/context_license_negotiation.json",
+      "fail_closed": true,
+      "offline_replay_supported": true,
+      "ready": true,
+      "required": true,
+      "schema_hash": "3e4a4b7eea47c4a888c425e882f9649d49cdf327833ba028a21941ac7f7f6908",
+      "surface": "context_license_negotiation",
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "bridge_surface_row_hash": "1f6c85e02f0d98050d05ffbbe95702c3f996a5f0c693e7e6cbdb3786512810d7",
+      "endpoint_path": "/.well-known/rdllm/context/footer_delivery_projection.json",
+      "fail_closed": true,
+      "offline_replay_supported": true,
+      "ready": true,
+      "required": true,
+      "schema_hash": "3c0d5135bb16ba8cf7cbe1d101d32edcefe427bb076cb8e6b591b510874fd2b6",
+      "surface": "footer_delivery_projection",
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "bridge_surface_row_hash": "0174f0275b0d76c59b94b43203d168d71eeef9747e67765be003d24be5386d37",
+      "endpoint_path": "/.well-known/rdllm/context/offline_replay_fixture.json",
+      "fail_closed": true,
+      "offline_replay_supported": true,
+      "ready": true,
+      "required": true,
+      "schema_hash": "f0e05fc093cd9dab05a6db5c3eb89358278dbd89fb196041ee57e270978d0cab",
+      "surface": "offline_replay_fixture",
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "bridge_surface_row_hash": "4d2b01d96af423b59b7fd00be9cb90f5ece9d2efb597e3b64d49a06b79510e4c",
+      "endpoint_path": "/.well-known/rdllm/context/royalty_event_projection.json",
+      "fail_closed": true,
+      "offline_replay_supported": true,
+      "ready": true,
+      "required": true,
+      "schema_hash": "bd03559d4e73e82d637a9a9c4e5789a9410715f4df1166d74ad703a758ca1429",
+      "surface": "royalty_event_projection",
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "bridge_surface_row_hash": "ef5da28626770d8463c6dac3d1b40580aa7454d7b9c8dad205dc2bb3a5e0e5db",
+      "endpoint_path": "/.well-known/rdllm/context/source_claim_projection.json",
+      "fail_closed": true,
+      "offline_replay_supported": true,
+      "ready": true,
+      "required": true,
+      "schema_hash": "c0db424e7aee533af51520a1186d07cc6adebacae38a0504066a3b73fc7b2bce",
+      "surface": "source_claim_projection",
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "bridge_surface_row_hash": "40f2ba33e07f14cfdcddad85fb4e8892a6d5202ef7c6a8bb469e98435a762aa7",
+      "endpoint_path": "/.well-known/rdllm/context/zero_trust_authorization.json",
+      "fail_closed": true,
+      "offline_replay_supported": true,
+      "ready": true,
+      "required": true,
+      "schema_hash": "b54f51a7d2b07a73e0292379f860fc6aee9b590e5876b505d3ba3fa768a33bb3",
+      "surface": "zero_trust_authorization",
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    }
+  ],
+  "checks": {
+    "agent_steps_bind_context_and_response": true,
+    "artifact_hashes_reproducible": true,
+    "bridge_surfaces_complete": true,
+    "certification_level_at_least_l139": true,
+    "context_access_events_authorized_and_licensed": true,
+    "context_claims_project_to_visible_footers": true,
+    "denied_context_cases_fail_closed": true,
+    "discovery_manifest_exposes_bridge_path": true,
+    "offline_verification_supported": true,
+    "private_strings_absent": true,
+    "protocol_adapter_coverage_complete": true,
+    "public_report_has_no_private_field_names": true,
+    "public_verifier_commands_declared": true,
+    "required_core_artifacts_present": true,
+    "royalty_events_cover_context_sources": true,
+    "standards_mappings_complete": true,
+    "universal_interop_kit_ready_l139": true
+  },
+  "commitments": {
+    "agent_step_root": "0541beef04c04924c52171082ec995b0ab4ac2625693386010e832195dc2dc25",
+    "artifact_binding_root": "548931fd5390e8399bc81216feccf805802919d87a9aedc715ff1a2b135cf3dd",
+    "bridge_surface_root": "4e0ff94a059f485b56da4960684225fcadb166832cd9e733fb0a2e4223db84b5",
+    "certification_report_hash": "af1b3ec48344991af7a7c056fb87d09269aff950447a7752e2d9b474cf1aa1d8",
+    "context_access_root": "35172a61508b4bbe9c91560271fbbc5adbeb6a92e8360933107240fdc71b0a3c",
+    "context_bridge_commitment_hash": "407de2658a63bddf3a4e0f478be94c602b35de9be3db78c88d9b690629e1dbf0",
+    "failure_case_root": "567f736c5cefc1c6098f182888a9bb19f19294fd50c4d7b1f62b54ee88141c3e",
+    "protocol_adapter_root": "47b55f6093c7d34dfbbd0b41810b727c8866af7ed1f0a61c075f6503151d7f3a",
+    "response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+    "royalty_projection_root": "9ffaa34629b73d205c4862df47b55753e35b6af20328a9a9247e4c27b0f6bd30",
+    "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+    "standards_mapping_root": "ceee9d7eb1e27a01a2ed43467c58bb467da43378abbdf662af30dd6e7c5bf835",
+    "universal_interop_test_kit_hash": "dcbfbd1a083d3df5f9b1d2ae51406ae7a35df9004bed17a0cb88e4293089d82d",
+    "verifier_command_root": "e73a608fd3025ee6efc2302925d098a8bbc9a0ec9f2bdd7023548ef1b0b95a09"
+  },
+  "context_access_rows": [
+    {
+      "access_event_hash": "c8c242df9d36bc82fc6aeb0878b1c0db386d3ff290f30961fb98deb52f3ffb69",
+      "agent_step_id": "agent:step:artifact-mcp-source-s1",
+      "audit_log_hash": "2004864c25d1032774dec9f17a595a0f77c450ea1d9d97b89f01abb427522d5c",
+      "authorized": true,
+      "claim_span_hash": "973b398fe961c136452d947966faad68c220aac89fa1212fe5ecb25058e2c4f6",
+      "consent_state": "active",
+      "context_access_row_hash": "35172a61508b4bbe9c91560271fbbc5adbeb6a92e8360933107240fdc71b0a3c",
+      "context_id": "ctx:artifact:mcp:s1",
+      "creator_id": "creator:arjun",
+      "footer_source_label": "S1",
+      "lease_state": "fresh",
+      "license_token_hash": "f2d23a9146b7b80fd87c2bd6c5ef8c5a28ec436627e79eb40a5ad842a005d9a2",
+      "protocol": "model_context_protocol_http",
+      "public_proof_hash": "1e68b0179cdc7fe4ea95f02e5a87875ed12e70929d156b5d5dd5a499ab4f25d6",
+      "ready": true,
+      "retrieval_rank": 1,
+      "rights_state": "licensed",
+      "royalty_share": "1.0",
+      "sequence": 1,
+      "source_label": "S1",
+      "usage_purpose": "answer_generation",
+      "work_id": "arjun-provenance-ledger"
+    }
+  ],
+  "context_bridge_version": "rdllm-universal-context-provenance-bridge/v1",
+  "created_at": "2026-06-02T00:00:00Z",
+  "failure_case_rows": [
+    {
+      "case_id": "agent_step_not_attributed",
+      "expected_block": true,
+      "failure_case_row_hash": "9104d1d783e9a2a66dacf858709c23576f2f2b99ffcd4aa0c90ed388470d446b",
+      "fixture_hash": "bd933cd124702289eb8556824826b653483ee47a65d82b2d19b7a6c7f7b807d0",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "case_id": "connector_without_audit_log",
+      "expected_block": true,
+      "failure_case_row_hash": "7edf6bb530cb7bdbe855d584bbad7c640007dbd2c9487b2d82934267f8002e7c",
+      "fixture_hash": "28ac2be440e0ecd4ab5030b75f31b67b1c03686b55c96df052ddd2c92fd1d055",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "case_id": "hallucinated_tool_citation",
+      "expected_block": true,
+      "failure_case_row_hash": "9aa85645a014bba76c77a24c279f648277255e19a866b1434bf7708886d7c437",
+      "fixture_hash": "e7ca7ef729e6624eeb1c8217cf681099be36f74088a56098e72a7d74e1339e27",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "case_id": "mcp_token_audience_mismatch",
+      "expected_block": true,
+      "failure_case_row_hash": "e9d42539fde0a663312606ce17fce44ecdf08d76dd55af1d0a858028560bffc5",
+      "fixture_hash": "4aacaf5cb21c902f12c870900b22ef6015db31be6614a3abf7fbb508e4f0129f",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "case_id": "private_context_text_leak",
+      "expected_block": true,
+      "failure_case_row_hash": "cfde5a89031ce63738b7c9e2e3cefc1dc86d6f45c481f889759185aed821efdd",
+      "fixture_hash": "5c649f93d23ce8d62d4503636398740073eb8affd1ef2d9421f1663b9d33442e",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "case_id": "retrieval_used_without_footer_citation",
+      "expected_block": true,
+      "failure_case_row_hash": "f23794917b4ec6d511456fc0cae060325f9e56d9cabfa8e0c01af1b28896eb1a",
+      "fixture_hash": "673d5df2339bc44ca7d7da71af0f6e40790d0343302f43f04c96a6bb3342b460",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "case_id": "rights_denied_context",
+      "expected_block": true,
+      "failure_case_row_hash": "e73607995484186ad2859b71bc9502bbce617c23b28950a7a43e8727ad99a47c",
+      "fixture_hash": "4499f764d47cf2ade1d55a14cd5166b170bc0e71baf9e7b54fe586a696e9595d",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "case_id": "stale_context_lease",
+      "expected_block": true,
+      "failure_case_row_hash": "5ddb10cfbd91443f8d293bbc8d09a9bb69426b3be8fff2abb1d735a66053af20",
+      "fixture_hash": "53d7e8b74d942fceabe6e14bba6c11061fed2b0fc295b1759796928d8b56ebcf",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "case_id": "tool_result_without_source_claim",
+      "expected_block": true,
+      "failure_case_row_hash": "40ca3ab130f949d8069faa1817f8528e601d5fc5939c7d479a4891c4c652ba9f",
+      "fixture_hash": "04c2599a9cb1d32b6587b20c0da03dec1c1256e63388f9dd751afaff8de8202b",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    },
+    {
+      "case_id": "unauthorized_context_access",
+      "expected_block": true,
+      "failure_case_row_hash": "3881a273e55d8ba75b36ac6795d980a7cf64da45ca5a8bb86c4e993cccc3b8f0",
+      "fixture_hash": "2e9ec2ecda4d93f3b877b95deacc00b6a22e13c58b382024c9ee8a3e1e666a9e",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-context-provenance-bridge"
+    }
+  ],
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "hash_only_context_bindings": true,
+    "private_field_findings": [],
+    "private_strings_absent": true,
+    "raw_context_text_disclosed": false,
+    "raw_output_text_disclosed": false,
+    "raw_prompt_text_disclosed": false,
+    "raw_token_or_secret_disclosed": false,
+    "raw_tool_result_disclosed": false
+  },
+  "protocol_adapter_rows": [
+    {
+      "access_event_schema_hash": "70109d68df959125d19a2cbe4cc5df88361ca6c54eb09d1261a5b828048d80fb",
+      "adapter_hash": "691752915c8bf9c28522adc7785d380b04cc5ceba27fb6436c3fa197b0d2a504",
+      "audit_log_hash": "41e9734d9b4a9721da39d3656f4691d5b99ca0d34cbe63f560065ed1abb227d5",
+      "authorization_profile": "oauth2.1_audience_bound",
+      "fail_closed": true,
+      "least_privilege_scope": true,
+      "license_projection_hash": "91b674e673768f881a6109ed9c8b9dcb7b292e39d626ed58051c9888200aae76",
+      "protocol": "agent_tool_call",
+      "protocol_adapter_row_hash": "cbeaba60c361372599ce0a99332e14d63d21367801426d7cae598e1a836c4ffc",
+      "ready": true,
+      "required": true,
+      "source_claim_schema_hash": "ca54cbd9db7ee408e4bb440d15320f9127b4c06f0ea6f87ae84e966c10d4d5fb",
+      "status": "passed",
+      "token_audience_bound": true
+    },
+    {
+      "access_event_schema_hash": "a471a225b1ca75a9811aa992beca9882680344907b5eed880e8f3ab46ffb47f5",
+      "adapter_hash": "d19470184977416d084a43908795cff445e8e186e59edc6f2f7d312697cfdff8",
+      "audit_log_hash": "899ad3e72f1a648a1c5d55f796506cf0b5f1a200e4309a6b6fe2854736b274f6",
+      "authorization_profile": "oauth2.1_audience_bound",
+      "fail_closed": true,
+      "least_privilege_scope": true,
+      "license_projection_hash": "f279d084b6c4f50485fea1361927033982e902d77fdaa535d9152d56b52ddcee",
+      "protocol": "browser_search",
+      "protocol_adapter_row_hash": "0f9b05383a70e3a4eed31cad7146815a94988e1f5772d04f65a0fd0361031cbd",
+      "ready": true,
+      "required": true,
+      "source_claim_schema_hash": "fc5eb8c333f421b1c9ccc07565f2579464fb746a828f3feef47ff8be6534a7d3",
+      "status": "passed",
+      "token_audience_bound": true
+    },
+    {
+      "access_event_schema_hash": "774eace2162dc73237ca4c9439adae0258f6d71a427398a7f712f537873215b2",
+      "adapter_hash": "d5f372395065c89b54ac5315b1d890723cbb4dd0bca22b2bdf6c49678fa6c077",
+      "audit_log_hash": "083a8e018e26c2c754698ed574d53f7d0cbe04f54468734439065d0636e6ed55",
+      "authorization_profile": "oauth2.1_audience_bound",
+      "fail_closed": true,
+      "least_privilege_scope": true,
+      "license_projection_hash": "49184bf7a43f3c15e47e1490894ad54520b11dad6031e32f2853e9923f352dc2",
+      "protocol": "creator_license_endpoint",
+      "protocol_adapter_row_hash": "0b400b91e4e17099f52ed197dbcd0a8e093dfac3e7e06cedde53f7d93ac87ec0",
+      "ready": true,
+      "required": true,
+      "source_claim_schema_hash": "6518291f6fcdb59e2f3cb91201efc95a2531de690abb65bc9cac0f0d8f7f006c",
+      "status": "passed",
+      "token_audience_bound": true
+    },
+    {
+      "access_event_schema_hash": "89f1b15512671441644fe282d4a6f8adab0217f7b310d6afc2f284dd1877b807",
+      "adapter_hash": "1b33b152e97a4e9e6f474e57828538bb98c51b83d1769589d26f7bc8d991d738",
+      "audit_log_hash": "1fb989bda43164a798cc9f823a72b5d2fb65df920b7c85c2acc1be54a6b0ab23",
+      "authorization_profile": "oauth2.1_audience_bound",
+      "fail_closed": true,
+      "least_privilege_scope": true,
+      "license_projection_hash": "177c002e724b87b4b3c2477cf506c850b47fd83099dd72caf42014ea36a2c78b",
+      "protocol": "enterprise_connector",
+      "protocol_adapter_row_hash": "dfcfe9135ff7ae721a0452ab15d60da71d7a0e9ede8bea6a657960b3a7914588",
+      "ready": true,
+      "required": true,
+      "source_claim_schema_hash": "b6a351c9c3e22d064e8eb9bdd0bfae26428ce292f118d2b85e70af8381aeed09",
+      "status": "passed",
+      "token_audience_bound": true
+    },
+    {
+      "access_event_schema_hash": "f9d430ef04ee7860c61311056f9ff5b3077f32bb37d5c9a6c53aef9cea71108c",
+      "adapter_hash": "b08dab984f2ba0f403493aa1783cd5d64d855bad7a2617c4d317abbb7dd965d7",
+      "audit_log_hash": "49a56f3ca83baf90c577411440c49b63e3b3e52bc7625790abeee572759f04ed",
+      "authorization_profile": "oauth2.1_audience_bound",
+      "fail_closed": true,
+      "least_privilege_scope": true,
+      "license_projection_hash": "254efed1a7222e3891e8b83a43d7fc4f198bd6b122eb467f6db82f87e28db361",
+      "protocol": "file_search",
+      "protocol_adapter_row_hash": "a51145ca5e7f79a0efa6269c54722e4ab98c0d488c0806934258da2f636930c2",
+      "ready": true,
+      "required": true,
+      "source_claim_schema_hash": "65a982766d84e1bbf8ebdff4fa5e01502fd7f3f88b2985ff1dbd4fb9273ae06e",
+      "status": "passed",
+      "token_audience_bound": true
+    },
+    {
+      "access_event_schema_hash": "a3d5e520e55867950a036dea7025d0772ff3c59095b3cfab42c54ead75c93359",
+      "adapter_hash": "d830ade35443e431fe2b6f821a2b1a648d1ae56f10e1b42270942088b96489a1",
+      "audit_log_hash": "ddfacdfd5c69fddb0253b45ea4d808dfc31ec876f9d98108b37836e41022e6f3",
+      "authorization_profile": "oauth2.1_audience_bound",
+      "fail_closed": true,
+      "least_privilege_scope": true,
+      "license_projection_hash": "acd732187bfa1ff8c909d5d52ff3fe596108c01c3e0a48c6a787588b165acb50",
+      "protocol": "media_content_credential",
+      "protocol_adapter_row_hash": "a2ab1111f7b0a8471803f8636458845342434ff6f1d254ca730196678def223f",
+      "ready": true,
+      "required": true,
+      "source_claim_schema_hash": "6687177fadac33ea1734f97e64c12dad7a16f0ae7b7b2922b81dbb6fe7cfea9c",
+      "status": "passed",
+      "token_audience_bound": true
+    },
+    {
+      "access_event_schema_hash": "56c727ea525c0619248b03e920412fc7459e111f823913b7beaebf01f1c65b7f",
+      "adapter_hash": "a650ab9b0c2d483dc7a2bdce80f55e07e7c9af62a9f476f8d60fb32112d9f22e",
+      "audit_log_hash": "33a8efec36a2c0e9ae3ff2c95b654ac1616a9dae0e855aa6fe805a43a872ec4f",
+      "authorization_profile": "oauth2.1_audience_bound",
+      "fail_closed": true,
+      "least_privilege_scope": true,
+      "license_projection_hash": "9d07684d59befe5e5de227ea992de8027f01164b6ba24324371066dcd81c43d4",
+      "protocol": "model_context_protocol_http",
+      "protocol_adapter_row_hash": "6edb217714e1ebdf97cc2c60aab238b42de521c7a2429728332e1068cce05367",
+      "ready": true,
+      "required": true,
+      "source_claim_schema_hash": "e8a55585a0a48c880a02b0b93876b2b80b47f0a90f92140566abc774436115ad",
+      "status": "passed",
+      "token_audience_bound": true
+    },
+    {
+      "access_event_schema_hash": "0547f0582532c629d7d18bab08f68ed8d3d896571f68070ab098948a0977fe5c",
+      "adapter_hash": "2a4d7567ff7e59cd7e227d4e07d136c9d9a67bb2e13ef3d7280950830db4795b",
+      "audit_log_hash": "823eadfc1aea3e39158def992aad617a0e4029d5b9916111c2aa5fc38eb21176",
+      "authorization_profile": "oauth2.1_audience_bound",
+      "fail_closed": true,
+      "least_privilege_scope": true,
+      "license_projection_hash": "59faffc24f102361a08300a0cc07e0f609c036b872d5540d35be1cb66d89b4a6",
+      "protocol": "model_context_protocol_stdio",
+      "protocol_adapter_row_hash": "50d7e7613450e6cc6640ef2332858b75d3554a5f2b20ca46d372c836484eac17",
+      "ready": true,
+      "required": true,
+      "source_claim_schema_hash": "aa0c5ef2c8aa16d0df6475db4f9a960f6c7201c76e59ec6567446947a71bcba6",
+      "status": "passed",
+      "token_audience_bound": true
+    },
+    {
+      "access_event_schema_hash": "d6bf14ed3c6d5ac234040c4d61f44a1da9220449f8f9cbb4386c37434005c9be",
+      "adapter_hash": "cb4bb0f1561822247331285ba91808241614df00fbb2805b86e3ca4f47be8345",
+      "audit_log_hash": "280efc9f4d2af5363cae1559d0466108d01b4eba3a2373611c9002da1b2b8093",
+      "authorization_profile": "oauth2.1_audience_bound",
+      "fail_closed": true,
+      "least_privilege_scope": true,
+      "license_projection_hash": "e59630493d1597e0cb2d45a20f321869193fb37e8b92b31f39c1471d626f7516",
+      "protocol": "vector_database",
+      "protocol_adapter_row_hash": "67d9d54536de97e7c31985dc3dccdbfd2e7b6ad56dcd78cdda52c72d21a2f88d",
+      "ready": true,
+      "required": true,
+      "source_claim_schema_hash": "8b50462704ed14bc2d651be4f52b5214d020a41662d2c450f449c490dda19d30",
+      "status": "passed",
+      "token_audience_bound": true
+    },
+    {
+      "access_event_schema_hash": "3181ed4a81c577d22413e07158f4b7af7662e66ea8c63112b345e30ff32ab72b",
+      "adapter_hash": "d59122aedaf0fd7e181ee97536f4245460df832871d61dfa7e10e6a38f8b96d7",
+      "audit_log_hash": "db8961d3e5391a8a521da13561a11628f84e212f58a8c13f81833d4de9363fdc",
+      "authorization_profile": "oauth2.1_audience_bound",
+      "fail_closed": true,
+      "least_privilege_scope": true,
+      "license_projection_hash": "12e53e87fcfed0048ad04d8869ebee9265dafa1d367a4e223e5a7037a13e0364",
+      "protocol": "web_retrieval",
+      "protocol_adapter_row_hash": "7e43d9e5b4630b0ab481fbb9bb1ac37567844432114e5825a97b0a6b49064f11",
+      "ready": true,
+      "required": true,
+      "source_claim_schema_hash": "542e8170c88009a9665df320035c61059aaea4aae16ca9dff9d55e2aeb97c216",
+      "status": "passed",
+      "token_audience_bound": true
+    }
+  ],
+  "royalty_projection_rows": [
+    {
+      "context_access_hashes": [
+        "35172a61508b4bbe9c91560271fbbc5adbeb6a92e8360933107240fdc71b0a3c"
+      ],
+      "creator_id": "creator:arjun",
+      "ready": true,
+      "royalty_event_hash": "e0a569b61af56d6b46578132dee7b903a47172b07d85017ac3c6f18f9588cfc1",
+      "royalty_projection_row_hash": "9ffaa34629b73d205c4862df47b55753e35b6af20328a9a9247e4c27b0f6bd30",
+      "settlement_sink": "creator_ledger",
+      "settlement_state": "licensed",
+      "share": "1.0",
+      "source_label": "S1",
+      "work_id": "arjun-provenance-ledger"
+    }
+  ],
+  "schemas": {
+    "discovery_manifest": "docs/schemas/discovery_manifest.schema.json",
+    "integration_profile": "docs/schemas/integration_profile.schema.json",
+    "response_envelope": "docs/schemas/response_envelope.schema.json",
+    "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json",
+    "universal_adoption_standard": "docs/schemas/universal_adoption_standard.schema.json",
+    "universal_context_provenance_bridge": "docs/schemas/universal_context_provenance_bridge.schema.json",
+    "universal_interop_test_kit": "docs/schemas/universal_interop_test_kit.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "26d4121a4068126b3327d3864075e772bb6bbdca5296372020bd278f6cc04865"
+  },
+  "standards_mapping_rows": [
+    {
+      "bridge_surface": "context_access_manifest",
+      "covered": true,
+      "mapping_hash": "c9487306a4e0bc39661ed93ab9ddd6df8e4687c256759d8ebe78411ec5dc8685",
+      "normative_reference_url": "https://c2pa.org/specifications/specifications/2.1/index.html",
+      "ready": true,
+      "required": true,
+      "standard_id": "c2pa_content_credentials",
+      "standards_mapping_row_hash": "4c715492ac0c4d75590097a228f5fa7bbc868cf5d1cb593f927263560125f97c"
+    },
+    {
+      "bridge_surface": "context_access_manifest",
+      "covered": true,
+      "mapping_hash": "4207ca39463aa2ae0d21de27c2777ca8effde9aa1af98062464e4c9b98a0b9cc",
+      "normative_reference_url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+      "ready": true,
+      "required": true,
+      "standard_id": "eu_gpai_copyright_transparency",
+      "standards_mapping_row_hash": "775da743311c842f8debfb1d5bd48f45e184286a37c439763cdb5500732c698d"
+    },
+    {
+      "bridge_surface": "context_access_manifest",
+      "covered": true,
+      "mapping_hash": "4f8ced54a29ee7362d7ab4a86bbe41d8150e049ae24d3c756214686a1e9c2ed1",
+      "normative_reference_url": "https://modelcontextprotocol.io/specification",
+      "ready": true,
+      "required": true,
+      "standard_id": "model_context_protocol",
+      "standards_mapping_row_hash": "28c6a8bda0f36e376068271c8ae69946e7f8255cf864475a4624786c57c8636a"
+    },
+    {
+      "bridge_surface": "context_access_manifest",
+      "covered": true,
+      "mapping_hash": "d908d8e8634a69dd4a0e3084c32f4e417cbf525509026e991582cc4085977148",
+      "normative_reference_url": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1",
+      "ready": true,
+      "required": true,
+      "standard_id": "oauth2_1_audience_bound_tokens",
+      "standards_mapping_row_hash": "0cd3ee38fa160f2187cb18c89ba5a658b55983ef3b830e98c7ef988f4dad8f1d"
+    },
+    {
+      "bridge_surface": "context_access_manifest",
+      "covered": true,
+      "mapping_hash": "c0590f8326caa4daacf2a5a911e3e9d0cb32e6ae784241325521a6e7b987906a",
+      "normative_reference_url": "https://rdllm.local/spec/source-footer",
+      "ready": true,
+      "required": true,
+      "standard_id": "rdllm_source_footer",
+      "standards_mapping_row_hash": "c624e1e254b705a59694a87bd39b314258ff73873867c973563d156b3876af5e"
+    },
+    {
+      "bridge_surface": "context_access_manifest",
+      "covered": true,
+      "mapping_hash": "f1612728c6d913bcf4f290b67c7404bb1de36a043b53686938f8a2c2965afb1e",
+      "normative_reference_url": "https://www.w3.org/TR/prov-overview/",
+      "ready": true,
+      "required": true,
+      "standard_id": "w3c_prov",
+      "standards_mapping_row_hash": "ba44c620971b46b247481d9e03196dac07271d70662df1d812c3960421dd837c"
+    },
+    {
+      "bridge_surface": "context_access_manifest",
+      "covered": true,
+      "mapping_hash": "251790a2d4531038fd1553ef09bd40daef77d1213c8d0fcf6010b82a1fca9873",
+      "normative_reference_url": "https://www.w3.org/TR/vc-data-integrity/",
+      "ready": true,
+      "required": true,
+      "standard_id": "w3c_verifiable_credentials_data_integrity",
+      "standards_mapping_row_hash": "2dfdb90a5427ce65587b2ab053a2fffcb88b005ea04ded2693b791782333e222"
+    }
+  ],
+  "summary": {
+    "agent_step_count": 1,
+    "bridge_surface_count": 10,
+    "context_access_count": 1,
+    "context_bridge_commitment_hash": "407de2658a63bddf3a4e0f478be94c602b35de9be3db78c88d9b690629e1dbf0",
+    "context_protocol_count": 10,
+    "failed_check_count": 0,
+    "failure_case_count": 10,
+    "failure_mode_count": 0,
+    "minimum_input_level": "RDLLM-L139",
+    "offline_verification_supported": true,
+    "privacy_preserved": true,
+    "royalty_projection_count": 1,
+    "standards_mapping_count": 7,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L140",
+    "universal_interop_test_kit_hash": "dcbfbd1a083d3df5f9b1d2ae51406ae7a35df9004bed17a0cb88e4293089d82d",
+    "verifier_command_count": 10
+  },
+  "universal_context_provenance_bridge_hash": "99ca228f5ab90dbdc6568d335b9a5ada916d6ba5b664d6dbadf84a9a896b1a2b",
+  "verifier_command_rows": [
+    {
+      "command": "verify-foundation-runtime-adapter",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "14fba44cc4517d0ada300eb9bf9380ec29e77ae8f08529d3e68f82eef6768e63"
+    },
+    {
+      "command": "verify-post-training-signal-provenance",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "90130d2a9611cd47329e13ceffc10bf234368379a72de01d1b5384fee834c6ec"
+    },
+    {
+      "command": "verify-private-reasoning-attribution",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "603206112266a2d6c2ecee5d3e0938b5780eda0b1f0fa0411ff0fd832f32b1b7"
+    },
+    {
+      "command": "verify-response-envelope",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "bce01c419e1c8fdb38e4fa60f9ab05e8c09b16ece49a6759e904048cb8686a73"
+    },
+    {
+      "command": "verify-source-footer-delivery",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "1cf236caf39dabf54a450d28c4ac608065b774be380f58c399b7895953e9945f"
+    },
+    {
+      "command": "verify-universal-adoption-standard",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "befc1a61e7de7d2dfa5de6f497ebc6aab2f48d844e0c9467eff2cfe440fc7747"
+    },
+    {
+      "command": "verify-universal-context-provenance-bridge",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "4c70a6324e5d80c0e497b212530d29e22fe8fb9f2222ffa8f5f942ee93704ecc"
+    },
+    {
+      "command": "verify-universal-interop-test-kit",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "ca642800258c9db1da01e576e79173fd915896fe307e365023c61d93558dc932"
+    },
+    {
+      "command": "verify-universal-invocation-guard",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "4f1b724791169699b314a840af7c35f89d7b5ec09d9fc711cb8c0912a2842750"
+    },
+    {
+      "command": "verify-universal-rdllm-passport",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "acbb98cb6132fa8bd2213448d055b65bc162b8f45a8d096f3ab52505a4b9bc21"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "commitments": {
+    "event_hash": "51cd042a31adafba0f868423241a512d13e2a86ebb22a878ad0bdc0847a79ed4",
+    "lineage_edge_root": "458abb85595cab58db35f9a8ed867cf4febbb73eae2baee45c847c5c3abd1d78",
+    "obligation_root": "a9d8fb043e2b61a50308ba831e09b54682110702e53cbc4e3d5807b137d81191",
+    "source_share_root": "a4ea55b288e165aa5418e6edb954b269e7179d26b9bf8866428136a1b09a8f4f",
+    "work_lineage_root": "3da9e3dffafc53d091a0ae05c56de2e4bd5619c98bd4ebea5c020dec4d5725a4"
+  },
+  "created_at": "2026-05-29T21:01:47Z",
+  "event": {
+    "creator_pool": "0.550000",
+    "event_hash": "51cd042a31adafba0f868423241a512d13e2a86ebb22a878ad0bdc0847a79ed4",
+    "event_id": "evt_51cd042a31adafba",
+    "royalty_share_count": 2,
+    "settleable_source_share_count": 2
+  },
+  "issuer": "rdllm-local-demo",
+  "issues": [],
+  "lineage_graph": {
+    "edges": [
+      {
+        "declared_hash_matches": true,
+        "declared_upstream_content_hash": "",
+        "downstream_content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+        "downstream_work_id": "derived-provenance-summary",
+        "edge_hash": "6cdf90dc2a1d22ab0ed7a91bd1aa95c50e6535ef6556573f270459d35acb8c84",
+        "relation": "summarizes",
+        "source_uri": "https://example.test/origin-provenance-note",
+        "upstream_content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+        "upstream_work_id": "origin-provenance-note",
+        "weight": 1.0
+      }
+    ],
+    "nodes": [
+      {
+        "content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+        "creator_id": "summary_editor",
+        "creator_name": "Summary Editor",
+        "license": "royalty-bearing",
+        "policy_id": "policy:derived-provenance-summary",
+        "source_uri": "https://example.test/derived-provenance-summary",
+        "title": "Derived Provenance Summary",
+        "work_id": "derived-provenance-summary"
+      },
+      {
+        "content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+        "creator_id": "origin_writer",
+        "creator_name": "Origin Writer",
+        "license": "royalty-bearing",
+        "policy_id": "policy:origin-provenance-note",
+        "source_uri": "https://example.test/origin-provenance-note",
+        "title": "Original Provenance Note",
+        "work_id": "origin-provenance-note"
+      }
+    ]
+  },
+  "lineage_policy": {
+    "derived_work_does_not_extinguish_upstream_obligations": true,
+    "missing_or_cyclic_lineage_fails_verification": true,
+    "pass_through_rate": "0.30",
+    "profile": "rdllm-derivative-lineage/v1",
+    "recursive_pass_through": true
+  },
+  "privacy": {
+    "answer_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "report_uses_hashes_and_work_ids": true,
+    "source_text_disclosed": false,
+    "work_text_disclosed": false
+  },
+  "report_hash": "cc891a5d77e4dc460dcc9c62e362b64df5ca4e63c09a4162793f968f9fa7af7d",
+  "report_version": "rdllm-lineage-report/v1",
+  "settlement_obligations": [
+    {
+      "lineage_depth": 0,
+      "lineage_path": [
+        "derived-provenance-summary"
+      ],
+      "obligation_hash": "38630356b77de85553a1ee509f4024f576fcb3d52add4bf8ad4bbded6ac13da8",
+      "payout": "0.300915",
+      "raw_share_of_lineage_pool": "0.700000",
+      "recipient_creator_id": "summary_editor",
+      "recipient_creator_name": "Summary Editor",
+      "recipient_work_id": "derived-provenance-summary",
+      "role": "immediate_residual",
+      "share_of_source_payout": "0.700001",
+      "source_chunk_id": "derived-provenance-summary:c1",
+      "source_share_id": "srcshare_e1d7867dfbd9b8d3",
+      "source_work_id": "derived-provenance-summary"
+    },
+    {
+      "lineage_depth": 1,
+      "lineage_path": [
+        "derived-provenance-summary",
+        "origin-provenance-note"
+      ],
+      "obligation_hash": "8d912ac087dfc0618fe2b34822bd365fded2adeb7c47744713ca87827ef032c3",
+      "payout": "0.128963",
+      "raw_share_of_lineage_pool": "0.300000",
+      "recipient_creator_id": "origin_writer",
+      "recipient_creator_name": "Origin Writer",
+      "recipient_work_id": "origin-provenance-note",
+      "role": "terminal_upstream_owner",
+      "share_of_source_payout": "0.299999",
+      "source_chunk_id": "derived-provenance-summary:c1",
+      "source_share_id": "srcshare_e1d7867dfbd9b8d3",
+      "source_work_id": "derived-provenance-summary"
+    },
+    {
+      "lineage_depth": 0,
+      "lineage_path": [
+        "origin-provenance-note"
+      ],
+      "obligation_hash": "983b5f4f689a13b77119359fb2ef859d1ea97021c52d689f4e1f1b81fd78e2f6",
+      "payout": "0.120122",
+      "raw_share_of_lineage_pool": "1.000000",
+      "recipient_creator_id": "origin_writer",
+      "recipient_creator_name": "Origin Writer",
+      "recipient_work_id": "origin-provenance-note",
+      "role": "direct_owner",
+      "share_of_source_payout": "1.000000",
+      "source_chunk_id": "origin-provenance-note:c1",
+      "source_share_id": "srcshare_7f5c568297b875d9",
+      "source_work_id": "origin-provenance-note"
+    }
+  ],
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "c1d7cb1a158b45f190ceae8da590e30b3297519dd66b35ec869c4db9087d219d"
+  },
+  "source_royalty_shares": [
+    {
+      "chunk_id": "derived-provenance-summary:c1",
+      "content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+      "contribution_weight": "0.781596",
+      "creator_id": "summary_editor",
+      "has_upstream_lineage": true,
+      "payout": "0.429878",
+      "source_share_hash": "2abe30423c09c43475c3ce35a306a58bd9fa0584b8ec4e705c0a018e836b3602",
+      "source_share_id": "srcshare_e1d7867dfbd9b8d3",
+      "work_content_hash": "9b0f2bb803b6a8402b6b50526c3847085a5a5d6bbb00929e0292556568d0d955",
+      "work_id": "derived-provenance-summary"
+    },
+    {
+      "chunk_id": "origin-provenance-note:c1",
+      "content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+      "contribution_weight": "0.218404",
+      "creator_id": "origin_writer",
+      "has_upstream_lineage": false,
+      "payout": "0.120122",
+      "source_share_hash": "d28714dcc11f14bfb09837cf69bb4c7f6a2d2a09fd8fe15562c954a182d42a7f",
+      "source_share_id": "srcshare_7f5c568297b875d9",
+      "work_content_hash": "f6465dd18fe8ee9c4ef07ab94b9e01711efd4d5d73dd6f63bf7151781583ed79",
+      "work_id": "origin-provenance-note"
+    }
+  ],
+  "summary": {
+    "derivative_source_count": 1,
+    "issue_count": 0,
+    "lineage_edge_count": 1,
+    "max_lineage_depth": 1,
+    "payout_conserved": true,
+    "recipient_count": 2,
+    "source_share_count": 2,
+    "status": "ready",
+    "total_direct_payout": "0.550000",
+    "total_obligation_payout": "0.550000",
+    "upstream_obligation_count": 1
+  }
+}

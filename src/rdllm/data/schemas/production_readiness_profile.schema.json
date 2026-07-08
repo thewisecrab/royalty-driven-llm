@@ -1,0 +1,295 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/production_readiness_profile.schema.json",
+  "title": "RDLLM Production Readiness Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "deployment",
+    "public_surfaces",
+    "runtime_controls",
+    "security_controls",
+    "evidence_controls",
+    "governance_controls",
+    "settlement_controls",
+    "public_sector_controls",
+    "operations_slo"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-production-readiness-profile/v1"
+    },
+    "deployment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deployment_id",
+        "operator_name",
+        "operator_type",
+        "environment",
+        "tenancy_model",
+        "deployment_region_policy"
+      ],
+      "properties": {
+        "deployment_id": { "type": "string", "minLength": 1 },
+        "operator_name": { "type": "string", "minLength": 1 },
+        "operator_type": {
+          "enum": [
+            "individual",
+            "company",
+            "institution",
+            "government",
+            "model_provider",
+            "public_sector",
+            "nonprofit"
+          ]
+        },
+        "environment": {
+          "enum": [
+            "production",
+            "regulated_production",
+            "public_sector_production",
+            "sovereign_production"
+          ]
+        },
+        "tenancy_model": {
+          "enum": [
+            "single_tenant",
+            "multi_tenant",
+            "federated",
+            "offline_single_user"
+          ]
+        },
+        "deployment_region_policy": { "type": "string", "minLength": 1 }
+      }
+    },
+    "public_surfaces": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "discovery_manifest_url",
+        "provider_attribution_card_url",
+        "public_schema_base_url",
+        "transparency_log_url",
+        "security_contact",
+        "license_url"
+      ],
+      "properties": {
+        "discovery_manifest_url": { "type": "string", "minLength": 1 },
+        "provider_attribution_card_url": { "type": "string", "minLength": 1 },
+        "public_schema_base_url": { "type": "string", "minLength": 1 },
+        "transparency_log_url": { "type": "string", "minLength": 1 },
+        "security_contact": { "type": "string", "minLength": 1 },
+        "license_url": { "type": "string", "minLength": 1 }
+      }
+    },
+    "runtime_controls": { "$ref": "#/$defs/runtime_controls" },
+    "security_controls": { "$ref": "#/$defs/security_controls" },
+    "evidence_controls": { "$ref": "#/$defs/evidence_controls" },
+    "governance_controls": { "$ref": "#/$defs/governance_controls" },
+    "settlement_controls": { "$ref": "#/$defs/settlement_controls" },
+    "public_sector_controls": { "$ref": "#/$defs/public_sector_controls" },
+    "operations_slo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "revocation_propagation_sla_hours",
+        "incident_triage_sla_hours",
+        "footer_verification_latency_budget_ms",
+        "transparency_publication_sla_minutes",
+        "backup_restore_test_interval_days"
+      ],
+      "properties": {
+        "revocation_propagation_sla_hours": { "type": "number", "maximum": 24 },
+        "incident_triage_sla_hours": { "type": "number", "maximum": 24 },
+        "footer_verification_latency_budget_ms": { "type": "number", "maximum": 2000 },
+        "transparency_publication_sla_minutes": { "type": "number", "maximum": 60 },
+        "backup_restore_test_interval_days": { "type": "number", "maximum": 90 }
+      }
+    }
+  },
+  "$defs": {
+    "runtime_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "auth_required",
+        "rate_limits_enabled",
+        "tenant_isolation_enabled",
+        "abuse_monitoring_enabled",
+        "fail_closed_on_unknown_provider_state",
+        "source_footer_required",
+        "response_envelope_required",
+        "streaming_emission_gate_required",
+        "provider_route_allowlist_required",
+        "no_raw_prompt_publication"
+      ],
+      "properties": {
+        "auth_required": { "const": true },
+        "rate_limits_enabled": { "const": true },
+        "tenant_isolation_enabled": { "const": true },
+        "abuse_monitoring_enabled": { "const": true },
+        "fail_closed_on_unknown_provider_state": { "const": true },
+        "source_footer_required": { "const": true },
+        "response_envelope_required": { "const": true },
+        "streaming_emission_gate_required": { "const": true },
+        "provider_route_allowlist_required": { "const": true },
+        "no_raw_prompt_publication": { "const": true }
+      }
+    },
+    "security_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "secrets_externalized",
+        "dependency_update_policy",
+        "ci_required",
+        "supply_chain_provenance_required",
+        "vulnerability_reporting_path",
+        "audit_log_immutability",
+        "backup_restore_tested",
+        "incident_response_runbook",
+        "privacy_redaction_public_surfaces",
+        "admin_actions_audited"
+      ],
+      "properties": {
+        "secrets_externalized": { "const": true },
+        "dependency_update_policy": { "const": true },
+        "ci_required": { "const": true },
+        "supply_chain_provenance_required": { "const": true },
+        "vulnerability_reporting_path": { "const": true },
+        "audit_log_immutability": { "const": true },
+        "backup_restore_tested": { "const": true },
+        "incident_response_runbook": { "const": true },
+        "privacy_redaction_public_surfaces": { "const": true },
+        "admin_actions_audited": { "const": true }
+      }
+    },
+    "evidence_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_source_verification_required",
+        "source_rationale_required",
+        "footer_copy_export_preservation",
+        "proof_pack_publication_required",
+        "public_discovery_manifest_required",
+        "third_party_audit_supported",
+        "negative_fixture_replay_required",
+        "model_response_state_normalization_required"
+      ],
+      "properties": {
+        "claim_source_verification_required": { "const": true },
+        "source_rationale_required": { "const": true },
+        "footer_copy_export_preservation": { "const": true },
+        "proof_pack_publication_required": { "const": true },
+        "public_discovery_manifest_required": { "const": true },
+        "third_party_audit_supported": { "const": true },
+        "negative_fixture_replay_required": { "const": true },
+        "model_response_state_normalization_required": { "const": true }
+      }
+    },
+    "governance_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "creator_onboarding_policy",
+        "rights_registry_required",
+        "duplicate_claim_dispute_process",
+        "dispute_escrow_required",
+        "human_review_for_conflicts",
+        "appeals_process",
+        "consent_revocation_process",
+        "terms_publication_required"
+      ],
+      "properties": {
+        "creator_onboarding_policy": { "const": true },
+        "rights_registry_required": { "const": true },
+        "duplicate_claim_dispute_process": { "const": true },
+        "dispute_escrow_required": { "const": true },
+        "human_review_for_conflicts": { "const": true },
+        "appeals_process": { "const": true },
+        "consent_revocation_process": { "const": true },
+        "terms_publication_required": { "const": true }
+      }
+    },
+    "settlement_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "settlement_mode",
+        "direct_payout_enabled",
+        "external_payment_processor_attestation_required",
+        "minimum_creator_pool_rate",
+        "escrow_for_unattributed_enabled",
+        "raw_payment_accounts_never_public",
+        "payout_reconciliation_required",
+        "settlement_report_required",
+        "processor_attestation_or_instruction_only",
+        "tax_and_legal_operator_responsibility_accepted"
+      ],
+      "properties": {
+        "settlement_mode": {
+          "enum": ["processor_attested", "instruction_only", "escrow_only"]
+        },
+        "direct_payout_enabled": { "type": "boolean" },
+        "external_payment_processor_attestation_required": { "type": "boolean" },
+        "minimum_creator_pool_rate": { "type": "number", "minimum": 0.0001 },
+        "escrow_for_unattributed_enabled": { "const": true },
+        "raw_payment_accounts_never_public": { "const": true },
+        "payout_reconciliation_required": { "const": true },
+        "settlement_report_required": { "const": true },
+        "processor_attestation_or_instruction_only": { "const": true },
+        "tax_and_legal_operator_responsibility_accepted": { "const": true }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "settlement_mode": { "const": "processor_attested" }
+            }
+          },
+          "then": {
+            "properties": {
+              "direct_payout_enabled": { "const": true },
+              "external_payment_processor_attestation_required": { "const": true }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "settlement_mode": {
+                "enum": ["instruction_only", "escrow_only"]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "direct_payout_enabled": { "const": false }
+            }
+          }
+        }
+      ]
+    },
+    "public_sector_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "procurement_evidence_export_enabled",
+        "records_retention_policy_defined",
+        "accessibility_review_required",
+        "data_residency_policy_defined",
+        "public_interest_review_policy_defined"
+      ],
+      "properties": {
+        "procurement_evidence_export_enabled": { "type": "boolean" },
+        "records_retention_policy_defined": { "type": "boolean" },
+        "accessibility_review_required": { "type": "boolean" },
+        "data_residency_policy_defined": { "type": "boolean" },
+        "public_interest_review_policy_defined": { "type": "boolean" }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "benchmark_version": "rdllm-provenance-benchmark/v1",
+  "cases": [
+    {
+      "case_id": "clean-ledger-source",
+      "scenario": "clean_source",
+      "prompt": "What should a reliable attribution ledger record?",
+      "output": "A reliable attribution ledger records source identifiers, content hashes, retrieval scores, payout weights, event hashes, and replayable audit data so a royalty event can be independently verified.",
+      "expected_work_ids": ["ledger-proof-source"],
+      "forbidden_work_ids": []
+    },
+    {
+      "case_id": "paraphrased-consent-market",
+      "scenario": "paraphrase",
+      "prompt": "How should an AI licensing market let creators manage rights?",
+      "output": "AI licensing marketplaces should give creators consent controls, license terms, dispute windows, duplicate claim handling, and appeals so weak attribution can be challenged.",
+      "expected_work_ids": ["consent-market-source"],
+      "forbidden_work_ids": []
+    },
+    {
+      "case_id": "hard-decoy-ledger",
+      "scenario": "hard_decoy",
+      "prompt": "Which source supports replayable royalty ledger verification?",
+      "output": "A royalty attribution ledger should record source identifiers, content hashes, payout weights, event hashes, and replayable audit data.",
+      "expected_work_ids": ["ledger-proof-source"],
+      "forbidden_work_ids": ["ledger-dashboard-decoy"]
+    },
+    {
+      "case_id": "unmatched-escrow",
+      "scenario": "unattributed_escrow",
+      "prompt": "Zqxjv plerim nosto?",
+      "output": "Zqxjv plerim nosto glaven ruxel.",
+      "expected_work_ids": [],
+      "forbidden_work_ids": [],
+      "expect_escrow": true,
+      "require_grounding": false
+    },
+    {
+      "case_id": "derived-summary-lineage",
+      "scenario": "derivative_lineage",
+      "prompt": "What does the derived ledger summary preserve?",
+      "output": "Derived ledger summary: attribution reports preserve source identifiers, content hashes, event hashes, and payout weights from the original ledger proof.",
+      "expected_work_ids": ["derived-ledger-summary"],
+      "expected_upstream_work_ids": ["ledger-proof-source"],
+      "forbidden_work_ids": []
+    }
+  ]
+}

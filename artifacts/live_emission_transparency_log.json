@@ -1,0 +1,85 @@
+{
+  "entries": [
+    {
+      "entry_hash": "6752c7785985668faded289bb6cbf35001df196ffd93480b8f3258eed77f06df",
+      "entry_type": "rdllm-live-emission-witness-report/v1",
+      "index": 0,
+      "live_witness_hash": "a10ceaa8d4af2cd99cc12d512cb26e149da6c5e4871a573974e48ce58700abf5",
+      "log_id": "live-prefix",
+      "phase": "",
+      "subject_hash": "a10ceaa8d4af2cd99cc12d512cb26e149da6c5e4871a573974e48ce58700abf5",
+      "subject_payload_hash": "c05c890dbe7597ea6225d36b8bf3fd144d63cfbce4e551befa939cb32f5f23e7",
+      "witness_id": ""
+    },
+    {
+      "entry_hash": "f6b69bea10b9a98c79a59ce407d4be2d850b77830d2e53fe1942dd708e304c74",
+      "entry_type": "rdllm-live-emission-witness-attestation/v1",
+      "index": 1,
+      "live_witness_hash": "a10ceaa8d4af2cd99cc12d512cb26e149da6c5e4871a573974e48ce58700abf5",
+      "log_id": "live-latest",
+      "phase": "completion",
+      "subject_hash": "b9c741efc4f45893ff889fab9dc436cd17e359dde82c847415fc533412911177",
+      "subject_payload_hash": "73366df775035a06bbe50d9f75cce22a073239c978fe669cbefd1af522fbede4",
+      "witness_id": "witness-a"
+    },
+    {
+      "entry_hash": "d732e5119d6d153344ce823bc2442371b9293ae2aa1b7a4569dfc46fca644189",
+      "entry_type": "rdllm-live-emission-witness-attestation/v1",
+      "index": 2,
+      "live_witness_hash": "a10ceaa8d4af2cd99cc12d512cb26e149da6c5e4871a573974e48ce58700abf5",
+      "log_id": "live-latest",
+      "phase": "completion",
+      "subject_hash": "1ab8c93ec4d52281c054ed466b4c45586e27cc31b1c1c2ed59237000a7fc22f5",
+      "subject_payload_hash": "1dbdd071de5c06a0f3b47cadda56417f2881f7577d7be775b521c05e2369878b",
+      "witness_id": "witness-b"
+    },
+    {
+      "entry_hash": "4d889953660a1150175ec28346ae8ff2caab4b06cc8cdcbbb4eca9935ddb9256",
+      "entry_type": "rdllm-live-emission-witness-attestation/v1",
+      "index": 3,
+      "live_witness_hash": "a10ceaa8d4af2cd99cc12d512cb26e149da6c5e4871a573974e48ce58700abf5",
+      "log_id": "live-latest",
+      "phase": "completion",
+      "subject_hash": "a493a88e078af146158869028ec8aed03e8e5b54c7dab53ec26e1b5fdebcb901",
+      "subject_payload_hash": "9a788f55d6e64d2f1c8b527cd64626108bd4c4e1b300db6b0ef0e7e5d000afed",
+      "witness_id": "witness-c"
+    },
+    {
+      "entry_hash": "e1d6981e8e12cf7bcf17dc30beb8f363017840a489e9d8de27719bf7eabf29ca",
+      "entry_type": "rdllm-live-emission-witness-attestation/v1",
+      "index": 4,
+      "live_witness_hash": "a10ceaa8d4af2cd99cc12d512cb26e149da6c5e4871a573974e48ce58700abf5",
+      "log_id": "live-latest",
+      "phase": "preflight",
+      "subject_hash": "4ba74d3026358e7208dd6e78b28847c3c09211db64dd4a61c4a0e04518b1438a",
+      "subject_payload_hash": "3967dadd05b68a197561b5978a4aa8c1c0e9ea762f3ddd470b1d80cba3c5cbf9",
+      "witness_id": "witness-a"
+    },
+    {
+      "entry_hash": "ea32f9a968140cf82c46a92df8943337d91da3561dfa9ba199ecb2034865c372",
+      "entry_type": "rdllm-live-emission-witness-attestation/v1",
+      "index": 5,
+      "live_witness_hash": "a10ceaa8d4af2cd99cc12d512cb26e149da6c5e4871a573974e48ce58700abf5",
+      "log_id": "live-latest",
+      "phase": "preflight",
+      "subject_hash": "1e707f0f75ffe2203e9ddaaf5556dd0cba0873ec3e3c245292ca80fc949523a2",
+      "subject_payload_hash": "e690ae0d8fd8d5cf59c42f07614cd696785801a13ba757386c7779370c6fd7c6",
+      "witness_id": "witness-b"
+    },
+    {
+      "entry_hash": "89b8dc243a7673e0475a5acd48c6a49fbbf4fc41fdf2c67c32d1ed3ee5440fe2",
+      "entry_type": "rdllm-live-emission-witness-attestation/v1",
+      "index": 6,
+      "live_witness_hash": "a10ceaa8d4af2cd99cc12d512cb26e149da6c5e4871a573974e48ce58700abf5",
+      "log_id": "live-latest",
+      "phase": "preflight",
+      "subject_hash": "507cde6d242c72075b5fd534687b1a3ac340631ba634efc026ab1539ccf268fa",
+      "subject_payload_hash": "b31000a885692840f7c5b7d4e16e632d3e3a8b25bd502b25ad8964ddefdc4a93",
+      "witness_id": "witness-c"
+    }
+  ],
+  "log_id": "live-latest",
+  "log_version": "rdllm-live-emission-transparency-log/v1",
+  "root": "0ef015ed92cb647dbe367a9ba602de71b8ba284b802950d972b30917cf1d246c",
+  "tree_size": 7
+}

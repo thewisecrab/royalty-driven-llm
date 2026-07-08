@@ -1,0 +1,42 @@
+{
+  "creators": [
+    {
+      "creator_id": "origin_writer",
+      "name": "Origin Writer",
+      "payout_account": "acct_origin"
+    },
+    {
+      "creator_id": "summary_editor",
+      "name": "Summary Editor",
+      "payout_account": "acct_summary"
+    }
+  ],
+  "works": [
+    {
+      "work_id": "origin-provenance-note",
+      "creator_id": "origin_writer",
+      "title": "Original Provenance Note",
+      "source_uri": "https://example.test/origin-provenance-note",
+      "license": "royalty-bearing",
+      "data_value_prior": 1.0,
+      "content": "The original provenance note says attribution systems should preserve source lineage across summaries, synthetic datasets, tool outputs, and transformed training corpora."
+    },
+    {
+      "work_id": "derived-provenance-summary",
+      "creator_id": "summary_editor",
+      "title": "Derived Provenance Summary",
+      "source_uri": "https://example.test/derived-provenance-summary",
+      "license": "royalty-bearing",
+      "data_value_prior": 1.0,
+      "derived_from": [
+        {
+          "work_id": "origin-provenance-note",
+          "weight": 1.0,
+          "relation": "summarizes",
+          "source_uri": "https://example.test/origin-provenance-note"
+        }
+      ],
+      "content": "Derived provenance summary: attribution systems preserve source lineage across summaries and transformed training corpora."
+    }
+  ]
+}

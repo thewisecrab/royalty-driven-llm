@@ -1,0 +1,730 @@
+{
+  "artifact_bindings": {
+    "artifact_binding_root": "9c2a3adcd5954bf57ed30ad837622d2b826d41457459dd889511a58ad034f3d1",
+    "artifact_count": 10,
+    "bindings": [
+      {
+        "artifact_binding_hash": "d149ceec92783ab9e64ffcdf670a2a807e2832915c42d6acf19821198d555d3b",
+        "declared_hash": "02f3172634a1ec03a81c458b57250114c53b1a58056a5b4710f1c63b4e768599",
+        "hash_reproducible": true,
+        "name": "universal_citation_verification_contract",
+        "payload_hash": "ccd503298ca5f44653c61f69f33c2ddae7925bc732ea3303317d5f11a126c941",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L141",
+        "version": "rdllm-universal-citation-verification-contract/v1"
+      },
+      {
+        "artifact_binding_hash": "0849babae89bc131e4e088abf7264f64032c35df8ebf004d0707823dfe671a2a",
+        "declared_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+        "hash_reproducible": true,
+        "name": "response_envelope",
+        "payload_hash": "50ed97d811e60b08febfb00cd3b751d4a3fc89951df8837c8b25f19cd98e3460",
+        "present": true,
+        "status": "verified",
+        "target_level": "",
+        "version": "rdllm-response-envelope/v1"
+      },
+      {
+        "artifact_binding_hash": "9b6da4576931b6773ec3cecc0d37f3a5dc2dd72576acd0dabf16a56e10091d58",
+        "declared_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+        "hash_reproducible": true,
+        "name": "source_footer_delivery",
+        "payload_hash": "fc37fa57d1222e209fb68925041a40ff67db7cb02397acb63fc43fe1924c6929",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L103",
+        "version": ""
+      },
+      {
+        "artifact_binding_hash": "81e85a2ebe661fac14429e2e7a3cb62acde65dc8064cfca87e23ea3d5f6d1e73",
+        "declared_hash": "787f349109f3980a6519e68f78f9169a558a76ad2f7bb400e21467eddc1bcd80",
+        "hash_reproducible": true,
+        "name": "answer_claim_coverage_report",
+        "payload_hash": "aecff2b610fa4e6f505fb9e6e9c510cf076d3c29480e8a1dcb6de017bda1fed4",
+        "present": true,
+        "status": "verified",
+        "target_level": "RDLLM-L59",
+        "version": "rdllm-answer-claim-coverage-report/v1"
+      },
+      {
+        "artifact_binding_hash": "680ffd87d9f226dd547b8f680bda6eafae6b5610641e6067496a92f574359193",
+        "declared_hash": "252e757a16d2c5711e88bf72fa4a8f93935efcb1b03ab6b663ebb2f0f3143a74",
+        "hash_reproducible": true,
+        "name": "source_freshness_audit",
+        "payload_hash": "0a0900f4f056821c88555d33724c26e0591beed41ab23fc2a8ded2d14f2f2ba8",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L116",
+        "version": "rdllm-source-freshness-audit/v1"
+      },
+      {
+        "artifact_binding_hash": "7e4e33da882bdb594a08447684b606240befb5f0066002b880d5ff3e206b4d88",
+        "declared_hash": "2dc921de0254159898bce7a3af140bd9e468ee442b00648f5b6bd1b67e43dfc5",
+        "hash_reproducible": true,
+        "name": "consent_revocation_propagation",
+        "payload_hash": "e1eb7dd02f40278bfa12405f40f765bf44c3a9bd9ee12f935ee4c178386c7707",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L118",
+        "version": "rdllm-consent-revocation-propagation/v1"
+      },
+      {
+        "artifact_binding_hash": "8d1d9708f4509fcd8e710f7491e03f59fbf3c4886623ca8531f32fba3d35da3d",
+        "declared_hash": "cbb0d24666577043fa9031de5ae7d022bde442aef432b4020f4f628547a61743",
+        "hash_reproducible": true,
+        "name": "citation_url_health",
+        "payload_hash": "6065c9898e37b695872e3385f002817f5a351df0839a54ec0cc2191ed6246dc3",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L124",
+        "version": "rdllm-citation-url-health/v1"
+      },
+      {
+        "artifact_binding_hash": "666ebc0e55e549d6cea485913ccf32baed113c98860dfff1d561310546c297db",
+        "declared_hash": "000a11d94c0590dd12c403912bb1eb1e9569fd73182a6cb90170abb6a6970ece",
+        "hash_reproducible": true,
+        "name": "evidence_locator_manifest",
+        "payload_hash": "0ce20056cd21b754f45033910d69c154dec761f45633e52d85ac7fca6c5e526d",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L123",
+        "version": "rdllm-evidence-locator-manifest/v1"
+      },
+      {
+        "artifact_binding_hash": "f8afa6a807b47b04232a14e4a1f556bd0b816cd8d0b4d361c918be7f47240adb",
+        "declared_hash": "c02d150676e3f650854bf21ab6acc4460507e90680cadcdba1c1ae72144414e9",
+        "hash_reproducible": true,
+        "name": "source_access_lease_report",
+        "payload_hash": "fc33ec0e066082db282b7ed473359ade2a75ef16b9184551e14fe30f4b0d6ec0",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L98",
+        "version": ""
+      },
+      {
+        "artifact_binding_hash": "aae2b44de93e3299f8fb050866ab57fca150d5c93dd59e5798aba8825494bc6e",
+        "declared_hash": "ca4bf6639b80b98dd0dffcf7b67855a0a9717e22ceca6576df57e0c029346974",
+        "hash_reproducible": true,
+        "name": "trust_registry",
+        "payload_hash": "13b69e349e4e0d309d4ee9af06382b4f8e0a1328d39b33bbfd0d5ab66cb65fc0",
+        "present": true,
+        "status": "ready",
+        "target_level": "RDLLM-L51",
+        "version": "rdllm-trust-registry/v1"
+      }
+    ]
+  },
+  "checks": {
+    "artifact_hashes_reproducible": true,
+    "cache_collision_resistance_enforced": true,
+    "citation_contract_ready_l141": true,
+    "discovery_manifest_exposes_contract_path": true,
+    "failure_cases_fail_closed": true,
+    "freshness_consent_and_license_preserved": true,
+    "private_strings_absent": true,
+    "provider_family_coverage_complete": true,
+    "public_report_has_no_private_field_names": true,
+    "public_verifier_commands_declared": true,
+    "required_core_artifacts_present": true,
+    "reuse_decisions_present": true,
+    "reuse_decisions_ready": true,
+    "reuse_dimensions_complete": true,
+    "reuse_metered_as_new_usage": true,
+    "reuse_source_labels_covered_by_l141": true
+  },
+  "commitments": {
+    "artifact_binding_root": "9c2a3adcd5954bf57ed30ad837622d2b826d41457459dd889511a58ad034f3d1",
+    "failure_case_root": "91ff8eec03059fd8da7ace62938a556e32312e6eb9282880467a8ca40025b9b5",
+    "grounded_reuse_commitment_hash": "f8b270da53bee4c2aa0b09f046826561903d44e4f6954fe3de5088cfc6d5149d",
+    "provider_family_root": "35996f3a82b66309334717f409214a4cd39d7d340f8c8d930f1f58361e688d1c",
+    "reuse_decision_root": "e327001c0396ecd5b5affc7f3af5bc4ec2798d791658d9db5378aed9eddafa31",
+    "reuse_dimension_root": "c32604bf487ef157bcee0eba6d7024ece3691cdea9e6643c2eb579d897eb2853",
+    "universal_citation_verification_contract_hash": "02f3172634a1ec03a81c458b57250114c53b1a58056a5b4710f1c63b4e768599",
+    "verifier_command_root": "4c43195f154526af9d2560c722788f5f697753738fbe02a48445c287edc3b5eb"
+  },
+  "created_at": "2026-06-02T01:10:19Z",
+  "failure_case_rows": [
+    {
+      "case_id": "cache_poisoning",
+      "expected_block": true,
+      "failure_case_row_hash": "e18ed2cad205abc13793891f73050e1f326c0d0891ccde59f6416f90f6602b00",
+      "fixture_hash": "8e90c3c281b0563b4da68e5a4c166e3e03abda9f9a53496fd4da5d34d0b0430a",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-grounded-reuse-contract"
+    },
+    {
+      "case_id": "citation_contract_drift",
+      "expected_block": true,
+      "failure_case_row_hash": "73918a1e9fec44ed828b3848c8a14123296cc6a98d0cb7213401e8fd3f778d6f",
+      "fixture_hash": "49c76a0a37a28329cdca4245bd929c1042a10a6570de020d7841b9d80be12612",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-grounded-reuse-contract"
+    },
+    {
+      "case_id": "evidence_mismatch",
+      "expected_block": true,
+      "failure_case_row_hash": "367a7a9df13d4913a05471df8600fbb460113d7344cdd1f69554e2e026620554",
+      "fixture_hash": "f13aa6f214bcb3cdfca1f5e0e29b39a3b19238653ff284909674b43a05560d69",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-grounded-reuse-contract"
+    },
+    {
+      "case_id": "missing_reuse_royalty_event",
+      "expected_block": true,
+      "failure_case_row_hash": "a9f07eca621ee61c008f66fd3382f34c0e732c23b433484b4fac8da88a3fb192",
+      "fixture_hash": "46d28698759b9780ae74477a22cbca5d6c80752844f8488cbe5d15a0ef169fe8",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-grounded-reuse-contract"
+    },
+    {
+      "case_id": "private_cache_key_leak",
+      "expected_block": true,
+      "failure_case_row_hash": "c51035987cd9ccda5c237049e5179569798079582b795cd1acc3bebbf26387c5",
+      "fixture_hash": "161259b10cf9719160291f6af46becaa0b6b51740bf096431df87964663ebb16",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-grounded-reuse-contract"
+    },
+    {
+      "case_id": "query_collision",
+      "expected_block": true,
+      "failure_case_row_hash": "7be16ca34aa3498b6b91bee0b4e505d4fcf27e866681993dc59509deeff001bd",
+      "fixture_hash": "1ae71544c565fa73fc2679034fc010d37cd3dc1a15aa6f2275ce540d63bede40",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-grounded-reuse-contract"
+    },
+    {
+      "case_id": "revoked_consent",
+      "expected_block": true,
+      "failure_case_row_hash": "eb14ef72156bfa59329fac8f92851c4f4b94ba785c278a33b8e32cb6fa7c06a8",
+      "fixture_hash": "d1de8b50a5076a627380421815618a594dc4e211d1dd3ee3130493ad2d62eb95",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-grounded-reuse-contract"
+    },
+    {
+      "case_id": "stale_source_version",
+      "expected_block": true,
+      "failure_case_row_hash": "7bdc5fb9a45bfc4aefcbc08218226c78fb480950396dd145bd303b9717e4e4db",
+      "fixture_hash": "79e02e1519cc3a2ec35a1bbd70ea98b2a2d63f8a87dc009e3c2a4e516028f465",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-grounded-reuse-contract"
+    },
+    {
+      "case_id": "undeclared_provider_cache",
+      "expected_block": true,
+      "failure_case_row_hash": "b5fb1859c5f8d1e2a41f9fbf161eb5a739be293cbb02287805f99b6e34fd38df",
+      "fixture_hash": "458e5b5cfcc01691d07a6fccde67a30482bbb01a18cfeb19d9516f8c03e95dc3",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-grounded-reuse-contract"
+    },
+    {
+      "case_id": "unsupported_cached_claim",
+      "expected_block": true,
+      "failure_case_row_hash": "322ba5617350ec5bc799908d54bb37096b5a470dd21ea34dfa90da7ac00b4c3a",
+      "fixture_hash": "70c63ef1c279838480ce75a4a1e6bea3a025162a536180410c43bc65c1b40293",
+      "observed_block": true,
+      "passed": true,
+      "required": true,
+      "verifier_command": "verify-universal-grounded-reuse-contract"
+    }
+  ],
+  "grounded_reuse_contract_version": "rdllm-universal-grounded-reuse-contract/v1",
+  "issuer": "rdllm-local-demo",
+  "privacy": {
+    "hash_only_reuse_bindings": true,
+    "private_field_findings": [],
+    "private_strings_absent": true,
+    "raw_answer_text_disclosed": false,
+    "raw_cache_key_disclosed": false,
+    "raw_query_text_disclosed": false,
+    "raw_source_text_disclosed": false
+  },
+  "provider_family_rows": [
+    {
+      "adapter_hash": "504f0c561afedc82654de68b195694ed64bee4cb996ecabb089235b07981a71a",
+      "cache_surface_hash": "9ad683e04b0f94f295ff7806daaffc657ac5a192ac492119c1f2a7405058d61e",
+      "fail_closed": true,
+      "provider_family": "anthropic",
+      "provider_family_row_hash": "9aa6d2b4dcffb4d452cbf708c794b82d4f111ad123f4a7ce2974e77c99da0c48",
+      "public_verifier_command": "verify-universal-grounded-reuse-contract",
+      "ready": true,
+      "required": true,
+      "reuse_event_schema_hash": "c7b84d8a46e2dd5034679ee1cbb480f0b779310f93a61f8421095f093a788221",
+      "supports_grounded_reuse": true
+    },
+    {
+      "adapter_hash": "b0cbd0319c50c712ea09216242962d3616ec484597d093e947bbcc3b554e61e6",
+      "cache_surface_hash": "3de55e1194b81d824e3851a50e420de89bb77f09aeb27254462750448a9a355d",
+      "fail_closed": true,
+      "provider_family": "cohere",
+      "provider_family_row_hash": "f880486a52301c365e2e981c4f7262ff3e64568ed92c1245b1684a97e397288d",
+      "public_verifier_command": "verify-universal-grounded-reuse-contract",
+      "ready": true,
+      "required": true,
+      "reuse_event_schema_hash": "2e4adc1362a7030116b4c1b83bb6ec8e79d0c3d10d0a1186024788169bedf040",
+      "supports_grounded_reuse": true
+    },
+    {
+      "adapter_hash": "4f6d4964a91e5d36c35ada97c8ebd92a57cd85be61858ba36bb4b619d1ff94e8",
+      "cache_surface_hash": "85cef245be0eca12722ed399bce47c3f10d3947a8ddbfdefd2825fde8935125a",
+      "fail_closed": true,
+      "provider_family": "deepseek",
+      "provider_family_row_hash": "6d9148cd856a7b421ef08a017bd905aa7199c49216bee3b32dd672a12142fc09",
+      "public_verifier_command": "verify-universal-grounded-reuse-contract",
+      "ready": true,
+      "required": true,
+      "reuse_event_schema_hash": "eee77af50170262771d989870ed7cd03a243b2e460e4ec16f1602ca70b498617",
+      "supports_grounded_reuse": true
+    },
+    {
+      "adapter_hash": "5756d6a659952a2557c57239f4058669f2a763497ebb13321876f0e325d733db",
+      "cache_surface_hash": "0829e56c7c9a459c3328f5d497c01bdc47d474e2d46326fd46127f8f1a715d8f",
+      "fail_closed": true,
+      "provider_family": "enterprise_gateway",
+      "provider_family_row_hash": "ac09adf7386328989783265a118e58370c14377875f0a75dcaf48ae295d22e33",
+      "public_verifier_command": "verify-universal-grounded-reuse-contract",
+      "ready": true,
+      "required": true,
+      "reuse_event_schema_hash": "b2cf8d36c7a59ac88b2d76cdb3e2e1bf2c4aab5beef5764cd4c13094c120e7c5",
+      "supports_grounded_reuse": true
+    },
+    {
+      "adapter_hash": "b2fe912dfd5adb1bdc736b86ea66904279f9891a8cf11e1d464080edb040cdb8",
+      "cache_surface_hash": "26bf91722f5023db4b09f68b9476916a305c05afa3012e790b0c67f741ac44b1",
+      "fail_closed": true,
+      "provider_family": "google",
+      "provider_family_row_hash": "d7f5478f181eb1d223d2d94904df4978b42e1617f010f4353a3877ea59ddc597",
+      "public_verifier_command": "verify-universal-grounded-reuse-contract",
+      "ready": true,
+      "required": true,
+      "reuse_event_schema_hash": "e090c58c00178c33702f45a7d8ba3c9d3816cf8812ce145d37dfcfbf7eb0bb18",
+      "supports_grounded_reuse": true
+    },
+    {
+      "adapter_hash": "df49c5fcc1ca79a3ac1ffdcafabbfd43a287bb71d44f6de3de7f2f88f7e7b21a",
+      "cache_surface_hash": "b97cfbb095b943a489c837e782bcfdc2b337fb7fe04244be1ac91544f4f5660b",
+      "fail_closed": true,
+      "provider_family": "local_open_weights",
+      "provider_family_row_hash": "b85dc0e0262ddf037b7f0e53b13f5fdba64212c157d2987126666ccde52b5810",
+      "public_verifier_command": "verify-universal-grounded-reuse-contract",
+      "ready": true,
+      "required": true,
+      "reuse_event_schema_hash": "82e3e4ef7f4f5ba3377f982ed3138a0dbf4b587d9eeeac66135ba0a6259bccef",
+      "supports_grounded_reuse": true
+    },
+    {
+      "adapter_hash": "496f46ea615c4fceaf3e8393cc9558df41bd64a21b38e79e5ca2317ad3506167",
+      "cache_surface_hash": "d008f18f610aa2147e0914a9e52c1cc9e6d8a2af99ca5f5205d92edf468d0709",
+      "fail_closed": true,
+      "provider_family": "meta",
+      "provider_family_row_hash": "747606a3e45fe9281c40be22ef9249744e0e97d5c3d437c52b22f4a3aa8d033d",
+      "public_verifier_command": "verify-universal-grounded-reuse-contract",
+      "ready": true,
+      "required": true,
+      "reuse_event_schema_hash": "b2eaecf9c02cc5be2ae5f129a1f7ea6c73394017cfde52f87a50785e9745f4b5",
+      "supports_grounded_reuse": true
+    },
+    {
+      "adapter_hash": "b07cb852d9e8c43be7e7af93d55c73904c60a39094e9c8fea5d67725b89f6362",
+      "cache_surface_hash": "6534c93b48ff41e83bd3eee135dee35c69839122c32a0f199b887679648a32ca",
+      "fail_closed": true,
+      "provider_family": "mistral",
+      "provider_family_row_hash": "5fbebf66202efe10607ca74025d3353168b4aa76d3858ae5f62eda862c065510",
+      "public_verifier_command": "verify-universal-grounded-reuse-contract",
+      "ready": true,
+      "required": true,
+      "reuse_event_schema_hash": "2934e80c721fe34ebefcaa9860e31c98e292c439a683760c8718e160e30ecc3a",
+      "supports_grounded_reuse": true
+    },
+    {
+      "adapter_hash": "8d2623d1df064c8fe06e8f042c561bea83215fcd54c5c3b172e4416f01051c49",
+      "cache_surface_hash": "4fbf1ea878ecac3d2bfca855083a5d4f8c42fcb50d889eab6d4c27b17da82097",
+      "fail_closed": true,
+      "provider_family": "openai",
+      "provider_family_row_hash": "01ed9ca268e9cdf8eb2a99eea44362ce16d23077dca750b7f17e225e700fc222",
+      "public_verifier_command": "verify-universal-grounded-reuse-contract",
+      "ready": true,
+      "required": true,
+      "reuse_event_schema_hash": "1df29c0194689a5532d8155b9f5809f045d7b7bded4bfd90645c0e3bd8f2e4a4",
+      "supports_grounded_reuse": true
+    },
+    {
+      "adapter_hash": "a1fb5616e03789050c04d705bbb151a6886beef0ca9c3f5ada3c6b5e921ebbb6",
+      "cache_surface_hash": "f40efe542bd331101d4854710b9582831467dadb2e30b88985b6d3a30828455b",
+      "fail_closed": true,
+      "provider_family": "xai",
+      "provider_family_row_hash": "4966d1bf1d672ee46ee36d57fc0bf1b56458fcbe9427c91201bef4f55617a7f3",
+      "public_verifier_command": "verify-universal-grounded-reuse-contract",
+      "ready": true,
+      "required": true,
+      "reuse_event_schema_hash": "22ed9078d6a0fa56569923edd988235ff1fa0b7897687efc6177a293c67d59ab",
+      "supports_grounded_reuse": true
+    }
+  ],
+  "reuse_decision": {
+    "decision": "publish_universal_grounded_reuse_contract",
+    "failed_checks": [],
+    "failure_modes": [],
+    "grounded_reuse_approved": true,
+    "publication_authorized": true,
+    "reuse_settlement_approved": true,
+    "safe_output_policy": "reuse_only_after_l142_freshness_consent_evidence_and_royalty_replay"
+  },
+  "reuse_decision_rows": [
+    {
+      "adversarial_collision_blocked": true,
+      "attribution_receipt_hash": "38209a26c2e9f446ca27092c929da24ebef00a03e4ab66b32d585ec21ac23a2c",
+      "cache_collision_checked": true,
+      "cache_entry_hash": "11b62f4ca6b367d6ffe7f42bedd330801d7bfd95c241073348e99b9b382f5816",
+      "citation_contract_hash": "02f3172634a1ec03a81c458b57250114c53b1a58056a5b4710f1c63b4e768599",
+      "citation_footer_preserved": true,
+      "claim_support_state": "supported",
+      "consent_revocation_hash": "2dc921de0254159898bce7a3af140bd9e468ee442b00648f5b6bd1b67e43dfc5",
+      "consent_state": "active",
+      "evidence_overlap": "0.88",
+      "fresh_evidence_root": "fc2469f56e16733891b84164a41814a0d930545bf30a0dc048ab4237d11b90ad",
+      "freshness_audit_hash": "252e757a16d2c5711e88bf72fa4a8f93935efcb1b03ab6b663ebb2f0f3143a74",
+      "license_state": "allowed",
+      "new_query_hash": "45882d43b98b9dec1a0a2c8a9b816d73e801b06fd2dbfde3b17fc74227206e07",
+      "prior_query_hash": "16c8625b058659cf37dd886a5b7ee495d9ed383fa377d3af2729b711937ffa81",
+      "prior_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "provider_family": "anthropic",
+      "query_similarity": "0.90",
+      "ready": true,
+      "reuse_allowed": true,
+      "reuse_decision_row_hash": "8daad7d6328138fd33454a81167f0f5aac93930aa7af95d33a961adf46ddfd09",
+      "reuse_id": "reuse:artifact:l142:gateway-cache",
+      "reuse_metered_as_new_usage": true,
+      "reuse_royalty_event_hash": "c4f7b2b36b9cb583ffd8d8645772dd55aa87ca6d7d2c83abd256bfcf47aefc51",
+      "reuse_surface": "gateway_response_cache",
+      "reused_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "royalty_state": "active",
+      "settlement_row_hash": "fa964445f1af60d99c457c13e2c252fe8778afd572a2afba1f9531a42f1ff5e0",
+      "source_access_lease_hash": "c02d150676e3f650854bf21ab6acc4460507e90680cadcdba1c1ae72144414e9",
+      "source_labels": [
+        "S1"
+      ],
+      "source_version_root": "2efff246e8e0d4546e21b64d71e3b7efdea691090de3ed56fee77235cd877f2d",
+      "source_version_state": "current"
+    },
+    {
+      "adversarial_collision_blocked": true,
+      "attribution_receipt_hash": "87a20ac078b929dda03828d0ef7c9d9cfeb9b761d37a45f63ee05d8dc74d9c66",
+      "cache_collision_checked": true,
+      "cache_entry_hash": "bc6a9ba6840e35eac516bfc03cbda190a683ed458f89b1e7fd0762612fe94ae2",
+      "citation_contract_hash": "02f3172634a1ec03a81c458b57250114c53b1a58056a5b4710f1c63b4e768599",
+      "citation_footer_preserved": true,
+      "claim_support_state": "supported",
+      "consent_revocation_hash": "2dc921de0254159898bce7a3af140bd9e468ee442b00648f5b6bd1b67e43dfc5",
+      "consent_state": "active",
+      "evidence_overlap": "0.91",
+      "fresh_evidence_root": "ae2d721e017cd4f16ca43dc248e493abb8eb01a422389951fb9b74f2702a72ab",
+      "freshness_audit_hash": "252e757a16d2c5711e88bf72fa4a8f93935efcb1b03ab6b663ebb2f0f3143a74",
+      "license_state": "allowed",
+      "new_query_hash": "89ff9066a560869dca100e7b937723bef9a9f149f1cbf7fc49c561a763a77e0a",
+      "prior_query_hash": "c6c441765ec2792292c05a41caac3f91aad481fc1da200317eae2027b09f7c52",
+      "prior_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "provider_family": "openai",
+      "query_similarity": "0.94",
+      "ready": true,
+      "reuse_allowed": true,
+      "reuse_decision_row_hash": "6cb474ab11bced664df3ba892b585249d44937979fd4867c285a1c435b518362",
+      "reuse_id": "reuse:artifact:l142:semantic-answer-cache",
+      "reuse_metered_as_new_usage": true,
+      "reuse_royalty_event_hash": "6c3a724d5a002532d285688e06b5f0f26db68e2a3beafbee8c02951ee214de59",
+      "reuse_surface": "semantic_answer_cache",
+      "reused_response_envelope_hash": "b2ccf908f7a6a9846bbe5268025ec6f2d585d8d9e0ec27f8256b4f24c23731be",
+      "royalty_state": "active",
+      "settlement_row_hash": "e0c571b3e860625683c987ec4b55851659c01628cb6cb708d7167ebbdfde092a",
+      "source_access_lease_hash": "c02d150676e3f650854bf21ab6acc4460507e90680cadcdba1c1ae72144414e9",
+      "source_labels": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "source_version_root": "876ceffbf52d23f5cc6e42a732ed73ed48e56ce58da1ea4f7430670ccda6234d",
+      "source_version_state": "current"
+    }
+  ],
+  "reuse_dimension_rows": [
+    {
+      "calibration_hash": "6f903f603a6c4ecd36b495f33b9a0d35fd9882f60f0b3cac0ad1c051af0a625d",
+      "covered": true,
+      "dimension": "cache_collision_resistance",
+      "evaluator_hash": "e407786ac1289bbe36e32ad96fcd00c96b8af273271cd07aad8adcd3c949be55",
+      "evidence_schema_hash": "0fac7542203d19a23d8cc3ddda717b2ac8926d0e9940b558fdc5f322ad03325f",
+      "fail_closed": true,
+      "ready": true,
+      "required": true,
+      "reuse_dimension_row_hash": "bd49c1498949ae688453a433d2b9cabe63e50e658d5d93f254ffab05d5dc528a"
+    },
+    {
+      "calibration_hash": "c8f917c856f63e1a6ab03dd1d1f14bb6ed5a0705d8387d24b4211d71c8faa433",
+      "covered": true,
+      "dimension": "citation_contract_continuity",
+      "evaluator_hash": "92fb0df60fac177d4c8e23bcb51957bdc38e0f0ece7178091c9527d0ac6b5c96",
+      "evidence_schema_hash": "7b9fa1b3a300fddf7c1d51e06fe8fdcdadda3d027440115aacae41645c5e2d67",
+      "fail_closed": true,
+      "ready": true,
+      "required": true,
+      "reuse_dimension_row_hash": "40ac64837e48edf96387acb0d4d6f7265e7c549c85e1ddf4a796da14e88b5ec3"
+    },
+    {
+      "calibration_hash": "52c10efcb4ad0e812027bdec4f2b6f2cea0146c5031c4815ff27baed8d29128a",
+      "covered": true,
+      "dimension": "claim_support_replay",
+      "evaluator_hash": "bf106f6e1b47de3e7ca30f80dd8f02d4479c1c117c5e1bbb7e4c717cb796176c",
+      "evidence_schema_hash": "080e96c1784ecffe86e7246d00259ab1d533fff41cc2955a12bd005d42d81c13",
+      "fail_closed": true,
+      "ready": true,
+      "required": true,
+      "reuse_dimension_row_hash": "9770bffa6f0c821baf9ac628c6d458ff08bcbdf1487e33b37948d3dcad50f764"
+    },
+    {
+      "calibration_hash": "b1a2b60e4263e192d1e0d2c0d846ff184a404abf04bf2668fb1ec5b80c98aa03",
+      "covered": true,
+      "dimension": "evidence_overlap",
+      "evaluator_hash": "864f126f3e832f3ed09f891d8b72d2934c18c7ab11e0df2b65f7588dac375a6e",
+      "evidence_schema_hash": "191f47e859a082adeb287f5dd644b78bf0ad3e083aad630a8d13b66acec40a7e",
+      "fail_closed": true,
+      "ready": true,
+      "required": true,
+      "reuse_dimension_row_hash": "2a2070f1d4eaebb84ba76c9324a56a81f9c44941ebd1e8eea1199b4b01c541bc"
+    },
+    {
+      "calibration_hash": "90cd27a846dc31b53f586c440465c99d50a3c4bf4ea162fad11b8016a3d2b762",
+      "covered": true,
+      "dimension": "license_and_consent_continuity",
+      "evaluator_hash": "616a6fc5de021d0b6529e6102bce3a0edee965d97227fc58d6a000f8497dc0bc",
+      "evidence_schema_hash": "e4cbed67a74deae88f3c906ce92454755a71fb66f576439301744a45b18c00f8",
+      "fail_closed": true,
+      "ready": true,
+      "required": true,
+      "reuse_dimension_row_hash": "f857a7cec845195b592bbbce72d5629727956f480560ea76aa4b6873b72e1b01"
+    },
+    {
+      "calibration_hash": "a9c2cec9af55f9279a95e994704e463ccc033d2e7bf6e29ade2204ee2b5dde3a",
+      "covered": true,
+      "dimension": "private_leakage",
+      "evaluator_hash": "38f80634b01e2541ec18ba7fe675deb9f7f7e5def1c1060a784905c6bd282038",
+      "evidence_schema_hash": "532325c655cbb0ca75e20f074d8c922bb0210006bf0b409f516a695b71338eab",
+      "fail_closed": true,
+      "ready": true,
+      "required": true,
+      "reuse_dimension_row_hash": "2dcc94d0dbb659b65d95245a559917a0563fa2d6c4e0be39a6ac77368ea34379"
+    },
+    {
+      "calibration_hash": "0b79f280cd475a231ce605275cb2b56d9ea1e01eb12bc5ca20f63a6bc081f4dd",
+      "covered": true,
+      "dimension": "provider_portability",
+      "evaluator_hash": "6e919e762bd98fe9ffc0578aee83228f347575bd92e6974cde479a1276999622",
+      "evidence_schema_hash": "59ec5290364dd3992c9a94a80a318b0866b088fbe5debec10aeeab5efaa4383c",
+      "fail_closed": true,
+      "ready": true,
+      "required": true,
+      "reuse_dimension_row_hash": "4b34c48068058eb8c154b44229d1b55174dd0d05220d438b50e0459ff756e9fa"
+    },
+    {
+      "calibration_hash": "e5d769f95906e65648589f4a9da54f2aec2bbf3dc36d6dd4802fb3b19226c928",
+      "covered": true,
+      "dimension": "query_equivalence",
+      "evaluator_hash": "2d49c665eed43eb068ddcfac711d2ba2cc864c27147e424e78e034f9c23ffd8d",
+      "evidence_schema_hash": "dbfe46bf50df777c973742f7b6817afbba23050b5a009923c99f3793c977f9c8",
+      "fail_closed": true,
+      "ready": true,
+      "required": true,
+      "reuse_dimension_row_hash": "afa4cc93b7aba9adf5c0a4719eaa3da043039b5268e65fbadf2b72c973408774"
+    },
+    {
+      "calibration_hash": "287c583d700362e0cf8f4ef21763d5a2dfac08b1f39d16feade3f82ac732b20a",
+      "covered": true,
+      "dimension": "royalty_metering",
+      "evaluator_hash": "b23be65b96444b338c355c063bbc25af9b47ab40c5c3754b96be0383f7bf1b13",
+      "evidence_schema_hash": "f5bd09e810bf5040b60259614d8b03b93f57343e63361ab6c5fe5080a86d3b31",
+      "fail_closed": true,
+      "ready": true,
+      "required": true,
+      "reuse_dimension_row_hash": "e897a3dba3f9a2035a30b07b50f74daac73c07b1858cb03713bdb72ff4c98337"
+    },
+    {
+      "calibration_hash": "c954eb02f205096bf52ec08c1cb1dc20eadd1e96d72cca63c1ace088943d8cf3",
+      "covered": true,
+      "dimension": "source_version_validity",
+      "evaluator_hash": "b3c1eae5c26477fa8617576f06fdf20633dcd6401d4215056ba2e1f45320b38e",
+      "evidence_schema_hash": "86ed83d06e720968a8bd3b119decda80eb321a0a9ee76fa798aeb0b9351af5f9",
+      "fail_closed": true,
+      "ready": true,
+      "required": true,
+      "reuse_dimension_row_hash": "b8fd85a3b134d647287e9b3d6ad553d51c94c01af2efae8870e93a2b23a649c5"
+    }
+  ],
+  "reuse_policy": {
+    "minimum_evidence_overlap": "0.80",
+    "minimum_input_level": "RDLLM-L141",
+    "minimum_query_similarity": "0.85",
+    "on_cache_collision": "block_reuse_and_open_abuse_audit",
+    "on_missing_royalty_event": "block_reuse_settlement",
+    "on_private_text_leak": "block_publication",
+    "on_revoked_consent": "block_reuse_and_route_to_revocation_replay",
+    "on_stale_source": "block_reuse_and_refresh_generation",
+    "profile": "rdllm-universal-grounded-reuse-policy/v1",
+    "required_core_artifacts": [
+      "universal_citation_verification_contract",
+      "response_envelope",
+      "source_footer_delivery",
+      "answer_claim_coverage_report",
+      "source_freshness_audit",
+      "consent_revocation_propagation",
+      "citation_url_health",
+      "evidence_locator_manifest",
+      "source_access_lease_report",
+      "trust_registry"
+    ],
+    "required_failure_cases": [
+      "query_collision",
+      "stale_source_version",
+      "evidence_mismatch",
+      "revoked_consent",
+      "unsupported_cached_claim",
+      "missing_reuse_royalty_event",
+      "citation_contract_drift",
+      "cache_poisoning",
+      "private_cache_key_leak",
+      "undeclared_provider_cache"
+    ],
+    "required_provider_families": [
+      "openai",
+      "anthropic",
+      "google",
+      "meta",
+      "mistral",
+      "cohere",
+      "xai",
+      "deepseek",
+      "local_open_weights",
+      "enterprise_gateway"
+    ],
+    "required_reuse_dimensions": [
+      "query_equivalence",
+      "evidence_overlap",
+      "source_version_validity",
+      "claim_support_replay",
+      "citation_contract_continuity",
+      "license_and_consent_continuity",
+      "royalty_metering",
+      "cache_collision_resistance",
+      "provider_portability",
+      "private_leakage"
+    ],
+    "required_verifier_commands": [
+      "verify-universal-citation-verification-contract",
+      "verify-source-freshness-audit",
+      "verify-consent-revocation-propagation",
+      "verify-source-access-lease-report",
+      "verify-answer-claim-coverage-report",
+      "verify-citation-url-health",
+      "verify-evidence-locator-manifest",
+      "verify-universal-grounded-reuse-contract"
+    ],
+    "target_certification_level": "RDLLM-L142"
+  },
+  "schemas": {
+    "consent_revocation_propagation": "docs/schemas/consent_revocation_propagation.schema.json",
+    "response_envelope": "docs/schemas/response_envelope.schema.json",
+    "source_footer_delivery": "docs/schemas/source_footer_delivery.schema.json",
+    "source_freshness_audit": "docs/schemas/source_freshness_audit.schema.json",
+    "universal_citation_verification_contract": "docs/schemas/universal_citation_verification_contract.schema.json",
+    "universal_grounded_reuse_contract": "docs/schemas/universal_grounded_reuse_contract.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "fb249a7fdb8e797d592b13045168ac0af4b8a3ab518a382bf3c7ae5d9aaeae29"
+  },
+  "summary": {
+    "failed_check_count": 0,
+    "failure_case_count": 10,
+    "failure_mode_count": 0,
+    "grounded_reuse_commitment_hash": "f8b270da53bee4c2aa0b09f046826561903d44e4f6954fe3de5088cfc6d5149d",
+    "l141_source_label_count": 3,
+    "minimum_input_level": "RDLLM-L141",
+    "privacy_preserved": true,
+    "provider_family_count": 10,
+    "reuse_decision_count": 2,
+    "reuse_dimension_count": 10,
+    "reuse_source_label_count": 3,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L142",
+    "universal_citation_verification_contract_hash": "02f3172634a1ec03a81c458b57250114c53b1a58056a5b4710f1c63b4e768599",
+    "verifier_command_count": 8
+  },
+  "universal_grounded_reuse_contract_hash": "22848d36987d3822e827a99185d87268ea34f40c4311c84ad4eb913f1322de13",
+  "verifier_command_rows": [
+    {
+      "command": "verify-answer-claim-coverage-report",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "7e21cc1b6f16c9b998827c0a2c5fc7fb4aaf5208d4839875807f073020e3cf54"
+    },
+    {
+      "command": "verify-citation-url-health",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "d281f20ff73728d5176831c26cb1a8bacb474b0a3d08412f8c73ea6454bf2ac3"
+    },
+    {
+      "command": "verify-consent-revocation-propagation",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "cb87119d495d932b4c52526e9b614d7c3fe0a9463d579c8e26df2721c4ec886b"
+    },
+    {
+      "command": "verify-evidence-locator-manifest",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "469aa8a5df91b7540d56ff3d636d46459a17282be8cf2d6f34389ea4014af485"
+    },
+    {
+      "command": "verify-source-access-lease-report",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "247d1e60dbd5b07a44eb087d6a5c92710557a39aada8c3f559e106e1576575ae"
+    },
+    {
+      "command": "verify-source-freshness-audit",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "45466df0b18a853bae8049111bcb843025739d0642b3259e89701d51210dc845"
+    },
+    {
+      "command": "verify-universal-citation-verification-contract",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "ab418e260f3eeb57cbb8c347fd24d6549f2da8213d0117192ac3dec2154242b4"
+    },
+    {
+      "command": "verify-universal-grounded-reuse-contract",
+      "declared": true,
+      "required": true,
+      "verifier_command_row_hash": "afa905a5605e34fbbc6140e5aa5a17391d480dfa70963b80df52cf18a5012c81"
+    }
+  ]
+}

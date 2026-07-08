@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/operator_bootstrap_verification.schema.json",
+  "title": "RDLLM Operator Bootstrap Verification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "errors",
+    "verified_dir",
+    "manifest_path",
+    "manifest_status",
+    "manifest_schema_status",
+    "profile_status",
+    "service_config_status",
+    "runtime_status",
+    "resolved_paths"
+  ],
+  "properties": {
+    "schema": {
+      "const": "rdllm-operator-bootstrap-verification/v1"
+    },
+    "status": {
+      "enum": ["passed", "failed"]
+    },
+    "errors": {
+      "$ref": "#/$defs/error_array"
+    },
+    "verified_dir": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifest_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifest_status": {
+      "enum": ["ready", "blocked", "missing", "unknown"]
+    },
+    "manifest_schema_status": {
+      "enum": ["passed", "failed"]
+    },
+    "profile_status": {
+      "enum": ["ready", "blocked", "skipped"]
+    },
+    "service_config_status": {
+      "enum": ["ready", "blocked", "skipped"]
+    },
+    "runtime_status": {
+      "enum": ["ready", "blocked", "skipped"]
+    },
+    "resolved_paths": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "passed" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "maxItems": 0 },
+          "manifest_status": { "const": "ready" },
+          "manifest_schema_status": { "const": "passed" },
+          "profile_status": { "const": "ready" },
+          "service_config_status": { "const": "ready" },
+          "runtime_status": { "enum": ["ready", "skipped"] },
+          "resolved_paths": {
+            "required": [
+              "output_dir",
+              "operator_profile",
+              "readiness_report",
+              "service_config",
+              "manifest",
+              "readme",
+              "artifact_dir",
+              "runtime_dir",
+              "corpus"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": { "const": "failed" }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "errors": { "minItems": 1 }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "error_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

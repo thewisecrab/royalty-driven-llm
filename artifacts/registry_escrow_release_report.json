@@ -1,0 +1,63 @@
+{
+  "balances_after": {
+    "arjun": "0.550000"
+  },
+  "balances_before": {
+    "registry_dispute_escrow": "0.550000"
+  },
+  "errors": [],
+  "release_balances": {
+    "arjun": "0.550000"
+  },
+  "releases": [
+    {
+      "conflict_id": "conf_451172c810c96d60",
+      "creator_id": "arjun",
+      "event_hash": "658bea9b5306639b06069f062775fd68f2aa49990d7438e0f2bf6b85e8c2caf9",
+      "event_id": "evt_658bea9b5306639b",
+      "payout": "0.550000",
+      "registry_report_hash": "3c48010352ebea9fa4c501a225d7292696fc25ce259c276681e5ab6a8039527d",
+      "release_id": "rel_298ea3e7fc60227c",
+      "resolution_id": "res_conf_451172c810c96d60_001",
+      "source_escrow_account": "registry_dispute_escrow",
+      "split_weight": "1",
+      "work_id": "arjun-provenance-ledger"
+    }
+  ],
+  "report_hash": "ecc7a1c5b1cd3b9e9399b07467174e1b1ce7efe63635f67f1087dd59c9a30038",
+  "resolution": {
+    "conflict_id": "conf_451172c810c96d60",
+    "evidence_hash": "8cb64539696cfabf36e01b1e5a08af227dc7bf0af095034f8116f7512d1ad4b6",
+    "evidence_uri": "registered://resolutions/conf_451172c810c96d60",
+    "payout_splits": [
+      {
+        "creator_id": "arjun",
+        "weight": "1",
+        "work_id": "arjun-provenance-ledger"
+      }
+    ],
+    "reason": "Arjun Rao supplied the verified source evidence for the original provenance ledger work; the duplicate claimant is rejected for this settlement cycle.",
+    "registry_report_hash": "3c48010352ebea9fa4c501a225d7292696fc25ce259c276681e5ab6a8039527d",
+    "resolution_id": "res_conf_451172c810c96d60_001",
+    "resolved_at": "2026-05-29T00:00:00Z",
+    "resolver": "rdllm-demo-review-board",
+    "signature": "demo-resolution-signature",
+    "status": "resolved",
+    "winning_creator_id": "arjun",
+    "winning_work_id": "arjun-provenance-ledger"
+  },
+  "settlement_version": "rdllm-escrow-resolution/v1",
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "value": "694370bdb4382050b98d0e4d9b252b7079918183687320afba1f0d8d33cb2b81"
+  },
+  "source_ledger_hash": "f261197f6c2cf04dbccef3327193f6940725e7f7f4501041160afd443f645eba",
+  "status": "ok",
+  "summary": {
+    "creator_count": 1,
+    "matched_event_count": 1,
+    "release_count": 1,
+    "total_released": "0.550000"
+  },
+  "verification_errors": []
+}

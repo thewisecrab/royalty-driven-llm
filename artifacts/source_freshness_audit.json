@@ -1,0 +1,300 @@
+{
+  "answer_binding": {
+    "answer_id_hash": "a4240651628bd2daf353e8e347ead96684d3276a56f8ccd41889b5219b72d37f",
+    "answer_time": "2026-05-31T00:00:00Z",
+    "candidate_count": 3,
+    "claim_count": 2,
+    "dynamic_claim_count": 2,
+    "source_count": 2
+  },
+  "artifact_bindings": {
+    "citation_reliance_receipt_hash": "dd8e94069d1f632d0468fc3e93e37c368987569c0fee1b78b16f7da585c31860",
+    "citation_reliance_receipt_hash_reproducible": true,
+    "claim_source_attribution_report_hash": "8ae89a164bb0bf6169a0e163b09ad98dd9bd19cbc3a460cdc09c82bb32546a6a",
+    "claim_source_attribution_report_hash_reproducible": true,
+    "deep_research_citation_audit_hash": "eadb1dda9282f3d8b167cbd970afcb0631e2f70383503762962cb4eb0c3a6078",
+    "deep_research_citation_audit_hash_reproducible": true,
+    "grounded_source_footer_hash": "7a0be33bb5f4598f94085c26cfcb57b09627c4a20e81a5f7fcb160ecb0c0d78e",
+    "grounded_source_footer_hash_reproducible": true,
+    "source_access_lease_report_hash": "2398ae31881aad398d04b08098344fb5e4b19f4acff147d2a45ee92ff7c9b238",
+    "source_access_lease_report_hash_reproducible": true,
+    "source_availability_report_hash": "a42d96bcc238d04cc845dec1e3ffd7688467d8518deb92882b2d19901b7d4df7",
+    "source_availability_report_hash_reproducible": true,
+    "source_confidence_report_hash": "e5b8a300ca61aa2afc07afc5e37ed246d51bd4435cc76a9859a7ccb39d991265",
+    "source_confidence_report_hash_reproducible": true,
+    "source_footer_delivery_hash": "90982909ee231837884a1fd90cb805ba23e8bdeda74d3209feb3c8875a2c5737",
+    "source_footer_delivery_hash_reproducible": true
+  },
+  "audit_version": "rdllm-source-freshness-audit/v1",
+  "candidate_temporal_rows": [
+    {
+      "candidate_effective_at": "2026-05-25T06:00:00Z",
+      "candidate_factual_support_score": 0.9,
+      "candidate_id": "candidate:freshqa:selected",
+      "candidate_relevance_score": 0.93,
+      "candidate_source_uri_hash": "33e52c6558c9502929b33c87a33480dc59484b6f627886a6c612d406f10b47f4",
+      "candidate_temporal_hash": "79aa0305fbfaf34d5424c13efa87d61c1d18f3de47b176bc8592a588bab68eab",
+      "claim_id": "claim:freshqa",
+      "displaces_selected_source": false,
+      "fresher_than_selected": false,
+      "label": "S2",
+      "not_weaker_than_selected": true,
+      "selected": true,
+      "support_status": "verified",
+      "supported_candidate": true
+    },
+    {
+      "candidate_effective_at": "2026-03-24T12:00:00Z",
+      "candidate_factual_support_score": 0.91,
+      "candidate_id": "candidate:recencyqa:selected",
+      "candidate_relevance_score": 0.94,
+      "candidate_source_uri_hash": "45ac1e77a39f767ff1331bd4bebf22d43ad1720b1eaa7614262f3ae7ca0aad64",
+      "candidate_temporal_hash": "e67103eb144b3a3cdff65d24ed9d82e3e61cc29341689fc0bdfab77a00f94b06",
+      "claim_id": "claim:recency-benchmarks",
+      "displaces_selected_source": false,
+      "fresher_than_selected": false,
+      "label": "S1",
+      "not_weaker_than_selected": true,
+      "selected": true,
+      "support_status": "supported",
+      "supported_candidate": true
+    },
+    {
+      "candidate_effective_at": "2026-05-28T00:00:00Z",
+      "candidate_factual_support_score": 0.7,
+      "candidate_id": "candidate:recencyqa:weaker-newer",
+      "candidate_relevance_score": 0.74,
+      "candidate_source_uri_hash": "079f7cd5f3f77035c4921d1d844ba1c96ffd04c6882a76a2306ce20b8cfdb54f",
+      "candidate_temporal_hash": "1227b7c2e6aa005fdf2bba93ed3500e38ba831fb7199c7c07a61108642bc6bca",
+      "claim_id": "claim:recency-benchmarks",
+      "displaces_selected_source": false,
+      "fresher_than_selected": true,
+      "label": "S3",
+      "not_weaker_than_selected": false,
+      "selected": false,
+      "support_status": "supported",
+      "supported_candidate": true
+    }
+  ],
+  "checks": {
+    "answer_time_present": true,
+    "artifact_bindings_hash_reproducible": true,
+    "claim_rows_present": true,
+    "claim_support_hashes_present": true,
+    "every_claim_has_resolved_sources": true,
+    "every_dynamic_claim_has_fresh_source": true,
+    "every_dynamic_claim_retrieved_within_lag": true,
+    "every_selected_temporal_source_is_fresh": true,
+    "every_selected_temporal_source_materialized": true,
+    "every_temporal_claim_has_policy": true,
+    "every_temporal_claim_valid_at_answer_time": true,
+    "freshest_supported_candidate_selected": true,
+    "private_strings_absent": true,
+    "public_report_has_no_private_field_names": true,
+    "source_rows_have_temporal_metadata": true,
+    "source_rows_present": true,
+    "temporal_requirements_recognized": true
+  },
+  "claim_temporal_rows": [
+    {
+      "all_citations_resolved": true,
+      "all_selected_sources_fresh": true,
+      "all_selected_sources_materialized": true,
+      "all_selected_sources_retrieved_within_lag": true,
+      "all_selected_sources_valid_at_as_of": true,
+      "as_of": "2026-05-31T00:00:00Z",
+      "citation_labels": [
+        "S2"
+      ],
+      "claim_hash": "8f897897053b881cf3e74c6d8248607e8908ce976ccd4d1972485f64e80b5111",
+      "claim_id": "claim:freshqa",
+      "claim_support_hashes_present": true,
+      "claim_temporal_hash": "69ebff1bddb5cd21139973ae017d4fabcd7408708d7f2e460577553c3da6cd9b",
+      "dynamic_temporal_claim": true,
+      "factual_support_score": 0.9,
+      "has_fresh_supported_source": true,
+      "max_retrieval_lag_hours": 48.0,
+      "max_source_age_days": 14.0,
+      "relevance_score": 0.93,
+      "resolved_citation_labels": [
+        "S2"
+      ],
+      "source_temporal_rows": [
+        {
+          "effective_at": "2026-05-25T06:00:00Z",
+          "label": "S2",
+          "link_materialized": true,
+          "max_retrieval_lag_hours": 48.0,
+          "max_source_age_days": 14.0,
+          "retrieval_lag_hours": 0.0,
+          "retrieved_at": "2026-05-31T00:00:00Z",
+          "retrieved_within_lag": true,
+          "source_age_days": 5.75,
+          "source_fresh_enough": true,
+          "source_row_hash": "d1ca935962c7a2fe37a54413d6777f66e38b855ac6f667a9216ca36bc0858851",
+          "source_temporal_hash": "1209631710004dd5fd649452fea852f3fbdb2b4cd26198c31166383cb5f18af9",
+          "temporal_metadata_present": true,
+          "valid_at_reference_time": true
+        }
+      ],
+      "support_status": "verified",
+      "support_status_accepted": true,
+      "temporal_requirement": "latest",
+      "temporal_requirement_recognized": true,
+      "unresolved_citation_labels": []
+    },
+    {
+      "all_citations_resolved": true,
+      "all_selected_sources_fresh": true,
+      "all_selected_sources_materialized": true,
+      "all_selected_sources_retrieved_within_lag": true,
+      "all_selected_sources_valid_at_as_of": true,
+      "as_of": "2026-05-31T00:00:00Z",
+      "citation_labels": [
+        "S1"
+      ],
+      "claim_hash": "0e38686c9527e4aa7b2652dba0d3ca2da039da976fe1aee0b4f0e469e7d0d849",
+      "claim_id": "claim:recency-benchmarks",
+      "claim_support_hashes_present": true,
+      "claim_temporal_hash": "e6031cc94fecf9c56efe5c23e2800f31eb30057d7688b96f2505681b0d595764",
+      "dynamic_temporal_claim": true,
+      "factual_support_score": 0.91,
+      "has_fresh_supported_source": true,
+      "max_retrieval_lag_hours": 48.0,
+      "max_source_age_days": 90.0,
+      "relevance_score": 0.94,
+      "resolved_citation_labels": [
+        "S1"
+      ],
+      "source_temporal_rows": [
+        {
+          "effective_at": "2026-03-24T12:00:00Z",
+          "label": "S1",
+          "link_materialized": true,
+          "max_retrieval_lag_hours": 48.0,
+          "max_source_age_days": 90.0,
+          "retrieval_lag_hours": 0.0,
+          "retrieved_at": "2026-05-31T00:00:00Z",
+          "retrieved_within_lag": true,
+          "source_age_days": 67.5,
+          "source_fresh_enough": true,
+          "source_row_hash": "23ea0186aeb043cfbfb9280635e5497c5f7894d56431421f865a14cd4978dd0d",
+          "source_temporal_hash": "932e4f30ad9a47ef2ddd2d19e6692231fff20e3142dc442ecc29f8e87f02ce11",
+          "temporal_metadata_present": true,
+          "valid_at_reference_time": true
+        }
+      ],
+      "support_status": "supported",
+      "support_status_accepted": true,
+      "temporal_requirement": "current",
+      "temporal_requirement_recognized": true,
+      "unresolved_citation_labels": []
+    }
+  ],
+  "commitments": {
+    "candidate_temporal_root": "7c254fbee274aeba69bfd0cbef1a59ae4cad1a7532a9413dd1a2d0ceed93570f",
+    "claim_temporal_root": "c8be0b4d0863cd86038d5cc19d6eefa3bcec810de85402c3cf1afb86de3c7933",
+    "schema": "docs/schemas/source_freshness_audit.schema.json",
+    "source_temporal_root": "fa9fb8b4df5c0997e670743ae31a16d5a604f39e2548bc4292b2377a9f4fc1dc"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "candidate_support_margin": 0.04,
+    "default_max_retrieval_lag_hours": 48.0,
+    "default_max_source_age_days": 14.0,
+    "dynamic_requirements": [
+      "as_of",
+      "current",
+      "latest",
+      "rapidly_changing",
+      "recent"
+    ],
+    "fresher_supported_candidates_must_not_be_ignored": true,
+    "min_factual_support_score": 0.7,
+    "min_relevance_score": 0.7,
+    "minimum_input_level": "RDLLM-L115",
+    "profile": "rdllm-source-freshness-audit-policy/v1",
+    "retrieval_must_precede_or_equal_answer_time": true,
+    "source_metadata_must_include_retrieved_and_effective_time": true,
+    "static_requirements": [
+      "historical",
+      "static",
+      "timeless"
+    ],
+    "target_certification_level": "RDLLM-L116"
+  },
+  "privacy": {
+    "public_report_uses_hashes_scores_uris_titles_and_timestamps": true,
+    "raw_answer_text_disclosed": false,
+    "raw_evidence_text_disclosed": false,
+    "raw_prompt_text_disclosed": false,
+    "raw_source_text_disclosed": false
+  },
+  "schemas": {
+    "deep_research_citation_audit": "docs/schemas/deep_research_citation_audit.schema.json",
+    "source_availability_report": "docs/schemas/source_availability_report.schema.json",
+    "source_confidence_report": "docs/schemas/source_confidence_report.schema.json",
+    "source_freshness_audit": "docs/schemas/source_freshness_audit.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "18bb560fa87633c260037f6e323863181a1bbf3dd488c1dba9d37bb9af27f924"
+  },
+  "source_freshness_audit_hash": "252e757a16d2c5711e88bf72fa4a8f93935efcb1b03ab6b663ebb2f0f3143a74",
+  "source_rows": [
+    {
+      "archive_uri": "",
+      "content_hash": "f604389035d32203785ede562715aa18917863e291efb6ca094d6b0c69b28ba4",
+      "effective_at": "2026-03-24T12:00:00Z",
+      "label": "S1",
+      "last_modified_at": "2026-03-24T12:00:00Z",
+      "license_status": "reference_allowed",
+      "link_materialized": true,
+      "published_at": "2026-03-24T00:00:00Z",
+      "retrieval_status": "accessible",
+      "retrieved_at": "2026-05-31T00:00:00Z",
+      "source_row_hash": "23ea0186aeb043cfbfb9280635e5497c5f7894d56431421f865a14cd4978dd0d",
+      "source_uri": "https://arxiv.org/abs/2603.16544",
+      "source_version_hash": "fac6aab925cc0666ed9622def9acfa4eeb2042fc2994c3f6feb19e0881e8cdfe",
+      "temporal_metadata_present": true,
+      "title": "RecencyQA: Benchmarking Recency Understanding",
+      "valid_at_answer_time": true,
+      "valid_from": "2026-03-24T00:00:00Z",
+      "valid_until": "2026-06-30T00:00:00Z"
+    },
+    {
+      "archive_uri": "https://arxiv.org/abs/2310.03214",
+      "content_hash": "a9d139fd4d0c9fd5c17a4bd737ee55152bb5b776b5bf6933c419182b2c9b5de1",
+      "effective_at": "2026-05-25T06:00:00Z",
+      "label": "S2",
+      "last_modified_at": "2026-05-25T06:00:00Z",
+      "license_status": "reference_allowed",
+      "link_materialized": true,
+      "published_at": "2026-05-25T00:00:00Z",
+      "retrieval_status": "archived",
+      "retrieved_at": "2026-05-31T00:00:00Z",
+      "source_row_hash": "d1ca935962c7a2fe37a54413d6777f66e38b855ac6f667a9216ca36bc0858851",
+      "source_uri": "https://arxiv.org/abs/2310.03214",
+      "source_version_hash": "727dcc5e312f99b1cf39f62c56c76c2c1c0f39f160cb5953fef74b77b39b475c",
+      "temporal_metadata_present": true,
+      "title": "FreshLLMs: Refreshing Large Language Models",
+      "valid_at_answer_time": true,
+      "valid_from": "2026-05-25T00:00:00Z",
+      "valid_until": "2026-06-30T00:00:00Z"
+    }
+  ],
+  "summary": {
+    "claim_count": 2,
+    "dynamic_claim_count": 2,
+    "fresh_dynamic_claim_count": 2,
+    "fresher_supported_candidate_count": 0,
+    "minimum_input_level": "RDLLM-L115",
+    "selected_candidate_count": 2,
+    "source_count": 2,
+    "stale_dynamic_claim_count": 0,
+    "status": "ready",
+    "target_certification_level": "RDLLM-L116"
+  }
+}

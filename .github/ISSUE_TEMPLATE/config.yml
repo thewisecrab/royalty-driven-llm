@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/thewisecrab/royalty-driven-llm/security/advisories/new
+    about: Report private payload leaks, signature bypasses, verifier bypasses, or settlement-release vulnerabilities privately.

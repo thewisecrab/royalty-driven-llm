@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_confidential_attribution_audit.schema.json",
+  "title": "RDLLM Universal Confidential Attribution Audit",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "confidential_audit_version",
+    "issuer",
+    "created_at",
+    "confidential_audit_policy",
+    "artifact_bindings",
+    "provider_family_rows",
+    "audit_domain_rows",
+    "proof_mechanism_rows",
+    "stakeholder_access_rows",
+    "confidential_audit_obligation_rows",
+    "failure_case_rows",
+    "verifier_command_rows",
+    "commitments",
+    "checks",
+    "audit_decision",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_confidential_attribution_audit_hash",
+    "signature"
+  ],
+  "properties": {
+    "confidential_audit_version": {
+      "const": "rdllm-universal-confidential-attribution-audit/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "confidential_audit_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "required_core_artifacts",
+        "required_provider_families",
+        "required_audit_domains",
+        "required_proof_mechanisms",
+        "required_stakeholder_roles",
+        "required_failure_cases",
+        "required_verifier_commands"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-confidential-attribution-audit-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L144" },
+        "minimum_input_level": { "const": "RDLLM-L143" },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_audit_domains": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_proof_mechanisms": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_stakeholder_roles": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_failure_cases": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_verifier_commands": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "artifact_bindings": { "type": "object" },
+    "provider_family_rows": { "type": "array", "items": { "type": "object" } },
+    "audit_domain_rows": { "type": "array", "items": { "type": "object" } },
+    "proof_mechanism_rows": { "type": "array", "items": { "type": "object" } },
+    "stakeholder_access_rows": { "type": "array", "items": { "type": "object" } },
+    "confidential_audit_obligation_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "provider_family",
+          "audit_domain",
+          "evidence_room_hash",
+          "commitment_root",
+          "proof_artifact_hash",
+          "auditor_quorum_hash",
+          "challenge_window_hash",
+          "decision_log_hash",
+          "private_data_boundary_hash",
+          "disclosure_policy_hash",
+          "no_raw_data_disclosed",
+          "proof_verified",
+          "auditor_quorum_satisfied",
+          "creator_challenge_supported",
+          "regulator_export_supported",
+          "differential_privacy_budget_bound",
+          "fail_closed",
+          "ready"
+        ]
+      }
+    },
+    "failure_case_rows": { "type": "array", "items": { "type": "object" } },
+    "verifier_command_rows": { "type": "array", "items": { "type": "object" } },
+    "commitments": { "type": "object" },
+    "checks": { "type": "object", "additionalProperties": { "type": "boolean" } },
+    "audit_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "publication_authorized",
+        "confidential_audit_approved",
+        "direct_settlement_confidentially_auditable",
+        "failed_checks",
+        "failure_modes",
+        "safe_output_policy"
+      ]
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["universal_confidential_attribution_audit"],
+      "properties": {
+        "universal_confidential_attribution_audit": {
+          "const": "docs/schemas/universal_confidential_attribution_audit.schema.json"
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_training_text_disclosed",
+        "raw_prompt_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_source_text_disclosed",
+        "raw_reward_or_preference_text_disclosed",
+        "model_weights_or_hidden_states_disclosed",
+        "customer_or_billing_logs_disclosed",
+        "hash_only_confidential_audit_bindings",
+        "private_strings_absent"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "provider_family_count",
+        "audit_domain_count",
+        "proof_mechanism_count",
+        "stakeholder_role_count",
+        "confidential_audit_obligation_count",
+        "required_obligation_count",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L144" },
+        "minimum_input_level": { "const": "RDLLM-L143" }
+      }
+    },
+    "universal_confidential_attribution_audit_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

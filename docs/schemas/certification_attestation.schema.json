@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/certification_attestation.schema.json",
+  "title": "RDLLM Certification Attestation",
+  "type": "object",
+  "required": [
+    "attestation_version",
+    "issuer",
+    "created_at",
+    "valid_until",
+    "certifier",
+    "subject",
+    "certification_summary",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "attestation_hash",
+    "signature"
+  ],
+  "properties": {
+    "attestation_version": {
+      "const": "rdllm-certification-attestation/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "valid_until": { "type": "string" },
+    "certifier": {
+      "type": "object",
+      "required": ["id", "role", "policy"],
+      "additionalProperties": true
+    },
+    "subject": {
+      "type": "object",
+      "required": [
+        "target_provider",
+        "certification_version",
+        "suite",
+        "issued_at",
+        "certification_report_hash",
+        "implementation_hash",
+        "levels_root",
+        "case_status_root",
+        "case_status_row_count"
+      ],
+      "additionalProperties": true
+    },
+    "certification_summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "highest_level",
+        "case_count",
+        "passed",
+        "failed",
+        "score"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "certification_report_hash_reproducible",
+        "certification_report_passed",
+        "highest_level_at_least_l51",
+        "case_count_matches_case_status_rows",
+        "all_cases_passed",
+        "failed_case_root_empty",
+        "case_status_root_bound",
+        "private_report_payload_not_embedded",
+        "private_field_names_absent",
+        "schema_declared"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "schema",
+        "minimum_attestable_level",
+        "certification_report_hash",
+        "summary_hash",
+        "implementation_hash",
+        "levels_root",
+        "case_status_root",
+        "failed_case_root"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "attested_highest_level",
+        "attested_case_count",
+        "failed_check_count",
+        "private_input_field_count"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "certification_report_payload_embedded",
+        "case_artifacts_embedded",
+        "private_prompt_or_source_text_disclosed",
+        "customer_or_payment_text_disclosed",
+        "attestation_uses_hashes_and_case_status_roots"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "attestation_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

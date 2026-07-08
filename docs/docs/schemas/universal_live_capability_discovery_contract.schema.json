@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_live_capability_discovery_contract.schema.json",
+  "title": "RDLLM Universal Live Capability Discovery Contract",
+  "type": "object",
+  "required": [
+    "universal_live_capability_discovery_contract_version",
+    "schema",
+    "policy",
+    "well_known",
+    "artifact_bindings",
+    "provider_family_rows",
+    "discovery_channel_rows",
+    "capability_discovery_rows",
+    "route_discovery_rows",
+    "negative_discovery_rows",
+    "evidence_roots",
+    "checks",
+    "live_capability_discovery_decision",
+    "coverage",
+    "privacy",
+    "summary",
+    "universal_live_capability_discovery_contract_hash"
+  ],
+  "properties": {
+    "universal_live_capability_discovery_contract_version": {
+      "const": "rdllm-universal-live-capability-discovery-contract/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_live_capability_discovery_contract.schema.json"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_model_capability_coverage_level",
+        "provider_capability_claims_require_current_sources",
+        "endpoint_compatibility_must_match_capability_rows",
+        "deprecated_or_removed_capabilities_fail_closed",
+        "undocumented_capabilities_fail_closed",
+        "region_and_tenant_scope_must_be_declared"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-live-capability-discovery-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L182" },
+        "minimum_model_capability_coverage_level": { "const": "RDLLM-L181" },
+        "provider_capability_claims_require_current_sources": { "const": true },
+        "endpoint_compatibility_must_match_capability_rows": { "const": true },
+        "deprecated_or_removed_capabilities_fail_closed": { "const": true },
+        "undocumented_capabilities_fail_closed": { "const": true },
+        "region_and_tenant_scope_must_be_declared": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-live-capability-discovery-contract.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-live-capability-discovery-contract/v1"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": ["universal_model_capability_coverage_contract"],
+      "additionalProperties": true
+    },
+    "provider_family_rows": {
+      "type": "object",
+      "minProperties": 16
+    },
+    "discovery_channel_rows": {
+      "type": "object",
+      "minProperties": 14
+    },
+    "capability_discovery_rows": {
+      "type": "object",
+      "minProperties": 24
+    },
+    "route_discovery_rows": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "negative_discovery_rows": {
+      "type": "object",
+      "minProperties": 18
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "model_capability_coverage_l181_ready",
+        "provider_family_rows_complete",
+        "discovery_channel_rows_complete",
+        "capability_discovery_rows_complete",
+        "route_discovery_rows_complete",
+        "negative_live_capability_discovery_fixtures_reject",
+        "contract_signed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "live_capability_discovery_decision": {
+      "type": "object",
+      "required": [
+        "universal_live_capability_discovery_ready",
+        "all_capability_declarations_source_bound",
+        "provider_capability_claims_allowed",
+        "model_invocation_allowed",
+        "response_release_allowed",
+        "source_footer_reliance_allowed",
+        "creator_settlement_allowed",
+        "stale_capability_blocked",
+        "undocumented_capability_blocked",
+        "deprecated_capability_blocked"
+      ],
+      "properties": {
+        "universal_live_capability_discovery_ready": { "const": true },
+        "all_capability_declarations_source_bound": { "const": true },
+        "provider_capability_claims_allowed": { "const": true },
+        "model_invocation_allowed": { "const": true },
+        "response_release_allowed": { "const": true },
+        "source_footer_reliance_allowed": { "const": true },
+        "creator_settlement_allowed": { "const": true },
+        "stale_capability_blocked": { "const": true },
+        "undocumented_capability_blocked": { "const": true },
+        "deprecated_capability_blocked": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payloads_excluded",
+        "private_prompts_excluded",
+        "private_outputs_excluded",
+        "private_provider_transcripts_excluded",
+        "private_customer_data_excluded",
+        "public_contract_uses_hashes_sources_routes_capabilities_and_freshness"
+      ],
+      "properties": {
+        "private_payloads_excluded": { "const": true },
+        "private_prompts_excluded": { "const": true },
+        "private_outputs_excluded": { "const": true },
+        "private_provider_transcripts_excluded": { "const": true },
+        "private_customer_data_excluded": { "const": true },
+        "public_contract_uses_hashes_sources_routes_capabilities_and_freshness": {
+          "const": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_model_capability_coverage_level",
+        "provider_family_count",
+        "ready_provider_family_count",
+        "discovery_channel_count",
+        "ready_discovery_channel_count",
+        "capability_discovery_count",
+        "ready_capability_discovery_count",
+        "l181_route_count",
+        "ready_route_discovery_count",
+        "negative_discovery_failure_count",
+        "ready_negative_discovery_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_live_capability_discovery_contract"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L182" },
+        "minimum_model_capability_coverage_level": { "const": "RDLLM-L181" },
+        "provider_family_count": { "const": 16 },
+        "ready_provider_family_count": { "const": 16 },
+        "discovery_channel_count": { "const": 14 },
+        "ready_discovery_channel_count": { "const": 14 },
+        "capability_discovery_count": { "const": 24 },
+        "ready_capability_discovery_count": { "const": 24 },
+        "l181_route_count": { "type": "integer", "minimum": 1 },
+        "ready_route_discovery_count": { "type": "integer", "minimum": 1 },
+        "negative_discovery_failure_count": { "const": 18 },
+        "ready_negative_discovery_failure_count": { "const": 18 },
+        "failure_mode_count": { "const": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_live_capability_discovery_contract": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "universal_live_capability_discovery_contract_hash": {
+      "type": "string",
+      "minLength": 64
+    }
+  },
+  "additionalProperties": true
+}

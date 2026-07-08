@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/attested_runtime.schema.json",
+  "title": "RDLLM Attested Attribution Runtime Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "runtime_measurement",
+    "subject_bindings",
+    "trusted_attestor_rows",
+    "runtime_quote_rows",
+    "checks",
+    "commitments",
+    "schemas",
+    "summary",
+    "privacy",
+    "attested_runtime_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-attested-attribution-runtime/v1" },
+    "issuer": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "minimum_quote_count",
+        "accepted_platform_types",
+        "required_capabilities"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-attested-attribution-runtime-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L86" },
+        "minimum_input_level": { "const": "RDLLM-L85" },
+        "minimum_quote_count": { "type": "integer", "minimum": 1 },
+        "accepted_platform_types": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_capabilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "live_emission_transparency_hash",
+        "proof_response_hash",
+        "gateway_report_hash",
+        "evidence_locked_generation_hash"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "runtime_measurement": {
+      "type": "object",
+      "required": [
+        "runtime_id",
+        "runtime_version",
+        "measurement_hash",
+        "required_capabilities"
+      ],
+      "additionalProperties": true
+    },
+    "subject_bindings": {
+      "type": "object",
+      "required": [
+        "live_emission_transparency_hash",
+        "live_emission_witness_hash",
+        "proof_response_hash",
+        "gateway_report_hash",
+        "evidence_locked_generation_hash",
+        "subject_binding_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "trusted_attestor_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "runtime_quote_rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hashRow" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "live_emission_transparency_shape_valid",
+        "live_emission_transparency_hash_reproducible",
+        "live_emission_transparency_ready",
+        "live_emission_transparency_target_l85",
+        "runtime_measurement_hash_reproducible",
+        "runtime_measurement_declares_required_capabilities",
+        "subject_bindings_complete",
+        "trusted_attestors_declared",
+        "runtime_quotes_present",
+        "minimum_quote_count_met",
+        "all_quote_hashes_reproducible",
+        "accepted_quotes_bind_runtime_measurement",
+        "accepted_quotes_bind_subjects",
+        "accepted_quotes_have_valid_signatures",
+        "accepted_quotes_are_fresh",
+        "accepted_quotes_have_required_capabilities",
+        "public_report_has_no_private_field_names"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "runtime_measurement_hash",
+        "subject_binding_root",
+        "trusted_attestor_root",
+        "runtime_quote_root",
+        "accepted_quote_root"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "attested_runtime",
+        "live_emission_transparency"
+      ],
+      "properties": {
+        "attested_runtime": {
+          "const": "docs/schemas/attested_runtime.schema.json"
+        },
+        "live_emission_transparency": {
+          "const": "docs/schemas/live_emission_transparency.schema.json"
+        }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "runtime_attested",
+        "quote_count",
+        "accepted_quote_count"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L86" },
+        "minimum_input_level": { "const": "RDLLM-L85" },
+        "runtime_attested": { "type": "boolean" },
+        "quote_count": { "type": "integer", "minimum": 0 },
+        "accepted_quote_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": true
+    },
+    "privacy": { "type": "object", "additionalProperties": true },
+    "attested_runtime_hash": { "type": "string", "minLength": 1 },
+    "signature": { "type": "object", "additionalProperties": true }
+  },
+  "$defs": {
+    "hashRow": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

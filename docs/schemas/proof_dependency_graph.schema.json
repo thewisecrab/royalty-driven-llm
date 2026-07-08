@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/proof_dependency_graph.schema.json",
+  "title": "RDLLM Proof Dependency Graph",
+  "type": "object",
+  "required": [
+    "graph_version",
+    "issuer",
+    "created_at",
+    "graph_profile",
+    "artifacts",
+    "dependencies",
+    "replay_order",
+    "replay_steps",
+    "cycle_break_policy",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "graph_hash",
+    "signature"
+  ],
+  "properties": {
+    "graph_version": {
+      "const": "rdllm-proof-dependency-graph/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "graph_profile": {
+      "type": "object",
+      "required": [
+        "replay_edges_are_hard_dependencies",
+        "publication_edges_are_commitments_not_replay_prerequisites",
+        "topological_replay_required",
+        "artifact_payloads_redacted"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "artifact_type",
+          "declared_hash",
+          "payload_hash",
+          "hash_reproducible",
+          "node_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "dependent",
+          "dependency",
+          "edge_class",
+          "reason",
+          "edge_hash"
+        ],
+        "properties": {
+          "edge_class": {
+            "enum": ["replay_dependency", "publication_commitment"]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "replay_order": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "replay_steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "step",
+          "artifact",
+          "artifact_type",
+          "declared_hash",
+          "payload_hash",
+          "verifier_command",
+          "step_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "cycle_break_policy": {
+      "type": "object",
+      "required": [
+        "allowed_publication_edge_class",
+        "replay_cycles_allowed",
+        "publication_back_references_do_not_define_replay_order"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "artifact_names_unique",
+        "all_dependencies_known",
+        "no_self_dependencies",
+        "replay_graph_acyclic",
+        "topological_order_covers_all_artifacts",
+        "artifact_hashes_reproducible",
+        "artifact_payloads_not_embedded",
+        "private_input_fields_absent"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "artifact_root",
+        "dependency_root",
+        "replay_order_hash",
+        "replay_step_root",
+        "schema"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "artifact_count",
+        "dependency_count",
+        "replay_dependency_count",
+        "publication_commitment_count",
+        "root_count",
+        "leaf_count",
+        "cycle_node_count",
+        "unknown_dependency_count",
+        "duplicate_artifact_name_count",
+        "private_input_field_count",
+        "root_artifacts",
+        "leaf_artifacts",
+        "cycle_nodes",
+        "unknown_dependencies",
+        "duplicate_artifact_names"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "artifact_payloads_disclosed",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "evidence_text_disclosed",
+        "customer_or_payment_text_disclosed",
+        "graph_uses_hashes_and_dependency_metadata"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "graph_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

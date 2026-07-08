@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/remittance_report.schema.json",
+  "title": "RDLLM Remittance Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "remittance_policy",
+    "payment_instruction_rows",
+    "escrow_instruction_rows",
+    "remittance_hold_rows",
+    "checks",
+    "commitments",
+    "summary",
+    "privacy",
+    "schemas",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-remittance-report/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "remittance_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "payment_rail",
+        "payment_execution_mode",
+        "clearinghouse_report_hash",
+        "creator_license_contract_hash",
+        "target_certification_level",
+        "minimum_input_level",
+        "standards_alignment",
+        "raw_payout_accounts_forbidden"
+      ],
+      "additionalProperties": true
+    },
+    "payment_instruction_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "payment_instruction_id",
+          "instruction_status",
+          "payment_rail",
+          "recipient_creator_id",
+          "recipient_kind",
+          "work_id",
+          "currency",
+          "amount",
+          "payout_account_hash",
+          "payout_account_disclosed",
+          "license_status",
+          "creator_license_contract_hash",
+          "clearinghouse_report_hash",
+          "clearinghouse_settlement_row_hash",
+          "end_to_end_id",
+          "remittance_reference",
+          "payment_rail_fields",
+          "instruction_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "escrow_instruction_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "escrow_instruction_id",
+          "instruction_status",
+          "payment_rail",
+          "escrow_account_hash",
+          "escrow_account_disclosed",
+          "currency",
+          "amount",
+          "clearinghouse_report_hash",
+          "clearinghouse_settlement_row_hash",
+          "end_to_end_id",
+          "instruction_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "remittance_hold_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "hold_id",
+          "hold_status",
+          "hold_reason",
+          "recipient_creator_id",
+          "work_id",
+          "currency",
+          "amount",
+          "clearinghouse_report_hash",
+          "hold_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "clearinghouse_hash_reproducible",
+        "creator_license_contract_hash_reproducible",
+        "clearinghouse_report_ready",
+        "payment_instructions_cover_all_payable_rows",
+        "payable_rows_have_payout_account_hashes",
+        "payable_rows_have_active_license_terms",
+        "payment_instructions_conserve_payable_total",
+        "escrow_instructions_conserve_escrow_total",
+        "clearinghouse_held_rows_preserved",
+        "missing_payment_account_holds_empty",
+        "all_cleared_value_accounted_for",
+        "instruction_only_no_bank_settlement_asserted",
+        "no_private_payment_account_disclosed"
+      ],
+      "additionalProperties": true
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "clearinghouse_report_hash",
+        "creator_license_contract_hash",
+        "payment_instruction_root",
+        "escrow_instruction_root",
+        "remittance_hold_root",
+        "payment_rail_policy_hash"
+      ],
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "payment_instruction_count",
+        "escrow_instruction_count",
+        "remittance_hold_count",
+        "payment_total",
+        "escrow_instruction_total",
+        "clearinghouse_held_total",
+        "missing_account_hold_total",
+        "accounted_total",
+        "expected_clearing_total",
+        "payment_rail",
+        "instruction_only"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "payout_account_disclosed",
+        "escrow_account_disclosed",
+        "uses_payout_account_hashes",
+        "uses_payment_reconciliation_hashes"
+      ],
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["remittance_report"],
+      "additionalProperties": true
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

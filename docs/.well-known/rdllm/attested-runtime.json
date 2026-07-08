@@ -1,0 +1,161 @@
+{
+  "artifact_bindings": {
+    "evidence_locked_generation_hash": "0b3640e03dd3a4782a9e076d0595bbb4bbee6f4257ea64370595cfe88dcccc2f",
+    "gateway_report_hash": "e610b412a692e607ad0b5b3c3da2c53fa46954d3cea66adead9958f3dc1df82d",
+    "live_emission_transparency_hash": "ea1cfa5da400063356bc87e7cad777632d281706a02cb1d2699e805127370a6f",
+    "proof_response_hash": "e651c5ed4d1069bcf624a4b04c7cda35fa01518f435ff0e063c6b9b31de58ed4"
+  },
+  "attested_runtime_hash": "b145afc9b894d5051ba847ee8c7a64c8458720e5add3af3faa89023c96795dac",
+  "checks": {
+    "accepted_quotes_are_fresh": true,
+    "accepted_quotes_bind_runtime_measurement": true,
+    "accepted_quotes_bind_subjects": true,
+    "accepted_quotes_have_required_capabilities": true,
+    "accepted_quotes_have_valid_signatures": true,
+    "all_quote_hashes_reproducible": true,
+    "live_emission_transparency_hash_reproducible": true,
+    "live_emission_transparency_ready": true,
+    "live_emission_transparency_shape_valid": true,
+    "live_emission_transparency_target_l85": true,
+    "minimum_quote_count_met": true,
+    "public_report_has_no_private_field_names": true,
+    "runtime_measurement_declares_required_capabilities": true,
+    "runtime_measurement_hash_reproducible": true,
+    "runtime_quotes_present": true,
+    "subject_bindings_complete": true,
+    "trusted_attestors_declared": true
+  },
+  "commitments": {
+    "accepted_quote_root": "bf4cddedfe86f9a06548a2f6dfbf4a834068bca6191a58524f6f6a207b2f3d70",
+    "runtime_measurement_hash": "08b6c4bd0aaee9273c741f9d9ea4acf3a856fd31e3b7fa6096699c1fd6a7b664",
+    "runtime_quote_root": "bf4cddedfe86f9a06548a2f6dfbf4a834068bca6191a58524f6f6a207b2f3d70",
+    "subject_binding_root": "1c797350ca66cb2ef88f70ba4b69838d604d1722be965147dd2fbd29f866d63b",
+    "trusted_attestor_root": "b42a0b107d6570dc0fbfc6d4331e049d86af56a4cd81bfb7b5ac4c2c07e64d6f"
+  },
+  "created_at": "2026-05-31T00:00:00Z",
+  "issuer": "rdllm-local-demo",
+  "policy": {
+    "accepted_platform_types": [
+      "amd-sev-snp",
+      "arm-cca",
+      "hybrid-tee-zkml",
+      "intel-sgx",
+      "intel-tdx",
+      "nvidia-h100-confidential-computing",
+      "rdllm-conformance-tee",
+      "zkml-audit-sampler"
+    ],
+    "minimum_input_level": "RDLLM-L85",
+    "minimum_quote_count": 1,
+    "production_note": "The reference implementation uses HMAC conformance quotes; production deployments replace them with hardware TEE, ZKML, or hybrid attestation evidence.",
+    "profile": "rdllm-attested-attribution-runtime-policy/v1",
+    "required_capabilities": [
+      "evidence_lock_enforced_before_generation",
+      "release_gate_enforced_before_delivery",
+      "serving_gateway_bound_to_proof_response",
+      "streaming_chunks_bound_to_gateway_output",
+      "live_witness_required_before_release",
+      "live_transparency_required_before_release",
+      "source_footer_required_for_supported_claims",
+      "creator_pool_conservation_enforced",
+      "private_text_redaction_enforced"
+    ],
+    "target_certification_level": "RDLLM-L86"
+  },
+  "privacy": {
+    "answer_text_disclosed": false,
+    "attestor_secret_disclosed": false,
+    "claim_text_disclosed": false,
+    "prompt_text_disclosed": false,
+    "source_text_disclosed": false,
+    "stores_measurements_subject_hashes_quotes_and_roots_not_text": true,
+    "stream_chunk_text_disclosed": false
+  },
+  "report_version": "rdllm-attested-attribution-runtime/v1",
+  "runtime_measurement": {
+    "container_image_hash": "a3ed91579aef6422a571b3de3030a0ed5e2bbcc24f57471c640433f971ad3ce6",
+    "enforcement_binary_hash": "e98ff9b059ac44a2c946083b5b338dc90e67626fc2778fe7955b61a6faa1b85e",
+    "measurement_hash": "08b6c4bd0aaee9273c741f9d9ea4acf3a856fd31e3b7fa6096699c1fd6a7b664",
+    "model_binding_hash": "641a27f2bfd7e953ef21f01b7c45de5dcae4b91c302bcaf012ac6cd97cfd0557",
+    "policy_bundle_hash": "e52512e9ffc370b47da23045190f64a9035c973b8fea8b29d09c7d6b19e42b2c",
+    "required_capabilities": [
+      "evidence_lock_enforced_before_generation",
+      "release_gate_enforced_before_delivery",
+      "serving_gateway_bound_to_proof_response",
+      "streaming_chunks_bound_to_gateway_output",
+      "live_witness_required_before_release",
+      "live_transparency_required_before_release",
+      "source_footer_required_for_supported_claims",
+      "creator_pool_conservation_enforced",
+      "private_text_redaction_enforced"
+    ],
+    "runtime_id": "runtime:rdllm-reference",
+    "runtime_version": "rdllm-reference-runtime/2026-06",
+    "source_commit_hash": "259a980e99ab4e5318b938913c9bc1247b8f495d7b4ab975c104e619cc31f5f8",
+    "verifier_bundle_hash": "404ff4aa103bf0d72b921e69a6b3a81a4b49db53cab48753a177af5f17004dcb"
+  },
+  "runtime_quote_rows": [
+    {
+      "accepted": true,
+      "attestor_id": "attestor-alpha",
+      "attestor_is_trusted": true,
+      "attestor_key_hash": "b9d11a8e6864723dc78ea6ef515cb69afc223a78aea0fd74da00f3ad1182cde9",
+      "freshness_window_valid": true,
+      "nonce_binds_measurement_and_subjects": true,
+      "platform_id": "platform-tee-alpha",
+      "platform_type": "rdllm-conformance-tee",
+      "platform_type_is_trusted": true,
+      "quote_has_no_private_field_names": true,
+      "quote_hash": "ea81f6c187a89151767f6e357aa9209411b1171bc033572bbb1d473358f7cb5d",
+      "quote_hash_reproducible": true,
+      "quote_row_hash": "bf4cddedfe86f9a06548a2f6dfbf4a834068bca6191a58524f6f6a207b2f3d70",
+      "required_capabilities_present": true,
+      "runtime_measurement_matches": true,
+      "signature_valid": true,
+      "subject_bindings_match": true
+    }
+  ],
+  "schemas": {
+    "attested_runtime": "docs/schemas/attested_runtime.schema.json",
+    "live_emission_transparency": "docs/schemas/live_emission_transparency.schema.json"
+  },
+  "signature": {
+    "algorithm": "HMAC-SHA256",
+    "issuer": "rdllm-local-demo",
+    "value": "77974b975ef5aa60944451904204d1139ad69f025f392a2265026c8e01c198e9"
+  },
+  "subject_bindings": {
+    "delivered_output_hash": "dad739af040ffff4288e04fc4178287c632a3509e89a107feefff9882344cb5b",
+    "evidence_locked_generation_hash": "0b3640e03dd3a4782a9e076d0595bbb4bbee6f4257ea64370595cfe88dcccc2f",
+    "gateway_report_hash": "e610b412a692e607ad0b5b3c3da2c53fa46954d3cea66adead9958f3dc1df82d",
+    "live_emission_transparency_hash": "ea1cfa5da400063356bc87e7cad777632d281706a02cb1d2699e805127370a6f",
+    "live_emission_witness_hash": "327f3e4d72864edf22031434f163340dd64db765023551b85dd59c58994b60fa",
+    "live_subject_root": "635419a36932e2c4cddb8512d822d28fd0f1316f71075ddd2f95caf4e9e7f57d",
+    "proof_response_hash": "e651c5ed4d1069bcf624a4b04c7cda35fa01518f435ff0e063c6b9b31de58ed4",
+    "release_gate_hash": "aa0a718db8f25a8200acc6be83f7abbb405f27bf828326a25383504a66148d98",
+    "subject_binding_root": "1c797350ca66cb2ef88f70ba4b69838d604d1722be965147dd2fbd29f866d63b",
+    "transparency_log_binding_root": "e25c612d0bb690f8a1f95558f5ab34c4196aa1b205ed7d0816c748a02e8da80c"
+  },
+  "summary": {
+    "accepted_quote_count": 1,
+    "minimum_input_level": "RDLLM-L85",
+    "minimum_quote_count": 1,
+    "quote_count": 1,
+    "runtime_attested": true,
+    "runtime_measurement_hash": "08b6c4bd0aaee9273c741f9d9ea4acf3a856fd31e3b7fa6096699c1fd6a7b664",
+    "status": "ready",
+    "subject_binding_root": "1c797350ca66cb2ef88f70ba4b69838d604d1722be965147dd2fbd29f866d63b",
+    "target_certification_level": "RDLLM-L86",
+    "trusted_attestor_count": 1
+  },
+  "trusted_attestor_rows": [
+    {
+      "attestor_id": "attestor-alpha",
+      "attestor_key_hash": "b9d11a8e6864723dc78ea6ef515cb69afc223a78aea0fd74da00f3ad1182cde9",
+      "attestor_row_hash": "b42a0b107d6570dc0fbfc6d4331e049d86af56a4cd81bfb7b5ac4c2c07e64d6f",
+      "platform_id": "platform-tee-alpha",
+      "platform_type": "rdllm-conformance-tee",
+      "trusted_for": "attribution_runtime_attestation"
+    }
+  ]
+}

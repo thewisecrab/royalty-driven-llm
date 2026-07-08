@@ -1,0 +1,369 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_adversarial_provenance_quorum.schema.json",
+  "title": "Universal Adversarial Provenance Quorum",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "universal_adversarial_provenance_quorum_version",
+    "schema",
+    "created_at",
+    "issuer",
+    "policy",
+    "well_known",
+    "distribution_passport_binding",
+    "witness_quorum_binding",
+    "provenance_signal_rows",
+    "attack_resistance_rows",
+    "reliance_context_rows",
+    "evidence_roots",
+    "checks",
+    "adversarial_quorum_decision",
+    "quorum_coverage",
+    "privacy",
+    "summary",
+    "universal_adversarial_provenance_quorum_hash"
+  ],
+  "properties": {
+    "universal_adversarial_provenance_quorum_version": {
+      "const": "rdllm-universal-adversarial-provenance-quorum/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_adversarial_provenance_quorum.schema.json"
+    },
+    "created_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_distribution_reliance_level",
+        "minimum_witness_quorum_level",
+        "single_provenance_signal_insufficient",
+        "independent_witness_required",
+        "adversarial_negative_fixtures_required",
+        "resolver_split_view_rejection_required",
+        "settlement_hold_required_on_quorum_failure",
+        "private_payloads_forbidden_in_public_quorum"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-adversarial-provenance-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L173" },
+        "minimum_distribution_reliance_level": { "const": "RDLLM-L172" },
+        "minimum_witness_quorum_level": { "const": "RDLLM-L153" },
+        "single_provenance_signal_insufficient": { "const": true },
+        "independent_witness_required": { "const": true },
+        "adversarial_negative_fixtures_required": { "const": true },
+        "resolver_split_view_rejection_required": { "const": true },
+        "settlement_hold_required_on_quorum_failure": { "const": true },
+        "private_payloads_forbidden_in_public_quorum": { "const": true }
+      }
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-adversarial-provenance-quorum.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-adversarial-provenance-quorum/v1"
+        }
+      }
+    },
+    "distribution_passport_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 32 },
+        "payload_hash": { "type": "string", "minLength": 32 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L172" }
+      }
+    },
+    "witness_quorum_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 32 },
+        "payload_hash": { "type": "string", "minLength": 32 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L153" }
+      }
+    },
+    "provenance_signal_rows": {
+      "type": "object",
+      "required": [
+        "visible_source_footer",
+        "machine_readable_footer",
+        "content_credential_manifest",
+        "transparency_log_inclusion",
+        "witness_quorum_signature",
+        "status_resolver",
+        "source_locator_health",
+        "copy_body_hash",
+        "perceptual_fingerprint",
+        "watermark_or_marker",
+        "settlement_meter_commitment",
+        "creator_audit_index"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/provenanceSignalRow" }
+    },
+    "attack_resistance_rows": {
+      "type": "object",
+      "required": [
+        "manifest_substitution",
+        "signature_replay",
+        "footer_spoofing",
+        "locator_phishing",
+        "resolver_split_view",
+        "watermark_removal",
+        "perceptual_near_duplicate",
+        "screenshot_crop",
+        "pdf_metadata_strip",
+        "api_proxy_rewrite",
+        "downstream_rag_poisoning",
+        "credential_time_shift",
+        "creator_id_impersonation",
+        "settlement_meter_fork",
+        "private_payload_leak"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/attackResistanceRow" }
+    },
+    "reliance_context_rows": {
+      "type": "object",
+      "required": [
+        "consumer_view",
+        "publisher_embed",
+        "enterprise_export",
+        "api_customer_relay",
+        "regulator_evidence",
+        "creator_audit",
+        "settlement_release",
+        "downstream_training_or_rag_use"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/relianceContextRow" }
+    },
+    "evidence_roots": {
+      "type": "object",
+      "required": [
+        "provenance_signal_root",
+        "attack_resistance_root",
+        "reliance_context_root"
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "distribution_reliance_passport_bound",
+        "distribution_reliance_passport_l172_ready",
+        "accountability_witness_quorum_bound",
+        "accountability_witness_quorum_l153_ready",
+        "provenance_signal_rows_complete",
+        "attack_resistance_rows_complete",
+        "reliance_context_rows_complete",
+        "adversarial_provenance_quorum_signed"
+      ]
+    },
+    "adversarial_quorum_decision": {
+      "type": "object",
+      "required": [
+        "adversarial_provenance_quorum_ready",
+        "credential_reliance_allowed",
+        "footer_reliance_allowed",
+        "high_stakes_reliance_allowed",
+        "third_party_distribution_reliance_allowed",
+        "downstream_rag_or_training_reuse_allowed",
+        "creator_settlement_release_allowed",
+        "single_signal_reliance_blocked",
+        "spoofed_or_stripped_outputs_blocked",
+        "failure_modes"
+      ],
+      "properties": {
+        "adversarial_provenance_quorum_ready": { "const": true },
+        "credential_reliance_allowed": { "const": true },
+        "footer_reliance_allowed": { "const": true },
+        "high_stakes_reliance_allowed": { "const": true },
+        "third_party_distribution_reliance_allowed": { "const": true },
+        "downstream_rag_or_training_reuse_allowed": { "const": true },
+        "creator_settlement_release_allowed": { "const": true },
+        "single_signal_reliance_blocked": { "const": true },
+        "spoofed_or_stripped_outputs_blocked": { "const": true },
+        "failure_modes": { "type": "array", "maxItems": 0 }
+      }
+    },
+    "quorum_coverage": {
+      "type": "object",
+      "required": [
+        "required_provenance_signal_count",
+        "ready_provenance_signal_count",
+        "required_attack_class_count",
+        "ready_attack_class_count",
+        "required_reliance_context_count",
+        "ready_reliance_context_count"
+      ],
+      "properties": {
+        "required_provenance_signal_count": { "const": 12 },
+        "ready_provenance_signal_count": { "const": 12 },
+        "required_attack_class_count": { "const": 15 },
+        "ready_attack_class_count": { "const": 15 },
+        "required_reliance_context_count": { "const": 8 },
+        "ready_reliance_context_count": { "const": 8 }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payload_fields",
+        "private_strings_absent",
+        "private_payloads_excluded"
+      ],
+      "properties": {
+        "private_payload_fields": { "type": "array", "maxItems": 0 },
+        "private_strings_absent": { "const": true },
+        "private_payloads_excluded": { "const": true }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_distribution_reliance_level",
+        "minimum_witness_quorum_level",
+        "provenance_signal_count",
+        "ready_provenance_signal_count",
+        "attack_class_count",
+        "ready_attack_class_count",
+        "reliance_context_count",
+        "ready_reliance_context_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_adversarial_provenance_quorum"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L173" },
+        "minimum_distribution_reliance_level": { "const": "RDLLM-L172" },
+        "minimum_witness_quorum_level": { "const": "RDLLM-L153" },
+        "provenance_signal_count": { "const": 12 },
+        "ready_provenance_signal_count": { "const": 12 },
+        "attack_class_count": { "const": 15 },
+        "ready_attack_class_count": { "const": 15 },
+        "reliance_context_count": { "const": 8 },
+        "ready_reliance_context_count": { "const": 8 },
+        "failure_mode_count": { "const": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_adversarial_provenance_quorum": { "const": true }
+      }
+    },
+    "universal_adversarial_provenance_quorum_hash": {
+      "type": "string",
+      "minLength": 32
+    },
+    "signature": { "type": "object" }
+  },
+  "$defs": {
+    "provenanceSignalRow": {
+      "type": "object",
+      "required": [
+        "signal_hash",
+        "l172_passport_hash",
+        "witness_quorum_hash",
+        "independent_observation_hash",
+        "status_resolver_hash",
+        "adversarial_test_hash",
+        "verifier_hash",
+        "signal_present",
+        "signal_independent",
+        "signal_matches_l172",
+        "witness_observed",
+        "current_status_resolves",
+        "spoof_resistant",
+        "no_private_payloads"
+      ],
+      "properties": {
+        "signal_present": { "const": true },
+        "signal_independent": { "const": true },
+        "signal_matches_l172": { "const": true },
+        "witness_observed": { "const": true },
+        "current_status_resolves": { "const": true },
+        "spoof_resistant": { "const": true },
+        "no_private_payloads": { "const": true }
+      }
+    },
+    "attackResistanceRow": {
+      "type": "object",
+      "required": [
+        "fixture_hash",
+        "attack_trace_hash",
+        "expected_reject",
+        "observed_reject",
+        "signal_quorum_failed_closed",
+        "reliance_blocked",
+        "settlement_held",
+        "public_status_marked_failed",
+        "no_private_payloads"
+      ],
+      "properties": {
+        "fixture_hash": { "type": "string", "minLength": 32 },
+        "attack_trace_hash": { "type": "string", "minLength": 32 },
+        "expected_reject": { "const": true },
+        "observed_reject": { "const": true },
+        "signal_quorum_failed_closed": { "const": true },
+        "reliance_blocked": { "const": true },
+        "settlement_held": { "const": true },
+        "public_status_marked_failed": { "const": true },
+        "no_private_payloads": { "const": true }
+      }
+    },
+    "relianceContextRow": {
+      "type": "object",
+      "required": [
+        "context_hash",
+        "minimum_signal_root_hash",
+        "attack_root_hash",
+        "l172_passport_hash",
+        "witness_quorum_hash",
+        "verifier_hash",
+        "context_supported",
+        "quorum_threshold_met",
+        "current_status_checked",
+        "high_stakes_policy_applied",
+        "reliance_allowed_only_on_quorum",
+        "settlement_release_bound",
+        "no_private_payloads"
+      ],
+      "properties": {
+        "context_supported": { "const": true },
+        "quorum_threshold_met": { "const": true },
+        "current_status_checked": { "const": true },
+        "high_stakes_policy_applied": { "const": true },
+        "reliance_allowed_only_on_quorum": { "const": true },
+        "settlement_release_bound": { "const": true },
+        "no_private_payloads": { "const": true }
+      }
+    }
+  }
+}

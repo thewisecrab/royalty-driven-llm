@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/training_memory_provenance.schema.json",
+  "title": "RDLLM Training Memory Provenance Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "audit_policy",
+    "response",
+    "artifact_bindings",
+    "source_snapshot_commitments",
+    "memorized_span_rows",
+    "remediation_rows",
+    "checks",
+    "summary",
+    "privacy",
+    "schemas",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": { "const": "rdllm-training-memory-provenance/v1" },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "audit_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "min_match_tokens",
+        "raw_answer_text_forbidden",
+        "raw_source_text_forbidden",
+        "memorized_registered_text_requires_visible_attribution",
+        "hidden_memory_match_requires_escrow_or_block"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-training-memory-provenance-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L81" },
+        "minimum_input_level": { "const": "RDLLM-L80" },
+        "min_match_tokens": { "type": "integer", "minimum": 1 },
+        "raw_answer_text_forbidden": { "const": true },
+        "raw_source_text_forbidden": { "const": true },
+        "memorized_registered_text_requires_visible_attribution": { "const": true },
+        "hidden_memory_match_requires_escrow_or_block": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "response": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "event_hash",
+        "rendered_output_hash",
+        "answer_body_hash",
+        "answer_body_token_count"
+      ],
+      "properties": {
+        "event_id": { "type": "string" },
+        "event_hash": { "type": "string" },
+        "rendered_output_hash": { "type": "string" },
+        "answer_body_hash": { "type": "string" },
+        "answer_body_token_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "response_envelope_hash",
+        "rendered_attribution_audit_hash",
+        "creator_license_contract_hash",
+        "training_content_summary_hash",
+        "source_snapshot_root"
+      ],
+      "properties": {
+        "response_envelope_hash": { "type": "string" },
+        "rendered_attribution_audit_hash": { "type": "string" },
+        "creator_license_contract_hash": { "type": "string" },
+        "training_content_summary_hash": { "type": "string" },
+        "source_snapshot_root": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "source_snapshot_commitments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "work_id",
+          "chunk_id",
+          "source_uri",
+          "content_hash",
+          "body_hash",
+          "declared_content_hash_matches_body",
+          "token_count",
+          "snapshot_commitment_hash"
+        ],
+        "properties": {
+          "work_id": { "type": "string" },
+          "chunk_id": { "type": "string" },
+          "source_uri": { "type": "string" },
+          "canonical_uri": { "type": "string" },
+          "archived_uri": { "type": "string" },
+          "retrieved_at": { "type": "string" },
+          "content_hash": { "type": "string" },
+          "body_hash": { "type": "string" },
+          "declared_content_hash_matches_body": { "type": "boolean" },
+          "token_count": { "type": "integer", "minimum": 0 },
+          "snapshot_commitment_hash": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "memorized_span_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "work_id",
+          "chunk_id",
+          "creator_id",
+          "source_uri",
+          "content_hash",
+          "matched_sequence_hash",
+          "matched_token_count",
+          "visible_attribution_bound",
+          "training_allowed",
+          "generation_allowed",
+          "display_allowed",
+          "content_hash_in_training_summary",
+          "content_hash_in_license_contract",
+          "remediation_status",
+          "memory_span_row_hash"
+        ],
+        "properties": {
+          "work_id": { "type": "string" },
+          "chunk_id": { "type": "string" },
+          "creator_id": { "type": "string" },
+          "source_uri": { "type": "string" },
+          "content_hash": { "type": "string" },
+          "visible_source_label": { "type": "string" },
+          "matched_sequence_hash": { "type": "string" },
+          "matched_token_count": { "type": "integer", "minimum": 0 },
+          "source_token_count": { "type": "integer", "minimum": 0 },
+          "answer_token_count": { "type": "integer", "minimum": 0 },
+          "source_token_coverage": { "type": "number" },
+          "answer_token_coverage": { "type": "number" },
+          "ngram_containment": { "type": "number" },
+          "visible_attribution_bound": { "type": "boolean" },
+          "training_allowed": { "type": "boolean" },
+          "generation_allowed": { "type": "boolean" },
+          "display_allowed": { "type": "boolean" },
+          "attribution_required": { "type": "boolean" },
+          "royalty_required": { "type": "boolean" },
+          "content_hash_in_training_summary": { "type": "boolean" },
+          "content_hash_in_license_contract": { "type": "boolean" },
+          "remediation_status": { "type": "string" },
+          "memory_span_row_hash": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "remediation_rows": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "rendered_output_hash_matches_response",
+        "rendered_attribution_audit_verified",
+        "snapshot_content_hashes_reproducible",
+        "memory_sources_present_in_training_summary",
+        "memory_sources_present_in_license_contract",
+        "memory_sources_training_generation_display_allowed",
+        "all_memory_spans_visible_attributed",
+        "input_hashes_reproducible"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "source_snapshot_count",
+        "detected_memory_span_count",
+        "visible_attributed_memory_span_count",
+        "hidden_memory_span_count",
+        "remediation_row_count",
+        "training_memory_provenance_verified"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "failed"] },
+        "target_certification_level": { "const": "RDLLM-L81" },
+        "source_snapshot_count": { "type": "integer", "minimum": 0 },
+        "detected_memory_span_count": { "type": "integer", "minimum": 0 },
+        "visible_attributed_memory_span_count": { "type": "integer", "minimum": 0 },
+        "hidden_memory_span_count": { "type": "integer", "minimum": 0 },
+        "remediation_row_count": { "type": "integer", "minimum": 0 },
+        "training_memory_provenance_verified": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "prompt_text_disclosed",
+        "matched_text_disclosed",
+        "stores_hashes_and_counts_not_text"
+      ],
+      "properties": {
+        "answer_text_disclosed": { "const": false },
+        "source_text_disclosed": { "const": false },
+        "prompt_text_disclosed": { "const": false },
+        "matched_text_disclosed": { "const": false },
+        "stores_hashes_and_counts_not_text": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "training_memory_provenance",
+        "response_envelope",
+        "rendered_attribution_audit",
+        "creator_license_contract",
+        "training_content_summary"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "report_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "properties": {
+        "algorithm": { "type": "string" },
+        "issuer": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

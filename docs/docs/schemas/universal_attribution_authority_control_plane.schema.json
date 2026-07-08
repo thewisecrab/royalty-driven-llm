@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_attribution_authority_control_plane.schema.json",
+  "title": "RDLLM Universal Attribution Authority Control Plane",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "authority_control_version",
+    "issuer",
+    "created_at",
+    "authority_control_policy",
+    "artifact_bindings",
+    "provider_family_rows",
+    "runtime_surface_rows",
+    "authority_chain_rows",
+    "enforcement_gate_rows",
+    "stakeholder_role_rows",
+    "authority_obligation_rows",
+    "failure_case_rows",
+    "verifier_command_rows",
+    "commitments",
+    "checks",
+    "control_decision",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_attribution_authority_control_plane_hash",
+    "signature"
+  ],
+  "properties": {
+    "authority_control_version": {
+      "const": "rdllm-universal-attribution-authority-control-plane/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "authority_control_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "required_core_artifacts",
+        "required_provider_families",
+        "required_runtime_surfaces",
+        "required_authority_chains",
+        "required_enforcement_gates",
+        "required_stakeholder_roles",
+        "required_failure_cases",
+        "required_verifier_commands"
+      ],
+      "properties": {
+        "profile": {
+          "const": "rdllm-universal-attribution-authority-control-plane-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L145" },
+        "minimum_input_level": { "const": "RDLLM-L144" },
+        "required_core_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_provider_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_runtime_surfaces": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_authority_chains": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_enforcement_gates": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_stakeholder_roles": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_failure_cases": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_verifier_commands": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "artifact_bindings": { "type": "object" },
+    "provider_family_rows": { "type": "array", "items": { "type": "object" } },
+    "runtime_surface_rows": { "type": "array", "items": { "type": "object" } },
+    "authority_chain_rows": { "type": "array", "items": { "type": "object" } },
+    "enforcement_gate_rows": { "type": "array", "items": { "type": "object" } },
+    "stakeholder_role_rows": { "type": "array", "items": { "type": "object" } },
+    "authority_obligation_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "provider_family",
+          "runtime_surface",
+          "authority_chain_root",
+          "actor_delegation_hash",
+          "intent_scope_hash",
+          "context_scope_hash",
+          "tool_scope_hash",
+          "model_invocation_hash",
+          "inference_chain_hash",
+          "memory_scope_hash",
+          "settlement_scope_hash",
+          "intervention_log_hash",
+          "revocation_check_hash",
+          "confidential_audit_hash",
+          "actor_authorized",
+          "intent_in_scope",
+          "context_authorized",
+          "tool_authorized",
+          "model_invocation_bound",
+          "inference_chain_bound",
+          "memory_provenance_bound",
+          "settlement_authorized",
+          "intervention_recorded",
+          "revocation_checked",
+          "fail_closed",
+          "ready"
+        ]
+      }
+    },
+    "failure_case_rows": { "type": "array", "items": { "type": "object" } },
+    "verifier_command_rows": { "type": "array", "items": { "type": "object" } },
+    "commitments": { "type": "object" },
+    "checks": { "type": "object", "additionalProperties": { "type": "boolean" } },
+    "control_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "publication_authorized",
+        "runtime_authority_approved",
+        "agentic_action_authorized",
+        "direct_settlement_authorized",
+        "failed_checks",
+        "failure_modes",
+        "safe_runtime_policy"
+      ]
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["universal_attribution_authority_control_plane"],
+      "properties": {
+        "universal_attribution_authority_control_plane": {
+          "const": "docs/schemas/universal_attribution_authority_control_plane.schema.json"
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_prompt_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_source_text_disclosed",
+        "raw_training_text_disclosed",
+        "raw_tool_payload_disclosed",
+        "raw_memory_payload_disclosed",
+        "raw_customer_or_billing_logs_disclosed",
+        "model_weights_or_hidden_states_disclosed",
+        "hash_only_authority_bindings",
+        "private_strings_absent"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "provider_family_count",
+        "runtime_surface_count",
+        "authority_chain_count",
+        "enforcement_gate_count",
+        "stakeholder_role_count",
+        "authority_obligation_count",
+        "required_obligation_count",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L145" },
+        "minimum_input_level": { "const": "RDLLM-L144" }
+      }
+    },
+    "universal_attribution_authority_control_plane_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

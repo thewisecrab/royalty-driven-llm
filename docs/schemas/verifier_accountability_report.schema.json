@@ -1,0 +1,256 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/verifier_accountability_report.schema.json",
+  "title": "RDLLM Verifier Accountability Report",
+  "type": "object",
+  "required": [
+    "report_version",
+    "issuer",
+    "created_at",
+    "policy",
+    "artifact_bindings",
+    "accepted_verifier_rows",
+    "registry_rows",
+    "bond_rows",
+    "challenge_rows",
+    "slashing_policy",
+    "slashing_evidence_rows",
+    "settlement_gate",
+    "settlement_rows",
+    "commitments",
+    "checks",
+    "schemas",
+    "summary",
+    "privacy",
+    "report_hash",
+    "signature"
+  ],
+  "properties": {
+    "report_version": {
+      "const": "rdllm-verifier-accountability-report/v1"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_bond_amount",
+        "bond_currency",
+        "direct_settlement_requires",
+        "failure_route"
+      ],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "artifact_count",
+        "artifact_binding_root",
+        "artifact_hashes_reproducible",
+        "verifier_quorum_report_hash",
+        "trust_registry_hash",
+        "provider_card_hash",
+        "certification_report_hash",
+        "bindings"
+      ],
+      "additionalProperties": true
+    },
+    "accepted_verifier_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "verifier_id",
+          "organization_id",
+          "verifier_key_hash",
+          "attestation_hash",
+          "artifact_binding_root",
+          "replay_verdict"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "registry_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "verifier_id",
+          "role",
+          "key_id",
+          "registry_key_hash",
+          "status",
+          "key_hash_matches_verifier_attestation",
+          "revoked_key_used",
+          "registry_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "bond_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "verifier_id",
+          "organization_id",
+          "bond_id",
+          "bond_amount",
+          "bond_currency",
+          "bond_escrow_account_hash",
+          "valid_from",
+          "valid_until",
+          "conflict_disclosure_hash",
+          "conflict_status",
+          "active",
+          "slashable",
+          "duties",
+          "bond_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "challenge_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "challenge_id",
+          "verifier_id",
+          "status",
+          "reason_code",
+          "evidence_hash",
+          "blocking",
+          "challenge_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "slashing_policy": {
+      "type": "object",
+      "required": [
+        "slashable_events",
+        "evidence_required",
+        "slashing_evidence_root"
+      ],
+      "additionalProperties": true
+    },
+    "slashing_evidence_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "settlement_gate": {
+      "type": "object",
+      "required": [
+        "decision",
+        "direct_settlement_ready",
+        "escrow_reasons",
+        "accepted_verifier_count",
+        "registry_verified_verifier_count",
+        "bonded_verifier_count",
+        "blocking_challenge_count",
+        "blocking_conflict_count"
+      ],
+      "additionalProperties": true
+    },
+    "settlement_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "creator_id",
+          "work_id",
+          "prior_settlement_decision",
+          "settlement_decision",
+          "consensus_payout",
+          "payout",
+          "escrow_amount",
+          "settlement_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "required": [
+        "schema",
+        "artifact_binding_root",
+        "accepted_verifier_root",
+        "registry_row_root",
+        "bond_row_root",
+        "challenge_row_root",
+        "slashing_evidence_root",
+        "settlement_row_root"
+      ],
+      "additionalProperties": true
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "verifier_accountability_report",
+        "verifier_quorum_report",
+        "trust_registry",
+        "provider_attribution_card",
+        "certification_report"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "accepted_verifier_count",
+        "registry_verified_verifier_count",
+        "bonded_verifier_count",
+        "minimum_bond_amount",
+        "blocking_challenge_count",
+        "blocking_conflict_count",
+        "settlement_decision",
+        "direct_settlement_ready",
+        "settlement_row_count",
+        "payout_total",
+        "escrow_total",
+        "creator_pool_conserved_or_escrowed",
+        "offline_verification_supported"
+      ],
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "report_hash": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "issuer",
+        "value"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

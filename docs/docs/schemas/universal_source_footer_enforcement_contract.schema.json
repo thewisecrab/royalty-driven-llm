@@ -1,0 +1,260 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/universal_source_footer_enforcement_contract.schema.json",
+  "title": "RDLLM Universal Source Footer Enforcement Contract",
+  "type": "object",
+  "required": [
+    "universal_source_footer_enforcement_contract_version",
+    "schema",
+    "policy",
+    "well_known",
+    "model_provider_registry_binding",
+    "source_grounded_response_binding",
+    "enforcement_stage_rows",
+    "source_type_rows",
+    "footer_row_field_rows",
+    "response_surface_rows",
+    "route_enforcement_rows",
+    "negative_footer_rows",
+    "evidence_roots",
+    "checks",
+    "footer_enforcement_decision",
+    "coverage",
+    "privacy",
+    "summary",
+    "universal_source_footer_enforcement_contract_hash"
+  ],
+  "properties": {
+    "universal_source_footer_enforcement_contract_version": {
+      "const": "rdllm-universal-source-footer-enforcement-contract/v1"
+    },
+    "schema": {
+      "const": "docs/schemas/universal_source_footer_enforcement_contract.schema.json"
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "policy_version",
+        "target_certification_level",
+        "minimum_model_provider_registry_level",
+        "minimum_source_grounded_response_level",
+        "source_payment_is_not_substitute_for_visible_attribution",
+        "source_footer_required_before_response_release",
+        "claim_support_required_before_footer_row",
+        "posthoc_citations_forbidden",
+        "no_source_abstention_required",
+        "machine_readable_sources_required"
+      ],
+      "properties": {
+        "policy_version": {
+          "const": "rdllm-universal-source-footer-enforcement-policy/v1"
+        },
+        "target_certification_level": { "const": "RDLLM-L177" },
+        "minimum_model_provider_registry_level": { "const": "RDLLM-L176" },
+        "minimum_source_grounded_response_level": { "const": "RDLLM-L171" },
+        "source_payment_is_not_substitute_for_visible_attribution": { "const": true },
+        "source_footer_required_before_response_release": { "const": true },
+        "claim_support_required_before_footer_row": { "const": true },
+        "posthoc_citations_forbidden": { "const": true },
+        "no_source_abstention_required": { "const": true },
+        "machine_readable_sources_required": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "well_known": {
+      "type": "object",
+      "required": ["path", "returns"],
+      "properties": {
+        "path": {
+          "const": "/.well-known/rdllm/universal-source-footer-enforcement-contract.json"
+        },
+        "returns": {
+          "const": "rdllm-universal-source-footer-enforcement-contract/v1"
+        }
+      },
+      "additionalProperties": true
+    },
+    "model_provider_registry_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level",
+        "declared_model_route_count"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 64 },
+        "payload_hash": { "type": "string", "minLength": 64 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L176" },
+        "declared_model_route_count": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": true
+    },
+    "source_grounded_response_binding": {
+      "type": "object",
+      "required": [
+        "present",
+        "artifact_hash",
+        "payload_hash",
+        "hash_reproducible",
+        "status",
+        "level"
+      ],
+      "properties": {
+        "present": { "const": true },
+        "artifact_hash": { "type": "string", "minLength": 64 },
+        "payload_hash": { "type": "string", "minLength": 64 },
+        "hash_reproducible": { "const": true },
+        "status": { "const": "ready" },
+        "level": { "const": "RDLLM-L171" }
+      },
+      "additionalProperties": true
+    },
+    "enforcement_stage_rows": {
+      "type": "object",
+      "minProperties": 12
+    },
+    "source_type_rows": {
+      "type": "object",
+      "minProperties": 12
+    },
+    "footer_row_field_rows": {
+      "type": "object",
+      "minProperties": 13
+    },
+    "response_surface_rows": {
+      "type": "object",
+      "minProperties": 8
+    },
+    "route_enforcement_rows": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "negative_footer_rows": {
+      "type": "object",
+      "minProperties": 18
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "model_provider_registry_bound",
+        "model_provider_registry_l176_ready",
+        "source_grounded_response_receipt_bound",
+        "source_grounded_response_receipt_l171_ready",
+        "enforcement_stage_rows_complete",
+        "source_type_rows_complete",
+        "footer_row_field_rows_complete",
+        "response_surface_rows_complete",
+        "all_registry_routes_have_footer_enforcement",
+        "negative_footer_fixtures_reject",
+        "contract_signed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "footer_enforcement_decision": {
+      "type": "object",
+      "required": [
+        "universal_source_footer_enforcement_ready",
+        "final_answer_release_allowed",
+        "visible_source_footer_required",
+        "user_confidence_footer_allowed",
+        "machine_readable_sources_required",
+        "unsupported_claims_blocked",
+        "posthoc_citations_blocked",
+        "no_source_abstention_required",
+        "copy_export_allowed",
+        "creator_settlement_allowed",
+        "source_payment_without_attribution_blocked"
+      ],
+      "properties": {
+        "universal_source_footer_enforcement_ready": { "const": true },
+        "final_answer_release_allowed": { "const": true },
+        "visible_source_footer_required": { "const": true },
+        "user_confidence_footer_allowed": { "const": true },
+        "machine_readable_sources_required": { "const": true },
+        "unsupported_claims_blocked": { "const": true },
+        "posthoc_citations_blocked": { "const": true },
+        "no_source_abstention_required": { "const": true },
+        "copy_export_allowed": { "const": true },
+        "creator_settlement_allowed": { "const": true },
+        "source_payment_without_attribution_blocked": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "private_payloads_excluded",
+        "private_prompts_excluded",
+        "private_outputs_excluded",
+        "private_source_text_excluded",
+        "public_contract_uses_hashes_locators_and_labels"
+      ],
+      "properties": {
+        "private_payloads_excluded": { "const": true },
+        "private_prompts_excluded": { "const": true },
+        "private_outputs_excluded": { "const": true },
+        "private_source_text_excluded": { "const": true },
+        "public_contract_uses_hashes_locators_and_labels": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_model_provider_registry_level",
+        "minimum_source_grounded_response_level",
+        "enforcement_stage_count",
+        "ready_enforcement_stage_count",
+        "source_type_count",
+        "ready_source_type_count",
+        "footer_row_field_count",
+        "ready_footer_row_field_count",
+        "response_surface_count",
+        "ready_response_surface_count",
+        "declared_model_route_count",
+        "ready_route_enforcement_count",
+        "negative_footer_failure_count",
+        "ready_negative_footer_failure_count",
+        "failure_mode_count",
+        "privacy_preserved",
+        "signed_source_footer_enforcement_contract"
+      ],
+      "properties": {
+        "status": { "const": "ready" },
+        "target_certification_level": { "const": "RDLLM-L177" },
+        "minimum_model_provider_registry_level": { "const": "RDLLM-L176" },
+        "minimum_source_grounded_response_level": { "const": "RDLLM-L171" },
+        "enforcement_stage_count": { "const": 12 },
+        "ready_enforcement_stage_count": { "const": 12 },
+        "source_type_count": { "const": 12 },
+        "ready_source_type_count": { "const": 12 },
+        "footer_row_field_count": { "const": 13 },
+        "ready_footer_row_field_count": { "const": 13 },
+        "response_surface_count": { "const": 8 },
+        "ready_response_surface_count": { "const": 8 },
+        "declared_model_route_count": { "type": "integer", "minimum": 1 },
+        "ready_route_enforcement_count": { "type": "integer", "minimum": 1 },
+        "negative_footer_failure_count": { "const": 18 },
+        "ready_negative_footer_failure_count": { "const": 18 },
+        "failure_mode_count": { "const": 0 },
+        "privacy_preserved": { "const": true },
+        "signed_source_footer_enforcement_contract": { "const": true }
+      },
+      "additionalProperties": true
+    },
+    "universal_source_footer_enforcement_contract_hash": {
+      "type": "string",
+      "minLength": 64
+    }
+  },
+  "additionalProperties": true
+}

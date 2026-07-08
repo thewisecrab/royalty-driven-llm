@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/private_reasoning_attribution.schema.json",
+  "title": "RDLLM Private Reasoning Attribution Receipt",
+  "type": "object",
+  "required": [
+    "version",
+    "issued_at",
+    "issuer",
+    "case",
+    "reasoning_system",
+    "artifact_bindings",
+    "reasoning_policy",
+    "reasoning_steps",
+    "royalty_obligations",
+    "verification_errors",
+    "checks",
+    "privacy",
+    "schemas",
+    "summary",
+    "private_reasoning_attribution_hash",
+    "signature"
+  ],
+  "properties": {
+    "version": { "const": "rdllm-private-reasoning-attribution/v1" },
+    "issued_at": { "type": "string" },
+    "issuer": { "type": "string" },
+    "case": {
+      "type": "object",
+      "required": ["case_id", "status"],
+      "additionalProperties": true
+    },
+    "reasoning_system": {
+      "type": "object",
+      "required": ["system_id", "system_version", "scope", "minimum_memory_level"],
+      "additionalProperties": true
+    },
+    "artifact_bindings": {
+      "type": "object",
+      "required": [
+        "source_footer_delivery_hash",
+        "source_footer_delivery_hash_reproducible",
+        "client_enforcement_hash",
+        "client_enforcement_hash_reproducible",
+        "persistent_memory_provenance_hash",
+        "persistent_memory_provenance_hash_reproducible",
+        "agent_tool_attribution_ledger_hash",
+        "agent_tool_attribution_ledger_hash_reproducible",
+        "reasoning_step_root",
+        "reasoning_step_input_hash",
+        "royalty_obligation_root",
+        "rendered_output_hash"
+      ],
+      "additionalProperties": true
+    },
+    "reasoning_policy": {
+      "type": "object",
+      "required": [
+        "policy_id",
+        "requires_private_trace_commitments",
+        "requires_source_carry_forward",
+        "requires_footer_closure",
+        "requires_memory_receipts_for_memory_steps",
+        "requires_auditor_challenge_support",
+        "requires_no_raw_private_reasoning",
+        "policy_hash"
+      ],
+      "additionalProperties": true
+    },
+    "reasoning_steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "step_id",
+          "sequence",
+          "step_type",
+          "operation",
+          "private_trace_hash",
+          "private_trace_salt_hash",
+          "input_artifact_hashes",
+          "source_labels",
+          "visible_source_labels",
+          "claim_hashes",
+          "tool_call_ids",
+          "memory_ids",
+          "delegate_model_id",
+          "output_commitment_hash",
+          "rendered_output_hash",
+          "audit_opening_commitment",
+          "raw_private_reasoning_disclosed",
+          "reasoning_step_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "royalty_obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_label",
+          "creator_id",
+          "work_id",
+          "share",
+          "settlement_state",
+          "basis",
+          "obligation_hash",
+          "royalty_row_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "verification_errors": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "source_footer_delivery_verified",
+        "client_attribution_enforcement_verified",
+        "persistent_memory_provenance_verified",
+        "agent_tool_ledger_verified_when_tools_used",
+        "artifact_hashes_reproducible",
+        "reasoning_steps_have_private_commitments",
+        "reasoning_steps_bind_upstream_artifacts",
+        "reasoning_source_labels_declared",
+        "reasoning_source_labels_visible_in_footer",
+        "reasoning_royalty_obligations_cover_sources",
+        "memory_reasoning_steps_bind_l106_receipt",
+        "tool_reasoning_steps_bind_tool_ledger",
+        "delegation_steps_identify_model_and_artifacts",
+        "reasoning_steps_bind_client_rendered_output",
+        "raw_private_reasoning_not_disclosed",
+        "reasoning_policy_is_fail_closed"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_private_reasoning_disclosed",
+        "chain_of_thought_disclosed",
+        "prompt_text_disclosed",
+        "answer_text_disclosed",
+        "source_text_disclosed",
+        "memory_text_disclosed",
+        "tool_output_text_disclosed",
+        "payment_data_disclosed",
+        "receipt_uses_hashes_labels_and_commitments"
+      ],
+      "additionalProperties": { "type": "boolean" }
+    },
+    "schemas": {
+      "type": "object",
+      "required": [
+        "private_reasoning_attribution",
+        "persistent_memory_provenance",
+        "client_attribution_enforcement",
+        "source_footer_delivery"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_memory_level",
+        "reasoning_step_count",
+        "source_label_count",
+        "memory_step_count",
+        "tool_step_count",
+        "delegation_step_count",
+        "royalty_obligation_count",
+        "failed_check_count",
+        "private_reasoning_attribution_ready",
+        "privacy_preserved"
+      ],
+      "additionalProperties": true
+    },
+    "private_reasoning_attribution_hash": { "type": "string" },
+    "signature": {
+      "type": "object",
+      "required": ["algorithm", "issuer", "value"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

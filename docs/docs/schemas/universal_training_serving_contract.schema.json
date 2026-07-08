@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.local/schemas/universal_training_serving_contract.schema.json",
+  "title": "RDLLM Universal Training-to-Serving Attribution Contract",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "training_serving_contract_version",
+    "issuer",
+    "created_at",
+    "training_serving_policy",
+    "artifact_bindings",
+    "provider_family_rows",
+    "training_stage_rows",
+    "continuity_dimension_rows",
+    "training_serving_obligation_rows",
+    "failure_case_rows",
+    "verifier_command_rows",
+    "commitments",
+    "checks",
+    "contract_decision",
+    "schemas",
+    "privacy",
+    "summary",
+    "universal_training_serving_contract_hash",
+    "signature"
+  ],
+  "properties": {
+    "training_serving_contract_version": {
+      "const": "rdllm-universal-training-serving-contract/v1"
+    },
+    "issuer": { "type": "string" },
+    "created_at": { "type": "string" },
+    "training_serving_policy": {
+      "type": "object",
+      "required": [
+        "profile",
+        "target_certification_level",
+        "minimum_input_level",
+        "required_core_artifacts",
+        "required_provider_families",
+        "required_training_stages",
+        "required_continuity_dimensions",
+        "required_failure_cases",
+        "required_verifier_commands"
+      ],
+      "properties": {
+        "profile": { "const": "rdllm-universal-training-serving-policy/v1" },
+        "target_certification_level": { "const": "RDLLM-L143" },
+        "minimum_input_level": { "const": "RDLLM-L142" },
+        "required_core_artifacts": { "type": "array", "items": { "type": "string" } },
+        "required_provider_families": { "type": "array", "items": { "type": "string" } },
+        "required_training_stages": { "type": "array", "items": { "type": "string" } },
+        "required_continuity_dimensions": { "type": "array", "items": { "type": "string" } },
+        "required_failure_cases": { "type": "array", "items": { "type": "string" } },
+        "required_verifier_commands": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "artifact_bindings": { "type": "object" },
+    "provider_family_rows": { "type": "array", "items": { "type": "object" } },
+    "training_stage_rows": { "type": "array", "items": { "type": "object" } },
+    "continuity_dimension_rows": { "type": "array", "items": { "type": "object" } },
+    "training_serving_obligation_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "provider_family",
+          "training_stage",
+          "training_binding_hash",
+          "model_release_hash",
+          "runtime_route_hash",
+          "source_obligation_root",
+          "royalty_obligation_root",
+          "consent_state_root",
+          "valuation_method_hash",
+          "citation_contract_hash",
+          "grounded_reuse_contract_hash",
+          "serving_meter_hash",
+          "footer_policy_hash",
+          "ready"
+        ]
+      }
+    },
+    "failure_case_rows": { "type": "array", "items": { "type": "object" } },
+    "verifier_command_rows": { "type": "array", "items": { "type": "object" } },
+    "commitments": { "type": "object" },
+    "checks": { "type": "object", "additionalProperties": { "type": "boolean" } },
+    "contract_decision": {
+      "type": "object",
+      "required": [
+        "decision",
+        "publication_authorized",
+        "serving_attribution_approved",
+        "training_royalty_carry_forward_approved",
+        "failed_checks",
+        "failure_modes"
+      ]
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["universal_training_serving_contract"],
+      "properties": {
+        "universal_training_serving_contract": {
+          "const": "docs/schemas/universal_training_serving_contract.schema.json"
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "raw_training_text_disclosed",
+        "raw_prompt_text_disclosed",
+        "raw_answer_text_disclosed",
+        "raw_source_text_disclosed",
+        "hash_only_training_serving_bindings",
+        "private_strings_absent"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "status",
+        "target_certification_level",
+        "minimum_input_level",
+        "provider_family_count",
+        "training_stage_count",
+        "training_serving_obligation_count",
+        "privacy_preserved"
+      ],
+      "properties": {
+        "status": { "enum": ["ready", "blocked"] },
+        "target_certification_level": { "const": "RDLLM-L143" },
+        "minimum_input_level": { "const": "RDLLM-L142" }
+      }
+    },
+    "universal_training_serving_contract_hash": { "type": "string" },
+    "signature": { "type": "object" }
+  }
+}

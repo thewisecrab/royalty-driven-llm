@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "Royalty Driven LLM"
+message: "If you use RDLLM, cite the repository and the accompanying references in paper/references.bib."
+type: software
+authors:
+  - name: "RDLLM contributors"
+version: "1.0.0"
+date-released: "2026-07-02"
+license: "MIT"
+repository-code: "https://github.com/thewisecrab/royalty-driven-llm"
+abstract: "A provider-neutral attribution, source-footer, and royalty-settlement proof system for LLM outputs."
+keywords:
+  - "LLM attribution"
+  - "creator royalties"
+  - "source provenance"
+  - "citation verification"
+  - "provider adapters"
+  - "AI governance"
