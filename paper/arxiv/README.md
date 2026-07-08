@@ -8,8 +8,8 @@ Recommended arXiv metadata:
 
 - Title: `RDLLM: A Source-Grounded Attribution and Royalty Settlement Framework for Verifiable AI Outputs`
 - Authors: `Siddharth Nilesh Patel`
-- Suggested primary category: `cs.CL`
-- Suggested cross-lists: `cs.AI`, `cs.IR`, `cs.CY`
+- Suggested primary category: `cs.AI`
+- Suggested cross-lists: `cs.CL`, `cs.IR`, `cs.CY`
 - Comments: `Public technical white paper. Reference implementation and artifacts: https://github.com/thewisecrab/royalty-driven-llm`
 - Report number: leave blank unless the author has an institutional report number
 - Journal reference: leave blank
