@@ -61,7 +61,9 @@ jobs:
 
   publish:
     name: Publish package to PyPI
-    if: startsWith(github.ref, 'refs/tags/')
+    if: >-
+      startsWith(github.ref, 'refs/tags/') &&
+      vars.PYPI_TRUSTED_PUBLISHING == 'enabled'
     needs: build
     runs-on: ubuntu-latest
     environment:

@@ -51,9 +51,10 @@ The release process requires CI, dependency update policy, package build checks,
 schema validation, hosted-surface privacy checks, and the full ship gate before a
 release is tagged. Operators that redistribute RDLLM should preserve build logs,
 package hashes, dependency lock evidence when used, and release provenance.
-Tagged releases use GitHub artifact provenance and PyPI trusted publishing. The
-repository owner must first configure the `pypi` GitHub environment as an allowed
-trusted publisher in PyPI; no API token belongs in repository secrets.
+Tagged releases use GitHub artifact provenance. PyPI publishing is opt-in: the
+repository owner must configure the `pypi` GitHub environment as an allowed
+trusted publisher in PyPI, then set the repository variable
+`PYPI_TRUSTED_PUBLISHING=enabled`. No API token belongs in repository secrets.
 
 ## Abuse
 
