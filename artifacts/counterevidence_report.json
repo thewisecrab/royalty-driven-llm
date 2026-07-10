@@ -1,15 +1,15 @@
 {
   "artifact_bindings": {
     "answer_card_bound": true,
-    "answer_card_hash": "fa2bff282cd4498badb9ff52304ea26cf5b82db9366b5447e67982102f7a3941",
+    "answer_card_hash": "aaf3d9c0868b5b51fa42843b5b1f7d3cd1c4a3a8d423e62a77ae2aab6da24784",
     "citation_footer_bound": true,
-    "citation_footer_contract_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
+    "citation_footer_contract_hash": "6e21016c0fc330186a62c6b7c88c35329473ef11d07443403e70fbdde57115a2",
     "evidence_sufficiency_bound": true,
-    "evidence_sufficiency_report_hash": "ee2397e8139d6dc07fd287535c07219c0106a1ad65cd2c6dee3532a09fa62c7b",
+    "evidence_sufficiency_report_hash": "048a08bf5b4f8dbb41e9fadba39b2463f533009d1f846d5283e2a601ad3658a9",
     "source_availability_bound": true,
-    "source_availability_report_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5",
+    "source_availability_report_hash": "ef61d9cf9962a6222d0ef0280b55120b6d356e207d52539e0105f575633b5d25",
     "source_verification_bound": true,
-    "source_verification_report_hash": "15fc4a037e3f63b39b1849a1925767ea345949828e4442526af3471f12ff68cc"
+    "source_verification_report_hash": "3d4f78a0c8a3f5bd2b580204e2fe887b0316703f1336166eefa0d656f4ff48e1"
   },
   "claims": [
     {
@@ -122,7 +122,7 @@
     }
   ],
   "commitments": {
-    "artifact_binding_root": "677d75bc2ba8bb96641d4df61ea66dbf00227502fe27b25a025d8604cdeddd46",
+    "artifact_binding_root": "94852c6e1627ded752c4640e870645d3176ac9fec41656638b3a2f5649a42db8",
     "claim_counterevidence_root": "0841428669217295c85f4b428fa5b92bf1c1e58f5f4b4349f88cbf93285d319d",
     "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
     "issue_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
@@ -153,7 +153,7 @@
     "report_uses_hashes_scores_and_offsets": true,
     "source_text_disclosed": false
   },
-  "report_hash": "f23a241321b32d2a56c02ec937e896e0ed5a3cf814db28a51aa6f3d2aa2c2238",
+  "report_hash": "765a5f49dbfe67c0409f7197c1a96f37e39caa613c76f57aa33d0f02b0865daf",
   "report_version": "rdllm-counterevidence-adjudication-report/v1",
   "schemas": {
     "counterevidence_report": "docs/schemas/counterevidence_report.schema.json"
@@ -161,7 +161,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "dba4b59816b2d0c8c5b3cd0f32b7a61e2bdde5d9485129f0a57da3cc670ac660"
+    "value": "0a5fef9e6b0ee91c3e25dd551a6f102fa6fec55514fc565c89f520fce5c90a91"
   },
   "summary": {
     "addressed_counterevidence_count": 0,

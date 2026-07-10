@@ -1,11 +1,11 @@
 {
   "artifact_bindings": {
-    "answer_claim_coverage_report_hash": "0f09aa92a4fc20272ab312793166eccdabb54b949bdeb601b4a50b24574b80a8",
-    "citation_footer_contract_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
-    "counterevidence_report_hash": "f23a241321b32d2a56c02ec937e896e0ed5a3cf814db28a51aa6f3d2aa2c2238",
-    "evidence_sufficiency_report_hash": "ee2397e8139d6dc07fd287535c07219c0106a1ad65cd2c6dee3532a09fa62c7b",
-    "response_envelope_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
-    "source_availability_report_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5"
+    "answer_claim_coverage_report_hash": "8091710cd2b6e43838b3f0dfb15a90ff10e5d431c0a84f85eecf46dff8776419",
+    "citation_footer_contract_hash": "6e21016c0fc330186a62c6b7c88c35329473ef11d07443403e70fbdde57115a2",
+    "counterevidence_report_hash": "765a5f49dbfe67c0409f7197c1a96f37e39caa613c76f57aa33d0f02b0865daf",
+    "evidence_sufficiency_report_hash": "048a08bf5b4f8dbb41e9fadba39b2463f533009d1f846d5283e2a601ad3658a9",
+    "response_envelope_hash": "1bc14c301e297d81bc848a5682a4921c8d5e372096d7a0297d9994eeaa5fddeb",
+    "source_availability_report_hash": "ef61d9cf9962a6222d0ef0280b55120b6d356e207d52539e0105f575633b5d25"
   },
   "audit_policy": {
     "every_claim_span_must_bind_coverage_and_footer": true,
@@ -209,7 +209,7 @@
     "stores_line_hashes_not_lines": true,
     "stores_source_metadata_not_source_text": true
   },
-  "report_hash": "c6f4297a83058d8a3dfe646cb1db74894e1dd05671e9bb75c19336c7f10923ec",
+  "report_hash": "0bd62ed3cdc7ce2d30fc450be0ba27916a8d17111ae27e2b864e27741e67c5f3",
   "report_version": "rdllm-rendered-attribution-audit/v1",
   "schemas": {
     "answer_claim_coverage_report": "docs/schemas/answer_claim_coverage_report.schema.json",
@@ -223,7 +223,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "56d570af7871fe9aeeb2fda6c45c7a18d5fb2f6a53c59e734537a7613125c2df"
+    "value": "bb87517a8735d23d0a5cab34bd969276009e11070ce3b25c8c74fa8f1d33f798"
   },
   "summary": {
     "body_citation_label_count": 3,

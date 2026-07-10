@@ -1049,10 +1049,10 @@
       "provider_families_complete": true
     },
     "composite_contract_binding": {
-      "artifact_hash": "753d33d8c03d0727ba97789fc04593fe12065c2818bb89d797114adf3627b995",
+      "artifact_hash": "6eaf0e9576acfdd544d96edf078581e6fe59803750080647e2a32a1fbcc6b2e0",
       "hash_reproducible": true,
       "level": "RDLLM-L167",
-      "payload_hash": "753d33d8c03d0727ba97789fc04593fe12065c2818bb89d797114adf3627b995",
+      "payload_hash": "6eaf0e9576acfdd544d96edf078581e6fe59803750080647e2a32a1fbcc6b2e0",
       "present": true,
       "status": "ready"
     },
@@ -4855,7 +4855,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "2bbaa5f230ca674e509f31e2337ef1ec3c8ee2e327acdbf2565e6c284a883df8"
+      "value": "54ffc9e2f303551cb2c2ee6282274955a1f4411ff483d0dca6d765cd038035b7"
     },
     "standards_and_research": {
       "citation_reliability": "Cited but Not Verified and PaperTrail motivate native citation, locator, claim-evidence, and footer checks per provider route.",
@@ -4875,7 +4875,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L168"
     },
-    "universal_foundation_provider_binding_matrix_hash": "989c836dbcd76f117ef186f4ed56e5bb7fb8e9370ff9f208d69340a064fce083",
+    "universal_foundation_provider_binding_matrix_hash": "bf9f569065d470039110b011ecb636399dfd6eb37e1a5a9a67f6f998957976b2",
     "universal_foundation_provider_binding_matrix_version": "rdllm-universal-foundation-provider-binding-matrix/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-foundation-provider-binding-matrix.json",
@@ -5036,10 +5036,10 @@
       }
     },
     "adversarial_quorum_binding": {
-      "artifact_hash": "83c937ae722ba8bb285f21945baba1465cc8228feb49fd9952a93e6ed89e3749",
+      "artifact_hash": "b6a9bd7da84a3aafd30db137db3f68ec7d6868692d87c51f9c1ae7f63bbf31e5",
       "hash_reproducible": true,
       "level": "RDLLM-L173",
-      "payload_hash": "83c937ae722ba8bb285f21945baba1465cc8228feb49fd9952a93e6ed89e3749",
+      "payload_hash": "b6a9bd7da84a3aafd30db137db3f68ec7d6868692d87c51f9c1ae7f63bbf31e5",
       "present": true,
       "status": "ready"
     },
@@ -5256,10 +5256,10 @@
       "negative_procurement_root": "adee9b0bc1c8dc31f148f2625576539fe823ea405dd97ffc36479fb0b89e6ac1"
     },
     "industry_root_binding": {
-      "artifact_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+      "artifact_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
       "hash_reproducible": true,
       "level": "RDLLM-L163",
-      "payload_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+      "payload_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
       "present": true,
       "status": "ready"
     },
@@ -5610,7 +5610,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "cd1b3964dc669680e335b4789c1ad2b02345e79902da6a92d0c2cde3a0b41163"
+      "value": "da0a6758cc456cb393fda1a73b073a2541214a8595123fb7f3635628bed7034c"
     },
     "summary": {
       "adoption_role_count": 10,
@@ -5629,7 +5629,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L174"
     },
-    "universal_procurement_regulatory_reliance_contract_hash": "97e98948b68985d3166f6d709bddcb84e2122b053008a79a33841f6f55a5d334",
+    "universal_procurement_regulatory_reliance_contract_hash": "ad3cbaf3213a775af1c526e6eb676e19c95f2ab97d632246caaba27feba22583",
     "universal_procurement_regulatory_reliance_contract_version": "rdllm-universal-procurement-regulatory-reliance-contract/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-procurement-regulatory-reliance-contract.json",
@@ -6007,10 +6007,10 @@
       "private_strings_absent": true
     },
     "provider_binding_matrix_binding": {
-      "artifact_hash": "989c836dbcd76f117ef186f4ed56e5bb7fb8e9370ff9f208d69340a064fce083",
+      "artifact_hash": "bf9f569065d470039110b011ecb636399dfd6eb37e1a5a9a67f6f998957976b2",
       "hash_reproducible": true,
       "level": "RDLLM-L168",
-      "payload_hash": "989c836dbcd76f117ef186f4ed56e5bb7fb8e9370ff9f208d69340a064fce083",
+      "payload_hash": "bf9f569065d470039110b011ecb636399dfd6eb37e1a5a9a67f6f998957976b2",
       "present": true,
       "status": "ready"
     },
@@ -7029,7 +7029,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "65b6d829d514089ae458e30cde16272386e4faf0082399b88f04557c4c0e3fde"
+      "value": "c4db5870bb7f5093e622d7774b50eff636aec8d49ba2c7d364d5bb9c5a57bac9"
     },
     "standards_and_research": {
       "api_and_agent_replay": "API and agent conformance work motivates replayable sync, streaming, tool, citation, and telemetry fixtures.",
@@ -7050,7 +7050,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L169"
     },
-    "universal_provider_conformance_runner_receipt_hash": "315f94b36dae56a30788715a28682ccf0b8cbbc7877f89c47058a1d08f10e805",
+    "universal_provider_conformance_runner_receipt_hash": "4f2539675e9bbbaf401d0f9000f67e07690a5a952ddea2d654f8f21bc314304e",
     "universal_provider_conformance_runner_receipt_version": "rdllm-universal-provider-conformance-runner-receipt/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-provider-conformance-runner-receipt.json",

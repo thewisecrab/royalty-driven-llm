@@ -4,11 +4,11 @@
     "creator_license_contract_bound": true,
     "creator_license_contract_hash": "1ea2a80b87d91b03550b57457a881265fdf9a6ed38b5e520ed8253988eddf8ab",
     "source_availability_bound": true,
-    "source_availability_report_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5",
+    "source_availability_report_hash": "ef61d9cf9962a6222d0ef0280b55120b6d356e207d52539e0105f575633b5d25",
     "source_boundary_bound": true,
-    "source_boundary_report_hash": "e6777da6e80e3da8d1326083b2e894a2da8eb8857ecfa38d1e240f7fdfd3336e",
+    "source_boundary_report_hash": "8aa786c8037a80b75a5ab1c9c18ff43f227e03f3c7efc4d8d13b47e0d786e854",
     "source_confidence_bound": true,
-    "source_confidence_report_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9"
+    "source_confidence_report_hash": "493095b01f97f481ed8cc782bf2c069507ca65608c436f7bc07d39298dbab74b"
   },
   "artifact_status": {
     "creator_license_contract_errors": [],
@@ -66,7 +66,7 @@
     "private_fields_absent": true
   },
   "commitments": {
-    "artifact_binding_root": "e459e9df672e628c0188ec32d95e5de0c942ab2872de954c9d41bb5dd0938c4e",
+    "artifact_binding_root": "313679298c799e48541536adaa1767a4a2acd934fd042c7a341084632d50704a",
     "artifact_status_hash": "6c69fa8f4e831b3c717a21c3060e7ce76d774bd2d45ad71b3227344bdb09f688",
     "authenticity_signal_root": "b42daa89cbfe0bd021e551716e02548eeec8c41902bde66cff14dd824e4a39c5",
     "issue_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
@@ -80,9 +80,9 @@
     "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
     "event_id": "evt_83312b019637578e",
     "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
-    "source_availability_report_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5",
-    "source_boundary_report_hash": "e6777da6e80e3da8d1326083b2e894a2da8eb8857ecfa38d1e240f7fdfd3336e",
-    "source_confidence_report_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9"
+    "source_availability_report_hash": "ef61d9cf9962a6222d0ef0280b55120b6d356e207d52539e0105f575633b5d25",
+    "source_boundary_report_hash": "8aa786c8037a80b75a5ab1c9c18ff43f227e03f3c7efc4d8d13b47e0d786e854",
+    "source_confidence_report_hash": "493095b01f97f481ed8cc782bf2c069507ca65608c436f7bc07d39298dbab74b"
   },
   "issuer": "rdllm-local-demo",
   "issues": [],
@@ -108,7 +108,7 @@
     "report_uses_hashes_origin_booleans_and_risk_scores": true,
     "source_text_disclosed": false
   },
-  "report_hash": "19ebc3a7fb7655a09000d5e86f672117e99b53133f5d00686bc2694bf787aeac",
+  "report_hash": "a631e35377a65a4af980de5a9df83f263e3c98d90f5657fa170dd69b6450afda",
   "report_version": "rdllm-source-authenticity-report/v1",
   "schemas": {
     "creator_license_contract": "docs/schemas/creator_license_contract.schema.json",
@@ -120,7 +120,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "9db1a84ddf233fc0c93c568750eb7685cbffe784c4ff7de3f3209734fd773046"
+    "value": "d69aba98a69772fcb73b5e7824aee3b02121bbd5fb43f88e317384a1bdd9c055"
   },
   "source_authenticity_rows": [
     {

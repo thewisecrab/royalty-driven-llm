@@ -1,6 +1,6 @@
 {
   "certification_attestation": {
-    "attestation_hash": "2fd4aae21c12c56ced928785ec8acc7140fdedbe0fcd3b2f5a4c784d304d38dd",
+    "attestation_hash": "7af5cece554505454b92a50082d9035d011d1075eceab8f5790403348c74a6e0",
     "attestation_version": "rdllm-certification-attestation/v1",
     "certification_summary": {
       "case_count": 187,
@@ -28,8 +28,8 @@
       "schema_declared": true
     },
     "commitments": {
-      "case_status_root": "56e10953c641d7f83fb63f8b1f05e5b7586ce7f3d4541de34fcbf851d060926f",
-      "certification_report_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+      "case_status_root": "df39fd2166b5edb568249437d386acc80244e49089c8d9b4df57365fa1257bc5",
+      "certification_report_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
       "failed_case_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "implementation_hash": "90aa4de31ffc5c5c422e424e937f63f86ecea3e687b36918bf97c28b28ed7a39",
       "levels_root": "b842624f792dcaeec60f1a2261d3369183e59e8597f671fac1693487eb4b392e",
@@ -49,12 +49,12 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "3ee2e76af41bc59988c694c5a23688643d53bc6d393a87cb1d287611398c33c6"
+      "value": "d85dad3e2f07f9414e666d913f805cdb10d23839d9f7b62ea62f832a04dbbb9a"
     },
     "subject": {
-      "case_status_root": "56e10953c641d7f83fb63f8b1f05e5b7586ce7f3d4541de34fcbf851d060926f",
+      "case_status_root": "df39fd2166b5edb568249437d386acc80244e49089c8d9b4df57365fa1257bc5",
       "case_status_row_count": 187,
-      "certification_report_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+      "certification_report_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
       "certification_version": "rdllm-certification/v1",
       "implementation_hash": "90aa4de31ffc5c5c422e424e937f63f86ecea3e687b36918bf97c28b28ed7a39",
       "issued_at": "2026-05-29T00:00:00Z",
@@ -6014,7 +6014,7 @@
       {
         "artifacts": {
           "inspectable_source_count": 3,
-          "source_availability_report_hash": "3ca6a1106f1e0ec37ef1e62d93bbeea6f8e5c8a3c918dfc0c0998740d65c4f37"
+          "source_availability_report_hash": "4488a8ab7eb425d6408add149cb3fa0fc57209acde91595542200d4ec4498e74"
         },
         "checks": {
           "all_footer_sources_resolve_to_snapshots": {
@@ -6304,7 +6304,7 @@
       },
       {
         "artifacts": {
-          "evidence_sufficiency_report_hash": "ba7d617290c88302e0873ae3ab6623150c029a8e29ab558a03da88b182af8a8f",
+          "evidence_sufficiency_report_hash": "53a65fccdd0f145d7700bac4a1de0ac052e20f2480ec888094301cd8a8e548d5",
           "sufficient_claim_count": 6
         },
         "checks": {
@@ -7354,7 +7354,7 @@
       },
       {
         "artifacts": {
-          "counterevidence_report_hash": "1b31618a5d8871cc0c0e5a6f615317e8e852cc0103b17b614624b7c9218ae1e9",
+          "counterevidence_report_hash": "6040cfa8db22d54e674eb4d86f9527979124839143a82666863c4349cbd4d4fb",
           "unaddressed_counterevidence_count": 0
         },
         "checks": {
@@ -42804,7 +42804,7 @@
         ]
       }
     },
-    "report_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+    "report_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
     "suite": "rdllm-reference-conformance",
     "summary": {
       "case_count": 187,
@@ -44253,46 +44253,46 @@
     "artifact_catalog": [
       {
         "artifact_type": "rdllm-provider-attribution-card/v1",
-        "declared_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
-        "entry_hash": "346e00a3fdd5eb03293657f7b68f57e6532ed3cfa2d375c2183be24fac7d8464",
+        "declared_hash": "facad8d425e0bb312b6736d4351f321fcfd3643584f09b37dec4ee2b2c83ec51",
+        "entry_hash": "ce7ab990cf0a924a48989d6f87035a1acfeb5d5556ed7f0bb208e694a2972849",
         "name": "provider_attribution_card",
-        "payload_hash": "8bedb8e9d9503710e47e489056faa897e011ae3c82340a06d0e7864360c1d851",
+        "payload_hash": "fb2f7e122d855d9a8d6a757d04625d6fa6dbe28c71d749037e9d6aa71314ca38",
         "required": true,
         "well_known_path": "/.well-known/rdllm/provider-attribution-card.json"
       },
       {
         "artifact_type": "rdllm-certification/v1",
-        "declared_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
-        "entry_hash": "99504c39c750bced7ebf12fa7a1d82e8b07625de05dfa71a7140554e70db7791",
+        "declared_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
+        "entry_hash": "c1c976be4cee80040e42cfc28eda31f99a7def0492fc76cfb0eba660bd60acc2",
         "name": "certification_report",
-        "payload_hash": "4a12f517abe36819cc6a13794802692520ab74cccf5310c9ceff1039f8631457",
+        "payload_hash": "95cfce03c9d271d6eabd68322adbf8907bbb9a37bb73f650104fdee2da0e2359",
         "required": true,
         "well_known_path": "/.well-known/rdllm/certification-report.json"
       },
       {
         "artifact_type": "rdllm-integration-profile/v1",
-        "declared_hash": "a669a7c49b9ccbdc94e1fe218a4b17f6129d9f6a1709f7d8315f73a1a2990647",
-        "entry_hash": "388d6ffd52542d2b36736664b2c71b436956ec39139c030c02398f414c27752f",
+        "declared_hash": "5c2c2e5a3a9672c9c9f54cd4184d0f6abe8d5ade50e539efe762affb45b35b40",
+        "entry_hash": "e9725604c1597ca0829e79d6b8f11760667e2bacfb06facfe63a3b1d1eb454c8",
         "name": "integration_profile",
-        "payload_hash": "cc7f048c5cf03a9e867b6db8266a750005da3f87c3a3dea966dd5cbc46673434",
+        "payload_hash": "77f33400128680425dd9ca7d093627d712e04ed45a826be081787dd7adbf8eac",
         "required": true,
         "well_known_path": "/.well-known/rdllm/integration-profile.json"
       },
       {
         "artifact_type": "rdllm-response-envelope/v1",
-        "declared_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
-        "entry_hash": "24ba746e27b2243015b475283e368d828e5af796b6c6ccec0266b238dee6be81",
+        "declared_hash": "1bc14c301e297d81bc848a5682a4921c8d5e372096d7a0297d9994eeaa5fddeb",
+        "entry_hash": "bdffbf6b37ec14777a82715e3cf41b43ae0648b44280bed536bac52d30601d03",
         "name": "response_envelope",
-        "payload_hash": "e612860a96f85102d90778f4d1a640c244d97f187ef6a39971ea231f326b9a98",
+        "payload_hash": "598f1774853803607bcee78ea0dc42170575bcf2bac7d4c17107d25d11d222f9",
         "required": true,
         "well_known_path": "/.well-known/rdllm/sample-response-envelope.json"
       },
       {
         "artifact_type": "rdllm-assurance-bundle/v1",
-        "declared_hash": "aa954ba4583d5ae99dc1221a1aacc738e3b2fa6aa2cfc422a5864b0a7a63aebc",
-        "entry_hash": "9cb2b575dac8bb24d2dd859aecec1abcd2eb78cf57c9c13c7435f16b128dba9f",
+        "declared_hash": "c6172be428a35a27cf1c67b05535bbad343bddb4a045175124a3cc1061819c29",
+        "entry_hash": "2f878046b6b19737302041f2c205ed04e67ef05f77fae16676f34423c082a11a",
         "name": "assurance_bundle",
-        "payload_hash": "27730d075b3e8e367a1b8ffaffefe0dbb90dfe4437edcdddddee30204e4844d6",
+        "payload_hash": "2d433d24fbeee8a52944f80c2906ae34b7530ac7c4b5c6366af949971d5f3600",
         "required": true,
         "well_known_path": "/.well-known/rdllm/assurance-bundle.json"
       },
@@ -44442,64 +44442,64 @@
       },
       {
         "artifact_type": "rdllm-source-availability-report/v1",
-        "declared_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5",
-        "entry_hash": "705684164f836dfa9e8a8fd3f7a06dea78fa93b49823cbc63008868f4c339922",
+        "declared_hash": "ef61d9cf9962a6222d0ef0280b55120b6d356e207d52539e0105f575633b5d25",
+        "entry_hash": "e16670e963612b28400f54f1522abc4c468ad195f40719f75ace6fca42b5a55a",
         "name": "source_availability_report",
-        "payload_hash": "d19120a02021692ab415df4ee28826b05eebba07b45f511db50a12d491f080f2",
+        "payload_hash": "74f3e7cf28299f26ac188d3d1b68efb240eefd2b8bff08e9256c2017e1eec511",
         "required": false,
         "well_known_path": "/.well-known/rdllm/source-availability-report.json"
       },
       {
         "artifact_type": "rdllm-evidence-sufficiency-report/v1",
-        "declared_hash": "ee2397e8139d6dc07fd287535c07219c0106a1ad65cd2c6dee3532a09fa62c7b",
-        "entry_hash": "07dd1914a02658b2416e64774d4e9c5ca956d5ee971dd394642d4d0b651bab4b",
+        "declared_hash": "048a08bf5b4f8dbb41e9fadba39b2463f533009d1f846d5283e2a601ad3658a9",
+        "entry_hash": "363a43bce789e5df06aae4c969b95211eaf1871afafbd56724c2c380ac9e0b44",
         "name": "evidence_sufficiency_report",
-        "payload_hash": "59b7636ec3b112275621025b4fd7e8534c54b00c97168cb60358746028d4cd86",
+        "payload_hash": "14b90d6388f4a9441a90b542e34f7f00e94d9d3a7abc3ff03b92a5ffb07ca161",
         "required": false,
         "well_known_path": "/.well-known/rdllm/evidence-sufficiency-report.json"
       },
       {
         "artifact_type": "rdllm-counterevidence-adjudication-report/v1",
-        "declared_hash": "f23a241321b32d2a56c02ec937e896e0ed5a3cf814db28a51aa6f3d2aa2c2238",
-        "entry_hash": "bd61029127d0fe6999f3cfbdddd787f07ccf9d2cbc1404b4134a9d5e7a90a572",
+        "declared_hash": "765a5f49dbfe67c0409f7197c1a96f37e39caa613c76f57aa33d0f02b0865daf",
+        "entry_hash": "c916554560e9dfdbc9cff44d20be6b761e6ab55935eececa8695019912031d92",
         "name": "counterevidence_report",
-        "payload_hash": "5e0606ddd949455f226f8ff5e0b131102d95a57005d9b59c87923fc64c67d4ad",
+        "payload_hash": "32f1c9dc83e6f035bb88d3237dc6df7fea9f4927cdd0d2388b65470398f951dd",
         "required": false,
         "well_known_path": "/.well-known/rdllm/counterevidence-report.json"
       },
       {
         "artifact_type": "rdllm-answer-claim-coverage-report/v1",
-        "declared_hash": "0f09aa92a4fc20272ab312793166eccdabb54b949bdeb601b4a50b24574b80a8",
-        "entry_hash": "4ac6fca860ea0323764f24f33bb711909d94e612c503da038c2a6fa3e2b13f09",
+        "declared_hash": "8091710cd2b6e43838b3f0dfb15a90ff10e5d431c0a84f85eecf46dff8776419",
+        "entry_hash": "c188a94486bfa6526b9779bec2221db32e1bd7dc5078ac5c06569aba324ac81a",
         "name": "answer_claim_coverage_report",
-        "payload_hash": "8e1c9d9fe351ad3d04e845c689c9961624f8f4e16c0d13836f2d9ae58b266231",
+        "payload_hash": "76ad519b975d24afd76eb98403c7c4b39f4365c03938d49b1d410495110e141d",
         "required": false,
         "well_known_path": "/.well-known/rdllm/answer-claim-coverage-report.json"
       },
       {
         "artifact_type": "rdllm-generation-context-closure-report/v1",
-        "declared_hash": "d444afe2799076c1ae8137054e1430f301434ed28f6784550b2fc5e0d4fdf09d",
-        "entry_hash": "6959e2a42f06973cef22072306bc9c9a4c1d3ee86d54c4a0c2832de4291df617",
+        "declared_hash": "cc95353f69baf1f392d10f2b03dccc61cff84f219b46e0add05e29caf9bce0ab",
+        "entry_hash": "a4a0431369515068a04563c00c1812d263fa738bb9a025480afa74da6faf7771",
         "name": "generation_context_closure_report",
-        "payload_hash": "4473761c3c37900d679e7fa9ea6abb78ea2821132199d5e3747042df12344513",
+        "payload_hash": "6b8ea34be3df12d81153cc25343679835930011b1121bfb7c4e2974ccd13bf15",
         "required": false,
         "well_known_path": "/.well-known/rdllm/generation-context-closure-report.json"
       },
       {
         "artifact_type": "rdllm-source-boundary-report/v1",
-        "declared_hash": "e6777da6e80e3da8d1326083b2e894a2da8eb8857ecfa38d1e240f7fdfd3336e",
-        "entry_hash": "a3595fbea325724c01b45eea7cd9e88f1adfa315e332f5352f87b4625f5cc8c0",
+        "declared_hash": "8aa786c8037a80b75a5ab1c9c18ff43f227e03f3c7efc4d8d13b47e0d786e854",
+        "entry_hash": "f02ec750f83d4f09fc2cd2b7f8111d2b080d896d57246485ac9c9650bb686948",
         "name": "source_boundary_report",
-        "payload_hash": "1678860cc0c3a260944555b8a02039179d8912f9e84ec89558c966846cce17bc",
+        "payload_hash": "3069700b600ca2f11a8f7a8d16dcc28c8a06f825ea53e1e508148cff2993f8d8",
         "required": false,
         "well_known_path": "/.well-known/rdllm/source-boundary-report.json"
       },
       {
         "artifact_type": "rdllm-source-authenticity-report/v1",
-        "declared_hash": "19ebc3a7fb7655a09000d5e86f672117e99b53133f5d00686bc2694bf787aeac",
-        "entry_hash": "6dae9d9af21ca988594d25d2b516c9ac01b92aadb9619f425d7de8f071e2fac1",
+        "declared_hash": "a631e35377a65a4af980de5a9df83f263e3c98d90f5657fa170dd69b6450afda",
+        "entry_hash": "884c878e37c5f0d53ef81d284c200f63c3a66fcc6cad9935f58112d4ff2206dd",
         "name": "source_authenticity_report",
-        "payload_hash": "db23528eb098f6f3bcd39862aa906294c4d3ce6c75bdb1d13a2c460376473a8f",
+        "payload_hash": "226c6898bcdc2fbe27f5f6f49b2a61add97c84fb6c882bf8c7214f4ba18d69db",
         "required": false,
         "well_known_path": "/.well-known/rdllm/source-authenticity-report.json"
       },
@@ -44514,37 +44514,37 @@
       },
       {
         "artifact_type": "rdllm-calibrated-attribution-confidence/v1",
-        "declared_hash": "054ad7911fedafc270b790f02b43444ef66e266dfceae8b97b4142030fad5b2e",
-        "entry_hash": "5abeabf9698c07fff4718a66f1cfa2f7f7881e2443a8ff97d059c91ab3fb25cd",
+        "declared_hash": "e701ee741d04ff29aa438d40c1738e5c52de75b475b2e4bb2247094d58f41923",
+        "entry_hash": "d18afaf14d645918355f0a9f1d2c344e6939287b48837b7a4a3287d1a4ef8f7f",
         "name": "calibrated_attribution_report",
-        "payload_hash": "2aeef8a0ef5e236ed46b5e5c9edcc8bdec4e9d9717e6b24816b034f56ac6b665",
+        "payload_hash": "20b32537f69217ae2642972038b558a6150030ed0cdfc549ea942ef144121622",
         "required": false,
         "well_known_path": "/.well-known/rdllm/calibrated-attribution-report.json"
       },
       {
         "artifact_type": "rdllm-streaming-attribution-manifest/v1",
-        "declared_hash": "369a9807cbffef34a0251bd023db352da276c7fef3858f0813f17a9bc537db71",
-        "entry_hash": "18d94f48083511c437a6f0a5eb847f52f053e9178111906c8ee9e080ba13d41e",
+        "declared_hash": "e8c0f4d4bf109a6712459ac02f627f305954bee1e16691ce02ce3abba9cf6890",
+        "entry_hash": "64fb223c5320176bc9e311807d434439d8146441566512a6d55e368f15122f6b",
         "name": "streaming_attribution_manifest",
-        "payload_hash": "1690fa6abe9a09911c4af15d305db1c285e70edff4982d474e1f46b353c160d1",
+        "payload_hash": "cf9b41044ea108eea2694d7b48af222ae3dc63d9f1dd577be96496f9c8874cfb",
         "required": false,
         "well_known_path": "/.well-known/rdllm/streaming-attribution-manifest.json"
       },
       {
         "artifact_type": "rdllm-conversation-attribution-ledger/v1",
-        "declared_hash": "f4a596c68852fc937eb65ea908b9542b022382f32990d521c29743a6e519963b",
-        "entry_hash": "73673e92312ec933f7a96dd51461221dc03c75d40c888dfb6761cd9636c1547a",
+        "declared_hash": "e5d243df7dbd1fe1ed49fce15246e6d6ccb52a2c9d40bf511f15dbe2cad04d08",
+        "entry_hash": "d39e104fcb9cdbd724f71b1d302aa3d7e0b5565d0b5c180ae134c46dd653c232",
         "name": "conversation_attribution_ledger",
-        "payload_hash": "cb9ae81423bb16fbd775a232db47f1aa4be6cb3156aedc420e10558f87371d28",
+        "payload_hash": "1e30fba4087f943d1fe71f19dcc3944a27b6b4a040f8ec38307e8423e93a17d2",
         "required": false,
         "well_known_path": "/.well-known/rdllm/conversation-attribution-ledger.json"
       },
       {
         "artifact_type": "rdllm-agent-tool-attribution-ledger/v1",
-        "declared_hash": "eb68e51ffad6e8aa7840f57cc711ae054ba059ae93370ac550639294701f144c",
-        "entry_hash": "f917dee7a237095f54f523a81d1a3a1e9e2bf84c25e4698ef0a7cecc26abfd91",
+        "declared_hash": "fae4a7ca2380ad2c53798a43380a45130d82b8409df38fc1447bae6c89f806f9",
+        "entry_hash": "0b3558ec7df0fc21f598374470b73055514bc41135b28c7f2cfff1b5251eebe5",
         "name": "agent_tool_attribution_ledger",
-        "payload_hash": "74e19c26c91881252f448967dd93c4fc5339095295eed34f07516ae767f7dcbb",
+        "payload_hash": "c539bd0e449edf0e6928bfb9c16da803ad3f5eb494d7a9d3bfe0e9fa2fc01d08",
         "required": false,
         "well_known_path": "/.well-known/rdllm/agent-tool-attribution-ledger.json"
       },
@@ -44559,19 +44559,19 @@
       },
       {
         "artifact_type": "rdllm-source-confidence-report/v1",
-        "declared_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9",
-        "entry_hash": "0517301d839099183aa64fec613d2e95a0c4fb1699dc2506ac6d088dade8e4ff",
+        "declared_hash": "493095b01f97f481ed8cc782bf2c069507ca65608c436f7bc07d39298dbab74b",
+        "entry_hash": "a48913738410b46a0596a2c6896f0689c7d0c658cba4e5ba592e2a6bfea721b6",
         "name": "source_confidence_report",
-        "payload_hash": "53b354f593edbf5db4575a844fd2ad1a047e708748f08464f06315dacd697a1f",
+        "payload_hash": "2856f21cabb49e37e8ce9bcc48a36e9af42856a0b121db36bf3ccae248b754d0",
         "required": false,
         "well_known_path": "/.well-known/rdllm/source-confidence-report.json"
       },
       {
         "artifact_type": "rdllm-citation-footer-contract/v1",
-        "declared_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
-        "entry_hash": "042313e6aa51082a6c8dcd048280d6f90e7ce934dd0897cb9c59d384642d3d55",
+        "declared_hash": "6e21016c0fc330186a62c6b7c88c35329473ef11d07443403e70fbdde57115a2",
+        "entry_hash": "4a2251d412b54e396cf699bf746f66c28667a691905bf1f4b79326f38af5e675",
         "name": "citation_footer_contract",
-        "payload_hash": "d21e5a6037f0e36eed6d649595a2fac397f457b9a3e94c3c03dd85df68857ab3",
+        "payload_hash": "cdff9019317b9a001c0cef6ddf66744559bc83759ff51e5b48c888b2d8df47c9",
         "required": false,
         "well_known_path": "/.well-known/rdllm/citation-footer-contract.json"
       },
@@ -44640,10 +44640,10 @@
       },
       {
         "artifact_type": "rdllm-rendered-attribution-audit/v1",
-        "declared_hash": "c6f4297a83058d8a3dfe646cb1db74894e1dd05671e9bb75c19336c7f10923ec",
-        "entry_hash": "56823547eb7662fa4ebdd1ba1902a34c4c86dc9f7a72f032190ad86ca4370303",
+        "declared_hash": "0bd62ed3cdc7ce2d30fc450be0ba27916a8d17111ae27e2b864e27741e67c5f3",
+        "entry_hash": "cfdf3ff829dcea954fe81bf9da6af65c2b936d105b5b0f37425a0333cd4d36a0",
         "name": "rendered_attribution_audit",
-        "payload_hash": "79a61cfb83c677f1810e7de0727b3bf91c42d70dd6ba1c569a8ba20f482c1b84",
+        "payload_hash": "c5e39e1b1719564a0db9340dfcf4a1a1bad3ca0d371e33cc8a3aa8f14411440f",
         "required": false,
         "well_known_path": "/.well-known/rdllm/rendered-attribution-audit.json"
       },
@@ -44658,46 +44658,46 @@
       },
       {
         "artifact_type": "rdllm-post-training-signal-provenance/v1",
-        "declared_hash": "038b04e977a1009455b546d04695202a83e012cb233b2e0e32f42d553f15cb3e",
-        "entry_hash": "aae22f4f4109bbe4866267451b67b6df7d6d7166a15b27482217982b677fe334",
+        "declared_hash": "faca1f444f9b93593a128ce46edbe432fec1fa3651e869f29930b63fead558c5",
+        "entry_hash": "ce3d3b0281d1813cc90f078ddbd6ac4967539c30e3ef05526a3522e0a050de7e",
         "name": "post_training_signal_provenance",
-        "payload_hash": "038b04e977a1009455b546d04695202a83e012cb233b2e0e32f42d553f15cb3e",
+        "payload_hash": "faca1f444f9b93593a128ce46edbe432fec1fa3651e869f29930b63fead558c5",
         "required": false,
         "well_known_path": "/.well-known/rdllm/post-training-signal-provenance.json"
       },
       {
         "artifact_type": "rdllm-evidence-locked-generation/v1",
-        "declared_hash": "d5161a462a8896d224360686eba928b733543f7fc86e85a5c84f10655bc34124",
-        "entry_hash": "569d61018ba36cd65721e537c326a34ff9b3b7b2f59cfb01c6945d03c6602e3f",
+        "declared_hash": "42dffa930935790b60958c141722af94e355906b013856d6e4b46e67c2576031",
+        "entry_hash": "d1453918ef2320cefcbf0967a19b9c9d1691d4e183c7f9ee9c4967d580a3cb6e",
         "name": "evidence_locked_generation",
-        "payload_hash": "8ed3aa5adb78032e3f4264a8d2dcf61e3b4e3fbe7f302a87a4efd0a14d5127f8",
+        "payload_hash": "6d9bee4e2e6870949d3c3cb34d1d1b76970958737d2150c0fff917f89eeb64e4",
         "required": false,
         "well_known_path": "/.well-known/rdllm/evidence-locked-generation.json"
       },
       {
         "artifact_type": "rdllm-emission-evidence-enforcement/v1",
-        "declared_hash": "8d95c825bfce7d543c98c97239f924357e4a0da28a3295ee14b601ccb90a41c9",
-        "entry_hash": "7f85aefb2cd2b595791e30db0a824a59f2735af34d7dae687db764ed15906c34",
+        "declared_hash": "1248b18138595f1088d828799b30612a296657c508f3509e344208656705c6eb",
+        "entry_hash": "5f9999a3524041b8c151c04ec740fc3dd174433b42367bd08fe823cd41675ad7",
         "name": "emission_evidence_enforcement",
-        "payload_hash": "b2781ee4c66e4483b1957c6ab5a762c93ff10dd9a45d4f519ef1a9bc94c6e5bc",
+        "payload_hash": "65b08a205fd90d1906c045d5a734c7b01eeea73e77447b7f72dc928b4343a679",
         "required": false,
         "well_known_path": "/.well-known/rdllm/emission-evidence-enforcement.json"
       },
       {
         "artifact_type": "rdllm-live-emission-witness/v1",
-        "declared_hash": "afcff3f3b04fd6fa74ab9940c62d2b5080936296ab5c91be0f1a1fa671fd75c2",
-        "entry_hash": "db10eb8f5a094d14709332659da12a483d7fcf973c6af6fff13bf9f73f04324c",
+        "declared_hash": "95c587ddb456f331718da0fc9015303c07c2b0aab2705dffcade3ca0b94e5d90",
+        "entry_hash": "62717733d0e215894f7c4b1e6f479a0970c2870320e31f65f42000caeb26f1f0",
         "name": "live_emission_witness",
-        "payload_hash": "73c58fde96ccee714d58f249c423751d6ade2dcba7f43cdb2d9bd68777d1f0d0",
+        "payload_hash": "3fee3007663b0a02d0049b71a887f810790ddefbadc85ca334e9288fcb516251",
         "required": false,
         "well_known_path": "/.well-known/rdllm/live-emission-witness.json"
       },
       {
         "artifact_type": "rdllm-live-emission-transparency/v1",
-        "declared_hash": "b22bb6a4d0c7c982d25bd2744bed408491f8ef1404f6ace8c3fba500fcd9d593",
-        "entry_hash": "0d5d3ffb0e43c3cf4693b638e4c464728c33496dbaacf6f4511701910341ee9c",
+        "declared_hash": "e217f4e8273bdc6a5402d8254535da7cfbff785d2662ad1cb161289dce17272f",
+        "entry_hash": "cea84cea749a07216575dc30c6be9ad75922bbd85efeb634786664d59cdcf19d",
         "name": "live_emission_transparency",
-        "payload_hash": "8b53ce7f2c2e306e570c6e6044f56005eea6dc84b02a9c6e952a04cdaf1010ed",
+        "payload_hash": "d384145cfb8698c6a28aa1454c9acdf889521fa1d8df7e2ecf8bd492ef84439a",
         "required": false,
         "well_known_path": "/.well-known/rdllm/live-emission-transparency.json"
       },
@@ -44802,10 +44802,10 @@
       },
       {
         "artifact_type": "rdllm-evidence-region-binding/v1",
-        "declared_hash": "c4eafe578d29332f67c356748f9d0bcac62dd33e2c8ea76aa4ef7f478bf8670e",
-        "entry_hash": "2cfe675c64a143b75f916a75cb990c36d304f045a2cf0a20dc566add14ada886",
+        "declared_hash": "28d595dce4fbd8273670dcb2d01bb55bd1b5386b33d7bbe223fc1c38ac5eee08",
+        "entry_hash": "985180318eaf40bf3382a6455a78bcb9e3c4795fe7f391e3fe79400ac84c2183",
         "name": "evidence_region_binding_report",
-        "payload_hash": "3c2998a2afa97149eec09acbee97e01be64441df17792a294b369bb7860d07ca",
+        "payload_hash": "bc0619a50cd913af1b6a4df9d77de58cd4f84e35c4bf3aff668cd454a64ffb80",
         "required": false,
         "well_known_path": "/.well-known/rdllm/evidence-region-binding-report.json"
       },
@@ -44847,19 +44847,19 @@
       },
       {
         "artifact_type": "rdllm-grounded-source-footer/v1",
-        "declared_hash": "83588c000051aa8f6a850eecebfbce7784ffee44dedd4b95987cbe17ab2ad796",
-        "entry_hash": "7bf3458b40d464c397fcd8b05147cbb5ce3973e6e20f1f7177993eef59f1055b",
+        "declared_hash": "2a9582822cff504b200cdf5a48268ea3138f34ad002ce01a2c59df160c5425bd",
+        "entry_hash": "b8d7033fa57b1499b49974ab43d3682f34d2d3d6ddfe916edca5d80b2dc97076",
         "name": "grounded_source_footer",
-        "payload_hash": "83588c000051aa8f6a850eecebfbce7784ffee44dedd4b95987cbe17ab2ad796",
+        "payload_hash": "2a9582822cff504b200cdf5a48268ea3138f34ad002ce01a2c59df160c5425bd",
         "required": false,
         "well_known_path": "/.well-known/rdllm/grounded-source-footer.json"
       },
       {
         "artifact_type": "rdllm-source-footer-delivery/v1",
-        "declared_hash": "d950a4b0234a8d58bad87416e7c58a72453b6a0c7e27f48a09bb0913877b77f6",
-        "entry_hash": "05a9acb4ca7e2c663d7dbf5987522e42c1a71320126e08393de1bc561965b39e",
+        "declared_hash": "5634de4f5491a758d5f86467579bf4b26609853dac6b827cb7c71461c224e0b1",
+        "entry_hash": "e9feda6c9bd03ce295e5194a1115742875e0f4b009eda15c0bcc8c61510ecd87",
         "name": "source_footer_delivery",
-        "payload_hash": "d950a4b0234a8d58bad87416e7c58a72453b6a0c7e27f48a09bb0913877b77f6",
+        "payload_hash": "5634de4f5491a758d5f86467579bf4b26609853dac6b827cb7c71461c224e0b1",
         "required": false,
         "well_known_path": "/.well-known/rdllm/source-footer-delivery.json"
       },
@@ -44955,10 +44955,10 @@
       },
       {
         "artifact_type": "rdllm-foundation-attribution-profile/v1",
-        "declared_hash": "3baf887827275755bcae6245f46e3f92642bb0935a3816c9c23c08903858075a",
-        "entry_hash": "be6c5da689e06eae3a499eeb077ac8b963902ce143ba235898aa967dec55cabd",
+        "declared_hash": "00f421c6bd207cf5f1a62838705dc965608b935cff27e78b7624ddf5f8f1fe5f",
+        "entry_hash": "83868fcd95d2d2dad9cbe5ed0d2f814410c863396167afa373d33c79cff21dff",
         "name": "foundation_api_profile",
-        "payload_hash": "b8ad3e8e11687ce426a62f36945a9aeed93c1598cd530edf36a4e02a1c42e06e",
+        "payload_hash": "01bdce11001aaaf6f597b22edfcb475787775d50b30942769ad9708b946f065e",
         "required": false,
         "well_known_path": "/.well-known/rdllm/foundation-attribution-profile.json"
       },
@@ -45153,172 +45153,172 @@
       },
       {
         "artifact_type": "rdllm-universal-foundation-provider-binding-matrix/v1",
-        "declared_hash": "77d28bffa711dd5e4a43039d15708ef18dafb6ece7f02a4267494556fbadbdd3",
-        "entry_hash": "75d633c33295611093e15ddb13aa0cb5cdf403c3e51b3ade335ac42cc5dbb481",
+        "declared_hash": "49e9e7301e9545d3c93706ac12e0153c064265ea689d95053c3354d3d527ceab",
+        "entry_hash": "00f367e96070b79da4007befd1652a30340c8a6e752d2897e626750b79c83a29",
         "name": "universal_foundation_provider_binding_matrix",
-        "payload_hash": "ad37d14d08d2a81556d5e978ed1f4905b2eacdd26b73ac9924356851a6305c62",
+        "payload_hash": "3e68cb8f934c449a3b799298729cfccb73759213eff9215d8ab4286aee0fd579",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-foundation-provider-binding-matrix.json"
       },
       {
         "artifact_type": "rdllm-universal-provider-conformance-runner-receipt/v1",
-        "declared_hash": "dc00d13dd8e140e3c8e4b2ed90ecc4098222e6ec27fa0c1189dba04d726a5ae3",
-        "entry_hash": "38f14f2e3794c4d746252f738ec58d1f091ca589d5f63d127aa4e55f69b7f59b",
+        "declared_hash": "0cf260512812fcdd829e9f0999c0b3abf89d3ad9af5186a3db677a034ec122a1",
+        "entry_hash": "5b7d35a66734abd500b64b5aa38e9b039a2fe316ac48749f8c7089b23e82f250",
         "name": "universal_provider_conformance_runner_receipt",
-        "payload_hash": "ec8d1d885f08721b937084862e879071befd1ae5bd3bfd3c6ffdd2a2a5c12aed",
+        "payload_hash": "61ccac4fd816397dc7ffbee0fbfbfcbbf127585058c3be50df1783c5cd61722a",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-provider-conformance-runner-receipt.json"
       },
       {
         "artifact_type": "rdllm-universal-production-invocation-admission/v1",
-        "declared_hash": "462836f3a15c6aa931f8db1489e7f5530b918bd29da3c7dfdea75bdbb6204b94",
-        "entry_hash": "f8e9df841107ec802e365441929fc2bc7c0b811d7aca3c6a8afeea951660d6a2",
+        "declared_hash": "865aef83a7a3706419518f282573b89fd43b5fbbdb95bb0a0c661f0699fce251",
+        "entry_hash": "437c48515884e6fb927fbd67960f5315b5d0230504eb936a188f2ca9a13dd5cf",
         "name": "universal_production_invocation_admission",
-        "payload_hash": "923bc340a27b70fcfe1768c5990c9e22ef9c0f275fea019a64281929dc991bf1",
+        "payload_hash": "6063856965690489390bc2cf55ac101e93c685e37d068608eb8ba145dab6ad47",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-production-invocation-admission.json"
       },
       {
         "artifact_type": "rdllm-universal-source-grounded-response-receipt/v1",
-        "declared_hash": "47202985f6bceb4246586014b565290bc3d7d404fc1834f03e05f2b4f1885300",
-        "entry_hash": "931ddac11b473b99d8332cc67adf74ecde658ae75fba552ed319be21d7b9a35f",
+        "declared_hash": "388da9423168fec1f2775ee17567d85668f4636325a9a93566bccdc95818b3f8",
+        "entry_hash": "10f340cf7905526c88071ccb4fbe6937a0c62fe9c6b9ac52af74bf7929adbb6e",
         "name": "universal_source_grounded_response_receipt",
-        "payload_hash": "a71e5553f008b184f045bfeaaa9b31669fbb2066ad4aa707de11f95ad8de63b2",
+        "payload_hash": "3e4470e45ffdffb4764959fb422bff43d4fc519d9718b90bab13886721ee499c",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-source-grounded-response-receipt.json"
       },
       {
         "artifact_type": "rdllm-universal-distribution-reliance-passport/v1",
-        "declared_hash": "09d2c9084bf2026b96298a3aecb774975c1fe3308bdd476fa93265c8c304a4b4",
-        "entry_hash": "905125b6305df49a21b8bbb18306231ec1a16cce66edff91fcf6174331f436e2",
+        "declared_hash": "ec0ec82c6fcaccbee8640b335f7fbcba7e83bd988337b5521f333279df4d0b83",
+        "entry_hash": "a8f0ee79f03458abce10989e3547bf821e63705a834ee75620aa0866ece928d9",
         "name": "universal_distribution_reliance_passport",
-        "payload_hash": "1ada394e3120c9cc8ff38dcbbee210ab44db4f7a66cdf6e4d5230d6f0ac0c457",
+        "payload_hash": "142c64b96ab82f65eaabf3c111bf15ecdeb8e7ff75ea6e5277792d95ba31886d",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-distribution-reliance-passport.json"
       },
       {
         "artifact_type": "rdllm-universal-adversarial-provenance-quorum/v1",
-        "declared_hash": "1db69e10453e617d9b52b8fdff1fb806a30e12a3c6a921dc1b02f054248cb714",
-        "entry_hash": "1d1b669a0120b630b7f64c6d8cc8bac8edfb4c528ddb9fcac621ffe23b54886e",
+        "declared_hash": "c876d5cd9a55de09b41314c26cbc63890ad0cd263d679d7580647557c37af026",
+        "entry_hash": "369dd3a3fdb2cd39931c09a238dc6cb3138dcb69d8886ed519d226c6fac772f4",
         "name": "universal_adversarial_provenance_quorum",
-        "payload_hash": "833158734b67e910caa984d2929edc29be523d012bab3bd63fde51e63e162d80",
+        "payload_hash": "b0a5f958c44067a5bffcc9c35ec529d83b1349d6d94314dec46bbe0267404300",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-adversarial-provenance-quorum.json"
       },
       {
         "artifact_type": "rdllm-universal-procurement-regulatory-reliance-contract/v1",
-        "declared_hash": "4b2570c7566c9de0d4f4659c299c49e0131801bb6fc6eaa1e6b4891f7e11b734",
-        "entry_hash": "2c7ecad5808605b98b9c1fc9aa17bd3637ae91d0f4c86a1345887c059ff52034",
+        "declared_hash": "ae393867ee51f1b34af2e966e004e132a41eb95435431e153bdd6714b5214900",
+        "entry_hash": "fee393d653f2fca7d56d40d54aaaf24346fdc571c9fe85babddfbfc170bf1573",
         "name": "universal_procurement_regulatory_reliance_contract",
-        "payload_hash": "0252bc12292b83dbc773352b02ef60bb9333069dd81eb6e0497192630dfd6994",
+        "payload_hash": "aadf29157e63f11424ef5ae62ce59f47e87e8df7ba6c43e70913ef292c32133c",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-procurement-regulatory-reliance-contract.json"
       },
       {
         "artifact_type": "rdllm-universal-provider-onboarding-migration-covenant/v1",
-        "declared_hash": "7b79f3040b84c0ce0d74a5c5213b194ca665273bb75de3fa12aec74d84dbf20c",
-        "entry_hash": "bce07fece23a2b20e3f325645ff810193616dbb30df5a971bc0a10b4eeee2a4f",
+        "declared_hash": "fe2d4d045f2dbf0222303525354d906e6a52a367a912401e6042ac6352863fe3",
+        "entry_hash": "f5f1f0e5fc2a91320790baeaff3b8585ca3f77e586c8e72493c48b576f3b8feb",
         "name": "universal_provider_onboarding_migration_covenant",
-        "payload_hash": "6f5b11641970b47bc82e74cbd3c375a64a13a00e4609027df7d01dcfb8db9959",
+        "payload_hash": "a32c5e957da1dca05a9a870f48769ca158b9463df028ff5ab19e050d88b44bd5",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-provider-onboarding-migration-covenant.json"
       },
       {
         "artifact_type": "rdllm-universal-model-provider-registry/v1",
-        "declared_hash": "73235e0e4018d14f71458d6c815e050622a1c2ae2ad612e4564413634dd2cf8e",
-        "entry_hash": "cd8596f7c6c8de89f74c468238c831fe878bfee2875bed3b472c7888d540a2a8",
+        "declared_hash": "11a3f3ae525f13e8e72f8a613d29c2d674fe2ea99eaa91500cab3fd635c641d5",
+        "entry_hash": "1b5bc8357ba6d927ae63a46d0e7d9b3b043d63c5a9a89efa2b77996de98c10fb",
         "name": "universal_model_provider_registry",
-        "payload_hash": "1270d23deb2e41d2a51413cf9e3003fd995b11ef45e002c289536c36cbf355a3",
+        "payload_hash": "bca2b20273545a31dd599342a4121da62eec716079476b3f9a9f8ddd6986f044",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-model-provider-registry.json"
       },
       {
         "artifact_type": "rdllm-universal-source-footer-enforcement-contract/v1",
-        "declared_hash": "79dc52443dfad2fca3762e108466593e102465bbb732aa33a48f79f944a89a36",
-        "entry_hash": "bb1a0dd92c8d65d54e98660f356a1e89d007eadff413ce46b0d234a3d2c28688",
+        "declared_hash": "4626e8063e85bdfff5d45240de0eb7f24473e7436e0f7f295936b778834d3c91",
+        "entry_hash": "4bf2fab1b4da3f9e0319dd42c41d5877118683b69295fde7221586d79a0a9825",
         "name": "universal_source_footer_enforcement_contract",
-        "payload_hash": "56d70ee8c549fa3aed66e40fbf81f8a57b53dd3394d1c7eb9f08b5020f0bf06b",
+        "payload_hash": "2da0834aab52b49e0de75655ef1c6ec867064ab981136555f8031666b597d276",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-source-footer-enforcement-contract.json"
       },
       {
         "artifact_type": "rdllm-universal-provider-catalog-coverage-contract/v1",
-        "declared_hash": "640cf2024452977623a68452d5cbf1c6db44c513a844088c238a355617a7912c",
-        "entry_hash": "f31af074dffceadaaf7ebe67bae184b3143226a1e51942b807483a9e5e01d90e",
+        "declared_hash": "90adc3c7b910d7e03a8fb0889c09d436e0ded6cad5947f0ca1bbe0d291d42360",
+        "entry_hash": "906cdba2ce8f6b2a3fb392a40ef97843b59bcb302ad6d444eabaef590ec01893",
         "name": "universal_provider_catalog_coverage_contract",
-        "payload_hash": "c215e628ee283004617e26470615f9f3f2923e3c342c773eda16b47de5a84b23",
+        "payload_hash": "f51003621605d6bb01f8963e9ba999c333e28caf0a22c93c8d47f71310359de0",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-provider-catalog-coverage-contract.json"
       },
       {
         "artifact_type": "rdllm-universal-runtime-route-binding-contract/v1",
-        "declared_hash": "c5673c84959600b70f297e34c36c6a56da5eb75fe3cb6d0009a42ddc1c8bd8e0",
-        "entry_hash": "75096c6ed49c79b33f2d77317cf5cf50079f2bd4e4771d0230a792db55881c6a",
+        "declared_hash": "bc8648a79d54c83233e59776d6f0007cdb1e711bce4629a167d79328f6eaa3ee",
+        "entry_hash": "c8a30056899c980e624a406af592c662392050d3f9a8cd596afcbda05becc3b0",
         "name": "universal_runtime_route_binding_contract",
-        "payload_hash": "3441af6a49607a36b6cadab32264c869e887e20d9f8b570a630d96a6b15191d1",
+        "payload_hash": "dbc36bbde9da4f8389ecafae2beb80fc42e52d9573d11c706d95ce038b385823",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-runtime-route-binding-contract.json"
       },
       {
         "artifact_type": "rdllm-universal-verified-source-footer-contract/v1",
-        "declared_hash": "e1a4479162a33751e4e2c5a723ba37c299e96e80a66db74a6919a2407df3f4e1",
-        "entry_hash": "a7e5138ee6f05e98f6a463cde9ac80daa40ff7a3ca894a05df964d1d736956ed",
+        "declared_hash": "81f43bf11baceacf21eba347e9632b59b391495d4eb9f32b7fcca312eb6b3bb3",
+        "entry_hash": "f978df163d46030d5ba9f51d6a4ce2cad1b08222b21037fd585aa97e4c40a43d",
         "name": "universal_verified_source_footer_contract",
-        "payload_hash": "d4c689ac77e2456c65ccdc2a19074e52838cda1d52c2375e8332fcef5e5a20cd",
+        "payload_hash": "b881ac2a43ac9389c48c0d0073539ce07e638d3e85b734e59cd377482f1169b2",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-verified-source-footer-contract.json"
       },
       {
         "artifact_type": "rdllm-universal-model-capability-coverage-contract/v1",
-        "declared_hash": "13f737689f94d0d2b74a361a4e1f9c5692b5b1143a9d97591fd22e29921d6122",
-        "entry_hash": "348cc96d508a3097fc948f0490e5cd1ce35d9fe8fe08b9e5f0c31f6e85134dc1",
+        "declared_hash": "39362ade423f2fac662497c2024e875a2b273e791d82703821957a1d5b8001fa",
+        "entry_hash": "665a70a9a8e5d7df40892275e71131ae65942f77e2f8e6ced511266f360ee6d3",
         "name": "universal_model_capability_coverage_contract",
-        "payload_hash": "948df5f79ab6a709a6e42f461352c2ace207133f6bb3c1b553905158c3063f80",
+        "payload_hash": "885440c9658a198d46c4dca397e6073e89f45b00f14a1d090ade10d33c97f1df",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-model-capability-coverage-contract.json"
       },
       {
         "artifact_type": "rdllm-universal-live-capability-discovery-contract/v1",
-        "declared_hash": "54622d0eec86ba5f6d4c1600295a7b765ae7e45ef09b5d0dd618e9d1f33d5551",
-        "entry_hash": "4c4b97239998f24e2406b7fb3095d808b0ed027aeb68cb64ba0f2a27c75d034b",
+        "declared_hash": "08c839ec9441ab0a187b3db3901cab98b50ea09dc336fca114ab018e94b87568",
+        "entry_hash": "bfaf693ada4405c21f445f667c393f3cdac621a3c0840b1667b47f6388bc9f50",
         "name": "universal_live_capability_discovery_contract",
-        "payload_hash": "5b83bd2135abb4673c0150fcf3d44ede8a3caf53fc794eef0038f832a491be83",
+        "payload_hash": "f68229d2f3f6c31293c6e5a96520c86b2aadde9152d91f3e262b7af4b81721f2",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-live-capability-discovery-contract.json"
       },
       {
         "artifact_type": "rdllm-universal-native-source-annotation-contract/v1",
-        "declared_hash": "4ee23709ebbbd9f3f8f065e5e841c31d985eba6b20247716e811a2ca9478f723",
-        "entry_hash": "2377898ec2479daa2e39df2ee6a2410e88d8ed209ecd82cd6bc67d36c7adb49c",
+        "declared_hash": "b610e55e53d67e561ba4254e48cf4a085e6bca9f953e6b49d592e07e15194709",
+        "entry_hash": "da118ab64304c15a88887d6ae9992f285e9284e4df7fefdd5e015f1cf8c29c44",
         "name": "universal_native_source_annotation_contract",
-        "payload_hash": "6b225952dec3dcd6feb4974d1eae901c702b263ca1d8dff891a5e71cfd726324",
+        "payload_hash": "20ab3748e6b473f3f512b57e45bab506aba421a39dfdafb6b60665f52d995c5d",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-native-source-annotation-contract.json"
       },
       {
         "artifact_type": "rdllm-universal-claim-evidence-footer-verification-contract/v1",
-        "declared_hash": "a7ca22a88390fac100da11490bb2c36f1aa6b3e491bc4b0ce75eb3b46afc147d",
-        "entry_hash": "1e172068f6bd27d4b896fabe33d989628de3c1dc50d9ec75a32d2828f3385cdd",
+        "declared_hash": "2ce591d1900e1164bb25a8bdd2755f08eee74845c0b030e26195b1e550b1ccc0",
+        "entry_hash": "31e420acc5329474afe065c2b106f4d8a6b2005c5ea4f88e39a0780513b3ed4c",
         "name": "universal_claim_evidence_footer_verification_contract",
-        "payload_hash": "c8fceac233a3cafefa3bf6484d2c0dc67f3dcfd49e4c6fefc2a986d00cba199d",
+        "payload_hash": "f78c835ffa43f5005c8b869ed2b7552d553c3fb713b11ed233e3f4641b4496a1",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-claim-evidence-footer-verification-contract.json"
       },
       {
         "artifact_type": "rdllm-universal-provider-meter-normalization-contract/v1",
-        "declared_hash": "86549d33c3fd0f300f3b9806a4276577f90d5b4d04c0c0cd77e2fb4f9fcb0e6c",
-        "entry_hash": "482f77d43017f830a900d632a6aaa0a6b5a1f915d82401c35ddbbe27f7530583",
+        "declared_hash": "6f8296a81d16ae272da6b5e6f532f4d36256eb4accfe0c732ac37d405c65edc6",
+        "entry_hash": "0658a042a278ccef84ac636cce4a0bee405d84fd3bb6ada635c9c3cae3079baa",
         "name": "universal_provider_meter_normalization_contract",
-        "payload_hash": "e2ba0e7c2f4fcdbc9a640fa3467314d47e280bbc3f8a2dd509e0255dc8f02b6b",
+        "payload_hash": "2a9e54a11530c511967611dbc4d3017949acb99d409d0dd3e178136a33180955",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-provider-meter-normalization-contract.json"
       },
       {
         "artifact_type": "rdllm-universal-provider-response-state-normalization-contract/v1",
-        "declared_hash": "5c110c75acd13ec2d941581c1f1b22daa73866a08b576b85705fcc1b223a38a7",
-        "entry_hash": "4a1437201062a0dc1dad75d3b444e2200f33d817c3f73c0ddc0c3bf3464566a4",
+        "declared_hash": "7a50001f23eca3326587788ba2f12f13a20cde9153f8169a39b7ab6a0490343f",
+        "entry_hash": "3597be0ae45f7764f4a54d4e7e0cb68ce9daf8837974794bc39cbb9fdb7e6533",
         "name": "universal_provider_response_state_normalization_contract",
-        "payload_hash": "1a0dd5b9bb8fb14e88c11444aa3dc991f75c98bf3bb41ca4c7d267804dad1a47",
+        "payload_hash": "612a8817748c0454dde0343ca17018216cc2e2b075caab5955ad6be56dccabe1",
         "required": false,
         "well_known_path": "/.well-known/rdllm/universal-provider-response-state-normalization-contract.json"
       },
@@ -45369,10 +45369,10 @@
       },
       {
         "artifact_type": "rdllm-certification-attestation/v1",
-        "declared_hash": "2fd4aae21c12c56ced928785ec8acc7140fdedbe0fcd3b2f5a4c784d304d38dd",
-        "entry_hash": "109a02357f455ac6aaa6f27a87b3ed2729acd76bde8817d60db378e083478b8e",
+        "declared_hash": "7af5cece554505454b92a50082d9035d011d1075eceab8f5790403348c74a6e0",
+        "entry_hash": "b3543c4d35395265910d3796c4f9139abf9f46d70ff0a69ea80ebf14769db15a",
         "name": "certification_attestation",
-        "payload_hash": "632375497adb6d7a162ec7e516e87ff74c54161f1136f73c79bbf08a63616b66",
+        "payload_hash": "f42a6e4e14850baef600a6d25f3cff2cb29694e3b94662492e8dec612c83cfac",
         "required": false,
         "well_known_path": "/.well-known/rdllm/certification-attestation.json"
       }
@@ -45550,7 +45550,7 @@
       "well_known_path": "/.well-known/rdllm.json"
     },
     "issuer": "rdllm-local-demo",
-    "manifest_hash": "fb953c8d56c4298e66d51b310387f5235a4f2a1f36b4d2c54d1b609c0092c5cd",
+    "manifest_hash": "089f6bcc1854e6032f63faed3cff29e32272cba747f089b5aacae71f67889e61",
     "manifest_version": "rdllm-discovery-manifest/v1",
     "privacy": {
       "artifact_payloads_embedded": false,
@@ -45879,11 +45879,11 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "d00aca8d12b054fa93c788afec4ef09361cb034104d2bd78bb66fe7503007901"
+      "value": "94e2f3e6a6218c2403d22018556c406ab2f88b15e778fdbba1c195b2c18a4b37"
     },
     "summary": {
       "artifact_count": 125,
-      "assurance_root": "d2343a2ca9c0c305ee0f900b6fec17cc4262deb42db2a615172ceae01b3c79c9",
+      "assurance_root": "37d7b4670f4bb893b201db7085a9a8cb66eae8a80a6062f8d73fc99e07ea7c5c",
       "endpoint_count": 206,
       "highest_level": "RDLLM-L186",
       "integration_public_surface_count": 177,
@@ -47643,19 +47643,19 @@
       "well_known_path": "/.well-known/rdllm/integration-profile.json"
     },
     "bound_artifacts": {
-      "assurance_bundle_hash": "aa954ba4583d5ae99dc1221a1aacc738e3b2fa6aa2cfc422a5864b0a7a63aebc",
-      "assurance_bundle_root": "d2343a2ca9c0c305ee0f900b6fec17cc4262deb42db2a615172ceae01b3c79c9",
-      "certification_attestation_hash": "2fd4aae21c12c56ced928785ec8acc7140fdedbe0fcd3b2f5a4c784d304d38dd",
-      "certification_report_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
-      "provider_card_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
-      "response_envelope_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140"
+      "assurance_bundle_hash": "c6172be428a35a27cf1c67b05535bbad343bddb4a045175124a3cc1061819c29",
+      "assurance_bundle_root": "37d7b4670f4bb893b201db7085a9a8cb66eae8a80a6062f8d73fc99e07ea7c5c",
+      "certification_attestation_hash": "7af5cece554505454b92a50082d9035d011d1075eceab8f5790403348c74a6e0",
+      "certification_report_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
+      "provider_card_hash": "facad8d425e0bb312b6736d4351f321fcfd3643584f09b37dec4ee2b2c83ec51",
+      "response_envelope_hash": "1bc14c301e297d81bc848a5682a4921c8d5e372096d7a0297d9994eeaa5fddeb"
     },
     "certification": {
       "case_count": 187,
       "failed": 0,
       "highest_level": "RDLLM-L186",
       "passed": 187,
-      "report_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+      "report_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
       "score": 1.0,
       "status": "passed"
     },
@@ -47667,7 +47667,7 @@
       "private_source_corpus_disclosed": false,
       "profile_uses_hashes_and_contract_metadata": true
     },
-    "profile_hash": "a669a7c49b9ccbdc94e1fe218a4b17f6129d9f6a1709f7d8315f73a1a2990647",
+    "profile_hash": "5c2c2e5a3a9672c9c9f54cd4184d0f6abe8d5ade50e539efe762affb45b35b40",
     "profile_version": "rdllm-integration-profile/v1",
     "provider": {
       "id": "provider:rdllm-reference",
@@ -47867,7 +47867,7 @@
     "sample_response": {
       "artifact_count": 16,
       "claim_count": 6,
-      "envelope_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
+      "envelope_hash": "1bc14c301e297d81bc848a5682a4921c8d5e372096d7a0297d9994eeaa5fddeb",
       "event_id": "evt_83312b019637578e",
       "source_count": 3,
       "status": "verified"
@@ -48055,7 +48055,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "f9b852e619211cba590301c0382f6b90e67e6ebea5f3c9622f8e688950499b38"
+      "value": "03a8065c0ba1ab257191b6212a6327d2518c84bb311e4e7b9703a2f130108fe8"
     },
     "summary": {
       "endpoint_count": 206,
@@ -48358,7 +48358,7 @@
       "copyright_policy_hash": "615f10daea4564c7e45d528ea0623642f43e8d53828cda010b042edbc3acdb64",
       "downstream_docs_available": true,
       "downstream_documentation_hash": "175e5b28c0c658d168c186f9b735e0adbe7d60b86dd511186ece8fbaaf318291",
-      "live_attribution_proof_hash": "60cfdb4dceac5d7632b540b3a0b1385f4f41d7527e8403e9185bc6bef6e90f34",
+      "live_attribution_proof_hash": "c417c40dd2d82193dc7d92246fa750f17a4edc375d0514929bab8430dc606407",
       "live_attribution_required_for_all_outputs": true,
       "model_artifact_or_attestation_hash": "419b6b63e9125f029812167195f3e0410d9f73190f4a7b013cb1328265fdb7fa",
       "model_id": "rdllm-reference-model",
@@ -48514,35 +48514,35 @@
     "artifacts": [
       {
         "artifact_type": "agent_tool_attribution_ledger",
-        "declared_hash": "bc022ed531102d3d9b98c72ee9ee49144e417cebb3e026d521ea52c59c24a990",
+        "declared_hash": "a8e0be08a45af900d897d0c9ff075196db72f33f4f787eb185913c59fd0f4058",
         "hash_reproducible": true,
         "name": "agent_tool_attribution_ledger",
-        "node_hash": "05b20b176ae8c0039c3112fb039a835d63d06af72acb9d97a422276d611f365b",
-        "payload_hash": "0f2c7fcd462cf4f3aab97144c4a9e26563cf078f262db6029b32f871e20e2225"
+        "node_hash": "44102034f232d8cfdcbc6366a11ca8fc39b6d9f1b101338557db26d515a1a561",
+        "payload_hash": "fee293f7d959d2f4966a998e2bc4fdd2302cab88dd4117fb4e9b6478a40f6093"
       },
       {
         "artifact_type": "assurance_bundle",
-        "declared_hash": "aa954ba4583d5ae99dc1221a1aacc738e3b2fa6aa2cfc422a5864b0a7a63aebc",
+        "declared_hash": "c6172be428a35a27cf1c67b05535bbad343bddb4a045175124a3cc1061819c29",
         "hash_reproducible": true,
         "name": "assurance_bundle",
-        "node_hash": "a0b380a1c57bb2b04f7d0a601c421064b3b637f6507da7bbcaaf14a9d80e674a",
-        "payload_hash": "27730d075b3e8e367a1b8ffaffefe0dbb90dfe4437edcdddddee30204e4844d6"
+        "node_hash": "c794374d34783bc46db00c168efccee5921e8006011072688cb588eda31807c3",
+        "payload_hash": "2d433d24fbeee8a52944f80c2906ae34b7530ac7c4b5c6366af949971d5f3600"
       },
       {
         "artifact_type": "certification_attestation",
-        "declared_hash": "2fd4aae21c12c56ced928785ec8acc7140fdedbe0fcd3b2f5a4c784d304d38dd",
+        "declared_hash": "7af5cece554505454b92a50082d9035d011d1075eceab8f5790403348c74a6e0",
         "hash_reproducible": true,
         "name": "certification_attestation",
-        "node_hash": "d580d1c8a8837c73381c34ccf62312031a46673c3ef75d9b45e5aedfebdf05fd",
-        "payload_hash": "632375497adb6d7a162ec7e516e87ff74c54161f1136f73c79bbf08a63616b66"
+        "node_hash": "f65fcc12091ca20bb080dcf886f8de4b36ea343d624d359c2d10464e764a2bb2",
+        "payload_hash": "f42a6e4e14850baef600a6d25f3cff2cb29694e3b94662492e8dec612c83cfac"
       },
       {
         "artifact_type": "certification_report",
-        "declared_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+        "declared_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
         "hash_reproducible": true,
         "name": "certification_report",
-        "node_hash": "9b3a4926462398e467d6f71fa332e49507ef2b40a77be170e4841591290b1b90",
-        "payload_hash": "4a12f517abe36819cc6a13794802692520ab74cccf5310c9ceff1039f8631457"
+        "node_hash": "0a349704c91ea134f76ce9adedc7df3bf1b184687610b2ea3ac97057907f936f",
+        "payload_hash": "95cfce03c9d271d6eabd68322adbf8907bbb9a37bb73f650104fdee2da0e2359"
       },
       {
         "artifact_type": "citation_url_health",
@@ -48554,11 +48554,11 @@
       },
       {
         "artifact_type": "client_attribution_enforcement",
-        "declared_hash": "cb547c6635eba68b63cc23e3e9ae3a9ce621e7e04e5e9955424cfe9068c11b1f",
+        "declared_hash": "b074361ef7002f0e52048309675dfec2aa24c40bb4cd80d7d7207503102a9aec",
         "hash_reproducible": true,
         "name": "client_attribution_enforcement",
-        "node_hash": "14b254aab155b331ea2bf56e4c536a87188d53482b8e10d6833d3312b1d94771",
-        "payload_hash": "cb547c6635eba68b63cc23e3e9ae3a9ce621e7e04e5e9955424cfe9068c11b1f"
+        "node_hash": "2263051f31e48e32cc4943c77b94a0945b0cd972b50144f0fce29763cb9073c0",
+        "payload_hash": "b074361ef7002f0e52048309675dfec2aa24c40bb4cd80d7d7207503102a9aec"
       },
       {
         "artifact_type": "composite_foundation_adapter",
@@ -48570,19 +48570,19 @@
       },
       {
         "artifact_type": "conversation_attribution_ledger",
-        "declared_hash": "3c9d8a353c71ae333ff2d0addc25d9b7a4c2728b3875e977275dc5c646e8d058",
+        "declared_hash": "45b500690f1c0bc551edd2bf1241acb17cdf125701ed1fc48f1decef859af036",
         "hash_reproducible": true,
         "name": "conversation_attribution_ledger",
-        "node_hash": "acf1b3a3655a699948de4db13541fac35395c7215d5ff6d1aed65b4a5576af66",
-        "payload_hash": "0393e309e1e060f6974adca3bd12ac60995d620438ca8d99b32a7acfb48f84cd"
+        "node_hash": "7d797d37446af8d20998abe01f464165cd65014fe3208a349eb7efcc8070ae75",
+        "payload_hash": "6f268d5735cae431cd51bbd98339f27371e9d23b9b14a03a7d8bb29032c6f42a"
       },
       {
         "artifact_type": "discovery_manifest",
-        "declared_hash": "fb953c8d56c4298e66d51b310387f5235a4f2a1f36b4d2c54d1b609c0092c5cd",
+        "declared_hash": "089f6bcc1854e6032f63faed3cff29e32272cba747f089b5aacae71f67889e61",
         "hash_reproducible": true,
         "name": "discovery_manifest",
-        "node_hash": "bc5555f4b915b15a1f110a8afb6a3a8c6bd4efbf7e284c736cfa21d21ffef267",
-        "payload_hash": "92ac1aea74e800d8a77c8769f04fb4972e474220c98fc226e815cc4bfbf2f76a"
+        "node_hash": "b0a6fe48d6f7032380ee1fdc7a8c663d444f3bf4d3d390bca3746cbc6c94df75",
+        "payload_hash": "348e4f89c6ef491d41873a307de399acd70bd8d2d4dfa9dc349a1ae413225b83"
       },
       {
         "artifact_type": "evidence_locator_manifest",
@@ -48602,11 +48602,11 @@
       },
       {
         "artifact_type": "foundation_api_profile",
-        "declared_hash": "d2a8198fd0e30574ca2be59bd82b1495dbf494a274906e80dbde54d311ded09a",
+        "declared_hash": "bf41e0abb8bee86f15710350009aff753100a712521dd19608903c0085ef67ae",
         "hash_reproducible": true,
         "name": "foundation_api_profile",
-        "node_hash": "5c8532ffbf9055290539466dfce450b9d244322865830f0e90e6ea7fc1e994e8",
-        "payload_hash": "9300579971510759e01342a806e7e339304ea46de6b958ae60fd5e29fe69669b"
+        "node_hash": "97c19c0b34d1f0bdb1d759a403f8aea31f1ae7b6aa30d602893e8ee00038e27d",
+        "payload_hash": "af833aacd0dd360dbeb1d5f04bce107993723a2b1018d2036e0e7637e34874e5"
       },
       {
         "artifact_type": "foundation_model_deployment_attestation",
@@ -48642,35 +48642,35 @@
       },
       {
         "artifact_type": "integration_profile",
-        "declared_hash": "a669a7c49b9ccbdc94e1fe218a4b17f6129d9f6a1709f7d8315f73a1a2990647",
+        "declared_hash": "5c2c2e5a3a9672c9c9f54cd4184d0f6abe8d5ade50e539efe762affb45b35b40",
         "hash_reproducible": true,
         "name": "integration_profile",
-        "node_hash": "3492039d975523fc0617c3a17d34e7ef9aaa97f159cd0cf2bf856846d5c31c38",
-        "payload_hash": "cc7f048c5cf03a9e867b6db8266a750005da3f87c3a3dea966dd5cbc46673434"
+        "node_hash": "471c828a33bc24eb37e4c841eca4520e850fc5d4d965aff9e4d77a0f754bb050",
+        "payload_hash": "77f33400128680425dd9ca7d093627d712e04ed45a826be081787dd7adbf8eac"
       },
       {
         "artifact_type": "proof_carrying_response",
-        "declared_hash": "f4b075b6a220ab9ac5de596609eb329646ab1dd9215b5428fe68cd1a4f1c4d6a",
+        "declared_hash": "93121a54bd7418c062be6f4e4a56008f53500ffdda7f6be64ef9b4aeda6f4c2c",
         "hash_reproducible": true,
         "name": "proof_carrying_response",
-        "node_hash": "577ad6b71f6fea41b386fea70a48bca7fd901a83d4ee570d9943611eb7ae21c9",
-        "payload_hash": "21303e723377dd1c38cc685de525580e09201ef85a2ed9c945df6f3ff530b672"
+        "node_hash": "1bb65493350557531348233c1fdc3fc86b2595a8f93d4ede5c0cbd5c9b0ca78a",
+        "payload_hash": "8a6fd486ed8e26396b43b6da0289a1135432c19b5b0a3c30260b6ad4db8c172b"
       },
       {
         "artifact_type": "provider_attribution_card",
-        "declared_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
+        "declared_hash": "facad8d425e0bb312b6736d4351f321fcfd3643584f09b37dec4ee2b2c83ec51",
         "hash_reproducible": true,
         "name": "provider_attribution_card",
-        "node_hash": "f4d9252c75f5c9a83e68b505543543496c8a958433f53a4b5859e9ade147ca58",
-        "payload_hash": "8bedb8e9d9503710e47e489056faa897e011ae3c82340a06d0e7864360c1d851"
+        "node_hash": "bfe4cfca9b2e5cd7e0224202775334e4ea17068bed92ce08b5fa3d971fcbbb51",
+        "payload_hash": "fb2f7e122d855d9a8d6a757d04625d6fa6dbe28c71d749037e9d6aa71314ca38"
       },
       {
         "artifact_type": "response_envelope",
-        "declared_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
+        "declared_hash": "1bc14c301e297d81bc848a5682a4921c8d5e372096d7a0297d9994eeaa5fddeb",
         "hash_reproducible": true,
         "name": "response_envelope",
-        "node_hash": "7a1d0f115b04b7b28233710c4d5912d56fa51eb9b1d47583b565894420968753",
-        "payload_hash": "e612860a96f85102d90778f4d1a640c244d97f187ef6a39971ea231f326b9a98"
+        "node_hash": "fcfd3dd1800165aceb281c5724c15263cb0088d9c6a7db5d80badd1555c1a339",
+        "payload_hash": "598f1774853803607bcee78ea0dc42170575bcf2bac7d4c17107d25d11d222f9"
       },
       {
         "artifact_type": "revenue_allocation_report",
@@ -48682,19 +48682,19 @@
       },
       {
         "artifact_type": "serving_gateway_report",
-        "declared_hash": "521bba350ee4ad7fff2191c045ac6e3e8cef390744b326b83f2c99a8f5b64d29",
+        "declared_hash": "c1f3fe97d265a9f2348c37770b58249308d6655d4e257b29c865caaa9428b05c",
         "hash_reproducible": true,
         "name": "serving_gateway_report",
-        "node_hash": "aca8a821d9d6ac0830ca66a18130de7ca56d06d798d623e359973a1ca2a3637f",
-        "payload_hash": "bcbdfc09e154af09d0dd67973c76a2bdf3429fe3c387aad7e78f5d4c169b6f8a"
+        "node_hash": "5f0aa52e655074ae0202db010a52bcfe406c0818f5f377d2410e04c1474363bd",
+        "payload_hash": "5e475caed9e77141bf7741e1ac73e43efc9545cf1541b1ead36057dd5a8ab4c9"
       },
       {
         "artifact_type": "source_footer_delivery",
-        "declared_hash": "d950a4b0234a8d58bad87416e7c58a72453b6a0c7e27f48a09bb0913877b77f6",
+        "declared_hash": "5634de4f5491a758d5f86467579bf4b26609853dac6b827cb7c71461c224e0b1",
         "hash_reproducible": true,
         "name": "source_footer_delivery",
-        "node_hash": "9aeffb32879ced46efc7f904956870cc5754da4f241a414423bfc30887ac79c5",
-        "payload_hash": "d950a4b0234a8d58bad87416e7c58a72453b6a0c7e27f48a09bb0913877b77f6"
+        "node_hash": "d46b48fcb5dd8eae04defd80e9cb23fbde7a8dfb392b6b1205e3095293f1349a",
+        "payload_hash": "5634de4f5491a758d5f86467579bf4b26609853dac6b827cb7c71461c224e0b1"
       },
       {
         "artifact_type": "source_freshness_audit",
@@ -48730,35 +48730,35 @@
       },
       {
         "artifact_type": "universal_adversarial_provenance_quorum",
-        "declared_hash": "1db69e10453e617d9b52b8fdff1fb806a30e12a3c6a921dc1b02f054248cb714",
+        "declared_hash": "c876d5cd9a55de09b41314c26cbc63890ad0cd263d679d7580647557c37af026",
         "hash_reproducible": true,
         "name": "universal_adversarial_provenance_quorum",
-        "node_hash": "d9fb147900d6be33eb1d44804c82de06533310c35bc5780860c23d0bae5ca89c",
-        "payload_hash": "833158734b67e910caa984d2929edc29be523d012bab3bd63fde51e63e162d80"
+        "node_hash": "959c1c46312abe5e686f87835d85ad482f6fd8cb7821eb0749f8f834833037e1",
+        "payload_hash": "b0a5f958c44067a5bffcc9c35ec529d83b1349d6d94314dec46bbe0267404300"
       },
       {
         "artifact_type": "universal_attribution_negotiation_handshake",
-        "declared_hash": "69bfb81e0fe0db245a6b666bb90b49521bcb0855806dfd5d38b4dfab8febb2e4",
+        "declared_hash": "f839e0aa234425b88165f2c770a88ed9a8cd55a7ed61dbd15b7e144c9cb029b5",
         "hash_reproducible": true,
         "name": "universal_attribution_negotiation_handshake",
-        "node_hash": "906986f6120d869429faf6f88c79444f353ae1810cf86b461905970f357f69c7",
-        "payload_hash": "d77516fc27e0197c9b200ce261750909b10edf50cbb927de9c59feed059f15bd"
+        "node_hash": "ab66ca8044d68910d172848cefd853c4fac8b7a059d1fc3cc525159ee8b996bc",
+        "payload_hash": "1fb99e3729544c5951c8a09aa59dfe095d9e980e3e0f228c1d82cf9f7a934bee"
       },
       {
         "artifact_type": "universal_certification_trust_federation",
-        "declared_hash": "b4a339bb8b9beaaf8c652b90460cbedd9128c24cc24ba8dd7ab34652a294dc13",
+        "declared_hash": "7b065388094692089b79a7d791b291b34f3c5cae49c59889ad22b96dc1de15f6",
         "hash_reproducible": true,
         "name": "universal_certification_trust_federation",
-        "node_hash": "d6759a4228abbf0f04f151361fcd4488370f93c143a44f7c157a76ef1b189a63",
-        "payload_hash": "c6752f51c8c4229d14e871b2bd3b60df1d1b62c1e5ba56cddaaaa3595fe6defc"
+        "node_hash": "48592f64d6a09bbcc39e03e63018e9596247f4bb12b80c9cb44ff492e63d90c9",
+        "payload_hash": "854586307a1850443f094db5aaf62342abac295f5b8fdf4b9245538880e31d44"
       },
       {
         "artifact_type": "universal_claim_evidence_footer_verification_contract",
-        "declared_hash": "a7ca22a88390fac100da11490bb2c36f1aa6b3e491bc4b0ce75eb3b46afc147d",
+        "declared_hash": "2ce591d1900e1164bb25a8bdd2755f08eee74845c0b030e26195b1e550b1ccc0",
         "hash_reproducible": true,
         "name": "universal_claim_evidence_footer_verification_contract",
-        "node_hash": "a2296ed3d883e6b5b10b7b769ae837892a6dcd2099f3baabc7d8e6933a9b8eee",
-        "payload_hash": "c8fceac233a3cafefa3bf6484d2c0dc67f3dcfd49e4c6fefc2a986d00cba199d"
+        "node_hash": "de085fdcedeec839a42cbca96432e3291c8a4aa52a310ff7ac3b65f628faf082",
+        "payload_hash": "f78c835ffa43f5005c8b869ed2b7552d553c3fb713b11ed233e3f4641b4496a1"
       },
       {
         "artifact_type": "universal_claim_provenance_envelope",
@@ -48786,11 +48786,11 @@
       },
       {
         "artifact_type": "universal_distribution_reliance_passport",
-        "declared_hash": "09d2c9084bf2026b96298a3aecb774975c1fe3308bdd476fa93265c8c304a4b4",
+        "declared_hash": "ec0ec82c6fcaccbee8640b335f7fbcba7e83bd988337b5521f333279df4d0b83",
         "hash_reproducible": true,
         "name": "universal_distribution_reliance_passport",
-        "node_hash": "1d239429424a93cdffe57600dfaf36eba50060ab9b051963ff953314b01aaa0e",
-        "payload_hash": "1ada394e3120c9cc8ff38dcbbee210ab44db4f7a66cdf6e4d5230d6f0ac0c457"
+        "node_hash": "3a2cea03e5df97060967cdc62804df3461c774623f875f5faadc07f8cb3a434f",
+        "payload_hash": "142c64b96ab82f65eaabf3c111bf15ecdeb8e7ff75ea6e5277792d95ba31886d"
       },
       {
         "artifact_type": "universal_emission_enforcement_gateway",
@@ -48810,11 +48810,11 @@
       },
       {
         "artifact_type": "universal_foundation_provider_binding_matrix",
-        "declared_hash": "77d28bffa711dd5e4a43039d15708ef18dafb6ece7f02a4267494556fbadbdd3",
+        "declared_hash": "49e9e7301e9545d3c93706ac12e0153c064265ea689d95053c3354d3d527ceab",
         "hash_reproducible": true,
         "name": "universal_foundation_provider_binding_matrix",
-        "node_hash": "63e56b99663e609c825531ec9e16aa1edd39fe3d53876e8a43b815cd2efc6783",
-        "payload_hash": "ad37d14d08d2a81556d5e978ed1f4905b2eacdd26b73ac9924356851a6305c62"
+        "node_hash": "c35c1920fdfefc881352d31bef0321702703282fb81d0eca904f5a8eeb78abdc",
+        "payload_hash": "3e68cb8f934c449a3b799298729cfccb73759213eff9215d8ab4286aee0fd579"
       },
       {
         "artifact_type": "universal_grounded_reliance_contract",
@@ -48850,115 +48850,115 @@
       },
       {
         "artifact_type": "universal_live_capability_discovery_contract",
-        "declared_hash": "54622d0eec86ba5f6d4c1600295a7b765ae7e45ef09b5d0dd618e9d1f33d5551",
+        "declared_hash": "08c839ec9441ab0a187b3db3901cab98b50ea09dc336fca114ab018e94b87568",
         "hash_reproducible": true,
         "name": "universal_live_capability_discovery_contract",
-        "node_hash": "7c4a28f4a0f2f9f866a6443a2ca803307c2397fa1e21811a6d633605a2d309b1",
-        "payload_hash": "5b83bd2135abb4673c0150fcf3d44ede8a3caf53fc794eef0038f832a491be83"
+        "node_hash": "f9f87e4729f95486907f0dd8cc275cc67a9edd32266749f2aae6475c2c3b0426",
+        "payload_hash": "f68229d2f3f6c31293c6e5a96520c86b2aadde9152d91f3e262b7af4b81721f2"
       },
       {
         "artifact_type": "universal_model_capability_coverage_contract",
-        "declared_hash": "13f737689f94d0d2b74a361a4e1f9c5692b5b1143a9d97591fd22e29921d6122",
+        "declared_hash": "39362ade423f2fac662497c2024e875a2b273e791d82703821957a1d5b8001fa",
         "hash_reproducible": true,
         "name": "universal_model_capability_coverage_contract",
-        "node_hash": "81cf2c6f0b475d237ee4e1a5bf8686bf5515709687c964352e7eca64a1ead122",
-        "payload_hash": "948df5f79ab6a709a6e42f461352c2ace207133f6bb3c1b553905158c3063f80"
+        "node_hash": "b39fa73466ab6e6e681b9fbc5827632d4dd3cd0bbc05e9b3a6bdaaeffb7434ed",
+        "payload_hash": "885440c9658a198d46c4dca397e6073e89f45b00f14a1d090ade10d33c97f1df"
       },
       {
         "artifact_type": "universal_model_provider_registry",
-        "declared_hash": "73235e0e4018d14f71458d6c815e050622a1c2ae2ad612e4564413634dd2cf8e",
+        "declared_hash": "11a3f3ae525f13e8e72f8a613d29c2d674fe2ea99eaa91500cab3fd635c641d5",
         "hash_reproducible": true,
         "name": "universal_model_provider_registry",
-        "node_hash": "7f8868db8ac3e860ba180803150bd3545fbb77799e5e828eac6d620730269de0",
-        "payload_hash": "1270d23deb2e41d2a51413cf9e3003fd995b11ef45e002c289536c36cbf355a3"
+        "node_hash": "dd9ec4e28982d9495f0f1c69abce50c1f6debec130e80dcc4e3871f9431711b1",
+        "payload_hash": "bca2b20273545a31dd599342a4121da62eec716079476b3f9a9f8ddd6986f044"
       },
       {
         "artifact_type": "universal_native_source_annotation_contract",
-        "declared_hash": "4ee23709ebbbd9f3f8f065e5e841c31d985eba6b20247716e811a2ca9478f723",
+        "declared_hash": "b610e55e53d67e561ba4254e48cf4a085e6bca9f953e6b49d592e07e15194709",
         "hash_reproducible": true,
         "name": "universal_native_source_annotation_contract",
-        "node_hash": "ad8b69b6a1ec29c228518b7db471f72b84ad3ffc835fa92dc7b9f3311d2ab34e",
-        "payload_hash": "6b225952dec3dcd6feb4974d1eae901c702b263ca1d8dff891a5e71cfd726324"
+        "node_hash": "36440c644bc9f697678d426d90be8f4242bf8f8c80e7d1f52939e89a08d961a3",
+        "payload_hash": "20ab3748e6b473f3f512b57e45bab506aba421a39dfdafb6b60665f52d995c5d"
       },
       {
         "artifact_type": "universal_negotiated_invocation_enforcement",
-        "declared_hash": "9f20a14047779c0dce24d0141e6d226abae2573a9440c2fe3869aa5da1ac8479",
+        "declared_hash": "49a3876158df865965eb84a84fc30518665f5cf3dbda35858c99aa4c7f3ed814",
         "hash_reproducible": true,
         "name": "universal_negotiated_invocation_enforcement",
-        "node_hash": "1284cac1f64d95f55d3975ba9416618c17c787feedb7a89abc5ed7372dd6d414",
-        "payload_hash": "65f375768641f302d668e0c6d57ad791763c14ce4c64bffe5ad047913bd4bd64"
+        "node_hash": "a5b1918d8382dbf4b7b8203f3e816130d366ee9bd81e20ec903d0853aad87846",
+        "payload_hash": "8263af17553c7c81af796d3b987d7047b68c205d84158f677f039459461996cd"
       },
       {
         "artifact_type": "universal_procurement_regulatory_reliance_contract",
-        "declared_hash": "4b2570c7566c9de0d4f4659c299c49e0131801bb6fc6eaa1e6b4891f7e11b734",
+        "declared_hash": "ae393867ee51f1b34af2e966e004e132a41eb95435431e153bdd6714b5214900",
         "hash_reproducible": true,
         "name": "universal_procurement_regulatory_reliance_contract",
-        "node_hash": "aebfae1cd37544ebb66434fee9e01c24d092eae2dcf533df8d3232a838f1665a",
-        "payload_hash": "0252bc12292b83dbc773352b02ef60bb9333069dd81eb6e0497192630dfd6994"
+        "node_hash": "30c072a1c6ef711b8b293ea05f71f77c6b58d433887aff66ee48575f70e2e7b3",
+        "payload_hash": "aadf29157e63f11424ef5ae62ce59f47e87e8df7ba6c43e70913ef292c32133c"
       },
       {
         "artifact_type": "universal_production_invocation_admission",
-        "declared_hash": "462836f3a15c6aa931f8db1489e7f5530b918bd29da3c7dfdea75bdbb6204b94",
+        "declared_hash": "865aef83a7a3706419518f282573b89fd43b5fbbdb95bb0a0c661f0699fce251",
         "hash_reproducible": true,
         "name": "universal_production_invocation_admission",
-        "node_hash": "77e6acc1e92217292080434a85f0a9fc3a37125bd663054c9b617a220a930eab",
-        "payload_hash": "923bc340a27b70fcfe1768c5990c9e22ef9c0f275fea019a64281929dc991bf1"
+        "node_hash": "dd38fec89ab2a2984a5f6f965eb7e2bd5a1cbeb819a22890599921e822fb6d3a",
+        "payload_hash": "6063856965690489390bc2cf55ac101e93c685e37d068608eb8ba145dab6ad47"
       },
       {
         "artifact_type": "universal_provider_adapter_harness",
-        "declared_hash": "3f81a8ca9fd360e07b73d1ccea5107393ada720f5e8615ab5613047880735505",
+        "declared_hash": "73523571235064a1038b5b7f317b4a6ca00e32827ec8257536ae7d78e478e83b",
         "hash_reproducible": true,
         "name": "universal_provider_adapter_harness",
-        "node_hash": "1b71223d3e52e1f08b0b193e10dc4ac640a4107a0df2fe5053b739fc2d7da8ab",
-        "payload_hash": "e92aa957d32891b4824dae13b900932be85c4f7850bbea6885d93accc8b45753"
+        "node_hash": "1cce30ef7d9fa5d00165a50f9f80008264930a944cecaec5f6000e249df0d7b2",
+        "payload_hash": "754a4b82836a843c7648ac0964bf943fae23c74fc3f6cae92d53bcfb9c6b8d92"
       },
       {
         "artifact_type": "universal_provider_catalog_coverage_contract",
-        "declared_hash": "640cf2024452977623a68452d5cbf1c6db44c513a844088c238a355617a7912c",
+        "declared_hash": "90adc3c7b910d7e03a8fb0889c09d436e0ded6cad5947f0ca1bbe0d291d42360",
         "hash_reproducible": true,
         "name": "universal_provider_catalog_coverage_contract",
-        "node_hash": "4fc9cd69eb61cbb115c8a1419cc01a66bed4ef72481b75c74f370ff41ad49bab",
-        "payload_hash": "c215e628ee283004617e26470615f9f3f2923e3c342c773eda16b47de5a84b23"
+        "node_hash": "47e0d2dce9debfd3a7f2f5a8ae8ead666760c644924914b3c4aff9337074eaa5",
+        "payload_hash": "f51003621605d6bb01f8963e9ba999c333e28caf0a22c93c8d47f71310359de0"
       },
       {
         "artifact_type": "universal_provider_conformance_runner_receipt",
-        "declared_hash": "dc00d13dd8e140e3c8e4b2ed90ecc4098222e6ec27fa0c1189dba04d726a5ae3",
+        "declared_hash": "0cf260512812fcdd829e9f0999c0b3abf89d3ad9af5186a3db677a034ec122a1",
         "hash_reproducible": true,
         "name": "universal_provider_conformance_runner_receipt",
-        "node_hash": "601a1ad7de49e51465a1a2750af9c9a66c5daba4bc6f40ed1836b935ac224814",
-        "payload_hash": "ec8d1d885f08721b937084862e879071befd1ae5bd3bfd3c6ffdd2a2a5c12aed"
+        "node_hash": "c2d61b192f9584a86af0f35bad50db9e499d6cda1b4ffba797c758a459ff5188",
+        "payload_hash": "61ccac4fd816397dc7ffbee0fbfbfcbbf127585058c3be50df1783c5cd61722a"
       },
       {
         "artifact_type": "universal_provider_drift_sentinel",
-        "declared_hash": "5aee0258ef9334d228ed70557b54462ff99ff7a9cef7403ec251e89dd95875a5",
+        "declared_hash": "5b88a93d2b72e847960ec7ad728db9b6c8c0c990f5f89e81082316a187b88eb7",
         "hash_reproducible": true,
         "name": "universal_provider_drift_sentinel",
-        "node_hash": "51110218ef499bb8b62633c8f97984c45a3bb2ab3d9b3866dda4b6d498a6ae48",
-        "payload_hash": "f715bcd2937d4a903c9fae8d4ac44cfd9f90a119c5da48435f19519eedfef944"
+        "node_hash": "619740012817dda4c6a6ca3fd152598ef4fc2079f98bbf5142de6113ab02028e",
+        "payload_hash": "918180725965111aa77ddf0f1100e5ab8c3a60d2baa5a11896cfbcce1d8a7470"
       },
       {
         "artifact_type": "universal_provider_meter_normalization_contract",
-        "declared_hash": "86549d33c3fd0f300f3b9806a4276577f90d5b4d04c0c0cd77e2fb4f9fcb0e6c",
+        "declared_hash": "6f8296a81d16ae272da6b5e6f532f4d36256eb4accfe0c732ac37d405c65edc6",
         "hash_reproducible": true,
         "name": "universal_provider_meter_normalization_contract",
-        "node_hash": "a957ba20ddffbd9681dd66e9319bf5ffe94b554d2e2f3024255bd1580d6de820",
-        "payload_hash": "e2ba0e7c2f4fcdbc9a640fa3467314d47e280bbc3f8a2dd509e0255dc8f02b6b"
+        "node_hash": "99b1f87e2994a92b7660d6c163f3fc1474eb78a8c26cee3d5219a5960ad78c9f",
+        "payload_hash": "2a9e54a11530c511967611dbc4d3017949acb99d409d0dd3e178136a33180955"
       },
       {
         "artifact_type": "universal_provider_onboarding_migration_covenant",
-        "declared_hash": "7b79f3040b84c0ce0d74a5c5213b194ca665273bb75de3fa12aec74d84dbf20c",
+        "declared_hash": "fe2d4d045f2dbf0222303525354d906e6a52a367a912401e6042ac6352863fe3",
         "hash_reproducible": true,
         "name": "universal_provider_onboarding_migration_covenant",
-        "node_hash": "23c773df95e2e58cadecb578cf2af4c88dea4bc9533c038d32d0ab9b98ddf549",
-        "payload_hash": "6f5b11641970b47bc82e74cbd3c375a64a13a00e4609027df7d01dcfb8db9959"
+        "node_hash": "bde987b0460b119f02c00c8d22ed48c15f75e5382318fddf7a9340f431279843",
+        "payload_hash": "a32c5e957da1dca05a9a870f48769ca158b9463df028ff5ab19e050d88b44bd5"
       },
       {
         "artifact_type": "universal_provider_response_state_normalization_contract",
-        "declared_hash": "5c110c75acd13ec2d941581c1f1b22daa73866a08b576b85705fcc1b223a38a7",
+        "declared_hash": "7a50001f23eca3326587788ba2f12f13a20cde9153f8169a39b7ab6a0490343f",
         "hash_reproducible": true,
         "name": "universal_provider_response_state_normalization_contract",
-        "node_hash": "99aebe086c58f682a3a0cc1c5a080d9895ac88816592616e8cd30c1f7c32bd4a",
-        "payload_hash": "1a0dd5b9bb8fb14e88c11444aa3dc991f75c98bf3bb41ca4c7d267804dad1a47"
+        "node_hash": "e915d93de611aabbe0cdd6ca02051d788a3d681ca6e8e08e748f1966be08447e",
+        "payload_hash": "612a8817748c0454dde0343ca17018216cc2e2b075caab5955ad6be56dccabe1"
       },
       {
         "artifact_type": "universal_provider_wire_protocol",
@@ -48994,35 +48994,35 @@
       },
       {
         "artifact_type": "universal_runtime_route_binding_contract",
-        "declared_hash": "c5673c84959600b70f297e34c36c6a56da5eb75fe3cb6d0009a42ddc1c8bd8e0",
+        "declared_hash": "bc8648a79d54c83233e59776d6f0007cdb1e711bce4629a167d79328f6eaa3ee",
         "hash_reproducible": true,
         "name": "universal_runtime_route_binding_contract",
-        "node_hash": "03b930d1523fa869d468a0a00cf8aed333523fe93038a56d84410fa8003bb037",
-        "payload_hash": "3441af6a49607a36b6cadab32264c869e887e20d9f8b570a630d96a6b15191d1"
+        "node_hash": "afa65de6e35062a253c166b6271bb53738f6914c0d12382fe8002c6c07c46752",
+        "payload_hash": "dbc36bbde9da4f8389ecafae2beb80fc42e52d9573d11c706d95ce038b385823"
       },
       {
         "artifact_type": "universal_source_footer_enforcement_contract",
-        "declared_hash": "79dc52443dfad2fca3762e108466593e102465bbb732aa33a48f79f944a89a36",
+        "declared_hash": "4626e8063e85bdfff5d45240de0eb7f24473e7436e0f7f295936b778834d3c91",
         "hash_reproducible": true,
         "name": "universal_source_footer_enforcement_contract",
-        "node_hash": "e2665d2c2a824a8a5ad76d721049504af3187782c2e25c7a92908f3c43f27858",
-        "payload_hash": "56d70ee8c549fa3aed66e40fbf81f8a57b53dd3394d1c7eb9f08b5020f0bf06b"
+        "node_hash": "128bf868698e4ea789b855f36f8800a626046e35d4d78598e1e048e3e2b0dbc5",
+        "payload_hash": "2da0834aab52b49e0de75655ef1c6ec867064ab981136555f8031666b597d276"
       },
       {
         "artifact_type": "universal_source_grounded_response_receipt",
-        "declared_hash": "47202985f6bceb4246586014b565290bc3d7d404fc1834f03e05f2b4f1885300",
+        "declared_hash": "388da9423168fec1f2775ee17567d85668f4636325a9a93566bccdc95818b3f8",
         "hash_reproducible": true,
         "name": "universal_source_grounded_response_receipt",
-        "node_hash": "54e046b622d7513de0c7b0d8be76d11bae73ed0904946e50261bc3d002653c9f",
-        "payload_hash": "a71e5553f008b184f045bfeaaa9b31669fbb2066ad4aa707de11f95ad8de63b2"
+        "node_hash": "a016bae8c7aae1f2049f1b60c25570c1c3fb65bd99b018879f8d80a8d2f3b0e8",
+        "payload_hash": "3e4470e45ffdffb4764959fb422bff43d4fc519d9718b90bab13886721ee499c"
       },
       {
         "artifact_type": "universal_verified_source_footer_contract",
-        "declared_hash": "e1a4479162a33751e4e2c5a723ba37c299e96e80a66db74a6919a2407df3f4e1",
+        "declared_hash": "81f43bf11baceacf21eba347e9632b59b391495d4eb9f32b7fcca312eb6b3bb3",
         "hash_reproducible": true,
         "name": "universal_verified_source_footer_contract",
-        "node_hash": "4cb6a57503a07b9054d106714f52e383e4d9f4bd78490d991482a8b0a37b98ab",
-        "payload_hash": "d4c689ac77e2456c65ccdc2a19074e52838cda1d52c2375e8332fcef5e5a20cd"
+        "node_hash": "1d4674a30f3a98a15cb4604e519db73db35ca817e319576a8acbdd3a3b6f8c34",
+        "payload_hash": "b881ac2a43ac9389c48c0d0073539ce07e638d3e85b734e59cd377482f1169b2"
       },
       {
         "artifact_type": "warranted_source_footer",
@@ -49044,10 +49044,10 @@
       "topological_order_covers_all_artifacts": true
     },
     "commitments": {
-      "artifact_root": "2a546724c0dc45a2f480884ed6c7338d3fe79ac8e036ca73b786f26cba2182e5",
+      "artifact_root": "90d87a645f748595e21413d5aad148dc1b543cff07980c28b60b69fa3ee972ec",
       "dependency_root": "3c25ef2174022b2fc8988f8148679adb01eb0e70f23fdbefd7fea46efa45bcfa",
       "replay_order_hash": "fb3a011c35bfe13f2ece8fc96765e8b23de1e52fd970dd1453a1ea4834e9a2b1",
-      "replay_step_root": "065d55fde272dc10dd3b81eddc40faa9f4b631fd9b999ed1c517769086f5e983",
+      "replay_step_root": "c7227cd92e479cb263baca91715a55d80034fe6f24f82c14c44a311e49a50764",
       "schema": "docs/schemas/proof_dependency_graph.schema.json"
     },
     "created_at": "2026-06-03T00:00:00Z",
@@ -53013,7 +53013,7 @@
         "reason": "default_verifier_prerequisite"
       }
     ],
-    "graph_hash": "e47ca2573b46f6e8451dcdb236ae88880b5d99728a8a2f67d84fd929fd2476c5",
+    "graph_hash": "d5afe72a4436c8196a4c892cac321f6b3c98ff0a38e51682f151d6790dc0f1f8",
     "graph_profile": {
       "artifact_payloads_redacted": true,
       "publication_edges_are_commitments_not_replay_prerequisites": true,
@@ -53102,73 +53102,73 @@
       {
         "artifact": "assurance_bundle",
         "artifact_type": "assurance_bundle",
-        "declared_hash": "aa954ba4583d5ae99dc1221a1aacc738e3b2fa6aa2cfc422a5864b0a7a63aebc",
-        "payload_hash": "27730d075b3e8e367a1b8ffaffefe0dbb90dfe4437edcdddddee30204e4844d6",
+        "declared_hash": "c6172be428a35a27cf1c67b05535bbad343bddb4a045175124a3cc1061819c29",
+        "payload_hash": "2d433d24fbeee8a52944f80c2906ae34b7530ac7c4b5c6366af949971d5f3600",
         "step": 1,
-        "step_hash": "a31103597da07791f1a8d67f5a4e7b14f2909a44994aa761ac8d19f6f865fbfc",
+        "step_hash": "0ea221c299c47a29631f9d8e8690c0a6da883a5f84ad6b21b34cc1509f2ca314",
         "verifier_command": "verify-assurance-bundle"
       },
       {
         "artifact": "certification_report",
         "artifact_type": "certification_report",
-        "declared_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
-        "payload_hash": "4a12f517abe36819cc6a13794802692520ab74cccf5310c9ceff1039f8631457",
+        "declared_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
+        "payload_hash": "95cfce03c9d271d6eabd68322adbf8907bbb9a37bb73f650104fdee2da0e2359",
         "step": 2,
-        "step_hash": "9c5c7227681119a03b451828633b7b02c64502839eb20d0c8cc4898bd8d073bd",
+        "step_hash": "dbca9be5cb1770aaba45c169cc4585bf358b381837dbe848b19ac4d6121362d8",
         "verifier_command": "verify-certification-report"
       },
       {
         "artifact": "certification_attestation",
         "artifact_type": "certification_attestation",
-        "declared_hash": "2fd4aae21c12c56ced928785ec8acc7140fdedbe0fcd3b2f5a4c784d304d38dd",
-        "payload_hash": "632375497adb6d7a162ec7e516e87ff74c54161f1136f73c79bbf08a63616b66",
+        "declared_hash": "7af5cece554505454b92a50082d9035d011d1075eceab8f5790403348c74a6e0",
+        "payload_hash": "f42a6e4e14850baef600a6d25f3cff2cb29694e3b94662492e8dec612c83cfac",
         "step": 3,
-        "step_hash": "8d883622498fa0b3bbe04ebc7e01178b5a158eec905740e72081d8159cc5cc0f",
+        "step_hash": "9e5857c3b69ce5d8ca2e97d4347fe40fc6320f474dc892a85002a13e8aa97ced",
         "verifier_command": "verify-certification-attestation"
       },
       {
         "artifact": "provider_attribution_card",
         "artifact_type": "provider_attribution_card",
-        "declared_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
-        "payload_hash": "8bedb8e9d9503710e47e489056faa897e011ae3c82340a06d0e7864360c1d851",
+        "declared_hash": "facad8d425e0bb312b6736d4351f321fcfd3643584f09b37dec4ee2b2c83ec51",
+        "payload_hash": "fb2f7e122d855d9a8d6a757d04625d6fa6dbe28c71d749037e9d6aa71314ca38",
         "step": 4,
-        "step_hash": "de6efb81cd0fe6c68152b4c4495f97ae4efe37216698738e8bcee1dc3e683e17",
+        "step_hash": "247fb1ec0341fd6ba74bed70f4c85c8ca1858a41b358b5482e4254d177adda32",
         "verifier_command": "verify-provider-attribution-card"
       },
       {
         "artifact": "response_envelope",
         "artifact_type": "response_envelope",
-        "declared_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
-        "payload_hash": "e612860a96f85102d90778f4d1a640c244d97f187ef6a39971ea231f326b9a98",
+        "declared_hash": "1bc14c301e297d81bc848a5682a4921c8d5e372096d7a0297d9994eeaa5fddeb",
+        "payload_hash": "598f1774853803607bcee78ea0dc42170575bcf2bac7d4c17107d25d11d222f9",
         "step": 5,
-        "step_hash": "3d1c68547746f65540f8aa229268b67b290ddbd46aedea43706cc29022813c82",
+        "step_hash": "ecc6501f97e604ec09c0a7b2be91ebd5a53192fcee5bfc5114e9805a42149635",
         "verifier_command": "verify-response-envelope"
       },
       {
         "artifact": "integration_profile",
         "artifact_type": "integration_profile",
-        "declared_hash": "a669a7c49b9ccbdc94e1fe218a4b17f6129d9f6a1709f7d8315f73a1a2990647",
-        "payload_hash": "cc7f048c5cf03a9e867b6db8266a750005da3f87c3a3dea966dd5cbc46673434",
+        "declared_hash": "5c2c2e5a3a9672c9c9f54cd4184d0f6abe8d5ade50e539efe762affb45b35b40",
+        "payload_hash": "77f33400128680425dd9ca7d093627d712e04ed45a826be081787dd7adbf8eac",
         "step": 6,
-        "step_hash": "c6f8d5524d3a9bf31fb4f6cc88070c3cb12603852bfa308260e1cca24098329a",
+        "step_hash": "4ecc45467a7b8b129084725910792f5a06a87202643b1214115fb10d7d9c92f9",
         "verifier_command": "verify-integration-profile"
       },
       {
         "artifact": "discovery_manifest",
         "artifact_type": "discovery_manifest",
-        "declared_hash": "fb953c8d56c4298e66d51b310387f5235a4f2a1f36b4d2c54d1b609c0092c5cd",
-        "payload_hash": "92ac1aea74e800d8a77c8769f04fb4972e474220c98fc226e815cc4bfbf2f76a",
+        "declared_hash": "089f6bcc1854e6032f63faed3cff29e32272cba747f089b5aacae71f67889e61",
+        "payload_hash": "348e4f89c6ef491d41873a307de399acd70bd8d2d4dfa9dc349a1ae413225b83",
         "step": 7,
-        "step_hash": "dc71df5207b401013c9bc971fcacd30948defeae6ef300ade5916793707a5e4d",
+        "step_hash": "a49f3677ababf3910e4da30160292d5e0f541404a90a5353a03cf1df019a68e2",
         "verifier_command": "verify-discovery-manifest"
       },
       {
         "artifact": "proof_carrying_response",
         "artifact_type": "proof_carrying_response",
-        "declared_hash": "f4b075b6a220ab9ac5de596609eb329646ab1dd9215b5428fe68cd1a4f1c4d6a",
-        "payload_hash": "21303e723377dd1c38cc685de525580e09201ef85a2ed9c945df6f3ff530b672",
+        "declared_hash": "93121a54bd7418c062be6f4e4a56008f53500ffdda7f6be64ef9b4aeda6f4c2c",
+        "payload_hash": "8a6fd486ed8e26396b43b6da0289a1135432c19b5b0a3c30260b6ad4db8c172b",
         "step": 8,
-        "step_hash": "1b5bfcd8083aeec9bc29ead1fe4675cfe9c5922e154e2146df44b80d7c15255e",
+        "step_hash": "eab5fd0d71780542ee1150784df81ba70d30e2e0bdd544977ccf05129f3e827c",
         "verifier_command": "verify-proof-carrying-response"
       },
       {
@@ -53192,55 +53192,55 @@
       {
         "artifact": "serving_gateway_report",
         "artifact_type": "serving_gateway_report",
-        "declared_hash": "521bba350ee4ad7fff2191c045ac6e3e8cef390744b326b83f2c99a8f5b64d29",
-        "payload_hash": "bcbdfc09e154af09d0dd67973c76a2bdf3429fe3c387aad7e78f5d4c169b6f8a",
+        "declared_hash": "c1f3fe97d265a9f2348c37770b58249308d6655d4e257b29c865caaa9428b05c",
+        "payload_hash": "5e475caed9e77141bf7741e1ac73e43efc9545cf1541b1ead36057dd5a8ab4c9",
         "step": 11,
-        "step_hash": "8976acaedceca5354f2c81c291ae715bfa3dde7a607040f668f5099c3ee2d9cf",
+        "step_hash": "3f29bda74607cd64e21109e59559a9314a13a4ad0612d6f6d24165edacd9823f",
         "verifier_command": "verify-serving-gateway-report"
       },
       {
         "artifact": "conversation_attribution_ledger",
         "artifact_type": "conversation_attribution_ledger",
-        "declared_hash": "3c9d8a353c71ae333ff2d0addc25d9b7a4c2728b3875e977275dc5c646e8d058",
-        "payload_hash": "0393e309e1e060f6974adca3bd12ac60995d620438ca8d99b32a7acfb48f84cd",
+        "declared_hash": "45b500690f1c0bc551edd2bf1241acb17cdf125701ed1fc48f1decef859af036",
+        "payload_hash": "6f268d5735cae431cd51bbd98339f27371e9d23b9b14a03a7d8bb29032c6f42a",
         "step": 12,
-        "step_hash": "e0d437894c25fe857e72437f270fde1f0a67851676b252fe2f653407dfbcc073",
+        "step_hash": "db2e8f71f08ab67b9d41868e1a5b3f352c7380abf220002cdeb2e3f3749230cb",
         "verifier_command": "verify-conversation-attribution-ledger"
       },
       {
         "artifact": "agent_tool_attribution_ledger",
         "artifact_type": "agent_tool_attribution_ledger",
-        "declared_hash": "bc022ed531102d3d9b98c72ee9ee49144e417cebb3e026d521ea52c59c24a990",
-        "payload_hash": "0f2c7fcd462cf4f3aab97144c4a9e26563cf078f262db6029b32f871e20e2225",
+        "declared_hash": "a8e0be08a45af900d897d0c9ff075196db72f33f4f787eb185913c59fd0f4058",
+        "payload_hash": "fee293f7d959d2f4966a998e2bc4fdd2302cab88dd4117fb4e9b6478a40f6093",
         "step": 13,
-        "step_hash": "07b87cc034ef192a8c91c025ef95628b82cb5a313750f03bf7dee7b626cc8b10",
+        "step_hash": "5b26dbd086b94b14dbe0669946be1c288edc01c89b1d432e55970ddd9ecae58e",
         "verifier_command": "verify-agent-tool-attribution-ledger"
       },
       {
         "artifact": "source_footer_delivery",
         "artifact_type": "source_footer_delivery",
-        "declared_hash": "d950a4b0234a8d58bad87416e7c58a72453b6a0c7e27f48a09bb0913877b77f6",
-        "payload_hash": "d950a4b0234a8d58bad87416e7c58a72453b6a0c7e27f48a09bb0913877b77f6",
+        "declared_hash": "5634de4f5491a758d5f86467579bf4b26609853dac6b827cb7c71461c224e0b1",
+        "payload_hash": "5634de4f5491a758d5f86467579bf4b26609853dac6b827cb7c71461c224e0b1",
         "step": 14,
-        "step_hash": "2c9553b68aaa1cafd301fbbb02d192ff6d997aacaa717174cd19dbdfa5492ebc",
+        "step_hash": "fc5f477bd3a0085d7758cbda0e9c9445c4c5a76116986bb33b3bab7aabe83d00",
         "verifier_command": "verify-source-footer-delivery"
       },
       {
         "artifact": "foundation_api_profile",
         "artifact_type": "foundation_api_profile",
-        "declared_hash": "d2a8198fd0e30574ca2be59bd82b1495dbf494a274906e80dbde54d311ded09a",
-        "payload_hash": "9300579971510759e01342a806e7e339304ea46de6b958ae60fd5e29fe69669b",
+        "declared_hash": "bf41e0abb8bee86f15710350009aff753100a712521dd19608903c0085ef67ae",
+        "payload_hash": "af833aacd0dd360dbeb1d5f04bce107993723a2b1018d2036e0e7637e34874e5",
         "step": 15,
-        "step_hash": "5ff00dd0ac0440a421797e31a250ffb53071c2677bf8b951fe6e276c09c32ba7",
+        "step_hash": "a1b3bb9345217d4271cbb83eda00fdc2ffe7b25cdf4777bd9541a0f731982d9a",
         "verifier_command": "verify-foundation-api-profile"
       },
       {
         "artifact": "client_attribution_enforcement",
         "artifact_type": "client_attribution_enforcement",
-        "declared_hash": "cb547c6635eba68b63cc23e3e9ae3a9ce621e7e04e5e9955424cfe9068c11b1f",
-        "payload_hash": "cb547c6635eba68b63cc23e3e9ae3a9ce621e7e04e5e9955424cfe9068c11b1f",
+        "declared_hash": "b074361ef7002f0e52048309675dfec2aa24c40bb4cd80d7d7207503102a9aec",
+        "payload_hash": "b074361ef7002f0e52048309675dfec2aa24c40bb4cd80d7d7207503102a9aec",
         "step": 16,
-        "step_hash": "5f72297b7dfb2fe193acc02b9a37fcee7226ebb1b49c3e29ac617cdcc6ba567b",
+        "step_hash": "434b9387c6257a6e0bed5584c83d5c3ca01bca870b15b4fd0258599d3f2a58ce",
         "verifier_command": "verify-client-attribution-enforcement"
       },
       {
@@ -53471,224 +53471,224 @@
       {
         "artifact": "universal_provider_adapter_harness",
         "artifact_type": "universal_provider_adapter_harness",
-        "declared_hash": "3f81a8ca9fd360e07b73d1ccea5107393ada720f5e8615ab5613047880735505",
-        "payload_hash": "e92aa957d32891b4824dae13b900932be85c4f7850bbea6885d93accc8b45753",
+        "declared_hash": "73523571235064a1038b5b7f317b4a6ca00e32827ec8257536ae7d78e478e83b",
+        "payload_hash": "754a4b82836a843c7648ac0964bf943fae23c74fc3f6cae92d53bcfb9c6b8d92",
         "step": 42,
-        "step_hash": "af752f725b4e898d2d2a737079b7b013c48244e4d7732520ab3e9338aad277ba",
+        "step_hash": "9f4c3caa1cf9cb2e3c506f804e7de71a0a0668f90361171fe8e2f158a70b66cb",
         "verifier_command": "verify-universal-provider-adapter-harness"
       },
       {
         "artifact": "universal_provider_drift_sentinel",
         "artifact_type": "universal_provider_drift_sentinel",
-        "declared_hash": "5aee0258ef9334d228ed70557b54462ff99ff7a9cef7403ec251e89dd95875a5",
-        "payload_hash": "f715bcd2937d4a903c9fae8d4ac44cfd9f90a119c5da48435f19519eedfef944",
+        "declared_hash": "5b88a93d2b72e847960ec7ad728db9b6c8c0c990f5f89e81082316a187b88eb7",
+        "payload_hash": "918180725965111aa77ddf0f1100e5ab8c3a60d2baa5a11896cfbcce1d8a7470",
         "step": 43,
-        "step_hash": "5268de2f8c6dcea6a4a160b31b1786fe5259eb52806cc0d85097f376ca6b1e05",
+        "step_hash": "ca8e04084a8b855b61d45cd5610dd23ad9db31acaea32d00e2c8397a39aca99f",
         "verifier_command": "verify-universal-provider-drift-sentinel"
       },
       {
         "artifact": "universal_attribution_negotiation_handshake",
         "artifact_type": "universal_attribution_negotiation_handshake",
-        "declared_hash": "69bfb81e0fe0db245a6b666bb90b49521bcb0855806dfd5d38b4dfab8febb2e4",
-        "payload_hash": "d77516fc27e0197c9b200ce261750909b10edf50cbb927de9c59feed059f15bd",
+        "declared_hash": "f839e0aa234425b88165f2c770a88ed9a8cd55a7ed61dbd15b7e144c9cb029b5",
+        "payload_hash": "1fb99e3729544c5951c8a09aa59dfe095d9e980e3e0f228c1d82cf9f7a934bee",
         "step": 44,
-        "step_hash": "ee9ed259f6e798683afd9029373942b9cbfb113c733f16b352c2c10fecb696b5",
+        "step_hash": "7f46dea320c0966fdd3bb962075b4466f71d1a7aae95faac1d953bfe8d55c146",
         "verifier_command": "verify-universal-attribution-negotiation-handshake"
       },
       {
         "artifact": "universal_negotiated_invocation_enforcement",
         "artifact_type": "universal_negotiated_invocation_enforcement",
-        "declared_hash": "9f20a14047779c0dce24d0141e6d226abae2573a9440c2fe3869aa5da1ac8479",
-        "payload_hash": "65f375768641f302d668e0c6d57ad791763c14ce4c64bffe5ad047913bd4bd64",
+        "declared_hash": "49a3876158df865965eb84a84fc30518665f5cf3dbda35858c99aa4c7f3ed814",
+        "payload_hash": "8263af17553c7c81af796d3b987d7047b68c205d84158f677f039459461996cd",
         "step": 45,
-        "step_hash": "d1d78526c1620ee11b386b8c541942601ce2e388eec87e7df687adce2ea5a43c",
+        "step_hash": "b952b48a4178bbdbe5c5cf9585b10f83330ebe9b710730dfe1bce8fb4f620ff4",
         "verifier_command": "verify-universal-negotiated-invocation-enforcement"
       },
       {
         "artifact": "universal_certification_trust_federation",
         "artifact_type": "universal_certification_trust_federation",
-        "declared_hash": "b4a339bb8b9beaaf8c652b90460cbedd9128c24cc24ba8dd7ab34652a294dc13",
-        "payload_hash": "c6752f51c8c4229d14e871b2bd3b60df1d1b62c1e5ba56cddaaaa3595fe6defc",
+        "declared_hash": "7b065388094692089b79a7d791b291b34f3c5cae49c59889ad22b96dc1de15f6",
+        "payload_hash": "854586307a1850443f094db5aaf62342abac295f5b8fdf4b9245538880e31d44",
         "step": 46,
-        "step_hash": "494d4ce9a4507f338136177e5827e5cd855b3b16b5cd8046493ed9eed6af09a9",
+        "step_hash": "eaf75d6d31dd0c4359e4e8bf8bcdf13667464558ab6406d811feaf009d022a80",
         "verifier_command": "verify-universal-certification-trust-federation"
       },
       {
         "artifact": "universal_foundation_provider_binding_matrix",
         "artifact_type": "universal_foundation_provider_binding_matrix",
-        "declared_hash": "77d28bffa711dd5e4a43039d15708ef18dafb6ece7f02a4267494556fbadbdd3",
-        "payload_hash": "ad37d14d08d2a81556d5e978ed1f4905b2eacdd26b73ac9924356851a6305c62",
+        "declared_hash": "49e9e7301e9545d3c93706ac12e0153c064265ea689d95053c3354d3d527ceab",
+        "payload_hash": "3e68cb8f934c449a3b799298729cfccb73759213eff9215d8ab4286aee0fd579",
         "step": 47,
-        "step_hash": "809e8930dfe05de269ce39b11edfd49a1fa7390b0600a875057bf710c51d777e",
+        "step_hash": "3b4026fd311329202dd90c808892ae0c109ec39487f8314ce2bcb4a1c5f075b3",
         "verifier_command": "verify-universal-foundation-provider-binding-matrix"
       },
       {
         "artifact": "universal_provider_conformance_runner_receipt",
         "artifact_type": "universal_provider_conformance_runner_receipt",
-        "declared_hash": "dc00d13dd8e140e3c8e4b2ed90ecc4098222e6ec27fa0c1189dba04d726a5ae3",
-        "payload_hash": "ec8d1d885f08721b937084862e879071befd1ae5bd3bfd3c6ffdd2a2a5c12aed",
+        "declared_hash": "0cf260512812fcdd829e9f0999c0b3abf89d3ad9af5186a3db677a034ec122a1",
+        "payload_hash": "61ccac4fd816397dc7ffbee0fbfbfcbbf127585058c3be50df1783c5cd61722a",
         "step": 48,
-        "step_hash": "dbd817e5b8a44a149bc0c1e74661854396d48d5aa40b83e4fa8c58e8e9e7357d",
+        "step_hash": "f369a2d6c5bbd46c20589cb6bd26b649b102ee9223556519d63357d71688e56f",
         "verifier_command": "verify-universal-provider-conformance-runner-receipt"
       },
       {
         "artifact": "universal_production_invocation_admission",
         "artifact_type": "universal_production_invocation_admission",
-        "declared_hash": "462836f3a15c6aa931f8db1489e7f5530b918bd29da3c7dfdea75bdbb6204b94",
-        "payload_hash": "923bc340a27b70fcfe1768c5990c9e22ef9c0f275fea019a64281929dc991bf1",
+        "declared_hash": "865aef83a7a3706419518f282573b89fd43b5fbbdb95bb0a0c661f0699fce251",
+        "payload_hash": "6063856965690489390bc2cf55ac101e93c685e37d068608eb8ba145dab6ad47",
         "step": 49,
-        "step_hash": "bfed6b06d215ebd6c02d14a9a354e99184c3a2958135ad3fc0b4c91c169876df",
+        "step_hash": "74a79c06b782f405f0b9ec0aa076582b11716868e3e31fd8a4b58e41c98c6582",
         "verifier_command": "verify-universal-production-invocation-admission"
       },
       {
         "artifact": "universal_source_grounded_response_receipt",
         "artifact_type": "universal_source_grounded_response_receipt",
-        "declared_hash": "47202985f6bceb4246586014b565290bc3d7d404fc1834f03e05f2b4f1885300",
-        "payload_hash": "a71e5553f008b184f045bfeaaa9b31669fbb2066ad4aa707de11f95ad8de63b2",
+        "declared_hash": "388da9423168fec1f2775ee17567d85668f4636325a9a93566bccdc95818b3f8",
+        "payload_hash": "3e4470e45ffdffb4764959fb422bff43d4fc519d9718b90bab13886721ee499c",
         "step": 50,
-        "step_hash": "3c03aeb48254577254b00e6beaed8a51537cdacc224512bba396569176646abe",
+        "step_hash": "9bbfa1ca22a195d63ec738baf6c2584f0fa771f1f1b1394935cea65e55d965f6",
         "verifier_command": "verify-universal-source-grounded-response-receipt"
       },
       {
         "artifact": "universal_distribution_reliance_passport",
         "artifact_type": "universal_distribution_reliance_passport",
-        "declared_hash": "09d2c9084bf2026b96298a3aecb774975c1fe3308bdd476fa93265c8c304a4b4",
-        "payload_hash": "1ada394e3120c9cc8ff38dcbbee210ab44db4f7a66cdf6e4d5230d6f0ac0c457",
+        "declared_hash": "ec0ec82c6fcaccbee8640b335f7fbcba7e83bd988337b5521f333279df4d0b83",
+        "payload_hash": "142c64b96ab82f65eaabf3c111bf15ecdeb8e7ff75ea6e5277792d95ba31886d",
         "step": 51,
-        "step_hash": "d40d3ce90a3041839b5a0f063212cd911fd6a0c102e8bf8acd5fb05d5f49dcbc",
+        "step_hash": "cb4332ad1aabfb48fad44e4f9a44dae1c89dc161db15ee2b0b8cbb7a8ceec2a6",
         "verifier_command": "verify-universal-distribution-reliance-passport"
       },
       {
         "artifact": "universal_adversarial_provenance_quorum",
         "artifact_type": "universal_adversarial_provenance_quorum",
-        "declared_hash": "1db69e10453e617d9b52b8fdff1fb806a30e12a3c6a921dc1b02f054248cb714",
-        "payload_hash": "833158734b67e910caa984d2929edc29be523d012bab3bd63fde51e63e162d80",
+        "declared_hash": "c876d5cd9a55de09b41314c26cbc63890ad0cd263d679d7580647557c37af026",
+        "payload_hash": "b0a5f958c44067a5bffcc9c35ec529d83b1349d6d94314dec46bbe0267404300",
         "step": 52,
-        "step_hash": "8d40cf239b6b1b212b090c82205e1b0e19f32d7909ea17558ec7b49cc0280bba",
+        "step_hash": "00622203ab4cd70a057e58d7ea958be330c7ecf59833cf2f21708dde1822a348",
         "verifier_command": "verify-universal-adversarial-provenance-quorum"
       },
       {
         "artifact": "universal_procurement_regulatory_reliance_contract",
         "artifact_type": "universal_procurement_regulatory_reliance_contract",
-        "declared_hash": "4b2570c7566c9de0d4f4659c299c49e0131801bb6fc6eaa1e6b4891f7e11b734",
-        "payload_hash": "0252bc12292b83dbc773352b02ef60bb9333069dd81eb6e0497192630dfd6994",
+        "declared_hash": "ae393867ee51f1b34af2e966e004e132a41eb95435431e153bdd6714b5214900",
+        "payload_hash": "aadf29157e63f11424ef5ae62ce59f47e87e8df7ba6c43e70913ef292c32133c",
         "step": 53,
-        "step_hash": "18f9b5ab7a5a47364e325594b5f52c761630a1a38c5a286115d640bc47c06128",
+        "step_hash": "1795d356aaf55b5b4735f2ed40b880814cde87adfb185db3d49ea0a72cd89430",
         "verifier_command": "verify-universal-procurement-regulatory-reliance-contract"
       },
       {
         "artifact": "universal_provider_onboarding_migration_covenant",
         "artifact_type": "universal_provider_onboarding_migration_covenant",
-        "declared_hash": "7b79f3040b84c0ce0d74a5c5213b194ca665273bb75de3fa12aec74d84dbf20c",
-        "payload_hash": "6f5b11641970b47bc82e74cbd3c375a64a13a00e4609027df7d01dcfb8db9959",
+        "declared_hash": "fe2d4d045f2dbf0222303525354d906e6a52a367a912401e6042ac6352863fe3",
+        "payload_hash": "a32c5e957da1dca05a9a870f48769ca158b9463df028ff5ab19e050d88b44bd5",
         "step": 54,
-        "step_hash": "d2b2c0d206a9b530e2ef0239b8b19eb828ba69ed9e1866b9292795e177dd40ed",
+        "step_hash": "4a279573a2bb0f60f0f73a989be3e142b65267abbd1ef2135bcb6bbe1b6a76ce",
         "verifier_command": "verify-universal-provider-onboarding-migration-covenant"
       },
       {
         "artifact": "universal_model_provider_registry",
         "artifact_type": "universal_model_provider_registry",
-        "declared_hash": "73235e0e4018d14f71458d6c815e050622a1c2ae2ad612e4564413634dd2cf8e",
-        "payload_hash": "1270d23deb2e41d2a51413cf9e3003fd995b11ef45e002c289536c36cbf355a3",
+        "declared_hash": "11a3f3ae525f13e8e72f8a613d29c2d674fe2ea99eaa91500cab3fd635c641d5",
+        "payload_hash": "bca2b20273545a31dd599342a4121da62eec716079476b3f9a9f8ddd6986f044",
         "step": 55,
-        "step_hash": "156775f49d8cfbea2d6f5664a4f07ac9c2094c37fe1670863f2d0aae2100ef5e",
+        "step_hash": "6a29f44e5b0caf64a160c5f50455ce81daa029e193e4d8915e1314da48a72a28",
         "verifier_command": "verify-universal-model-provider-registry"
       },
       {
         "artifact": "universal_source_footer_enforcement_contract",
         "artifact_type": "universal_source_footer_enforcement_contract",
-        "declared_hash": "79dc52443dfad2fca3762e108466593e102465bbb732aa33a48f79f944a89a36",
-        "payload_hash": "56d70ee8c549fa3aed66e40fbf81f8a57b53dd3394d1c7eb9f08b5020f0bf06b",
+        "declared_hash": "4626e8063e85bdfff5d45240de0eb7f24473e7436e0f7f295936b778834d3c91",
+        "payload_hash": "2da0834aab52b49e0de75655ef1c6ec867064ab981136555f8031666b597d276",
         "step": 56,
-        "step_hash": "1fd73092c3536e60c300cb9bcc31280246af33f67389cbda07869cb1d6542e7a",
+        "step_hash": "69d337d8fb0a0b8ac9daabda7bf40b82bc38829f7bc492a82ae1a963c9ee3809",
         "verifier_command": "verify-universal-source-footer-enforcement-contract"
       },
       {
         "artifact": "universal_provider_catalog_coverage_contract",
         "artifact_type": "universal_provider_catalog_coverage_contract",
-        "declared_hash": "640cf2024452977623a68452d5cbf1c6db44c513a844088c238a355617a7912c",
-        "payload_hash": "c215e628ee283004617e26470615f9f3f2923e3c342c773eda16b47de5a84b23",
+        "declared_hash": "90adc3c7b910d7e03a8fb0889c09d436e0ded6cad5947f0ca1bbe0d291d42360",
+        "payload_hash": "f51003621605d6bb01f8963e9ba999c333e28caf0a22c93c8d47f71310359de0",
         "step": 57,
-        "step_hash": "8d84140c2b7672f40ece56415fbd6796bcbcc8a82e94a35ccc13593d9621c847",
+        "step_hash": "1c0e76fa5c1676a833101eedec5f460faa427a62d31e6733e7bfe780f045fe32",
         "verifier_command": "verify-universal-provider-catalog-coverage-contract"
       },
       {
         "artifact": "universal_runtime_route_binding_contract",
         "artifact_type": "universal_runtime_route_binding_contract",
-        "declared_hash": "c5673c84959600b70f297e34c36c6a56da5eb75fe3cb6d0009a42ddc1c8bd8e0",
-        "payload_hash": "3441af6a49607a36b6cadab32264c869e887e20d9f8b570a630d96a6b15191d1",
+        "declared_hash": "bc8648a79d54c83233e59776d6f0007cdb1e711bce4629a167d79328f6eaa3ee",
+        "payload_hash": "dbc36bbde9da4f8389ecafae2beb80fc42e52d9573d11c706d95ce038b385823",
         "step": 58,
-        "step_hash": "0845d08859ad9e056d6981948d637bbeefd70be105db1b14cf0d2cce9eb96cdd",
+        "step_hash": "eaff233dfde3acea5b87e06fc142a87e493f3498fe031d64246276f6e968c0a5",
         "verifier_command": "verify-universal-runtime-route-binding-contract"
       },
       {
         "artifact": "universal_verified_source_footer_contract",
         "artifact_type": "universal_verified_source_footer_contract",
-        "declared_hash": "e1a4479162a33751e4e2c5a723ba37c299e96e80a66db74a6919a2407df3f4e1",
-        "payload_hash": "d4c689ac77e2456c65ccdc2a19074e52838cda1d52c2375e8332fcef5e5a20cd",
+        "declared_hash": "81f43bf11baceacf21eba347e9632b59b391495d4eb9f32b7fcca312eb6b3bb3",
+        "payload_hash": "b881ac2a43ac9389c48c0d0073539ce07e638d3e85b734e59cd377482f1169b2",
         "step": 59,
-        "step_hash": "dce0a120fe281cdcd362475a0a47d0e0213ff0adc3de5b75b8c293cc08045e91",
+        "step_hash": "630c8930e71f68ab864ec7a4b80dfdc8ede1ec59b4c7c8769e266c92a37f1d36",
         "verifier_command": "verify-universal-verified-source-footer-contract"
       },
       {
         "artifact": "universal_model_capability_coverage_contract",
         "artifact_type": "universal_model_capability_coverage_contract",
-        "declared_hash": "13f737689f94d0d2b74a361a4e1f9c5692b5b1143a9d97591fd22e29921d6122",
-        "payload_hash": "948df5f79ab6a709a6e42f461352c2ace207133f6bb3c1b553905158c3063f80",
+        "declared_hash": "39362ade423f2fac662497c2024e875a2b273e791d82703821957a1d5b8001fa",
+        "payload_hash": "885440c9658a198d46c4dca397e6073e89f45b00f14a1d090ade10d33c97f1df",
         "step": 60,
-        "step_hash": "cb3495d92a8e92804f1e774089e445382e9be2e0f146ca975e37f933c2ff7058",
+        "step_hash": "46e5d6f157e9942cacac976b559077393ce8e7b4158efcae2f3ac3d77b1aaff4",
         "verifier_command": "verify-universal-model-capability-coverage-contract"
       },
       {
         "artifact": "universal_live_capability_discovery_contract",
         "artifact_type": "universal_live_capability_discovery_contract",
-        "declared_hash": "54622d0eec86ba5f6d4c1600295a7b765ae7e45ef09b5d0dd618e9d1f33d5551",
-        "payload_hash": "5b83bd2135abb4673c0150fcf3d44ede8a3caf53fc794eef0038f832a491be83",
+        "declared_hash": "08c839ec9441ab0a187b3db3901cab98b50ea09dc336fca114ab018e94b87568",
+        "payload_hash": "f68229d2f3f6c31293c6e5a96520c86b2aadde9152d91f3e262b7af4b81721f2",
         "step": 61,
-        "step_hash": "beeec6f43addfaf4253d929c3eb09fdfbdc0545ab683eee6bea7b6d17f3a19bc",
+        "step_hash": "0c4ca61b7b793274304408efd89802a74a9b8c6b604536e19e88c912cb28581e",
         "verifier_command": "verify-universal-live-capability-discovery-contract"
       },
       {
         "artifact": "universal_native_source_annotation_contract",
         "artifact_type": "universal_native_source_annotation_contract",
-        "declared_hash": "4ee23709ebbbd9f3f8f065e5e841c31d985eba6b20247716e811a2ca9478f723",
-        "payload_hash": "6b225952dec3dcd6feb4974d1eae901c702b263ca1d8dff891a5e71cfd726324",
+        "declared_hash": "b610e55e53d67e561ba4254e48cf4a085e6bca9f953e6b49d592e07e15194709",
+        "payload_hash": "20ab3748e6b473f3f512b57e45bab506aba421a39dfdafb6b60665f52d995c5d",
         "step": 62,
-        "step_hash": "4f695a1e8da90e35ccfebeb9d1145fa9d9f8ebae386419ebd9b39ebca07744c6",
+        "step_hash": "d1b7522587987e42db33129603c606a5017fa76731f4d0e25a4eb8f95bac4bae",
         "verifier_command": "verify-universal-native-source-annotation-contract"
       },
       {
         "artifact": "universal_claim_evidence_footer_verification_contract",
         "artifact_type": "universal_claim_evidence_footer_verification_contract",
-        "declared_hash": "a7ca22a88390fac100da11490bb2c36f1aa6b3e491bc4b0ce75eb3b46afc147d",
-        "payload_hash": "c8fceac233a3cafefa3bf6484d2c0dc67f3dcfd49e4c6fefc2a986d00cba199d",
+        "declared_hash": "2ce591d1900e1164bb25a8bdd2755f08eee74845c0b030e26195b1e550b1ccc0",
+        "payload_hash": "f78c835ffa43f5005c8b869ed2b7552d553c3fb713b11ed233e3f4641b4496a1",
         "step": 63,
-        "step_hash": "8101b8050ede59a18724d2fd98e16d85a605e17f1047dda18bcecd468e7692a3",
+        "step_hash": "19fb45cc2b6e86e70a175668a49d7e3d677b246b353cd7cf06c6c2bc5a3360c8",
         "verifier_command": "verify-universal-claim-evidence-footer-verification-contract"
       },
       {
         "artifact": "universal_provider_meter_normalization_contract",
         "artifact_type": "universal_provider_meter_normalization_contract",
-        "declared_hash": "86549d33c3fd0f300f3b9806a4276577f90d5b4d04c0c0cd77e2fb4f9fcb0e6c",
-        "payload_hash": "e2ba0e7c2f4fcdbc9a640fa3467314d47e280bbc3f8a2dd509e0255dc8f02b6b",
+        "declared_hash": "6f8296a81d16ae272da6b5e6f532f4d36256eb4accfe0c732ac37d405c65edc6",
+        "payload_hash": "2a9e54a11530c511967611dbc4d3017949acb99d409d0dd3e178136a33180955",
         "step": 64,
-        "step_hash": "fdbc7e4beb531862a43e37b3876db637a46e006e55bdbaed779d366b84298b51",
+        "step_hash": "9751cb9585e3204307a6f1c86d42b83ffd295cbe5aa26be874a9919a573b357b",
         "verifier_command": "verify-universal-provider-meter-normalization-contract"
       },
       {
         "artifact": "universal_provider_response_state_normalization_contract",
         "artifact_type": "universal_provider_response_state_normalization_contract",
-        "declared_hash": "5c110c75acd13ec2d941581c1f1b22daa73866a08b576b85705fcc1b223a38a7",
-        "payload_hash": "1a0dd5b9bb8fb14e88c11444aa3dc991f75c98bf3bb41ca4c7d267804dad1a47",
+        "declared_hash": "7a50001f23eca3326587788ba2f12f13a20cde9153f8169a39b7ab6a0490343f",
+        "payload_hash": "612a8817748c0454dde0343ca17018216cc2e2b075caab5955ad6be56dccabe1",
         "step": 65,
-        "step_hash": "bf7d7bab88f1f757a9bf8504f5bc85f12be7d8659c20acbb9e07aa7714b5bd26",
+        "step_hash": "fba738fa2a738f7520c9c61d1bd2c79ef4b50467cca21ad1ab7e6013f99fa86c",
         "verifier_command": "verify-universal-provider-response-state-normalization-contract"
       }
     ],
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "e1f24db3a507d21e14960f3c694d362cd8045c063261faf20b56690842eb7c0c"
+      "value": "ea054c708ed6a8e695197bd851c5d36998b3ab44550ccb751283737b8d37b9c3"
     },
     "summary": {
       "artifact_count": 65,
@@ -53720,7 +53720,7 @@
     }
   },
   "provider_attribution_card": {
-    "card_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
+    "card_hash": "facad8d425e0bb312b6736d4351f321fcfd3643584f09b37dec4ee2b2c83ec51",
     "card_version": "rdllm-provider-attribution-card/v1",
     "certification": {
       "case_count": 187,
@@ -53728,7 +53728,7 @@
       "failed": 0,
       "highest_level": "RDLLM-L186",
       "passed": 187,
-      "report_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+      "report_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
       "score": 1.0,
       "status": "passed",
       "suite": "rdllm-reference-conformance"
@@ -54302,7 +54302,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "5fd455d2ee2f8efce663385d271a8520782c14aa26ab33fe26a13bcd13c55d9e"
+      "value": "c18b341c4522dea5b8d3d83725bd0e4bb4d42d874fb436ccdb0e54ac12d0209b"
     },
     "supported_evidence_channels": {
       "agent_tool_attribution_ledger": true,
@@ -58349,10 +58349,10 @@
     "artifact_bindings": {
       "certification_report": {
         "artifact": "certification_report",
-        "artifact_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+        "artifact_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
         "hash_reproducible": true,
         "level": "RDLLM-L186",
-        "payload_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+        "payload_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
         "present": true,
         "status": "passed"
       },
@@ -58385,10 +58385,10 @@
       },
       "discovery_manifest": {
         "artifact": "discovery_manifest",
-        "artifact_hash": "fb953c8d56c4298e66d51b310387f5235a4f2a1f36b4d2c54d1b609c0092c5cd",
+        "artifact_hash": "089f6bcc1854e6032f63faed3cff29e32272cba747f089b5aacae71f67889e61",
         "hash_reproducible": true,
         "level": "RDLLM-L186",
-        "payload_hash": "fb953c8d56c4298e66d51b310387f5235a4f2a1f36b4d2c54d1b609c0092c5cd",
+        "payload_hash": "089f6bcc1854e6032f63faed3cff29e32272cba747f089b5aacae71f67889e61",
         "present": true,
         "status": "ready"
       },
@@ -58412,19 +58412,19 @@
       },
       "grounded_source_footer": {
         "artifact": "grounded_source_footer",
-        "artifact_hash": "9921b13895644ab4bda255e0402206b3c5f999f8cb7eab22c5b0ffd4afd48e4f",
+        "artifact_hash": "e52f1404e237cb5e3fe18fc1c5a7982af0727769596bb89e2156310fad14a1db",
         "hash_reproducible": true,
         "level": "RDLLM-L102",
-        "payload_hash": "9921b13895644ab4bda255e0402206b3c5f999f8cb7eab22c5b0ffd4afd48e4f",
+        "payload_hash": "e52f1404e237cb5e3fe18fc1c5a7982af0727769596bb89e2156310fad14a1db",
         "present": true,
         "status": "ready"
       },
       "integration_profile": {
         "artifact": "integration_profile",
-        "artifact_hash": "a669a7c49b9ccbdc94e1fe218a4b17f6129d9f6a1709f7d8315f73a1a2990647",
+        "artifact_hash": "5c2c2e5a3a9672c9c9f54cd4184d0f6abe8d5ade50e539efe762affb45b35b40",
         "hash_reproducible": true,
         "level": "RDLLM-L186",
-        "payload_hash": "a669a7c49b9ccbdc94e1fe218a4b17f6129d9f6a1709f7d8315f73a1a2990647",
+        "payload_hash": "5c2c2e5a3a9672c9c9f54cd4184d0f6abe8d5ade50e539efe762affb45b35b40",
         "present": true,
         "status": "ready"
       },
@@ -58439,19 +58439,19 @@
       },
       "provider_attribution_card": {
         "artifact": "provider_attribution_card",
-        "artifact_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
+        "artifact_hash": "facad8d425e0bb312b6736d4351f321fcfd3643584f09b37dec4ee2b2c83ec51",
         "hash_reproducible": true,
         "level": "RDLLM-L186",
-        "payload_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
+        "payload_hash": "facad8d425e0bb312b6736d4351f321fcfd3643584f09b37dec4ee2b2c83ec51",
         "present": true,
         "status": ""
       },
       "response_envelope": {
         "artifact": "response_envelope",
-        "artifact_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
+        "artifact_hash": "1bc14c301e297d81bc848a5682a4921c8d5e372096d7a0297d9994eeaa5fddeb",
         "hash_reproducible": true,
         "level": "RDLLM-L186",
-        "payload_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
+        "payload_hash": "1bc14c301e297d81bc848a5682a4921c8d5e372096d7a0297d9994eeaa5fddeb",
         "present": true,
         "status": "verified"
       },
@@ -58466,28 +58466,28 @@
       },
       "source_availability_report": {
         "artifact": "source_availability_report",
-        "artifact_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5",
+        "artifact_hash": "ef61d9cf9962a6222d0ef0280b55120b6d356e207d52539e0105f575633b5d25",
         "hash_reproducible": true,
         "level": "RDLLM-L55",
-        "payload_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5",
+        "payload_hash": "ef61d9cf9962a6222d0ef0280b55120b6d356e207d52539e0105f575633b5d25",
         "present": true,
         "status": "verified"
       },
       "source_confidence_report": {
         "artifact": "source_confidence_report",
-        "artifact_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9",
+        "artifact_hash": "493095b01f97f481ed8cc782bf2c069507ca65608c436f7bc07d39298dbab74b",
         "hash_reproducible": true,
         "level": "",
-        "payload_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9",
+        "payload_hash": "493095b01f97f481ed8cc782bf2c069507ca65608c436f7bc07d39298dbab74b",
         "present": true,
         "status": "verified"
       },
       "source_footer_delivery": {
         "artifact": "source_footer_delivery",
-        "artifact_hash": "b3b43bca32a53afaeac82e9d4c404679af4b143a7e8d60f6ce4b784bd97bde37",
+        "artifact_hash": "33be8583f38cef4949429fff14342683dd4f422871331c893a304c62a92f8437",
         "hash_reproducible": true,
         "level": "RDLLM-L103",
-        "payload_hash": "b3b43bca32a53afaeac82e9d4c404679af4b143a7e8d60f6ce4b784bd97bde37",
+        "payload_hash": "33be8583f38cef4949429fff14342683dd4f422871331c893a304c62a92f8437",
         "present": true,
         "status": "ready"
       },
@@ -58502,10 +58502,10 @@
       },
       "universal_reference_implementation_distribution": {
         "artifact": "universal_reference_implementation_distribution",
-        "artifact_hash": "7cde78a736d3baefce26d4ee80fdac7062f032457907ff174ee74670ce1a1091",
+        "artifact_hash": "568d6cbf01e6ef2c55e7b0419f262e7ec475a81b7875873bc7ebf7101881c70f",
         "hash_reproducible": true,
         "level": "RDLLM-L164",
-        "payload_hash": "7cde78a736d3baefce26d4ee80fdac7062f032457907ff174ee74670ce1a1091",
+        "payload_hash": "568d6cbf01e6ef2c55e7b0419f262e7ec475a81b7875873bc7ebf7101881c70f",
         "present": true,
         "status": "ready"
       }
@@ -58542,7 +58542,7 @@
     },
     "created_at": "2026-06-03T00:00:00Z",
     "evidence_roots": {
-      "artifact_binding_root": "907b8111191299c79286bbb30dda92246b23f8b84bfca08f82693fc837cacf53",
+      "artifact_binding_root": "7e6d86c2fb026aecb00956c92797d6d32a8ecc98b21fee88489ef11bec43d935",
       "footer_surface_root": "11b0d5f0675eb5239d88216af222b674f43525d5a7144a019dceeeca8c287ddb",
       "knowledge_source_mode_root": "58e723d90d6d67613bb9f63a893175f4ed9628e7749892c448ec9d85bc9bd1ae",
       "live_source_root": "12bb6b01e150bbfe1cbb53a152952e16e055f412a7799c2541283695c71529e0",
@@ -58885,7 +58885,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "4227411d933e764adc2e8821cfeaa7f0c051a7224af364f2b4f0376cc3f721b6"
+      "value": "f4639edeafc248230a30c901259437f7d7927b57e1ca3c6bf3ba457bb42d9b5c"
     },
     "standards_and_research": {
       "attribution_bias_suppression": "https://arxiv.org/abs/2604.05224",
@@ -58912,7 +58912,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L165"
     },
-    "universal_live_attribution_proof_hash": "60cfdb4dceac5d7632b540b3a0b1385f4f41d7527e8403e9185bc6bef6e90f34",
+    "universal_live_attribution_proof_hash": "c417c40dd2d82193dc7d92246fa750f17a4edc375d0514929bab8430dc606407",
     "universal_live_attribution_proof_version": "rdllm-universal-live-attribution-proof/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-live-attribution-proof.json",
@@ -60283,37 +60283,37 @@
     "artifact_bindings": {
       "assurance_bundle": {
         "artifact": "assurance_bundle",
-        "artifact_hash": "aa954ba4583d5ae99dc1221a1aacc738e3b2fa6aa2cfc422a5864b0a7a63aebc",
+        "artifact_hash": "c6172be428a35a27cf1c67b05535bbad343bddb4a045175124a3cc1061819c29",
         "hash_reproducible": true,
         "level": "",
-        "payload_hash": "aa954ba4583d5ae99dc1221a1aacc738e3b2fa6aa2cfc422a5864b0a7a63aebc",
+        "payload_hash": "c6172be428a35a27cf1c67b05535bbad343bddb4a045175124a3cc1061819c29",
         "present": true,
         "status": ""
       },
       "certification_attestation": {
         "artifact": "certification_attestation",
-        "artifact_hash": "2fd4aae21c12c56ced928785ec8acc7140fdedbe0fcd3b2f5a4c784d304d38dd",
+        "artifact_hash": "7af5cece554505454b92a50082d9035d011d1075eceab8f5790403348c74a6e0",
         "hash_reproducible": true,
         "level": "RDLLM-L52",
-        "payload_hash": "2fd4aae21c12c56ced928785ec8acc7140fdedbe0fcd3b2f5a4c784d304d38dd",
+        "payload_hash": "7af5cece554505454b92a50082d9035d011d1075eceab8f5790403348c74a6e0",
         "present": true,
         "status": "attested"
       },
       "certification_report": {
         "artifact": "certification_report",
-        "artifact_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+        "artifact_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
         "hash_reproducible": true,
         "level": "RDLLM-L186",
-        "payload_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+        "payload_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
         "present": true,
         "status": "passed"
       },
       "discovery_manifest": {
         "artifact": "discovery_manifest",
-        "artifact_hash": "fb953c8d56c4298e66d51b310387f5235a4f2a1f36b4d2c54d1b609c0092c5cd",
+        "artifact_hash": "089f6bcc1854e6032f63faed3cff29e32272cba747f089b5aacae71f67889e61",
         "hash_reproducible": true,
         "level": "RDLLM-L186",
-        "payload_hash": "fb953c8d56c4298e66d51b310387f5235a4f2a1f36b4d2c54d1b609c0092c5cd",
+        "payload_hash": "089f6bcc1854e6032f63faed3cff29e32272cba747f089b5aacae71f67889e61",
         "present": true,
         "status": "ready"
       },
@@ -60328,37 +60328,37 @@
       },
       "integration_profile": {
         "artifact": "integration_profile",
-        "artifact_hash": "a669a7c49b9ccbdc94e1fe218a4b17f6129d9f6a1709f7d8315f73a1a2990647",
+        "artifact_hash": "5c2c2e5a3a9672c9c9f54cd4184d0f6abe8d5ade50e539efe762affb45b35b40",
         "hash_reproducible": true,
         "level": "RDLLM-L21",
-        "payload_hash": "a669a7c49b9ccbdc94e1fe218a4b17f6129d9f6a1709f7d8315f73a1a2990647",
+        "payload_hash": "5c2c2e5a3a9672c9c9f54cd4184d0f6abe8d5ade50e539efe762affb45b35b40",
         "present": true,
         "status": "ready"
       },
       "proof_dependency_graph": {
         "artifact": "proof_dependency_graph",
-        "artifact_hash": "e47ca2573b46f6e8451dcdb236ae88880b5d99728a8a2f67d84fd929fd2476c5",
+        "artifact_hash": "d5afe72a4436c8196a4c892cac321f6b3c98ff0a38e51682f151d6790dc0f1f8",
         "hash_reproducible": true,
         "level": "RDLLM-L186",
-        "payload_hash": "e47ca2573b46f6e8451dcdb236ae88880b5d99728a8a2f67d84fd929fd2476c5",
+        "payload_hash": "d5afe72a4436c8196a4c892cac321f6b3c98ff0a38e51682f151d6790dc0f1f8",
         "present": true,
         "status": "ready"
       },
       "provider_attribution_card": {
         "artifact": "provider_attribution_card",
-        "artifact_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
+        "artifact_hash": "facad8d425e0bb312b6736d4351f321fcfd3643584f09b37dec4ee2b2c83ec51",
         "hash_reproducible": true,
         "level": "RDLLM-L186",
-        "payload_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
+        "payload_hash": "facad8d425e0bb312b6736d4351f321fcfd3643584f09b37dec4ee2b2c83ec51",
         "present": true,
         "status": ""
       },
       "response_envelope": {
         "artifact": "response_envelope",
-        "artifact_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
+        "artifact_hash": "1bc14c301e297d81bc848a5682a4921c8d5e372096d7a0297d9994eeaa5fddeb",
         "hash_reproducible": true,
         "level": "RDLLM-L186",
-        "payload_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
+        "payload_hash": "1bc14c301e297d81bc848a5682a4921c8d5e372096d7a0297d9994eeaa5fddeb",
         "present": true,
         "status": "verified"
       },
@@ -60373,10 +60373,10 @@
       },
       "source_footer_delivery": {
         "artifact": "source_footer_delivery",
-        "artifact_hash": "ea8cb76349c966dc2125abf546d39b27c853e238972b387fd241c503592a36d6",
+        "artifact_hash": "c28f21b660abb03c6ad338dacd9f8ec81b3959baa675df829034c28260789f6d",
         "hash_reproducible": true,
         "level": "RDLLM-L103",
-        "payload_hash": "ea8cb76349c966dc2125abf546d39b27c853e238972b387fd241c503592a36d6",
+        "payload_hash": "c28f21b660abb03c6ad338dacd9f8ec81b3959baa675df829034c28260789f6d",
         "present": true,
         "status": "ready"
       },
@@ -60391,19 +60391,19 @@
       },
       "universal_foundation_provider_adoption_pack": {
         "artifact": "universal_foundation_provider_adoption_pack",
-        "artifact_hash": "0e6d701e96ffc50e86ea4cb541de3a6caf7cb75d348103bd82257ae717e6ae7b",
+        "artifact_hash": "233dda7cff0b2f547cda87e4824c672c0d5d9da864551c856962e3b774a37c79",
         "hash_reproducible": true,
         "level": "RDLLM-L162",
-        "payload_hash": "0e6d701e96ffc50e86ea4cb541de3a6caf7cb75d348103bd82257ae717e6ae7b",
+        "payload_hash": "233dda7cff0b2f547cda87e4824c672c0d5d9da864551c856962e3b774a37c79",
         "present": true,
         "status": "ready"
       },
       "universal_industry_adoption_root": {
         "artifact": "universal_industry_adoption_root",
-        "artifact_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "artifact_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "hash_reproducible": true,
         "level": "RDLLM-L163",
-        "payload_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "payload_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "present": true,
         "status": "ready"
       }
@@ -60782,18 +60782,18 @@
       "source_footer_reliance_allowed": true
     },
     "distribution_model": {
-      "adoption_pack_hash": "0e6d701e96ffc50e86ea4cb541de3a6caf7cb75d348103bd82257ae717e6ae7b",
+      "adoption_pack_hash": "233dda7cff0b2f547cda87e4824c672c0d5d9da864551c856962e3b774a37c79",
       "distribution_binds_components": true,
       "distribution_binds_industry_root": true,
       "distribution_binds_install_targets": true,
-      "industry_root_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+      "industry_root_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
       "root_binds_adoption_pack": true,
       "type": "signed_reproducible_installable_reference_distribution"
     },
     "evidence_roots": {
-      "artifact_binding_root": "c72c6290197d85219dcd93989e0babdaa7cd7ce3fa506f13cf5f087b6a2e82ec",
+      "artifact_binding_root": "9ee93ef9fe01a8525acd8b1488bf5a4903788e87035cf0a86197b850e700c2ba",
       "distribution_component_root": "539adccbc22af2e3bda4ee03d7a4d7da3933b3cb233c079c80d87a107ae135d6",
-      "install_target_root": "0ce324f0e8ba17eb7a5b3e28d2448ed8ed8a33c40d92f7e408647fcfdf4e2b1d",
+      "install_target_root": "aeefbbfd2a3f27dedf7ba611b950381e85b0e87719f823cc0867ef9ea4fdba47",
       "negative_distribution_root": "0afc4a07d97bad1adf4f7469b5d436ecc964b52515225c63149644ef589f83ff"
     },
     "install_target_rows": {
@@ -60807,7 +60807,7 @@
         "fixture_hash": "4162b39e78a889721219d1c3fe131adb3f2feb2314092e86dc999beb821247e1",
         "negative_fixture_hash": "b53a95dfe7242f995a056060a1209001f67a68d04206fe00c25b5447c4e3b346",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -60825,7 +60825,7 @@
         "fixture_hash": "80402eabb6b806acdde05dec49a3d793ef892eff88991732d9e9d81faabeed3b",
         "negative_fixture_hash": "bd0af03f7621e190e96ddd0aacf8658f9dadf6a68f098f90659f71f4801ed137",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -60843,7 +60843,7 @@
         "fixture_hash": "1bee777e4be316592f99d2892161e59c20811d5c9bbf9a9988e75a68ed7e079a",
         "negative_fixture_hash": "1b260d90d1c88a622c8d4851ffca5b8308e4f3a94a028db37c759e91eedf9fbc",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -60861,7 +60861,7 @@
         "fixture_hash": "09121dbab5b92e25db1c81752826c74dd012eb18ecde5a88231fae115bc92ed5",
         "negative_fixture_hash": "e3649b9d191844b7718b12eb2283dd10ad6bf4bf06af91ba834c36155936b623",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -60879,7 +60879,7 @@
         "fixture_hash": "bcc434f9a0234e3ff0877b95d686c93545cb51ebaf6ab5e330a0caacfb5480af",
         "negative_fixture_hash": "6b0d22d37294911d089eeb775788ba82e1ba172e4e0040803fb1a8bea38a57db",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -60897,7 +60897,7 @@
         "fixture_hash": "7f6929bb31c31a72376ebed2bb6e965be35d69a4b9538fb4893a8d54ac7c65ca",
         "negative_fixture_hash": "4c687c50ee4476e5d797fd984d843938de3841892042533def83d2c8d5aa8bc1",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -60915,7 +60915,7 @@
         "fixture_hash": "7e26ba170adfb8ab5fda071f2e3a0f3a8623beac6fed1b27f5b8be0bfb188e79",
         "negative_fixture_hash": "53c4b242f22287a3aba7060e04fa2baa8f80c658cb907e60b08e074da2a10193",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -60933,7 +60933,7 @@
         "fixture_hash": "402960850db19851e82135cb5084f5b60cba1fabd934fb471010c3e0723edbe0",
         "negative_fixture_hash": "7b217a4868ac9ea02456c42c96bdb787c393e0e5ab4420579204d0d19d9115bb",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -60951,7 +60951,7 @@
         "fixture_hash": "da896bd4f927071c381ed095491e6966e185ce44f48b0fb08adab961df64af73",
         "negative_fixture_hash": "2d48eb0d5ca6fbbcf10e43ff32447e52e8d0e2cc720fe82f02d5a9363939e7b2",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -60969,7 +60969,7 @@
         "fixture_hash": "fe40d7dd60ba5bd3e8328fb2f657e22717063ccf978bbfcef5ff3af157e63423",
         "negative_fixture_hash": "863f13bda3e89cc8ca3f341a62cb0efe45ba190a6c97667119e1dc4b917b223b",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -60987,7 +60987,7 @@
         "fixture_hash": "8d050f8009a38ed5f1e6cf47f35b6c5faef3061604d01632ff66eb0c7ef28c71",
         "negative_fixture_hash": "8de54937068683baf6175cccd695fce2e39b025c8ca60cc7c74629eff566107d",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -61005,7 +61005,7 @@
         "fixture_hash": "23000cf840b026f2a13879445324e96e14320b1f3502a7807edbecf9713c715c",
         "negative_fixture_hash": "3c2bb9fda95ef38244fc40302a2cd0e8e464ce6abcaccc8c50b7719d611ac906",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -61023,7 +61023,7 @@
         "fixture_hash": "e15582f261b0abe97b5981dbe9523d573e53bb827bd480e470d391ba78b26363",
         "negative_fixture_hash": "1c4b0b6c75a4303f0a6d20a878c751efa832d72559cec47e461d366fa870e0df",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -61041,7 +61041,7 @@
         "fixture_hash": "b5d60e18bba880530b421b081dfded2cb183080599e6037e8ebb59183239d535",
         "negative_fixture_hash": "8e85f892ad07af9a6925ce5f4b7998a833eac27a419da4c06fdd85e1127556c1",
         "offline_verifier_available": true,
-        "root_binding_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
+        "root_binding_hash": "ccca5981da6b7fa25f23b3936d79ac1e4f3eb45983346fdc8bb209ad7183837f",
         "root_requirement_enforced": true,
         "settlement_meter_bound": true,
         "source_footer_preserved": true,
@@ -61217,7 +61217,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "6e197a66e5794e5beea5a54098d7918e5ff77094f31a369b816ac414054cf7e0"
+      "value": "4d52ed9bf502a29c6c25080fcf18556dd1ee0705d36da2ec265cd472dff815c9"
     },
     "summary": {
       "bound_core_artifact_count": 14,
@@ -61242,7 +61242,7 @@
       "target_certification_level": "RDLLM-L164",
       "transparency_log_entries_available": true
     },
-    "universal_reference_implementation_distribution_hash": "7cde78a736d3baefce26d4ee80fdac7062f032457907ff174ee74670ce1a1091",
+    "universal_reference_implementation_distribution_hash": "568d6cbf01e6ef2c55e7b0419f262e7ec475a81b7875873bc7ebf7101881c70f",
     "universal_reference_implementation_distribution_version": "rdllm-universal-reference-implementation-distribution/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-reference-implementation-distribution.json",

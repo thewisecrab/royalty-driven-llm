@@ -196,10 +196,10 @@
   },
   "created_at": "2026-06-03T00:00:00Z",
   "distribution_passport_binding": {
-    "artifact_hash": "e739913e1a46f04293d57d3ce27e22c901f100311aa0f489c238a864a30f47ac",
+    "artifact_hash": "53beb5e8a068b7bc9342bc10337f8ba0aaead9c52562b4f124d36cb5a39979a0",
     "hash_reproducible": true,
     "level": "RDLLM-L172",
-    "payload_hash": "e739913e1a46f04293d57d3ce27e22c901f100311aa0f489c238a864a30f47ac",
+    "payload_hash": "53beb5e8a068b7bc9342bc10337f8ba0aaead9c52562b4f124d36cb5a39979a0",
     "present": true,
     "status": "ready"
   },
@@ -554,7 +554,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "a9b416aed5394f6718e4fac404dba090d51e88fabf6b082fd451b2cc100726c5"
+    "value": "2eee71e806082d16f9934c60c54353c3a0d1b65ddaeab80f7db5511cc6215036"
   },
   "summary": {
     "attack_class_count": 15,
@@ -571,7 +571,7 @@
     "status": "ready",
     "target_certification_level": "RDLLM-L173"
   },
-  "universal_adversarial_provenance_quorum_hash": "83c937ae722ba8bb285f21945baba1465cc8228feb49fd9952a93e6ed89e3749",
+  "universal_adversarial_provenance_quorum_hash": "b6a9bd7da84a3aafd30db137db3f68ec7d6868692d87c51f9c1ae7f63bbf31e5",
   "universal_adversarial_provenance_quorum_version": "rdllm-universal-adversarial-provenance-quorum/v1",
   "well_known": {
     "path": "/.well-known/rdllm/universal-adversarial-provenance-quorum.json",

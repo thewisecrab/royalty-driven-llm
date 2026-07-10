@@ -1,16 +1,16 @@
 {
   "artifact_bindings": {
-    "client_enforcement_hash": "726efff0a856fab31c93e9fadc3733706c966541c7d229b2efb0bb31d7bf5ffc",
+    "client_enforcement_hash": "03b394dd7967865295932fee71feb81c7d9958529e9f6bfa791deec9a9552c0e",
     "client_enforcement_hash_reproducible": true,
-    "foundation_profile_hash": "d2a8198fd0e30574ca2be59bd82b1495dbf494a274906e80dbde54d311ded09a",
+    "foundation_profile_hash": "bf41e0abb8bee86f15710350009aff753100a712521dd19608903c0085ef67ae",
     "foundation_profile_hash_reproducible": true,
-    "memory_entry_input_hash": "3670d2e44311a93b83ddf2dff02028e4709134c04259e935fea8024b2a5efb5f",
-    "memory_entry_root": "b2763ba0d8b7ee9624cd4259714a3dfcb4fa2ab806be67472599a65e858a52b7",
-    "memory_read_input_hash": "1786f907be14af871a2db6e98fc8367a9f595c7f912ede2bc63f0f47f36ca604",
-    "memory_read_root": "b338206112684bd0f979274f09f0bd59eb225a44dd6be0be12651289d34e05d3",
+    "memory_entry_input_hash": "e6cb84cb2b30f1c606316c192dffd06ea393ec8de92d34c8c97818d2a438e228",
+    "memory_entry_root": "8033f21726f9a7804892babef2be1d5431aa786d3a3f6b23a3341c4f25f6e3cc",
+    "memory_read_input_hash": "197b9ed4cd6b11223f51599299e9fbbe6e785f4b10d1c6ee66cfc66f4a6e4514",
+    "memory_read_root": "5966cb31a511c19a4bb9e50981c22a61425f53cefe767ddce3b3b67777fd71d1",
     "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
     "royalty_obligation_root": "e16b27e488288f9f2757a40c738eeac7497bdc4e0c41bc9ed762dde2057e4947",
-    "source_footer_delivery_hash": "b3b43bca32a53afaeac82e9d4c404679af4b143a7e8d60f6ce4b784bd97bde37",
+    "source_footer_delivery_hash": "33be8583f38cef4949429fff14342683dd4f422871331c893a304c62a92f8437",
     "source_footer_delivery_hash_reproducible": true
   },
   "case": {
@@ -39,14 +39,14 @@
       "delete_tombstone_hash": "",
       "expires_at": "2026-12-31T00:00:00Z",
       "license_terms_hash": "cf69e8f16a51df3ac32dba0835ba2caf08ab38e13f99592287bc8fb2cbd2265c",
-      "memory_entry_hash": "a1fda8a2eb3466f63c230eafad3f36670e30cb76829f9486f5631b3de5e14906",
+      "memory_entry_hash": "7497375c32436a6c174e3a7b6429a81d315f0479a04fe96790fc7e55ecf2c31b",
       "memory_id": "mem:reference-provenance-ledger-source",
       "memory_text_hash": "46fc9547cb20c4615f87c390326341a30613670fcfe0898b108fda221cb3836a",
       "memory_type": "source_summary",
       "operation": "write",
       "origin_artifact_hashes": [
-        "726efff0a856fab31c93e9fadc3733706c966541c7d229b2efb0bb31d7bf5ffc",
-        "b3b43bca32a53afaeac82e9d4c404679af4b143a7e8d60f6ce4b784bd97bde37"
+        "03b394dd7967865295932fee71feb81c7d9958529e9f6bfa791deec9a9552c0e",
+        "33be8583f38cef4949429fff14342683dd4f422871331c893a304c62a92f8437"
       ],
       "parent_memory_text_hash": "",
       "retention_basis": "licensed_attributed_memory",
@@ -69,9 +69,9 @@
   },
   "memory_reads": [
     {
-      "client_enforcement_hash": "726efff0a856fab31c93e9fadc3733706c966541c7d229b2efb0bb31d7bf5ffc",
+      "client_enforcement_hash": "03b394dd7967865295932fee71feb81c7d9958529e9f6bfa791deec9a9552c0e",
       "memory_id": "mem:reference-provenance-ledger-source",
-      "memory_read_hash": "f0221cb9267309a759728c921bdd7a6e50be9c19cb771ee16ca6c4083fc9df38",
+      "memory_read_hash": "8022b22643de0b49602e5de86caa4eb5d5cf62cc26454a0bdcdc2eab922ba478",
       "memory_version": 1,
       "read_id": "memread:reference-provenance-ledger-source:1",
       "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
@@ -91,7 +91,7 @@
     "system_id": "memory:rdllm-reference-agent",
     "system_version": "2026-06"
   },
-  "persistent_memory_provenance_hash": "ec9525c9e15eec83192b6f6837a663d32d72efda171b08493420084df0776f94",
+  "persistent_memory_provenance_hash": "6fe90401785fceb98d0530c690a621727b3baf14dbaae1edef754076fa6a8205",
   "privacy": {
     "answer_text_disclosed": false,
     "memory_receipt_uses_hashes_labels_and_policy_refs": true,
@@ -121,7 +121,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "f29b1bd9194daa240bc75b2a9f7abb3b9ab58737b053a77df92e9dc17bcc3184"
+    "value": "cca3edf16b6e69f6f35e60eb149f7ee54b6f10a8e2ff6faa0aaf461f7713418d"
   },
   "summary": {
     "failed_check_count": 0,

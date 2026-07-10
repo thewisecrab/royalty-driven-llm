@@ -83,11 +83,11 @@
     "claim_display_root": "f277325f4bb933d8270ccc3b755ca2f557300ffe4cc56c75556052d23f80b690",
     "creator_license_contract_hash": "1ea2a80b87d91b03550b57457a881265fdf9a6ed38b5e520ed8253988eddf8ab",
     "rendered_footer_hash": "14df733b7db815790463d924530d43adba35a7d0d61148e4e798f4baae4ff41b",
-    "response_boundary_hash": "13645ffbdc9bccf88ce48718ed2dec54dac63c71c69d6428e40d5995a43f7fd1",
-    "source_confidence_report_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9",
+    "response_boundary_hash": "2d22a59498ff00615140c7855582bce375e858cee4aeb45ebc7fa0ecdfad328b",
+    "source_confidence_report_hash": "493095b01f97f481ed8cc782bf2c069507ca65608c436f7bc07d39298dbab74b",
     "source_display_root": "c7bb10ad70f874aad2e6f429d07b2a373208e524cff28022053b35cdcde32a09"
   },
-  "contract_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
+  "contract_hash": "6e21016c0fc330186a62c6b7c88c35329473ef11d07443403e70fbdde57115a2",
   "contract_version": "rdllm-citation-footer-contract/v1",
   "created_at": "2026-06-03T00:00:00Z",
   "display_profile": {
@@ -100,14 +100,14 @@
     "required_source_label_pattern": "[S#]"
   },
   "event": {
-    "answer_card_hash": "fa2bff282cd4498badb9ff52304ea26cf5b82db9366b5447e67982102f7a3941",
+    "answer_card_hash": "aaf3d9c0868b5b51fa42843b5b1f7d3cd1c4a3a8d423e62a77ae2aab6da24784",
     "creator_license_contract_hash": "1ea2a80b87d91b03550b57457a881265fdf9a6ed38b5e520ed8253988eddf8ab",
     "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
     "event_id": "evt_83312b019637578e",
     "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
-    "response_boundary_hash": "13645ffbdc9bccf88ce48718ed2dec54dac63c71c69d6428e40d5995a43f7fd1",
-    "source_confidence_report_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9",
-    "source_verification_report_hash": "15fc4a037e3f63b39b1849a1925767ea345949828e4442526af3471f12ff68cc"
+    "response_boundary_hash": "2d22a59498ff00615140c7855582bce375e858cee4aeb45ebc7fa0ecdfad328b",
+    "source_confidence_report_hash": "493095b01f97f481ed8cc782bf2c069507ca65608c436f7bc07d39298dbab74b",
+    "source_verification_report_hash": "3d4f78a0c8a3f5bd2b580204e2fe887b0316703f1336166eefa0d656f4ff48e1"
   },
   "issuer": "rdllm-local-demo",
   "privacy": {
@@ -163,7 +163,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "a600057f8d17a3625684bbcf9c336fd7a523737ed54e0eb7741b4f6d062d410a"
+    "value": "382c67f8a85208188913fcd879fd3864dbbae09a2e8bf0381890dc10635eca1d"
   },
   "sources": [
     {

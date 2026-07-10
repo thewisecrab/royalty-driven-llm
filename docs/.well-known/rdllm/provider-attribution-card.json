@@ -1,5 +1,5 @@
 {
-  "card_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
+  "card_hash": "facad8d425e0bb312b6736d4351f321fcfd3643584f09b37dec4ee2b2c83ec51",
   "card_version": "rdllm-provider-attribution-card/v1",
   "certification": {
     "case_count": 187,
@@ -7,7 +7,7 @@
     "failed": 0,
     "highest_level": "RDLLM-L186",
     "passed": 187,
-    "report_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+    "report_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
     "score": 1.0,
     "status": "passed",
     "suite": "rdllm-reference-conformance"
@@ -581,7 +581,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "5fd455d2ee2f8efce663385d271a8520782c14aa26ab33fe26a13bcd13c55d9e"
+    "value": "c18b341c4522dea5b8d3d83725bd0e4bb4d42d874fb436ccdb0e54ac12d0209b"
   },
   "supported_evidence_channels": {
     "agent_tool_attribution_ledger": true,

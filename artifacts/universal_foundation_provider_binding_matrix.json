@@ -9,10 +9,10 @@
     "provider_families_complete": true
   },
   "composite_contract_binding": {
-    "artifact_hash": "753d33d8c03d0727ba97789fc04593fe12065c2818bb89d797114adf3627b995",
+    "artifact_hash": "6eaf0e9576acfdd544d96edf078581e6fe59803750080647e2a32a1fbcc6b2e0",
     "hash_reproducible": true,
     "level": "RDLLM-L167",
-    "payload_hash": "753d33d8c03d0727ba97789fc04593fe12065c2818bb89d797114adf3627b995",
+    "payload_hash": "6eaf0e9576acfdd544d96edf078581e6fe59803750080647e2a32a1fbcc6b2e0",
     "present": true,
     "status": "ready"
   },
@@ -3815,7 +3815,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "2bbaa5f230ca674e509f31e2337ef1ec3c8ee2e327acdbf2565e6c284a883df8"
+    "value": "54ffc9e2f303551cb2c2ee6282274955a1f4411ff483d0dca6d765cd038035b7"
   },
   "standards_and_research": {
     "citation_reliability": "Cited but Not Verified and PaperTrail motivate native citation, locator, claim-evidence, and footer checks per provider route.",
@@ -3835,7 +3835,7 @@
     "status": "ready",
     "target_certification_level": "RDLLM-L168"
   },
-  "universal_foundation_provider_binding_matrix_hash": "989c836dbcd76f117ef186f4ed56e5bb7fb8e9370ff9f208d69340a064fce083",
+  "universal_foundation_provider_binding_matrix_hash": "bf9f569065d470039110b011ecb636399dfd6eb37e1a5a9a67f6f998957976b2",
   "universal_foundation_provider_binding_matrix_version": "rdllm-universal-foundation-provider-binding-matrix/v1",
   "well_known": {
     "path": "/.well-known/rdllm/universal-foundation-provider-binding-matrix.json",

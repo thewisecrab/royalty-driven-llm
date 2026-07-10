@@ -1,14 +1,14 @@
 {
   "artifact_bindings": {
-    "embedded_foundation_api_profile_hash": "d2a8198fd0e30574ca2be59bd82b1495dbf494a274906e80dbde54d311ded09a",
-    "foundation_api_profile_hash": "d2a8198fd0e30574ca2be59bd82b1495dbf494a274906e80dbde54d311ded09a",
+    "embedded_foundation_api_profile_hash": "bf41e0abb8bee86f15710350009aff753100a712521dd19608903c0085ef67ae",
+    "foundation_api_profile_hash": "bf41e0abb8bee86f15710350009aff753100a712521dd19608903c0085ef67ae",
     "foundation_api_profile_hash_reproducible": false,
-    "observed_header_hash": "417c94cd715e2a820116998043e289511093fb8fd9ee8e6e2f9bab594eb562b3",
-    "observed_payload_hash": "0da0f164cd41076f0e8a787b66e9fdf005b8844f296df1cb9213489c2a91c5ef",
+    "observed_header_hash": "3da8ccf5a2e8f1d4a16c6cc42e2a4255178f8fcc137d5139b9eb9284e06d02d2",
+    "observed_payload_hash": "54de487f1f5a5d955257c07442fc77e53283990157077b4c7f0afdedd4d6c866",
     "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
-    "response_envelope_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
+    "response_envelope_hash": "1bc14c301e297d81bc848a5682a4921c8d5e372096d7a0297d9994eeaa5fddeb",
     "response_envelope_hash_reproducible": true,
-    "source_footer_delivery_hash": "b3b43bca32a53afaeac82e9d4c404679af4b143a7e8d60f6ce4b784bd97bde37",
+    "source_footer_delivery_hash": "33be8583f38cef4949429fff14342683dd4f422871331c893a304c62a92f8437",
     "source_footer_delivery_hash_reproducible": true
   },
   "case": {
@@ -45,16 +45,16 @@
       "S3"
     ]
   },
-  "client_enforcement_hash": "726efff0a856fab31c93e9fadc3733706c966541c7d229b2efb0bb31d7bf5ffc",
+  "client_enforcement_hash": "03b394dd7967865295932fee71feb81c7d9958529e9f6bfa791deec9a9552c0e",
   "client_subject": {
     "client_id": "client:rdllm-reference-chat",
     "client_surface": "chat_ui",
     "client_version": "2026-06",
-    "foundation_profile_hash": "d2a8198fd0e30574ca2be59bd82b1495dbf494a274906e80dbde54d311ded09a",
+    "foundation_profile_hash": "bf41e0abb8bee86f15710350009aff753100a712521dd19608903c0085ef67ae",
     "render_target": "answer_panel",
     "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
-    "response_envelope_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
-    "source_footer_delivery_hash": "b3b43bca32a53afaeac82e9d4c404679af4b143a7e8d60f6ce4b784bd97bde37"
+    "response_envelope_hash": "1bc14c301e297d81bc848a5682a4921c8d5e372096d7a0297d9994eeaa5fddeb",
+    "source_footer_delivery_hash": "33be8583f38cef4949429fff14342683dd4f422871331c893a304c62a92f8437"
   },
   "issued_at": "2026-05-31T00:00:00Z",
   "issuer": "rdllm-local-demo",
@@ -68,36 +68,36 @@
       "row_hash": "a63dfd017508035bdb69ec38f9b753a2868eb10325c378b77634796e8eb41a06"
     },
     {
-      "expected_value_hash": "7327478bb53253bbc1fb2c6335454a33aa0f4fb2ef3375b8280ee6cfb0404f32",
+      "expected_value_hash": "9c555106f69b014ce039e92f276f4f4a18b675f131b01f3ee358d29bfcd1eecc",
       "matches_profile": true,
       "name": "RDLLM-Discovery-Manifest-Hash",
-      "observed_value_hash": "7327478bb53253bbc1fb2c6335454a33aa0f4fb2ef3375b8280ee6cfb0404f32",
+      "observed_value_hash": "9c555106f69b014ce039e92f276f4f4a18b675f131b01f3ee358d29bfcd1eecc",
       "present": true,
-      "row_hash": "7fa56e97b709fc0b57b1c96b6329fc8724a2f800c55f7a0796512d6c94b708cc"
+      "row_hash": "0e7c4eda9784bb840a502712f644b8c261e7dcac6e0907cdf40f2bd461b0f98e"
     },
     {
-      "expected_value_hash": "4c16f46f7546209f90c2be473a786b3b3aef77de0661b4dc2e4616fc14208333",
+      "expected_value_hash": "064cb4ef4ce2e343c169e2f1ead21c43df404ada838e8dd2314ec2e3c8e97a08",
       "matches_profile": true,
       "name": "RDLLM-Foundation-Profile-Hash",
-      "observed_value_hash": "4c16f46f7546209f90c2be473a786b3b3aef77de0661b4dc2e4616fc14208333",
+      "observed_value_hash": "064cb4ef4ce2e343c169e2f1ead21c43df404ada838e8dd2314ec2e3c8e97a08",
       "present": true,
-      "row_hash": "ca0425a8c4403c01712963cd7d8181d19701d557902ffdc8f973661b43076ef2"
+      "row_hash": "64091ce3df109d3f8e76965769ee3a3f7c36bdf57c9a31df88df3cdce1c96b4d"
     },
     {
-      "expected_value_hash": "18a858ffe0d923962d1b80602147b1396bbb7d7fa50413e4031fe8f56c81289c",
+      "expected_value_hash": "51ff4c8e7f47081addc86aa89c0985ed28edb3fa45b830186cf1e7d052f10362",
       "matches_profile": true,
       "name": "RDLLM-Response-Envelope-Hash",
-      "observed_value_hash": "18a858ffe0d923962d1b80602147b1396bbb7d7fa50413e4031fe8f56c81289c",
+      "observed_value_hash": "51ff4c8e7f47081addc86aa89c0985ed28edb3fa45b830186cf1e7d052f10362",
       "present": true,
-      "row_hash": "1ad326b930a7a871de8723176b5a8fe6db68865caac237b1a08412c895578806"
+      "row_hash": "2c7e5ac516786476eb0483ca5abfd32a4de3c8be8fe5720cecd74dbeaabf91f7"
     },
     {
-      "expected_value_hash": "fc8e9aa4b4b6bbf83bd5a5d9532849835799b76a13e484f0bb55ad7a44c617c8",
+      "expected_value_hash": "b7c3f979ae889280a896b15b2393a89751ab4c6c7e8d93cba3621702c3cadf93",
       "matches_profile": true,
       "name": "RDLLM-Source-Footer-Delivery-Hash",
-      "observed_value_hash": "fc8e9aa4b4b6bbf83bd5a5d9532849835799b76a13e484f0bb55ad7a44c617c8",
+      "observed_value_hash": "b7c3f979ae889280a896b15b2393a89751ab4c6c7e8d93cba3621702c3cadf93",
       "present": true,
-      "row_hash": "3eb0e11aa5db89c1bd38c88971fc1f91a72418e6582c0f3ce1147b06d5bc455c"
+      "row_hash": "098d5e6098e899f232912ef20d6854c75445d082712786de86a7fd0cc021c0c5"
     },
     {
       "expected_value_hash": "e39dec1ecc23b379f44c1901deb7d9bc622b1df5234e0a898924ced6045f3307",
@@ -109,7 +109,7 @@
     }
   ],
   "observed_payload_commitments": {
-    "payload_hash": "0da0f164cd41076f0e8a787b66e9fdf005b8844f296df1cb9213489c2a91c5ef",
+    "payload_hash": "54de487f1f5a5d955257c07442fc77e53283990157077b4c7f0afdedd4d6c866",
     "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
     "required_json_field_count": 6,
     "source_label_count": 3,
@@ -132,7 +132,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "6341f7071166066cdb3f6a0efb4b428b33437ae6bf37e64962fd233c3f5c27f5"
+    "value": "59b79764c28c3f5e2a246c59323fe177925092c6ac400779a7e75497142cd5b0"
   },
   "summary": {
     "client_enforcement_ready": true,

@@ -1,11 +1,11 @@
 {
   "artifact_bindings": {
     "answer_claim_coverage_bound": true,
-    "answer_claim_coverage_report_hash": "0f09aa92a4fc20272ab312793166eccdabb54b949bdeb601b4a50b24574b80a8",
+    "answer_claim_coverage_report_hash": "8091710cd2b6e43838b3f0dfb15a90ff10e5d431c0a84f85eecf46dff8776419",
     "source_verification_bound": true,
-    "source_verification_report_hash": "15fc4a037e3f63b39b1849a1925767ea345949828e4442526af3471f12ff68cc",
+    "source_verification_report_hash": "3d4f78a0c8a3f5bd2b580204e2fe887b0316703f1336166eefa0d656f4ff48e1",
     "trace_exchange_bound": true,
-    "trace_exchange_hash": "7a441b8277a161d0249ac32d494a94fc5ba2edd93e987d3268baff04aa494d39"
+    "trace_exchange_hash": "b67dbb4ca0b54c57908644bdd36324c7cfaec9418413941270969ba0e2380fa2"
   },
   "claim_context_rows": [
     {
@@ -112,7 +112,7 @@
     }
   ],
   "commitments": {
-    "artifact_binding_root": "90e5fc592c14c6910f53a07d1d15671242814d0790aeb5ec2f59420d776fe889",
+    "artifact_binding_root": "c0507daaa1e60f6490151d78a77436fca7ba9d52b934390a8b8df65b4291be05",
     "claim_context_root": "364eed90d0233907696847e16f6214d1b3a16ec57d2e2d4d8e8be41e29e6a527",
     "context_block_root": "107c300ab4a6c743681df6b35478399293a271150093ff836a06402d9e86e491",
     "issue_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
@@ -200,7 +200,7 @@
     "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
     "event_id": "evt_83312b019637578e",
     "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
-    "trace_hash": "7a441b8277a161d0249ac32d494a94fc5ba2edd93e987d3268baff04aa494d39"
+    "trace_hash": "b67dbb4ca0b54c57908644bdd36324c7cfaec9418413941270969ba0e2380fa2"
   },
   "issuer": "rdllm-local-demo",
   "issues": [],
@@ -224,7 +224,7 @@
     "report_uses_hashes_and_trace_ids": true,
     "source_text_disclosed": false
   },
-  "report_hash": "d444afe2799076c1ae8137054e1430f301434ed28f6784550b2fc5e0d4fdf09d",
+  "report_hash": "cc95353f69baf1f392d10f2b03dccc61cff84f219b46e0add05e29caf9bce0ab",
   "report_version": "rdllm-generation-context-closure-report/v1",
   "schemas": {
     "generation_context_closure_report": "docs/schemas/generation_context_closure_report.schema.json"
@@ -232,7 +232,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "8ca55eb192d4fbfa6ae54d43c846fab9e846008ee74dd7958c738f367a33aa56"
+    "value": "35a9efac396932623b1c72af1972db4ef644720098161e0bd15e88ec0c4d652e"
   },
   "summary": {
     "all_supported_claims_in_generation_context": true,

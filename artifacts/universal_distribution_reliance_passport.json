@@ -660,13 +660,13 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "aca9d39c9d2a683821153fd59c40099c6fb7bc5b05d9a2df6e514abf31e70092"
+    "value": "afda60065a1897323e901f344a2ac4f63e577b57b6c7073ef2dd37f24d343db8"
   },
   "source_grounded_response_binding": {
-    "artifact_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
+    "artifact_hash": "825fc472ec60a386f6117b202a9eae7b89fea238ee9def393b08052656f58b7f",
     "hash_reproducible": true,
     "level": "RDLLM-L171",
-    "payload_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
+    "payload_hash": "825fc472ec60a386f6117b202a9eae7b89fea238ee9def393b08052656f58b7f",
     "present": true,
     "status": "ready"
   },
@@ -786,7 +786,7 @@
     "status_channel_count": 7,
     "target_certification_level": "RDLLM-L172"
   },
-  "universal_distribution_reliance_passport_hash": "e739913e1a46f04293d57d3ce27e22c901f100311aa0f489c238a864a30f47ac",
+  "universal_distribution_reliance_passport_hash": "53beb5e8a068b7bc9342bc10337f8ba0aaead9c52562b4f124d36cb5a39979a0",
   "universal_distribution_reliance_passport_version": "rdllm-universal-distribution-reliance-passport/v1",
   "well_known": {
     "path": "/.well-known/rdllm/universal-distribution-reliance-passport.json",

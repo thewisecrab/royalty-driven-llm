@@ -2,11 +2,11 @@
   "artifact_bindings": {
     "model_lineage_attribution_hash": "93dfb78a8335e3709eaa1a6b4265b542faf2cd2171188ab68084f2051b07c0c7",
     "model_lineage_attribution_hash_reproducible": true,
-    "private_reasoning_attribution_hash": "968a7097c5856d7c10ad3f7213b8022e6af0016c54d76ad0ec6a3bbe71dc5495",
+    "private_reasoning_attribution_hash": "b96a2f5e0089565390d3c3ef05b5642fe52fe5b1ba5613d5b80e6b46701455f2",
     "private_reasoning_attribution_hash_reproducible": true,
     "royalty_obligation_root": "e8fc26bad93fdf9fb9e4ec0623524188268f18703c29c99ad5127edafcb30a5b",
-    "signal_input_hash": "6f441cb6336a8b410c4a1e5b196f4c31d6dbe70c0c6ed6b4eb1d8133fbaa05c2",
-    "signal_row_root": "9d24d93bf122b09e71af5c9cb905f2e084c6c4ac7b859204fd1613501a5049bd"
+    "signal_input_hash": "81c933d0cb2e600659e418744d84b038d96a52a9382715e2645f1d12741a5c2e",
+    "signal_row_root": "04af89d90612b94f53b405479e20e2511af67634be81b689bbc0f7d0aeedcd43"
   },
   "case": {
     "case_id": "artifact:post-training-signal-provenance",
@@ -42,7 +42,7 @@
     "requires_source_carry_forward": true,
     "requires_synthetic_disclosure": true
   },
-  "post_training_signal_provenance_hash": "b91072eac6f2f4f0a7ccc1019f9dfbc6beaab4a518e90e3f8b6bab2df4fa9dd9",
+  "post_training_signal_provenance_hash": "b91e373ee7112803a74e53a662671f89423eb49396c0fcccd077697d1565062f",
   "post_training_signals": [
     {
       "annotator_attestation_hash": "8df3e8e1291fd1192909d833c9fd4d47b20b93bfb348dde273b95e81b2a796ac",
@@ -52,7 +52,7 @@
       "escrow_if_unattributed": true,
       "input_artifact_hashes": [
         "93dfb78a8335e3709eaa1a6b4265b542faf2cd2171188ab68084f2051b07c0c7",
-        "968a7097c5856d7c10ad3f7213b8022e6af0016c54d76ad0ec6a3bbe71dc5495"
+        "b96a2f5e0089565390d3c3ef05b5642fe52fe5b1ba5613d5b80e6b46701455f2"
       ],
       "license_terms_hash": "52918c478d4c3fef5bc0a0d0f82aa3e82e4c2bbcccaeeae667ddeccdbf164f05",
       "post_training_stage": "alignment",
@@ -62,7 +62,7 @@
       "sequence": 1,
       "signal_id": "signal:artifact:rlhf-preference:001",
       "signal_payload_hash": "f842583584d25e21d1136e7bb149bf692fbdbaa1e291626b6ea21fb2c1ec57a4",
-      "signal_row_hash": "ca57d922322d4c878cb61c43f81fb61231cb3dc892d96a023ac9a0f6be64a742",
+      "signal_row_hash": "c038222ee4e3691cfdce0494fe7a40440bc18a081fa3be7e2930c3e3f309e66c",
       "signal_type": "rlhf_preference",
       "source_labels": [
         "S1"
@@ -116,7 +116,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "18a20fa76b81d8551a38c4c93fbb6cf3b3f8f4b3e6072cbca0db3fe6cdd8fb63"
+    "value": "98b8ad2a0b86d64749225d3d5574754a4073b1d1c1f4e2872b2969f60b5cff48"
   },
   "summary": {
     "failed_check_count": 0,

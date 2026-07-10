@@ -8,7 +8,7 @@
     "name": "rdllm.reference",
     "route_id": "route:default"
   },
-  "receipt_hash": "94f30eddb01a4dac8fd29edaae6bd29214d094516277a2e6b30df6affbbd2278",
+  "receipt_hash": "270cac1f6de297548cd9d1c829a729241b4201f94d9b7997cf9a059f29e4eafb",
   "schema_url": "https://rdllm.local/schemas/trace_exchange/v1",
   "spans": [
     {
@@ -22,7 +22,7 @@
         "rdllm.event.hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
         "rdllm.event.id": "evt_83312b019637578e",
         "rdllm.prompt.hash": "50ab8c101c89ff008713591e3270032cb19923a1e89f68b4315afb839e95d35e",
-        "rdllm.receipt.hash": "94f30eddb01a4dac8fd29edaae6bd29214d094516277a2e6b30df6affbbd2278",
+        "rdllm.receipt.hash": "270cac1f6de297548cd9d1c829a729241b4201f94d9b7997cf9a059f29e4eafb",
         "rdllm.rendered_output.hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
         "rdllm.span.kind": "generation"
       },
@@ -520,6 +520,6 @@
     "visible_source_count": 3
   },
   "trace_exchange_version": "rdllm-trace-exchange/v1",
-  "trace_hash": "7a441b8277a161d0249ac32d494a94fc5ba2edd93e987d3268baff04aa494d39",
+  "trace_hash": "b67dbb4ca0b54c57908644bdd36324c7cfaec9418413941270969ba0e2380fa2",
   "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
 }

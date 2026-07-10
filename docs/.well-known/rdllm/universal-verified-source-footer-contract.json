@@ -11,31 +11,31 @@
       "status": "ready"
     },
     "universal_runtime_route_binding_contract": {
-      "artifact_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
+      "artifact_hash": "87fea69c412fa156c382bfc28478a65c1852005724ca6576ce1c89944f1dba85",
       "hash_reproducible": true,
       "level": "RDLLM-L179",
       "minimum_level": "RDLLM-L179",
-      "payload_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
+      "payload_hash": "87fea69c412fa156c382bfc28478a65c1852005724ca6576ce1c89944f1dba85",
       "present": true,
       "ready": true,
       "status": "ready"
     },
     "universal_source_footer_enforcement_contract": {
-      "artifact_hash": "77be30e22d169412da9c454d3031d72e9b36ba0d368d18d2d9885b07b2b2a213",
+      "artifact_hash": "5bde5738f7e4a5c72353b2787ac7bb22c802a19465e55f5bbadf1276307d1953",
       "hash_reproducible": true,
       "level": "RDLLM-L177",
       "minimum_level": "RDLLM-L177",
-      "payload_hash": "77be30e22d169412da9c454d3031d72e9b36ba0d368d18d2d9885b07b2b2a213",
+      "payload_hash": "5bde5738f7e4a5c72353b2787ac7bb22c802a19465e55f5bbadf1276307d1953",
       "present": true,
       "ready": true,
       "status": "ready"
     },
     "universal_source_grounded_response_receipt": {
-      "artifact_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
+      "artifact_hash": "825fc472ec60a386f6117b202a9eae7b89fea238ee9def393b08052656f58b7f",
       "hash_reproducible": true,
       "level": "RDLLM-L171",
       "minimum_level": "RDLLM-L171",
-      "payload_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
+      "payload_hash": "825fc472ec60a386f6117b202a9eae7b89fea238ee9def393b08052656f58b7f",
       "present": true,
       "ready": true,
       "status": "ready"
@@ -71,13 +71,13 @@
   },
   "created_at": "2026-06-03T00:00:00Z",
   "evidence_roots": {
-    "combined_verified_source_footer_root": "7700e1116ab9cfba54e8c671f27635f9812fc0385a87373d378973ff70013fd5",
+    "combined_verified_source_footer_root": "e515110858ba588e16158c070b3f47436f767131eb915735fdede6ecc70a9785",
     "footer_response_surface_root": "b6703e99725544c9d2652d3ff546bd696c358ef00916e782b99044210db7562e",
     "footer_verification_stage_root": "c0fefd1b84a9cbdaa666b03155b6c532022c06290cbdef029889fb76695206a3",
     "negative_footer_reliance_root": "cc695404a524c3fd4364e30f433f2b8affdd9946ecc927c782d3d7cebc615f48",
     "support_dimension_root": "b9ca67b69e9f32a93e0e25a589f5e795cd89b37bd9a6f5a76708eefba37c5d75",
     "verified_footer_field_root": "48376592f38f8d75420f5e0cdccc8fbd776af0afd6a0a8d46e5acdae47ce2e89",
-    "verified_footer_root": "9d0a9ac176aa438bba417e649054904efbd5383d851343b07e673af8f8826906"
+    "verified_footer_root": "193f42aabada70c67ae2f8136da7880a8fce35e7f0490b5173e46a452596f893"
   },
   "footer_response_surface_rows": {
     "api_json": {
@@ -543,7 +543,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "1d718bbadbc891aed54bc39f0eeb4f99f9feb2b3be2469c08ff90b2f1204e7a6"
+    "value": "a16715535d80261c0fe7f4c2975dc921aa3d2ca903a40021fe81a4f45d3af649"
   },
   "source_footer_reliance_decision": {
     "claim_source_reliance_allowed": true,
@@ -654,7 +654,7 @@
       "verifier_hash": "1b7a9d7287980fbfe52ddfbb4bf43583fb6b4e14470aa314eb8f7f7a1829c313"
     }
   },
-  "universal_verified_source_footer_contract_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+  "universal_verified_source_footer_contract_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
   "universal_verified_source_footer_contract_version": "rdllm-universal-verified-source-footer-contract/v1",
   "verified_footer_field_rows": {
     "attribution_reason": {
@@ -835,7 +835,7 @@
       "relevant_to_claims": true,
       "rendered_footer_hash": "696519ffed2feeeb0f5e93b6b7779cdb38cc6d0db4e98bd82cd568d1bfc08d8f",
       "route_binding_matched": true,
-      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
+      "runtime_route_binding_hash": "87fea69c412fa156c382bfc28478a65c1852005724ca6576ce1c89944f1dba85",
       "settlement_state": "eligible",
       "settlement_state_visible": true,
       "source_content_hash": "c77c0a9cd2be4e726c036be6c86e77d36a8a94a434013d467057c7280fccd076",
@@ -874,7 +874,7 @@
       "relevant_to_claims": true,
       "rendered_footer_hash": "d5aa7b3408edbd1e37d0b1316fff4b15d37488adc15ce24a8b4d4f701a648224",
       "route_binding_matched": true,
-      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
+      "runtime_route_binding_hash": "87fea69c412fa156c382bfc28478a65c1852005724ca6576ce1c89944f1dba85",
       "settlement_state": "eligible",
       "settlement_state_visible": true,
       "source_content_hash": "7d2b9283b1309bcd49d38e7e7968815313d21ca36ca9872d0660f473387525db",
@@ -913,7 +913,7 @@
       "relevant_to_claims": true,
       "rendered_footer_hash": "3eb3529da4ec14ee5d729092621151790e1e9e98e9b269e901018b2beec36fe8",
       "route_binding_matched": true,
-      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
+      "runtime_route_binding_hash": "87fea69c412fa156c382bfc28478a65c1852005724ca6576ce1c89944f1dba85",
       "settlement_state": "eligible",
       "settlement_state_visible": true,
       "source_content_hash": "e25349343c8bf317397445e90cb4f226c03d9d18bc3852ef647a30bfe7707843",

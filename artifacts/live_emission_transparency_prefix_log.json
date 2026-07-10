@@ -1,19 +1,19 @@
 {
   "entries": [
     {
-      "entry_hash": "ccde1ed0d12febf328c49d9e7c1280887ac767a088f3c1e7f0de07aa9f2e2442",
+      "entry_hash": "cb89ef7de49e904cd07850a499733a2b6142b00b86b8bda7ec849e390e5747fc",
       "entry_type": "rdllm-live-emission-witness-report/v1",
       "index": 0,
-      "live_witness_hash": "9563df12db9dbe89e4ec73a43c86c8ae83e239153274e91096434da5ea753d0e",
+      "live_witness_hash": "3b8e62c00064a7c7dcbe4a685e50e17b8ce7a41ddb7158ca68ce809ff54c0033",
       "log_id": "live-prefix",
       "phase": "",
-      "subject_hash": "9563df12db9dbe89e4ec73a43c86c8ae83e239153274e91096434da5ea753d0e",
-      "subject_payload_hash": "d863c1aefb373a925a66c362e4dcbbf6fa3df7a5f1f392d04b7191000187d0fa",
+      "subject_hash": "3b8e62c00064a7c7dcbe4a685e50e17b8ce7a41ddb7158ca68ce809ff54c0033",
+      "subject_payload_hash": "f79bfe9b51c6eb12e5d1d4afda50ff9148b8bdf439c2b959d6734d04d5a3b06f",
       "witness_id": ""
     }
   ],
   "log_id": "live-prefix",
   "log_version": "rdllm-live-emission-transparency-log/v1",
-  "root": "ccde1ed0d12febf328c49d9e7c1280887ac767a088f3c1e7f0de07aa9f2e2442",
+  "root": "cb89ef7de49e904cd07850a499733a2b6142b00b86b8bda7ec849e390e5747fc",
   "tree_size": 1
 }

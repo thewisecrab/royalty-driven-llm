@@ -892,11 +892,11 @@
   },
   "issuer": "rdllm-local-demo",
   "model_provider_registry_binding": {
-    "artifact_hash": "b6ca6e963a35e0fd5c92917781e55b1234c15b4acdf662e29a1b14d63c66b3c4",
+    "artifact_hash": "701b3e2984f4e3124c53af85272840d47579f26ef7120ec59e141870d08f2721",
     "declared_model_route_count": 18,
     "hash_reproducible": true,
     "level": "RDLLM-L176",
-    "payload_hash": "b6ca6e963a35e0fd5c92917781e55b1234c15b4acdf662e29a1b14d63c66b3c4",
+    "payload_hash": "701b3e2984f4e3124c53af85272840d47579f26ef7120ec59e141870d08f2721",
     "present": true,
     "status": "ready"
   },
@@ -1502,13 +1502,13 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "fe161d9381f93249365f0f511e067ee04878553b7cdb85f68e17d8d143a53dc2"
+    "value": "48e820a3d0490a1d2770993b01af17768ac8f28e95fe621613d9f4c2f82d55d6"
   },
   "source_footer_enforcement_binding": {
-    "artifact_hash": "77be30e22d169412da9c454d3031d72e9b36ba0d368d18d2d9885b07b2b2a213",
+    "artifact_hash": "5bde5738f7e4a5c72353b2787ac7bb22c802a19465e55f5bbadf1276307d1953",
     "hash_reproducible": true,
     "level": "RDLLM-L177",
-    "payload_hash": "77be30e22d169412da9c454d3031d72e9b36ba0d368d18d2d9885b07b2b2a213",
+    "payload_hash": "5bde5738f7e4a5c72353b2787ac7bb22c802a19465e55f5bbadf1276307d1953",
     "present": true,
     "route_enforcement_count": 18,
     "status": "ready"
@@ -1535,7 +1535,7 @@
     "status": "ready",
     "target_certification_level": "RDLLM-L178"
   },
-  "universal_provider_catalog_coverage_contract_hash": "6f84c504bb3ea075d9009cf986aa0dcd8a9f4e3a511a158b1fd81addb37b2efb",
+  "universal_provider_catalog_coverage_contract_hash": "de994f19c278cb52977d57512164358f2781f4c297f3a7c12f8a197be845ae73",
   "universal_provider_catalog_coverage_contract_version": "rdllm-universal-provider-catalog-coverage-contract/v1",
   "well_known": {
     "path": "/.well-known/rdllm/universal-provider-catalog-coverage-contract.json",

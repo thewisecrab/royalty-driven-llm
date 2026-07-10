@@ -2,15 +2,15 @@
   "artifact_bindings": {
     "agent_tool_attribution_ledger_hash": "",
     "agent_tool_attribution_ledger_hash_reproducible": true,
-    "client_enforcement_hash": "726efff0a856fab31c93e9fadc3733706c966541c7d229b2efb0bb31d7bf5ffc",
+    "client_enforcement_hash": "03b394dd7967865295932fee71feb81c7d9958529e9f6bfa791deec9a9552c0e",
     "client_enforcement_hash_reproducible": true,
-    "persistent_memory_provenance_hash": "ec9525c9e15eec83192b6f6837a663d32d72efda171b08493420084df0776f94",
+    "persistent_memory_provenance_hash": "6fe90401785fceb98d0530c690a621727b3baf14dbaae1edef754076fa6a8205",
     "persistent_memory_provenance_hash_reproducible": true,
-    "reasoning_step_input_hash": "6b5859fa26f285f7b29a961ae00ea5bffb3f257082fe28c45d6e3f7085bdf7da",
-    "reasoning_step_root": "23ef7fac2a7b019a2e55c5f1f1702836cd78a6baf3328e3dad026fed5d22943b",
+    "reasoning_step_input_hash": "a1295caa5eb76d68eb90b3de4971b355bf123b2a96d7dbe3af6e9a182f8f2987",
+    "reasoning_step_root": "2980366367a8d75c978cd5e2fad705e8161021a3c45e01f84424410250ee1c21",
     "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
     "royalty_obligation_root": "ecfcc449a0690cc78243f6218bbd6f124e1b712c9e72c144eb67c1247b38c987",
-    "source_footer_delivery_hash": "b3b43bca32a53afaeac82e9d4c404679af4b143a7e8d60f6ce4b784bd97bde37",
+    "source_footer_delivery_hash": "33be8583f38cef4949429fff14342683dd4f422871331c893a304c62a92f8437",
     "source_footer_delivery_hash_reproducible": true
   },
   "case": {
@@ -48,7 +48,7 @@
     "source_text_disclosed": false,
     "tool_output_text_disclosed": false
   },
-  "private_reasoning_attribution_hash": "968a7097c5856d7c10ad3f7213b8022e6af0016c54d76ad0ec6a3bbe71dc5495",
+  "private_reasoning_attribution_hash": "b96a2f5e0089565390d3c3ef05b5642fe52fe5b1ba5613d5b80e6b46701455f2",
   "reasoning_policy": {
     "policy_hash": "db297ddec7a6a4e886512cc6a4803906e372297c081e961ba9e68aa6ad344c49",
     "policy_id": "policy:private-reasoning-source-carry-forward",
@@ -61,15 +61,15 @@
   },
   "reasoning_steps": [
     {
-      "audit_opening_commitment": "1c55daf3b1fb20d482b5992ecba21b0f988c2bbe96ef7d0928587b6598a2e291",
+      "audit_opening_commitment": "ec5561bc3d7584d3e0a26323dde4da943c8bcf1be1f5c76c6e9ed34f675a70bd",
       "claim_hashes": [
         "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e"
       ],
       "delegate_model_id": "",
       "input_artifact_hashes": [
-        "726efff0a856fab31c93e9fadc3733706c966541c7d229b2efb0bb31d7bf5ffc",
-        "b3b43bca32a53afaeac82e9d4c404679af4b143a7e8d60f6ce4b784bd97bde37",
-        "ec9525c9e15eec83192b6f6837a663d32d72efda171b08493420084df0776f94"
+        "03b394dd7967865295932fee71feb81c7d9958529e9f6bfa791deec9a9552c0e",
+        "33be8583f38cef4949429fff14342683dd4f422871331c893a304c62a92f8437",
+        "6fe90401785fceb98d0530c690a621727b3baf14dbaae1edef754076fa6a8205"
       ],
       "memory_ids": [
         "mem:reference-provenance-ledger-source"
@@ -79,7 +79,7 @@
       "private_trace_hash": "9df26c79c51e0d94bfa2ddd36355960eaedcb6f372d38a522119c183a12b9543",
       "private_trace_salt_hash": "ea858c24a821d13a4e3eb026d06d9ffcfcb9d0cb9b11bfe38b2e4a15dc415962",
       "raw_private_reasoning_disclosed": false,
-      "reasoning_step_hash": "27310b648443dc851f1e3e3648c051a3ede8095d54c38512bfc06e3c5ccc2c54",
+      "reasoning_step_hash": "6ff7df927299738c7ba6b6f572bb01c4e3b7b05717dc4954bb5074b1bf0a44a9",
       "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
       "sequence": 1,
       "source_labels": [
@@ -93,15 +93,15 @@
       ]
     },
     {
-      "audit_opening_commitment": "8a1ab25be8cff8fa83c116a224470a138791158270aa70855e77ebb0a3676ce8",
+      "audit_opening_commitment": "760d4bcc6e4296cb3002db1f1963e2587145ffc5b440e0a48458359ce735a823",
       "claim_hashes": [
         "399e7ff82b806e565de7e3985f11ff54bb00ce925e6ccd6c4327f412ac297f6e"
       ],
       "delegate_model_id": "model:rdllm-attribution-reviewer",
       "input_artifact_hashes": [
-        "726efff0a856fab31c93e9fadc3733706c966541c7d229b2efb0bb31d7bf5ffc",
-        "b3b43bca32a53afaeac82e9d4c404679af4b143a7e8d60f6ce4b784bd97bde37",
-        "ec9525c9e15eec83192b6f6837a663d32d72efda171b08493420084df0776f94"
+        "03b394dd7967865295932fee71feb81c7d9958529e9f6bfa791deec9a9552c0e",
+        "33be8583f38cef4949429fff14342683dd4f422871331c893a304c62a92f8437",
+        "6fe90401785fceb98d0530c690a621727b3baf14dbaae1edef754076fa6a8205"
       ],
       "memory_ids": [
         "mem:reference-provenance-ledger-source"
@@ -111,7 +111,7 @@
       "private_trace_hash": "1bc27e64c9aa8e3a9533b1583dca8d7360b4d1b8f29b4f39c9e78d518364fc39",
       "private_trace_salt_hash": "2a77d848326eae708fb868d0a415d68d50389f23ca4325918429851cec82e064",
       "raw_private_reasoning_disclosed": false,
-      "reasoning_step_hash": "ec573f490b368891bdf622a6f8d9acbc37029a286b4795014aaf66f4cf76c408",
+      "reasoning_step_hash": "a9067e706246df5152a8ed2a48d01aee185b7392c01c6c6a691ffa9ee1bf1992",
       "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
       "sequence": 2,
       "source_labels": [
@@ -152,7 +152,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "35fc05ff7f177c76eac6832a2904bd3a112a8a2721ff2050b3442d3c99f191d1"
+    "value": "8b049e1f35789fa64a14fcc740f1da561130dff5a252056bbb628985b331d726"
   },
   "summary": {
     "delegation_step_count": 1,

@@ -1,11 +1,11 @@
 {
   "artifact_bindings": {
-    "citation_footer_contract_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
+    "citation_footer_contract_hash": "6e21016c0fc330186a62c6b7c88c35329473ef11d07443403e70fbdde57115a2",
     "claim_source_attribution_report_hash": "8ae89a164bb0bf6169a0e163b09ad98dd9bd19cbc3a460cdc09c82bb32546a6a",
-    "rendered_attribution_audit_hash": "c6f4297a83058d8a3dfe646cb1db74894e1dd05671e9bb75c19336c7f10923ec",
-    "response_envelope_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140"
+    "rendered_attribution_audit_hash": "0bd62ed3cdc7ce2d30fc450be0ba27916a8d17111ae27e2b864e27741e67c5f3",
+    "response_envelope_hash": "1bc14c301e297d81bc848a5682a4921c8d5e372096d7a0297d9994eeaa5fddeb"
   },
-  "binding_report_hash": "c4eafe578d29332f67c356748f9d0bcac62dd33e2c8ea76aa4ef7f478bf8670e",
+  "binding_report_hash": "28d595dce4fbd8273670dcb2d01bb55bd1b5386b33d7bbe223fc1c38ac5eee08",
   "case": {
     "case_id": "artifact:evidence-region-binding",
     "status": "ready"
@@ -256,7 +256,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "5b61d21ca1a9ff4b6212347a7142a821eed72a27c97c5e6ca655c785639593b6"
+    "value": "d6ab5bd9258d67c36c4e4f412a338cc24c45d8e21d03b54dd1a9f97ae6b72c10"
   },
   "source_region_rows": [
     {

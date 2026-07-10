@@ -1389,10 +1389,10 @@
     }
   },
   "provider_onboarding_covenant_binding": {
-    "artifact_hash": "a22e88515ca90215ccbb820b6fdf99b2b643ec24d048d441bc9b61243e48777e",
+    "artifact_hash": "347ba1dc210acd1c2add8a2021cac0f965ff9f831b9ddf274c166ed7c1bc5a0d",
     "hash_reproducible": true,
     "level": "RDLLM-L175",
-    "payload_hash": "a22e88515ca90215ccbb820b6fdf99b2b643ec24d048d441bc9b61243e48777e",
+    "payload_hash": "347ba1dc210acd1c2add8a2021cac0f965ff9f831b9ddf274c166ed7c1bc5a0d",
     "present": true,
     "status": "ready"
   },
@@ -1543,7 +1543,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "1b2c1804f0447c37a5ca8b8c08d1682fdce94b70e680b95c91313d9a78269718"
+    "value": "f786d205937ae58da6f34010330e3422323bbdac32e7eda9992fbea34f32231b"
   },
   "summary": {
     "adapter_discovery_count": 18,
@@ -1567,7 +1567,7 @@
     "status": "ready",
     "target_certification_level": "RDLLM-L176"
   },
-  "universal_model_provider_registry_hash": "b6ca6e963a35e0fd5c92917781e55b1234c15b4acdf662e29a1b14d63c66b3c4",
+  "universal_model_provider_registry_hash": "701b3e2984f4e3124c53af85272840d47579f26ef7120ec59e141870d08f2721",
   "universal_model_provider_registry_version": "rdllm-universal-model-provider-registry/v1",
   "well_known": {
     "path": "/.well-known/rdllm/universal-model-provider-registry.json",

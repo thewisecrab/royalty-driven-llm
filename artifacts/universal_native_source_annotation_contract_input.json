@@ -13,7 +13,7 @@
       "route_id": "reference-route:cloud_hosted_provider:fine_tuning:13",
       "source_identity_hash": "e81a7e10d22292f122dc462764c5fdaa20f32c6aaf0019b6257fff09a076fdb3",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "d6c2b5859e000a5254168fb3ac2cc211797f58e1565ab12964515ecef852d7db"
     },
     "reference-route:cloud_hosted_provider:reasoning:1": {
@@ -29,7 +29,7 @@
       "route_id": "reference-route:cloud_hosted_provider:reasoning:1",
       "source_identity_hash": "0c4d4afed5c0536f31b2c8f31013f3d9d2e5ea5fe0baacbb25626f11a5ce31cd",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "2a73f44cbef1210222ed3d3eea31b241922c60f8955b7f5aa2ee93468e43fedb"
     },
     "reference-route:embedding_provider:tool_calling_agent:10": {
@@ -45,7 +45,7 @@
       "route_id": "reference-route:embedding_provider:tool_calling_agent:10",
       "source_identity_hash": "1e2650f432586d4d9a503d3e732cfbef05e24944ffadd7b31aa9f37b69493824",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "889ac076c07aa8541821d609b1fa4b53385229e66cf6fc9df9381e51b88b6790"
     },
     "reference-route:enterprise_private_model:audio_speech:5": {
@@ -61,7 +61,7 @@
       "route_id": "reference-route:enterprise_private_model:audio_speech:5",
       "source_identity_hash": "3ff0a3fa56a1c9d88e40fe2c0490102c6b0a61db391b07a56d3acbd7a8b1ecbb",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "314d3e78c4448f714a4e2c31ad32d378dd565a7c2bb926c4ce9a3482285650b5"
     },
     "reference-route:enterprise_private_model:gateway_router:17": {
@@ -77,7 +77,7 @@
       "route_id": "reference-route:enterprise_private_model:gateway_router:17",
       "source_identity_hash": "dbdf2937cff70d834963025c34c59a927a74dc7373c36f0e01a26b1ec7283171",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "22d679bd38acfeedfced8d70a62d459f04aa5f410b566474f4077f5e03b7bba6"
     },
     "reference-route:fine_tuning_provider:batch_generation:11": {
@@ -93,7 +93,7 @@
       "route_id": "reference-route:fine_tuning_provider:batch_generation:11",
       "source_identity_hash": "80af733d044a3a9761de493994e18a5084610f8571a764372c4e677f269c0e18",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "b32fd63bbd8f0d527d419afa923e7dd5013db456021f504cdfe061d04a703a11"
     },
     "reference-route:foundation_provider:streaming:12": {
@@ -109,7 +109,7 @@
       "route_id": "reference-route:foundation_provider:streaming:12",
       "source_identity_hash": "a1a5ef9ceb58a1b8dab24230fbcbcfd95625f5f19a7b2d15e736a50e359dd269",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "55902f3bce841a58b4113949368174d5b5125572c7d4b5fa7b575bc260f4e61c"
     },
     "reference-route:foundation_provider:text_chat:0": {
@@ -125,7 +125,7 @@
       "route_id": "reference-route:foundation_provider:text_chat:0",
       "source_identity_hash": "fdeeb5c885750d3919e65b65631267b22fd5740bbc483b794fb095bc9449b572",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "82a44936d2d57563d1fd3c54d3bf1f2657a31573010e0c2921bce7f1d671da89"
     },
     "reference-route:hosted_open_weight_service:image_generation:4": {
@@ -141,7 +141,7 @@
       "route_id": "reference-route:hosted_open_weight_service:image_generation:4",
       "source_identity_hash": "a4ba28532f92e1ed8aa55657edfbffa2429aa67d2dcf223a752bfb8244dbcc8a",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "8c08abf1f0190e2932305767f9519e05793e3b39ada36a04a3bb0ae591d759da"
     },
     "reference-route:hosted_open_weight_service:local_inference:16": {
@@ -157,7 +157,7 @@
       "route_id": "reference-route:hosted_open_weight_service:local_inference:16",
       "source_identity_hash": "42579d77d296cb6f42b53d6316553b2938a45d1c6a059d1344be35faba2457f4",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "c542733090e1d65216d805d70c1885ae9fb81f07756cb0fd9988adc8c377120e"
     },
     "reference-route:local_runtime:video_generation:6": {
@@ -173,7 +173,7 @@
       "route_id": "reference-route:local_runtime:video_generation:6",
       "source_identity_hash": "e0a168ad8cb5f68f5d12589a84972bcf1015ff66c86e478a182c748bae6051d2",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "74b522e64a26d7727029a400a6190cfdae343186023af1b86a15a9cbc3ae63de"
     },
     "reference-route:model_marketplace:long_context:2": {
@@ -189,7 +189,7 @@
       "route_id": "reference-route:model_marketplace:long_context:2",
       "source_identity_hash": "4c275264d2a99bc9dab7bbe60bce7d2f75631c7aedc970ae25a210785ae40ea7",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "130c4765b75e7bb46838318a2b2334cff7be2c69ba82f1821b109de02e06f5f4"
     },
     "reference-route:model_marketplace:retrieval_augmented:14": {
@@ -205,7 +205,7 @@
       "route_id": "reference-route:model_marketplace:retrieval_augmented:14",
       "source_identity_hash": "df7be932283308b7d46114427fac146a55e8796fdc6f5fb37f0d2fa9d6d7d330",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "e300d6235c83c6d02f41ca5173db71cd431b574d18be1f87e2f1b9703c050728"
     },
     "reference-route:multimodal_media_provider:code_generation:9": {
@@ -221,7 +221,7 @@
       "route_id": "reference-route:multimodal_media_provider:code_generation:9",
       "source_identity_hash": "86d24c4a11c098e6bdc528a593a3984cf03896f3eeff360df43e011ae5e40c2a",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "677fec0a6f912e04c43ea6764ed56a4b61581bb2a3f37dd92c869ce330f422fe"
     },
     "reference-route:open_weight_registry:embedding:7": {
@@ -237,7 +237,7 @@
       "route_id": "reference-route:open_weight_registry:embedding:7",
       "source_identity_hash": "daf29b935207d8ece1daefe1a6e1e8e5fb6f3fa09390b0e6d85e87683373fa13",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "227fb19affc7d8dbd632170d5a860ed8dacec78771eaea0e14a7ebecccc0699a"
     },
     "reference-route:regional_sovereign_provider:reranking:8": {
@@ -253,7 +253,7 @@
       "route_id": "reference-route:regional_sovereign_provider:reranking:8",
       "source_identity_hash": "458c47b1aea15f843527790ada52136b16986bee902ef11f385f042bb0fe5359",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "288ce75634bc6a31c3ff86204288a0dd7861ade063dd34dec4b525c865bcd801"
     },
     "reference-route:router_or_gateway:multimodal_vision:3": {
@@ -269,7 +269,7 @@
       "route_id": "reference-route:router_or_gateway:multimodal_vision:3",
       "source_identity_hash": "5f8050985bfbab9d0b58fdbfc575b21d3a551d87ce0fabe86c93a69b6f3f83ed",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "d7b4189ee055b5f66e0e6f977973a417e880b5bb8d82a0d12122145cd9d4b84e"
     },
     "reference-route:router_or_gateway:safety_moderation:15": {
@@ -285,7 +285,7 @@
       "route_id": "reference-route:router_or_gateway:safety_moderation:15",
       "source_identity_hash": "c9dfa83147a4d6c536f4e952fb7402fddac002e4fb4918578f287593425e489d",
       "source_locator_preserved": true,
-      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+      "verified_footer_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
       "verifier_hash": "810885653a45e18671244e7564782a979c8c4eabf1b0515c032731ab88516982"
     }
   },
@@ -1201,11 +1201,11 @@
   "universal_live_capability_discovery_contract": {
     "artifact_bindings": {
       "universal_model_capability_coverage_contract": {
-        "artifact_hash": "1173c549ad037f85f79480789896c96d2ce5b29fe5040d08c89fe482dd26baf4",
+        "artifact_hash": "9536128ebe94ae35d61f7678c90ea279ec30357a4f50eea9535f7ad4e4c70fc5",
         "hash_reproducible": true,
         "level": "RDLLM-L181",
         "minimum_level": "RDLLM-L181",
-        "payload_hash": "1173c549ad037f85f79480789896c96d2ce5b29fe5040d08c89fe482dd26baf4",
+        "payload_hash": "9536128ebe94ae35d61f7678c90ea279ec30357a4f50eea9535f7ad4e4c70fc5",
         "present": true,
         "ready": true,
         "status": "ready"
@@ -2585,7 +2585,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "0634b1f00af09c0e901cb14d791ce366c9ba711eb782b908b9e1f141970cd467"
+      "value": "8e695a456852c87652d5b9da8ea14e1935c9a4492424b8c3b3d80dc54b708481"
     },
     "summary": {
       "capability_discovery_count": 24,
@@ -2605,7 +2605,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L182"
     },
-    "universal_live_capability_discovery_contract_hash": "ee28a1e18bf0ca698ab38d77729c6f16ff122a06d36a5be1b022e3154fd54d6f",
+    "universal_live_capability_discovery_contract_hash": "a41f72bbff53f7bdac65ca9a1b9dedd8f30922a115324670380dc9b97f78316c",
     "universal_live_capability_discovery_contract_version": "rdllm-universal-live-capability-discovery-contract/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-live-capability-discovery-contract.json",
@@ -2625,31 +2625,31 @@
         "status": "ready"
       },
       "universal_runtime_route_binding_contract": {
-        "artifact_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
+        "artifact_hash": "87fea69c412fa156c382bfc28478a65c1852005724ca6576ce1c89944f1dba85",
         "hash_reproducible": true,
         "level": "RDLLM-L179",
         "minimum_level": "RDLLM-L179",
-        "payload_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
+        "payload_hash": "87fea69c412fa156c382bfc28478a65c1852005724ca6576ce1c89944f1dba85",
         "present": true,
         "ready": true,
         "status": "ready"
       },
       "universal_source_footer_enforcement_contract": {
-        "artifact_hash": "77be30e22d169412da9c454d3031d72e9b36ba0d368d18d2d9885b07b2b2a213",
+        "artifact_hash": "5bde5738f7e4a5c72353b2787ac7bb22c802a19465e55f5bbadf1276307d1953",
         "hash_reproducible": true,
         "level": "RDLLM-L177",
         "minimum_level": "RDLLM-L177",
-        "payload_hash": "77be30e22d169412da9c454d3031d72e9b36ba0d368d18d2d9885b07b2b2a213",
+        "payload_hash": "5bde5738f7e4a5c72353b2787ac7bb22c802a19465e55f5bbadf1276307d1953",
         "present": true,
         "ready": true,
         "status": "ready"
       },
       "universal_source_grounded_response_receipt": {
-        "artifact_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
+        "artifact_hash": "825fc472ec60a386f6117b202a9eae7b89fea238ee9def393b08052656f58b7f",
         "hash_reproducible": true,
         "level": "RDLLM-L171",
         "minimum_level": "RDLLM-L171",
-        "payload_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
+        "payload_hash": "825fc472ec60a386f6117b202a9eae7b89fea238ee9def393b08052656f58b7f",
         "present": true,
         "ready": true,
         "status": "ready"
@@ -2685,13 +2685,13 @@
     },
     "created_at": "2026-06-03T00:00:00Z",
     "evidence_roots": {
-      "combined_verified_source_footer_root": "7700e1116ab9cfba54e8c671f27635f9812fc0385a87373d378973ff70013fd5",
+      "combined_verified_source_footer_root": "e515110858ba588e16158c070b3f47436f767131eb915735fdede6ecc70a9785",
       "footer_response_surface_root": "b6703e99725544c9d2652d3ff546bd696c358ef00916e782b99044210db7562e",
       "footer_verification_stage_root": "c0fefd1b84a9cbdaa666b03155b6c532022c06290cbdef029889fb76695206a3",
       "negative_footer_reliance_root": "cc695404a524c3fd4364e30f433f2b8affdd9946ecc927c782d3d7cebc615f48",
       "support_dimension_root": "b9ca67b69e9f32a93e0e25a589f5e795cd89b37bd9a6f5a76708eefba37c5d75",
       "verified_footer_field_root": "48376592f38f8d75420f5e0cdccc8fbd776af0afd6a0a8d46e5acdae47ce2e89",
-      "verified_footer_root": "9d0a9ac176aa438bba417e649054904efbd5383d851343b07e673af8f8826906"
+      "verified_footer_root": "193f42aabada70c67ae2f8136da7880a8fce35e7f0490b5173e46a452596f893"
     },
     "footer_response_surface_rows": {
       "api_json": {
@@ -3157,7 +3157,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "1d718bbadbc891aed54bc39f0eeb4f99f9feb2b3be2469c08ff90b2f1204e7a6"
+      "value": "a16715535d80261c0fe7f4c2975dc921aa3d2ca903a40021fe81a4f45d3af649"
     },
     "source_footer_reliance_decision": {
       "claim_source_reliance_allowed": true,
@@ -3268,7 +3268,7 @@
         "verifier_hash": "1b7a9d7287980fbfe52ddfbb4bf43583fb6b4e14470aa314eb8f7f7a1829c313"
       }
     },
-    "universal_verified_source_footer_contract_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
+    "universal_verified_source_footer_contract_hash": "645bcd15c2afc1cf518d19a0f5d8a62a3afc94e5d6704d2f88b97c79c145e1e4",
     "universal_verified_source_footer_contract_version": "rdllm-universal-verified-source-footer-contract/v1",
     "verified_footer_field_rows": {
       "attribution_reason": {
@@ -3449,7 +3449,7 @@
         "relevant_to_claims": true,
         "rendered_footer_hash": "696519ffed2feeeb0f5e93b6b7779cdb38cc6d0db4e98bd82cd568d1bfc08d8f",
         "route_binding_matched": true,
-        "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
+        "runtime_route_binding_hash": "87fea69c412fa156c382bfc28478a65c1852005724ca6576ce1c89944f1dba85",
         "settlement_state": "eligible",
         "settlement_state_visible": true,
         "source_content_hash": "c77c0a9cd2be4e726c036be6c86e77d36a8a94a434013d467057c7280fccd076",
@@ -3488,7 +3488,7 @@
         "relevant_to_claims": true,
         "rendered_footer_hash": "d5aa7b3408edbd1e37d0b1316fff4b15d37488adc15ce24a8b4d4f701a648224",
         "route_binding_matched": true,
-        "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
+        "runtime_route_binding_hash": "87fea69c412fa156c382bfc28478a65c1852005724ca6576ce1c89944f1dba85",
         "settlement_state": "eligible",
         "settlement_state_visible": true,
         "source_content_hash": "7d2b9283b1309bcd49d38e7e7968815313d21ca36ca9872d0660f473387525db",
@@ -3527,7 +3527,7 @@
         "relevant_to_claims": true,
         "rendered_footer_hash": "3eb3529da4ec14ee5d729092621151790e1e9e98e9b269e901018b2beec36fe8",
         "route_binding_matched": true,
-        "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
+        "runtime_route_binding_hash": "87fea69c412fa156c382bfc28478a65c1852005724ca6576ce1c89944f1dba85",
         "settlement_state": "eligible",
         "settlement_state_visible": true,
         "source_content_hash": "e25349343c8bf317397445e90cb4f226c03d9d18bc3852ef647a30bfe7707843",

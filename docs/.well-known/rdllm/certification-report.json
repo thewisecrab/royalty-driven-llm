@@ -5940,7 +5940,7 @@
     {
       "artifacts": {
         "inspectable_source_count": 3,
-        "source_availability_report_hash": "3ca6a1106f1e0ec37ef1e62d93bbeea6f8e5c8a3c918dfc0c0998740d65c4f37"
+        "source_availability_report_hash": "4488a8ab7eb425d6408add149cb3fa0fc57209acde91595542200d4ec4498e74"
       },
       "checks": {
         "all_footer_sources_resolve_to_snapshots": {
@@ -6230,7 +6230,7 @@
     },
     {
       "artifacts": {
-        "evidence_sufficiency_report_hash": "ba7d617290c88302e0873ae3ab6623150c029a8e29ab558a03da88b182af8a8f",
+        "evidence_sufficiency_report_hash": "53a65fccdd0f145d7700bac4a1de0ac052e20f2480ec888094301cd8a8e548d5",
         "sufficient_claim_count": 6
       },
       "checks": {
@@ -7280,7 +7280,7 @@
     },
     {
       "artifacts": {
-        "counterevidence_report_hash": "1b31618a5d8871cc0c0e5a6f615317e8e852cc0103b17b614624b7c9218ae1e9",
+        "counterevidence_report_hash": "6040cfa8db22d54e674eb4d86f9527979124839143a82666863c4349cbd4d4fb",
         "unaddressed_counterevidence_count": 0
       },
       "checks": {
@@ -42730,7 +42730,7 @@
       ]
     }
   },
-  "report_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+  "report_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
   "suite": "rdllm-reference-conformance",
   "summary": {
     "case_count": 187,

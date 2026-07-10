@@ -1,5 +1,5 @@
 {
-  "attestation_hash": "2fd4aae21c12c56ced928785ec8acc7140fdedbe0fcd3b2f5a4c784d304d38dd",
+  "attestation_hash": "7af5cece554505454b92a50082d9035d011d1075eceab8f5790403348c74a6e0",
   "attestation_version": "rdllm-certification-attestation/v1",
   "certification_summary": {
     "case_count": 187,
@@ -27,8 +27,8 @@
     "schema_declared": true
   },
   "commitments": {
-    "case_status_root": "56e10953c641d7f83fb63f8b1f05e5b7586ce7f3d4541de34fcbf851d060926f",
-    "certification_report_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+    "case_status_root": "df39fd2166b5edb568249437d386acc80244e49089c8d9b4df57365fa1257bc5",
+    "certification_report_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
     "failed_case_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "implementation_hash": "90aa4de31ffc5c5c422e424e937f63f86ecea3e687b36918bf97c28b28ed7a39",
     "levels_root": "b842624f792dcaeec60f1a2261d3369183e59e8597f671fac1693487eb4b392e",
@@ -48,12 +48,12 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "3ee2e76af41bc59988c694c5a23688643d53bc6d393a87cb1d287611398c33c6"
+    "value": "d85dad3e2f07f9414e666d913f805cdb10d23839d9f7b62ea62f832a04dbbb9a"
   },
   "subject": {
-    "case_status_root": "56e10953c641d7f83fb63f8b1f05e5b7586ce7f3d4541de34fcbf851d060926f",
+    "case_status_root": "df39fd2166b5edb568249437d386acc80244e49089c8d9b4df57365fa1257bc5",
     "case_status_row_count": 187,
-    "certification_report_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+    "certification_report_hash": "88b4d4d1009bb970ca7e7a0b767768809f4decee03adf0d848852918e760651a",
     "certification_version": "rdllm-certification/v1",
     "implementation_hash": "90aa4de31ffc5c5c422e424e937f63f86ecea3e687b36918bf97c28b28ed7a39",
     "issued_at": "2026-05-29T00:00:00Z",

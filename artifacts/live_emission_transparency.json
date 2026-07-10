@@ -1,21 +1,21 @@
 {
   "append_only_consistency_rows": [
     {
-      "consistency_hash": "14b8e3d8b43e33428c9308bdeaf0d0b9ba2a1732e8fa191922f0591ecfc21b73",
+      "consistency_hash": "e849cd4f0089ad9d57763571e3d6fdd5d242de8e208c73850dd00230df071728",
       "current_log_id": "live-latest",
-      "current_root": "39e9a2c4544894844a3beb1a5bb3f2a80d30cd486efc6c8641e29dbe48cc3e9d",
+      "current_root": "02ef969f67a59360d35402845f1ea35d3461c68a857ca439e0d41232227d034a",
       "current_tree_size": 7,
       "decision": "consistent_prefix",
       "prefix_consistent": true,
       "previous_log_id": "live-prefix",
-      "previous_root": "ccde1ed0d12febf328c49d9e7c1280887ac767a088f3c1e7f0de07aa9f2e2442",
+      "previous_root": "cb89ef7de49e904cd07850a499733a2b6142b00b86b8bda7ec849e390e5747fc",
       "previous_tree_size": 1
     }
   ],
   "artifact_bindings": {
-    "live_emission_witness_hash": "9563df12db9dbe89e4ec73a43c86c8ae83e239153274e91096434da5ea753d0e",
+    "live_emission_witness_hash": "3b8e62c00064a7c7dcbe4a685e50e17b8ce7a41ddb7158ca68ce809ff54c0033",
     "live_emission_witness_hash_reproducible": true,
-    "live_emission_witness_payload_hash": "a01279333b1db4feaa99b63ae0b93910539419b7e98a5cff35eab32a54a6f925"
+    "live_emission_witness_payload_hash": "15042f3ab9098e507e87ecd065d1cc7c2bc9acf687a002cbcf621226cc4e9c1e"
   },
   "checks": {
     "append_only_prefix_consistency": true,
@@ -39,153 +39,153 @@
     "transparency_tree_sizes_match": true
   },
   "commitments": {
-    "append_only_consistency_root": "14b8e3d8b43e33428c9308bdeaf0d0b9ba2a1732e8fa191922f0591ecfc21b73",
-    "live_subject_root": "59b78e4812d58e82015503582372d8d93ea240b26071225fe9524cb8911f8bdb",
-    "log_snapshot_root": "0c0a3e69e2eb6863e388c79e0788bb1a6092e8d2f55bed9b73d990ac5c981b36",
-    "required_subject_root": "0aa97d866e3efb08bb01d9e1150cdbde3ffa1695c09ecb3ef5f0c65c7f9cb70c",
+    "append_only_consistency_root": "e849cd4f0089ad9d57763571e3d6fdd5d242de8e208c73850dd00230df071728",
+    "live_subject_root": "6afc1fd8fc6a657f8c462932c0f0e973a598d6ce238ba388883d7b65110ccddc",
+    "log_snapshot_root": "8ec14d4a686acce2ef9c1786876cebb139e37707ad314cdf6c06ebd0a0fcf022",
+    "required_subject_root": "39516cf1344d6fb36dec657d507e7ac5b6559ab94e192ae8572a14ad5685bff9",
     "split_view_conflict_root": "2e1cfa82b035c26cbbbdae632cea070514eb8b773f616aaeaf668e2f0be8f10d",
-    "transparency_log_binding_root": "39278b331253d06bba507bfe36b3a52a9cee9a7f58f4270ac33ece1368c93b02"
+    "transparency_log_binding_root": "b2c3d999e7f0f5d9d235cedce295c8cfd91a76025b76c4a041087290819f473b"
   },
   "created_at": "2026-05-31T00:00:00Z",
   "issuer": "rdllm-local-demo",
-  "live_emission_transparency_hash": "b10d39148df79e95e8ab0e2f44b0e9a9634331d1059a0f4f499847ba8e7e0d65",
+  "live_emission_transparency_hash": "cc79f19ff4ff214cd7462a210df8ce96471d79f34f6208df3e43c00cd751f386",
   "live_subject_rows": [
     {
-      "live_witness_hash": "9563df12db9dbe89e4ec73a43c86c8ae83e239153274e91096434da5ea753d0e",
+      "live_witness_hash": "3b8e62c00064a7c7dcbe4a685e50e17b8ce7a41ddb7158ca68ce809ff54c0033",
       "observed_at": "2026-05-31T00:00:00Z",
       "organization_id": "org:witness-a",
       "phase": "completion",
-      "preflight_or_completion_subject_hash": "154e7d1d7b18a207ec1403d7fd487ee1159e82db96730ef02a4e28c0e04549ad",
+      "preflight_or_completion_subject_hash": "c5aed97d7963d725ee0fb5ebedd92030b7c0decc4d0ffa994cb22973bcd26cbd",
       "replay_verdict": "accepted",
       "signature_algorithm": "HMAC-SHA256",
-      "subject_hash": "acfe2d60e5639c3e59f86ab011a4230291a301f5929f859b2874d44d790dfaf5",
-      "subject_payload_hash": "69e2c2c51cf62fcb0f32419d5247d71b99f34f4197c380c8fb31add45780eeb5",
-      "subject_row_hash": "69e2c2c51cf62fcb0f32419d5247d71b99f34f4197c380c8fb31add45780eeb5",
+      "subject_hash": "8d993d74269824299c7ffd25fc1abf48513a5378e57045a482b728e911f4129f",
+      "subject_payload_hash": "1e29faca18e4b8436d38c7177e7eb379661d6182065ebab32f9b625950607712",
+      "subject_row_hash": "1e29faca18e4b8436d38c7177e7eb379661d6182065ebab32f9b625950607712",
       "subject_type": "rdllm-live-emission-witness-attestation/v1",
       "witness_id": "witness-a",
       "witness_key_hash": "aaa92e3eb75c8493febc9125267fc7fcfb999598e46ce6e7d93b9c4d94aa3074"
     },
     {
-      "live_witness_hash": "9563df12db9dbe89e4ec73a43c86c8ae83e239153274e91096434da5ea753d0e",
+      "live_witness_hash": "3b8e62c00064a7c7dcbe4a685e50e17b8ce7a41ddb7158ca68ce809ff54c0033",
       "observed_at": "2026-05-31T00:00:00Z",
       "organization_id": "org:witness-b",
       "phase": "completion",
-      "preflight_or_completion_subject_hash": "154e7d1d7b18a207ec1403d7fd487ee1159e82db96730ef02a4e28c0e04549ad",
+      "preflight_or_completion_subject_hash": "c5aed97d7963d725ee0fb5ebedd92030b7c0decc4d0ffa994cb22973bcd26cbd",
       "replay_verdict": "accepted",
       "signature_algorithm": "HMAC-SHA256",
-      "subject_hash": "26e3e0ac7d0da88883dba90779aabe5e92cdadcf63f259f0d5b98fd573eaf315",
-      "subject_payload_hash": "721411b87e80dad11db33bbc790e33c1da4a9a6b5be0fec51d6fae8cad76d9af",
-      "subject_row_hash": "721411b87e80dad11db33bbc790e33c1da4a9a6b5be0fec51d6fae8cad76d9af",
+      "subject_hash": "185f213c640aafca25bddc250692d7c87a0b5954bccb0883bbd7551299b46e2c",
+      "subject_payload_hash": "ef5fa8750cae05994c2d4f6fb88a0bd8de04fc8801f43b419f7129bf6ab8c0c7",
+      "subject_row_hash": "ef5fa8750cae05994c2d4f6fb88a0bd8de04fc8801f43b419f7129bf6ab8c0c7",
       "subject_type": "rdllm-live-emission-witness-attestation/v1",
       "witness_id": "witness-b",
       "witness_key_hash": "e340231c0e3d0c656bfc9d628a7fb415c16117c6981f344eedfcdfbe607b03a4"
     },
     {
-      "live_witness_hash": "9563df12db9dbe89e4ec73a43c86c8ae83e239153274e91096434da5ea753d0e",
+      "live_witness_hash": "3b8e62c00064a7c7dcbe4a685e50e17b8ce7a41ddb7158ca68ce809ff54c0033",
       "observed_at": "2026-05-31T00:00:00Z",
       "organization_id": "org:witness-c",
       "phase": "completion",
-      "preflight_or_completion_subject_hash": "154e7d1d7b18a207ec1403d7fd487ee1159e82db96730ef02a4e28c0e04549ad",
+      "preflight_or_completion_subject_hash": "c5aed97d7963d725ee0fb5ebedd92030b7c0decc4d0ffa994cb22973bcd26cbd",
       "replay_verdict": "accepted",
       "signature_algorithm": "HMAC-SHA256",
-      "subject_hash": "6a12732765454284ccdb2c6d18264dc0fbbf126ae79180352c1a293d82c977b8",
-      "subject_payload_hash": "c8b221a54d5d0063f270f3cf4fc90015e09accaf93438e9f9fdfa914b17234cc",
-      "subject_row_hash": "c8b221a54d5d0063f270f3cf4fc90015e09accaf93438e9f9fdfa914b17234cc",
+      "subject_hash": "7f04af1706dabfc9aea4e9170aad458abd48ff0459d04f11b8c6e2e24e70a32e",
+      "subject_payload_hash": "ca515967fae62fa593612d4e4df6c474cbfd83f89aff4008b9dc5ea5f59574b4",
+      "subject_row_hash": "ca515967fae62fa593612d4e4df6c474cbfd83f89aff4008b9dc5ea5f59574b4",
       "subject_type": "rdllm-live-emission-witness-attestation/v1",
       "witness_id": "witness-c",
       "witness_key_hash": "9524fc77669d898d3f3195eb55f16027b71ae324f0111075a36f353064089337"
     },
     {
-      "live_witness_hash": "9563df12db9dbe89e4ec73a43c86c8ae83e239153274e91096434da5ea753d0e",
+      "live_witness_hash": "3b8e62c00064a7c7dcbe4a685e50e17b8ce7a41ddb7158ca68ce809ff54c0033",
       "observed_at": "2026-05-31T00:00:00Z",
       "organization_id": "org:witness-a",
       "phase": "preflight",
-      "preflight_or_completion_subject_hash": "e7a127b6d263e69d90229abd3e719c691205338ac3bf24d4c3255b68da5d3ce5",
+      "preflight_or_completion_subject_hash": "57218302fb7148fcda6b7faf374857a39786b040cc9b444a586a07d04547537c",
       "replay_verdict": "accepted",
       "signature_algorithm": "HMAC-SHA256",
-      "subject_hash": "1e2a5830a497e75d3987d280f8f7a228103ad40cd7d92c876b524c440ef27fc9",
-      "subject_payload_hash": "9066763a8149567748ae35d83920e3e20c87fd4729a7fc56be16c9a5a6858c6e",
-      "subject_row_hash": "9066763a8149567748ae35d83920e3e20c87fd4729a7fc56be16c9a5a6858c6e",
+      "subject_hash": "85a095245f1ff332304bbc2d52c71e027d7528201dff2e73669feecc5bdae3c0",
+      "subject_payload_hash": "88cef1a8f4912611852289e319860c476ed8662558e6a110998ee30248c579d8",
+      "subject_row_hash": "88cef1a8f4912611852289e319860c476ed8662558e6a110998ee30248c579d8",
       "subject_type": "rdllm-live-emission-witness-attestation/v1",
       "witness_id": "witness-a",
       "witness_key_hash": "aaa92e3eb75c8493febc9125267fc7fcfb999598e46ce6e7d93b9c4d94aa3074"
     },
     {
-      "live_witness_hash": "9563df12db9dbe89e4ec73a43c86c8ae83e239153274e91096434da5ea753d0e",
+      "live_witness_hash": "3b8e62c00064a7c7dcbe4a685e50e17b8ce7a41ddb7158ca68ce809ff54c0033",
       "observed_at": "2026-05-31T00:00:00Z",
       "organization_id": "org:witness-b",
       "phase": "preflight",
-      "preflight_or_completion_subject_hash": "e7a127b6d263e69d90229abd3e719c691205338ac3bf24d4c3255b68da5d3ce5",
+      "preflight_or_completion_subject_hash": "57218302fb7148fcda6b7faf374857a39786b040cc9b444a586a07d04547537c",
       "replay_verdict": "accepted",
       "signature_algorithm": "HMAC-SHA256",
-      "subject_hash": "b3b7f800925372697cc7882a582febe0e4a50478f8e9b6acc5be22e954396d0d",
-      "subject_payload_hash": "b37fa0a3564fc1b090c162ce5cc55bbf029180c158a2284b4a09ac55dd545731",
-      "subject_row_hash": "b37fa0a3564fc1b090c162ce5cc55bbf029180c158a2284b4a09ac55dd545731",
+      "subject_hash": "f42e7b40f47c33c930b7dc6483d462747e261d789d546f0f10187ea93faf4856",
+      "subject_payload_hash": "1e28b40571e552855a4eec7cdde0542a107ae006ac4a99c9a72d9a642a13801b",
+      "subject_row_hash": "1e28b40571e552855a4eec7cdde0542a107ae006ac4a99c9a72d9a642a13801b",
       "subject_type": "rdllm-live-emission-witness-attestation/v1",
       "witness_id": "witness-b",
       "witness_key_hash": "e340231c0e3d0c656bfc9d628a7fb415c16117c6981f344eedfcdfbe607b03a4"
     },
     {
-      "live_witness_hash": "9563df12db9dbe89e4ec73a43c86c8ae83e239153274e91096434da5ea753d0e",
+      "live_witness_hash": "3b8e62c00064a7c7dcbe4a685e50e17b8ce7a41ddb7158ca68ce809ff54c0033",
       "observed_at": "2026-05-31T00:00:00Z",
       "organization_id": "org:witness-c",
       "phase": "preflight",
-      "preflight_or_completion_subject_hash": "e7a127b6d263e69d90229abd3e719c691205338ac3bf24d4c3255b68da5d3ce5",
+      "preflight_or_completion_subject_hash": "57218302fb7148fcda6b7faf374857a39786b040cc9b444a586a07d04547537c",
       "replay_verdict": "accepted",
       "signature_algorithm": "HMAC-SHA256",
-      "subject_hash": "98b265aad076be5f112210eb9234051aa225f5927e1413249daaf0057eb95926",
-      "subject_payload_hash": "189f697ca8572caa1c46932dc9f37d9da5c7e04bbddec35a253509a73099c19c",
-      "subject_row_hash": "189f697ca8572caa1c46932dc9f37d9da5c7e04bbddec35a253509a73099c19c",
+      "subject_hash": "c5e4d9905cdfd65493093ab41f9276bc25985e6d4010fc34c8fdbd2099bb56b8",
+      "subject_payload_hash": "f8c25dd908ef924583a446dfd1d6eabee0e5af4d17b55457b1375a63219f48e5",
+      "subject_row_hash": "f8c25dd908ef924583a446dfd1d6eabee0e5af4d17b55457b1375a63219f48e5",
       "subject_type": "rdllm-live-emission-witness-attestation/v1",
       "witness_id": "witness-c",
       "witness_key_hash": "9524fc77669d898d3f3195eb55f16027b71ae324f0111075a36f353064089337"
     },
     {
-      "chunk_subject_root": "e28d6bf1a934930f9335be431b161c11aa7384e34fcace1046f610951be8a715",
-      "completion_subject_hash": "154e7d1d7b18a207ec1403d7fd487ee1159e82db96730ef02a4e28c0e04549ad",
-      "live_witness_hash": "9563df12db9dbe89e4ec73a43c86c8ae83e239153274e91096434da5ea753d0e",
+      "chunk_subject_root": "c7334415b45f4fa8ebf35048bec84eded037586bd7f916ac21412a923bdd0cf3",
+      "completion_subject_hash": "c5aed97d7963d725ee0fb5ebedd92030b7c0decc4d0ffa994cb22973bcd26cbd",
+      "live_witness_hash": "3b8e62c00064a7c7dcbe4a685e50e17b8ce7a41ddb7158ca68ce809ff54c0033",
       "minimum_input_level": "RDLLM-L83",
-      "preflight_subject_hash": "e7a127b6d263e69d90229abd3e719c691205338ac3bf24d4c3255b68da5d3ce5",
-      "subject_hash": "9563df12db9dbe89e4ec73a43c86c8ae83e239153274e91096434da5ea753d0e",
-      "subject_payload_hash": "d863c1aefb373a925a66c362e4dcbbf6fa3df7a5f1f392d04b7191000187d0fa",
-      "subject_row_hash": "d863c1aefb373a925a66c362e4dcbbf6fa3df7a5f1f392d04b7191000187d0fa",
+      "preflight_subject_hash": "57218302fb7148fcda6b7faf374857a39786b040cc9b444a586a07d04547537c",
+      "subject_hash": "3b8e62c00064a7c7dcbe4a685e50e17b8ce7a41ddb7158ca68ce809ff54c0033",
+      "subject_payload_hash": "f79bfe9b51c6eb12e5d1d4afda50ff9148b8bdf439c2b959d6734d04d5a3b06f",
+      "subject_row_hash": "f79bfe9b51c6eb12e5d1d4afda50ff9148b8bdf439c2b959d6734d04d5a3b06f",
       "subject_type": "rdllm-live-emission-witness-report/v1",
       "target_certification_level": "RDLLM-L84",
-      "witness_attestation_root": "cd34df281cacb4023194b93bd6fe98d2e7899e4e18ac507c0b4730146cc24e60",
+      "witness_attestation_root": "a4250c6421060fcd77f5b75b484203b3ffb26f4dda87ba63450066bc3be6445f",
       "witness_version": "rdllm-live-emission-witness/v1"
     }
   ],
   "log_snapshot_rows": [
     {
-      "computed_root": "ccde1ed0d12febf328c49d9e7c1280887ac767a088f3c1e7f0de07aa9f2e2442",
+      "computed_root": "cb89ef7de49e904cd07850a499733a2b6142b00b86b8bda7ec849e390e5747fc",
       "computed_tree_size": 1,
-      "declared_root": "ccde1ed0d12febf328c49d9e7c1280887ac767a088f3c1e7f0de07aa9f2e2442",
+      "declared_root": "cb89ef7de49e904cd07850a499733a2b6142b00b86b8bda7ec849e390e5747fc",
       "declared_tree_size": 1,
       "entries_are_sequential": true,
       "entries_have_required_hashes": true,
       "entry_count": 1,
       "entry_hashes_reproducible": true,
-      "entry_root": "fa540df8f4b95005b46168f5dd31a3a07785b78661cea2407fe4bde14da0a924",
+      "entry_root": "d3e8de53c1cad302ee9e022076ca43b4d88fb114b2f5e7f7f0d866bfcc81b303",
       "log_id": "live-prefix",
       "log_version": "rdllm-live-emission-transparency-log/v1",
       "root_matches_entries": true,
-      "snapshot_hash": "c77aeaa3bf31e9434f74603c277ce5acfa32a6b1f5abb212e403b2e6e631d86b",
+      "snapshot_hash": "febcb7b695106d331afa7fcf3bafceb4e4a0f286ce7b23fb39f783e0d6936358",
       "tree_size_matches_entries": true
     },
     {
-      "computed_root": "39e9a2c4544894844a3beb1a5bb3f2a80d30cd486efc6c8641e29dbe48cc3e9d",
+      "computed_root": "02ef969f67a59360d35402845f1ea35d3461c68a857ca439e0d41232227d034a",
       "computed_tree_size": 7,
-      "declared_root": "39e9a2c4544894844a3beb1a5bb3f2a80d30cd486efc6c8641e29dbe48cc3e9d",
+      "declared_root": "02ef969f67a59360d35402845f1ea35d3461c68a857ca439e0d41232227d034a",
       "declared_tree_size": 7,
       "entries_are_sequential": true,
       "entries_have_required_hashes": true,
       "entry_count": 7,
       "entry_hashes_reproducible": true,
-      "entry_root": "a7eec6867d9d36bd7c0c0b8afb92e63133ae6a3746620219aa9f145ae2898f5b",
+      "entry_root": "ddbe8ce1d493bdef94ac8e958bfc6c385bc70671c0e8d16781d9e8b04098e906",
       "log_id": "live-latest",
       "log_version": "rdllm-live-emission-transparency-log/v1",
       "root_matches_entries": true,
-      "snapshot_hash": "9bf725ca10867af57f25ad5ab5896311ab9950b63842158c83c2111017f2b62e",
+      "snapshot_hash": "02c83ed82d18030e7efca48dd71f5031d3950f827d2886e7e39c83c770ec613c",
       "tree_size_matches_entries": true
     }
   ],
@@ -213,23 +213,23 @@
       "entry_index": 1,
       "entry_type_matches": true,
       "inclusion_proof": {
-        "leaf_hash": "bdeb10110e9326736fa919a01cd22025048c7eecc1ae9c51a5622682fa5177ff",
+        "leaf_hash": "8117c05364a1eea7881176d0bc09948bece0aa2203a8bec5c927e98dd57dc020",
         "leaf_index": 1,
         "path": [
           {
-            "hash": "ccde1ed0d12febf328c49d9e7c1280887ac767a088f3c1e7f0de07aa9f2e2442",
+            "hash": "cb89ef7de49e904cd07850a499733a2b6142b00b86b8bda7ec849e390e5747fc",
             "side": "left"
           },
           {
-            "hash": "31ae36e3cbdbe5c2938f07e8c5408f2f9dedbfda19af691768d8f26d3971d71e",
+            "hash": "a7ce0eeee89b88a4354321b30df22ebc432bbee28318eedaea799621f8900155",
             "side": "right"
           },
           {
-            "hash": "c37708127762456d52ba11d1ba5c1f781fbffeab507f86a8163cec284d3b18f6",
+            "hash": "c8b19a5ff56079f122cc443cb86e7099b06fc8fbee9d47c5c7c07eb7769cf065",
             "side": "right"
           }
         ],
-        "root": "39e9a2c4544894844a3beb1a5bb3f2a80d30cd486efc6c8641e29dbe48cc3e9d",
+        "root": "02ef969f67a59360d35402845f1ea35d3461c68a857ca439e0d41232227d034a",
         "tree_size": 7
       },
       "inclusion_proof_valid": true,
@@ -237,32 +237,32 @@
       "latest_tree_size": 7,
       "payload_hash_matches": true,
       "present": true,
-      "required_subject_row_hash": "615292fea5a721c1d13dc0df431a7a8aa01b304a5054efe705352f55aaf4d84b",
-      "subject_hash": "acfe2d60e5639c3e59f86ab011a4230291a301f5929f859b2874d44d790dfaf5",
-      "subject_payload_hash": "69e2c2c51cf62fcb0f32419d5247d71b99f34f4197c380c8fb31add45780eeb5",
+      "required_subject_row_hash": "1f561c7121564c91e410a2e7d63ece6257dd763b94195cfe45ecd3254eb9011b",
+      "subject_hash": "8d993d74269824299c7ffd25fc1abf48513a5378e57045a482b728e911f4129f",
+      "subject_payload_hash": "1e29faca18e4b8436d38c7177e7eb379661d6182065ebab32f9b625950607712",
       "subject_type": "rdllm-live-emission-witness-attestation/v1"
     },
     {
       "entry_index": 2,
       "entry_type_matches": true,
       "inclusion_proof": {
-        "leaf_hash": "af351442c5cd22d1d8311a953466f5348ae1e4a319587e963c80ec6a8f6e4b4b",
+        "leaf_hash": "8dca8210462f04e598ec3e53171c5299a6c600c7e953d9f40160cad733e9c58e",
         "leaf_index": 2,
         "path": [
           {
-            "hash": "4792bf1976d3c1ead03f76be70a723d3cd66be5a4e915c74b5bea5249ce2ab78",
+            "hash": "c1e02e04bb4a55809bd056e659df0ba9ece6205c87424e0ba1959e11e6800e3c",
             "side": "right"
           },
           {
-            "hash": "021f6be4d51eb1bd4418244cae28d01d68ed361e31dc8aaaec0420586a6adb13",
+            "hash": "81165062eb9233d7bd28b7d817be2777716cc2b5250ceb6ba3d7a0e80461e1b1",
             "side": "left"
           },
           {
-            "hash": "c37708127762456d52ba11d1ba5c1f781fbffeab507f86a8163cec284d3b18f6",
+            "hash": "c8b19a5ff56079f122cc443cb86e7099b06fc8fbee9d47c5c7c07eb7769cf065",
             "side": "right"
           }
         ],
-        "root": "39e9a2c4544894844a3beb1a5bb3f2a80d30cd486efc6c8641e29dbe48cc3e9d",
+        "root": "02ef969f67a59360d35402845f1ea35d3461c68a857ca439e0d41232227d034a",
         "tree_size": 7
       },
       "inclusion_proof_valid": true,
@@ -270,32 +270,32 @@
       "latest_tree_size": 7,
       "payload_hash_matches": true,
       "present": true,
-      "required_subject_row_hash": "8d5d4ff9ed252b4f44d41eae83bbc6bf056034b972392e597b858c4a6440c6af",
-      "subject_hash": "26e3e0ac7d0da88883dba90779aabe5e92cdadcf63f259f0d5b98fd573eaf315",
-      "subject_payload_hash": "721411b87e80dad11db33bbc790e33c1da4a9a6b5be0fec51d6fae8cad76d9af",
+      "required_subject_row_hash": "57632cb77e5b1a00264899d9805c3a8c49a4d647ac917eff790ae54c25fac9a8",
+      "subject_hash": "185f213c640aafca25bddc250692d7c87a0b5954bccb0883bbd7551299b46e2c",
+      "subject_payload_hash": "ef5fa8750cae05994c2d4f6fb88a0bd8de04fc8801f43b419f7129bf6ab8c0c7",
       "subject_type": "rdllm-live-emission-witness-attestation/v1"
     },
     {
       "entry_index": 3,
       "entry_type_matches": true,
       "inclusion_proof": {
-        "leaf_hash": "4792bf1976d3c1ead03f76be70a723d3cd66be5a4e915c74b5bea5249ce2ab78",
+        "leaf_hash": "c1e02e04bb4a55809bd056e659df0ba9ece6205c87424e0ba1959e11e6800e3c",
         "leaf_index": 3,
         "path": [
           {
-            "hash": "af351442c5cd22d1d8311a953466f5348ae1e4a319587e963c80ec6a8f6e4b4b",
+            "hash": "8dca8210462f04e598ec3e53171c5299a6c600c7e953d9f40160cad733e9c58e",
             "side": "left"
           },
           {
-            "hash": "021f6be4d51eb1bd4418244cae28d01d68ed361e31dc8aaaec0420586a6adb13",
+            "hash": "81165062eb9233d7bd28b7d817be2777716cc2b5250ceb6ba3d7a0e80461e1b1",
             "side": "left"
           },
           {
-            "hash": "c37708127762456d52ba11d1ba5c1f781fbffeab507f86a8163cec284d3b18f6",
+            "hash": "c8b19a5ff56079f122cc443cb86e7099b06fc8fbee9d47c5c7c07eb7769cf065",
             "side": "right"
           }
         ],
-        "root": "39e9a2c4544894844a3beb1a5bb3f2a80d30cd486efc6c8641e29dbe48cc3e9d",
+        "root": "02ef969f67a59360d35402845f1ea35d3461c68a857ca439e0d41232227d034a",
         "tree_size": 7
       },
       "inclusion_proof_valid": true,
@@ -303,32 +303,32 @@
       "latest_tree_size": 7,
       "payload_hash_matches": true,
       "present": true,
-      "required_subject_row_hash": "2db4a802dc304aabbdb29b77f7eca1da716953aebc00d0e5b98dcf7f097db47b",
-      "subject_hash": "6a12732765454284ccdb2c6d18264dc0fbbf126ae79180352c1a293d82c977b8",
-      "subject_payload_hash": "c8b221a54d5d0063f270f3cf4fc90015e09accaf93438e9f9fdfa914b17234cc",
+      "required_subject_row_hash": "50f1ec28dde23c4889bc5c7e80e616caaef7db91826c03670dd8bb943b5c0199",
+      "subject_hash": "7f04af1706dabfc9aea4e9170aad458abd48ff0459d04f11b8c6e2e24e70a32e",
+      "subject_payload_hash": "ca515967fae62fa593612d4e4df6c474cbfd83f89aff4008b9dc5ea5f59574b4",
       "subject_type": "rdllm-live-emission-witness-attestation/v1"
     },
     {
       "entry_index": 4,
       "entry_type_matches": true,
       "inclusion_proof": {
-        "leaf_hash": "4e3e75161369a35e0a302a08df0ba6146a80dfcbb3185ddbfe2deb0314af56c8",
+        "leaf_hash": "b38b7f9832d3187eed42a7d2ed0798613eab1062794d46a7807adb9b8204ea94",
         "leaf_index": 4,
         "path": [
           {
-            "hash": "f56bac0bfc7c1aee136b634e51ea622159d6a3d1331f2ea4e2fd74f11af5ce40",
+            "hash": "650af77ca09bdb7558c22e8b6533769ca18101665a48eaf193287d9ad7165a8e",
             "side": "right"
           },
           {
-            "hash": "d827fcea911adf931f86c7e98cd4d6cef2ac60c728674d552f6da3f26d0b893b",
+            "hash": "c933e12f41f586a622f3af481539416731cd55c9bdfe9c5f3a00f9ef9b2e03e3",
             "side": "right"
           },
           {
-            "hash": "11cd83ab2eebad164de911a7158f1262ed62f21ba1266cae98c8c73156451851",
+            "hash": "952c1008d0d7a1c7f233e532168214ff9dd9ff0aad4a7c64775b450aa1492ee5",
             "side": "left"
           }
         ],
-        "root": "39e9a2c4544894844a3beb1a5bb3f2a80d30cd486efc6c8641e29dbe48cc3e9d",
+        "root": "02ef969f67a59360d35402845f1ea35d3461c68a857ca439e0d41232227d034a",
         "tree_size": 7
       },
       "inclusion_proof_valid": true,
@@ -336,32 +336,32 @@
       "latest_tree_size": 7,
       "payload_hash_matches": true,
       "present": true,
-      "required_subject_row_hash": "c5037f0098969aab4fbf83dc014ea64fa478b5bb8c47c2b8af5dcd93df789112",
-      "subject_hash": "1e2a5830a497e75d3987d280f8f7a228103ad40cd7d92c876b524c440ef27fc9",
-      "subject_payload_hash": "9066763a8149567748ae35d83920e3e20c87fd4729a7fc56be16c9a5a6858c6e",
+      "required_subject_row_hash": "a709669bbd90a26a3beb62cf37a90b755e1408490f3d75ec6d6b0bdf80812f39",
+      "subject_hash": "85a095245f1ff332304bbc2d52c71e027d7528201dff2e73669feecc5bdae3c0",
+      "subject_payload_hash": "88cef1a8f4912611852289e319860c476ed8662558e6a110998ee30248c579d8",
       "subject_type": "rdllm-live-emission-witness-attestation/v1"
     },
     {
       "entry_index": 5,
       "entry_type_matches": true,
       "inclusion_proof": {
-        "leaf_hash": "f56bac0bfc7c1aee136b634e51ea622159d6a3d1331f2ea4e2fd74f11af5ce40",
+        "leaf_hash": "650af77ca09bdb7558c22e8b6533769ca18101665a48eaf193287d9ad7165a8e",
         "leaf_index": 5,
         "path": [
           {
-            "hash": "4e3e75161369a35e0a302a08df0ba6146a80dfcbb3185ddbfe2deb0314af56c8",
+            "hash": "b38b7f9832d3187eed42a7d2ed0798613eab1062794d46a7807adb9b8204ea94",
             "side": "left"
           },
           {
-            "hash": "d827fcea911adf931f86c7e98cd4d6cef2ac60c728674d552f6da3f26d0b893b",
+            "hash": "c933e12f41f586a622f3af481539416731cd55c9bdfe9c5f3a00f9ef9b2e03e3",
             "side": "right"
           },
           {
-            "hash": "11cd83ab2eebad164de911a7158f1262ed62f21ba1266cae98c8c73156451851",
+            "hash": "952c1008d0d7a1c7f233e532168214ff9dd9ff0aad4a7c64775b450aa1492ee5",
             "side": "left"
           }
         ],
-        "root": "39e9a2c4544894844a3beb1a5bb3f2a80d30cd486efc6c8641e29dbe48cc3e9d",
+        "root": "02ef969f67a59360d35402845f1ea35d3461c68a857ca439e0d41232227d034a",
         "tree_size": 7
       },
       "inclusion_proof_valid": true,
@@ -369,32 +369,32 @@
       "latest_tree_size": 7,
       "payload_hash_matches": true,
       "present": true,
-      "required_subject_row_hash": "f483928f9038c45221b15557d26864415b4e0923be064c3acd6f0943d33a172d",
-      "subject_hash": "b3b7f800925372697cc7882a582febe0e4a50478f8e9b6acc5be22e954396d0d",
-      "subject_payload_hash": "b37fa0a3564fc1b090c162ce5cc55bbf029180c158a2284b4a09ac55dd545731",
+      "required_subject_row_hash": "f6a3d26a3784fb7e4a4b86609155ddd98f90a6a4d328388dee810552c78dfbd9",
+      "subject_hash": "f42e7b40f47c33c930b7dc6483d462747e261d789d546f0f10187ea93faf4856",
+      "subject_payload_hash": "1e28b40571e552855a4eec7cdde0542a107ae006ac4a99c9a72d9a642a13801b",
       "subject_type": "rdllm-live-emission-witness-attestation/v1"
     },
     {
       "entry_index": 6,
       "entry_type_matches": true,
       "inclusion_proof": {
-        "leaf_hash": "73d78ffc96c7d8051cfb472c69e23c518c373a09a1d96840f14b015847ad9346",
+        "leaf_hash": "986d2a052a5715189e1819fb54d4157825959512936851c8e460950224c86705",
         "leaf_index": 6,
         "path": [
           {
-            "hash": "73d78ffc96c7d8051cfb472c69e23c518c373a09a1d96840f14b015847ad9346",
+            "hash": "986d2a052a5715189e1819fb54d4157825959512936851c8e460950224c86705",
             "side": "right"
           },
           {
-            "hash": "7e0e4b843a049cc219e9d929977902333a1f899f39639acfb146174d3c2bebfd",
+            "hash": "169db367d34ca3a0cfe4d35d41807c3df8957d5f925cca388a8681e6cda19c7e",
             "side": "left"
           },
           {
-            "hash": "11cd83ab2eebad164de911a7158f1262ed62f21ba1266cae98c8c73156451851",
+            "hash": "952c1008d0d7a1c7f233e532168214ff9dd9ff0aad4a7c64775b450aa1492ee5",
             "side": "left"
           }
         ],
-        "root": "39e9a2c4544894844a3beb1a5bb3f2a80d30cd486efc6c8641e29dbe48cc3e9d",
+        "root": "02ef969f67a59360d35402845f1ea35d3461c68a857ca439e0d41232227d034a",
         "tree_size": 7
       },
       "inclusion_proof_valid": true,
@@ -402,32 +402,32 @@
       "latest_tree_size": 7,
       "payload_hash_matches": true,
       "present": true,
-      "required_subject_row_hash": "43520800c469fb13049aa397e07dd288173e8b0909506c7710073db036e3ff66",
-      "subject_hash": "98b265aad076be5f112210eb9234051aa225f5927e1413249daaf0057eb95926",
-      "subject_payload_hash": "189f697ca8572caa1c46932dc9f37d9da5c7e04bbddec35a253509a73099c19c",
+      "required_subject_row_hash": "3964cd10da8ebffbd8ab6f931739fcb776d55da560983c73aa4a6982fdff3ae0",
+      "subject_hash": "c5e4d9905cdfd65493093ab41f9276bc25985e6d4010fc34c8fdbd2099bb56b8",
+      "subject_payload_hash": "f8c25dd908ef924583a446dfd1d6eabee0e5af4d17b55457b1375a63219f48e5",
       "subject_type": "rdllm-live-emission-witness-attestation/v1"
     },
     {
       "entry_index": 0,
       "entry_type_matches": true,
       "inclusion_proof": {
-        "leaf_hash": "ccde1ed0d12febf328c49d9e7c1280887ac767a088f3c1e7f0de07aa9f2e2442",
+        "leaf_hash": "cb89ef7de49e904cd07850a499733a2b6142b00b86b8bda7ec849e390e5747fc",
         "leaf_index": 0,
         "path": [
           {
-            "hash": "bdeb10110e9326736fa919a01cd22025048c7eecc1ae9c51a5622682fa5177ff",
+            "hash": "8117c05364a1eea7881176d0bc09948bece0aa2203a8bec5c927e98dd57dc020",
             "side": "right"
           },
           {
-            "hash": "31ae36e3cbdbe5c2938f07e8c5408f2f9dedbfda19af691768d8f26d3971d71e",
+            "hash": "a7ce0eeee89b88a4354321b30df22ebc432bbee28318eedaea799621f8900155",
             "side": "right"
           },
           {
-            "hash": "c37708127762456d52ba11d1ba5c1f781fbffeab507f86a8163cec284d3b18f6",
+            "hash": "c8b19a5ff56079f122cc443cb86e7099b06fc8fbee9d47c5c7c07eb7769cf065",
             "side": "right"
           }
         ],
-        "root": "39e9a2c4544894844a3beb1a5bb3f2a80d30cd486efc6c8641e29dbe48cc3e9d",
+        "root": "02ef969f67a59360d35402845f1ea35d3461c68a857ca439e0d41232227d034a",
         "tree_size": 7
       },
       "inclusion_proof_valid": true,
@@ -435,9 +435,9 @@
       "latest_tree_size": 7,
       "payload_hash_matches": true,
       "present": true,
-      "required_subject_row_hash": "304a4702fddd80f7c2147e178535d1bbdb64124f0289ef107695f5d925ce2441",
-      "subject_hash": "9563df12db9dbe89e4ec73a43c86c8ae83e239153274e91096434da5ea753d0e",
-      "subject_payload_hash": "d863c1aefb373a925a66c362e4dcbbf6fa3df7a5f1f392d04b7191000187d0fa",
+      "required_subject_row_hash": "885bc54759f657569ae76e8aa4e0b744f6905d2f7fb4c2563a9fac8423fbe63b",
+      "subject_hash": "3b8e62c00064a7c7dcbe4a685e50e17b8ce7a41ddb7158ca68ce809ff54c0033",
+      "subject_payload_hash": "f79bfe9b51c6eb12e5d1d4afda50ff9148b8bdf439c2b959d6734d04d5a3b06f",
       "subject_type": "rdllm-live-emission-witness-report/v1"
     }
   ],
@@ -448,7 +448,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "b6ebc533264be9f59262baaa7ff4a61183317ca9d0c4129fceb22f9df3ca7cc3"
+    "value": "60e42bf6cca9eafcac8d3a2510479cc12da4c796a869e93887ba2706942eea05"
   },
   "split_view_conflict_rows": [],
   "summary": {
@@ -466,19 +466,19 @@
   },
   "transparency_log_bindings": [
     {
-      "binding_hash": "db4dffbe57ff3bc056bdec576ac814d8d8e14ecebed909f32e9925ab90c6f572",
-      "declared_root": "ccde1ed0d12febf328c49d9e7c1280887ac767a088f3c1e7f0de07aa9f2e2442",
+      "binding_hash": "70b6936385e81a8cd71e8f61e2e5d0ccf29daec0831f24a724140b6dcfad3058",
+      "declared_root": "cb89ef7de49e904cd07850a499733a2b6142b00b86b8bda7ec849e390e5747fc",
       "entry_count": 1,
       "log_id": "live-prefix",
-      "payload_hash": "e7ec2e99c62c1d98678e1b77bbc0709b500cbc13738b9aafb4af25e16abf8467",
+      "payload_hash": "7dbe761c3e1fd4ad321827004e1cc37250ab6b6e0e60e35c23da545cf0e13269",
       "tree_size": 1
     },
     {
-      "binding_hash": "5405427a23a279722c62ca22d3a065e23484833a1108533b56a71b4ada4ccf8d",
-      "declared_root": "39e9a2c4544894844a3beb1a5bb3f2a80d30cd486efc6c8641e29dbe48cc3e9d",
+      "binding_hash": "b51e9a11e606ba617fc4edb4556aea9a3cc0f03244d028707409ed388ec185e9",
+      "declared_root": "02ef969f67a59360d35402845f1ea35d3461c68a857ca439e0d41232227d034a",
       "entry_count": 7,
       "log_id": "live-latest",
-      "payload_hash": "d7961f99958267fc73f54efd0bc30141beef82c778041c19dd8f1e8f296820ea",
+      "payload_hash": "b665a1bc042854b834012341d5d0c2c74a70191c0e5425cd8eb865cb9aefdd62",
       "tree_size": 7
     }
   ]

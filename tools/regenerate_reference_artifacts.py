@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import inspect
 import json
+import shutil
 import sys
 from pathlib import Path
 from typing import Any
@@ -12,6 +13,18 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src"
+PACKAGED_REFERENCE_ARTIFACTS = (
+    "certification_report",
+    "discovery_manifest",
+    "production_readiness_report",
+    "provider_attribution_card",
+    "universal_production_invocation_admission",
+    "universal_runtime_conformance_receipt",
+    "universal_source_grounded_response_receipt",
+)
+PACKAGED_REFERENCE_ARTIFACT_DIR = (
+    SRC / "rdllm" / "data" / "reference_artifacts"
+)
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
@@ -307,6 +320,16 @@ def save(name: str, payload: dict[str, Any]) -> None:
         json.dumps(payload, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
+
+
+def sync_packaged_reference_artifacts() -> None:
+    """Keep installable reference data aligned with regenerated public artifacts."""
+    PACKAGED_REFERENCE_ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
+    for name in PACKAGED_REFERENCE_ARTIFACTS:
+        shutil.copyfile(
+            ARTIFACTS / f"{name}.json",
+            PACKAGED_REFERENCE_ARTIFACT_DIR / f"{name}.json",
+        )
 
 
 def artifact_ref(name: str) -> dict[str, str]:
@@ -5287,6 +5310,7 @@ def main() -> int:
     )
     integration_profile = regenerate_integration_profile(assurance_bundle)
     regenerate_discovery_manifest(assurance_bundle, integration_profile)
+    sync_packaged_reference_artifacts()
     print(
         json.dumps(
             {

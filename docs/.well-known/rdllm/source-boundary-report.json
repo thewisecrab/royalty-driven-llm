@@ -3,14 +3,14 @@
     "context_event_matches_source_report": true,
     "context_trace_matches_trace_exchange": true,
     "generation_context_closure_bound": true,
-    "generation_context_closure_report_hash": "d444afe2799076c1ae8137054e1430f301434ed28f6784550b2fc5e0d4fdf09d",
+    "generation_context_closure_report_hash": "cc95353f69baf1f392d10f2b03dccc61cff84f219b46e0add05e29caf9bce0ab",
     "source_verification_bound": true,
-    "source_verification_report_hash": "15fc4a037e3f63b39b1849a1925767ea345949828e4442526af3471f12ff68cc",
+    "source_verification_report_hash": "3d4f78a0c8a3f5bd2b580204e2fe887b0316703f1336166eefa0d656f4ff48e1",
     "trace_exchange_bound": true,
-    "trace_exchange_hash": "7a441b8277a161d0249ac32d494a94fc5ba2edd93e987d3268baff04aa494d39"
+    "trace_exchange_hash": "b67dbb4ca0b54c57908644bdd36324c7cfaec9418413941270969ba0e2380fa2"
   },
   "commitments": {
-    "artifact_binding_root": "5742c2b76b7fe6747274d0e18f93b17a41fd0cf0288a268a2925d31510e8d446",
+    "artifact_binding_root": "45eb1b9c0e1e332a58a96ba20dd659f36b3fc46484e4e70e24729777ffb2ffa7",
     "issue_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "source_boundary_root": "393acb53f269cb5976965d7e25323b3d23aea743a9460bccd8a9a808fa3edd66"
   },
@@ -19,9 +19,9 @@
     "answer_hash": "283203d79fe9f38a76f38927a84e9d964d9be2ed9f9e88274461757e7af4fde4",
     "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
     "event_id": "evt_83312b019637578e",
-    "generation_context_closure_report_hash": "d444afe2799076c1ae8137054e1430f301434ed28f6784550b2fc5e0d4fdf09d",
+    "generation_context_closure_report_hash": "cc95353f69baf1f392d10f2b03dccc61cff84f219b46e0add05e29caf9bce0ab",
     "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
-    "trace_hash": "7a441b8277a161d0249ac32d494a94fc5ba2edd93e987d3268baff04aa494d39"
+    "trace_hash": "b67dbb4ca0b54c57908644bdd36324c7cfaec9418413941270969ba0e2380fa2"
   },
   "issuer": "rdllm-local-demo",
   "issues": [],
@@ -46,7 +46,7 @@
     "report_uses_hashes_trace_ids_and_boundary_booleans": true,
     "source_text_disclosed": false
   },
-  "report_hash": "e6777da6e80e3da8d1326083b2e894a2da8eb8857ecfa38d1e240f7fdfd3336e",
+  "report_hash": "8aa786c8037a80b75a5ab1c9c18ff43f227e03f3c7efc4d8d13b47e0d786e854",
   "report_version": "rdllm-source-boundary-report/v1",
   "schemas": {
     "generation_context_closure_report": "docs/schemas/generation_context_closure_report.schema.json",
@@ -56,7 +56,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "f7c7a1229ffcb39c6ca6292fedd05c022bff143ccfc7b5b51f6576f546495aab"
+    "value": "f00639d10facf379ff1dc6469c2fb2c513e6217410dc46977d6837b9ed0eeb19"
   },
   "source_boundary_rows": [
     {

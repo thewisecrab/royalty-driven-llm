@@ -126,7 +126,7 @@
     "total_claims": 6,
     "unsupported_claims": 0
   },
-  "issued_at": "2026-07-09T20:08:23Z",
+  "issued_at": "2026-07-10T05:21:31Z",
   "issuer": "rdllm-local-demo",
   "model": {
     "id": "rdllm-reference-model",
@@ -135,14 +135,14 @@
   },
   "privacy": {
     "answer_disclosed": false,
-    "disclosure_root": "4761bcc936a6d31f85b479d768587b44bbc7394164be5febb99a4974c63ecada",
+    "disclosure_root": "f6338038e4d0a66e263e9bc1ff4e09df4f59eb7463eae7d697a1b14f2fe2c1ec",
     "disclosure_version": "rdllm-selective-disclosure/v1",
     "prompt_disclosed": false,
     "selective_disclosure": "hash commitments expose prompt/output integrity without disclosing private prompts",
     "source_quotes_disclosed": true
   },
   "protocol_version": "rdllm-attribution-receipt/v1",
-  "receipt_hash": "94f30eddb01a4dac8fd29edaae6bd29214d094516277a2e6b30df6affbbd2278",
+  "receipt_hash": "270cac1f6de297548cd9d1c829a729241b4201f94d9b7997cf9a059f29e4eafb",
   "registry": {
     "registry_conflicts": 0,
     "registry_report_hash": "",
@@ -157,7 +157,7 @@
     "issuer": "rdllm-local-demo",
     "key_id": "",
     "security_level": "demo_shared_secret",
-    "value": "3ee20ed61897038a6f76d342d11dd9d152d64f3451e68075c129564c86cb3bce"
+    "value": "05aa5d53babf9765a095ac72d0bb1548b07716176b5acbe84f5744db0ec1c8e1"
   },
   "sources": [
     {

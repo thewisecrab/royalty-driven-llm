@@ -223,11 +223,11 @@
     "decision_provenance_report_hash": "a79eada85bec2cd6ce4a2134cf094a5d3174fb51feadc188ef14c408efd0b228",
     "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
     "event_id": "evt_83312b019637578e",
-    "evidence_sufficiency_report_hash": "dfb8951190a3c73c01237f77957a812935f2bd2b581f7589ef08313ec4baf00d",
+    "evidence_sufficiency_report_hash": "a9f10bd6808007f84071c68e74508962b0cc9c5deda9e74129eb110efa77a1c5",
     "provenance_evaluation_report_hash": "cb2df8911c05283092e1a7f70ddeaf2bbb8316c6d1f0eb8adbed6646d4d6cd7a",
     "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
-    "response_envelope_hash": "e20a0d5eb34d9b0550d37ed775e12133831391e937f971ea9ac40a84520a336c",
-    "source_confidence_report_hash": "90c0912e9d5e14a4a0c7e7e4b30c60f04ce1d4e34e7563e0f28731e05c35cd2b"
+    "response_envelope_hash": "42a155116b8cdfc3161f8e881c9d1671189fbddea0800fccad0c8cea13c9d0e9",
+    "source_confidence_report_hash": "da4f7fbc88ddad87b8b1a8fca0783159bdface9229540817176cdb624344ae78"
   },
   "issuer": "rdllm-local-demo",
   "issues": [],
@@ -251,7 +251,7 @@
     "report_uses_hashes_bounds_scores_and_decision_ids": true,
     "source_text_disclosed": false
   },
-  "report_hash": "054ad7911fedafc270b790f02b43444ef66e266dfceae8b97b4142030fad5b2e",
+  "report_hash": "e701ee741d04ff29aa438d40c1738e5c52de75b475b2e4bb2247094d58f41923",
   "report_version": "rdllm-calibrated-attribution-confidence/v1",
   "schemas": {
     "calibrated_attribution_report": "docs/schemas/calibrated_attribution_report.schema.json",
@@ -264,7 +264,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "ec8fe6eb08906d14c91a1162c217feaec92a80e2e1d8ce4e08c843181d7829f9"
+    "value": "435ada28cc9d0f3634e269516ebe3d084184b9851e9dd418a13b647bb5c1a91e"
   },
   "sources": [
     {

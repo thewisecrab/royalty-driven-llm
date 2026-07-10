@@ -1,31 +1,31 @@
 {
   "artifact_bindings": {
     "universal_claim_evidence_footer_verification_contract": {
-      "artifact_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "artifact_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "hash_reproducible": true,
       "level": "RDLLM-L184",
       "minimum_level": "RDLLM-L184",
-      "payload_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "payload_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "present": true,
       "ready": true,
       "status": "ready"
     },
     "universal_live_capability_discovery_contract": {
-      "artifact_hash": "ee28a1e18bf0ca698ab38d77729c6f16ff122a06d36a5be1b022e3154fd54d6f",
+      "artifact_hash": "a41f72bbff53f7bdac65ca9a1b9dedd8f30922a115324670380dc9b97f78316c",
       "hash_reproducible": true,
       "level": "RDLLM-L182",
       "minimum_level": "RDLLM-L182",
-      "payload_hash": "ee28a1e18bf0ca698ab38d77729c6f16ff122a06d36a5be1b022e3154fd54d6f",
+      "payload_hash": "a41f72bbff53f7bdac65ca9a1b9dedd8f30922a115324670380dc9b97f78316c",
       "present": true,
       "ready": true,
       "status": "ready"
     },
     "universal_runtime_route_binding_contract": {
-      "artifact_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
+      "artifact_hash": "87fea69c412fa156c382bfc28478a65c1852005724ca6576ce1c89944f1dba85",
       "hash_reproducible": true,
       "level": "RDLLM-L179",
       "minimum_level": "RDLLM-L179",
-      "payload_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
+      "payload_hash": "87fea69c412fa156c382bfc28478a65c1852005724ca6576ce1c89944f1dba85",
       "present": true,
       "ready": true,
       "status": "ready"
@@ -78,12 +78,12 @@
   },
   "created_at": "2026-06-03T00:00:00Z",
   "evidence_roots": {
-    "combined_provider_meter_root": "fca0940468427efc27bd056f1829be1273ed419d1206a350694bb21726da23ba",
+    "combined_provider_meter_root": "484c8fe343cc7b533901c903414f0f53bf92b187db4dfc645f63909967df38f8",
     "negative_provider_meter_root": "f93be351727d93b7c93d7fcde1be261f095dda482270da7f6f38e7579393bd90",
     "normalized_meter_field_root": "17e82026aa3b7b59814fd0339d1764c2e8891d3ca877d8a8cd8c782c06a70df9",
     "provider_meter_surface_root": "779048398d63d7abb9fa6d0a9fc8b701f3411125b94c1c7f1445102d8648b5f3",
     "route_provider_meter_root": "418e73bdd8f113045c9c4a733095e823338333e2a55f9030dc8587b8f1fdf04c",
-    "settlement_meter_root": "eb4f6c24fcf40228ae3de42db50319bc572c7916d1d03b71b247b59e3ab75fe3"
+    "settlement_meter_root": "154a81c38857493e63a9d3f871c426c6097d00c74baf32c9c5c0aaa0bbeea11c"
   },
   "issuer": "rdllm-local-demo",
   "negative_provider_meter_rows": {
@@ -1252,7 +1252,7 @@
   "schema": "docs/schemas/universal_provider_meter_normalization_contract.schema.json",
   "settlement_meter_rows": {
     "reference-route:cloud_hosted_provider:fine_tuning:13": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "67e5d6bc6957b14b6a1602c713cc39b0b37ce2a95a330bb0a6d485577a3d0c74",
       "invoice_reconciled": true,
@@ -1267,7 +1267,7 @@
       "verifier_hash": "54298f0478555a39ce14bc42511a0b9bf584a71954882cb8033b0b9fe82c5bff"
     },
     "reference-route:cloud_hosted_provider:reasoning:1": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "9efdca236f8aa2b2221bcee1bb4d1e6120996cca672aa52f045ad2897fbb3762",
       "invoice_reconciled": true,
@@ -1282,7 +1282,7 @@
       "verifier_hash": "703d2a5cd912dfa39bfbc73156580dcd180e1350d571c29eae905ee7c997eba6"
     },
     "reference-route:embedding_provider:tool_calling_agent:10": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "e45cdf2ba76e9414538d03f7414f072f2dfee89465f3a1e45cb06ccb1126d990",
       "invoice_reconciled": true,
@@ -1297,7 +1297,7 @@
       "verifier_hash": "d2f384d247a6c5e82a6dffc7512136d9a8ab487184adda5c0e3b4bc08bf7f43a"
     },
     "reference-route:enterprise_private_model:audio_speech:5": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "6e520c35deff5ff2978686828e222a1adaebdf04c639993ed39a5a445f20c792",
       "invoice_reconciled": true,
@@ -1312,7 +1312,7 @@
       "verifier_hash": "5907eccba4c1ee5ce26c024a19767a197f0799d4a139c09471356f8155f92f36"
     },
     "reference-route:enterprise_private_model:gateway_router:17": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "3a7a7cf8c2a80a211afe6634f5e2817459ea1b93580c06df69a54fe7f5709cd9",
       "invoice_reconciled": true,
@@ -1327,7 +1327,7 @@
       "verifier_hash": "c28725aee5c2aac0d22c209cfda4a57110943471b8434fc40514e10b8f52b06b"
     },
     "reference-route:fine_tuning_provider:batch_generation:11": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "962b099cde9220c3deb68bceb73ac3934d5edd3054a2fbd6e6ffa04b1c73f2bd",
       "invoice_reconciled": true,
@@ -1342,7 +1342,7 @@
       "verifier_hash": "5a21c39fa122f4235e53229ddf8336fe63d5af107fdb8c1ec92c3c73694cf2bb"
     },
     "reference-route:foundation_provider:streaming:12": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "50ea327eeb5cc5e83b31bd33011a202d668caf9dc56ce4c6fd44f902095b5134",
       "invoice_reconciled": true,
@@ -1357,7 +1357,7 @@
       "verifier_hash": "4037ebd6dc289cabdba0888883a142ae85fc5815403dcf2e63e6b2a9b729518e"
     },
     "reference-route:foundation_provider:text_chat:0": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "41accfc57572a0f9a459134c0a8ae6056554ab4818625b61afcf50a895d77225",
       "invoice_reconciled": true,
@@ -1372,7 +1372,7 @@
       "verifier_hash": "af2b8ff8f8e51499d4dd455dd0c54d5764d8617602ef4c42eed57a5cd0121811"
     },
     "reference-route:hosted_open_weight_service:image_generation:4": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "fcec158ddc45812f07f07eaeb3733cfb19f3c528e7cec1c28e0dfea000a536b0",
       "invoice_reconciled": true,
@@ -1387,7 +1387,7 @@
       "verifier_hash": "955e9db58a03b56151153dee0ee7592268fb916c3f551f38061234b73bfa5422"
     },
     "reference-route:hosted_open_weight_service:local_inference:16": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "ef1aaf808e0fc168b675091495e7e505c4759708e731fb5485c7d268286c652f",
       "invoice_reconciled": true,
@@ -1402,7 +1402,7 @@
       "verifier_hash": "2e2c466198e512544ba62365a5ed7d04b1cdcc7eef63ea3f3366863a85c131ba"
     },
     "reference-route:local_runtime:video_generation:6": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "015cde9727b2431a7ca607a6555f6bf09a5f6956c0aaa2d191f57d63186119e8",
       "invoice_reconciled": true,
@@ -1417,7 +1417,7 @@
       "verifier_hash": "b63ac7a83bfe6204fbc1950ee7f2fac7c0e2657091c0e6fbfb2ff19e7e56fc45"
     },
     "reference-route:model_marketplace:long_context:2": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "539d26dc8ef3a15867d7bb369a0068bf071e85289b05b4ee527e1f671b4177dd",
       "invoice_reconciled": true,
@@ -1432,7 +1432,7 @@
       "verifier_hash": "eb096ac383ae254cbed789bd8f3275a20c493d5c50b519de26e72245bde110d7"
     },
     "reference-route:model_marketplace:retrieval_augmented:14": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "ae63110244857ae3e1cc98e9127a320726bfd3069b890da9a8acab2d1d6366ad",
       "invoice_reconciled": true,
@@ -1447,7 +1447,7 @@
       "verifier_hash": "8552adf41e21a2d987826096dd4d2994bc093d0c88adf0955b4d37cd63ef4d6a"
     },
     "reference-route:multimodal_media_provider:code_generation:9": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "e0a6565d9a90916381f0841fe533f113052a2a3bac74aa333baf5c2eaea403f8",
       "invoice_reconciled": true,
@@ -1462,7 +1462,7 @@
       "verifier_hash": "f0943927752718e8b681efcc6b558ba548354b92789f36264e5ee61b09b1f66c"
     },
     "reference-route:open_weight_registry:embedding:7": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "409b35e7ebb3c4619bfd06ff1ba7ceba4ba971e06b03805a1a8010390a74a856",
       "invoice_reconciled": true,
@@ -1477,7 +1477,7 @@
       "verifier_hash": "a7a0d215925a82a2f1b476a5eba0db54f6753775b26b1ef7698e2b6716197ad9"
     },
     "reference-route:regional_sovereign_provider:reranking:8": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "0a78e33cc87b48932589baaade381a71ec2cf0d2fd2e2bce2ad13380fc583ffc",
       "invoice_reconciled": true,
@@ -1492,7 +1492,7 @@
       "verifier_hash": "a082dadec87d46e909e33ae5d21dbda19026f9cf7679217655588315a9f9b222"
     },
     "reference-route:router_or_gateway:multimodal_vision:3": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "c42463f72316b14a5f77d358cd75ae874e9d1c44b29752a59377455098cb3e34",
       "invoice_reconciled": true,
@@ -1507,7 +1507,7 @@
       "verifier_hash": "5e8d2410d13d72bffd1e47583a00a4698de714209915bc37bcfb51664b562aaa"
     },
     "reference-route:router_or_gateway:safety_moderation:15": {
-      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
+      "claim_evidence_footer_hash": "a9a528d2339a791ec90e020b96f3c185dc7001a20201d7a38fa197e69902b8b5",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "dba6370c24fa8127d22b5ddc78f56801d8db0a2f758ca5979081a772862a8f73",
       "invoice_reconciled": true,
@@ -1525,7 +1525,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "9fc90766bc763b88d0a833eb889e91e7cfdfd259c45551b2da7ddb0c682e5383"
+    "value": "74940bac60fd4b9dda2e92d1bf85d8da13b7d56a01bf8603b9ba6b8bce0e93cc"
   },
   "summary": {
     "failure_mode_count": 0,
@@ -1546,7 +1546,7 @@
     "status": "ready",
     "target_certification_level": "RDLLM-L185"
   },
-  "universal_provider_meter_normalization_contract_hash": "3f17bf14140d158b4f526888b01586df39fe77d8e699541cffbb244f0ab08a1f",
+  "universal_provider_meter_normalization_contract_hash": "a36c4bdb14b2f0195a923e20c16973b358c8fad4fc14e26a619f0f3239a9ed26",
   "universal_provider_meter_normalization_contract_version": "rdllm-universal-provider-meter-normalization-contract/v1",
   "well_known": {
     "path": "/.well-known/rdllm/universal-provider-meter-normalization-contract.json",

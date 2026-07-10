@@ -1,7 +1,7 @@
 {
   "answer_card": {
     "answer_card_bound": true,
-    "answer_card_hash": "fa2bff282cd4498badb9ff52304ea26cf5b82db9366b5447e67982102f7a3941",
+    "answer_card_hash": "aaf3d9c0868b5b51fa42843b5b1f7d3cd1c4a3a8d423e62a77ae2aab6da24784",
     "event_hash_matches_card": true,
     "event_id_matches_card": true,
     "rendered_output_hash_matches_card": true
@@ -135,7 +135,7 @@
     }
   ],
   "commitments": {
-    "answer_card_hash": "fa2bff282cd4498badb9ff52304ea26cf5b82db9366b5447e67982102f7a3941",
+    "answer_card_hash": "aaf3d9c0868b5b51fa42843b5b1f7d3cd1c4a3a8d423e62a77ae2aab6da24784",
     "claim_materialization_root": "96048f1aaf8ca0066b1507fa0bc4880efd22b50cd642bb87c24654fd44f9662e",
     "registered_chunk_root": "6d32af57f3e8f6c3b0e2b4ae29125c95b5d4b125cc37b3e69e28b7ddf2072f4c",
     "source_materialization_root": "7e74e281e2ff31f4ab66aa613821ab4a89b955b7a05414c7db953d45bafd998e",
@@ -160,12 +160,12 @@
     "source_quote_text_disclosed": false,
     "source_text_disclosed": false
   },
-  "report_hash": "15fc4a037e3f63b39b1849a1925767ea345949828e4442526af3471f12ff68cc",
+  "report_hash": "3d4f78a0c8a3f5bd2b580204e2fe887b0316703f1336166eefa0d656f4ff48e1",
   "report_version": "rdllm-source-verification-report/v1",
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "77499ffef13683aaedbe2d14807b7664023754f9afa843ae71c1d86f8e9952a0"
+    "value": "efb56ab82d1dd5bbd1c0541c69555c472c72e22a6ee8dee0106a82b2cdbea20f"
   },
   "sources": [
     {

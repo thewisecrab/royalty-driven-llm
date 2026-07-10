@@ -99,19 +99,19 @@
   ],
   "artifact_bindings": {
     "answer_card_bound": true,
-    "answer_card_hash": "fa2bff282cd4498badb9ff52304ea26cf5b82db9366b5447e67982102f7a3941",
+    "answer_card_hash": "aaf3d9c0868b5b51fa42843b5b1f7d3cd1c4a3a8d423e62a77ae2aab6da24784",
     "citation_footer_bound": true,
-    "citation_footer_contract_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
+    "citation_footer_contract_hash": "6e21016c0fc330186a62c6b7c88c35329473ef11d07443403e70fbdde57115a2",
     "counterevidence_bound": true,
-    "counterevidence_report_hash": "f23a241321b32d2a56c02ec937e896e0ed5a3cf814db28a51aa6f3d2aa2c2238",
+    "counterevidence_report_hash": "765a5f49dbfe67c0409f7197c1a96f37e39caa613c76f57aa33d0f02b0865daf",
     "evidence_sufficiency_bound": true,
-    "evidence_sufficiency_report_hash": "ee2397e8139d6dc07fd287535c07219c0106a1ad65cd2c6dee3532a09fa62c7b",
+    "evidence_sufficiency_report_hash": "048a08bf5b4f8dbb41e9fadba39b2463f533009d1f846d5283e2a601ad3658a9",
     "source_verification_bound": true,
-    "source_verification_report_hash": "15fc4a037e3f63b39b1849a1925767ea345949828e4442526af3471f12ff68cc"
+    "source_verification_report_hash": "3d4f78a0c8a3f5bd2b580204e2fe887b0316703f1336166eefa0d656f4ff48e1"
   },
   "commitments": {
     "answer_unit_root": "e9a35845e9b926ad692131ac1941c18c02248728a9a5897a8ef4b096fe94893a",
-    "artifact_binding_root": "1efbb0373e8026706cd2aa28db984e67f90a2bf47380729627e8d56d68f54567",
+    "artifact_binding_root": "ba704311b92a12d84e1a5667cd86e1d2e036ed3751ae46f5f0b63e66c3efa46a",
     "issue_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68"
   },
@@ -143,7 +143,7 @@
     "report_uses_public_output_hashes_only": true,
     "source_text_disclosed": false
   },
-  "report_hash": "0f09aa92a4fc20272ab312793166eccdabb54b949bdeb601b4a50b24574b80a8",
+  "report_hash": "8091710cd2b6e43838b3f0dfb15a90ff10e5d431c0a84f85eecf46dff8776419",
   "report_version": "rdllm-answer-claim-coverage-report/v1",
   "schemas": {
     "answer_claim_coverage_report": "docs/schemas/answer_claim_coverage_report.schema.json"
@@ -151,7 +151,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "e1cfca624df750ab3fded74e1bef8caf6c92a2e50a96e389d7df9bd5603dfe8a"
+    "value": "8c812b95bc67f15f87e895f69600ec1437f10b2a4e580c8cb08f285bf311f28c"
   },
   "summary": {
     "all_answer_claims_covered": true,
