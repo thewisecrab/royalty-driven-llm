@@ -116,7 +116,7 @@ If you need to edit a profile manually, choose the closest template:
 - `examples/production_profiles/company_instruction_only.json`
 - `examples/production_profiles/institution_instruction_only.json`
 - `examples/production_profiles/government_escrow_only.json`
-- `examples/production_profiles/public_sector_processor_attested.json`
+- `examples/production_profiles/public_sector_processor_required.json`
 
 `examples/production_readiness_profile.json` remains a compatibility alias for
 the processor-attested public-sector profile.

@@ -11,7 +11,7 @@ requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [
-  { name = "RDLLM contributors" }
+  { name = "Siddharth Nilesh Patel" }
 ]
 keywords = [
   "ai-attribution",
@@ -36,12 +36,16 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Artificial Intelligence",
   "Topic :: Software Development :: Libraries :: Python Modules"
 ]
-dependencies = []
+dependencies = [
+  "cryptography>=48.0.1,<49",
+]
 
 [project.optional-dependencies]
 dev = [
   "build>=1.2",
   "jsonschema>=4.22",
+  "markdown>=3.6",
+  "pip-audit>=2.9,<3",
 ]
 
 [project.urls]
@@ -52,7 +56,9 @@ Source = "https://github.com/thewisecrab/royalty-driven-llm"
 
 [project.scripts]
 rdllm = "rdllm.cli:main"
+rdllm-deployment-attestation = "rdllm.deployment_attestation:main"
 rdllm-first-run = "rdllm.first_run:main"
+rdllm-keygen = "rdllm.signing:main"
 rdllm-operator-acceptance = "rdllm.operator_acceptance:main"
 rdllm-operator-acceptance-matrix = "rdllm.operator_acceptance_matrix:main"
 rdllm-operator-bootstrap = "rdllm.operator_bootstrap:main"

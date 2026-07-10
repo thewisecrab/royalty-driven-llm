@@ -8,6 +8,7 @@
     "schema",
     "profile_hash",
     "summary",
+    "external_attestation_verification",
     "control_rows",
     "blocked_controls"
   ],
@@ -29,6 +30,11 @@
         "settlement_mode",
         "direct_payout_enabled",
         "payment_processor_attested",
+        "configuration_ready",
+        "external_evidence_status",
+        "verified_external_attestation_count",
+        "required_external_attestation_count",
+        "missing_external_attestation_types",
         "ready_control_count",
         "blocked_control_count",
         "total_control_count",
@@ -61,6 +67,15 @@
         "payment_processor_attested": {
           "type": ["boolean", "null"]
         },
+        "configuration_ready": { "type": "boolean" },
+        "external_evidence_status": { "enum": ["verified", "unverified"] },
+        "verified_external_attestation_count": { "type": "integer", "minimum": 0 },
+        "required_external_attestation_count": { "type": "integer", "minimum": 1 },
+        "missing_external_attestation_types": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
         "ready_control_count": {
           "type": "integer",
           "minimum": 0
@@ -83,6 +98,21 @@
           "type": "boolean"
         }
       }
+    },
+    "external_attestation_verification": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "schema",
+        "status",
+        "trust_store_loaded",
+        "required_attestation_types",
+        "verified_attestation_types",
+        "missing_attestation_types",
+        "verified_attestation_count",
+        "required_attestation_count",
+        "rows"
+      ]
     },
     "control_rows": {
       "type": "array",

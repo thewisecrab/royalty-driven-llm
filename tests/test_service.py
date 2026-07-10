@@ -781,7 +781,7 @@ class ServiceBoundaryTests(unittest.TestCase):
             self.assertTrue(
                 payload["response_verification"]["production_display_ready"]
             )
-            self.assertTrue(payload["summary"]["production_grade_claim_allowed"])
+            self.assertFalse(payload["summary"]["production_grade_claim_allowed"])
             self.assertFalse(payload["summary"]["direct_creator_settlement_allowed"])
             self.assertTrue(payload["support_bundle"]["written"])
             self.assertTrue(support_bundle_path.is_file())
@@ -1586,7 +1586,7 @@ class ServiceBoundaryTests(unittest.TestCase):
             self.assertEqual([], validation_errors)
             self.assertEqual(
                 report["summary"]["production_acceptance_decision"],
-                "allow",
+                "block",
             )
             self.assertEqual(
                 report["summary"]["audit_response_binding_status"],
@@ -2002,17 +2002,19 @@ class ServiceBoundaryTests(unittest.TestCase):
             self.assertFalse(rows["company"]["direct_creator_settlement_allowed"])
             self.assertFalse(rows["institution"]["direct_creator_settlement_allowed"])
             self.assertFalse(rows["government"]["direct_creator_settlement_allowed"])
-            self.assertTrue(rows["public_sector"]["direct_creator_settlement_allowed"])
+            self.assertFalse(rows["public_sector"]["direct_creator_settlement_allowed"])
             self.assertFalse(rows["individual"]["public_sector_use_supported"])
             self.assertFalse(rows["company"]["public_sector_use_supported"])
             self.assertFalse(rows["institution"]["public_sector_use_supported"])
-            self.assertTrue(rows["government"]["public_sector_use_supported"])
-            self.assertTrue(rows["public_sector"]["public_sector_use_supported"])
+            self.assertFalse(rows["government"]["public_sector_use_supported"])
+            self.assertFalse(rows["public_sector"]["public_sector_use_supported"])
             for row in rows.values():
                 with self.subTest(operator_template=row["operator_template"]):
                     self.assertEqual(row["status"], "passed")
                     self.assertEqual(row["acceptance_status"], "ready")
                     self.assertEqual(row["acceptance_verification_status"], "passed")
+                    self.assertEqual(row["production_acceptance_decision"], "block")
+                    self.assertFalse(row["production_grade_claim_allowed"])
                     self.assertTrue(row["response_production_display_ready"])
                     self.assertEqual(row["response_display_text_status"], "passed")
                     self.assertRegex(

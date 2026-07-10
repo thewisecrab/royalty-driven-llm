@@ -2,28 +2,28 @@
   "artifact_bindings": {
     "certification_attestation": {
       "artifact": "certification_attestation",
-      "artifact_hash": "77299f33de4f5dd1a498bf3bebfc07d7c410353e8f0e7a9cfa31913a56c212ed",
+      "artifact_hash": "2fd4aae21c12c56ced928785ec8acc7140fdedbe0fcd3b2f5a4c784d304d38dd",
       "hash_reproducible": true,
       "level": "RDLLM-L52",
-      "payload_hash": "77299f33de4f5dd1a498bf3bebfc07d7c410353e8f0e7a9cfa31913a56c212ed",
+      "payload_hash": "2fd4aae21c12c56ced928785ec8acc7140fdedbe0fcd3b2f5a4c784d304d38dd",
       "present": true,
       "status": "attested"
     },
     "certification_report": {
       "artifact": "certification_report",
-      "artifact_hash": "dc1e7090d04e2ab7240ea7675cc965f789d31c5d7518d0e18a5a7f35f60631ec",
+      "artifact_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
       "hash_reproducible": true,
       "level": "RDLLM-L186",
-      "payload_hash": "dc1e7090d04e2ab7240ea7675cc965f789d31c5d7518d0e18a5a7f35f60631ec",
+      "payload_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
       "present": true,
       "status": "passed"
     },
     "discovery_manifest": {
       "artifact": "discovery_manifest",
-      "artifact_hash": "ceab40a4fb7b3829680b8b79e6e22507c16effe0683528d5258bdfcc3795c363",
+      "artifact_hash": "fb953c8d56c4298e66d51b310387f5235a4f2a1f36b4d2c54d1b609c0092c5cd",
       "hash_reproducible": true,
       "level": "RDLLM-L186",
-      "payload_hash": "ceab40a4fb7b3829680b8b79e6e22507c16effe0683528d5258bdfcc3795c363",
+      "payload_hash": "fb953c8d56c4298e66d51b310387f5235a4f2a1f36b4d2c54d1b609c0092c5cd",
       "present": true,
       "status": "ready"
     },
@@ -38,28 +38,28 @@
     },
     "integration_profile": {
       "artifact": "integration_profile",
-      "artifact_hash": "88a249a6054b067fd8f1dafdc798be572b137b7a998f3cef9f13fe75ac582df6",
+      "artifact_hash": "a669a7c49b9ccbdc94e1fe218a4b17f6129d9f6a1709f7d8315f73a1a2990647",
       "hash_reproducible": true,
       "level": "RDLLM-L186",
-      "payload_hash": "88a249a6054b067fd8f1dafdc798be572b137b7a998f3cef9f13fe75ac582df6",
+      "payload_hash": "a669a7c49b9ccbdc94e1fe218a4b17f6129d9f6a1709f7d8315f73a1a2990647",
       "present": true,
       "status": "ready"
     },
     "proof_dependency_graph": {
       "artifact": "proof_dependency_graph",
-      "artifact_hash": "6255b1a9934cab5dd5cf2c9e5b85d2439b34c149ca0705a7a0e0da7af24746e9",
+      "artifact_hash": "e47ca2573b46f6e8451dcdb236ae88880b5d99728a8a2f67d84fd929fd2476c5",
       "hash_reproducible": true,
       "level": "RDLLM-L186",
-      "payload_hash": "6255b1a9934cab5dd5cf2c9e5b85d2439b34c149ca0705a7a0e0da7af24746e9",
+      "payload_hash": "e47ca2573b46f6e8451dcdb236ae88880b5d99728a8a2f67d84fd929fd2476c5",
       "present": true,
       "status": "ready"
     },
     "provider_attribution_card": {
       "artifact": "provider_attribution_card",
-      "artifact_hash": "461be8e9acd24c00504972ab2480806c5ae3ca157fa1dea47a6137f40dae8289",
+      "artifact_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
       "hash_reproducible": true,
       "level": "RDLLM-L186",
-      "payload_hash": "461be8e9acd24c00504972ab2480806c5ae3ca157fa1dea47a6137f40dae8289",
+      "payload_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
       "present": true,
       "status": ""
     },
@@ -110,10 +110,10 @@
     },
     "universal_live_attribution_proof": {
       "artifact": "universal_live_attribution_proof",
-      "artifact_hash": "fe87f00f549f04e555243545856c3c9a2cc72f3cb3fa779abc877fe3ab15a205",
+      "artifact_hash": "60cfdb4dceac5d7632b540b3a0b1385f4f41d7527e8403e9185bc6bef6e90f34",
       "hash_reproducible": true,
       "level": "RDLLM-L165",
-      "payload_hash": "fe87f00f549f04e555243545856c3c9a2cc72f3cb3fa779abc877fe3ab15a205",
+      "payload_hash": "60cfdb4dceac5d7632b540b3a0b1385f4f41d7527e8403e9185bc6bef6e90f34",
       "present": true,
       "status": "ready"
     },
@@ -128,10 +128,10 @@
     },
     "universal_reference_implementation_distribution": {
       "artifact": "universal_reference_implementation_distribution",
-      "artifact_hash": "b16d3e255315a0f84e096e143ece0aa8966b42094d2e6417b27ae848b126fede",
+      "artifact_hash": "7cde78a736d3baefce26d4ee80fdac7062f032457907ff174ee74670ce1a1091",
       "hash_reproducible": true,
       "level": "RDLLM-L164",
-      "payload_hash": "b16d3e255315a0f84e096e143ece0aa8966b42094d2e6417b27ae848b126fede",
+      "payload_hash": "7cde78a736d3baefce26d4ee80fdac7062f032457907ff174ee74670ce1a1091",
       "present": true,
       "status": "ready"
     },
@@ -292,9 +292,9 @@
   },
   "created_at": "2026-06-03T00:00:00Z",
   "evidence_roots": {
-    "artifact_binding_root": "c0ddd4f8b1ce3a6a769fb222e83dbdc41e3c28cc0d0bf1a596c8501c5ce4ef7c",
+    "artifact_binding_root": "bc5f5f88bf32c4e867356b69d1f53193837035b3450f45183dd00cca27e71458",
     "compliance_mapping_root": "8cad3024f037ca26476860df5ed1a0b687fb7abda5d3c3d697ee6f735ad1902e",
-    "model_release_root": "33cb4d09e90b8e3cbe0972ddd2b88cd280bbdfd473f926313a100caf90dfd97a",
+    "model_release_root": "c609d28be70fef8e9525ac91de66029ea2baae2d1d19ff69436022686545358c",
     "negative_model_release_root": "ea416087d460beace02fbc5d5a3d234b4782095158ed58b4d163b346ed3d8fa8",
     "provider_route_root": "ac8d8d1f29a5f5bcdbb3ae7716c156d53f0074e69d9f439696103c65662f9e15",
     "release_lifecycle_root": "daf51da898ae449e1fa09e4b46617ef167943a6e7c2fb6f1aab64b08854b1d92"
@@ -306,7 +306,7 @@
       "copyright_policy_hash": "615f10daea4564c7e45d528ea0623642f43e8d53828cda010b042edbc3acdb64",
       "downstream_docs_available": true,
       "downstream_documentation_hash": "175e5b28c0c658d168c186f9b735e0adbe7d60b86dd511186ece8fbaaf318291",
-      "live_attribution_proof_hash": "fe87f00f549f04e555243545856c3c9a2cc72f3cb3fa779abc877fe3ab15a205",
+      "live_attribution_proof_hash": "60cfdb4dceac5d7632b540b3a0b1385f4f41d7527e8403e9185bc6bef6e90f34",
       "live_attribution_required_for_all_outputs": true,
       "model_artifact_or_attestation_hash": "419b6b63e9125f029812167195f3e0410d9f73190f4a7b013cb1328265fdb7fa",
       "model_id": "rdllm-reference-model",
@@ -884,7 +884,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "9706ee34bf116ef5acb1271b4b2f8160313d77acd951d1cb1568efd75c5bdf2d"
+    "value": "c0016fe92ae174c7d8e9c795da76e99d627eb58b1043269491ae41d4a076320a"
   },
   "standards_and_research": {
     "c2pa": "https://spec.c2pa.org/specifications/specifications/2.2/specs/C2PA_Specification.html",
@@ -914,7 +914,7 @@
     "status": "ready",
     "target_certification_level": "RDLLM-L166"
   },
-  "universal_foundation_model_release_passport_hash": "6e9f761083d913d9591be8d1d0b642b0c80cea0dc11b42493d1398ddde669808",
+  "universal_foundation_model_release_passport_hash": "d4b4f23ee265ce5c98ae78b6d7f5c25190f8516b34f7514690cb1ac8a9793680",
   "universal_foundation_model_release_passport_version": "rdllm-universal-foundation-model-release-passport/v1",
   "well_known": {
     "path": "/.well-known/rdllm/universal-foundation-model-release-passport.json",

@@ -1,18 +1,18 @@
 {
   "artifact_bindings": {
-    "citation_footer_contract_hash": "d2e0a8dbef31224c19d9c524d8136f168931d9f5d4ccf54bbda96b809bddbcde",
+    "citation_footer_contract_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
     "citation_footer_contract_hash_reproducible": true,
     "citation_reliance_receipt_hash": "1479ff223a0d400ee59040fa31ef2b026dafe363663f6c09fa9f6ff2bcacbd7a",
     "citation_reliance_receipt_hash_reproducible": true,
-    "evidence_region_binding_report_hash": "113f6fa09469cf931aef6f281f09c7b65b22e83d3359aebe780f626f204813e3",
+    "evidence_region_binding_report_hash": "c4eafe578d29332f67c356748f9d0bcac62dd33e2c8ea76aa4ef7f478bf8670e",
     "evidence_region_binding_report_hash_reproducible": true,
     "license_transaction_receipt_hash": "1f9429f6d28294793e7aa2dbfe5d71406ccbe32bcb791ab6d28d730ef2d1f641",
     "license_transaction_receipt_hash_reproducible": true,
-    "rendered_attribution_audit_hash": "d4fdacd0d3bd033953f956991bc9bd6cf062d4bca76312c3c1d3581f15d24deb",
+    "rendered_attribution_audit_hash": "c6f4297a83058d8a3dfe646cb1db74894e1dd05671e9bb75c19336c7f10923ec",
     "rendered_attribution_audit_hash_reproducible": true,
-    "source_availability_report_hash": "6f3d0af1dfc20e5d743ace20bf629c1ca853719e1dc6f29959957cb7064afd85",
+    "source_availability_report_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5",
     "source_availability_report_hash_reproducible": true,
-    "source_confidence_report_hash": "e21bf99ae1dbd34ff4c7e5d7c1da0f8a1842044e23b4035b9455f9ee390a4b09",
+    "source_confidence_report_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9",
     "source_confidence_report_hash_reproducible": true
   },
   "case": {
@@ -316,7 +316,7 @@
       "work_id": "maya-youtube-style-pool"
     }
   ],
-  "grounded_source_footer_hash": "85246ef655a8d4feb604f9daa87564faa2bf31ef88b3a2e0a78db3e23e86a70d",
+  "grounded_source_footer_hash": "9921b13895644ab4bda255e0402206b3c5f999f8cb7eab22c5b0ffd4afd48e4f",
   "issued_at": "2026-05-31T00:00:00Z",
   "issuer": "rdllm-local-demo",
   "privacy": {
@@ -334,15 +334,15 @@
       "claim_count": 2,
       "label": "S1",
       "proof_hashes": {
-        "citation_footer_contract_hash": "d2e0a8dbef31224c19d9c524d8136f168931d9f5d4ccf54bbda96b809bddbcde",
+        "citation_footer_contract_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
         "citation_reliance_receipt_hash": "1479ff223a0d400ee59040fa31ef2b026dafe363663f6c09fa9f6ff2bcacbd7a",
-        "evidence_region_binding_report_hash": "113f6fa09469cf931aef6f281f09c7b65b22e83d3359aebe780f626f204813e3",
+        "evidence_region_binding_report_hash": "c4eafe578d29332f67c356748f9d0bcac62dd33e2c8ea76aa4ef7f478bf8670e",
         "license_transaction_receipt_hash": "1f9429f6d28294793e7aa2dbfe5d71406ccbe32bcb791ab6d28d730ef2d1f641",
-        "rendered_attribution_audit_hash": "d4fdacd0d3bd033953f956991bc9bd6cf062d4bca76312c3c1d3581f15d24deb",
-        "source_availability_report_hash": "6f3d0af1dfc20e5d743ace20bf629c1ca853719e1dc6f29959957cb7064afd85",
-        "source_confidence_report_hash": "e21bf99ae1dbd34ff4c7e5d7c1da0f8a1842044e23b4035b9455f9ee390a4b09"
+        "rendered_attribution_audit_hash": "c6f4297a83058d8a3dfe646cb1db74894e1dd05671e9bb75c19336c7f10923ec",
+        "source_availability_report_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5",
+        "source_confidence_report_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9"
       },
-      "proof_row_hash": "70357839a0df55cc19de0d812f6801d3757ce482cf2b7abc7cc2b409c3cafc5e",
+      "proof_row_hash": "3008998201216a51882c2ebd02d1980e173e60b19370031ebeb442ceaf754f78",
       "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
       "verification_endpoint": "/v1/rdllm/grounded-source-footers",
       "verifier_command": "verify-grounded-source-footer",
@@ -353,15 +353,15 @@
       "claim_count": 2,
       "label": "S2",
       "proof_hashes": {
-        "citation_footer_contract_hash": "d2e0a8dbef31224c19d9c524d8136f168931d9f5d4ccf54bbda96b809bddbcde",
+        "citation_footer_contract_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
         "citation_reliance_receipt_hash": "1479ff223a0d400ee59040fa31ef2b026dafe363663f6c09fa9f6ff2bcacbd7a",
-        "evidence_region_binding_report_hash": "113f6fa09469cf931aef6f281f09c7b65b22e83d3359aebe780f626f204813e3",
+        "evidence_region_binding_report_hash": "c4eafe578d29332f67c356748f9d0bcac62dd33e2c8ea76aa4ef7f478bf8670e",
         "license_transaction_receipt_hash": "1f9429f6d28294793e7aa2dbfe5d71406ccbe32bcb791ab6d28d730ef2d1f641",
-        "rendered_attribution_audit_hash": "d4fdacd0d3bd033953f956991bc9bd6cf062d4bca76312c3c1d3581f15d24deb",
-        "source_availability_report_hash": "6f3d0af1dfc20e5d743ace20bf629c1ca853719e1dc6f29959957cb7064afd85",
-        "source_confidence_report_hash": "e21bf99ae1dbd34ff4c7e5d7c1da0f8a1842044e23b4035b9455f9ee390a4b09"
+        "rendered_attribution_audit_hash": "c6f4297a83058d8a3dfe646cb1db74894e1dd05671e9bb75c19336c7f10923ec",
+        "source_availability_report_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5",
+        "source_confidence_report_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9"
       },
-      "proof_row_hash": "65cc667614b6780845544c95dedb8e84a6d152d3e248ea7b1d743641919c3821",
+      "proof_row_hash": "5e59781b39ec4bacf395c27360fe33b504645e2b091893113f65b74edd5e2126",
       "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
       "verification_endpoint": "/v1/rdllm/grounded-source-footers",
       "verifier_command": "verify-grounded-source-footer",
@@ -372,15 +372,15 @@
       "claim_count": 2,
       "label": "S3",
       "proof_hashes": {
-        "citation_footer_contract_hash": "d2e0a8dbef31224c19d9c524d8136f168931d9f5d4ccf54bbda96b809bddbcde",
+        "citation_footer_contract_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
         "citation_reliance_receipt_hash": "1479ff223a0d400ee59040fa31ef2b026dafe363663f6c09fa9f6ff2bcacbd7a",
-        "evidence_region_binding_report_hash": "113f6fa09469cf931aef6f281f09c7b65b22e83d3359aebe780f626f204813e3",
+        "evidence_region_binding_report_hash": "c4eafe578d29332f67c356748f9d0bcac62dd33e2c8ea76aa4ef7f478bf8670e",
         "license_transaction_receipt_hash": "1f9429f6d28294793e7aa2dbfe5d71406ccbe32bcb791ab6d28d730ef2d1f641",
-        "rendered_attribution_audit_hash": "d4fdacd0d3bd033953f956991bc9bd6cf062d4bca76312c3c1d3581f15d24deb",
-        "source_availability_report_hash": "6f3d0af1dfc20e5d743ace20bf629c1ca853719e1dc6f29959957cb7064afd85",
-        "source_confidence_report_hash": "e21bf99ae1dbd34ff4c7e5d7c1da0f8a1842044e23b4035b9455f9ee390a4b09"
+        "rendered_attribution_audit_hash": "c6f4297a83058d8a3dfe646cb1db74894e1dd05671e9bb75c19336c7f10923ec",
+        "source_availability_report_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5",
+        "source_confidence_report_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9"
       },
-      "proof_row_hash": "a202b5557daae183d2405a6cb534416cdcfc5165d2ec997661888c0d159edeac",
+      "proof_row_hash": "dd02ea1fdb7fe3a4a0820d323b4f1dc0c5bc78080e7e0e2ebb3908bbeb09e89d",
       "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
       "verification_endpoint": "/v1/rdllm/grounded-source-footers",
       "verifier_command": "verify-grounded-source-footer",
@@ -401,7 +401,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "5165de9c3903a557618091930acd5d1e059b4303b3e4bfaa0ef5a61f770934ef"
+    "value": "bedb04cbb8f5620473878578ecfbb97bdbac6323b752e9af0a7e187f7669af2e"
   },
   "summary": {
     "claim_row_count": 6,

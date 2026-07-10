@@ -104,10 +104,10 @@
               "operator_template_count": { "const": 5 },
               "passed_count": { "const": 5 },
               "failed_count": { "const": 0 },
-              "direct_settlement_template_count": { "minimum": 1 },
-              "no_direct_settlement_template_count": { "minimum": 1 },
-              "public_sector_template_count": { "minimum": 2 },
-              "production_acceptance_allowed_count": { "const": 5 },
+              "direct_settlement_template_count": { "const": 0 },
+              "no_direct_settlement_template_count": { "const": 5 },
+              "public_sector_template_count": { "const": 0 },
+              "production_acceptance_allowed_count": { "const": 0 },
               "copied_display_verified_count": { "const": 5 }
             }
           }
@@ -218,9 +218,9 @@
               "errors": { "maxItems": 0 },
               "acceptance_status": { "const": "ready" },
               "acceptance_verification_status": { "const": "passed" },
-              "production_acceptance_decision": { "const": "allow" },
+              "production_acceptance_decision": { "const": "block" },
               "traffic_decision": { "const": "allow" },
-              "production_grade_claim_allowed": { "const": true },
+              "production_grade_claim_allowed": { "const": false },
               "response_production_display_ready": { "const": true },
               "response_display_text_status": { "const": "passed" },
               "response_display_text_hash": { "$ref": "#/$defs/hash64" },

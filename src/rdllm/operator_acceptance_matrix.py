@@ -54,12 +54,12 @@ ROLE_EXPECTATIONS: dict[str, dict[str, Any]] = {
     "government": {
         "settlement_mode": "escrow_only",
         "direct_creator_settlement_allowed": False,
-        "public_sector_use_supported": True,
+        "public_sector_use_supported": False,
     },
     "public_sector": {
         "settlement_mode": "processor_attested",
-        "direct_creator_settlement_allowed": True,
-        "public_sector_use_supported": True,
+        "direct_creator_settlement_allowed": False,
+        "public_sector_use_supported": False,
     },
 }
 REQUIRED_OPERATOR_TEMPLATES = tuple(ROLE_EXPECTATIONS)
@@ -171,8 +171,8 @@ def _role_expectation_errors(row: dict[str, Any]) -> list[str]:
         errors.append("acceptance report was not ready")
     if row.get("acceptance_verification_status") != "passed":
         errors.append("acceptance verification did not pass")
-    if row.get("production_acceptance_decision") != "allow":
-        errors.append("production acceptance decision did not allow")
+    if row.get("production_acceptance_decision") != "block":
+        errors.append("unattested template unexpectedly allowed production acceptance")
     if row.get("traffic_decision") != "allow":
         errors.append("traffic decision did not allow")
     if row.get("operator_type") != template:
@@ -184,8 +184,8 @@ def _role_expectation_errors(row: dict[str, Any]) -> list[str]:
             errors.append(
                 f"{field}: expected {expected_value!r}, got {row.get(field)!r}"
             )
-    if row.get("production_grade_claim_allowed") is not True:
-        errors.append("production grade claim was not allowed")
+    if row.get("production_grade_claim_allowed") is not False:
+        errors.append("unattested template unexpectedly allowed a production claim")
     if row.get("response_production_display_ready") is not True:
         errors.append("response was not production display ready")
     if row.get("response_display_text_status") != "passed":

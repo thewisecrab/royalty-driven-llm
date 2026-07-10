@@ -33,7 +33,7 @@ PACKAGED_TEMPLATE_EXAMPLES = {
     "company": PROFILE_DIR / "company_instruction_only.json",
     "institution": PROFILE_DIR / "institution_instruction_only.json",
     "government": PROFILE_DIR / "government_escrow_only.json",
-    "public_sector": PROFILE_DIR / "public_sector_processor_attested.json",
+    "public_sector": PROFILE_DIR / "public_sector_processor_required.json",
 }
 
 
@@ -43,9 +43,12 @@ class ProductionReadinessTests(unittest.TestCase):
         report = evaluate_production_profile(profile)
         self.assertEqual(report["summary"]["status"], "ready")
         self.assertEqual(report["summary"]["blocked_control_count"], 0)
-        self.assertTrue(report["summary"]["production_grade_claim_allowed"])
-        self.assertTrue(report["summary"]["direct_creator_settlement_allowed"])
-        self.assertTrue(report["summary"]["public_sector_use_supported"])
+        self.assertTrue(report["summary"]["configuration_ready"])
+        self.assertEqual(report["summary"]["external_evidence_status"], "unverified")
+        self.assertFalse(report["summary"]["production_grade_claim_allowed"])
+        self.assertFalse(report["summary"]["direct_creator_settlement_allowed"])
+        self.assertFalse(report["summary"]["public_sector_use_supported"])
+        self.assertFalse(report["summary"]["payment_processor_attested"])
         self.assertEqual(report["summary"]["settlement_mode"], "processor_attested")
 
     def test_missing_auth_blocks_production_claims(self) -> None:
@@ -124,7 +127,7 @@ class ProductionReadinessTests(unittest.TestCase):
                 profile = load_json(path)
                 report = evaluate_production_profile(profile)
                 self.assertEqual(report["summary"]["status"], "ready")
-                self.assertTrue(report["summary"]["production_grade_claim_allowed"])
+                self.assertFalse(report["summary"]["production_grade_claim_allowed"])
                 self.assertFalse(report["summary"]["direct_creator_settlement_allowed"])
                 self.assertFalse(report["summary"]["direct_payout_enabled"])
 
@@ -136,12 +139,16 @@ class ProductionReadinessTests(unittest.TestCase):
             load_json(PROFILE_DIR / "government_escrow_only.json")
         )
         self.assertFalse(individual["summary"]["public_sector_use_supported"])
-        self.assertTrue(government["summary"]["public_sector_use_supported"])
+        self.assertFalse(government["summary"]["public_sector_use_supported"])
+        self.assertEqual(
+            government["summary"]["external_evidence_status"],
+            "unverified",
+        )
 
     def test_legacy_default_profile_matches_public_sector_example(self) -> None:
         self.assertEqual(
             load_json(PROFILE_PATH),
-            load_json(PROFILE_DIR / "public_sector_processor_attested.json"),
+            load_json(PROFILE_DIR / "public_sector_processor_required.json"),
         )
 
     def test_profile_only_cli_passes(self) -> None:
@@ -202,12 +209,15 @@ class ProductionReadinessTests(unittest.TestCase):
         self.assertEqual(summary["acceptance_matrix_passed_count"], 5)
         self.assertEqual(
             summary["acceptance_matrix_production_acceptance_allowed_count"],
-            5,
+            0,
         )
         self.assertTrue(summary["direct_payout_enabled"])
-        self.assertTrue(summary["payment_processor_attested"])
-        self.assertTrue(summary["direct_creator_settlement_allowed"])
-        self.assertTrue(summary["public_sector_use_supported"])
+        self.assertFalse(summary["payment_processor_attested"])
+        self.assertFalse(summary["production_grade_claim_allowed"])
+        self.assertFalse(summary["direct_creator_settlement_allowed"])
+        self.assertFalse(summary["public_sector_use_supported"])
+        self.assertEqual(summary["software_release_status"], "ready")
+        self.assertEqual(summary["operator_deployment_status"], "unverified")
         acceptance_rows = {
             row["operator_template"]: row for row in report["acceptance_matrix"]["rows"]
         }
@@ -220,7 +230,7 @@ class ProductionReadinessTests(unittest.TestCase):
                 self.assertEqual(row["status"], "passed")
                 self.assertEqual(row["acceptance_status"], "ready")
                 self.assertEqual(row["acceptance_verification_status"], "passed")
-                self.assertEqual(row["production_acceptance_decision"], "allow")
+                self.assertEqual(row["production_acceptance_decision"], "block")
                 self.assertEqual(row["source_grounding_acceptance_status"], "passed")
                 self.assertEqual(row["audit_response_binding_status"], "passed")
                 self.assertEqual(row["recovery_verification_status"], "passed")
@@ -360,7 +370,7 @@ class ProductionReadinessTests(unittest.TestCase):
         )
         paths = {row["path"] for row in report["profiles"]}
         self.assertIn(
-            "examples/production_profiles/public_sector_processor_attested.json",
+            "examples/production_profiles/public_sector_processor_required.json",
             paths,
         )
         self.assertNotIn("examples/production_readiness_profile.json", paths)
@@ -423,7 +433,7 @@ class ProductionReadinessTests(unittest.TestCase):
                 "security@example.com",
             )
             self.assertEqual(report["summary"]["status"], "ready")
-            self.assertTrue(report["summary"]["production_grade_claim_allowed"])
+            self.assertFalse(report["summary"]["production_grade_claim_allowed"])
             self.assertFalse(report["summary"]["direct_creator_settlement_allowed"])
 
     def test_operator_profile_validate_reports_public_sector_support(self) -> None:
@@ -459,8 +469,8 @@ class ProductionReadinessTests(unittest.TestCase):
             list(Draft202012Validator(verification_schema).iter_errors(payload)),
         )
         summary = payload["readiness_report"]["summary"]
-        self.assertTrue(summary["production_grade_claim_allowed"])
-        self.assertTrue(summary["public_sector_use_supported"])
+        self.assertFalse(summary["production_grade_claim_allowed"])
+        self.assertFalse(summary["public_sector_use_supported"])
         self.assertFalse(summary["direct_creator_settlement_allowed"])
 
 

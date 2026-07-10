@@ -15,6 +15,7 @@ from rdllm.attribution_gap import (
     evaluate_attribution_gap,
     verify_attribution_gap_report,
 )
+from rdllm.claim_warrant import claim_warrant_report
 from rdllm.grounding import evaluate_event_grounding_quality, evaluate_grounding_quality
 from rdllm.matching import TextAttributor
 from rdllm.models import (
@@ -52,6 +53,7 @@ from rdllm.valuation import exact_shapley_values
 MONEY_QUANT = Decimal("0.000001")
 EXTERNAL_RETRIEVAL_RELEVANCE_FLOOR = 0.15
 FOOTER_VERIFIED_SUPPORT_FLOOR = 0.75
+CLAIM_SUPPORT_FLOOR = FOOTER_VERIFIED_SUPPORT_FLOOR
 
 
 def _label_list(values: list[Any]) -> str:
@@ -170,6 +172,11 @@ class RoyaltyDrivenLLM:
             gross_revenue,
             hits,
             text_use="generation",
+            generation_evidence=self._generation_evidence(
+                "internal_retrieval",
+                hits,
+                pre_generation_context_bound=True,
+            ),
         )
 
     def attribute_text(
@@ -187,6 +194,37 @@ class RoyaltyDrivenLLM:
             gross_revenue,
             hits,
             text_use="external_attribution",
+            generation_evidence=self._generation_evidence(
+                "post_hoc_observable_match",
+                hits,
+                pre_generation_context_bound=False,
+            ),
+        )
+
+    def attribute_grounded_text(
+        self,
+        prompt: str,
+        output: str,
+        gross_revenue: Decimal | str | float,
+        hits: list[RetrievalHit],
+        *,
+        provider_evidence: dict[str, Any],
+    ) -> UsageEvent:
+        """Attribute output to sources bound into the provider context before generation."""
+
+        evidence = self._generation_evidence(
+            "provider_context_grounded",
+            hits,
+            pre_generation_context_bound=True,
+        )
+        evidence.update(provider_evidence)
+        return self._build_event(
+            prompt,
+            output,
+            gross_revenue,
+            hits,
+            text_use="generation",
+            generation_evidence=evidence,
         )
 
     def _external_source_hits(self, output: str) -> list[RetrievalHit]:
@@ -200,6 +238,22 @@ class RoyaltyDrivenLLM:
             if hit.score >= EXTERNAL_RETRIEVAL_RELEVANCE_FLOOR
             or hit.chunk.chunk_id in matched_chunk_ids
         ]
+
+    def _attribution_hits(
+        self,
+        hits: list[RetrievalHit],
+        generation_evidence: dict[str, Any],
+    ) -> list[RetrievalHit]:
+        if generation_evidence.get("mode") != "provider_context_grounded":
+            return hits
+        cited = {
+            int(source_id[1:])
+            for source_id in generation_evidence.get("grounding_source_ids", [])
+            if isinstance(source_id, str)
+            and source_id.startswith("S")
+            and source_id[1:].isdigit()
+        }
+        return [hit for index, hit in enumerate(hits, start=1) if index in cited]
 
     def match_text(
         self,
@@ -270,6 +324,7 @@ class RoyaltyDrivenLLM:
         gross_revenue: Decimal | str | float,
         hits: list[RetrievalHit],
         text_use: str,
+        generation_evidence: dict[str, Any] | None = None,
     ) -> UsageEvent:
         answer_text = output
         all_text_matches = self.match_text(
@@ -286,6 +341,7 @@ class RoyaltyDrivenLLM:
             policy_decisions,
             registry_decisions,
         )
+        attribution_hits = self._attribution_hits(hits, generation_evidence or {})
         denied_match_ids = {
             decision["chunk_id"]
             for decision in policy_decisions
@@ -301,7 +357,7 @@ class RoyaltyDrivenLLM:
         shares = self._allocate(
             prompt,
             answer_text,
-            hits,
+            attribution_hits,
             text_matches,
             labels_by_chunk,
             creator_pool,
@@ -318,6 +374,22 @@ class RoyaltyDrivenLLM:
             registry_decisions,
         )
         claim_support = self._claim_support(answer_text, source_references)
+        if self._requires_evidence_escrow(
+            claim_support,
+            source_references,
+            shares,
+            policy_decisions,
+            registry_decisions,
+        ):
+            shares = [self._escrow_share(creator_pool)] if creator_pool else []
+            source_references = self._build_source_references(
+                labels_by_chunk,
+                hits,
+                text_matches,
+                shares,
+                text_use,
+                registry_decisions,
+            )
         source_references = self._attach_evidence_spans(source_references, claim_support)
         grounding_report = self._grounding_report(
             claim_support,
@@ -342,6 +414,13 @@ class RoyaltyDrivenLLM:
             royalty_shares=shares,
             grounding_report=grounding_report,
         )
+        bound_generation_evidence = generation_evidence or {}
+        settlement_decision = self._settlement_decision(
+            generation_evidence=bound_generation_evidence,
+            claim_support=claim_support,
+            grounding_quality=grounding_quality,
+            shares=shares,
+        )
         event_hash = self._event_hash(
             prompt,
             answer_text,
@@ -354,6 +433,8 @@ class RoyaltyDrivenLLM:
             grounding_report,
             grounding_quality,
             attribution_gap,
+            bound_generation_evidence,
+            settlement_decision,
             policy_decisions,
             registry_decisions,
         )
@@ -378,6 +459,8 @@ class RoyaltyDrivenLLM:
             grounding_report=grounding_report,
             grounding_quality=grounding_quality,
             attribution_gap=attribution_gap,
+            generation_evidence=bound_generation_evidence,
+            settlement_decision=settlement_decision,
             policy_decisions=policy_decisions,
             registry_decisions=registry_decisions,
         )
@@ -464,6 +547,8 @@ class RoyaltyDrivenLLM:
             event.grounding_report,
             event.grounding_quality,
             event.attribution_gap,
+            event.generation_evidence,
+            event.settlement_decision,
             event.policy_decisions,
             event.registry_decisions,
         )
@@ -961,21 +1046,133 @@ class RoyaltyDrivenLLM:
                     best_chunk_id = reference.chunk_id
                     best_span = span
 
+            supported = best_score >= CLAIM_SUPPORT_FLOOR
+            if supported:
+                warrant = claim_warrant_report(
+                    claim=claim,
+                    evidence=best_span["text"],
+                    supported=True,
+                )
+                disagreement = claim_source_disagreement_report(
+                    claim=claim,
+                    source_label=best_label,
+                    source_rows=[
+                        {
+                            "label": best_label,
+                            "evidence_preview": best_span["text"],
+                        }
+                    ],
+                    supported=True,
+                )
+                supported = (
+                    warrant["warrant_strength_status"] == "passed"
+                    and disagreement["source_disagreement_status"] == "passed"
+                )
             support.append(
                 ClaimSupport(
                     claim=claim,
                     source_label=best_label,
                     support_score=best_score,
-                    supported=best_score >= 0.20,
-                    work_id=best_work_id if best_score >= 0.20 else "",
-                    chunk_id=best_chunk_id if best_score >= 0.20 else "",
-                    evidence_text=best_span["text"] if best_score >= 0.20 else "",
-                    evidence_span_hash=best_span["span_hash"] if best_score >= 0.20 else "",
-                    evidence_start_char=best_span["start_char"] if best_score >= 0.20 else -1,
-                    evidence_end_char=best_span["end_char"] if best_score >= 0.20 else -1,
+                    supported=supported,
+                    work_id=best_work_id if supported else "",
+                    chunk_id=best_chunk_id if supported else "",
+                    evidence_text=best_span["text"] if supported else "",
+                    evidence_span_hash=best_span["span_hash"] if supported else "",
+                    evidence_start_char=best_span["start_char"] if supported else -1,
+                    evidence_end_char=best_span["end_char"] if supported else -1,
                 )
             )
         return support
+
+    def _requires_evidence_escrow(
+        self,
+        claims: list[ClaimSupport],
+        references: list[SourceReference],
+        shares: list[RoyaltyShare],
+        policy_decisions: list[dict[str, Any]],
+        registry_decisions: list[dict[str, Any]],
+    ) -> bool:
+        if not shares or not references:
+            return False
+        if any(not decision.get("allowed", True) for decision in policy_decisions):
+            return False
+        if any(not decision.get("allowed", True) for decision in registry_decisions):
+            return False
+        source_shares = [share for share in shares if not share.chunk_id.startswith("escrow:")]
+        return bool(source_shares) and (not claims or any(not claim.supported for claim in claims))
+
+    def _generation_evidence(
+        self,
+        mode: str,
+        hits: list[RetrievalHit],
+        *,
+        pre_generation_context_bound: bool,
+    ) -> dict[str, Any]:
+        rows = [
+            {
+                "source_id": f"S{index}",
+                "work_id": hit.chunk.work_id,
+                "chunk_id": hit.chunk.chunk_id,
+                "content_hash": hit.chunk.content_hash,
+                "source_uri": hit.chunk.source_uri,
+                "rank": hit.rank,
+            }
+            for index, hit in enumerate(hits, start=1)
+        ]
+        return {
+            "schema": "rdllm-generation-evidence/v1",
+            "mode": mode,
+            "pre_generation_context_bound": pre_generation_context_bound,
+            "source_count": len(rows),
+            "source_rows": rows,
+            "context_hash": stable_hash(json.dumps(rows, sort_keys=True)),
+        }
+
+    def _settlement_decision(
+        self,
+        *,
+        generation_evidence: dict[str, Any],
+        claim_support: list[ClaimSupport],
+        grounding_quality: dict[str, Any],
+        shares: list[RoyaltyShare],
+    ) -> dict[str, Any]:
+        mode = str(generation_evidence.get("mode", "unknown"))
+        escrowed = any(share.chunk_id.startswith("escrow:") for share in shares)
+        evidence_bound = generation_evidence.get("pre_generation_context_bound") is True
+        if mode == "provider_context_grounded":
+            evidence_bound = (
+                evidence_bound
+                and generation_evidence.get("provider_evidence_verified") is True
+            )
+        claims_verified = bool(claim_support) and all(
+            claim.supported for claim in claim_support
+        )
+        grounding_verified = grounding_quality.get("verdict") == "verified"
+        eligible = evidence_bound and claims_verified and grounding_verified and not escrowed
+        reasons: list[str] = []
+        if not evidence_bound:
+            reasons.append("pre_generation_source_context_or_provider_citation_not_proven")
+        if not claims_verified:
+            reasons.append("one_or_more_claims_not_verified")
+        if not grounding_verified:
+            reasons.append("grounding_quality_not_verified")
+        if escrowed:
+            reasons.append("creator_pool_escrowed")
+        return {
+            "schema": "rdllm-settlement-decision/v1",
+            "status": (
+                "eligible_for_processor_instruction"
+                if eligible
+                else "escrowed"
+                if escrowed
+                else "held_for_review"
+            ),
+            "generation_evidence_mode": mode,
+            "eligible_for_settlement_instruction": eligible,
+            "direct_execution_allowed": False,
+            "external_processor_attestation_required": True,
+            "reasons": reasons,
+        }
 
     def _best_evidence_span(self, claim: str, chunk: Chunk) -> dict[str, Any]:
         claim_tokens = tokenize(claim)
@@ -1311,6 +1508,8 @@ class RoyaltyDrivenLLM:
         grounding_report: dict[str, Any],
         grounding_quality: dict[str, Any],
         attribution_gap: dict[str, Any],
+        generation_evidence: dict[str, Any],
+        settlement_decision: dict[str, Any],
         policy_decisions: list[dict[str, Any]],
         registry_decisions: list[dict[str, Any]],
     ) -> str:
@@ -1328,6 +1527,8 @@ class RoyaltyDrivenLLM:
             "grounding_report": grounding_report,
             "grounding_quality": grounding_quality,
             "attribution_gap": attribution_gap,
+            "generation_evidence": generation_evidence,
+            "settlement_decision": settlement_decision,
             "policy_decisions": policy_decisions,
             "registry_decisions": registry_decisions,
         }

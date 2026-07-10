@@ -29,7 +29,7 @@ TEMPLATE_RESOURCES = {
     "company": ("production_profiles", "company_instruction_only.json"),
     "institution": ("production_profiles", "institution_instruction_only.json"),
     "government": ("production_profiles", "government_escrow_only.json"),
-    "public_sector": ("production_profiles", "public_sector_processor_attested.json"),
+    "public_sector": ("production_profiles", "public_sector_processor_required.json"),
 }
 
 
@@ -208,10 +208,18 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
     )
 
 
-def profile_result(profile: dict[str, Any]) -> dict[str, Any]:
+def profile_result(
+    profile: dict[str, Any],
+    *,
+    trust_store: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     schema_errors = profile_schema_errors(profile)
-    readiness_report = evaluate_production_profile(profile)
-    verification = verify_production_readiness_report(profile, readiness_report)
+    readiness_report = evaluate_production_profile(profile, trust_store=trust_store)
+    verification = verify_production_readiness_report(
+        profile,
+        readiness_report,
+        trust_store=trust_store,
+    )
     errors = [
         *(f"profile schema: {error}" for error in schema_errors),
         *(f"report verification: {error}" for error in verification["errors"]),
@@ -355,7 +363,8 @@ def create(args: argparse.Namespace) -> int:
 
 def validate(args: argparse.Namespace) -> int:
     profile = load_json(args.profile)
-    result = profile_result(profile)
+    trust_store = load_json(args.trust_store) if args.trust_store else None
+    result = profile_result(profile, trust_store=trust_store)
     if args.write_report:
         write_json(args.write_report, result["readiness_report"])
     _attach_paths(result, profile_path=args.profile, report_path=args.write_report)
@@ -395,6 +404,11 @@ def main(argv: list[str] | None = None) -> int:
         help="Validate an existing operator readiness profile and optional report output.",
     )
     validate_parser.add_argument("--profile", type=Path, required=True)
+    validate_parser.add_argument(
+        "--trust-store",
+        type=Path,
+        help="Externally managed deployment trust store for signed attestations.",
+    )
     validate_parser.add_argument("--write-report", type=Path)
     validate_parser.add_argument("--json", action="store_true")
     validate_parser.set_defaults(func=validate)

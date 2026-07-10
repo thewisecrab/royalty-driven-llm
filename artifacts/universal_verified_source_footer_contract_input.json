@@ -1221,11 +1221,11 @@
     },
     "created_at": "2026-06-03T00:00:00Z",
     "evidence_roots": {
-      "combined_runtime_route_binding_root": "e6555e014a2b632ac586234f7c248d92e07afed9c8226ab9664bd56a55b1b02b",
+      "combined_runtime_route_binding_root": "8344fc9a316d1e7b503c82c79cf2542fb4881da7035fe57a1e6c13f5db88099a",
       "negative_runtime_root": "9201c53925b9745a727923cdc86d5f2ea44393f443fb6ff4c4dc3f925826cbaa",
       "runtime_binding_stage_root": "8cc611e02d963017d0363a8a0707ccd375632bfa084beb6e617561046568730c",
       "runtime_model_field_root": "8ca82e39a2384c05089d67cd897d074137ec8fc17da135648aa5e21f2f2101d1",
-      "runtime_route_binding_root": "f4fd5df5f7c3527debcd621dc2f748a91cffe5680405ebb8c65dc4c73cb8096a",
+      "runtime_route_binding_root": "a9d5fa72b4bd0cc30448acdd3f435b7fc1d99a6543aa3db06f8a8d99a7576e77",
       "runtime_surface_root": "9b438eba80a34dd7154f6decdddfccb769855be7b74b8843b4c02b3e7465a974"
     },
     "issuer": "rdllm-local-demo",
@@ -1466,19 +1466,19 @@
       "public_contract_uses_hashes_and_route_metadata": true
     },
     "production_invocation_admission_binding": {
-      "artifact_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+      "artifact_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
       "hash_reproducible": true,
       "level": "RDLLM-L170",
-      "payload_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+      "payload_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
       "present": true,
       "status": "ready"
     },
     "provider_catalog_coverage_binding": {
-      "artifact_hash": "c27b0a94a5b10f5399e375ca3e3949ad9b5de732a05394489fec4e6fc8acf79f",
+      "artifact_hash": "6f84c504bb3ea075d9009cf986aa0dcd8a9f4e3a511a158b1fd81addb37b2efb",
       "catalog_covered_route_count": 18,
       "hash_reproducible": true,
       "level": "RDLLM-L178",
-      "payload_hash": "c27b0a94a5b10f5399e375ca3e3949ad9b5de732a05394489fec4e6fc8acf79f",
+      "payload_hash": "6f84c504bb3ea075d9009cf986aa0dcd8a9f4e3a511a158b1fd81addb37b2efb",
       "present": true,
       "status": "ready"
     },
@@ -1779,7 +1779,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "7eef5a41429c70c699ba60c5fa20bc07a77e6c7e8b0d73b20b31799eaa10dec6",
         "requested_model_locked": true,
         "response_model_echo_hash": "bfcf47d0903d7c67eb9147d6a7ca8d72b9401a513b3fe7e0c54510c2954ef5ae",
@@ -1805,7 +1805,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "b3e53038c2ebbcdd8d62a7f0f5b8f2c6393f24e8c1c1a7e1fbc007d1a6ba2eee",
         "requested_model_locked": true,
         "response_model_echo_hash": "d7196d7d067f56f27f3004e2444c47d6888c0ba3fc8400e826be7029bf8d7d4a",
@@ -1831,7 +1831,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "84048fc7beeae595ffd7e00d8416bd07ccb329115bd32e6e50f3542b3513b6b0",
         "requested_model_locked": true,
         "response_model_echo_hash": "8fbc70f1465102204b457d3a4d2914ead1b0371e20d20685acc121911ec5bbe8",
@@ -1857,7 +1857,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "119373ff998094f58844570cb939bb051d801b1cd9132e06c6e5b80dc851c4e8",
         "requested_model_locked": true,
         "response_model_echo_hash": "e0cab42032dc32bc8d8ee166ec3e0da9125a42d45a10ab94b493003ee9482bdb",
@@ -1883,7 +1883,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "57d42b11550eba1e69b61184d54ff41fd095eb407d4c180519c21a4dad60f132",
         "requested_model_locked": true,
         "response_model_echo_hash": "65a1020bf7896d0d3d8fef16815b23a7cecd8813e2de51a6fd48e58bc93f2aaa",
@@ -1909,7 +1909,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "dc51310477ac01166773afce87b08cf5db670739c48a31dad2ed20561d99b8f7",
         "requested_model_locked": true,
         "response_model_echo_hash": "1401524d52d06ed97fbf443d7e8621820a0409dd79f6790f59cf627c36520d13",
@@ -1935,7 +1935,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "c55054a2da95d185681d24b04855f20b47aacb80e0a7323c011f13a85d3160b6",
         "requested_model_locked": true,
         "response_model_echo_hash": "9fbb414a2ae30a567173ee181a1c4d6e8c37ba7621c5a31991e858c38d642375",
@@ -1961,7 +1961,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "2e655117792b297fbbdcafd3d564b9d3087272bda1528508761e097dd0fb91f0",
         "requested_model_locked": true,
         "response_model_echo_hash": "ce6ea31e8e5d9bf774ff9ffaeeb687b4b3b1b4272dac250b0e63f0d0ea0fe827",
@@ -1987,7 +1987,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "03d11ee0d9f05b5ee33dbb1d54642129a281561455b7381f940dc00e08ebe2b4",
         "requested_model_locked": true,
         "response_model_echo_hash": "c46c56fdc0163cb761fb617aa0d033b5172995859cb7b8111e7bd02ae880ce60",
@@ -2013,7 +2013,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "0820f76318ff9850de8a355c70de2fad013a0efd09ceca5632bb6b9849038d3f",
         "requested_model_locked": true,
         "response_model_echo_hash": "18b3eb93ed9fe03fbd24f92ab5673a4384ce406ca53ae7935e343998719837dd",
@@ -2039,7 +2039,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "79e0333318421330858d0f8702e60ea3aa5b7e943aeec558ee6be546d7307d7b",
         "requested_model_locked": true,
         "response_model_echo_hash": "2fe54961defdc308e4ece6054db6291a801335ca43d06c79de2068da5c550579",
@@ -2065,7 +2065,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "5b47922f4a1d92651a6f6a13ee242898351c187db75535c62519054e2ae87bd6",
         "requested_model_locked": true,
         "response_model_echo_hash": "4de5e18497927852b35b9cdc2d34a6a0fd4d81a4ab26262b0b50542170866912",
@@ -2091,7 +2091,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "216ba7720fb85460ae7118095062a4a452f722ffec81a00ed29a9406a805ef98",
         "requested_model_locked": true,
         "response_model_echo_hash": "3342155d1d54108c8bb1e82b0dab89d352b7f855647f5aae12e284e557500a02",
@@ -2117,7 +2117,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "e0d0271ce0ce5bfdde989653c6c28eb54480d778e91c1fb5702c753354165388",
         "requested_model_locked": true,
         "response_model_echo_hash": "5a95ff3c486180e1f3f5951c265df56bf6237ec4c7223f9ba3d09718c3d3f4ba",
@@ -2143,7 +2143,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "ad53d60ce11f1c03f2b1be782a0e3a8f17539612882fc2c22071abe5f783c190",
         "requested_model_locked": true,
         "response_model_echo_hash": "38f56f4e60ef37b88b1d588875491eca482f99b759fceffd247058378bbbcf7d",
@@ -2169,7 +2169,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "8201e06c0420e97d146919ab4c49b1be95ee5fe54e232d1b4fbce6af151614d6",
         "requested_model_locked": true,
         "response_model_echo_hash": "d7088fd94fa2782715c1ea7e1f5851c528230cf8768bbc984077e212b380f0f8",
@@ -2195,7 +2195,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "bd9b5bf386ca62a9ea1d796014492b0ca5a7960ba167e5c4a8855cd819e87b3f",
         "requested_model_locked": true,
         "response_model_echo_hash": "4768f197da5b69ac11d2ca6c2e74e3d0216a384b969f37b5c9f8064e9fa1197f",
@@ -2221,7 +2221,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "9b0c16eb725220ab48dbe3da33e204ef7fb8daa543beb8ad4a5b14182ce7f3b1",
         "requested_model_locked": true,
         "response_model_echo_hash": "b7b00e17503e7c326bde210e92c723dba25c04f260cef5ca9e3391febcb553b7",
@@ -2414,7 +2414,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "c30f116844a12c276146ae24f565ab3271735d4f1551603d10ecd099f2014c26"
+      "value": "201ccf3355ccfb0067301e0239e6084004995324f5bc75664337a01b0a62d1c0"
     },
     "summary": {
       "catalog_covered_route_count": 18,
@@ -2435,7 +2435,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L179"
     },
-    "universal_runtime_route_binding_contract_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+    "universal_runtime_route_binding_contract_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
     "universal_runtime_route_binding_contract_version": "rdllm-universal-runtime-route-binding-contract/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-runtime-route-binding-contract.json",
@@ -2596,12 +2596,12 @@
       }
     },
     "evidence_roots": {
-      "combined_footer_enforcement_root": "e5c0c91df74dbd5df0167af491cd1d7c974070cf887760abd0748e500e572f38",
+      "combined_footer_enforcement_root": "57b8a78b862ada99cc2a10b18ffa34e043905d6d8d3ca29bf55c09566dcea4f3",
       "enforcement_stage_root": "0e7075b8d6e2de9f314eb5d1589094e4d3e29a83b31e2dfac87374daa24d11da",
       "footer_row_field_root": "f7afa4ec456ae17252fb9f5084e76765fb9fff43e7d7e74a85fb79362d150c74",
       "negative_footer_root": "1fa18b2b28c082abfa4eab9503fd8e9f00ce413cdf0afde8ab5e7f0e043f7644",
       "response_surface_root": "af4674571bb182341ec4b5577cf7673c899ee3c5bef09f310e235aaaa4343ebc",
-      "route_enforcement_root": "c96d1c0c96fc5e8f3d340abd3b93533ba31b3718de75cf254a6729487fdef902",
+      "route_enforcement_root": "cf7ed04ee19143baf6a9c2fb52de93833fa5137bae52d1a0c2764c0bd54b52b7",
       "source_type_root": "744d4f9575354e18ad890da53a23ae195f5632f1ada63a7a01bb1201bbad17f2"
     },
     "footer_enforcement_decision": {
@@ -2752,11 +2752,11 @@
     },
     "issuer": "rdllm-local-demo",
     "model_provider_registry_binding": {
-      "artifact_hash": "1830ef6f1aed0032291d7496c755dabaf0ece79ca16a578e35325392edca73f6",
+      "artifact_hash": "b6ca6e963a35e0fd5c92917781e55b1234c15b4acdf662e29a1b14d63c66b3c4",
       "declared_model_route_count": 18,
       "hash_reproducible": true,
       "level": "RDLLM-L176",
-      "payload_hash": "1830ef6f1aed0032291d7496c755dabaf0ece79ca16a578e35325392edca73f6",
+      "payload_hash": "b6ca6e963a35e0fd5c92917781e55b1234c15b4acdf662e29a1b14d63c66b3c4",
       "present": true,
       "status": "ready"
     },
@@ -3114,7 +3114,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "b5ea1c29b2f87470f275a788d24c87a841653d7d16dcd474220336734c2dcea9",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "608bb89ed3f63d23cc2fd19979922c26b3eb779a887c20a6fc03e6eb61752b9f",
         "telemetry_span_hash": "1bc7b161645a8db9df42b8fac5e3c28f1c96a23a18e5abc228025c3b745782fb",
         "unsupported_claims_refused": true
@@ -3142,7 +3142,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "b498f977830fa1e9b1590306546d7d78ccc563d0f867f521e8e4f15cb82de807",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "7ba0fc36ad75ffeca2063e728588f7c3f31e49066bd81fd4d16414a5ca91f2dd",
         "telemetry_span_hash": "79fe359772b1a89a9d19b29dc0206f012edcda4fc042cb2cc0b8088dc5eac5c2",
         "unsupported_claims_refused": true
@@ -3170,7 +3170,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "0c243898327a3c9fdd214ad8969c68943c0091bad8d2fe8fd380c924bea1c94b",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "f9f2a488aa00032f541da46b970970c6f31b2d41a9a34263c651e0cd5f999073",
         "telemetry_span_hash": "99d3202eea581bee298a8261c8c79bcea24b38e517bb17588394c24ce9aa6a43",
         "unsupported_claims_refused": true
@@ -3198,7 +3198,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "fd413cb569503768955de2edeaeb30c6164e7a9d2d72c1f9311760be97f5c5d5",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "9957730a02656c23df5b6d8e74435fa075c6a55e2fe318cdf0ceaa44d8403e78",
         "telemetry_span_hash": "3424422e7ec6d1fc773fb65c791747003dbf5a7f94ad28dc0c94ce14ebb8892f",
         "unsupported_claims_refused": true
@@ -3226,7 +3226,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "a2f6af0824eb19b534fc44b0a074daad3d0bc82580a27f453e584c71d5386861",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "88a162e83e4abcbb53f2bbf6514537061592469d8203070f79a5fefdbeffccb6",
         "telemetry_span_hash": "a602af4fb20ffc3b3493c6230b70c728d83cf1358024b1ac91436771558f4ab4",
         "unsupported_claims_refused": true
@@ -3254,7 +3254,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "984d95ffdc7013163af9e4e08563232450df7b72f859166b8e7dfcfe1a98965c",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "d9f48a4dd1b517843c5dd5d36076aeff53eaf094eb20ec30f683c400ba4c5a74",
         "telemetry_span_hash": "fe8a58a6211ee8115696e76670488c5860c609c933255c6ef09603f1a6fb9b45",
         "unsupported_claims_refused": true
@@ -3282,7 +3282,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "d3cbb1130bd84f1994045d9d32c26e274afc66e95a20f537d6c6af327f9cf079",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "8153007b2a797960446498efe27d4fa50be45f0916ee4b75242e10366f49c32b",
         "telemetry_span_hash": "9a420b00776b2b06e3f36f84812292b4137f049eacbcbb1b9b377e063cf7f7f4",
         "unsupported_claims_refused": true
@@ -3310,7 +3310,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "df8afc9536b4f17cbc7231116839a0e4c1f8d197ae45efe2eaf878b649f24983",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "372ccd1b11c562a4e6f033a2ca016cf9c23fb670912a2ab8e9505cd34ec44233",
         "telemetry_span_hash": "0de56be86da448b99966564bead83127addd2001bc69383bad592021f91b7ce9",
         "unsupported_claims_refused": true
@@ -3338,7 +3338,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "cb8b1528a1220f4f27c63a3cec47d8ea8ae4fcad70f6af6ff2387316a252cc4a",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "b67fc18c59af7e152a794cf85e62aaba666219f325f7dbd0008de2ff838be364",
         "telemetry_span_hash": "5824b39ebaa89edcc507653573c975e4b72a9f07ca12ab66a953aeb3614be079",
         "unsupported_claims_refused": true
@@ -3366,7 +3366,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "5a603adb4195c05ed2fe59466f75a52d3d8a3caa1b13492b5fd5d16afbda2092",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "92594cead6d09460956d6e8524fce49c1ff52e3d53d6dc881daa8428fd41cb44",
         "telemetry_span_hash": "539e275262fb6296f298b110dfe0868b5c882bdf154dd69ac7b4a2e21da3bb22",
         "unsupported_claims_refused": true
@@ -3394,7 +3394,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "3c81b7d03923906d62d57254cd9ea2509ef8f9636a43c21cef5ed6332ee2e7f3",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "6eeed26c943567ad2ab66e12bba1b75c97bd581838eacb4ed0a2f0ec79bfcafa",
         "telemetry_span_hash": "41b21020d598264d481a682a0e2d4d3a6cbd265da553c54c34d9b410f7dc3210",
         "unsupported_claims_refused": true
@@ -3422,7 +3422,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "12380d80173acef0b386a020e2531cb6ac75a2b2bb0b922fd8b983c18359cc05",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "e44647c0e9b76d3841687868dc0c825c316d18bbe740c48296c260b6b56498b3",
         "telemetry_span_hash": "c2b877cf64fc237940ea84c238f4c24ad54a45726d46be71425f222ab9041d63",
         "unsupported_claims_refused": true
@@ -3450,7 +3450,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "66050ba728a8d85ad2094c743749c549a9232f297ddb940cdc45b5b617a13614",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "350758467692f8b84e10db68b745254680eed0740d068d59ee8e58c76c820f8f",
         "telemetry_span_hash": "2db75a4848bf9cfbc1019b67f32967616166cab44a14564f4f4d3526c7b5708c",
         "unsupported_claims_refused": true
@@ -3478,7 +3478,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "c19bfcfaffdfed5bc1b288204547b33f28fbf9733768f2437732606bd3a3674e",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "e9b49bb4514326fd44abef2c32b0037e0c801873432f2fee4cf36529500544f4",
         "telemetry_span_hash": "7327658215e5435bd6614e1018ee433c0e39a80c412281bad601fcd4116f1d46",
         "unsupported_claims_refused": true
@@ -3506,7 +3506,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "9aebe8b63c9474541e866fa30f7dae004b76c938e5cf7c80b01f36acb8b1aa2d",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "152588e891f8d07c64fa4a14281e3ac17f355921633a701e8a647a1fc73a2e14",
         "telemetry_span_hash": "5367bc7ed9f39587dc1ddeb54f94a6cd3d6df853777b72768bf698480a6eacbd",
         "unsupported_claims_refused": true
@@ -3534,7 +3534,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "16dd5c0c49cf81e3b8ac098d1c1390aa0555c2e9fec9ecdbf6964853cc4a866a",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "bdc7f939bc51dc0adbbaa26f33d3fcc3f45698bf3dfc1129bbcaa1bc2837e30b",
         "telemetry_span_hash": "3140167b532833454533e335c97c1c2aa1bdc64d72c607f2f92dbe552d0d2834",
         "unsupported_claims_refused": true
@@ -3562,7 +3562,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "ce5e7617edd8a10738c70adb3d17ddf182799798f083929a0be3a1ff3a343d71",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "3615eba8e06a3b9bb9583e4de4bb55f4dd4d1d86462a429fff94ac92fd091d6a",
         "telemetry_span_hash": "99989a2e3cb70b54cf3d5c1ed3d15596f9081b89595e124904b38f00292f7d7a",
         "unsupported_claims_refused": true
@@ -3590,7 +3590,7 @@
         "settlement_hold_enforced": true,
         "settlement_hold_hash": "2c5300e332528c8dadd117ca4345ba32564b4bcde0b39419b041eec9cde136a0",
         "source_grounded_response_l171_bound": true,
-        "source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "source_verifier_hash": "9a5be3ee216bb4259182fb342196f54b6868fe9ab4aa0591db7072c5aeacbb73",
         "telemetry_span_hash": "ae09539ba0ed8c2f9849a437eaf66b3080bce3f24dea9717a5e60a3297092c28",
         "unsupported_claims_refused": true
@@ -3600,13 +3600,13 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "2e0d18391848a964298b2fcb1bf98b575828f66469587b1eb540cb24fffb2c6c"
+      "value": "5f05c9de9497b2c94d538035a8ef150d3f92fb3fc5209ddece47a1a21889e67d"
     },
     "source_grounded_response_binding": {
-      "artifact_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+      "artifact_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
       "hash_reproducible": true,
       "level": "RDLLM-L171",
-      "payload_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+      "payload_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
       "present": true,
       "status": "ready"
     },
@@ -3777,7 +3777,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L177"
     },
-    "universal_source_footer_enforcement_contract_hash": "3a231dd717f9e9e99c101f1f0e76c9271a871a02452eee7af393e0ca18f12059",
+    "universal_source_footer_enforcement_contract_hash": "77be30e22d169412da9c454d3031d72e9b36ba0d368d18d2d9885b07b2b2a213",
     "universal_source_footer_enforcement_contract_version": "rdllm-universal-source-footer-enforcement-contract/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-source-footer-enforcement-contract.json",
@@ -3969,10 +3969,10 @@
     },
     "issuer": "rdllm-local-demo",
     "live_attribution_binding": {
-      "artifact_hash": "fe87f00f549f04e555243545856c3c9a2cc72f3cb3fa779abc877fe3ab15a205",
+      "artifact_hash": "60cfdb4dceac5d7632b540b3a0b1385f4f41d7527e8403e9185bc6bef6e90f34",
       "hash_reproducible": true,
       "level": "RDLLM-L165",
-      "payload_hash": "fe87f00f549f04e555243545856c3c9a2cc72f3cb3fa779abc877fe3ab15a205",
+      "payload_hash": "60cfdb4dceac5d7632b540b3a0b1385f4f41d7527e8403e9185bc6bef6e90f34",
       "present": true,
       "status": "ready"
     },
@@ -4176,10 +4176,10 @@
       "private_strings_absent": true
     },
     "production_admission_binding": {
-      "artifact_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+      "artifact_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
       "hash_reproducible": true,
       "level": "RDLLM-L170",
-      "payload_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+      "payload_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
       "present": true,
       "status": "ready"
     },
@@ -4444,7 +4444,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "45a41291ecdd0504b27a8c05901fdbd54d204268bb7500e59f329c125dfa3459"
+      "value": "71e51fbecee635d545293019c8d2c6a9ed6b89e733c736ca126dd516fe50ff0b"
     },
     "source_category_rows": {
       "code_repository": {
@@ -4694,7 +4694,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L171"
     },
-    "universal_source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+    "universal_source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
     "universal_source_grounded_response_receipt_version": "rdllm-universal-source-grounded-response-receipt/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-source-grounded-response-receipt.json",
@@ -4880,7 +4880,7 @@
       "relevant_to_claims": true,
       "rendered_footer_hash": "696519ffed2feeeb0f5e93b6b7779cdb38cc6d0db4e98bd82cd568d1bfc08d8f",
       "route_binding_matched": true,
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "settlement_state": "eligible",
       "settlement_state_visible": true,
       "source_content_hash": "c77c0a9cd2be4e726c036be6c86e77d36a8a94a434013d467057c7280fccd076",
@@ -4919,7 +4919,7 @@
       "relevant_to_claims": true,
       "rendered_footer_hash": "d5aa7b3408edbd1e37d0b1316fff4b15d37488adc15ce24a8b4d4f701a648224",
       "route_binding_matched": true,
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "settlement_state": "eligible",
       "settlement_state_visible": true,
       "source_content_hash": "7d2b9283b1309bcd49d38e7e7968815313d21ca36ca9872d0660f473387525db",
@@ -4958,7 +4958,7 @@
       "relevant_to_claims": true,
       "rendered_footer_hash": "3eb3529da4ec14ee5d729092621151790e1e9e98e9b269e901018b2beec36fe8",
       "route_binding_matched": true,
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "settlement_state": "eligible",
       "settlement_state_visible": true,
       "source_content_hash": "e25349343c8bf317397445e90cb4f226c03d9d18bc3852ef647a30bfe7707843",

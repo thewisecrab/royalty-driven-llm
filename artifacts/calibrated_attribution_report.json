@@ -221,13 +221,13 @@
   "created_at": "2026-06-03T00:00:00Z",
   "event": {
     "decision_provenance_report_hash": "a79eada85bec2cd6ce4a2134cf094a5d3174fb51feadc188ef14c408efd0b228",
-    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-    "event_id": "evt_b560c62bb49a73d0",
-    "evidence_sufficiency_report_hash": "063461c270260c3abdddfb1e8dbdfa6110caeec55c126a5a5538b8f28d7a97c9",
+    "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+    "event_id": "evt_83312b019637578e",
+    "evidence_sufficiency_report_hash": "dfb8951190a3c73c01237f77957a812935f2bd2b581f7589ef08313ec4baf00d",
     "provenance_evaluation_report_hash": "cb2df8911c05283092e1a7f70ddeaf2bbb8316c6d1f0eb8adbed6646d4d6cd7a",
-    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
-    "response_envelope_hash": "9081f80ddffc33f3cad6008a36edabf252cee69b4b347e17704342cf66e4d5ec",
-    "source_confidence_report_hash": "bace8ccea5c62c7ba0d4042dfe3767721ff4f2fd4fb1a2397ecef09204c3d6a5"
+    "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
+    "response_envelope_hash": "e20a0d5eb34d9b0550d37ed775e12133831391e937f971ea9ac40a84520a336c",
+    "source_confidence_report_hash": "90c0912e9d5e14a4a0c7e7e4b30c60f04ce1d4e34e7563e0f28731e05c35cd2b"
   },
   "issuer": "rdllm-local-demo",
   "issues": [],
@@ -251,7 +251,7 @@
     "report_uses_hashes_bounds_scores_and_decision_ids": true,
     "source_text_disclosed": false
   },
-  "report_hash": "7fc180d839d720464b4eb2056ad26cb71ab9b532cde3ccb92d8663f77f66d3d4",
+  "report_hash": "054ad7911fedafc270b790f02b43444ef66e266dfceae8b97b4142030fad5b2e",
   "report_version": "rdllm-calibrated-attribution-confidence/v1",
   "schemas": {
     "calibrated_attribution_report": "docs/schemas/calibrated_attribution_report.schema.json",
@@ -264,7 +264,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "ed73243747f8bcca8771988de82e1b4205ce600f54b97b530d6030f65543ad92"
+    "value": "ec8fe6eb08906d14c91a1162c217feaec92a80e2e1d8ce4e08c843181d7829f9"
   },
   "sources": [
     {

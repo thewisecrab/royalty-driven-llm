@@ -35,7 +35,7 @@ def run_first_demo(
     missing = [marker for marker in REQUIRED_OUTPUT_MARKERS if marker not in output]
     source_count = len(event.source_references)
     claim_count = len([claim for claim in event.claim_support if claim.supported])
-    payout_count = len(
+    allocation_count = len(
         [
             share
             for share in event.royalty_shares
@@ -47,22 +47,26 @@ def run_first_demo(
         missing.append("at least one visible source")
     if claim_count < 1:
         missing.append("at least one supported claim")
-    if payout_count < 1:
-        missing.append("at least one creator payout row")
+    if allocation_count < 1:
+        missing.append("at least one creator allocation row")
 
     status = "failed" if missing else "passed"
     lines = [
         f"rdllm_first_run status: {status}",
         "",
+        "SYNTHETIC DEMO: The creators, works, URLs, revenue, and allocations below",
+        "are fictitious test data. No model provider was called and no money moved.",
+        "",
         "What just happened:",
         f"1. Generated an answer for: {prompt}",
         f"2. Found visible sources: {source_count}",
         f"3. Found supported claim-evidence rows: {claim_count}",
-        f"4. Found creator payout rows: {payout_count}",
+        f"4. Found candidate creator allocation rows: {allocation_count}",
+        f"5. Settlement decision: {event.settlement_decision.get('status', 'unknown')}",
         "",
         "What to look for below:",
         "- [S1], [S2], ... labels in the answer",
-        "- Sources section with support, text_match, payout, and hash fields",
+        "- Sources section with support, text_match, candidate payout, and hash fields",
         "- Claim Evidence rows showing which source supports each claim",
         "- disagreement=passed, which means no visible source plainly contradicted the claim",
         "",

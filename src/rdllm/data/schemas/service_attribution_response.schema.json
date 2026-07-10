@@ -200,7 +200,10 @@
           "required": [
             "event_hash",
             "grounding_verdict",
-            "attribution_gap_verdict"
+            "attribution_gap_verdict",
+            "generation_evidence_mode",
+            "settlement_status",
+            "settlement_instruction_eligible"
           ],
           "properties": {
             "event_hash": {
@@ -211,6 +214,17 @@
             },
             "attribution_gap_verdict": {
               "type": "string"
+            },
+            "generation_evidence_mode": {
+              "type": "string",
+              "minLength": 1
+            },
+            "settlement_status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "settlement_instruction_eligible": {
+              "type": "boolean"
             }
           }
         },
@@ -344,7 +358,11 @@
           "minLength": 1
         },
         "settlement_status": {
-          "enum": ["allocated_not_executed", "not_allocated"]
+          "enum": [
+            "allocated_not_executed",
+            "candidate_held_for_review",
+            "not_allocated"
+          ]
         },
         "payout": {
           "$ref": "#/$defs/decimal_string"

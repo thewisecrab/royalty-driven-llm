@@ -2,6 +2,24 @@
 
 Version: `rdllm-attribution-receipt/v1`
 
+> **Security boundary:** production receipts use Ed25519 public-key signatures.
+> The repeated `--signing-secret secret` commands later in this document create
+> deterministic conformance fixtures only. HMAC fixtures are not independently
+> verifiable, must never authorize a deployment or payment, and must not be used
+> with a real secret copied into shell history.
+
+Generate an operator key pair without printing the private key:
+
+```bash
+rdllm-keygen \
+  --private-key /secure/rdllm/receipt-private.pem \
+  --public-key /etc/rdllm/receipt-public.pem
+```
+
+The private key is created with mode `0600`. Keep it in an operator-controlled
+secrets manager or signing service. Publish the public key and its key ID so users
+and auditors can verify receipts without trusting the issuer's server.
+
 ## Purpose
 
 The Royalty Driven LLM mechanism should not stop at internal payout accounting.

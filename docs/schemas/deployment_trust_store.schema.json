@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdllm.example/schemas/deployment_trust_store.schema.json",
+  "title": "RDLLM Deployment Trust Store",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "keys"],
+  "properties": {
+    "schema": { "const": "rdllm-deployment-trust-store/v1" },
+    "keys": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "key_id",
+          "issuer",
+          "public_key_pem",
+          "allowed_attestation_types"
+        ],
+        "properties": {
+          "key_id": { "type": "string", "minLength": 1 },
+          "issuer": { "type": "string", "minLength": 1 },
+          "public_key_pem": {
+            "type": "string",
+            "pattern": "^-----BEGIN PUBLIC KEY-----"
+          },
+          "allowed_attestation_types": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "audit_log_integrity",
+                "backup_restore",
+                "payment_processor",
+                "public_surface_health",
+                "receipt_public_key",
+                "runtime_controls",
+                "security_assessment"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

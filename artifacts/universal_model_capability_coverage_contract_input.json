@@ -952,11 +952,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "75cb8dd7fc29ccd7d075d85e57757fa548647d4c14bf6e4d792f382879345bd0",
       "route_id": "reference-route:cloud_hosted_provider:fine_tuning:13",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "22c6619c834a65a3ae112f7f9e38a1c76fc8085f291aa6246e603245c515aa5b"
     },
     "reference-route:cloud_hosted_provider:reasoning:1": {
@@ -972,11 +972,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "6c5044bc3d8bde31be0b04d11401d6d40ab6ba16f574a81eba1e27ef717bf335",
       "route_id": "reference-route:cloud_hosted_provider:reasoning:1",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "f4b7af2963338699ead9b616acfc1c0bc16353c62504221ed3c5007828465675"
     },
     "reference-route:embedding_provider:tool_calling_agent:10": {
@@ -992,11 +992,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "4bca2f8a855e159805caea911359436d766173be91bc3d305445508dcfdb4c6d",
       "route_id": "reference-route:embedding_provider:tool_calling_agent:10",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "2ff1688f13802b1db4c6e156302b171f9075cce0a9589ea56bfc03198fbd675e"
     },
     "reference-route:enterprise_private_model:audio_speech:5": {
@@ -1012,11 +1012,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "298ba7983cf4f164c3ce301bc6db0d98bca78696e8f5c7d0243505f0964896be",
       "route_id": "reference-route:enterprise_private_model:audio_speech:5",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "4b43bd56e32ca416a9986aefbbb27accfc6ef42824e91375a80a3383bdb492e6"
     },
     "reference-route:enterprise_private_model:gateway_router:17": {
@@ -1032,11 +1032,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "38a7cd95ecc90ab01b5db9c14b6e821aa4253a85b47b09c245b32ae9ff8a39c7",
       "route_id": "reference-route:enterprise_private_model:gateway_router:17",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "dc053d29c5f2214b014010b23521f18bb94c95fae494071d4c6edb96a4642479"
     },
     "reference-route:fine_tuning_provider:batch_generation:11": {
@@ -1052,11 +1052,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "2a24b54c8ff49579e779843ac856e08809a7ebd4639569aa6ce4001d7b17b230",
       "route_id": "reference-route:fine_tuning_provider:batch_generation:11",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "338dffc835a9e64f23ec6efccaeae86e51966f5b5070a87e0bb647000fb03943"
     },
     "reference-route:foundation_provider:streaming:12": {
@@ -1072,11 +1072,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "330ce85343a676e4cf3d7c0ca3c38e623e1f0225322ebaf7181d1081d7a13f5c",
       "route_id": "reference-route:foundation_provider:streaming:12",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "6e59ff005e5c5318dc0ee03da0b9116cf3c3ba0221f2ebff785aaf056c1ce7b6"
     },
     "reference-route:foundation_provider:text_chat:0": {
@@ -1092,11 +1092,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "1b9d4b1f57edc55a70ec8e9620938e935f11f0ec3e2110fc58bb9207cedef6e6",
       "route_id": "reference-route:foundation_provider:text_chat:0",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "8ee020096e7699573fdfd1314ddfbb8446914fee3ba7b7d3cbc6a69d32a47996"
     },
     "reference-route:hosted_open_weight_service:image_generation:4": {
@@ -1112,11 +1112,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "3030de6b9ee56d2902beac31c1b2bd9b79e14383e131eedd37c6f46b045756de",
       "route_id": "reference-route:hosted_open_weight_service:image_generation:4",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "76517fca2f2fb54b565d9319c7ea53ad9d103f84884bdcb8a8cd5d1e8e5d0b51"
     },
     "reference-route:hosted_open_weight_service:local_inference:16": {
@@ -1132,11 +1132,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "ae3b75bf26ea8d9b4024127355b9be6e33307a45044e9d1d9f5294dd9ead3acb",
       "route_id": "reference-route:hosted_open_weight_service:local_inference:16",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "1a55b7b0e760963b7b9256d154dfce2e63d594f1a450c74ab04c03ec04a929a1"
     },
     "reference-route:local_runtime:video_generation:6": {
@@ -1152,11 +1152,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "5e6862b887394e6ca1bf9137d8ca8d4c7ab79dd5e668067699fa26ea0addd0eb",
       "route_id": "reference-route:local_runtime:video_generation:6",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "84dcbb15db724a7e9f6eb27227a57c75491577f6e61d980fd683609e8dbcffed"
     },
     "reference-route:model_marketplace:long_context:2": {
@@ -1172,11 +1172,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "4632b3fba7bd7fdeb5616f178471c7472d22c2052e34352084899495b84860f4",
       "route_id": "reference-route:model_marketplace:long_context:2",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "1768d6e0d3054894bfcccb91c6abd675400cffe3050870d167e1f26bccb988f9"
     },
     "reference-route:model_marketplace:retrieval_augmented:14": {
@@ -1192,11 +1192,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "0d777a1754873f67097b6c78a075effdb0a755cb115ff385f24c710983ff61d9",
       "route_id": "reference-route:model_marketplace:retrieval_augmented:14",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "0550a170db0cd4f466b87e4e4f2a9922bddff793aae0d6a8ee8fd015fe8081d0"
     },
     "reference-route:multimodal_media_provider:code_generation:9": {
@@ -1212,11 +1212,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "1d6b9308c304edc1b8c1e542e99a105247e9d7f2f1483399c8bc14f51a0e84b6",
       "route_id": "reference-route:multimodal_media_provider:code_generation:9",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "4c81f82b38888565a59b215c1ccac065e2f29ca5719fedab2fdf5eab1cd57703"
     },
     "reference-route:open_weight_registry:embedding:7": {
@@ -1232,11 +1232,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "bed5470a0020b828a7718efb91e8e35818e0e28704cc1e62be501eabe51f13b1",
       "route_id": "reference-route:open_weight_registry:embedding:7",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "d7bc77dac89744d96c9d5b9f6ecd72e5c9faf0292cac8a61412d120c560c42a6"
     },
     "reference-route:regional_sovereign_provider:reranking:8": {
@@ -1252,11 +1252,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "ae6daf7d26a471ce38c74fba95228bee753bffc6054b25492eabbc4c9746b7cb",
       "route_id": "reference-route:regional_sovereign_provider:reranking:8",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "1b58f8af2ffa5b8affc639719462cf48f3d7ef4e66a111863ca452a0ed7cbba6"
     },
     "reference-route:router_or_gateway:multimodal_vision:3": {
@@ -1272,11 +1272,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "54e91b6e97a1d8b88f5fac58268ff481a7b1926d315d4ade14c1905f21f9f69b",
       "route_id": "reference-route:router_or_gateway:multimodal_vision:3",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "6255c5a3a72f5c2bdd26da7373cc60fc9cc49c7af61d8385dc75f17cfe12751b"
     },
     "reference-route:router_or_gateway:safety_moderation:15": {
@@ -1292,11 +1292,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "0a6e0c8294b8c64b0a02139cc15e00e771befe4efa5d4e9d3ef3ec5c048f1571",
       "route_id": "reference-route:router_or_gateway:safety_moderation:15",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "41a563ae8df0d2313fa8df043e30f2c0383359315e35b158275d511e03d62b8e"
     }
   },
@@ -2691,10 +2691,10 @@
       }
     },
     "provider_onboarding_covenant_binding": {
-      "artifact_hash": "0bc93ab6c8b5c027610a7da61b8b3367486a90d6ed2df754988ddefe59cfcccc",
+      "artifact_hash": "a22e88515ca90215ccbb820b6fdf99b2b643ec24d048d441bc9b61243e48777e",
       "hash_reproducible": true,
       "level": "RDLLM-L175",
-      "payload_hash": "0bc93ab6c8b5c027610a7da61b8b3367486a90d6ed2df754988ddefe59cfcccc",
+      "payload_hash": "a22e88515ca90215ccbb820b6fdf99b2b643ec24d048d441bc9b61243e48777e",
       "present": true,
       "status": "ready"
     },
@@ -2845,7 +2845,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "60c93d17a741c21b37c20561452d62311d4cf58fc61a8b27c3297cded3a13f01"
+      "value": "1b2c1804f0447c37a5ca8b8c08d1682fdce94b70e680b95c91313d9a78269718"
     },
     "summary": {
       "adapter_discovery_count": 18,
@@ -2869,7 +2869,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L176"
     },
-    "universal_model_provider_registry_hash": "1830ef6f1aed0032291d7496c755dabaf0ece79ca16a578e35325392edca73f6",
+    "universal_model_provider_registry_hash": "b6ca6e963a35e0fd5c92917781e55b1234c15b4acdf662e29a1b14d63c66b3c4",
     "universal_model_provider_registry_version": "rdllm-universal-model-provider-registry/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-model-provider-registry.json",
@@ -3770,11 +3770,11 @@
     },
     "issuer": "rdllm-local-demo",
     "model_provider_registry_binding": {
-      "artifact_hash": "1830ef6f1aed0032291d7496c755dabaf0ece79ca16a578e35325392edca73f6",
+      "artifact_hash": "b6ca6e963a35e0fd5c92917781e55b1234c15b4acdf662e29a1b14d63c66b3c4",
       "declared_model_route_count": 18,
       "hash_reproducible": true,
       "level": "RDLLM-L176",
-      "payload_hash": "1830ef6f1aed0032291d7496c755dabaf0ece79ca16a578e35325392edca73f6",
+      "payload_hash": "b6ca6e963a35e0fd5c92917781e55b1234c15b4acdf662e29a1b14d63c66b3c4",
       "present": true,
       "status": "ready"
     },
@@ -4380,13 +4380,13 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "a2e70b71790a652609291f765f014f7c2eaa72eca50681a3986778ce73f9c582"
+      "value": "fe161d9381f93249365f0f511e067ee04878553b7cdb85f68e17d8d143a53dc2"
     },
     "source_footer_enforcement_binding": {
-      "artifact_hash": "3a231dd717f9e9e99c101f1f0e76c9271a871a02452eee7af393e0ca18f12059",
+      "artifact_hash": "77be30e22d169412da9c454d3031d72e9b36ba0d368d18d2d9885b07b2b2a213",
       "hash_reproducible": true,
       "level": "RDLLM-L177",
-      "payload_hash": "3a231dd717f9e9e99c101f1f0e76c9271a871a02452eee7af393e0ca18f12059",
+      "payload_hash": "77be30e22d169412da9c454d3031d72e9b36ba0d368d18d2d9885b07b2b2a213",
       "present": true,
       "route_enforcement_count": 18,
       "status": "ready"
@@ -4413,7 +4413,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L178"
     },
-    "universal_provider_catalog_coverage_contract_hash": "c27b0a94a5b10f5399e375ca3e3949ad9b5de732a05394489fec4e6fc8acf79f",
+    "universal_provider_catalog_coverage_contract_hash": "6f84c504bb3ea075d9009cf986aa0dcd8a9f4e3a511a158b1fd81addb37b2efb",
     "universal_provider_catalog_coverage_contract_version": "rdllm-universal-provider-catalog-coverage-contract/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-provider-catalog-coverage-contract.json",
@@ -4449,11 +4449,11 @@
     },
     "created_at": "2026-06-03T00:00:00Z",
     "evidence_roots": {
-      "combined_runtime_route_binding_root": "e6555e014a2b632ac586234f7c248d92e07afed9c8226ab9664bd56a55b1b02b",
+      "combined_runtime_route_binding_root": "8344fc9a316d1e7b503c82c79cf2542fb4881da7035fe57a1e6c13f5db88099a",
       "negative_runtime_root": "9201c53925b9745a727923cdc86d5f2ea44393f443fb6ff4c4dc3f925826cbaa",
       "runtime_binding_stage_root": "8cc611e02d963017d0363a8a0707ccd375632bfa084beb6e617561046568730c",
       "runtime_model_field_root": "8ca82e39a2384c05089d67cd897d074137ec8fc17da135648aa5e21f2f2101d1",
-      "runtime_route_binding_root": "f4fd5df5f7c3527debcd621dc2f748a91cffe5680405ebb8c65dc4c73cb8096a",
+      "runtime_route_binding_root": "a9d5fa72b4bd0cc30448acdd3f435b7fc1d99a6543aa3db06f8a8d99a7576e77",
       "runtime_surface_root": "9b438eba80a34dd7154f6decdddfccb769855be7b74b8843b4c02b3e7465a974"
     },
     "issuer": "rdllm-local-demo",
@@ -4694,19 +4694,19 @@
       "public_contract_uses_hashes_and_route_metadata": true
     },
     "production_invocation_admission_binding": {
-      "artifact_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+      "artifact_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
       "hash_reproducible": true,
       "level": "RDLLM-L170",
-      "payload_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+      "payload_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
       "present": true,
       "status": "ready"
     },
     "provider_catalog_coverage_binding": {
-      "artifact_hash": "c27b0a94a5b10f5399e375ca3e3949ad9b5de732a05394489fec4e6fc8acf79f",
+      "artifact_hash": "6f84c504bb3ea075d9009cf986aa0dcd8a9f4e3a511a158b1fd81addb37b2efb",
       "catalog_covered_route_count": 18,
       "hash_reproducible": true,
       "level": "RDLLM-L178",
-      "payload_hash": "c27b0a94a5b10f5399e375ca3e3949ad9b5de732a05394489fec4e6fc8acf79f",
+      "payload_hash": "6f84c504bb3ea075d9009cf986aa0dcd8a9f4e3a511a158b1fd81addb37b2efb",
       "present": true,
       "status": "ready"
     },
@@ -5007,7 +5007,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "7eef5a41429c70c699ba60c5fa20bc07a77e6c7e8b0d73b20b31799eaa10dec6",
         "requested_model_locked": true,
         "response_model_echo_hash": "bfcf47d0903d7c67eb9147d6a7ca8d72b9401a513b3fe7e0c54510c2954ef5ae",
@@ -5033,7 +5033,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "b3e53038c2ebbcdd8d62a7f0f5b8f2c6393f24e8c1c1a7e1fbc007d1a6ba2eee",
         "requested_model_locked": true,
         "response_model_echo_hash": "d7196d7d067f56f27f3004e2444c47d6888c0ba3fc8400e826be7029bf8d7d4a",
@@ -5059,7 +5059,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "84048fc7beeae595ffd7e00d8416bd07ccb329115bd32e6e50f3542b3513b6b0",
         "requested_model_locked": true,
         "response_model_echo_hash": "8fbc70f1465102204b457d3a4d2914ead1b0371e20d20685acc121911ec5bbe8",
@@ -5085,7 +5085,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "119373ff998094f58844570cb939bb051d801b1cd9132e06c6e5b80dc851c4e8",
         "requested_model_locked": true,
         "response_model_echo_hash": "e0cab42032dc32bc8d8ee166ec3e0da9125a42d45a10ab94b493003ee9482bdb",
@@ -5111,7 +5111,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "57d42b11550eba1e69b61184d54ff41fd095eb407d4c180519c21a4dad60f132",
         "requested_model_locked": true,
         "response_model_echo_hash": "65a1020bf7896d0d3d8fef16815b23a7cecd8813e2de51a6fd48e58bc93f2aaa",
@@ -5137,7 +5137,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "dc51310477ac01166773afce87b08cf5db670739c48a31dad2ed20561d99b8f7",
         "requested_model_locked": true,
         "response_model_echo_hash": "1401524d52d06ed97fbf443d7e8621820a0409dd79f6790f59cf627c36520d13",
@@ -5163,7 +5163,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "c55054a2da95d185681d24b04855f20b47aacb80e0a7323c011f13a85d3160b6",
         "requested_model_locked": true,
         "response_model_echo_hash": "9fbb414a2ae30a567173ee181a1c4d6e8c37ba7621c5a31991e858c38d642375",
@@ -5189,7 +5189,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "2e655117792b297fbbdcafd3d564b9d3087272bda1528508761e097dd0fb91f0",
         "requested_model_locked": true,
         "response_model_echo_hash": "ce6ea31e8e5d9bf774ff9ffaeeb687b4b3b1b4272dac250b0e63f0d0ea0fe827",
@@ -5215,7 +5215,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "03d11ee0d9f05b5ee33dbb1d54642129a281561455b7381f940dc00e08ebe2b4",
         "requested_model_locked": true,
         "response_model_echo_hash": "c46c56fdc0163cb761fb617aa0d033b5172995859cb7b8111e7bd02ae880ce60",
@@ -5241,7 +5241,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "0820f76318ff9850de8a355c70de2fad013a0efd09ceca5632bb6b9849038d3f",
         "requested_model_locked": true,
         "response_model_echo_hash": "18b3eb93ed9fe03fbd24f92ab5673a4384ce406ca53ae7935e343998719837dd",
@@ -5267,7 +5267,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "79e0333318421330858d0f8702e60ea3aa5b7e943aeec558ee6be546d7307d7b",
         "requested_model_locked": true,
         "response_model_echo_hash": "2fe54961defdc308e4ece6054db6291a801335ca43d06c79de2068da5c550579",
@@ -5293,7 +5293,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "5b47922f4a1d92651a6f6a13ee242898351c187db75535c62519054e2ae87bd6",
         "requested_model_locked": true,
         "response_model_echo_hash": "4de5e18497927852b35b9cdc2d34a6a0fd4d81a4ab26262b0b50542170866912",
@@ -5319,7 +5319,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "216ba7720fb85460ae7118095062a4a452f722ffec81a00ed29a9406a805ef98",
         "requested_model_locked": true,
         "response_model_echo_hash": "3342155d1d54108c8bb1e82b0dab89d352b7f855647f5aae12e284e557500a02",
@@ -5345,7 +5345,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "e0d0271ce0ce5bfdde989653c6c28eb54480d778e91c1fb5702c753354165388",
         "requested_model_locked": true,
         "response_model_echo_hash": "5a95ff3c486180e1f3f5951c265df56bf6237ec4c7223f9ba3d09718c3d3f4ba",
@@ -5371,7 +5371,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "ad53d60ce11f1c03f2b1be782a0e3a8f17539612882fc2c22071abe5f783c190",
         "requested_model_locked": true,
         "response_model_echo_hash": "38f56f4e60ef37b88b1d588875491eca482f99b759fceffd247058378bbbcf7d",
@@ -5397,7 +5397,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "8201e06c0420e97d146919ab4c49b1be95ee5fe54e232d1b4fbce6af151614d6",
         "requested_model_locked": true,
         "response_model_echo_hash": "d7088fd94fa2782715c1ea7e1f5851c528230cf8768bbc984077e212b380f0f8",
@@ -5423,7 +5423,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "bd9b5bf386ca62a9ea1d796014492b0ca5a7960ba167e5c4a8855cd819e87b3f",
         "requested_model_locked": true,
         "response_model_echo_hash": "4768f197da5b69ac11d2ca6c2e74e3d0216a384b969f37b5c9f8064e9fa1197f",
@@ -5449,7 +5449,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "9b0c16eb725220ab48dbe3da33e204ef7fb8daa543beb8ad4a5b14182ce7f3b1",
         "requested_model_locked": true,
         "response_model_echo_hash": "b7b00e17503e7c326bde210e92c723dba25c04f260cef5ca9e3391febcb553b7",
@@ -5642,7 +5642,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "c30f116844a12c276146ae24f565ab3271735d4f1551603d10ecd099f2014c26"
+      "value": "201ccf3355ccfb0067301e0239e6084004995324f5bc75664337a01b0a62d1c0"
     },
     "summary": {
       "catalog_covered_route_count": 18,
@@ -5663,7 +5663,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L179"
     },
-    "universal_runtime_route_binding_contract_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+    "universal_runtime_route_binding_contract_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
     "universal_runtime_route_binding_contract_version": "rdllm-universal-runtime-route-binding-contract/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-runtime-route-binding-contract.json",
@@ -5683,31 +5683,31 @@
         "status": "ready"
       },
       "universal_runtime_route_binding_contract": {
-        "artifact_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+        "artifact_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
         "hash_reproducible": true,
         "level": "RDLLM-L179",
         "minimum_level": "RDLLM-L179",
-        "payload_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+        "payload_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
         "present": true,
         "ready": true,
         "status": "ready"
       },
       "universal_source_footer_enforcement_contract": {
-        "artifact_hash": "3a231dd717f9e9e99c101f1f0e76c9271a871a02452eee7af393e0ca18f12059",
+        "artifact_hash": "77be30e22d169412da9c454d3031d72e9b36ba0d368d18d2d9885b07b2b2a213",
         "hash_reproducible": true,
         "level": "RDLLM-L177",
         "minimum_level": "RDLLM-L177",
-        "payload_hash": "3a231dd717f9e9e99c101f1f0e76c9271a871a02452eee7af393e0ca18f12059",
+        "payload_hash": "77be30e22d169412da9c454d3031d72e9b36ba0d368d18d2d9885b07b2b2a213",
         "present": true,
         "ready": true,
         "status": "ready"
       },
       "universal_source_grounded_response_receipt": {
-        "artifact_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "artifact_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "hash_reproducible": true,
         "level": "RDLLM-L171",
         "minimum_level": "RDLLM-L171",
-        "payload_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+        "payload_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
         "present": true,
         "ready": true,
         "status": "ready"
@@ -5743,13 +5743,13 @@
     },
     "created_at": "2026-06-03T00:00:00Z",
     "evidence_roots": {
-      "combined_verified_source_footer_root": "7c886aa714dd6960d2345e8c5c8d27d5493f674b4714fb9ea783a8f505f7ba8d",
+      "combined_verified_source_footer_root": "7700e1116ab9cfba54e8c671f27635f9812fc0385a87373d378973ff70013fd5",
       "footer_response_surface_root": "b6703e99725544c9d2652d3ff546bd696c358ef00916e782b99044210db7562e",
       "footer_verification_stage_root": "c0fefd1b84a9cbdaa666b03155b6c532022c06290cbdef029889fb76695206a3",
       "negative_footer_reliance_root": "cc695404a524c3fd4364e30f433f2b8affdd9946ecc927c782d3d7cebc615f48",
       "support_dimension_root": "b9ca67b69e9f32a93e0e25a589f5e795cd89b37bd9a6f5a76708eefba37c5d75",
       "verified_footer_field_root": "48376592f38f8d75420f5e0cdccc8fbd776af0afd6a0a8d46e5acdae47ce2e89",
-      "verified_footer_root": "bbde6287fcf593c156a5215c9e1913faa98119ea12efdf4016d698898e8465a9"
+      "verified_footer_root": "9d0a9ac176aa438bba417e649054904efbd5383d851343b07e673af8f8826906"
     },
     "footer_response_surface_rows": {
       "api_json": {
@@ -6215,7 +6215,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "97a76f58268c91d8fbd7938f3d42ad9b85868e1b920e140b3e5525bec7cd27f6"
+      "value": "1d718bbadbc891aed54bc39f0eeb4f99f9feb2b3be2469c08ff90b2f1204e7a6"
     },
     "source_footer_reliance_decision": {
       "claim_source_reliance_allowed": true,
@@ -6326,7 +6326,7 @@
         "verifier_hash": "1b7a9d7287980fbfe52ddfbb4bf43583fb6b4e14470aa314eb8f7f7a1829c313"
       }
     },
-    "universal_verified_source_footer_contract_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+    "universal_verified_source_footer_contract_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
     "universal_verified_source_footer_contract_version": "rdllm-universal-verified-source-footer-contract/v1",
     "verified_footer_field_rows": {
       "attribution_reason": {
@@ -6507,7 +6507,7 @@
         "relevant_to_claims": true,
         "rendered_footer_hash": "696519ffed2feeeb0f5e93b6b7779cdb38cc6d0db4e98bd82cd568d1bfc08d8f",
         "route_binding_matched": true,
-        "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+        "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
         "settlement_state": "eligible",
         "settlement_state_visible": true,
         "source_content_hash": "c77c0a9cd2be4e726c036be6c86e77d36a8a94a434013d467057c7280fccd076",
@@ -6546,7 +6546,7 @@
         "relevant_to_claims": true,
         "rendered_footer_hash": "d5aa7b3408edbd1e37d0b1316fff4b15d37488adc15ce24a8b4d4f701a648224",
         "route_binding_matched": true,
-        "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+        "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
         "settlement_state": "eligible",
         "settlement_state_visible": true,
         "source_content_hash": "7d2b9283b1309bcd49d38e7e7968815313d21ca36ca9872d0660f473387525db",
@@ -6585,7 +6585,7 @@
         "relevant_to_claims": true,
         "rendered_footer_hash": "3eb3529da4ec14ee5d729092621151790e1e9e98e9b269e901018b2beec36fe8",
         "route_binding_matched": true,
-        "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+        "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
         "settlement_state": "eligible",
         "settlement_state_visible": true,
         "source_content_hash": "e25349343c8bf317397445e90cb4f226c03d9d18bc3852ef647a30bfe7707843",

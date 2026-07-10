@@ -67,6 +67,7 @@ PROVIDER_FIELDS = {
     "api_key_env",
     "timeout_seconds",
     "max_response_bytes",
+    "require_grounding_evidence",
 }
 ARTIFACT_FILENAMES = {
     "certification_report": "certification_report.json",
@@ -238,6 +239,13 @@ def service_config_schema_errors(config: dict[str, Any]) -> list[str]:
                 if max_response_bytes is not None:
                     if not _is_int(max_response_bytes) or max_response_bytes < 1024:
                         errors.append(f"{path}.max_response_bytes: expected integer >= 1024")
+                require_grounding = provider.get("require_grounding_evidence")
+                if require_grounding is not None and not isinstance(
+                    require_grounding, bool
+                ):
+                    errors.append(
+                        f"{path}.require_grounding_evidence: expected boolean"
+                    )
     return errors
 
 

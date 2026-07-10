@@ -10,6 +10,8 @@ from pathlib import Path
 import re
 from typing import Any
 
+from rdllm.deployment_attestation import verify_deployment_attestations
+
 
 DATA_PACKAGE = "rdllm.data"
 PROFILE_SCHEMA = "rdllm-production-readiness-profile/v1"
@@ -190,7 +192,11 @@ def _control(
     }
 
 
-def evaluate_production_profile(profile: dict[str, Any]) -> dict[str, Any]:
+def evaluate_production_profile(
+    profile: dict[str, Any],
+    *,
+    trust_store: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Evaluate an operator profile against the RDLLM production baseline."""
 
     controls: list[dict[str, Any]] = []
@@ -398,11 +404,25 @@ def evaluate_production_profile(profile: dict[str, Any]) -> dict[str, Any]:
     ready = len(controls) - len(blocked)
     deployment_id = deployment.get("deployment_id") if isinstance(deployment, dict) else None
     operator_type = deployment.get("operator_type") if isinstance(deployment, dict) else None
+    attestation_verification = verify_deployment_attestations(
+        profile.get("external_attestations", []),
+        deployment_id=str(deployment_id or ""),
+        operator_name=str(deployment.get("operator_name", "")),
+        trust_store=trust_store,
+        direct_payout_requested=direct_payout is True,
+    )
+    external_evidence_verified = attestation_verification["status"] == "verified"
+    production_grade_claim_allowed = not blocked and external_evidence_verified
+    payment_processor_attested = (
+        "payment_processor"
+        in attestation_verification["verified_attestation_types"]
+    )
     direct_creator_settlement_allowed = (
-        not blocked
+        production_grade_claim_allowed
         and settlement_mode == "processor_attested"
         and direct_payout is True
         and processor_attestation is True
+        and payment_processor_attested
     )
     return {
         "schema": REPORT_SCHEMA,
@@ -413,14 +433,28 @@ def evaluate_production_profile(profile: dict[str, Any]) -> dict[str, Any]:
             "operator_type": operator_type,
             "settlement_mode": settlement_mode,
             "direct_payout_enabled": direct_payout,
-            "payment_processor_attested": processor_attestation,
+            "payment_processor_attested": payment_processor_attested,
+            "configuration_ready": not blocked,
+            "external_evidence_status": attestation_verification["status"],
+            "verified_external_attestation_count": attestation_verification[
+                "verified_attestation_count"
+            ],
+            "required_external_attestation_count": attestation_verification[
+                "required_attestation_count"
+            ],
+            "missing_external_attestation_types": attestation_verification[
+                "missing_attestation_types"
+            ],
             "ready_control_count": ready,
             "blocked_control_count": len(blocked),
             "total_control_count": len(controls),
-            "production_grade_claim_allowed": not blocked,
+            "production_grade_claim_allowed": production_grade_claim_allowed,
             "direct_creator_settlement_allowed": direct_creator_settlement_allowed,
-            "public_sector_use_supported": not blocked and public_sector_applicable,
+            "public_sector_use_supported": (
+                production_grade_claim_allowed and public_sector_applicable
+            ),
         },
+        "external_attestation_verification": attestation_verification,
         "control_rows": controls,
         "blocked_controls": [
             {
@@ -434,9 +468,12 @@ def evaluate_production_profile(profile: dict[str, Any]) -> dict[str, Any]:
 
 
 def verify_production_readiness_report(
-    profile: dict[str, Any], report: dict[str, Any]
+    profile: dict[str, Any],
+    report: dict[str, Any],
+    *,
+    trust_store: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    expected = evaluate_production_profile(profile)
+    expected = evaluate_production_profile(profile, trust_store=trust_store)
     errors: list[str] = []
     for field in ("schema", "profile_hash"):
         if report.get(field) != expected.get(field):
@@ -454,11 +491,20 @@ def verify_production_readiness_report(
         "settlement_mode",
         "direct_payout_enabled",
         "payment_processor_attested",
+        "configuration_ready",
+        "external_evidence_status",
+        "verified_external_attestation_count",
+        "required_external_attestation_count",
+        "missing_external_attestation_types",
     ):
         if actual_summary.get(field) != expected_summary.get(field):
             errors.append(f"summary.{field} mismatch")
     if report.get("control_rows") != expected.get("control_rows"):
         errors.append("control_rows mismatch")
+    if report.get("external_attestation_verification") != expected.get(
+        "external_attestation_verification"
+    ):
+        errors.append("external_attestation_verification mismatch")
     return {
         "status": "passed" if not errors else "failed",
         "errors": errors,
@@ -735,13 +781,16 @@ def verify_repository_readiness_report(report: dict[str, Any]) -> dict[str, Any]
             "acceptance_matrix_status": "passed",
             "acceptance_matrix_operator_template_count": 5,
             "acceptance_matrix_passed_count": 5,
-            "acceptance_matrix_production_acceptance_allowed_count": 5,
+            "acceptance_matrix_production_acceptance_allowed_count": 0,
         }
         for field, expected in required_summary.items():
             if summary.get(field) != expected:
                 errors.append(f"summary.{field} expected {expected!r}")
-        if summary.get("production_grade_claim_allowed") is not True:
-            errors.append("summary.production_grade_claim_allowed must be true")
+        if summary.get("production_grade_claim_allowed") is not False:
+            errors.append(
+                "summary.production_grade_claim_allowed must remain false without "
+                "an external deployment trust store"
+            )
         expected_templates = {
             "company",
             "government",
@@ -769,7 +818,7 @@ def verify_repository_readiness_report(report: dict[str, Any]) -> dict[str, Any]
                 "status": "passed",
                 "acceptance_status": "ready",
                 "acceptance_verification_status": "passed",
-                "production_acceptance_decision": "allow",
+                "production_acceptance_decision": "block",
                 "source_grounding_acceptance_status": "passed",
                 "audit_response_binding_status": "passed",
                 "recovery_verification_status": "passed",

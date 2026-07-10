@@ -270,7 +270,7 @@ def _case_report(engine: Any, case: dict[str, Any]) -> dict[str, Any]:
         "audit_clean": not audit_errors,
         "top1_expected": (not expected and not ranked) or top1 in expected,
         "expected_visible_or_paid": expected.issubset(visible_or_paid),
-        "expected_paid": expected.issubset(paid),
+        "expected_paid": case_input["expect_escrow"] or expected.issubset(paid),
         "forbidden_not_top1": top1 not in forbidden,
         "forbidden_ranked_below_expected": (
             not forbidden

@@ -4,6 +4,35 @@ This note captures recent primary sources that directly shaped the current mecha
 The conclusion is clear: payout attribution and user-facing source attribution should
 share the same evidence trail.
 
+## 2026-07-10 RDLLM 1.0 Evidence Boundary
+
+Four recent papers sharpen the 1.0 design. `Cited but Not Verified` shows that
+working and relevant links can coexist with substantially weaker factual support.
+`How Do LLMs Cite?` shows why visible citation behavior is not proof of the
+model's internal computational reliance. `Data Attribution in Large Language
+Models via Bidirectional Gradient Optimization` treats training-data influence as
+a distinct, model-access-dependent problem. `What's a Credit Worth?` shows that
+the informativeness of an attribution signal can change whether royalty or
+fixed-fee compensation is economically preferable.
+
+RDLLM 1.0 therefore separates three evidence classes:
+
+- answer-time source grounding bound before provider generation;
+- observable support, text matching, and candidate allocation;
+- separately scoped model or training-data influence evidence.
+
+Unsupported, over-warranted, post-hoc, or disputed claims do not become direct
+settlement. The event records review or escrow, and direct execution remains
+disabled. Production deployment claims now require Ed25519-signed evidence from
+trusted external issuers; direct payout additionally requires a trusted payment
+processor attestation. Bundled profiles deliberately contain no such external
+evidence and cannot self-certify production readiness.
+
+References: https://arxiv.org/abs/2605.06635,
+https://arxiv.org/abs/2606.28358,
+https://arxiv.org/abs/2606.04928,
+and https://arxiv.org/abs/2607.00641.
+
 ## 2026-07 GitHub, SEO, and GEO Documentation Update
 
 The onboarding surface now treats documentation as part of the product boundary.
@@ -31,7 +60,7 @@ and https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers.
 
 ## 2026-07 Production-Readiness Update
 
-The production target is now an open-source royalty platform that can be operated
+The production target is an open-source attribution platform that can be operated
 by individuals, companies, institutions, governments, model providers, and public
 sector deployments. The mechanism therefore adds a separate production-readiness
 gate for live operation. This gate is distinct from the artifact ship gate: it
@@ -39,6 +68,10 @@ requires an operator profile, tenancy controls, runtime admission controls,
 source-footer enforcement, rights governance, dispute escrow, payment or
 instruction-only settlement controls, incident response, backup testing,
 public-sector controls, and public proof surfaces.
+
+Those profile controls establish configuration readiness only. RDLLM 1.0 also
+requires current external attestations verified against an independently managed
+trust store before it permits a production-grade claim.
 
 The controls are anchored to NIST AI RMF GenAI Profile, NIST SSDF, OWASP Top 10
 for LLM Applications 2025, and SLSA because RDLLM production readiness is not

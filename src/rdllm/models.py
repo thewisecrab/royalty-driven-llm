@@ -449,6 +449,8 @@ class UsageEvent:
     grounding_report: dict[str, Any] = field(default_factory=dict)
     grounding_quality: dict[str, Any] = field(default_factory=dict)
     attribution_gap: dict[str, Any] = field(default_factory=dict)
+    generation_evidence: dict[str, Any] = field(default_factory=dict)
+    settlement_decision: dict[str, Any] = field(default_factory=dict)
     policy_decisions: list[dict[str, Any]] = field(default_factory=list)
     registry_decisions: list[dict[str, Any]] = field(default_factory=list)
 
@@ -482,6 +484,8 @@ class UsageEvent:
             grounding_report=data.get("grounding_report", {}),
             grounding_quality=data.get("grounding_quality", {}),
             attribution_gap=data.get("attribution_gap", {}),
+            generation_evidence=data.get("generation_evidence", {}),
+            settlement_decision=data.get("settlement_decision", {}),
             policy_decisions=data.get("policy_decisions", []),
             registry_decisions=data.get("registry_decisions", []),
         )
@@ -507,6 +511,8 @@ class UsageEvent:
             "grounding_report": self.grounding_report,
             "grounding_quality": self.grounding_quality,
             "attribution_gap": self.attribution_gap,
+            "generation_evidence": self.generation_evidence,
+            "settlement_decision": self.settlement_decision,
             "policy_decisions": self.policy_decisions,
             "registry_decisions": self.registry_decisions,
         }

@@ -2,8 +2,8 @@
 
 ## Supported Versions
 
-The main branch is the only supported development line until the first stable
-release. Security fixes should target main.
+Version `1.0.x` and the main branch receive security fixes. Older pre-1.0
+artifacts are reference history and are not supported for deployment.
 
 ## Reporting a Vulnerability
 
@@ -26,11 +26,15 @@ Please include:
 ## Security Invariants
 
 - Public artifacts must be privacy-safe and hash-bound.
+- Publicly verifiable production receipts must use Ed25519; shared-secret HMAC
+  is permitted only for labelled local fixtures.
+- Operator production claims require externally signed evidence verified
+  against an independently managed trust store.
 - Unknown provider states fail closed.
 - A blocked, filtered, refused, truncated, tool-only, errored, or unverified
   response must not be presented as a grounded answer.
 - Creator settlement must not release unless attribution, rights, provider,
-  meter, and response-state gates are ready.
+  meter, response-state, and external payment-processor attestations are ready.
 - Verifiers must reject stale hashes, missing signatures when required, and
   private field leakage.
 
@@ -47,6 +51,9 @@ The release process requires CI, dependency update policy, package build checks,
 schema validation, hosted-surface privacy checks, and the full ship gate before a
 release is tagged. Operators that redistribute RDLLM should preserve build logs,
 package hashes, dependency lock evidence when used, and release provenance.
+Tagged releases use GitHub artifact provenance and PyPI trusted publishing. The
+repository owner must first configure the `pypi` GitHub environment as an allowed
+trusted publisher in PyPI; no API token belongs in repository secrets.
 
 ## Abuse
 

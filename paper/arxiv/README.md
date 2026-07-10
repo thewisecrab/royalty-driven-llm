@@ -6,7 +6,7 @@ Author-produced PDF:
 
 Recommended arXiv metadata:
 
-- Title: `RDLLM: A Source-Grounded Attribution and Royalty Settlement Framework for Verifiable AI Outputs`
+- Title: `RDLLM: Verifiable Source Attribution and Creator-Value Accounting for Grounded AI Outputs`
 - Authors: `Siddharth Nilesh Patel`
 - Suggested primary category: `cs.AI`
 - Suggested cross-lists: `cs.CL`, `cs.IR`, `cs.CY`
@@ -22,13 +22,18 @@ making AI answers visibly grounded, auditable, and economically accountable. Whe
 an AI product uses registered sources, retrieved evidence, generated text, or
 provider-native source metadata to produce a public answer, RDLLM makes the
 system show users which sources support the answer, explain observable source
-usage in allocation terms, and route creator value to payment, review, or
-escrow rather than silently absorbing it. The design combines user-facing
+usage in allocation terms, and route creator value to processor instruction,
+review, or escrow rather than silently absorbing it. The design combines user-facing
 source footers, claim-evidence rows, usage metrics with method provenance,
-creator-pool allocation, escrow paths, response hashes, audit logs, public
-schemas, and verifier commands. RDLLM does not claim hidden model-internal
+creator-pool allocation, escrow paths, response hashes, Ed25519 signatures,
+external deployment attestations, public schemas, and verifier commands. RDLLM
+does not claim hidden model-internal
 reliance by default; it reports observable support and settlement allocation
 unless separate provider telemetry proves internal reliance.
+
+The repository's tests establish software and schema invariants over synthetic
+fixtures. They do not constitute a comparative attribution benchmark, a user
+study, legal validation, or evidence that a payment executed.
 
 License:
 

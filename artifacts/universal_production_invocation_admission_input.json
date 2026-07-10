@@ -1495,10 +1495,10 @@
       "private_strings_absent": true
     },
     "provider_binding_matrix_binding": {
-      "artifact_hash": "926a63a69616d6489c00fd73aa70faa2f6d094c765e79c52ab4812abfdf0b171",
+      "artifact_hash": "989c836dbcd76f117ef186f4ed56e5bb7fb8e9370ff9f208d69340a064fce083",
       "hash_reproducible": true,
       "level": "RDLLM-L168",
-      "payload_hash": "926a63a69616d6489c00fd73aa70faa2f6d094c765e79c52ab4812abfdf0b171",
+      "payload_hash": "989c836dbcd76f117ef186f4ed56e5bb7fb8e9370ff9f208d69340a064fce083",
       "present": true,
       "status": "ready"
     },
@@ -2517,7 +2517,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "409ddb5a7a0e6608c7dc8251712f8478068b8c6c66b268c2b17e89c46d293539"
+      "value": "65b6d829d514089ae458e30cde16272386e4faf0082399b88f04557c4c0e3fde"
     },
     "standards_and_research": {
       "api_and_agent_replay": "API and agent conformance work motivates replayable sync, streaming, tool, citation, and telemetry fixtures.",
@@ -2538,7 +2538,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L169"
     },
-    "universal_provider_conformance_runner_receipt_hash": "3c36248042661cd216c42c364491c0908d8fe5b611e72c614ec3944d5b59fcb8",
+    "universal_provider_conformance_runner_receipt_hash": "315f94b36dae56a30788715a28682ccf0b8cbbc7877f89c47058a1d08f10e805",
     "universal_provider_conformance_runner_receipt_version": "rdllm-universal-provider-conformance-runner-receipt/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-provider-conformance-runner-receipt.json",

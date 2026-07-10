@@ -2112,26 +2112,26 @@
       "private_strings_absent": true
     },
     "procurement_contract_binding": {
-      "artifact_hash": "d6cf9591ea949682bace1ad92b73f10f6c497ecd813c40265b0ddf284dbcf290",
+      "artifact_hash": "97e98948b68985d3166f6d709bddcb84e2122b053008a79a33841f6f55a5d334",
       "hash_reproducible": true,
       "level": "RDLLM-L174",
-      "payload_hash": "d6cf9591ea949682bace1ad92b73f10f6c497ecd813c40265b0ddf284dbcf290",
+      "payload_hash": "97e98948b68985d3166f6d709bddcb84e2122b053008a79a33841f6f55a5d334",
       "present": true,
       "status": "ready"
     },
     "provider_binding_matrix_binding": {
-      "artifact_hash": "926a63a69616d6489c00fd73aa70faa2f6d094c765e79c52ab4812abfdf0b171",
+      "artifact_hash": "989c836dbcd76f117ef186f4ed56e5bb7fb8e9370ff9f208d69340a064fce083",
       "hash_reproducible": true,
       "level": "RDLLM-L168",
-      "payload_hash": "926a63a69616d6489c00fd73aa70faa2f6d094c765e79c52ab4812abfdf0b171",
+      "payload_hash": "989c836dbcd76f117ef186f4ed56e5bb7fb8e9370ff9f208d69340a064fce083",
       "present": true,
       "status": "ready"
     },
     "provider_conformance_runner_binding": {
-      "artifact_hash": "3c36248042661cd216c42c364491c0908d8fe5b611e72c614ec3944d5b59fcb8",
+      "artifact_hash": "315f94b36dae56a30788715a28682ccf0b8cbbc7877f89c47058a1d08f10e805",
       "hash_reproducible": true,
       "level": "RDLLM-L169",
-      "payload_hash": "3c36248042661cd216c42c364491c0908d8fe5b611e72c614ec3944d5b59fcb8",
+      "payload_hash": "315f94b36dae56a30788715a28682ccf0b8cbbc7877f89c47058a1d08f10e805",
       "present": true,
       "status": "ready"
     },
@@ -2599,7 +2599,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "0784812cacb2a756986e845e79ce080ac083d6cbe14bcc41fbb4e09ad59190da"
+      "value": "d783584b34d95ea3fa10ce4013aca2628b7f7f56b2b46214ae7922545d390d2a"
     },
     "summary": {
       "failure_mode_count": 0,
@@ -2621,7 +2621,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L175"
     },
-    "universal_provider_onboarding_migration_covenant_hash": "0bc93ab6c8b5c027610a7da61b8b3367486a90d6ed2df754988ddefe59cfcccc",
+    "universal_provider_onboarding_migration_covenant_hash": "a22e88515ca90215ccbb820b6fdf99b2b643ec24d048d441bc9b61243e48777e",
     "universal_provider_onboarding_migration_covenant_version": "rdllm-universal-provider-onboarding-migration-covenant/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-provider-onboarding-migration-covenant.json",

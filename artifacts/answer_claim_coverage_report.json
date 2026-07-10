@@ -99,28 +99,28 @@
   ],
   "artifact_bindings": {
     "answer_card_bound": true,
-    "answer_card_hash": "f2bdc689a030314acbfeab2e7823a55877fb4aad8f3dd4d540150469a5f858cc",
+    "answer_card_hash": "fa2bff282cd4498badb9ff52304ea26cf5b82db9366b5447e67982102f7a3941",
     "citation_footer_bound": true,
-    "citation_footer_contract_hash": "d2e0a8dbef31224c19d9c524d8136f168931d9f5d4ccf54bbda96b809bddbcde",
+    "citation_footer_contract_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
     "counterevidence_bound": true,
-    "counterevidence_report_hash": "39099b484747a1a7906d43e115189cf58e865c59bb8760723135bc937032e18e",
+    "counterevidence_report_hash": "f23a241321b32d2a56c02ec937e896e0ed5a3cf814db28a51aa6f3d2aa2c2238",
     "evidence_sufficiency_bound": true,
-    "evidence_sufficiency_report_hash": "1df3e15a419f98daaf385d3d9e403ef0f1aa9266a2e82b9b314f1f392460f570",
+    "evidence_sufficiency_report_hash": "ee2397e8139d6dc07fd287535c07219c0106a1ad65cd2c6dee3532a09fa62c7b",
     "source_verification_bound": true,
-    "source_verification_report_hash": "4abe7deebb2b87114f44b64fa5a7768abe747b608d3afaf78905bb23da07d0b7"
+    "source_verification_report_hash": "15fc4a037e3f63b39b1849a1925767ea345949828e4442526af3471f12ff68cc"
   },
   "commitments": {
     "answer_unit_root": "e9a35845e9b926ad692131ac1941c18c02248728a9a5897a8ef4b096fe94893a",
-    "artifact_binding_root": "82c53bcbf29030d3f71abd3dde24664bea33a4188ae41a982aefbe61c7f9d06f",
+    "artifact_binding_root": "1efbb0373e8026706cd2aa28db984e67f90a2bf47380729627e8d56d68f54567",
     "issue_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c"
+    "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68"
   },
   "created_at": "2026-06-03T00:00:00Z",
   "event": {
     "answer_hash": "283203d79fe9f38a76f38927a84e9d964d9be2ed9f9e88274461757e7af4fde4",
-    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-    "event_id": "evt_b560c62bb49a73d0",
-    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c"
+    "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+    "event_id": "evt_83312b019637578e",
+    "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68"
   },
   "issuer": "rdllm-local-demo",
   "issues": [],
@@ -143,7 +143,7 @@
     "report_uses_public_output_hashes_only": true,
     "source_text_disclosed": false
   },
-  "report_hash": "8be08f72cc541cc50a5b36934e91d9e59fa38053d110d29ee38417f31a93e7cd",
+  "report_hash": "0f09aa92a4fc20272ab312793166eccdabb54b949bdeb601b4a50b24574b80a8",
   "report_version": "rdllm-answer-claim-coverage-report/v1",
   "schemas": {
     "answer_claim_coverage_report": "docs/schemas/answer_claim_coverage_report.schema.json"
@@ -151,7 +151,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "e5e6e3b0d6f25a198b9da4f5488ff058de292ed9e0f109a362cbc831b965316b"
+    "value": "e1cfca624df750ab3fded74e1bef8caf6c92a2e50a96e389d7df9bd5603dfe8a"
   },
   "summary": {
     "all_answer_claims_covered": true,

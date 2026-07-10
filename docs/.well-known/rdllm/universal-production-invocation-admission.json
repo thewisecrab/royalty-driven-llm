@@ -1471,10 +1471,10 @@
     }
   },
   "provider_conformance_receipt_binding": {
-    "artifact_hash": "3c36248042661cd216c42c364491c0908d8fe5b611e72c614ec3944d5b59fcb8",
+    "artifact_hash": "315f94b36dae56a30788715a28682ccf0b8cbbc7877f89c47058a1d08f10e805",
     "hash_reproducible": true,
     "level": "RDLLM-L169",
-    "payload_hash": "3c36248042661cd216c42c364491c0908d8fe5b611e72c614ec3944d5b59fcb8",
+    "payload_hash": "315f94b36dae56a30788715a28682ccf0b8cbbc7877f89c47058a1d08f10e805",
     "present": true,
     "status": "ready"
   },
@@ -1482,7 +1482,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "1a3c97f52385fbe5a0638c6a7927ae31725c3369f143fc6977fbd476e13500c5"
+    "value": "d7457ca7f8df45e111a6ff0f5499dd3d1b1e408222bc0fa60ee5d49ba974bbb5"
   },
   "standards_and_research": {
     "attested_admission": "SLSA, in-toto, and SCITT motivate signed admission evidence and transparent publication.",
@@ -1504,7 +1504,7 @@
     "status": "ready",
     "target_certification_level": "RDLLM-L170"
   },
-  "universal_production_invocation_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+  "universal_production_invocation_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
   "universal_production_invocation_admission_version": "rdllm-universal-production-invocation-admission/v1",
   "well_known": {
     "path": "/.well-known/rdllm/universal-production-invocation-admission.json",

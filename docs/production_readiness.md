@@ -1,5 +1,22 @@
 # Production Readiness
 
+## The Short Version
+
+RDLLM 1.0 can be release-ready software without claiming that a particular
+deployment is production-certified. Deployment approval is fail-closed:
+
+1. the operator configures the required controls;
+2. independent auditors sign current evidence with Ed25519 keys;
+3. the operator supplies a separately managed trust store;
+4. RDLLM verifies identity, deployment binding, expiry, evidence hashes, key
+   permissions, and signatures;
+5. direct settlement additionally requires a trusted payment-processor
+   attestation.
+
+Bundled profiles contain no trusted external attestations, so they correctly
+report `production_grade_claim_allowed: false`. This is a safety result, not a
+failed software release.
+
 RDLLM is production-grade only when an operator can prove that attribution,
 source grounding, rights enforcement, settlement controls, and public audit
 surfaces are enforced in the live deployment. A green repository test suite is
@@ -38,6 +55,20 @@ PYTHONPATH=src python3 tools/production_readiness.py \
   --profile-only
 ```
 
+To evaluate external evidence, add the trust store explicitly:
+
+```bash
+PYTHONPATH=src python3 tools/production_readiness.py \
+  --profile /etc/rdllm/production_readiness_profile.json \
+  --trust-store /etc/rdllm/deployment_trust_store.json \
+  --profile-only
+```
+
+The trust store follows
+[`deployment_trust_store.schema.json`](schemas/deployment_trust_store.schema.json).
+It must be controlled outside the deployment being evaluated. A profile cannot
+trust its own signer.
+
 Create an operator-specific profile and readiness report:
 
 ```bash
@@ -54,8 +85,38 @@ Validate an existing operator-controlled profile:
 ```bash
 rdllm-operator-profile validate \
   --profile artifacts/acme_production_profile.json \
+  --trust-store /etc/rdllm/deployment_trust_store.json \
   --write-report artifacts/acme_production_readiness_report.json
 ```
+
+An independent auditor can create an evidence attestation, and the operator can
+attach it without hand-editing JSON:
+
+```bash
+rdllm-deployment-attestation create \
+  --profile artifacts/acme_production_profile.json \
+  --attestation-type security_assessment \
+  --issuer "Independent Security Auditor" \
+  --key-id https://auditor.example/keys/2026-01 \
+  --private-key /secure/auditor-ed25519-private.pem \
+  --evidence audit/security-assessment.pdf \
+  --evidence-uri https://auditor.example/reports/acme-2026 \
+  --expires-at 2027-07-10T00:00:00Z \
+  --output artifacts/security_assessment.attestation.json
+
+rdllm-deployment-attestation attach \
+  --profile artifacts/acme_production_profile.json \
+  --attestation artifacts/security_assessment.attestation.json \
+  --output artifacts/acme_production_profile.attested.json
+
+rdllm-deployment-attestation verify \
+  --profile artifacts/acme_production_profile.attested.json \
+  --trust-store /etc/rdllm/deployment_trust_store.json
+```
+
+Repeat the create-and-attach step for each missing evidence type reported by the
+verifier. The `payment_processor` type is required only when direct payout is
+requested. Signing evidence does not execute a payment.
 
 From a repository checkout, `PYTHONPATH=src python3 tools/operator_profile.py`
 provides the same create and validate commands.
@@ -69,6 +130,7 @@ service attribution response:
 ```bash
 rdllm-operator-launch-gate \
   --profile /etc/rdllm/production_readiness_profile.json \
+  --trust-store /etc/rdllm/deployment_trust_store.json \
   --service-config /etc/rdllm/service_config.json \
   --service-root /etc/rdllm \
   --bootstrap-dir /etc/rdllm \
@@ -155,8 +217,9 @@ Operator templates are available under `examples/production_profiles/`:
   deployment.
 - `government_escrow_only.json`: government deployment with public-sector
   controls and escrow-only settlement.
-- `public_sector_processor_attested.json`: public-sector operation with
-  processor-attested direct settlement.
+- `public_sector_processor_required.json`: public-sector configuration that
+  requests direct settlement but remains blocked until a trusted external
+  payment-processor attestation verifies.
 
 `examples/production_readiness_profile.json` is retained as a compatibility
 alias for the public-sector processor-attested profile used by the checked-in

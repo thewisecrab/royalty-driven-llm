@@ -1363,10 +1363,10 @@
     },
     "issuer": "rdllm-local-demo",
     "live_attribution_binding": {
-      "artifact_hash": "fe87f00f549f04e555243545856c3c9a2cc72f3cb3fa779abc877fe3ab15a205",
+      "artifact_hash": "60cfdb4dceac5d7632b540b3a0b1385f4f41d7527e8403e9185bc6bef6e90f34",
       "hash_reproducible": true,
       "level": "RDLLM-L165",
-      "payload_hash": "fe87f00f549f04e555243545856c3c9a2cc72f3cb3fa779abc877fe3ab15a205",
+      "payload_hash": "60cfdb4dceac5d7632b540b3a0b1385f4f41d7527e8403e9185bc6bef6e90f34",
       "present": true,
       "status": "ready"
     },
@@ -1570,10 +1570,10 @@
       "private_strings_absent": true
     },
     "production_admission_binding": {
-      "artifact_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+      "artifact_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
       "hash_reproducible": true,
       "level": "RDLLM-L170",
-      "payload_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+      "payload_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
       "present": true,
       "status": "ready"
     },
@@ -1838,7 +1838,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "45a41291ecdd0504b27a8c05901fdbd54d204268bb7500e59f329c125dfa3459"
+      "value": "71e51fbecee635d545293019c8d2c6a9ed6b89e733c736ca126dd516fe50ff0b"
     },
     "source_category_rows": {
       "code_repository": {
@@ -2088,7 +2088,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L171"
     },
-    "universal_source_grounded_response_receipt_hash": "c6e57b54eac28f912411718e729f3d3e09e38d1596d6af912767f718b7990c13",
+    "universal_source_grounded_response_receipt_hash": "3342a6a4d3b10119ffb61701ab3f78197ee79ce867ae319ee4fd4e62faeca7ce",
     "universal_source_grounded_response_receipt_version": "rdllm-universal-source-grounded-response-receipt/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-source-grounded-response-receipt.json",

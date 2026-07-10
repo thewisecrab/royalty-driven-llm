@@ -2,7 +2,11 @@
 
 These use cases are copyable from a source checkout. They show the user-facing
 answer surface and the backend attribution fields together, so builders can see
-where each claim, source, support score, and payout number appears.
+where each claim, source, support score, and candidate allocation appears.
+
+> **Synthetic fixtures:** these examples use fictional creators, works, URLs,
+> revenue, and allocation values. They do not prove model training influence or
+> payment execution.
 
 ## Live Screenshot Gallery
 
@@ -22,6 +26,7 @@ Read the screenshots this way:
 - `status: passed` means the command completed its own verification.
 - `Sources`, `[S#]`, `Claim Evidence`, `support`, `text_match`, and `payout`
   are the visible attribution surface.
+- `payout` is the current schema's candidate allocation field, not a payment receipt.
 - `grounding_verdict`, `source_footer_hash`, `display_hash`, and
   `provider_response_hash` are machine-checkable runtime handles.
 
@@ -51,7 +56,7 @@ How to read it:
   output.
 - `text_match` is the overlap signal between output text and registered source
   text.
-- `payout` is the creator-pool amount allocated to that source owner.
+- `payout` is the candidate creator-pool amount allocated to that source owner.
 - `Claim Evidence` binds a generated claim to a source label and evidence span.
 - `disagreement=passed` means no visible high-overlap source plainly contradicted
   that claim.
@@ -113,9 +118,10 @@ claim_source_disagreement_status: passed
 PYTHONPATH=src python3 tools/provider_live_smoke.py
 ```
 
-This uses the configured OpenAI-compatible mock route by default. It proves that
-provider output is captured, hashed, attributed, rendered with a source footer,
-and verified before display.
+This uses the configured OpenAI-compatible mock route by default. It verifies
+that retrieved source context is sent before generation, the mock answer cites a
+supplied source, provider evidence is captured and hashed, and the answer is
+rendered with a source footer before display.
 
 ## Use Case 4: Check Production Launch Readiness
 
@@ -124,9 +130,11 @@ PYTHONPATH=src python3 tools/ship_check.py --skip-tests --skip-regenerate
 PYTHONPATH=src python3 tools/production_readiness.py
 ```
 
-Use this before publishing a release, demo, hosted proof surface, or deployment.
+Use this before publishing a release, demo, or hosted proof surface.
 The launch path should fail closed when source footer verification, copied-text
 preservation, attribution-gap closure, or settlement controls are missing.
+An operator deployment remains unapproved without externally signed evidence and
+an independent trust store, even when repository checks pass.
 
 ## Use Case 5: Call The HTTP API From App Code
 
@@ -155,8 +163,9 @@ Expected first line:
 rdllm_first_run status: passed
 ```
 
-This proves the package can generate an answer, show visible sources, count
-claim-evidence rows, and expose creator payout rows without an API key.
+This proves the package can generate a synthetic answer, show visible sources,
+count claim-evidence rows, and expose candidate creator allocations without an
+API key.
 
 ## Use Case 7: Reconcile Creator Royalty Events
 
@@ -255,8 +264,10 @@ PYTHONPATH=src python3 tools/production_profile_matrix.py
 PYTHONPATH=src python3 tools/operator_acceptance_matrix.py
 ```
 
-The outputs show which profiles allow direct settlement, escrow-only settlement,
-public-sector use, and production-grade claims.
+The bundled profiles demonstrate fail-closed behavior: no unattested template
+allows direct settlement, public-sector use, or a production-grade claim. An
+operator can separately test trusted signed attestations with
+`rdllm-deployment-attestation verify`.
 
 ## Use Case 15: Audit The GitHub-Facing Documentation
 

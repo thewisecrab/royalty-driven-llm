@@ -9,6 +9,7 @@ from hashlib import sha256
 from typing import Any
 
 from rdllm.models import UsageEvent
+from rdllm.signing import ED25519_ALGORITHM, sign_bytes, verify_bytes
 from rdllm.text import stable_hash
 
 PROTOCOL_VERSION = "rdllm-attribution-receipt/v1"
@@ -153,8 +154,13 @@ def make_attribution_receipt(
     route_id: str = "route:default",
     issued_at: str | None = None,
     signing_secret: str | None = None,
+    signing_private_key: str | bytes | None = None,
+    signing_key_id: str = "",
 ) -> dict[str, Any]:
     """Build a verifiable receipt suitable for a model API response header/body."""
+
+    if signing_secret and signing_private_key:
+        raise ValueError("choose either a demo shared secret or an Ed25519 private key")
 
     source_accesses = [access.to_dict() for access in event.source_accesses]
     sources = [reference.to_dict() for reference in event.source_references]
@@ -225,15 +231,33 @@ def make_attribution_receipt(
     )
     payload["privacy"]["disclosure_root"] = payload_disclosure_root(payload)
     receipt_hash = hash_payload(payload)
-    signature = sign_payload(payload, signing_secret) if signing_secret else ""
+    if signing_private_key:
+        signature = sign_bytes(
+            canonical_json(payload).encode("utf-8"),
+            private_key_pem=signing_private_key,
+            key_id=signing_key_id,
+            issuer=issuer,
+        )
+    elif signing_secret:
+        signature = {
+            "algorithm": "HMAC-SHA256",
+            "key_id": "",
+            "issuer": issuer,
+            "value": sign_payload(payload, signing_secret),
+            "security_level": "demo_shared_secret",
+        }
+    else:
+        signature = {
+            "algorithm": "UNSIGNED",
+            "key_id": "",
+            "issuer": issuer,
+            "value": "",
+            "security_level": "none",
+        }
     return {
         "receipt_hash": receipt_hash,
         "payload": payload,
-        "signature": {
-            "algorithm": "HMAC-SHA256" if signing_secret else "UNSIGNED",
-            "issuer": issuer,
-            "value": signature,
-        },
+        "signature": signature,
     }
 
 
@@ -313,6 +337,9 @@ def verify_receipt(
     receipt: dict[str, Any],
     *,
     signing_secret: str | None = None,
+    verification_public_key: str | bytes | None = None,
+    expected_key_id: str | None = None,
+    require_public_signature: bool = False,
 ) -> list[str]:
     errors = validate_receipt_shape(receipt)
     if errors:
@@ -344,12 +371,25 @@ def verify_receipt(
 
     signature = receipt.get("signature", {})
     algorithm = signature.get("algorithm")
-    if signing_secret:
+    if verification_public_key is not None:
+        errors.extend(
+            verify_bytes(
+                canonical_json(receipt.get("payload", {})).encode("utf-8"),
+                signature,
+                public_key_pem_value=verification_public_key,
+                expected_key_id=expected_key_id,
+            )
+        )
+    elif signing_secret:
         expected_signature = sign_payload(receipt.get("payload", {}), signing_secret)
         if algorithm != "HMAC-SHA256":
             errors.append("receipt is not HMAC signed")
         elif expected_signature != signature.get("value"):
             errors.append("receipt signature is invalid")
+    if require_public_signature and algorithm != ED25519_ALGORITHM:
+        errors.append("receipt requires a publicly verifiable Ed25519 signature")
+    elif require_public_signature and verification_public_key is None:
+        errors.append("receipt public verification key is required")
     return errors
 
 

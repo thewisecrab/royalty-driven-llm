@@ -1,7 +1,7 @@
 {
   "answer_card": {
     "answer_card_bound": true,
-    "answer_card_hash": "f2bdc689a030314acbfeab2e7823a55877fb4aad8f3dd4d540150469a5f858cc",
+    "answer_card_hash": "fa2bff282cd4498badb9ff52304ea26cf5b82db9366b5447e67982102f7a3941",
     "event_hash_matches_card": true,
     "event_id_matches_card": true,
     "rendered_output_hash_matches_card": true
@@ -135,7 +135,7 @@
     }
   ],
   "commitments": {
-    "answer_card_hash": "f2bdc689a030314acbfeab2e7823a55877fb4aad8f3dd4d540150469a5f858cc",
+    "answer_card_hash": "fa2bff282cd4498badb9ff52304ea26cf5b82db9366b5447e67982102f7a3941",
     "claim_materialization_root": "96048f1aaf8ca0066b1507fa0bc4880efd22b50cd642bb87c24654fd44f9662e",
     "registered_chunk_root": "6d32af57f3e8f6c3b0e2b4ae29125c95b5d4b125cc37b3e69e28b7ddf2072f4c",
     "source_materialization_root": "7e74e281e2ff31f4ab66aa613821ab4a89b955b7a05414c7db953d45bafd998e",
@@ -145,9 +145,9 @@
   "created_at": "2026-06-03T00:00:00Z",
   "event": {
     "answer_hash": "283203d79fe9f38a76f38927a84e9d964d9be2ed9f9e88274461757e7af4fde4",
-    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-    "event_id": "evt_b560c62bb49a73d0",
-    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c"
+    "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+    "event_id": "evt_83312b019637578e",
+    "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68"
   },
   "issuer": "rdllm-local-demo",
   "issues": [],
@@ -160,12 +160,12 @@
     "source_quote_text_disclosed": false,
     "source_text_disclosed": false
   },
-  "report_hash": "4abe7deebb2b87114f44b64fa5a7768abe747b608d3afaf78905bb23da07d0b7",
+  "report_hash": "15fc4a037e3f63b39b1849a1925767ea345949828e4442526af3471f12ff68cc",
   "report_version": "rdllm-source-verification-report/v1",
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "fe8fd5e19d3b022c4b2b2ec3ca69371e408850401fb0410ebe5c07bef3f90892"
+    "value": "77499ffef13683aaedbe2d14807b7664023754f9afa843ae71c1d86f8e9952a0"
   },
   "sources": [
     {

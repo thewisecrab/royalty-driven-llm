@@ -206,8 +206,41 @@
       ],
       "creator_pool": "0.550000",
       "creator_pool_rate": "0.55",
-      "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-      "event_id": "evt_b560c62bb49a73d0",
+      "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+      "event_id": "evt_83312b019637578e",
+      "generation_evidence": {
+        "context_hash": "743159337f159c1a5bf760e8d5a42f3bc7ab10b178ca0fc1e57b68afce21a0ca",
+        "mode": "internal_retrieval",
+        "pre_generation_context_bound": true,
+        "schema": "rdllm-generation-evidence/v1",
+        "source_count": 3,
+        "source_rows": [
+          {
+            "chunk_id": "arjun-provenance-ledger:c1",
+            "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
+            "rank": 1,
+            "source_id": "S1",
+            "source_uri": "registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1",
+            "work_id": "arjun-provenance-ledger"
+          },
+          {
+            "chunk_id": "lina-governance-disputes:c1",
+            "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
+            "rank": 2,
+            "source_id": "S2",
+            "source_uri": "registered://works/lina-governance-disputes#lina-governance-disputes:c1",
+            "work_id": "lina-governance-disputes"
+          },
+          {
+            "chunk_id": "maya-youtube-style-pool:c1",
+            "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
+            "rank": 3,
+            "source_id": "S3",
+            "source_uri": "registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1",
+            "work_id": "maya-youtube-style-pool"
+          }
+        ]
+      },
       "gross_revenue": "1.000000",
       "grounding_quality": {
         "issues": [],
@@ -243,7 +276,7 @@
         "total_claims": 6,
         "unsupported_claims": 0
       },
-      "output": "Royalty-aware answer:\nThe strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]\n\nSources\n[S1] Provenance Ledgers for AI Outputs - Arjun Rao; chunk=arjun-provenance-ledger:c1; uri=registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1; claims=2; confidence=verified; support=0.295; text_match=0.900; why=verified_claim_support_identity_rights_royalty; payout=0.180214; hash=e94efa6d9bb3.\n    Evidence: span_hashes=399e7ff82b80,6ea90fbdd0fb. Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.\n[S2] Creator Governance for AI Licensing - Lina Park; chunk=lina-governance-disputes:c1; uri=registered://works/lina-governance-disputes#lina-governance-disputes:c1; claims=2; confidence=verified; support=0.208; text_match=0.633; why=verified_claim_support_identity_rights_royalty; payout=0.128707; hash=2e332f176133.\n    Evidence: span_hashes=71e11e089ebe,82b19c7059e7. Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.\n[S3] Usage Pools for Creator Platforms - Maya Sen; chunk=maya-youtube-style-pool:c1; uri=registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1; claims=2; confidence=verified; support=0.341; text_match=0.933; why=verified_claim_support_identity_rights_royalty; payout=0.241079; hash=6029417218e9.\n    Evidence: span_hashes=28528b6fc0db,a9ed8431a259. A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.\nGrounding: 6/6 claims supported; status=grounded.\nClaim Evidence\n[C1] S1; claim_hash=399e7ff82b80; support=0.900; span=399e7ff82b80; chars=0-64.\n[C2] S1; claim_hash=6ea90fbdd0fb; support=0.900; span=6ea90fbdd0fb; chars=65-244.\n[C3] S2; claim_hash=71e11e089ebe; support=0.900; span=71e11e089ebe; chars=0-51.\n[C4] S2; claim_hash=82b19c7059e7; support=0.900; span=82b19c7059e7; chars=52-164.\n[C5] S3; claim_hash=28528b6fc0db; support=0.900; span=28528b6fc0db; chars=0-136.\n[C6] S3; claim_hash=a9ed8431a259; support=0.900; span=a9ed8431a259; chars=137-262.",
+      "output": "Royalty-aware answer:\nThe strongest registered sources say:\n- Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution. [S1]\n- Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process. [S2]\n- A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue. [S3]\n\nSources\n[S1] Provenance Ledgers for AI Outputs - Arjun Rao; chunk=arjun-provenance-ledger:c1; uri=registered://works/arjun-provenance-ledger#arjun-provenance-ledger:c1; claims=2; confidence=verified; support=0.295; text_match=0.900; why=verified_claim_support_identity_rights_royalty; payout=0.180214; hash=e94efa6d9bb3.\n    Evidence: span_hashes=399e7ff82b80,6ea90fbdd0fb. Every royalty bearing AI answer should have a provenance record. The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.\n[S2] Creator Governance for AI Licensing - Lina Park; chunk=lina-governance-disputes:c1; uri=registered://works/lina-governance-disputes#lina-governance-disputes:c1; claims=2; confidence=verified; support=0.208; text_match=0.633; why=verified_claim_support_identity_rights_royalty; payout=0.128707; hash=2e332f176133.\n    Evidence: span_hashes=71e11e089ebe,82b19c7059e7. Royalty systems need governance as much as scoring. Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.\n[S3] Usage Pools for Creator Platforms - Maya Sen; chunk=maya-youtube-style-pool:c1; uri=registered://works/maya-youtube-style-pool#maya-youtube-style-pool:c1; claims=2; confidence=verified; support=0.341; text_match=0.933; why=verified_claim_support_identity_rights_royalty; payout=0.241079; hash=6029417218e9.\n    Evidence: span_hashes=28528b6fc0db,a9ed8431a259. A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage. Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.\nGrounding: 6/6 claims supported; status=grounded.\nClaim Evidence\n[C1] S1; claim_hash=399e7ff82b80; support=0.900; span=399e7ff82b80; chars=0-64. disagreement=passed; agreements=S1; conflicts=none; disagreement_profile=rdllm-visible-source-disagreement/v1. Evidence: Every royalty bearing AI answer should have a provenance record.\n[C2] S1; claim_hash=6ea90fbdd0fb; support=0.900; span=6ea90fbdd0fb; chars=65-244. disagreement=passed; agreements=S1; conflicts=none; disagreement_profile=rdllm-visible-source-disagreement/v1. Evidence: The record should include source identifiers, content hashes, retrieval scores, output citations, payout weights, and an event hash that allows auditors to replay the attribution.\n[C3] S2; claim_hash=71e11e089ebe; support=0.900; span=71e11e089ebe; chars=0-51. disagreement=passed; agreements=S2; conflicts=none; disagreement_profile=rdllm-visible-source-disagreement/v1. Evidence: Royalty systems need governance as much as scoring.\n[C4] S2; claim_hash=82b19c7059e7; support=0.900; span=82b19c7059e7; chars=52-164. disagreement=passed; agreements=S2; conflicts=none; disagreement_profile=rdllm-visible-source-disagreement/v1. Evidence: Creators need consent controls, license terms, dispute windows, duplicate claim handling, and an appeal process.\n[C5] S3; claim_hash=28528b6fc0db; support=0.900; span=28528b6fc0db; chars=0-136. disagreement=passed; agreements=S3; conflicts=none; disagreement_profile=rdllm-visible-source-disagreement/v1. Evidence: A creator platform can reserve a fixed share of revenue for contributors and distribute that creator pool according to measurable usage.\n[C6] S3; claim_hash=a9ed8431a259; support=0.900; span=a9ed8431a259; chars=137-262. disagreement=passed; agreements=S3; conflicts=none; disagreement_profile=rdllm-visible-source-disagreement/v1. Evidence: Video platforms often use views, watch time, eligibility rules, and policy compliance to decide which creators share revenue.",
       "policy_decisions": [
         {
           "actual_creator_pool_rate": 0.55,
@@ -465,6 +498,15 @@
           "work_id": "maya-youtube-style-pool"
         }
       ],
+      "settlement_decision": {
+        "direct_execution_allowed": false,
+        "eligible_for_settlement_instruction": true,
+        "external_processor_attestation_required": true,
+        "generation_evidence_mode": "internal_retrieval",
+        "reasons": [],
+        "schema": "rdllm-settlement-decision/v1",
+        "status": "eligible_for_processor_instruction"
+      },
       "source_accesses": [
         {
           "access_id": "srcacc_6b22e9d6e915c9c3",

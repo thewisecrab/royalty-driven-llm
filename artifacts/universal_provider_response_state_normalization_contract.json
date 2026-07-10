@@ -1,31 +1,31 @@
 {
   "artifact_bindings": {
     "universal_claim_evidence_footer_verification_contract": {
-      "artifact_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "artifact_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "hash_reproducible": true,
       "level": "RDLLM-L184",
       "minimum_level": "RDLLM-L184",
-      "payload_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "payload_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "present": true,
       "ready": true,
       "status": "ready"
     },
     "universal_provider_meter_normalization_contract": {
-      "artifact_hash": "715adf2aa9426862b313b7075dc8d2409e848a5f212248c852ff971d9644a6a2",
+      "artifact_hash": "3f17bf14140d158b4f526888b01586df39fe77d8e699541cffbb244f0ab08a1f",
       "hash_reproducible": true,
       "level": "RDLLM-L185",
       "minimum_level": "RDLLM-L185",
-      "payload_hash": "715adf2aa9426862b313b7075dc8d2409e848a5f212248c852ff971d9644a6a2",
+      "payload_hash": "3f17bf14140d158b4f526888b01586df39fe77d8e699541cffbb244f0ab08a1f",
       "present": true,
       "ready": true,
       "status": "ready"
     },
     "universal_runtime_route_binding_contract": {
-      "artifact_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "artifact_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "hash_reproducible": true,
       "level": "RDLLM-L179",
       "minimum_level": "RDLLM-L179",
-      "payload_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "payload_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "present": true,
       "ready": true,
       "status": "ready"
@@ -1464,7 +1464,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "1c6eb4c82c89ede34d4c9d3f76ca63d79d93835a7973e47bdc79ded70929f19f"
+    "value": "25401fc0401afebbfad8563f32342841edd8dae1427f67da2595e6a94427a2c1"
   },
   "summary": {
     "failure_mode_count": 0,
@@ -1485,7 +1485,7 @@
     "status": "ready",
     "target_certification_level": "RDLLM-L186"
   },
-  "universal_provider_response_state_normalization_contract_hash": "1eecd6867639abc7dd067e0552adaa68f5793331b0de99fb40fc67fcb17abd55",
+  "universal_provider_response_state_normalization_contract_hash": "33905042b19906a9bf216979274d73aef2912e067edc8692595155187dbe4dff",
   "universal_provider_response_state_normalization_contract_version": "rdllm-universal-provider-response-state-normalization-contract/v1",
   "well_known": {
     "path": "/.well-known/rdllm/universal-provider-response-state-normalization-contract.json",

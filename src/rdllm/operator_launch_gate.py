@@ -62,7 +62,10 @@ def _public_service_summary(config: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def _profile_section(profile_path: Path) -> dict[str, Any]:
+def _profile_section(
+    profile_path: Path,
+    trust_store_path: Path | None = None,
+) -> dict[str, Any]:
     try:
         profile = load_json(profile_path)
     except Exception as exc:
@@ -73,8 +76,22 @@ def _profile_section(profile_path: Path) -> dict[str, Any]:
             "blocked_controls": [],
             "profile_hash": "",
         }
-    report = evaluate_production_profile(profile)
-    verification = verify_production_readiness_report(profile, report)
+    try:
+        trust_store = load_json(trust_store_path) if trust_store_path else None
+    except Exception as exc:
+        return {
+            "status": "blocked",
+            "errors": [f"trust_store: failed to read JSON: {exc}"],
+            "summary": {},
+            "blocked_controls": [],
+            "profile_hash": "",
+        }
+    report = evaluate_production_profile(profile, trust_store=trust_store)
+    verification = verify_production_readiness_report(
+        profile,
+        report,
+        trust_store=trust_store,
+    )
     errors = list(verification["errors"])
     summary = report["summary"]
     if summary["status"] != "ready":
@@ -89,6 +106,7 @@ def _profile_section(profile_path: Path) -> dict[str, Any]:
             "profile_status": summary["status"],
             "operator_type": summary.get("operator_type"),
             "settlement_mode": summary.get("settlement_mode"),
+            "external_evidence_status": summary.get("external_evidence_status"),
             "production_grade_claim_allowed": summary[
                 "production_grade_claim_allowed"
             ],
@@ -264,8 +282,9 @@ def run_launch_gate(
     check_runtime: bool = True,
     skip_response: bool = False,
     support_bundle_output: Path | None = None,
+    trust_store: Path | None = None,
 ) -> dict[str, Any]:
-    profile_report = _profile_section(profile)
+    profile_report = _profile_section(profile, trust_store)
     service_report = _service_config_section(
         service_config,
         service_root=service_root,
@@ -382,6 +401,11 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--profile", type=Path, required=True)
     parser.add_argument("--service-config", type=Path, required=True)
+    parser.add_argument(
+        "--trust-store",
+        type=Path,
+        help="Externally managed trust store used to verify deployment attestations.",
+    )
     parser.add_argument("--service-root", type=Path)
     parser.add_argument("--bootstrap-dir", type=Path)
     parser.add_argument("--response", type=Path)
@@ -418,6 +442,7 @@ def main(argv: list[str] | None = None) -> int:
         check_runtime=not args.skip_runtime,
         skip_response=args.skip_response,
         support_bundle_output=args.write_support_bundle,
+        trust_store=args.trust_store,
     )
     if args.write_report:
         args.write_report.parent.mkdir(parents=True, exist_ok=True)

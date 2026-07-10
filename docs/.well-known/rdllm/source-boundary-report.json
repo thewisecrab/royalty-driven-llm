@@ -3,25 +3,25 @@
     "context_event_matches_source_report": true,
     "context_trace_matches_trace_exchange": true,
     "generation_context_closure_bound": true,
-    "generation_context_closure_report_hash": "3e015ce470ab46cde722f13331d5762b4c1e744adb4dc1db3d2fe53dfe9d6d3b",
+    "generation_context_closure_report_hash": "d444afe2799076c1ae8137054e1430f301434ed28f6784550b2fc5e0d4fdf09d",
     "source_verification_bound": true,
-    "source_verification_report_hash": "4abe7deebb2b87114f44b64fa5a7768abe747b608d3afaf78905bb23da07d0b7",
+    "source_verification_report_hash": "15fc4a037e3f63b39b1849a1925767ea345949828e4442526af3471f12ff68cc",
     "trace_exchange_bound": true,
-    "trace_exchange_hash": "7c88187e9347104995eb98e888d9663d355391a186434162bd5a741aba9423b9"
+    "trace_exchange_hash": "7a441b8277a161d0249ac32d494a94fc5ba2edd93e987d3268baff04aa494d39"
   },
   "commitments": {
-    "artifact_binding_root": "10fb3f754135690b0d8706bc2ac3a7bf360248e4573b25b3f1f686cbab2da998",
+    "artifact_binding_root": "5742c2b76b7fe6747274d0e18f93b17a41fd0cf0288a268a2925d31510e8d446",
     "issue_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "source_boundary_root": "2331f189b8da12ef89909212d48ef5b4baebee44ac72c57e21ee03b27454c561"
+    "source_boundary_root": "393acb53f269cb5976965d7e25323b3d23aea743a9460bccd8a9a808fa3edd66"
   },
   "created_at": "2026-06-03T00:00:00Z",
   "event": {
     "answer_hash": "283203d79fe9f38a76f38927a84e9d964d9be2ed9f9e88274461757e7af4fde4",
-    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-    "event_id": "evt_b560c62bb49a73d0",
-    "generation_context_closure_report_hash": "3e015ce470ab46cde722f13331d5762b4c1e744adb4dc1db3d2fe53dfe9d6d3b",
-    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
-    "trace_hash": "7c88187e9347104995eb98e888d9663d355391a186434162bd5a741aba9423b9"
+    "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+    "event_id": "evt_83312b019637578e",
+    "generation_context_closure_report_hash": "d444afe2799076c1ae8137054e1430f301434ed28f6784550b2fc5e0d4fdf09d",
+    "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
+    "trace_hash": "7a441b8277a161d0249ac32d494a94fc5ba2edd93e987d3268baff04aa494d39"
   },
   "issuer": "rdllm-local-demo",
   "issues": [],
@@ -46,7 +46,7 @@
     "report_uses_hashes_trace_ids_and_boundary_booleans": true,
     "source_text_disclosed": false
   },
-  "report_hash": "6e0a55d50bfbf64eab94e981476631c04c12f2941d6c112dae973b421cbb89e2",
+  "report_hash": "e6777da6e80e3da8d1326083b2e894a2da8eb8857ecfa38d1e240f7fdfd3336e",
   "report_version": "rdllm-source-boundary-report/v1",
   "schemas": {
     "generation_context_closure_report": "docs/schemas/generation_context_closure_report.schema.json",
@@ -56,7 +56,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "df23dcd7781973bc488f69a6f9be4845c825016abc4e5851068bbaf72c80e9fd"
+    "value": "f7c7a1229ffcb39c6ca6292fedd05c022bff143ccfc7b5b51f6576f546495aab"
   },
   "source_boundary_rows": [
     {
@@ -65,7 +65,7 @@
       "content_hash": "e94efa6d9bb390d4771529cf4333dcb0acb75db9f9d65e0162832223f2b8a45f",
       "content_hash_bound": true,
       "content_hash_matches_context": true,
-      "context_block_hash": "828ede516024eeefc89fde2786144e549ee5b136ad8941427387c5914bb78f46",
+      "context_block_hash": "ec6071d3748eb11a6592a6e31e03656a0584b187dc788a36795baf743217d102",
       "context_block_id": "ctx:srcacc_6b22e9d6e915c9c3",
       "control_channel_blocked": true,
       "creator_id": "arjun",
@@ -74,9 +74,9 @@
       "packet_hash_matches_profile": true,
       "source_access_id": "srcacc_6b22e9d6e915c9c3",
       "source_access_in_trace": true,
-      "source_access_span_id": "7f0dbccedc187d55",
+      "source_access_span_id": "b0283e68a863c349",
       "source_boundary_closed": true,
-      "source_boundary_hash": "6cc791c1e7b177c499d42590a534b693f50ab7c0196c7edd8b1d3fe54e01c89e",
+      "source_boundary_hash": "7dcf17a5f3cf87a8de91d9ff6e1d8fb99b40740f206ac40d9d75f97654911f14",
       "source_cannot_modify_attribution": true,
       "source_cannot_modify_payout": true,
       "source_role": "evidence",
@@ -89,7 +89,7 @@
       "content_hash": "2e332f1761339f67c61a38603786bb8651fdfa8ce9ef6e924517c113a2d7e0ac",
       "content_hash_bound": true,
       "content_hash_matches_context": true,
-      "context_block_hash": "ee2753423baafc99421de760660fe533a4995432ccd6be2026dc892431c61dd5",
+      "context_block_hash": "5369d72135c422fee112f70ab6c8a5c864fe4baa89b5101e31ceb196b6ff8db3",
       "context_block_id": "ctx:srcacc_fd64f30ca810c405",
       "control_channel_blocked": true,
       "creator_id": "lina",
@@ -98,9 +98,9 @@
       "packet_hash_matches_profile": true,
       "source_access_id": "srcacc_fd64f30ca810c405",
       "source_access_in_trace": true,
-      "source_access_span_id": "5f423cd8da39cc2f",
+      "source_access_span_id": "946aaead7995a61f",
       "source_boundary_closed": true,
-      "source_boundary_hash": "cec83ec883e4fe8715846ae902d06b857983c1c968baf55e4008c4844ec3e52c",
+      "source_boundary_hash": "11099be816ea2c09c53618319fb004704a0d341c7a1420c92be2afdd0629357b",
       "source_cannot_modify_attribution": true,
       "source_cannot_modify_payout": true,
       "source_role": "evidence",
@@ -113,7 +113,7 @@
       "content_hash": "6029417218e901f1781ae5d7ee42f62b1f84a62e3977421600a30fce280b9ec7",
       "content_hash_bound": true,
       "content_hash_matches_context": true,
-      "context_block_hash": "46731b24213c6d2798e1a7b4eda42d90455add8fee2c1bb4c338b9229037a3ab",
+      "context_block_hash": "1eb3be69c8519f6f28c25a8a89be4a2031d34f5250c175a597390a0e24c2264b",
       "context_block_id": "ctx:srcacc_ccd70e51018b0548",
       "control_channel_blocked": true,
       "creator_id": "maya",
@@ -122,9 +122,9 @@
       "packet_hash_matches_profile": true,
       "source_access_id": "srcacc_ccd70e51018b0548",
       "source_access_in_trace": true,
-      "source_access_span_id": "0cf47a855af53f89",
+      "source_access_span_id": "c47e084bef05ae45",
       "source_boundary_closed": true,
-      "source_boundary_hash": "55d58ea4d013d78508108e576438a3bfea1c787581de4ec658ea4c44a30b8a8c",
+      "source_boundary_hash": "4010b694bc7d7cafb26a4ee54878a11c1afe8db21fc254b55e20f6773aa9c9bc",
       "source_cannot_modify_attribution": true,
       "source_cannot_modify_payout": true,
       "source_role": "evidence",

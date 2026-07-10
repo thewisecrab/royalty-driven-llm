@@ -90,6 +90,10 @@
     "governance_controls": { "$ref": "#/$defs/governance_controls" },
     "settlement_controls": { "$ref": "#/$defs/settlement_controls" },
     "public_sector_controls": { "$ref": "#/$defs/public_sector_controls" },
+    "external_attestations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/external_attestation" }
+    },
     "operations_slo": {
       "type": "object",
       "additionalProperties": false,
@@ -110,6 +114,46 @@
     }
   },
   "$defs": {
+    "external_attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["payload", "attestation_hash", "signature"],
+      "properties": {
+        "payload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "schema", "attestation_type", "issuer", "subject",
+            "deployment_id", "evidence_uri", "evidence_sha256",
+            "issued_at", "expires_at"
+          ],
+          "properties": {
+            "schema": { "const": "rdllm-deployment-attestation/v1" },
+            "attestation_type": { "type": "string", "minLength": 1 },
+            "issuer": { "type": "string", "minLength": 1 },
+            "subject": { "type": "string", "minLength": 1 },
+            "deployment_id": { "type": "string", "minLength": 1 },
+            "evidence_uri": { "type": "string", "pattern": "^https://" },
+            "evidence_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+            "issued_at": { "type": "string", "minLength": 1 },
+            "expires_at": { "type": "string", "minLength": 1 }
+          }
+        },
+        "attestation_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "signature": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["algorithm", "key_id", "issuer", "value", "security_level"],
+          "properties": {
+            "algorithm": { "const": "Ed25519" },
+            "key_id": { "type": "string", "minLength": 1 },
+            "issuer": { "type": "string", "minLength": 1 },
+            "value": { "type": "string", "minLength": 1 },
+            "security_level": { "const": "publicly_verifiable" }
+          }
+        }
+      }
+    },
     "runtime_controls": {
       "type": "object",
       "additionalProperties": false,

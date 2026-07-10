@@ -1321,19 +1321,19 @@
     "well_known_path": "/.well-known/rdllm/integration-profile.json"
   },
   "bound_artifacts": {
-    "assurance_bundle_hash": "3191e29f7d3595d2722fc7f9d0543aa8a7c9714ee55934da530166b5f12a5f6a",
-    "assurance_bundle_root": "1502723a0a42f6e3da2978493c971f204ff8b83d8a62f47647b3f61a979c4d47",
-    "certification_attestation_hash": "77299f33de4f5dd1a498bf3bebfc07d7c410353e8f0e7a9cfa31913a56c212ed",
-    "certification_report_hash": "dc1e7090d04e2ab7240ea7675cc965f789d31c5d7518d0e18a5a7f35f60631ec",
-    "provider_card_hash": "461be8e9acd24c00504972ab2480806c5ae3ca157fa1dea47a6137f40dae8289",
-    "response_envelope_hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243"
+    "assurance_bundle_hash": "d45e29bb7d13bae68c7e891375922f44987eb9b643ae02cf3e3e29ae62f13640",
+    "assurance_bundle_root": "ae4601b66d0bd721eeffd4b1578fe41c96f33e46fa5dea070de6d0e905631493",
+    "certification_attestation_hash": "2fd4aae21c12c56ced928785ec8acc7140fdedbe0fcd3b2f5a4c784d304d38dd",
+    "certification_report_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
+    "provider_card_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
+    "response_envelope_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140"
   },
   "certification": {
     "case_count": 187,
     "failed": 0,
     "highest_level": "RDLLM-L186",
     "passed": 187,
-    "report_hash": "dc1e7090d04e2ab7240ea7675cc965f789d31c5d7518d0e18a5a7f35f60631ec",
+    "report_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
     "score": 1.0,
     "status": "passed"
   },
@@ -1345,7 +1345,7 @@
     "private_source_corpus_disclosed": false,
     "profile_uses_hashes_and_contract_metadata": true
   },
-  "profile_hash": "1bebb60c0bfbd78e3ed26212a909106473f5b8d2e5aef72f94e1979ac1a693b5",
+  "profile_hash": "643dc0b267b1bcd4260cc249fd0e389133fa1b51962e3d6925a88bb93d7fbd40",
   "profile_version": "rdllm-integration-profile/v1",
   "provider": {
     "id": "provider:rdllm-reference",
@@ -1545,8 +1545,8 @@
   "sample_response": {
     "artifact_count": 16,
     "claim_count": 6,
-    "envelope_hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243",
-    "event_id": "evt_b560c62bb49a73d0",
+    "envelope_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
+    "event_id": "evt_83312b019637578e",
     "source_count": 3,
     "status": "verified"
   },
@@ -1733,7 +1733,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "c619476d7e3464e3f6e8ebc0c8471e43f06f9771342aa89e37cd27f081ae5078"
+    "value": "8bab726c200d91563d8c352aa2cb65a04b277fdd20e2b7e8e1317415b07d8d10"
   },
   "summary": {
     "endpoint_count": 206,

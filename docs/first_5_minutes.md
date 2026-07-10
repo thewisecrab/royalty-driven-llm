@@ -1,5 +1,8 @@
 # RDLLM First 5 Minutes
 
+> **Synthetic demo:** the bundled corpus and economics are fictional test data.
+> This walkthrough does not call an external model provider or move money.
+
 This is the lowest-friction path. Do this before reading the long docs.
 
 ## 0. What You Are About To See
@@ -9,8 +12,8 @@ RDLLM will generate a demo answer and print:
 - the answer;
 - `Sources`, meaning the works that support the answer;
 - `Claim Evidence`, meaning which source supports each claim;
-- `support`, `text_match`, and `payout`, meaning how the source was used and how
-  value was allocated;
+- `support`, `text_match`, and `allocation`, meaning how the source was used and
+  what share would be proposed for review;
 - `disagreement=passed`, meaning no visible source plainly contradicted the
   claim.
 
@@ -59,10 +62,12 @@ What it means:
 - `[S1]` is a visible source label.
 - `support` is how strongly that source supports the answer.
 - `text_match` is observable text overlap with the registered source.
-- `payout` is the demo creator-pool allocation.
+- `allocation` is a candidate share in the synthetic creator pool, not a payment.
 - `Claim Evidence` shows which source supports each claim.
 - `disagreement=passed` means the visible sources did not plainly contradict the
   claim.
+- `settlement` explains whether the candidate is held, escrowed, or eligible for
+  an externally attested processor. RDLLM never executes a payment itself.
 
 ## 4. Try The CLI Directly
 

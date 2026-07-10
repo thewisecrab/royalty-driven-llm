@@ -1,16 +1,16 @@
 {
   "artifact_bindings": {
     "answer_card_bound": true,
-    "answer_card_hash": "f2bdc689a030314acbfeab2e7823a55877fb4aad8f3dd4d540150469a5f858cc",
+    "answer_card_hash": "fa2bff282cd4498badb9ff52304ea26cf5b82db9366b5447e67982102f7a3941",
     "citation_footer_bound": true,
-    "citation_footer_contract_hash": "d2e0a8dbef31224c19d9c524d8136f168931d9f5d4ccf54bbda96b809bddbcde",
+    "citation_footer_contract_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
     "citation_footer_version": "rdllm-citation-footer-contract/v1",
     "source_verification_bound": true,
-    "source_verification_report_hash": "4abe7deebb2b87114f44b64fa5a7768abe747b608d3afaf78905bb23da07d0b7"
+    "source_verification_report_hash": "15fc4a037e3f63b39b1849a1925767ea345949828e4442526af3471f12ff68cc"
   },
   "commitments": {
-    "artifact_binding_root": "fef1f7d6b9e943729ae6580897c5d1b8f6e1ac51a010055d423dd0df06735158",
-    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
+    "artifact_binding_root": "fad01a04afcda38ff87cf745bfdea3b1299596844a2c0d4e927261628a3e7413",
+    "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
     "issue_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "snapshot_root": "f88b4c5aa1301ae9c9971ca96807f24759f14b8e65f3238e8707598a02483183",
     "source_availability_root": "7920f84ebe836fd87433cf5701dcf5dadc84828b530d1f96759af06faffb9b99"
@@ -18,9 +18,9 @@
   "created_at": "2026-06-03T00:00:00Z",
   "event": {
     "answer_hash": "283203d79fe9f38a76f38927a84e9d964d9be2ed9f9e88274461757e7af4fde4",
-    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-    "event_id": "evt_b560c62bb49a73d0",
-    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c"
+    "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+    "event_id": "evt_83312b019637578e",
+    "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68"
   },
   "issuer": "rdllm-local-demo",
   "issues": [],
@@ -40,7 +40,7 @@
     "raw_snapshot_body_disclosed": false,
     "source_text_disclosed": false
   },
-  "report_hash": "6f3d0af1dfc20e5d743ace20bf629c1ca853719e1dc6f29959957cb7064afd85",
+  "report_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5",
   "report_version": "rdllm-source-availability-report/v1",
   "schemas": {
     "source_availability_report": "docs/schemas/source_availability_report.schema.json"
@@ -48,7 +48,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "33b708bc15d23401eb19ebc5034d61b5d2cdacac54bf2062610616c1a6f3793f"
+    "value": "f870bbe2838f336e2044420d2e0063a2205a31932d28be7426a5a2dd30e309d1"
   },
   "snapshot_commitments": [
     {

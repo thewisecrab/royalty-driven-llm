@@ -1,10 +1,10 @@
 {
   "artifact_bindings": {
-    "answer_claim_coverage_report_hash": "8be08f72cc541cc50a5b36934e91d9e59fa38053d110d29ee38417f31a93e7cd",
-    "citation_footer_contract_hash": "d2e0a8dbef31224c19d9c524d8136f168931d9f5d4ccf54bbda96b809bddbcde",
-    "generation_context_closure_report_hash": "3e015ce470ab46cde722f13331d5762b4c1e744adb4dc1db3d2fe53dfe9d6d3b",
-    "rendered_attribution_audit_hash": "d4fdacd0d3bd033953f956991bc9bd6cf062d4bca76312c3c1d3581f15d24deb",
-    "response_envelope_hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243",
+    "answer_claim_coverage_report_hash": "0f09aa92a4fc20272ab312793166eccdabb54b949bdeb601b4a50b24574b80a8",
+    "citation_footer_contract_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
+    "generation_context_closure_report_hash": "d444afe2799076c1ae8137054e1430f301434ed28f6784550b2fc5e0d4fdf09d",
+    "rendered_attribution_audit_hash": "c6f4297a83058d8a3dfe646cb1db74894e1dd05671e9bb75c19336c7f10923ec",
+    "response_envelope_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
     "training_memory_provenance_hash": "7ffe19925fd9fa4efb042b00fb60adc0032e963dccdce2dcfba61bd5d614274b"
   },
   "checks": {
@@ -193,12 +193,12 @@
     "source_text_disclosed": false,
     "stores_hashes_ids_and_counts_not_text": true
   },
-  "report_hash": "31811b99c0687b2eaddeb7ef0a845e6987b0e7f29147b2de98ab18031e7eba3c",
+  "report_hash": "e4d8cf729c901cd9acd4b2d453dc9cf23eabda7872f314d680389509b2690adc",
   "report_version": "rdllm-evidence-locked-generation/v1",
   "response": {
-    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-    "event_id": "evt_b560c62bb49a73d0",
-    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+    "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+    "event_id": "evt_83312b019637578e",
+    "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
     "source_labels": [
       "S1",
       "S2",
@@ -217,7 +217,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "efaac4e6a7bd7941c756891763f2560e198574fe85b0c68c81fe83eaea4a2fbd"
+    "value": "4cffbe28f8c985ddd65390d090ce7fe1299b3ee257f947295693bc5b234f2ed4"
   },
   "summary": {
     "evidence_lock_count": 6,

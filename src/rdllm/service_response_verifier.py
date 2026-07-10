@@ -157,6 +157,8 @@ def event_hash_from_event(event: dict[str, Any]) -> str:
         "grounding_report": event.get("grounding_report", {}),
         "grounding_quality": event.get("grounding_quality", {}),
         "attribution_gap": event.get("attribution_gap", {}),
+        "generation_evidence": event.get("generation_evidence", {}),
+        "settlement_decision": event.get("settlement_decision", {}),
         "policy_decisions": event.get("policy_decisions", []),
         "registry_decisions": event.get("registry_decisions", []),
     }
@@ -1508,8 +1510,15 @@ def verify_service_response(
         if payout is None:
             errors.append(f"source_footer.source_rows[{index}].payout: invalid decimal")
             payout = Decimal("0")
+        settlement_eligible = event.get("settlement_decision", {}).get(
+            "eligible_for_settlement_instruction"
+        ) is True
         expected_settlement = (
-            "allocated_not_executed" if payout > Decimal("0") else "not_allocated"
+            "allocated_not_executed"
+            if payout > Decimal("0") and settlement_eligible
+            else "candidate_held_for_review"
+            if payout > Decimal("0")
+            else "not_allocated"
         )
         if row.get("settlement_status") != expected_settlement:
             errors.append(
@@ -1517,7 +1526,11 @@ def verify_service_response(
                 "does not match payout"
             )
         expected_why = (
-            "verified_claim_support_identity_rights_royalty"
+            "verified_context_bound_claim_support_identity_rights_royalty"
+            if row.get("confidence") == "verified"
+            and payout > Decimal("0")
+            and settlement_eligible
+            else "post_hoc_candidate_needs_review"
             if row.get("confidence") == "verified" and payout > Decimal("0")
             else "claim_support_needs_review"
         )
@@ -1635,6 +1648,22 @@ def verify_service_response(
     if public_verifier.get("attribution_gap_verdict") != attribution_gap_verdict:
         errors.append(
             "source_footer.public_verifier.attribution_gap_verdict: binding mismatch"
+        )
+    if public_verifier.get("generation_evidence_mode") != event.get(
+        "generation_evidence", {}
+    ).get("mode"):
+        errors.append(
+            "source_footer.public_verifier.generation_evidence_mode: binding mismatch"
+        )
+    if public_verifier.get("settlement_status") != event.get(
+        "settlement_decision", {}
+    ).get("status"):
+        errors.append("source_footer.public_verifier.settlement_status: binding mismatch")
+    if public_verifier.get("settlement_instruction_eligible") != event.get(
+        "settlement_decision", {}
+    ).get("eligible_for_settlement_instruction"):
+        errors.append(
+            "source_footer.public_verifier.settlement_instruction_eligible: binding mismatch"
         )
 
     display_bindings = (

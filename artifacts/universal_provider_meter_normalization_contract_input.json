@@ -1132,7 +1132,7 @@
   },
   "settlement_meter_rows": {
     "reference-route:cloud_hosted_provider:fine_tuning:13": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "67e5d6bc6957b14b6a1602c713cc39b0b37ce2a95a330bb0a6d485577a3d0c74",
       "invoice_reconciled": true,
@@ -1147,7 +1147,7 @@
       "verifier_hash": "54298f0478555a39ce14bc42511a0b9bf584a71954882cb8033b0b9fe82c5bff"
     },
     "reference-route:cloud_hosted_provider:reasoning:1": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "9efdca236f8aa2b2221bcee1bb4d1e6120996cca672aa52f045ad2897fbb3762",
       "invoice_reconciled": true,
@@ -1162,7 +1162,7 @@
       "verifier_hash": "703d2a5cd912dfa39bfbc73156580dcd180e1350d571c29eae905ee7c997eba6"
     },
     "reference-route:embedding_provider:tool_calling_agent:10": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "e45cdf2ba76e9414538d03f7414f072f2dfee89465f3a1e45cb06ccb1126d990",
       "invoice_reconciled": true,
@@ -1177,7 +1177,7 @@
       "verifier_hash": "d2f384d247a6c5e82a6dffc7512136d9a8ab487184adda5c0e3b4bc08bf7f43a"
     },
     "reference-route:enterprise_private_model:audio_speech:5": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "6e520c35deff5ff2978686828e222a1adaebdf04c639993ed39a5a445f20c792",
       "invoice_reconciled": true,
@@ -1192,7 +1192,7 @@
       "verifier_hash": "5907eccba4c1ee5ce26c024a19767a197f0799d4a139c09471356f8155f92f36"
     },
     "reference-route:enterprise_private_model:gateway_router:17": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "3a7a7cf8c2a80a211afe6634f5e2817459ea1b93580c06df69a54fe7f5709cd9",
       "invoice_reconciled": true,
@@ -1207,7 +1207,7 @@
       "verifier_hash": "c28725aee5c2aac0d22c209cfda4a57110943471b8434fc40514e10b8f52b06b"
     },
     "reference-route:fine_tuning_provider:batch_generation:11": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "962b099cde9220c3deb68bceb73ac3934d5edd3054a2fbd6e6ffa04b1c73f2bd",
       "invoice_reconciled": true,
@@ -1222,7 +1222,7 @@
       "verifier_hash": "5a21c39fa122f4235e53229ddf8336fe63d5af107fdb8c1ec92c3c73694cf2bb"
     },
     "reference-route:foundation_provider:streaming:12": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "50ea327eeb5cc5e83b31bd33011a202d668caf9dc56ce4c6fd44f902095b5134",
       "invoice_reconciled": true,
@@ -1237,7 +1237,7 @@
       "verifier_hash": "4037ebd6dc289cabdba0888883a142ae85fc5815403dcf2e63e6b2a9b729518e"
     },
     "reference-route:foundation_provider:text_chat:0": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "41accfc57572a0f9a459134c0a8ae6056554ab4818625b61afcf50a895d77225",
       "invoice_reconciled": true,
@@ -1252,7 +1252,7 @@
       "verifier_hash": "af2b8ff8f8e51499d4dd455dd0c54d5764d8617602ef4c42eed57a5cd0121811"
     },
     "reference-route:hosted_open_weight_service:image_generation:4": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "fcec158ddc45812f07f07eaeb3733cfb19f3c528e7cec1c28e0dfea000a536b0",
       "invoice_reconciled": true,
@@ -1267,7 +1267,7 @@
       "verifier_hash": "955e9db58a03b56151153dee0ee7592268fb916c3f551f38061234b73bfa5422"
     },
     "reference-route:hosted_open_weight_service:local_inference:16": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "ef1aaf808e0fc168b675091495e7e505c4759708e731fb5485c7d268286c652f",
       "invoice_reconciled": true,
@@ -1282,7 +1282,7 @@
       "verifier_hash": "2e2c466198e512544ba62365a5ed7d04b1cdcc7eef63ea3f3366863a85c131ba"
     },
     "reference-route:local_runtime:video_generation:6": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "015cde9727b2431a7ca607a6555f6bf09a5f6956c0aaa2d191f57d63186119e8",
       "invoice_reconciled": true,
@@ -1297,7 +1297,7 @@
       "verifier_hash": "b63ac7a83bfe6204fbc1950ee7f2fac7c0e2657091c0e6fbfb2ff19e7e56fc45"
     },
     "reference-route:model_marketplace:long_context:2": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "539d26dc8ef3a15867d7bb369a0068bf071e85289b05b4ee527e1f671b4177dd",
       "invoice_reconciled": true,
@@ -1312,7 +1312,7 @@
       "verifier_hash": "eb096ac383ae254cbed789bd8f3275a20c493d5c50b519de26e72245bde110d7"
     },
     "reference-route:model_marketplace:retrieval_augmented:14": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "ae63110244857ae3e1cc98e9127a320726bfd3069b890da9a8acab2d1d6366ad",
       "invoice_reconciled": true,
@@ -1327,7 +1327,7 @@
       "verifier_hash": "8552adf41e21a2d987826096dd4d2994bc093d0c88adf0955b4d37cd63ef4d6a"
     },
     "reference-route:multimodal_media_provider:code_generation:9": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "e0a6565d9a90916381f0841fe533f113052a2a3bac74aa333baf5c2eaea403f8",
       "invoice_reconciled": true,
@@ -1342,7 +1342,7 @@
       "verifier_hash": "f0943927752718e8b681efcc6b558ba548354b92789f36264e5ee61b09b1f66c"
     },
     "reference-route:open_weight_registry:embedding:7": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "409b35e7ebb3c4619bfd06ff1ba7ceba4ba971e06b03805a1a8010390a74a856",
       "invoice_reconciled": true,
@@ -1357,7 +1357,7 @@
       "verifier_hash": "a7a0d215925a82a2f1b476a5eba0db54f6753775b26b1ef7698e2b6716197ad9"
     },
     "reference-route:regional_sovereign_provider:reranking:8": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "0a78e33cc87b48932589baaade381a71ec2cf0d2fd2e2bce2ad13380fc583ffc",
       "invoice_reconciled": true,
@@ -1372,7 +1372,7 @@
       "verifier_hash": "a082dadec87d46e909e33ae5d21dbda19026f9cf7679217655588315a9f9b222"
     },
     "reference-route:router_or_gateway:multimodal_vision:3": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "c42463f72316b14a5f77d358cd75ae874e9d1c44b29752a59377455098cb3e34",
       "invoice_reconciled": true,
@@ -1387,7 +1387,7 @@
       "verifier_hash": "5e8d2410d13d72bffd1e47583a00a4698de714209915bc37bcfb51664b562aaa"
     },
     "reference-route:router_or_gateway:safety_moderation:15": {
-      "claim_evidence_footer_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+      "claim_evidence_footer_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
       "creator_pool_inputs_preserved": true,
       "creator_settlement_hash": "dba6370c24fa8127d22b5ddc78f56801d8db0a2f758ca5979081a772862a8f73",
       "invoice_reconciled": true,
@@ -1405,21 +1405,21 @@
   "universal_claim_evidence_footer_verification_contract": {
     "artifact_bindings": {
       "universal_native_source_annotation_contract": {
-        "artifact_hash": "b2694c751490253acc708fa600ee579b92798c7cff8b68ec9d59b86dafaad317",
+        "artifact_hash": "8510f26350753e7b80fcc4414944ecf1edbefa64a275b4f5363923e03ee37f70",
         "hash_reproducible": true,
         "level": "RDLLM-L183",
         "minimum_level": "RDLLM-L183",
-        "payload_hash": "b2694c751490253acc708fa600ee579b92798c7cff8b68ec9d59b86dafaad317",
+        "payload_hash": "8510f26350753e7b80fcc4414944ecf1edbefa64a275b4f5363923e03ee37f70",
         "present": true,
         "ready": true,
         "status": "ready"
       },
       "universal_verified_source_footer_contract": {
-        "artifact_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+        "artifact_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
         "hash_reproducible": true,
         "level": "RDLLM-L180",
         "minimum_level": "RDLLM-L180",
-        "payload_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+        "payload_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
         "present": true,
         "ready": true,
         "status": "ready"
@@ -2043,7 +2043,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "222677284c184a58600ad2c63cbe082693839f9f5270190eb0026b8617389e26"
+      "value": "b8027083f1e7203612570782863f92e2c2855f81365b2b67e45ba6230cdad6ed"
     },
     "summary": {
       "failure_mode_count": 0,
@@ -2064,7 +2064,7 @@
       "verified_footer_field_count": 15,
       "verified_footer_source_count": 3
     },
-    "universal_claim_evidence_footer_verification_contract_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+    "universal_claim_evidence_footer_verification_contract_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
     "universal_claim_evidence_footer_verification_contract_version": "rdllm-universal-claim-evidence-footer-verification-contract/v1",
     "verification_dimension_rows": {
       "answer_source_fidelity": {
@@ -2455,11 +2455,11 @@
   "universal_live_capability_discovery_contract": {
     "artifact_bindings": {
       "universal_model_capability_coverage_contract": {
-        "artifact_hash": "540e7abb183d833683fc05f5ecdcb6c254272533abbdd047f93762ed9f202e2b",
+        "artifact_hash": "1173c549ad037f85f79480789896c96d2ce5b29fe5040d08c89fe482dd26baf4",
         "hash_reproducible": true,
         "level": "RDLLM-L181",
         "minimum_level": "RDLLM-L181",
-        "payload_hash": "540e7abb183d833683fc05f5ecdcb6c254272533abbdd047f93762ed9f202e2b",
+        "payload_hash": "1173c549ad037f85f79480789896c96d2ce5b29fe5040d08c89fe482dd26baf4",
         "present": true,
         "ready": true,
         "status": "ready"
@@ -3839,7 +3839,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "c730ee0f4f2ff6ae2e7ee40213456626f747a605cdeba2dd9fe9921fc46c10e8"
+      "value": "0634b1f00af09c0e901cb14d791ce366c9ba711eb782b908b9e1f141970cd467"
     },
     "summary": {
       "capability_discovery_count": 24,
@@ -3859,7 +3859,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L182"
     },
-    "universal_live_capability_discovery_contract_hash": "589eeebc8a6afa913fa9b39d31b2df60b1565e1f3ee9a8d282fad8c87035c667",
+    "universal_live_capability_discovery_contract_hash": "ee28a1e18bf0ca698ab38d77729c6f16ff122a06d36a5be1b022e3154fd54d6f",
     "universal_live_capability_discovery_contract_version": "rdllm-universal-live-capability-discovery-contract/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-live-capability-discovery-contract.json",
@@ -3895,11 +3895,11 @@
     },
     "created_at": "2026-06-03T00:00:00Z",
     "evidence_roots": {
-      "combined_runtime_route_binding_root": "e6555e014a2b632ac586234f7c248d92e07afed9c8226ab9664bd56a55b1b02b",
+      "combined_runtime_route_binding_root": "8344fc9a316d1e7b503c82c79cf2542fb4881da7035fe57a1e6c13f5db88099a",
       "negative_runtime_root": "9201c53925b9745a727923cdc86d5f2ea44393f443fb6ff4c4dc3f925826cbaa",
       "runtime_binding_stage_root": "8cc611e02d963017d0363a8a0707ccd375632bfa084beb6e617561046568730c",
       "runtime_model_field_root": "8ca82e39a2384c05089d67cd897d074137ec8fc17da135648aa5e21f2f2101d1",
-      "runtime_route_binding_root": "f4fd5df5f7c3527debcd621dc2f748a91cffe5680405ebb8c65dc4c73cb8096a",
+      "runtime_route_binding_root": "a9d5fa72b4bd0cc30448acdd3f435b7fc1d99a6543aa3db06f8a8d99a7576e77",
       "runtime_surface_root": "9b438eba80a34dd7154f6decdddfccb769855be7b74b8843b4c02b3e7465a974"
     },
     "issuer": "rdllm-local-demo",
@@ -4140,19 +4140,19 @@
       "public_contract_uses_hashes_and_route_metadata": true
     },
     "production_invocation_admission_binding": {
-      "artifact_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+      "artifact_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
       "hash_reproducible": true,
       "level": "RDLLM-L170",
-      "payload_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+      "payload_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
       "present": true,
       "status": "ready"
     },
     "provider_catalog_coverage_binding": {
-      "artifact_hash": "c27b0a94a5b10f5399e375ca3e3949ad9b5de732a05394489fec4e6fc8acf79f",
+      "artifact_hash": "6f84c504bb3ea075d9009cf986aa0dcd8a9f4e3a511a158b1fd81addb37b2efb",
       "catalog_covered_route_count": 18,
       "hash_reproducible": true,
       "level": "RDLLM-L178",
-      "payload_hash": "c27b0a94a5b10f5399e375ca3e3949ad9b5de732a05394489fec4e6fc8acf79f",
+      "payload_hash": "6f84c504bb3ea075d9009cf986aa0dcd8a9f4e3a511a158b1fd81addb37b2efb",
       "present": true,
       "status": "ready"
     },
@@ -4453,7 +4453,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "7eef5a41429c70c699ba60c5fa20bc07a77e6c7e8b0d73b20b31799eaa10dec6",
         "requested_model_locked": true,
         "response_model_echo_hash": "bfcf47d0903d7c67eb9147d6a7ca8d72b9401a513b3fe7e0c54510c2954ef5ae",
@@ -4479,7 +4479,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "b3e53038c2ebbcdd8d62a7f0f5b8f2c6393f24e8c1c1a7e1fbc007d1a6ba2eee",
         "requested_model_locked": true,
         "response_model_echo_hash": "d7196d7d067f56f27f3004e2444c47d6888c0ba3fc8400e826be7029bf8d7d4a",
@@ -4505,7 +4505,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "84048fc7beeae595ffd7e00d8416bd07ccb329115bd32e6e50f3542b3513b6b0",
         "requested_model_locked": true,
         "response_model_echo_hash": "8fbc70f1465102204b457d3a4d2914ead1b0371e20d20685acc121911ec5bbe8",
@@ -4531,7 +4531,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "119373ff998094f58844570cb939bb051d801b1cd9132e06c6e5b80dc851c4e8",
         "requested_model_locked": true,
         "response_model_echo_hash": "e0cab42032dc32bc8d8ee166ec3e0da9125a42d45a10ab94b493003ee9482bdb",
@@ -4557,7 +4557,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "57d42b11550eba1e69b61184d54ff41fd095eb407d4c180519c21a4dad60f132",
         "requested_model_locked": true,
         "response_model_echo_hash": "65a1020bf7896d0d3d8fef16815b23a7cecd8813e2de51a6fd48e58bc93f2aaa",
@@ -4583,7 +4583,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "dc51310477ac01166773afce87b08cf5db670739c48a31dad2ed20561d99b8f7",
         "requested_model_locked": true,
         "response_model_echo_hash": "1401524d52d06ed97fbf443d7e8621820a0409dd79f6790f59cf627c36520d13",
@@ -4609,7 +4609,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "c55054a2da95d185681d24b04855f20b47aacb80e0a7323c011f13a85d3160b6",
         "requested_model_locked": true,
         "response_model_echo_hash": "9fbb414a2ae30a567173ee181a1c4d6e8c37ba7621c5a31991e858c38d642375",
@@ -4635,7 +4635,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "2e655117792b297fbbdcafd3d564b9d3087272bda1528508761e097dd0fb91f0",
         "requested_model_locked": true,
         "response_model_echo_hash": "ce6ea31e8e5d9bf774ff9ffaeeb687b4b3b1b4272dac250b0e63f0d0ea0fe827",
@@ -4661,7 +4661,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "03d11ee0d9f05b5ee33dbb1d54642129a281561455b7381f940dc00e08ebe2b4",
         "requested_model_locked": true,
         "response_model_echo_hash": "c46c56fdc0163cb761fb617aa0d033b5172995859cb7b8111e7bd02ae880ce60",
@@ -4687,7 +4687,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "0820f76318ff9850de8a355c70de2fad013a0efd09ceca5632bb6b9849038d3f",
         "requested_model_locked": true,
         "response_model_echo_hash": "18b3eb93ed9fe03fbd24f92ab5673a4384ce406ca53ae7935e343998719837dd",
@@ -4713,7 +4713,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "79e0333318421330858d0f8702e60ea3aa5b7e943aeec558ee6be546d7307d7b",
         "requested_model_locked": true,
         "response_model_echo_hash": "2fe54961defdc308e4ece6054db6291a801335ca43d06c79de2068da5c550579",
@@ -4739,7 +4739,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "5b47922f4a1d92651a6f6a13ee242898351c187db75535c62519054e2ae87bd6",
         "requested_model_locked": true,
         "response_model_echo_hash": "4de5e18497927852b35b9cdc2d34a6a0fd4d81a4ab26262b0b50542170866912",
@@ -4765,7 +4765,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "216ba7720fb85460ae7118095062a4a452f722ffec81a00ed29a9406a805ef98",
         "requested_model_locked": true,
         "response_model_echo_hash": "3342155d1d54108c8bb1e82b0dab89d352b7f855647f5aae12e284e557500a02",
@@ -4791,7 +4791,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "e0d0271ce0ce5bfdde989653c6c28eb54480d778e91c1fb5702c753354165388",
         "requested_model_locked": true,
         "response_model_echo_hash": "5a95ff3c486180e1f3f5951c265df56bf6237ec4c7223f9ba3d09718c3d3f4ba",
@@ -4817,7 +4817,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "ad53d60ce11f1c03f2b1be782a0e3a8f17539612882fc2c22071abe5f783c190",
         "requested_model_locked": true,
         "response_model_echo_hash": "38f56f4e60ef37b88b1d588875491eca482f99b759fceffd247058378bbbcf7d",
@@ -4843,7 +4843,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "8201e06c0420e97d146919ab4c49b1be95ee5fe54e232d1b4fbce6af151614d6",
         "requested_model_locked": true,
         "response_model_echo_hash": "d7088fd94fa2782715c1ea7e1f5851c528230cf8768bbc984077e212b380f0f8",
@@ -4869,7 +4869,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "bd9b5bf386ca62a9ea1d796014492b0ca5a7960ba167e5c4a8855cd819e87b3f",
         "requested_model_locked": true,
         "response_model_echo_hash": "4768f197da5b69ac11d2ca6c2e74e3d0216a384b969f37b5c9f8064e9fa1197f",
@@ -4895,7 +4895,7 @@
         "l170_admission_bound": true,
         "l178_catalog_covered": true,
         "no_private_payloads": true,
-        "production_admission_hash": "d1fa134b0ad71ceb1b67981099477171a2d7685a9994d980161c1be966635736",
+        "production_admission_hash": "ed332deba8e847504bfe617e486b2d701df298bccb6de5555e66fb1453295882",
         "request_model_lock_hash": "9b0c16eb725220ab48dbe3da33e204ef7fb8daa543beb8ad4a5b14182ce7f3b1",
         "requested_model_locked": true,
         "response_model_echo_hash": "b7b00e17503e7c326bde210e92c723dba25c04f260cef5ca9e3391febcb553b7",
@@ -5088,7 +5088,7 @@
     "signature": {
       "algorithm": "HMAC-SHA256",
       "issuer": "rdllm-local-demo",
-      "value": "c30f116844a12c276146ae24f565ab3271735d4f1551603d10ecd099f2014c26"
+      "value": "201ccf3355ccfb0067301e0239e6084004995324f5bc75664337a01b0a62d1c0"
     },
     "summary": {
       "catalog_covered_route_count": 18,
@@ -5109,7 +5109,7 @@
       "status": "ready",
       "target_certification_level": "RDLLM-L179"
     },
-    "universal_runtime_route_binding_contract_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+    "universal_runtime_route_binding_contract_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
     "universal_runtime_route_binding_contract_version": "rdllm-universal-runtime-route-binding-contract/v1",
     "well_known": {
       "path": "/.well-known/rdllm/universal-runtime-route-binding-contract.json",

@@ -1,21 +1,21 @@
 {
   "artifact_bindings": {
     "universal_native_source_annotation_contract": {
-      "artifact_hash": "b2694c751490253acc708fa600ee579b92798c7cff8b68ec9d59b86dafaad317",
+      "artifact_hash": "8510f26350753e7b80fcc4414944ecf1edbefa64a275b4f5363923e03ee37f70",
       "hash_reproducible": true,
       "level": "RDLLM-L183",
       "minimum_level": "RDLLM-L183",
-      "payload_hash": "b2694c751490253acc708fa600ee579b92798c7cff8b68ec9d59b86dafaad317",
+      "payload_hash": "8510f26350753e7b80fcc4414944ecf1edbefa64a275b4f5363923e03ee37f70",
       "present": true,
       "ready": true,
       "status": "ready"
     },
     "universal_verified_source_footer_contract": {
-      "artifact_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "artifact_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "hash_reproducible": true,
       "level": "RDLLM-L180",
       "minimum_level": "RDLLM-L180",
-      "payload_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "payload_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "present": true,
       "ready": true,
       "status": "ready"
@@ -639,7 +639,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "222677284c184a58600ad2c63cbe082693839f9f5270190eb0026b8617389e26"
+    "value": "b8027083f1e7203612570782863f92e2c2855f81365b2b67e45ba6230cdad6ed"
   },
   "summary": {
     "failure_mode_count": 0,
@@ -660,7 +660,7 @@
     "verified_footer_field_count": 15,
     "verified_footer_source_count": 3
   },
-  "universal_claim_evidence_footer_verification_contract_hash": "93fcd1de70efa8755f0cf8c7dabd5d906013569f291b93f64fcf15283e67f596",
+  "universal_claim_evidence_footer_verification_contract_hash": "0bd3ddc3c3ac8cab44a98720fdea9fa0bb7f877f2b439300f85550f4c5e3fb43",
   "universal_claim_evidence_footer_verification_contract_version": "rdllm-universal-claim-evidence-footer-verification-contract/v1",
   "verification_dimension_rows": {
     "answer_source_fidelity": {

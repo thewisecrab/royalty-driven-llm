@@ -1,4 +1,4 @@
-"""Production-grade Royalty Driven LLM reference package."""
+"""Production-stable RDLLM library with externally attested deployment gates."""
 
 from rdllm.assurance import (
     make_assurance_bundle,

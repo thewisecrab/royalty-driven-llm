@@ -39,7 +39,9 @@ REQUIRED_KEYWORDS = (
 REQUIRED_URLS = ("Homepage", "Documentation", "Issues", "Source")
 REQUIRED_CONSOLE_SCRIPTS = (
     "rdllm",
+    "rdllm-deployment-attestation",
     "rdllm-first-run",
+    "rdllm-keygen",
     "rdllm-operator-acceptance",
     "rdllm-operator-acceptance-matrix",
     "rdllm-operator-bootstrap",
@@ -181,8 +183,13 @@ def audit(path: Path = PYPROJECT) -> dict[str, Any]:
     for term in ("Provider-neutral", "source-footer", "royalty-settlement"):
         if term not in description:
             errors.append(f"project.description: missing {term!r}")
-    if project.get("dependencies") != []:
-        errors.append("project.dependencies: expected no required runtime dependencies")
+    dependencies = project.get("dependencies")
+    if not isinstance(dependencies, list) or not any(
+        str(value).startswith("cryptography>=48.0.1") for value in dependencies
+    ):
+        errors.append(
+            "project.dependencies: cryptography>=48.0.1 is required for Ed25519 proofs"
+        )
     if project.get("license") != "MIT":
         errors.append("project.license: expected 'MIT'")
     if project.get("requires-python") != ">=3.10":
@@ -195,8 +202,10 @@ def audit(path: Path = PYPROJECT) -> dict[str, Any]:
     )
     if "prototype" in package_init.lower():
         errors.append("src/rdllm/__init__.py: must not describe RDLLM as a prototype")
-    if "production-grade" not in package_init.lower():
-        errors.append("src/rdllm/__init__.py: missing production-grade positioning")
+    if "production-stable" not in package_init.lower():
+        errors.append("src/rdllm/__init__.py: missing production-stable positioning")
+    if "externally attested" not in package_init.lower():
+        errors.append("src/rdllm/__init__.py: missing external attestation boundary")
 
     citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
     if f'version: "{version}"' not in citation:
@@ -209,8 +218,8 @@ def audit(path: Path = PYPROJECT) -> dict[str, Any]:
     changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
     if f"## {version} -" not in changelog:
         errors.append("CHANGELOG.md: missing current project.version entry")
-    if "production-grade open-source baseline" not in changelog:
-        errors.append("CHANGELOG.md: missing production-grade release note")
+    if "production-stable software baseline" not in changelog:
+        errors.append("CHANGELOG.md: missing production-stable release note")
 
     development_status = next(
         (

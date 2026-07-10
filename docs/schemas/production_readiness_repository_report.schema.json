@@ -66,8 +66,10 @@
               "acceptance_matrix_status": { "const": "passed" },
               "acceptance_matrix_operator_template_count": { "const": 5 },
               "acceptance_matrix_passed_count": { "const": 5 },
-              "acceptance_matrix_production_acceptance_allowed_count": { "const": 5 },
-              "production_grade_claim_allowed": { "const": true }
+              "acceptance_matrix_production_acceptance_allowed_count": { "const": 0 },
+              "software_release_status": { "const": "ready" },
+              "operator_deployment_status": { "const": "unverified" },
+              "production_grade_claim_allowed": { "const": false }
             }
           },
           "profile_matrix": {
@@ -77,9 +79,9 @@
               "summary": {
                 "properties": {
                   "profile_count": { "const": 5 },
-                  "direct_settlement_profile_count": { "minimum": 1 },
-                  "no_payment_profile_count": { "minimum": 1 },
-                  "public_sector_profile_count": { "minimum": 2 }
+                  "direct_settlement_profile_count": { "const": 0 },
+                  "no_payment_profile_count": { "const": 5 },
+                  "public_sector_profile_count": { "const": 0 }
                 }
               }
             }
@@ -93,10 +95,10 @@
                   "operator_template_count": { "const": 5 },
                   "passed_count": { "const": 5 },
                   "failed_count": { "const": 0 },
-                  "production_acceptance_allowed_count": { "const": 5 },
-                  "direct_settlement_template_count": { "minimum": 1 },
-                  "no_direct_settlement_template_count": { "minimum": 1 },
-                  "public_sector_template_count": { "minimum": 2 },
+                  "production_acceptance_allowed_count": { "const": 0 },
+                  "direct_settlement_template_count": { "const": 0 },
+                  "no_direct_settlement_template_count": { "const": 5 },
+                  "public_sector_template_count": { "const": 0 },
                   "runtime_checked": { "const": true }
                 }
               }
@@ -213,7 +215,7 @@
             "properties": {
               "acceptance_status": { "const": "ready" },
               "acceptance_verification_status": { "const": "passed" },
-              "production_acceptance_decision": { "const": "allow" },
+              "production_acceptance_decision": { "const": "block" },
               "source_grounding_acceptance_status": { "const": "passed" },
               "audit_response_binding_status": { "const": "passed" },
               "recovery_verification_status": { "const": "passed" }
@@ -313,6 +315,8 @@
         "acceptance_matrix_operator_template_count",
         "acceptance_matrix_passed_count",
         "acceptance_matrix_production_acceptance_allowed_count",
+        "software_release_status",
+        "operator_deployment_status",
         "settlement_mode",
         "direct_payout_enabled",
         "payment_processor_attested",
@@ -334,6 +338,8 @@
           "type": "integer",
           "minimum": 0
         },
+        "software_release_status": { "enum": ["ready", "blocked"] },
+        "operator_deployment_status": { "enum": ["verified", "unverified"] },
         "settlement_mode": {
           "type": ["string", "null"],
           "enum": ["processor_attested", "instruction_only", "escrow_only", null]

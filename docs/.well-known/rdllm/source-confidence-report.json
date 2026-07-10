@@ -165,22 +165,22 @@
     }
   ],
   "commitments": {
-    "answer_card_hash": "f2bdc689a030314acbfeab2e7823a55877fb4aad8f3dd4d540150469a5f858cc",
+    "answer_card_hash": "fa2bff282cd4498badb9ff52304ea26cf5b82db9366b5447e67982102f7a3941",
     "claim_confidence_root": "8aeb2d9d7020c7c91da9072e76b83acffcb81989b7b4cba34e5e211654eaee10",
     "creator_license_contract_hash": "1ea2a80b87d91b03550b57457a881265fdf9a6ed38b5e520ed8253988eddf8ab",
     "footer_confidence_root": "c506b724049a80e796ab33d72f961dd0f9aae5edf9ddc87ff273dd6fc3d638a2",
     "source_confidence_root": "31ee2ad8f8dcd1efd54932d6b52a69c4fb112f0f43a022fd49e86101699b7242",
-    "source_verification_report_hash": "4abe7deebb2b87114f44b64fa5a7768abe747b608d3afaf78905bb23da07d0b7",
+    "source_verification_report_hash": "15fc4a037e3f63b39b1849a1925767ea345949828e4442526af3471f12ff68cc",
     "taxonomy_hash": "e37eaaf31fd8969560917c4d390928edddc809cfcf119396b03f22993404fb5e"
   },
   "created_at": "2026-06-03T00:00:00Z",
   "event": {
-    "answer_card_hash": "f2bdc689a030314acbfeab2e7823a55877fb4aad8f3dd4d540150469a5f858cc",
+    "answer_card_hash": "fa2bff282cd4498badb9ff52304ea26cf5b82db9366b5447e67982102f7a3941",
     "creator_license_contract_hash": "1ea2a80b87d91b03550b57457a881265fdf9a6ed38b5e520ed8253988eddf8ab",
-    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-    "event_id": "evt_b560c62bb49a73d0",
-    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
-    "source_verification_report_hash": "4abe7deebb2b87114f44b64fa5a7768abe747b608d3afaf78905bb23da07d0b7"
+    "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+    "event_id": "evt_83312b019637578e",
+    "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
+    "source_verification_report_hash": "15fc4a037e3f63b39b1849a1925767ea345949828e4442526af3471f12ff68cc"
   },
   "footer": {
     "profile": "rdllm-source-confidence-footer/v1",
@@ -257,7 +257,7 @@
     "source_quote_text_disclosed": false,
     "source_text_disclosed": false
   },
-  "report_hash": "e21bf99ae1dbd34ff4c7e5d7c1da0f8a1842044e23b4035b9455f9ee390a4b09",
+  "report_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9",
   "report_version": "rdllm-source-confidence-report/v1",
   "schemas": {
     "answer_provenance_card": "docs/schemas/answer_provenance_card.schema.json",
@@ -268,7 +268,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "386bde1faf1a05239dc0340e729e34685988eef24f21dcedfa44c30628579269"
+    "value": "fc6f747abe1c85f5501adba4f6d5e50886cc9d12a3dca12fe35672f4eadd5c97"
   },
   "sources": [
     {

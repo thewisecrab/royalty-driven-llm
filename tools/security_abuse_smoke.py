@@ -54,7 +54,7 @@ class AbuseProviderHandler(BaseHTTPRequestHandler):
                 else "stop"
             )
             content = (
-                TEXT_ATTRIBUTION_OUTPUT * 20
+                (TEXT_ATTRIBUTION_OUTPUT + " [S1]") * 20
                 if AbuseProviderHandler.mode == "oversized_output"
                 else TEXT_ATTRIBUTION_OUTPUT
             )
@@ -275,7 +275,12 @@ def run_provider_failure_case(
                 token=SERVICE_TOKEN,
                 payload={
                     "provider_id": "abuse-provider",
-                    "messages": [{"role": "user", "content": "cite sources"}],
+                    "messages": [
+                        {
+                            "role": "user",
+                            "content": "How should AI prove attribution?",
+                        }
+                    ],
                     "gross_revenue": "1.00",
                 },
             )

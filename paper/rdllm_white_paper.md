@@ -1,6 +1,6 @@
-# RDLLM: A Source-Grounded Attribution and Royalty Settlement Framework for Verifiable AI Outputs
+# RDLLM: Verifiable Source Attribution and Creator-Value Accounting for Grounded AI Outputs
 
-Version: 2026-07-08
+Version: 2026-07-10
 
 Author: Siddharth Nilesh Patel
 
@@ -35,9 +35,9 @@ RDLLM combines four layers that are usually treated separately:
    citation presence, and registered data-value priors with metric provenance.
 3. Settlement accounting: creator-pool allocation, escrow routing, rights
    conflicts, registry disputes, and remittance-ready statements.
-4. Verifiable operation: response hashes, source-footer hashes, event hashes,
-   audit logs, public schemas, well-known proof artifacts, launch gates, and
-   package/runtime smoke checks.
+4. Verifiable operation: response hashes, Ed25519 signatures, source-footer
+   hashes, event hashes, audit logs, public schemas, externally signed deployment
+   evidence, launch gates, and package/runtime smoke checks.
 
 The design is shaped by recent citation and attribution research showing that
 source-looking citations are often insufficient: links can work without factual
@@ -76,9 +76,10 @@ python -m pip install .
 rdllm-first-run
 ```
 
-The packaged first-run path emits `rdllm_first_run status: passed`, visible
+The packaged synthetic first-run path emits `rdllm_first_run status: passed`, visible
 source rows, Claim Evidence rows, `support`, `text_match`, `payout`, and
-`disagreement=passed` fields. The same repository includes service smoke tests,
+`disagreement=passed` fields. Here, `payout` is a candidate creator-pool
+allocation, not evidence that money moved. The same repository includes service smoke tests,
 provider-route smoke tests, package smoke tests, link audits, public proof
 artifacts, and production-readiness gates.
 
@@ -277,7 +278,35 @@ and method. RDLLM footers expose methods such as
 `rdllm-ngram-lcs-text-match/v1`, and the verifier rejects rows that omit metric
 provenance.
 
-### 3.9 Standards Are Converging On Portable, Verifiable Provenance
+### 3.9 Compensation Must Reflect Attribution Uncertainty
+
+`What's a Credit Worth?` models creator compensation when an attribution signal
+is noisy. Its generative-music experiments compare scalable attribution with a
+leave-one-catalog-out reference and show that attribution informativeness changes
+the welfare-optimal contract: noisier signals favor fixed-fee licensing over
+royalty-based allocation.
+
+RDLLM consequence: a score must not mechanically become a payment. Low-confidence,
+post-hoc, disputed, or unsupported matches route to review or escrow. Operators
+should calibrate attribution against a domain-relevant reference before using
+royalty contracts, and should consider fixed-fee or collective licensing where
+answer-level attribution is too noisy.
+
+### 3.10 Training-Data Attribution Is A Separate Evidence Channel
+
+`Data Attribution in Large Language Models via Bidirectional Gradient
+Optimization` studies training-data attribution by perturbing a model on generated
+text and measuring loss changes over training samples. This is materially different
+from proving which retrieved context supports a displayed answer, and it generally
+requires model and training-data access unavailable at a provider-neutral API edge.
+
+RDLLM consequence: answer-time source grounding, observable text matching, and
+training-data influence must remain separate fields. A response footer never
+upgrades a retrieved source into a training-influence claim. Model-level signals
+can be attached only as separately scoped evidence with their own method,
+calibration, access assumptions, and uncertainty.
+
+### 3.11 Standards Are Converging On Portable, Verifiable Provenance
 
 W3C PROV defines provenance as information about entities, activities, and
 people involved in producing data or things, used to assess quality, reliability,
@@ -293,7 +322,7 @@ RDLLM consequence: source attribution should not be trapped in a single vendor
 JSON object. RDLLM emits schemas, public artifacts, hashes, verifier commands,
 and well-known discovery surfaces so downstream systems can verify what happened.
 
-### 3.10 Policy Is Moving Toward Transparency And Rights Accounting
+### 3.12 Policy Is Moving Toward Transparency And Rights Accounting
 
 The EU AI Act establishes transparency and copyright-related obligations for
 general-purpose AI models, including public summaries of training content. The
@@ -313,6 +342,8 @@ An event contains:
 
 - request metadata: prompt hash, route, policy version, provider metadata;
 - answer metadata: answer text, display text, display hash;
+- generation evidence: local retrieval mode or provider request/response hashes,
+  supplied context hash, provider response ID, source IDs, and citation annotations;
 - source records: creator ID, work ID, chunk ID, URI, content hash, license,
   rights policy, registry status;
 - evidence records: claim hash, evidence span hash, evidence preview, support
@@ -320,9 +351,10 @@ An event contains:
 - usage metrics: retrieval relevance, output support, prompt overlap, text
   match, citation score, data-value prior, metric methods;
 - settlement fields: gross revenue, creator-pool rate, creator pool,
-  contribution weight, payout, escrow or review reason;
-- verification fields: source-footer hash, event hash, audit entry, public
-  verifier outputs.
+  contribution weight, candidate allocation, escrow or review reason, and an
+  explicit no-direct-execution decision;
+- verification fields: source-footer hash, event hash, Ed25519 receipt signature,
+  audit entry, public verifier outputs, and externally signed deployment evidence.
 
 The event has three audiences:
 
@@ -368,7 +400,9 @@ paying a different set externally.
 RDLLM can wrap a local answer generator, an HTTP service, a provider-compatible
 route, a RAG system, an agent, or an application pipeline. The provider-neutral
 rule is that attribution metadata must bind to the actual answer path, not a
-later marketing claim.
+later marketing claim. For provider routes, retrieved source blocks are supplied
+before generation and valid provider-native annotations or explicit source markers
+must resolve to those blocks. Missing or foreign source evidence fails closed.
 
 ### 5.4 Claim Evidence
 
@@ -452,15 +486,20 @@ The normalized weight is:
 weight_s = U_s / sum(U_all_candidates)
 ```
 
-The payout is:
+The candidate allocation is:
 
 ```text
-payout_s = creator_pool * weight_s
+candidate_allocation_s = creator_pool * weight_s
 ```
 
 The coefficients are not universal truth. They are the published defaults of
 the reference implementation. A production deployment should publish its own
 metric profile, calibration evidence, and policy version.
+
+This calculation does not execute money movement. Direct execution remains false
+inside the runtime event. A production operator can emit a processor instruction
+only after deployment evidence and a payment-processor attestation verify against
+an independently managed trust store.
 
 If no eligible source receives a positive raw score, the creator pool moves to
 escrow. If rights policy denies the matched use, the pool moves to a rights
@@ -469,7 +508,7 @@ dispute handling.
 
 ## 7. Runtime Example
 
-The repository's beginner command verifies the live path:
+The repository's beginner command verifies the live path using fictional data:
 
 ```bash
 PYTHONPATH=src python3 -m rdllm.first_run
@@ -481,13 +520,13 @@ The current sample run reports:
 rdllm_first_run status: passed
 Found visible sources: 3
 Found supported claim-evidence rows: 6
-Found creator payout rows: 3
+Found candidate creator allocation rows: 3
 ```
 
 For the prompt `How should AI prove attribution?`, the default sample corpus
 produces three source rows:
 
-| Source | Visible role | Supported claims | Support | Text match | Payout |
+| Source | Visible role | Supported claims | Support | Text match | Candidate allocation |
 | --- | --- | ---: | ---: | ---: | ---: |
 | `S1` Provenance Ledgers for AI Outputs | provenance records, source IDs, hashes, replayable event hashes | 2 | 0.295 | 0.900 | 0.183279 |
 | `S2` Creator Governance for AI Licensing | consent controls, license terms, disputes, appeals | 2 | 0.208 | 0.633 | 0.125805 |
@@ -495,7 +534,8 @@ produces three source rows:
 
 The same output includes six Claim Evidence rows and `disagreement=passed`
 status for each supported claim. This is the minimum end-user promise: the user
-can see sources, support, and payout allocation in the same answer surface.
+can see sources, support, and candidate allocation in the same answer surface.
+No external model is called and no money moves in this example.
 
 ## 8. Product Surface
 
@@ -511,7 +551,7 @@ rdllm-first-run
 ```
 
 The user learns that the system produces an answer, visible sources, Claim
-Evidence, and payout rows.
+Evidence, and candidate allocation rows.
 
 ### Builder
 
@@ -641,6 +681,14 @@ claims, evidence, and runtime proof.
 
 ## 12. Public Release And Operational Readiness
 
+Software release readiness and deployment approval are separate decisions. The
+repository can pass its deterministic release checks while bundled operator
+profiles remain correctly unapproved. A deployment claim requires current,
+externally signed evidence for runtime controls, audit integrity, backup/restore,
+public surface health, receipt keys, and security assessment. Direct payout also
+requires a trusted payment-processor attestation. Profile booleans cannot
+self-authorize either decision.
+
 RDLLM makes public readiness testable. A release should pass:
 
 ```bash
@@ -669,7 +717,7 @@ verify the claims without reverse-engineering the repository.
 
 The reference implementation currently includes:
 
-- dependency-free Python package runtime;
+- Python package runtime with `cryptography` for Ed25519 signatures;
 - sample corpus;
 - first-run console command;
 - CLI answer renderer;
@@ -678,6 +726,8 @@ The reference implementation currently includes:
 - public source-footer verifier;
 - operator doctor/bootstrap/launch-gate tooling;
 - provider live smoke route;
+- provider context grounding with request/response and source-evidence binding;
+- public-key receipt signing and external deployment-attestation verification;
 - package smoke;
 - public schemas;
 - hosted well-known proof surface;
@@ -692,6 +742,23 @@ The implementation intentionally favors deterministic checks and explicit
 schemas over hidden evaluator magic. LLM-based or model-internal evaluation can
 be added as evidence channels, but the base product should remain independently
 replayable.
+
+### Empirical Status
+
+The repository's automated tests establish software invariants, schema
+conformance, deterministic adversarial behavior, and end-to-end fixture
+execution. They are not evidence that RDLLM outperforms published attribution
+methods, improves user trust in a controlled study, or produces legally correct
+royalties. No such state-of-the-art empirical claim is made in this white paper.
+
+A comparative evaluation should report at least claim-level citation precision
+and recall, evidence-span accuracy, source accessibility, factual support,
+calibration error, attribution-gap closure, false-allocation and escrow rates,
+multilingual performance, latency, and user comprehension. It should compare
+document citation, claim-evidence RAG, post-hoc matching, provider-native
+annotations, and, where model access permits, training-data attribution methods.
+Human review and held-out adversarial sources are required; synthetic repository
+fixtures alone are insufficient.
 
 ## 14. Limitations
 
@@ -709,6 +776,13 @@ as direct internal reliance proof.
 The default metrics are useful for a reference implementation, but production
 deployments must validate metric behavior for their corpus, domain, language,
 retrieval architecture, and risk tolerance.
+
+### Independent Deployment Evidence
+
+The repository cannot certify an operator's live identity gateway, backups,
+security posture, audit storage, public uptime, or payment processor. RDLLM can
+verify signed statements about those controls, but the evidence producer and
+trust-store governance remain external responsibilities.
 
 ### Legal Entitlement
 
@@ -782,6 +856,8 @@ for the main sources.
 
 - Onweller et al. 2026, `Cited but Not Verified`: https://arxiv.org/abs/2605.06635
 - van Dort and Heuss 2026, `How Do LLMs Cite?`: https://arxiv.org/abs/2606.28358
+- Zhang et al. 2026, `What's a Credit Worth?`: https://arxiv.org/abs/2607.00641
+- Berdoz et al. 2026, `Data Attribution in Large Language Models via Bidirectional Gradient Optimization`: https://arxiv.org/abs/2606.04928
 - Choi et al. 2026, `CiteGuard`: https://arxiv.org/abs/2510.17853
 - Strauss et al. 2025, `The Attribution Crisis in LLM Search Results`: https://arxiv.org/abs/2508.00838
 - Martin-Boyle et al. 2026, `PaperTrail`: https://arxiv.org/abs/2602.21045

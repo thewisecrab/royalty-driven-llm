@@ -1,11 +1,11 @@
 {
   "artifact_bindings": {
-    "answer_claim_coverage_report_hash": "8be08f72cc541cc50a5b36934e91d9e59fa38053d110d29ee38417f31a93e7cd",
-    "citation_footer_contract_hash": "d2e0a8dbef31224c19d9c524d8136f168931d9f5d4ccf54bbda96b809bddbcde",
-    "counterevidence_report_hash": "39099b484747a1a7906d43e115189cf58e865c59bb8760723135bc937032e18e",
-    "evidence_sufficiency_report_hash": "1df3e15a419f98daaf385d3d9e403ef0f1aa9266a2e82b9b314f1f392460f570",
-    "response_envelope_hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243",
-    "source_availability_report_hash": "6f3d0af1dfc20e5d743ace20bf629c1ca853719e1dc6f29959957cb7064afd85"
+    "answer_claim_coverage_report_hash": "0f09aa92a4fc20272ab312793166eccdabb54b949bdeb601b4a50b24574b80a8",
+    "citation_footer_contract_hash": "240bd289771a76a3463ee80ba8f75e7380e3580ce2aa07b83219caecd8c0bb60",
+    "counterevidence_report_hash": "f23a241321b32d2a56c02ec937e896e0ed5a3cf814db28a51aa6f3d2aa2c2238",
+    "evidence_sufficiency_report_hash": "ee2397e8139d6dc07fd287535c07219c0106a1ad65cd2c6dee3532a09fa62c7b",
+    "response_envelope_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
+    "source_availability_report_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5"
   },
   "audit_policy": {
     "every_claim_span_must_bind_coverage_and_footer": true,
@@ -40,11 +40,11 @@
   "created_at": "2026-06-03T00:00:00Z",
   "displayed_response": {
     "answer_body_hash": "befabf3b7c0577698f3cea605015fd3ee9e8433951414dadf59deaa62cba43c3",
-    "claim_evidence_hash": "d2584558ebe048a47e7bc678d9b6e7e662cd06b109230d3c0c9a71773ef12577",
-    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-    "event_id": "evt_b560c62bb49a73d0",
+    "claim_evidence_hash": "87f1569943278d8e9dd40572ba90bdeda93469446de8b4c06f8e17cba3fed160",
+    "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+    "event_id": "evt_83312b019637578e",
     "line_count": 21,
-    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+    "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
     "source_footer_hash": "507e3d58f2bdca217d5b9305e77775d0a7a52b546753a839393d76c8eaf9849c"
   },
   "issuer": "rdllm-local-demo",
@@ -52,8 +52,8 @@
     "body_source_label_root": "ca9bd69fb924f20108fc78fa2add7b70858bd43d8d963fd5a2cab41db2a05302",
     "claim_evidence_rows": [
       {
-        "claim_evidence_line_hash": "6d69eada4342de196dd770d02023ec99440634c70c6b07ec1e20a365949c2155",
-        "claim_evidence_row_hash": "6767644332f7e3d7b1aeb65ccbfc1364a66065205eee6b0c715d343f3660b81c",
+        "claim_evidence_line_hash": "e814c2deaa6e4b8a8f97c29ccc165a01f4724011b0b4f4ad95032dd02d21ee2b",
+        "claim_evidence_row_hash": "fee3c96f25d0f77c1659350226c629748cd8395de42e78ed84e831f4dd4a8aad",
         "claim_hash_prefix": "399e7ff82b80",
         "claim_index": 1,
         "end_char": 64,
@@ -63,8 +63,8 @@
         "support": "0.900"
       },
       {
-        "claim_evidence_line_hash": "302f9f4483dcde454cd475b891424f1d4f4a0b8feabdadf485c2f55e9b562289",
-        "claim_evidence_row_hash": "a3d9644c6fdafbae1a4c0ed8dbf509422dc734365e17b3c510e44878107c9d82",
+        "claim_evidence_line_hash": "9a0145d7ab87d7719ab1e71ec64e86ae20f5c48186a0675c0df1492037acbc2f",
+        "claim_evidence_row_hash": "5b0c3476c2a2dd5d6791329c388d0e6b71e2646cbeb82462c931cf1192d78b89",
         "claim_hash_prefix": "6ea90fbdd0fb",
         "claim_index": 2,
         "end_char": 244,
@@ -74,8 +74,8 @@
         "support": "0.900"
       },
       {
-        "claim_evidence_line_hash": "7b82a41b7ba347910227dcb1c652d72fee677b55f6c25a5be19adebb81b58362",
-        "claim_evidence_row_hash": "558fd5cadbabf4b73630ab5e4f99947d715ffa4ec0168cb335915d18434853fd",
+        "claim_evidence_line_hash": "31595cc93f79485a8672b63e6d36c5ee837283428605b2b967e81e9d61055159",
+        "claim_evidence_row_hash": "715dc2dd2e4df7ba176d0253e00fc08466dd7ebc567fc91c6251652e1e124e6c",
         "claim_hash_prefix": "71e11e089ebe",
         "claim_index": 3,
         "end_char": 51,
@@ -85,8 +85,8 @@
         "support": "0.900"
       },
       {
-        "claim_evidence_line_hash": "9fd9af95b3e87e9b8ed0dfd567b9efb6ee003667da8490ab166ccd3b2fa079e2",
-        "claim_evidence_row_hash": "323ddfbdaf8047d2e377a3010da64afbad9d36f54d951b81778070e968753d0d",
+        "claim_evidence_line_hash": "3dacbf0f93a12452b6fcf14bcbb70e4e1ac1b7300fa5140c8f1dcf2c86261f08",
+        "claim_evidence_row_hash": "aa63a46b71571f47d905a9d64bb879dfa7ec401205c37ee9d9c50f235f5d9d28",
         "claim_hash_prefix": "82b19c7059e7",
         "claim_index": 4,
         "end_char": 164,
@@ -96,8 +96,8 @@
         "support": "0.900"
       },
       {
-        "claim_evidence_line_hash": "19b9d12b6681ed260d29dfb9289e84e02ffb4fc7418348a7a4d7e49f5a49c02c",
-        "claim_evidence_row_hash": "047dd2b03c189905f4c92570e57d28fbecbb0a72f3b0314fad3e25a4a3876ae9",
+        "claim_evidence_line_hash": "a76d9de08d7fb75e97f81d870bf1d864288cbc1e1f6c02cb403c7ff21461538e",
+        "claim_evidence_row_hash": "7933be9ba7119914f1b13d511b7f277cf197d9236269600f20b4f4dc474c2069",
         "claim_hash_prefix": "28528b6fc0db",
         "claim_index": 5,
         "end_char": 136,
@@ -107,8 +107,8 @@
         "support": "0.900"
       },
       {
-        "claim_evidence_line_hash": "f911af3e1d543f0ac16ccb5433789f5bb46621ceada92afcd79043cb0ef31e85",
-        "claim_evidence_row_hash": "10f672dec4ab44b9533f0cf60bf5b9180aa55172685ff31c28eb8991245df318",
+        "claim_evidence_line_hash": "09ffa47cd7097b03ae2c02d0b175950aeee34661df2865d9760006350334aa41",
+        "claim_evidence_row_hash": "bf97c2e9f5be0666b9de89ad3b32ed362ef197efd5974a7f9ac2dacad9123542",
         "claim_hash_prefix": "a9ed8431a259",
         "claim_index": 6,
         "end_char": 262,
@@ -209,7 +209,7 @@
     "stores_line_hashes_not_lines": true,
     "stores_source_metadata_not_source_text": true
   },
-  "report_hash": "d4fdacd0d3bd033953f956991bc9bd6cf062d4bca76312c3c1d3581f15d24deb",
+  "report_hash": "c6f4297a83058d8a3dfe646cb1db74894e1dd05671e9bb75c19336c7f10923ec",
   "report_version": "rdllm-rendered-attribution-audit/v1",
   "schemas": {
     "answer_claim_coverage_report": "docs/schemas/answer_claim_coverage_report.schema.json",
@@ -223,7 +223,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "b0fb7c5e5c5b09e82a8a39d0a641ef3129c942962d86ba94fca23eb2fbe536fe"
+    "value": "56d570af7871fe9aeeb2fda6c45c7a18d5fb2f6a53c59e734537a7613125c2df"
   },
   "summary": {
     "body_citation_label_count": 3,

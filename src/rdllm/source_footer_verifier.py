@@ -425,11 +425,24 @@ def verify_source_footer(
                 f"source_rows[{index}].evidence_span_hashes: mismatch"
             )
         payout = _decimal_or_none(row.get("payout", "0")) or MONEY_ZERO
-        expected_settlement = "allocated_not_executed" if payout > 0 else "not_allocated"
+        settlement_eligible = footer.get("public_verifier", {}).get(
+            "settlement_instruction_eligible"
+        ) is True
+        expected_settlement = (
+            "allocated_not_executed"
+            if payout > 0 and settlement_eligible
+            else "candidate_held_for_review"
+            if payout > 0
+            else "not_allocated"
+        )
         if row.get("settlement_status") != expected_settlement:
             row_hash_errors.append(f"source_rows[{index}].settlement_status: mismatch")
         expected_why = (
-            "verified_claim_support_identity_rights_royalty"
+            "verified_context_bound_claim_support_identity_rights_royalty"
+            if row.get("confidence") == "verified"
+            and payout > 0
+            and settlement_eligible
+            else "post_hoc_candidate_needs_review"
             if row.get("confidence") == "verified" and payout > 0
             else "claim_support_needs_review"
         )
@@ -465,6 +478,18 @@ def verify_source_footer(
     if not isinstance(attribution_gap_verdict, str):
         public_verifier_errors.append(
             "public_verifier.attribution_gap_verdict: expected string"
+        )
+    if not isinstance(public_verifier.get("generation_evidence_mode"), str):
+        public_verifier_errors.append(
+            "public_verifier.generation_evidence_mode: expected string"
+        )
+    if not isinstance(public_verifier.get("settlement_status"), str):
+        public_verifier_errors.append(
+            "public_verifier.settlement_status: expected string"
+        )
+    if not isinstance(public_verifier.get("settlement_instruction_eligible"), bool):
+        public_verifier_errors.append(
+            "public_verifier.settlement_instruction_eligible: expected boolean"
         )
 
     rendered_errors: list[str] = []

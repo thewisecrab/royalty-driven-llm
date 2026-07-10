@@ -527,20 +527,60 @@
       "status": "ready"
     }
   ],
+  "external_attestation_verification": {
+    "missing_attestation_types": [
+      "audit_log_integrity",
+      "backup_restore",
+      "payment_processor",
+      "public_surface_health",
+      "receipt_public_key",
+      "runtime_controls",
+      "security_assessment"
+    ],
+    "required_attestation_count": 7,
+    "required_attestation_types": [
+      "audit_log_integrity",
+      "backup_restore",
+      "payment_processor",
+      "public_surface_health",
+      "receipt_public_key",
+      "runtime_controls",
+      "security_assessment"
+    ],
+    "rows": [],
+    "schema": "rdllm-deployment-attestation-verification/v1",
+    "status": "unverified",
+    "trust_store_loaded": false,
+    "verified_attestation_count": 0,
+    "verified_attestation_types": []
+  },
   "profile_hash": "a0a30eb22e7b84ca57fc1e15040342f6a1ef6e4ba9c47620ea3379af8a2c102f",
   "schema": "rdllm-production-readiness-report/v1",
   "summary": {
     "blocked_control_count": 0,
+    "configuration_ready": true,
     "deployment_id": "rdllm-open-production-baseline",
-    "direct_creator_settlement_allowed": true,
+    "direct_creator_settlement_allowed": false,
     "direct_payout_enabled": true,
+    "external_evidence_status": "unverified",
+    "missing_external_attestation_types": [
+      "audit_log_integrity",
+      "backup_restore",
+      "payment_processor",
+      "public_surface_health",
+      "receipt_public_key",
+      "runtime_controls",
+      "security_assessment"
+    ],
     "operator_type": "public_sector",
-    "payment_processor_attested": true,
-    "production_grade_claim_allowed": true,
-    "public_sector_use_supported": true,
+    "payment_processor_attested": false,
+    "production_grade_claim_allowed": false,
+    "public_sector_use_supported": false,
     "ready_control_count": 74,
+    "required_external_attestation_count": 7,
     "settlement_mode": "processor_attested",
     "status": "ready",
-    "total_control_count": 74
+    "total_control_count": 74,
+    "verified_external_attestation_count": 0
   }
 }

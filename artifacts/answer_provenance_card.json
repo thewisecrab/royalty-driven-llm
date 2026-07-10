@@ -1,5 +1,5 @@
 {
-  "card_hash": "f2bdc689a030314acbfeab2e7823a55877fb4aad8f3dd4d540150469a5f858cc",
+  "card_hash": "fa2bff282cd4498badb9ff52304ea26cf5b82db9366b5447e67982102f7a3941",
   "card_version": "rdllm-answer-provenance-card/v1",
   "claims": [
     {
@@ -90,19 +90,19 @@
   "commitments": {
     "claim_root": "5d3bf70b6c6143e240569b071e751592550280d247059480d66cd89a47ac1451",
     "footer_checks_hash": "ff74130ebd784b286969fcc263cdac6b7baa7585500014124971a025cdb3a801",
-    "receipt_hash": "3631d59bc8ef8de9f82ffc9ebd278b73c7fd7cc2f30d9629b5a636181241660c",
-    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+    "receipt_hash": "94f30eddb01a4dac8fd29edaae6bd29214d094516277a2e6b30df6affbbd2278",
+    "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
     "source_root": "4a584392f2e25e08a994447a2ebcab9a96843c2b25f5356860fd2e08c1d9ab2f",
-    "trace_hash": "7c88187e9347104995eb98e888d9663d355391a186434162bd5a741aba9423b9"
+    "trace_hash": "7a441b8277a161d0249ac32d494a94fc5ba2edd93e987d3268baff04aa494d39"
   },
   "created_at": "2026-06-03T00:00:00Z",
   "event": {
     "answer_hash": "283203d79fe9f38a76f38927a84e9d964d9be2ed9f9e88274461757e7af4fde4",
-    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-    "event_id": "evt_b560c62bb49a73d0",
-    "receipt_hash": "3631d59bc8ef8de9f82ffc9ebd278b73c7fd7cc2f30d9629b5a636181241660c",
-    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
-    "trace_hash": "7c88187e9347104995eb98e888d9663d355391a186434162bd5a741aba9423b9"
+    "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+    "event_id": "evt_83312b019637578e",
+    "receipt_hash": "94f30eddb01a4dac8fd29edaae6bd29214d094516277a2e6b30df6affbbd2278",
+    "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
+    "trace_hash": "7a441b8277a161d0249ac32d494a94fc5ba2edd93e987d3268baff04aa494d39"
   },
   "footer_checks": {
     "attribution_suppression_count": 0,
@@ -166,7 +166,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "23407adcb61e612a7ee53abc8fc0b8d2fef14810371f9ecadf19306f6c4f64ea"
+    "value": "4f235b87fea94f1786c6675b5d517b0f3c8586d40976c1719342e46b49e823f7"
   },
   "sources": [
     {

@@ -1,41 +1,41 @@
 {
   "artifact_bindings": {
     "universal_model_provider_registry": {
-      "artifact_hash": "1830ef6f1aed0032291d7496c755dabaf0ece79ca16a578e35325392edca73f6",
+      "artifact_hash": "b6ca6e963a35e0fd5c92917781e55b1234c15b4acdf662e29a1b14d63c66b3c4",
       "hash_reproducible": true,
       "level": "RDLLM-L176",
       "minimum_level": "RDLLM-L176",
-      "payload_hash": "1830ef6f1aed0032291d7496c755dabaf0ece79ca16a578e35325392edca73f6",
+      "payload_hash": "b6ca6e963a35e0fd5c92917781e55b1234c15b4acdf662e29a1b14d63c66b3c4",
       "present": true,
       "ready": true,
       "status": "ready"
     },
     "universal_provider_catalog_coverage_contract": {
-      "artifact_hash": "c27b0a94a5b10f5399e375ca3e3949ad9b5de732a05394489fec4e6fc8acf79f",
+      "artifact_hash": "6f84c504bb3ea075d9009cf986aa0dcd8a9f4e3a511a158b1fd81addb37b2efb",
       "hash_reproducible": true,
       "level": "RDLLM-L178",
       "minimum_level": "RDLLM-L178",
-      "payload_hash": "c27b0a94a5b10f5399e375ca3e3949ad9b5de732a05394489fec4e6fc8acf79f",
+      "payload_hash": "6f84c504bb3ea075d9009cf986aa0dcd8a9f4e3a511a158b1fd81addb37b2efb",
       "present": true,
       "ready": true,
       "status": "ready"
     },
     "universal_runtime_route_binding_contract": {
-      "artifact_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "artifact_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "hash_reproducible": true,
       "level": "RDLLM-L179",
       "minimum_level": "RDLLM-L179",
-      "payload_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "payload_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "present": true,
       "ready": true,
       "status": "ready"
     },
     "universal_verified_source_footer_contract": {
-      "artifact_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "artifact_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "hash_reproducible": true,
       "level": "RDLLM-L180",
       "minimum_level": "RDLLM-L180",
-      "payload_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "payload_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "present": true,
       "ready": true,
       "status": "ready"
@@ -89,12 +89,12 @@
   },
   "created_at": "2026-06-03T00:00:00Z",
   "evidence_roots": {
-    "combined_model_capability_coverage_root": "f249e65d6f7f25f61dd1c2e7c3179ad91ea18b3c1d1f35b1ed41894c0da445ea",
+    "combined_model_capability_coverage_root": "d7b58cc2cf3c822e471a1fc29f8814e64226bb9e9886432dd768b75fa2bbe0ef",
     "modality_pair_root": "e5a6046217a87f2c0d1ea24eecb11a6f009a08c23a974e99b3b4258037210bca",
     "model_capability_root": "ba13ed288a1db467c513b3a3a4e88f9ae046c972c2f575da52584a015fa42d24",
     "negative_capability_root": "c415ce80729dccf0da66060c955e60cf820cb3c76de196a571c2bd3d88302bce",
     "operation_surface_root": "1e72b42bdc1b5947a594e06655d5d0b57c522740b5c9f9a35be8210e657b8cc0",
-    "route_capability_root": "6c7e60e218a0717ed0ffc73cfde32a021ab6ec0d8f99e33b9949c36a7a7e66c7"
+    "route_capability_root": "45bd0890411d94577eb3a94eb7bed4170c2e15d996006f470d5168facc9efeec"
   },
   "issuer": "rdllm-local-demo",
   "modality_pair_rows": {
@@ -1079,11 +1079,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "75cb8dd7fc29ccd7d075d85e57757fa548647d4c14bf6e4d792f382879345bd0",
       "route_id": "reference-route:cloud_hosted_provider:fine_tuning:13",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "22c6619c834a65a3ae112f7f9e38a1c76fc8085f291aa6246e603245c515aa5b"
     },
     "reference-route:cloud_hosted_provider:reasoning:1": {
@@ -1099,11 +1099,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "6c5044bc3d8bde31be0b04d11401d6d40ab6ba16f574a81eba1e27ef717bf335",
       "route_id": "reference-route:cloud_hosted_provider:reasoning:1",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "f4b7af2963338699ead9b616acfc1c0bc16353c62504221ed3c5007828465675"
     },
     "reference-route:embedding_provider:tool_calling_agent:10": {
@@ -1119,11 +1119,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "4bca2f8a855e159805caea911359436d766173be91bc3d305445508dcfdb4c6d",
       "route_id": "reference-route:embedding_provider:tool_calling_agent:10",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "2ff1688f13802b1db4c6e156302b171f9075cce0a9589ea56bfc03198fbd675e"
     },
     "reference-route:enterprise_private_model:audio_speech:5": {
@@ -1139,11 +1139,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "298ba7983cf4f164c3ce301bc6db0d98bca78696e8f5c7d0243505f0964896be",
       "route_id": "reference-route:enterprise_private_model:audio_speech:5",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "4b43bd56e32ca416a9986aefbbb27accfc6ef42824e91375a80a3383bdb492e6"
     },
     "reference-route:enterprise_private_model:gateway_router:17": {
@@ -1159,11 +1159,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "38a7cd95ecc90ab01b5db9c14b6e821aa4253a85b47b09c245b32ae9ff8a39c7",
       "route_id": "reference-route:enterprise_private_model:gateway_router:17",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "dc053d29c5f2214b014010b23521f18bb94c95fae494071d4c6edb96a4642479"
     },
     "reference-route:fine_tuning_provider:batch_generation:11": {
@@ -1179,11 +1179,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "2a24b54c8ff49579e779843ac856e08809a7ebd4639569aa6ce4001d7b17b230",
       "route_id": "reference-route:fine_tuning_provider:batch_generation:11",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "338dffc835a9e64f23ec6efccaeae86e51966f5b5070a87e0bb647000fb03943"
     },
     "reference-route:foundation_provider:streaming:12": {
@@ -1199,11 +1199,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "330ce85343a676e4cf3d7c0ca3c38e623e1f0225322ebaf7181d1081d7a13f5c",
       "route_id": "reference-route:foundation_provider:streaming:12",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "6e59ff005e5c5318dc0ee03da0b9116cf3c3ba0221f2ebff785aaf056c1ce7b6"
     },
     "reference-route:foundation_provider:text_chat:0": {
@@ -1219,11 +1219,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "1b9d4b1f57edc55a70ec8e9620938e935f11f0ec3e2110fc58bb9207cedef6e6",
       "route_id": "reference-route:foundation_provider:text_chat:0",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "8ee020096e7699573fdfd1314ddfbb8446914fee3ba7b7d3cbc6a69d32a47996"
     },
     "reference-route:hosted_open_weight_service:image_generation:4": {
@@ -1239,11 +1239,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "3030de6b9ee56d2902beac31c1b2bd9b79e14383e131eedd37c6f46b045756de",
       "route_id": "reference-route:hosted_open_weight_service:image_generation:4",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "76517fca2f2fb54b565d9319c7ea53ad9d103f84884bdcb8a8cd5d1e8e5d0b51"
     },
     "reference-route:hosted_open_weight_service:local_inference:16": {
@@ -1259,11 +1259,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "ae3b75bf26ea8d9b4024127355b9be6e33307a45044e9d1d9f5294dd9ead3acb",
       "route_id": "reference-route:hosted_open_weight_service:local_inference:16",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "1a55b7b0e760963b7b9256d154dfce2e63d594f1a450c74ab04c03ec04a929a1"
     },
     "reference-route:local_runtime:video_generation:6": {
@@ -1279,11 +1279,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "5e6862b887394e6ca1bf9137d8ca8d4c7ab79dd5e668067699fa26ea0addd0eb",
       "route_id": "reference-route:local_runtime:video_generation:6",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "84dcbb15db724a7e9f6eb27227a57c75491577f6e61d980fd683609e8dbcffed"
     },
     "reference-route:model_marketplace:long_context:2": {
@@ -1299,11 +1299,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "4632b3fba7bd7fdeb5616f178471c7472d22c2052e34352084899495b84860f4",
       "route_id": "reference-route:model_marketplace:long_context:2",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "1768d6e0d3054894bfcccb91c6abd675400cffe3050870d167e1f26bccb988f9"
     },
     "reference-route:model_marketplace:retrieval_augmented:14": {
@@ -1319,11 +1319,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "0d777a1754873f67097b6c78a075effdb0a755cb115ff385f24c710983ff61d9",
       "route_id": "reference-route:model_marketplace:retrieval_augmented:14",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "0550a170db0cd4f466b87e4e4f2a9922bddff793aae0d6a8ee8fd015fe8081d0"
     },
     "reference-route:multimodal_media_provider:code_generation:9": {
@@ -1339,11 +1339,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "1d6b9308c304edc1b8c1e542e99a105247e9d7f2f1483399c8bc14f51a0e84b6",
       "route_id": "reference-route:multimodal_media_provider:code_generation:9",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "4c81f82b38888565a59b215c1ccac065e2f29ca5719fedab2fdf5eab1cd57703"
     },
     "reference-route:open_weight_registry:embedding:7": {
@@ -1359,11 +1359,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "bed5470a0020b828a7718efb91e8e35818e0e28704cc1e62be501eabe51f13b1",
       "route_id": "reference-route:open_weight_registry:embedding:7",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "d7bc77dac89744d96c9d5b9f6ecd72e5c9faf0292cac8a61412d120c560c42a6"
     },
     "reference-route:regional_sovereign_provider:reranking:8": {
@@ -1379,11 +1379,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "ae6daf7d26a471ce38c74fba95228bee753bffc6054b25492eabbc4c9746b7cb",
       "route_id": "reference-route:regional_sovereign_provider:reranking:8",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "1b58f8af2ffa5b8affc639719462cf48f3d7ef4e66a111863ca452a0ed7cbba6"
     },
     "reference-route:router_or_gateway:multimodal_vision:3": {
@@ -1399,11 +1399,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "54e91b6e97a1d8b88f5fac58268ff481a7b1926d315d4ade14c1905f21f9f69b",
       "route_id": "reference-route:router_or_gateway:multimodal_vision:3",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "6255c5a3a72f5c2bdd26da7373cc60fc9cc49c7af61d8385dc75f17cfe12751b"
     },
     "reference-route:router_or_gateway:safety_moderation:15": {
@@ -1419,11 +1419,11 @@
       "registry_route_supported": true,
       "route_capability_hash": "0a6e0c8294b8c64b0a02139cc15e00e771befe4efa5d4e9d3ef3ec5c048f1571",
       "route_id": "reference-route:router_or_gateway:safety_moderation:15",
-      "runtime_route_binding_hash": "d2991beb552b0c519e46e454ff4caee8809ed8881686cca7a831ee3f2bd2daf7",
+      "runtime_route_binding_hash": "1515bd1fab859316503668829ab5ba68b1921ceb7697a3ffd8d1ad9f01dc09bc",
       "runtime_route_matched": true,
       "settlement_meter_bound": true,
       "source_footer_or_abstention_enforced": true,
-      "verified_footer_hash": "ba3d22c8afab4673494206372918cf1dfe836fb8d95b3e26c0b582f54fc5c8a1",
+      "verified_footer_hash": "38d036e25b06f4fd038b9e209c554540005542fccc91b7649bb75d4d62ed13e8",
       "verifier_hash": "41a563ae8df0d2313fa8df043e30f2c0383359315e35b158275d511e03d62b8e"
     }
   },
@@ -1431,7 +1431,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "698533bef07736112a1b6319e80f1622072a5ca9383638b7d52c57ca11f8fee0"
+    "value": "5fc9b7362a36916b1151ed789b2a7ba070e6bbd5fe5c032685df9e47a700af78"
   },
   "summary": {
     "catalog_covered_route_count": 18,
@@ -1454,7 +1454,7 @@
     "status": "ready",
     "target_certification_level": "RDLLM-L181"
   },
-  "universal_model_capability_coverage_contract_hash": "540e7abb183d833683fc05f5ecdcb6c254272533abbdd047f93762ed9f202e2b",
+  "universal_model_capability_coverage_contract_hash": "1173c549ad037f85f79480789896c96d2ce5b29fe5040d08c89fe482dd26baf4",
   "universal_model_capability_coverage_contract_version": "rdllm-universal-model-capability-coverage-contract/v1",
   "well_known": {
     "path": "/.well-known/rdllm/universal-model-capability-coverage-contract.json",

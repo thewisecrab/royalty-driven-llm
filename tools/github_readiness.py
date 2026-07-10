@@ -28,11 +28,14 @@ IGNORED_DIRS = {
     "__pycache__",
     "build",
     "dist",
+    "_site",
+    "tmp",
     "src/royalty_driven_llm.egg-info",
 }
 
 REQUIRED_GITHUB_FILES = (
     ".github/workflows/ci.yml",
+    ".github/workflows/codeql.yml",
     ".github/workflows/pages.yml",
     ".github/workflows/release.yml",
     ".github/PULL_REQUEST_TEMPLATE.md",
@@ -157,14 +160,13 @@ def docs_site_errors() -> tuple[list[str], int]:
         )
     index = (docs / "index.html").read_text(encoding="utf-8")
     required_links = (
-        "provider_compatibility_matrix.md",
-        "deployment.md",
+        "first_5_minutes.md",
+        "public_explainer.md",
         "service_api.md",
-        "provider_onboarding.md",
         "production_readiness.md",
-        "operator_runbook.md",
-        "release_checklist.md",
-        "references.md",
+        "mechanism.md",
+        "project_attribution.md",
+        "../examples/live_use_cases/README.md",
         "../paper/rdllm_white_paper.md",
     )
     for link in required_links:
@@ -182,8 +184,10 @@ def workflow_errors() -> list[str]:
         errors.append("CI workflow does not run tools/ship_check.py")
     if "tools/github_readiness.py" not in ci and "tools/ship_check.py" not in ci:
         errors.append("CI workflow does not reach GitHub readiness checks")
-    if "actions/upload-pages-artifact" not in pages or "path: docs" not in pages:
-        errors.append("Pages workflow does not upload docs/")
+    if "actions/upload-pages-artifact" not in pages or "path: _site" not in pages:
+        errors.append("Pages workflow does not upload the built _site directory")
+    if "tools/build_public_site.py" not in pages:
+        errors.append("Pages workflow does not build the public site")
     if "python -m build" not in release:
         errors.append("release workflow does not build the package")
     if "tools/ship_check.py" not in release:

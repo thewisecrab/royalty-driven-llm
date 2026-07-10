@@ -1,11 +1,11 @@
 {
   "artifact_bindings": {
     "universal_model_capability_coverage_contract": {
-      "artifact_hash": "540e7abb183d833683fc05f5ecdcb6c254272533abbdd047f93762ed9f202e2b",
+      "artifact_hash": "1173c549ad037f85f79480789896c96d2ce5b29fe5040d08c89fe482dd26baf4",
       "hash_reproducible": true,
       "level": "RDLLM-L181",
       "minimum_level": "RDLLM-L181",
-      "payload_hash": "540e7abb183d833683fc05f5ecdcb6c254272533abbdd047f93762ed9f202e2b",
+      "payload_hash": "1173c549ad037f85f79480789896c96d2ce5b29fe5040d08c89fe482dd26baf4",
       "present": true,
       "ready": true,
       "status": "ready"
@@ -1385,7 +1385,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "c730ee0f4f2ff6ae2e7ee40213456626f747a605cdeba2dd9fe9921fc46c10e8"
+    "value": "0634b1f00af09c0e901cb14d791ce366c9ba711eb782b908b9e1f141970cd467"
   },
   "summary": {
     "capability_discovery_count": 24,
@@ -1405,7 +1405,7 @@
     "status": "ready",
     "target_certification_level": "RDLLM-L182"
   },
-  "universal_live_capability_discovery_contract_hash": "589eeebc8a6afa913fa9b39d31b2df60b1565e1f3ee9a8d282fad8c87035c667",
+  "universal_live_capability_discovery_contract_hash": "ee28a1e18bf0ca698ab38d77729c6f16ff122a06d36a5be1b022e3154fd54d6f",
   "universal_live_capability_discovery_contract_version": "rdllm-universal-live-capability-discovery-contract/v1",
   "well_known": {
     "path": "/.well-known/rdllm/universal-live-capability-discovery-contract.json",

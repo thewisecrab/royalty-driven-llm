@@ -34,6 +34,7 @@ REQUIRED_FILES = (
     ".github/ISSUE_TEMPLATE/config.yml",
     ".github/dependabot.yml",
     ".github/workflows/ci.yml",
+    ".github/workflows/codeql.yml",
     ".github/workflows/pages.yml",
     ".github/workflows/release.yml",
     "docs/index.html",
@@ -60,6 +61,7 @@ REQUIRED_FILES = (
     "docs/evidence.md",
     "docs/recent_research.md",
     "docs/schemas/production_readiness_profile.schema.json",
+    "docs/schemas/deployment_trust_store.schema.json",
     "docs/schemas/production_readiness_report.schema.json",
     "docs/schemas/production_readiness_repository_report.schema.json",
     "docs/schemas/operator_profile_verification.schema.json",
@@ -89,7 +91,7 @@ REQUIRED_FILES = (
     "examples/production_profiles/government_escrow_only.json",
     "examples/production_profiles/individual_escrow_only.json",
     "examples/production_profiles/institution_instruction_only.json",
-    "examples/production_profiles/public_sector_processor_attested.json",
+    "examples/production_profiles/public_sector_processor_required.json",
     "src/rdllm/operator_bootstrap.py",
     "src/rdllm/first_run.py",
     "src/rdllm/operator_profile.py",
@@ -97,7 +99,7 @@ REQUIRED_FILES = (
     "src/rdllm/data/production_profiles/government_escrow_only.json",
     "src/rdllm/data/production_profiles/individual_escrow_only.json",
     "src/rdllm/data/production_profiles/institution_instruction_only.json",
-    "src/rdllm/data/production_profiles/public_sector_processor_attested.json",
+    "src/rdllm/data/production_profiles/public_sector_processor_required.json",
     "src/rdllm/data/reference_artifacts/certification_report.json",
     "src/rdllm/data/reference_artifacts/discovery_manifest.json",
     "src/rdllm/data/reference_artifacts/production_readiness_report.json",
@@ -106,6 +108,7 @@ REQUIRED_FILES = (
     "src/rdllm/data/reference_artifacts/universal_runtime_conformance_receipt.json",
     "src/rdllm/data/reference_artifacts/universal_source_grounded_response_receipt.json",
     "src/rdllm/data/schemas/production_readiness_profile.schema.json",
+    "src/rdllm/data/schemas/deployment_trust_store.schema.json",
     "src/rdllm/data/schemas/production_readiness_repository_report.schema.json",
     "src/rdllm/data/schemas/operator_profile_verification.schema.json",
     "src/rdllm/data/schemas/operator_bootstrap_manifest.schema.json",
@@ -152,6 +155,8 @@ REQUIRED_FILES = (
     "paper/rdllm_white_paper.md",
     "paper/references.bib",
     "tools/adopter_quickstart_audit.py",
+    "tools/build_public_site.py",
+    "tools/build_runtime_screenshot_pages.py",
     "tools/artifact_schema_audit.py",
     "tools/deployment_audit.py",
     "tools/docs_link_audit.py",
@@ -367,11 +372,13 @@ def validate_artifact_state() -> list[str]:
     production = load_json("artifacts/production_readiness_report.json")
     production_summary = production.get("summary", {})
     if production_summary.get("status") != "ready":
-        errors.append("production readiness report is not ready")
-    if not production_summary.get("production_grade_claim_allowed"):
-        errors.append("production readiness report does not allow production claims")
-    if not production_summary.get("public_sector_use_supported"):
-        errors.append("production readiness report does not allow public-sector use")
+        errors.append("production readiness configuration report is not ready")
+    if production_summary.get("production_grade_claim_allowed") is not False:
+        errors.append("reference profile must not self-authorize production claims")
+    if production_summary.get("direct_creator_settlement_allowed") is not False:
+        errors.append("reference profile must not self-authorize direct settlement")
+    if production_summary.get("external_evidence_status") != "unverified":
+        errors.append("reference profile must require external deployment evidence")
 
     return errors
 
@@ -424,6 +431,11 @@ def main(argv: list[str] | None = None) -> int:
         run([sys.executable, "tools/github_docs_readiness_audit.py"])
     except subprocess.CalledProcessError:
         errors.append("GitHub docs readiness audit failed")
+
+    try:
+        run([sys.executable, "tools/build_public_site.py", "--check"])
+    except subprocess.CalledProcessError:
+        errors.append("public site build or link audit failed")
 
     try:
         run([sys.executable, "tools/adopter_quickstart_audit.py"])

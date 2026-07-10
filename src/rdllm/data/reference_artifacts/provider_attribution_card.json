@@ -1,5 +1,5 @@
 {
-  "card_hash": "461be8e9acd24c00504972ab2480806c5ae3ca157fa1dea47a6137f40dae8289",
+  "card_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
   "card_version": "rdllm-provider-attribution-card/v1",
   "certification": {
     "case_count": 187,
@@ -7,7 +7,7 @@
     "failed": 0,
     "highest_level": "RDLLM-L186",
     "passed": 187,
-    "report_hash": "dc1e7090d04e2ab7240ea7675cc965f789d31c5d7518d0e18a5a7f35f60631ec",
+    "report_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
     "score": 1.0,
     "status": "passed",
     "suite": "rdllm-reference-conformance"
@@ -47,9 +47,9 @@
   "evidence_roots": {
     "attribution_gap_root": "a983e0516244e1b5a25f024481a4198aaa64dd0a257360d7997426006670ca5a",
     "claim_support_root": "5405f1c9f37f039cf49a48a2705b45fc8c5f20e9603c43c8c682f9105b302111",
-    "event_root": "eb1cba732d2ca280ebd4236ffcfc6eef9ec78531155dabc09749506f058dcda8",
+    "event_root": "07a5442749882a89ef9d4166745221a9de7b902cb4d53f44f53ca178ee8d71fd",
     "grounding_quality_root": "1c56e097b59b4c5ebf07d9349a7e467ebc7c015f0a0e94ad693e581092b9f806",
-    "ledger_root": "6c3c19cd2d7c0c5a8eecb1545fb608c3c4e19f235a4a77e78c45152b63a6c271",
+    "ledger_root": "1d65114775a7329b90a3f69b85357cc20be0ed30e190c956d112a33d66b6d3a1",
     "royalty_share_root": "78449de9f56ccbe28e5197c1a574261d0f41180fea0fd4f5a211ef8a37f20a4d",
     "source_access_root": "9fa9e2e11fb8c52e2f21bf73de5261d0dadd0942445804abf9cd67745cb79ed8",
     "source_reference_root": "4d6c865cbc19c9be93203d7266d5f006f8a87348b1bd79930d4d5a12e6fae957"
@@ -581,7 +581,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "229c69cf576f4c63879b2e5cb67678789ce5316e9b770595a2324ee91a70f98b"
+    "value": "5fd455d2ee2f8efce663385d271a8520782c14aa26ab33fe26a13bcd13c55d9e"
   },
   "supported_evidence_channels": {
     "agent_tool_attribution_ledger": true,

@@ -152,10 +152,10 @@
     }
   },
   "adversarial_quorum_binding": {
-    "artifact_hash": "215df8a46d5fdbd7505300af533a9882563e2f3496fa3df25d2ed79202b7e3af",
+    "artifact_hash": "83c937ae722ba8bb285f21945baba1465cc8228feb49fd9952a93e6ed89e3749",
     "hash_reproducible": true,
     "level": "RDLLM-L173",
-    "payload_hash": "215df8a46d5fdbd7505300af533a9882563e2f3496fa3df25d2ed79202b7e3af",
+    "payload_hash": "83c937ae722ba8bb285f21945baba1465cc8228feb49fd9952a93e6ed89e3749",
     "present": true,
     "status": "ready"
   },
@@ -372,10 +372,10 @@
     "negative_procurement_root": "adee9b0bc1c8dc31f148f2625576539fe823ea405dd97ffc36479fb0b89e6ac1"
   },
   "industry_root_binding": {
-    "artifact_hash": "8e611e14d47f375244c6a298192237aeacf0c5bf900bf1caf1fd9661b5ebf585",
+    "artifact_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
     "hash_reproducible": true,
     "level": "RDLLM-L163",
-    "payload_hash": "8e611e14d47f375244c6a298192237aeacf0c5bf900bf1caf1fd9661b5ebf585",
+    "payload_hash": "a516368647e47e5a809abd5d6b65c01ba6727c3da5c5bf3b5ba308d5860ef917",
     "present": true,
     "status": "ready"
   },
@@ -726,7 +726,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "6e381b4925f90cb766b9268f5595a33b0674da4e6fd76359bb90120e961bdee8"
+    "value": "cd1b3964dc669680e335b4789c1ad2b02345e79902da6a92d0c2cde3a0b41163"
   },
   "summary": {
     "adoption_role_count": 10,
@@ -745,7 +745,7 @@
     "status": "ready",
     "target_certification_level": "RDLLM-L174"
   },
-  "universal_procurement_regulatory_reliance_contract_hash": "d6cf9591ea949682bace1ad92b73f10f6c497ecd813c40265b0ddf284dbcf290",
+  "universal_procurement_regulatory_reliance_contract_hash": "97e98948b68985d3166f6d709bddcb84e2122b053008a79a33841f6f55a5d334",
   "universal_procurement_regulatory_reliance_contract_version": "rdllm-universal-procurement-regulatory-reliance-contract/v1",
   "well_known": {
     "path": "/.well-known/rdllm/universal-procurement-regulatory-reliance-contract.json",

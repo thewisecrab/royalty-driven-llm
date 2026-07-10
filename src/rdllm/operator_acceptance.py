@@ -261,7 +261,12 @@ def verify_acceptance_report(report: dict[str, Any]) -> dict[str, Any]:
     expected_status = "ready" if not expected_errors else "blocked"
     if report.get("status") != expected_status:
         errors.append(f"status: expected {expected_status}")
-    expected_decision = "allow" if expected_status == "ready" else "block"
+    expected_decision = (
+        "allow"
+        if expected_status == "ready"
+        and launch_summary.get("production_grade_claim_allowed") is True
+        else "block"
+    )
     if summary.get("production_acceptance_decision") != expected_decision:
         errors.append(
             "summary.production_acceptance_decision: does not match section failures"
@@ -643,6 +648,7 @@ def run_acceptance_report(
     expected_audit_count: int | None = None,
     allow_nonlatest_response_event: bool = False,
     support_bundle_output: Path | None = None,
+    trust_store: Path | None = None,
 ) -> dict[str, Any]:
     launch_gate = run_launch_gate(
         profile=profile,
@@ -654,6 +660,7 @@ def run_acceptance_report(
         check_runtime=check_runtime,
         skip_response=False,
         support_bundle_output=support_bundle_output,
+        trust_store=trust_store,
     )
     audit_verification = verify_service_audit_log(
         audit_log,
@@ -690,8 +697,13 @@ def run_acceptance_report(
     profile_summary = (
         profile_section.get("summary", {}) if isinstance(profile_section, dict) else {}
     )
+    production_claim_allowed = (
+        not errors and launch_summary.get("production_grade_claim_allowed") is True
+    )
     summary = {
-        "production_acceptance_decision": "allow" if not errors else "block",
+        "production_acceptance_decision": (
+            "allow" if production_claim_allowed else "block"
+        ),
         "traffic_decision": launch_summary.get("traffic_decision", "block"),
         "launch_gate_status": launch_gate.get("status", "unknown"),
         "response_verification_status": response_verification.get("status", "unknown"),
@@ -706,10 +718,7 @@ def run_acceptance_report(
         "support_bundle_written": support_bundle_output is not None,
         "operator_type": profile_summary.get("operator_type", ""),
         "settlement_mode": profile_summary.get("settlement_mode", ""),
-        "production_grade_claim_allowed": (
-            not errors
-            and launch_summary.get("production_grade_claim_allowed") is True
-        ),
+        "production_grade_claim_allowed": production_claim_allowed,
         "direct_creator_settlement_allowed": (
             not errors
             and launch_summary.get("direct_creator_settlement_allowed") is True
@@ -800,6 +809,11 @@ def create_main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--profile", type=Path, required=True)
     parser.add_argument("--service-config", type=Path, required=True)
+    parser.add_argument(
+        "--trust-store",
+        type=Path,
+        help="Externally managed trust store used to verify deployment attestations.",
+    )
     parser.add_argument("--service-root", type=Path)
     parser.add_argument("--bootstrap-dir", type=Path)
     parser.add_argument("--response", type=Path, required=True)
@@ -829,6 +843,7 @@ def create_main(argv: list[str] | None = None) -> int:
         check_runtime=not args.no_runtime_check,
         allow_nonlatest_response_event=args.allow_nonlatest_response_event,
         support_bundle_output=args.write_support_bundle,
+        trust_store=args.trust_store,
     )
     _write_json(args.output, report)
     print(

@@ -64,7 +64,7 @@ class MockProviderHandler(BaseHTTPRequestHandler):
                     "index": 0,
                     "message": {
                         "role": "assistant",
-                        "content": TEXT_ATTRIBUTION_OUTPUT,
+                        "content": f"{TEXT_ATTRIBUTION_OUTPUT} [S1]",
                     },
                     "finish_reason": "stop",
                 }
@@ -249,6 +249,13 @@ def run_smoke() -> dict[str, Any]:
                 errors.append("provider display should include rendered source text")
             if not response.get("provider_generation", {}).get("provider_response_hash"):
                 errors.append("provider response hash is missing")
+            provider_generation = response.get("provider_generation", {})
+            if provider_generation.get("evidence_verified") is not True:
+                errors.append("provider source evidence was not verified")
+            if provider_generation.get("evidence_mode") != "provider_context_grounded":
+                errors.append("provider did not use the grounded context evidence mode")
+            if summary.get("settlement_instruction_eligible") is not True:
+                errors.append("verified context-grounded generation should be settlement eligible")
             if MockProviderHandler.request_count != 1 or not MockProviderHandler.auth_seen:
                 errors.append("mock provider did not receive one authenticated request")
 

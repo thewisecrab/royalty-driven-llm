@@ -31,11 +31,11 @@ OUT_DIR = ROOT / "paper" / "arxiv"
 OUTPUT = OUT_DIR / "rdllm_white_paper.pdf"
 
 TITLE = (
-    "RDLLM: A Source-Grounded Attribution and Royalty Settlement Framework "
-    "for Verifiable AI Outputs"
+    "RDLLM: Verifiable Source Attribution and Creator-Value Accounting "
+    "for Grounded AI Outputs"
 )
 AUTHOR = "Siddharth Nilesh Patel"
-SUBTITLE = "Public technical white paper, version 2026-07-08"
+SUBTITLE = "Public technical white paper, version 2026-07-10"
 
 
 def inline_markup(text: str) -> str:
@@ -43,7 +43,7 @@ def inline_markup(text: str) -> str:
     escaped = html.escape(text)
     escaped = re.sub(
         r"`([^`]+)`",
-        lambda match: '<font name="Courier">%s</font>' % html.escape(match.group(1)),
+        lambda match: '<font name="Courier">%s</font>' % match.group(1),
         escaped,
     )
     return escaped
@@ -327,7 +327,7 @@ def build_story(markdown: str):
 def add_page_metadata(canvas, doc):
     canvas.setTitle(TITLE)
     canvas.setAuthor(AUTHOR)
-    canvas.setSubject("AI attribution, source grounding, and creator royalty settlement")
+    canvas.setSubject("Verifiable AI source attribution and creator-value accounting")
     canvas.setCreator("RDLLM build_arxiv_white_paper.py")
     canvas.saveState()
     canvas.setFont("Helvetica", 8)
@@ -348,7 +348,7 @@ def main() -> None:
         bottomMargin=0.7 * inch,
         title=TITLE,
         author=AUTHOR,
-        subject="AI attribution, source grounding, and creator royalty settlement",
+        subject="Verifiable AI source attribution and creator-value accounting",
     )
     doc.build(build_story(markdown), onFirstPage=add_page_metadata, onLaterPages=add_page_metadata)
     print(OUTPUT)

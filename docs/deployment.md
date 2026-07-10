@@ -5,6 +5,14 @@ royalty and source-attribution platform. The bundled service is dependency-free
 and can run anywhere Python runs. Production operators should still place it
 behind their normal ingress, TLS, identity, monitoring, and backup systems.
 
+The reference HTTP process is intentionally single-tenant and single-process. Its
+shared bearer token, in-memory rate limiter, and local JSONL audit sink are defense
+in depth for one operator boundary, not a multi-tenant identity or durable storage
+system. Multi-tenant deployments require an external identity gateway, tenant
+isolation, distributed rate limiting, and durable append-only storage. Those
+controls must be covered by trusted `runtime_controls` and `audit_log_integrity`
+attestations before the deployment can claim production readiness.
+
 ## Runtime Components
 
 Required:
@@ -23,7 +31,7 @@ Recommended production envelope:
 
 - TLS termination at a reverse proxy or platform ingress
 - authentication broker or API gateway before RDLLM
-- built-in per-client rate limiting, plus rate limiting and request-size
+- built-in per-process rate limiting, plus distributed rate limiting and request-size
   enforcement at ingress
 - tenant identity propagated into operator logs
 - central log shipping for the RDLLM hash-chained audit log
@@ -75,6 +83,7 @@ under test and run the installed launch gate:
 ```bash
 rdllm-operator-launch-gate \
   --profile /etc/rdllm/production_readiness_profile.json \
+  --trust-store /etc/rdllm/deployment_trust_store.json \
   --service-config /etc/rdllm/service_config.json \
   --service-root /etc/rdllm \
   --bootstrap-dir /etc/rdllm \
@@ -113,6 +122,7 @@ operator acceptance report:
 ```bash
 rdllm-operator-acceptance \
   --profile /etc/rdllm/production_readiness_profile.json \
+  --trust-store /etc/rdllm/deployment_trust_store.json \
   --service-config /etc/rdllm/service_config.json \
   --service-root /etc/rdllm \
   --bootstrap-dir /etc/rdllm \
@@ -171,6 +181,10 @@ curl -sS http://127.0.0.1:8765/readyz
 ```
 
 ## Production Configuration
+
+Before calling a deployment production-ready, follow the signed-evidence workflow
+in [Production Readiness](production_readiness.md). The bundled profiles are
+unattested templates and intentionally do not authorize a production claim.
 
 Generate a config and change the operator-specific fields:
 

@@ -87,10 +87,10 @@
   ],
   "event": {
     "answer_hash": "283203d79fe9f38a76f38927a84e9d964d9be2ed9f9e88274461757e7af4fde4",
-    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-    "event_id": "evt_b560c62bb49a73d0",
+    "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+    "event_id": "evt_83312b019637578e",
     "prompt_hash": "50ab8c101c89ff008713591e3270032cb19923a1e89f68b4315afb839e95d35e",
-    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c"
+    "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68"
   },
   "grounding_quality": {
     "issues": [],
@@ -126,7 +126,7 @@
     "total_claims": 6,
     "unsupported_claims": 0
   },
-  "issued_at": "2026-07-01T15:03:38Z",
+  "issued_at": "2026-07-09T20:08:23Z",
   "issuer": "rdllm-local-demo",
   "model": {
     "id": "rdllm-reference-model",
@@ -135,14 +135,14 @@
   },
   "privacy": {
     "answer_disclosed": false,
-    "disclosure_root": "c2a9bde5851c2cdd21741191e688384631d72890d32b7b39c9037f7bb0ecddc4",
+    "disclosure_root": "4761bcc936a6d31f85b479d768587b44bbc7394164be5febb99a4974c63ecada",
     "disclosure_version": "rdllm-selective-disclosure/v1",
     "prompt_disclosed": false,
     "selective_disclosure": "hash commitments expose prompt/output integrity without disclosing private prompts",
     "source_quotes_disclosed": true
   },
   "protocol_version": "rdllm-attribution-receipt/v1",
-  "receipt_hash": "3631d59bc8ef8de9f82ffc9ebd278b73c7fd7cc2f30d9629b5a636181241660c",
+  "receipt_hash": "94f30eddb01a4dac8fd29edaae6bd29214d094516277a2e6b30df6affbbd2278",
   "registry": {
     "registry_conflicts": 0,
     "registry_report_hash": "",
@@ -155,7 +155,9 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "68030ed08f46be29ea9086ca7b4c942187a0f0b6f0d072f20d1804f158ddb5ce"
+    "key_id": "",
+    "security_level": "demo_shared_secret",
+    "value": "3ee20ed61897038a6f76d342d11dd9d152d64f3451e68075c129564c86cb3bce"
   },
   "sources": [
     {

@@ -4944,6 +4944,8 @@ def _provenance_benchmark_case(*, signing_secret: str | None) -> dict[str, Any]:
             "output": "AI licensing marketplaces should give creators consent controls, license terms, dispute windows, duplicate claim handling, and appeals so weak attribution can be challenged.",
             "expected_work_ids": ["consent-market-source"],
             "forbidden_work_ids": [],
+            "expect_escrow": True,
+            "require_grounding": False,
         },
         {
             "case_id": "hard-decoy-ledger",
@@ -4952,6 +4954,8 @@ def _provenance_benchmark_case(*, signing_secret: str | None) -> dict[str, Any]:
             "output": "A royalty attribution ledger should record source identifiers, content hashes, payout weights, event hashes, and replayable audit data.",
             "expected_work_ids": ["ledger-proof-source"],
             "forbidden_work_ids": ["ledger-dashboard-decoy"],
+            "expect_escrow": True,
+            "require_grounding": False,
         },
         {
             "case_id": "unmatched-escrow",

@@ -663,6 +663,10 @@ def _source_footer_for_event(event: Any) -> dict[str, Any]:
         )
 
     source_rows: list[dict[str, Any]] = []
+    settlement_eligible = event.settlement_decision.get(
+        "eligible_for_settlement_instruction",
+        False,
+    ) is True
     for reference in event.source_references:
         supported_claims = supported_counts.get(reference.label, 0)
         minimum_support = minimum_support_by_label.get(reference.label, 0.0)
@@ -676,10 +680,16 @@ def _source_footer_for_event(event: Any) -> dict[str, Any]:
             else "warning"
         )
         settlement_status = (
-            "allocated_not_executed" if reference.payout > 0 else "not_allocated"
+            "allocated_not_executed"
+            if reference.payout > 0 and settlement_eligible
+            else "candidate_held_for_review"
+            if reference.payout > 0
+            else "not_allocated"
         )
         why = (
-            "verified_claim_support_identity_rights_royalty"
+            "verified_context_bound_claim_support_identity_rights_royalty"
+            if confidence == "verified" and reference.payout > 0 and settlement_eligible
+            else "post_hoc_candidate_needs_review"
             if confidence == "verified" and reference.payout > 0
             else "claim_support_needs_review"
         )
@@ -771,6 +781,12 @@ def _source_footer_for_event(event: Any) -> dict[str, Any]:
             "event_hash": event.event_hash,
             "grounding_verdict": event.grounding_quality.get("verdict", ""),
             "attribution_gap_verdict": event.attribution_gap.get("verdict", ""),
+            "generation_evidence_mode": event.generation_evidence.get("mode", ""),
+            "settlement_status": event.settlement_decision.get("status", ""),
+            "settlement_instruction_eligible": event.settlement_decision.get(
+                "eligible_for_settlement_instruction",
+                False,
+            ),
         },
     }
     footer["footer_hash"] = canonical_hash(
@@ -867,6 +883,20 @@ def _display_gate_errors(event: Any, source_footer: dict[str, Any]) -> list[str]
             f"{', '.join(model_reliance_markers)}; service answers may claim "
             "observable support and allocation only"
         )
+    settlement = event.settlement_decision
+    if settlement.get("direct_execution_allowed") is not False:
+        errors.append(
+            "settlement: direct payment execution must remain disabled until an "
+            "external processor attestation is verified"
+        )
+    generation_evidence = event.generation_evidence
+    if (
+        generation_evidence.get("mode") == "provider_context_grounded"
+        and generation_evidence.get("provider_evidence_verified") is not True
+    ):
+        errors.append(
+            "provider_evidence: provider output is not bound to supplied source context"
+        )
     return errors
 
 
@@ -876,7 +906,7 @@ def openapi_document() -> dict[str, Any]:
         "openapi": "3.1.0",
         "info": {
             "title": "RDLLM Service API",
-            "version": "0.1.0",
+            "version": "1.0.0",
         },
         "paths": {
             "/healthz": {"get": {"summary": "Liveness check"}},
@@ -1029,6 +1059,12 @@ def _attribute(state: ServiceState, payload: dict[str, Any]) -> tuple[int, dict[
             "royalty_share_count": len(event.royalty_shares),
             "grounding_verdict": event.grounding_quality.get("verdict", ""),
             "attribution_gap_verdict": event.attribution_gap.get("verdict", ""),
+            "generation_evidence_mode": event.generation_evidence.get("mode", ""),
+            "settlement_status": event.settlement_decision.get("status", ""),
+            "settlement_instruction_eligible": event.settlement_decision.get(
+                "eligible_for_settlement_instruction",
+                False,
+            ),
         },
         "source_footer": source_footer,
         "display": display,
@@ -1045,6 +1081,32 @@ def _messages_to_prompt(messages: list[dict[str, Any]]) -> str:
         if isinstance(message, dict) and message.get("role") == "user"
     ]
     return "\n".join(part for part in user_parts if part.strip())
+
+
+def _provider_grounding_manifest(
+    state: ServiceState,
+    prompt: str,
+) -> tuple[list[Any], dict[str, Any]]:
+    hits = state.engine.retrieve(prompt, use="retrieval")
+    source_rows = [
+        {
+            "source_id": f"S{index}",
+            "work_id": hit.chunk.work_id,
+            "chunk_id": hit.chunk.chunk_id,
+            "title": hit.chunk.title,
+            "source_uri": hit.chunk.source_uri,
+            "content_hash": hit.chunk.content_hash,
+            "retrieval_score": round(hit.score, 8),
+            "text": hit.chunk.text,
+        }
+        for index, hit in enumerate(hits, start=1)
+    ]
+    manifest = {
+        "schema": "rdllm-provider-grounding-context/v1",
+        "source_rows": source_rows,
+    }
+    manifest["context_hash"] = canonical_hash(manifest)
+    return hits, manifest
 
 
 def _validate_messages(value: Any) -> tuple[list[dict[str, Any]], str]:
@@ -1092,16 +1154,42 @@ def _provider_attribute(
         return 400, {"status": "blocked", "error": "gross_revenue must be decimal"}
     if gross_revenue < 0:
         return 400, {"status": "blocked", "error": "gross_revenue must be nonnegative"}
+    hits, grounding_manifest = _provider_grounding_manifest(state, prompt)
+    if not hits:
+        return 422, {
+            "status": "blocked",
+            "error": "no policy-allowed source evidence was retrieved for provider generation",
+        }
     try:
-        generation = call_openai_compatible_chat(route, messages, model=model)
+        generation = call_openai_compatible_chat(
+            route,
+            messages,
+            model=model,
+            grounding_manifest=grounding_manifest,
+        )
     except ProviderClientError as exc:
         return 502, {"status": "blocked", "error": str(exc)}
     if len(generation.output) > state.config.max_output_chars:
         return 413, {"status": "blocked", "error": "provider output exceeds configured limit"}
-    event = state.engine.attribute_text(
+    event = state.engine.attribute_grounded_text(
         prompt,
         generation.output,
         gross_revenue=gross_revenue,
+        hits=hits,
+        provider_evidence={
+            "provider_id": generation.provider_id,
+            "provider_family": generation.family,
+            "provider_model": generation.model,
+            "provider_request_hash": generation.provider_request_hash,
+            "provider_response_hash": generation.provider_response_hash,
+            "provider_evidence_mode": generation.evidence_mode,
+            "provider_evidence_verified": generation.evidence_verified,
+            "grounding_context_hash": generation.grounding_context_hash,
+            "grounding_source_ids": list(generation.grounding_source_ids),
+            "source_annotation_hash": canonical_hash(
+                list(generation.source_annotations)
+            ),
+        },
     )
     event_payload = event.to_dict()
     source_footer = _source_footer_for_event(event)
@@ -1123,6 +1211,13 @@ def _provider_attribute(
             "attribution_gap_verdict": event.attribution_gap.get("verdict", ""),
             "provider_id": generation.provider_id,
             "provider_response_hash": generation.provider_response_hash,
+            "provider_evidence_mode": generation.evidence_mode,
+            "provider_evidence_verified": generation.evidence_verified,
+            "settlement_status": event.settlement_decision.get("status", ""),
+            "settlement_instruction_eligible": event.settlement_decision.get(
+                "eligible_for_settlement_instruction",
+                False,
+            ),
         },
         "provider_generation": generation.to_dict(),
         "source_footer": source_footer,

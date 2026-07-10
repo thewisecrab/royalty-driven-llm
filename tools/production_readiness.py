@@ -38,6 +38,7 @@ REQUIRED_OPERATOR_DOCS = (
     "docs/release_checklist.md",
     "SECURITY.md",
     "CONTRIBUTING.md",
+    "artifacts/README.md",
 )
 
 REQUIRED_DOC_TERMS = {
@@ -130,21 +131,19 @@ REQUIRED_ARTIFACT_SUMMARIES = {
     },
     "artifacts/universal_composition_settlement.json": {
         "summary.status": "ready",
-        "settlement_decision.settlement_authorized": True,
     },
     "artifacts/payment_execution_report.json": {
         "summary.status": "ready",
-        "summary.external_payment_execution_attested": True,
     },
     "artifacts/payment_rail_attestation.json": {
         "summary.status": "ready",
-        "summary.signed_external_payment_rail_attested": True,
     },
     "artifacts/production_readiness_report.json": {
         "summary.status": "ready",
-        "summary.production_grade_claim_allowed": True,
-        "summary.direct_creator_settlement_allowed": True,
-        "summary.public_sector_use_supported": True,
+        "summary.production_grade_claim_allowed": False,
+        "summary.direct_creator_settlement_allowed": False,
+        "summary.public_sector_use_supported": False,
+        "summary.external_evidence_status": "unverified",
     },
 }
 
@@ -203,10 +202,18 @@ def audit_artifacts(root: Path) -> list[str]:
     return errors
 
 
-def audit_profile(profile_path: Path) -> dict[str, Any]:
+def audit_profile(
+    profile_path: Path,
+    trust_store_path: Path | None = None,
+) -> dict[str, Any]:
     profile = load_json(profile_path)
-    report = evaluate_production_profile(profile)
-    verification = verify_production_readiness_report(profile, report)
+    trust_store = load_json(trust_store_path) if trust_store_path else None
+    report = evaluate_production_profile(profile, trust_store=trust_store)
+    verification = verify_production_readiness_report(
+        profile,
+        report,
+        trust_store=trust_store,
+    )
     if verification["status"] != "passed":
         report["summary"]["status"] = "blocked"
         report["blocked_controls"].append(
@@ -298,16 +305,23 @@ def audit_acceptance_matrix() -> dict[str, Any]:
     return _summarize_acceptance_matrix(report)
 
 
-def audit_repository(root: Path, profile_path: Path) -> dict[str, Any]:
+def audit_repository(
+    root: Path,
+    profile_path: Path,
+    trust_store_path: Path | None = None,
+) -> dict[str, Any]:
     doc_errors = audit_docs(root)
     artifact_errors = audit_artifacts(root)
-    profile_report = audit_profile(profile_path)
+    profile_report = audit_profile(profile_path, trust_store_path)
     profile_matrix = audit_profile_matrix()
     acceptance_matrix = audit_acceptance_matrix()
     profile = load_json(profile_path)
+    trust_store = load_json(trust_store_path) if trust_store_path else None
     checked_in_report = load_json(root / "artifacts" / "production_readiness_report.json")
     checked_in_verification = verify_production_readiness_report(
-        profile, checked_in_report
+        profile,
+        checked_in_report,
+        trust_store=trust_store,
     )
     if checked_in_verification["status"] != "passed":
         artifact_errors.extend(
@@ -360,12 +374,14 @@ def audit_repository(root: Path, profile_path: Path) -> dict[str, Any]:
             "payment_processor_attested": profile_summary.get(
                 "payment_processor_attested"
             ),
-            "production_grade_claim_allowed": audit_ready
-            and profile_summary["production_grade_claim_allowed"],
-            "direct_creator_settlement_allowed": audit_ready
-            and profile_summary["direct_creator_settlement_allowed"],
-            "public_sector_use_supported": audit_ready
-            and profile_summary["public_sector_use_supported"],
+            "software_release_status": "ready" if audit_ready else "blocked",
+            "operator_deployment_status": profile_summary.get(
+                "external_evidence_status",
+                "unverified",
+            ),
+            "production_grade_claim_allowed": False,
+            "direct_creator_settlement_allowed": False,
+            "public_sector_use_supported": False,
         },
         "profile_report": profile_report,
         "profile_matrix": profile_matrix,
@@ -408,6 +424,11 @@ def main(argv: list[str] | None = None) -> int:
         help="Operator production-readiness profile to evaluate.",
     )
     parser.add_argument(
+        "--trust-store",
+        type=Path,
+        help="Externally managed trust store used to verify deployment attestations.",
+    )
+    parser.add_argument(
         "--profile-only",
         action="store_true",
         help="Evaluate only the supplied operator profile.",
@@ -446,14 +467,16 @@ def main(argv: list[str] | None = None) -> int:
 
     profile_path = (ROOT / args.profile).resolve()
     if args.profile_only:
-        report = audit_profile(profile_path)
+        report = audit_profile(profile_path, args.trust_store)
         status = report["summary"]["status"]
         errors = [
             f"{row['control_id']}: {row['requirement']}"
             for row in report["blocked_controls"]
         ]
     else:
-        report = _apply_repository_verification(audit_repository(ROOT, profile_path))
+        report = _apply_repository_verification(
+            audit_repository(ROOT, profile_path, args.trust_store)
+        )
         status = report["status"]
         errors = report["errors"]
 

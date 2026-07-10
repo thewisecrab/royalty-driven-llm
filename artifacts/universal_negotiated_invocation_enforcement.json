@@ -1,79 +1,79 @@
 {
   "artifact_bindings": {
-    "binding_root": "daa80aa5b588d354088ed7c57773a21443adc6be7aeac2716caf616c8537ff3a",
+    "binding_root": "f558366cd286f7fc71ea7a66283454a272b3849fab62e94f3df2bd5dc922987d",
     "bindings": [
       {
-        "artifact_binding_hash": "0240b23d443f6c04482fd5d6413ab9b185e1c23ef8b5174a2488fe0a7574d762",
-        "declared_hash": "dc1e7090d04e2ab7240ea7675cc965f789d31c5d7518d0e18a5a7f35f60631ec",
+        "artifact_binding_hash": "5c5f8a5410d16cd10b208114fa3fcbd3199f880d228fc29d98d95b21a4ca30ca",
+        "declared_hash": "fde6399ac352caa54bc25f7d77f1bb8fb0c421731718feb1d23bcefe3bf5ee44",
         "hash_reproducible": true,
         "name": "certification_report",
-        "payload_hash": "521de977b0e97e2cbbaf81f6789114b53464cd6f47ab931d5f638b641a677fab",
+        "payload_hash": "4a12f517abe36819cc6a13794802692520ab74cccf5310c9ceff1039f8631457",
         "present": true,
         "status": "passed",
         "target_level": "RDLLM-L186",
         "version": "rdllm-certification/v1"
       },
       {
-        "artifact_binding_hash": "6b5c6aa4b3fcc948468e61e821d09b5642955f8491d46369f085c657a81e024f",
-        "declared_hash": "461be8e9acd24c00504972ab2480806c5ae3ca157fa1dea47a6137f40dae8289",
+        "artifact_binding_hash": "61bff617a1130dea74fb040f14f11a28c2824e9687262a0e09690fda081be11d",
+        "declared_hash": "0019ae2656944866aa4eb6c343ace5f842e9dab1532210349b0305d3952100b5",
         "hash_reproducible": true,
         "name": "provider_attribution_card",
-        "payload_hash": "c143656c72d7cf07220d673931b89c733a226706e2c8e8884ad04ef106a97c78",
+        "payload_hash": "8bedb8e9d9503710e47e489056faa897e011ae3c82340a06d0e7864360c1d851",
         "present": true,
         "status": "",
         "target_level": "",
         "version": "rdllm-provider-attribution-card/v1"
       },
       {
-        "artifact_binding_hash": "a2a85a1bd927cd8a6700c4071a5c1d284bf3d18a55185b1659e9257e4bc0303b",
-        "declared_hash": "88a249a6054b067fd8f1dafdc798be572b137b7a998f3cef9f13fe75ac582df6",
+        "artifact_binding_hash": "7c4eb3ff7e3bd5cf98abb9de9b95c3908701470fe81796ccb0612ef60310b4ae",
+        "declared_hash": "a669a7c49b9ccbdc94e1fe218a4b17f6129d9f6a1709f7d8315f73a1a2990647",
         "hash_reproducible": true,
         "name": "integration_profile",
-        "payload_hash": "07eaff239e0ba1f17531f795e8a5357a4baa6aebb6bb2f2196304b811a0ec659",
+        "payload_hash": "cc7f048c5cf03a9e867b6db8266a750005da3f87c3a3dea966dd5cbc46673434",
         "present": true,
         "status": "ready",
         "target_level": "",
         "version": "rdllm-integration-profile/v1"
       },
       {
-        "artifact_binding_hash": "7a5450916d1e29c73033018dbda0a8fdde0087e2343d93f54c84f2d53a7f1a32",
-        "declared_hash": "ceab40a4fb7b3829680b8b79e6e22507c16effe0683528d5258bdfcc3795c363",
+        "artifact_binding_hash": "a88a8bb600d6cb0e41c1f29283f8daca33f7bd78c7540aa206dd6bc63e567252",
+        "declared_hash": "fb953c8d56c4298e66d51b310387f5235a4f2a1f36b4d2c54d1b609c0092c5cd",
         "hash_reproducible": true,
         "name": "discovery_manifest",
-        "payload_hash": "fe647afdaddde926c3122999c61e4ea5d29f5ba227a220e596047ac2b0dca763",
+        "payload_hash": "92ac1aea74e800d8a77c8769f04fb4972e474220c98fc226e815cc4bfbf2f76a",
         "present": true,
         "status": "ready",
         "target_level": "RDLLM-L186",
         "version": "rdllm-discovery-manifest/v1"
       },
       {
-        "artifact_binding_hash": "fbc167c56228f028eccdd6a84e789d0a4cc022b4be170812535220654ac44b18",
-        "declared_hash": "a93680dc3bef65865daea6abdba2d2bf7b3da9842e07061b5db0c6079ee63713",
+        "artifact_binding_hash": "afe68ccd33795c1c0476b4fb2f0a49f725dfdae930675237ec9756dba8db7f66",
+        "declared_hash": "69bfb81e0fe0db245a6b666bb90b49521bcb0855806dfd5d38b4dfab8febb2e4",
         "hash_reproducible": true,
         "name": "universal_attribution_negotiation_handshake",
-        "payload_hash": "46072d5dc0577cd609dfc90655b929a13391a994189039e06b64844d020b9626",
+        "payload_hash": "d77516fc27e0197c9b200ce261750909b10edf50cbb927de9c59feed059f15bd",
         "present": true,
         "status": "ready",
         "target_level": "RDLLM-L159",
         "version": "rdllm-universal-attribution-negotiation-handshake/v1"
       },
       {
-        "artifact_binding_hash": "06251b3d104ed1896d190a8317f5741c29ab63fa87dd297c5444541507f7ecf6",
-        "declared_hash": "0a61d066e741fd0d9c1519d3c08df2b13205f375c1519712b0e6937606d8c5ee",
+        "artifact_binding_hash": "0c992124504bf58b523ace6c1b2a25d99e36d2326dc1f420110c0603df798348",
+        "declared_hash": "5aee0258ef9334d228ed70557b54462ff99ff7a9cef7403ec251e89dd95875a5",
         "hash_reproducible": true,
         "name": "universal_provider_drift_sentinel",
-        "payload_hash": "39021ca9020bc641415c88be24e0a1e93e23d68ac0494ed71b4075b1e1f7e386",
+        "payload_hash": "f715bcd2937d4a903c9fae8d4ac44cfd9f90a119c5da48435f19519eedfef944",
         "present": true,
         "status": "ready",
         "target_level": "RDLLM-L158",
         "version": "rdllm-universal-provider-drift-sentinel/v1"
       },
       {
-        "artifact_binding_hash": "d3c3a253023e81a884d8ad4147d1f6092ed00628fde9a3079495959e8fc55529",
-        "declared_hash": "1bcc3024590590ce37d7a6c7b6308aab78aef3b6ab500dcda8d05dbc66f66a69",
+        "artifact_binding_hash": "5a0f0e73e20815b344a1c6602588d9b61545645b4263993ec072c3b807f29ac7",
+        "declared_hash": "3f81a8ca9fd360e07b73d1ccea5107393ada720f5e8615ab5613047880735505",
         "hash_reproducible": true,
         "name": "universal_provider_adapter_harness",
-        "payload_hash": "eff9a202c35f3aa78c206ccf7d7c15d8ea6a57ea386a6eab24104d274d02dadc",
+        "payload_hash": "e92aa957d32891b4824dae13b900932be85c4f7850bbea6885d93accc8b45753",
         "present": true,
         "status": "ready",
         "target_level": "RDLLM-L157",
@@ -113,33 +113,33 @@
         "version": "rdllm-universal-claim-provenance-envelope/v1"
       },
       {
-        "artifact_binding_hash": "4e2c473ee8c5f3c6bab9e8699fab14a1a363359cdc610d7c4fe949da61d7f762",
-        "declared_hash": "26ba6d7adbd4eeb08fad79f34d9026dc6cd99b72c5545bbb7dd95c86987be4d9",
+        "artifact_binding_hash": "28617641a5bb74bfe6ba23bd375415b6b7f5a2ad07a85d38628c82d8a4260b2f",
+        "declared_hash": "b3b43bca32a53afaeac82e9d4c404679af4b143a7e8d60f6ce4b784bd97bde37",
         "hash_reproducible": true,
         "name": "source_footer_delivery",
-        "payload_hash": "b755e6d4d03b4aa0f3a89c672b76669ba5b575eee63d26ef91e9da53f1536032",
+        "payload_hash": "d950a4b0234a8d58bad87416e7c58a72453b6a0c7e27f48a09bb0913877b77f6",
         "present": true,
         "status": "ready",
         "target_level": "RDLLM-L103",
         "version": ""
       },
       {
-        "artifact_binding_hash": "407791a605a159b0a3a9b2d8e28b91406120751228e9c1c76c7c99d60629a59f",
-        "declared_hash": "31f1c7d919bbeb81f3259ceee324c931360dae638b40905824f3863c5383fbf0",
+        "artifact_binding_hash": "28c760b4546c05f33ab6c14358b7c98c7fb1e3550676816dadfe1755fd47db07",
+        "declared_hash": "726efff0a856fab31c93e9fadc3733706c966541c7d229b2efb0bb31d7bf5ffc",
         "hash_reproducible": true,
         "name": "client_attribution_enforcement",
-        "payload_hash": "d81e713d086a4c290da5b6d565ee564c62d1aed3420310273f664cedb718bf51",
+        "payload_hash": "cb547c6635eba68b63cc23e3e9ae3a9ce621e7e04e5e9955424cfe9068c11b1f",
         "present": true,
         "status": "ready",
         "target_level": "RDLLM-L105",
         "version": ""
       },
       {
-        "artifact_binding_hash": "96af0588146839fdd5303214030a30f75d1b44ec9997289d8941c2ec00cf6232",
-        "declared_hash": "57f2cc488366e217d022a76de6780aeb9a6a8e88125619748c547a12d4a41243",
+        "artifact_binding_hash": "95fc1b0afb591103c52d0dd294e06414279e9c82ca9c12a048135d73506dfae9",
+        "declared_hash": "6c63ea7396d25b98923d0b8f88642b98518f15d41ae33d8d7decfaee6d505140",
         "hash_reproducible": true,
         "name": "response_envelope",
-        "payload_hash": "f6ebf62e20ba60ecabedb1e6a1b6bb8156de24f8c090f684ca1d9e4014717f06",
+        "payload_hash": "e612860a96f85102d90778f4d1a640c244d97f187ef6a39971ea231f326b9a98",
         "present": true,
         "status": "verified",
         "target_level": "",
@@ -3960,7 +3960,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "ed47d9f135eeb2360a71454946573cf301deebd21755b58d1e160f381b76ee3a"
+    "value": "1fd26720e1fe00362424aed3537713053f81244f9dc39e4e21284ee8e8535540"
   },
   "summary": {
     "bypass_failure_count": 12,
@@ -4147,7 +4147,7 @@
       }
     ]
   },
-  "universal_negotiated_invocation_enforcement_hash": "585cfff486eb0fcd9118effef5ded2f07172b549cb7c778fb61b0924519eddce",
+  "universal_negotiated_invocation_enforcement_hash": "9f20a14047779c0dce24d0141e6d226abae2573a9440c2fe3869aa5da1ac8479",
   "universal_negotiated_invocation_enforcement_version": "rdllm-universal-negotiated-invocation-enforcement/v1",
   "well_known": {
     "create": "universal-negotiated-invocation-enforcement",

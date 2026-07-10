@@ -145,12 +145,12 @@ def audit() -> dict[str, Any]:
         errors.append(f"missing production profile for operator_type={operator_type}")
     for settlement_mode in missing_settlement_modes:
         errors.append(f"missing production profile for settlement_mode={settlement_mode}")
-    if direct_settlement_profiles < 1:
-        errors.append("profile matrix must include at least one direct-settlement profile")
-    if no_payment_profiles < 1:
-        errors.append("profile matrix must include at least one no-payment profile")
-    if public_sector_profiles < 1:
-        errors.append("profile matrix must include at least one public-sector-ready profile")
+    if direct_settlement_profiles != 0:
+        errors.append("unattested profile matrix must not allow direct settlement")
+    if no_payment_profiles != len(rows):
+        errors.append("every unattested profile must keep direct settlement disabled")
+    if public_sector_profiles != 0:
+        errors.append("unattested profile matrix must not claim public-sector readiness")
 
     return {
         "status": "passed" if not errors else "failed",

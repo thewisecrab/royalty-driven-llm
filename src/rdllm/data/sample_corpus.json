@@ -1,4 +1,6 @@
 {
+  "dataset_scope": "synthetic_demo",
+  "notice": "Fictitious creators and works for local testing only; not a real rights or payment registry.",
   "creators": [
     {
       "creator_id": "maya",

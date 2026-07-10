@@ -1,6 +1,6 @@
 {
-  "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-  "event_id": "evt_b560c62bb49a73d0",
+  "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+  "event_id": "evt_83312b019637578e",
   "otel_semconv": "https://opentelemetry.io/docs/specs/semconv/gen-ai/gen-ai-spans/",
   "provider": {
     "model_id": "rdllm-reference-model",
@@ -8,7 +8,7 @@
     "name": "rdllm.reference",
     "route_id": "route:default"
   },
-  "receipt_hash": "3631d59bc8ef8de9f82ffc9ebd278b73c7fd7cc2f30d9629b5a636181241660c",
+  "receipt_hash": "94f30eddb01a4dac8fd29edaae6bd29214d094516277a2e6b30df6affbbd2278",
   "schema_url": "https://rdllm.local/schemas/trace_exchange/v1",
   "spans": [
     {
@@ -19,18 +19,18 @@
         "gen_ai.response.model": "rdllm-reference-model",
         "rdllm.answer.hash": "283203d79fe9f38a76f38927a84e9d964d9be2ed9f9e88274461757e7af4fde4",
         "rdllm.attribution_gap.verdict": "closed",
-        "rdllm.event.hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-        "rdllm.event.id": "evt_b560c62bb49a73d0",
+        "rdllm.event.hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+        "rdllm.event.id": "evt_83312b019637578e",
         "rdllm.prompt.hash": "50ab8c101c89ff008713591e3270032cb19923a1e89f68b4315afb839e95d35e",
-        "rdllm.receipt.hash": "3631d59bc8ef8de9f82ffc9ebd278b73c7fd7cc2f30d9629b5a636181241660c",
-        "rdllm.rendered_output.hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
+        "rdllm.receipt.hash": "94f30eddb01a4dac8fd29edaae6bd29214d094516277a2e6b30df6affbbd2278",
+        "rdllm.rendered_output.hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
         "rdllm.span.kind": "generation"
       },
       "kind": "CLIENT",
       "name": "gen_ai.generate",
       "parent_span_id": "",
-      "span_id": "8e523b8782dda09c",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "span_id": "4cd35ffb3810e211",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -77,9 +77,9 @@
       },
       "kind": "INTERNAL",
       "name": "gen_ai.retrieval",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "7f0dbccedc187d55",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "b0283e68a863c349",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -126,9 +126,9 @@
       },
       "kind": "INTERNAL",
       "name": "gen_ai.text_match",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "8332645f1d7f3994",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "94aa812b72a3f919",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -175,9 +175,9 @@
       },
       "kind": "INTERNAL",
       "name": "gen_ai.retrieval",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "5f423cd8da39cc2f",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "946aaead7995a61f",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -224,9 +224,9 @@
       },
       "kind": "INTERNAL",
       "name": "gen_ai.text_match",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "80849f82b30217c0",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "04fe2a8be0111dd9",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -273,9 +273,9 @@
       },
       "kind": "INTERNAL",
       "name": "gen_ai.retrieval",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "0cf47a855af53f89",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "c47e084bef05ae45",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -322,9 +322,9 @@
       },
       "kind": "INTERNAL",
       "name": "gen_ai.text_match",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "ac3825591b0d5f8c",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "8570f49bf506e001",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -343,9 +343,9 @@
       },
       "kind": "INTERNAL",
       "name": "rdllm.citation",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "543059daf02604cd",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "de6d8bd8f7f4a153",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -364,9 +364,9 @@
       },
       "kind": "INTERNAL",
       "name": "rdllm.citation",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "0c211d2524ded3a8",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "b27ec6704be1da01",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -385,9 +385,9 @@
       },
       "kind": "INTERNAL",
       "name": "rdllm.citation",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "c979b54a05aab937",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "2e4eba1ad7213306",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -405,9 +405,9 @@
       },
       "kind": "INTERNAL",
       "name": "rdllm.claim_support",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "dc4fdabdc361b595",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "186b4610acdd18dd",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -425,9 +425,9 @@
       },
       "kind": "INTERNAL",
       "name": "rdllm.claim_support",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "af6905bb3c79baa3",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "b879d722c45748b1",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -445,9 +445,9 @@
       },
       "kind": "INTERNAL",
       "name": "rdllm.claim_support",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "af4e5e8f5326b2e2",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "7f82e7c7d252642b",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -465,9 +465,9 @@
       },
       "kind": "INTERNAL",
       "name": "rdllm.claim_support",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "12a26b6cade68179",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "928f75a9c1c13775",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -485,9 +485,9 @@
       },
       "kind": "INTERNAL",
       "name": "rdllm.claim_support",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "f6c2a96356be9238",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "552372aa650e5774",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     },
     {
       "attributes": {
@@ -505,9 +505,9 @@
       },
       "kind": "INTERNAL",
       "name": "rdllm.claim_support",
-      "parent_span_id": "8e523b8782dda09c",
-      "span_id": "6fa8ce2a8149956e",
-      "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+      "parent_span_id": "4cd35ffb3810e211",
+      "span_id": "2c01f59819aa9471",
+      "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
     }
   ],
   "summary": {
@@ -520,6 +520,6 @@
     "visible_source_count": 3
   },
   "trace_exchange_version": "rdllm-trace-exchange/v1",
-  "trace_hash": "7c88187e9347104995eb98e888d9663d355391a186434162bd5a741aba9423b9",
-  "trace_id": "b5ceaab35c0c5f191187b2cdc4a8d1fc"
+  "trace_hash": "7a441b8277a161d0249ac32d494a94fc5ba2edd93e987d3268baff04aa494d39",
+  "trace_id": "37a5f7f9fc74df1b9ca288b75e80fa6e"
 }

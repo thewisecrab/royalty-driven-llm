@@ -4,11 +4,11 @@
     "creator_license_contract_bound": true,
     "creator_license_contract_hash": "1ea2a80b87d91b03550b57457a881265fdf9a6ed38b5e520ed8253988eddf8ab",
     "source_availability_bound": true,
-    "source_availability_report_hash": "6f3d0af1dfc20e5d743ace20bf629c1ca853719e1dc6f29959957cb7064afd85",
+    "source_availability_report_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5",
     "source_boundary_bound": true,
-    "source_boundary_report_hash": "6e0a55d50bfbf64eab94e981476631c04c12f2941d6c112dae973b421cbb89e2",
+    "source_boundary_report_hash": "e6777da6e80e3da8d1326083b2e894a2da8eb8857ecfa38d1e240f7fdfd3336e",
     "source_confidence_bound": true,
-    "source_confidence_report_hash": "e21bf99ae1dbd34ff4c7e5d7c1da0f8a1842044e23b4035b9455f9ee390a4b09"
+    "source_confidence_report_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9"
   },
   "artifact_status": {
     "creator_license_contract_errors": [],
@@ -66,23 +66,23 @@
     "private_fields_absent": true
   },
   "commitments": {
-    "artifact_binding_root": "cfd23ab54886f65efb3351d20b1d241b84e248c45d79925e366b9a9b89601455",
+    "artifact_binding_root": "e459e9df672e628c0188ec32d95e5de0c942ab2872de954c9d41bb5dd0938c4e",
     "artifact_status_hash": "6c69fa8f4e831b3c717a21c3060e7ce76d774bd2d45ad71b3227344bdb09f688",
     "authenticity_signal_root": "b42daa89cbfe0bd021e551716e02548eeec8c41902bde66cff14dd824e4a39c5",
     "issue_root": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "schema": "docs/schemas/source_authenticity_report.schema.json",
-    "source_authenticity_root": "6756371699c5b35a4b6533f4d53b74dc6c25058e128c90b5cef6e21b9367fba9"
+    "source_authenticity_root": "cd46e468073b3e645009c133c81b136763fa45831a8a7c1a82eae711bccc3228"
   },
   "created_at": "2026-06-03T00:00:00Z",
   "event": {
     "answer_hash": "283203d79fe9f38a76f38927a84e9d964d9be2ed9f9e88274461757e7af4fde4",
     "creator_license_contract_hash": "1ea2a80b87d91b03550b57457a881265fdf9a6ed38b5e520ed8253988eddf8ab",
-    "event_hash": "b560c62bb49a73d07ade5360ec0131595e8308b1177acd1217d0b48d58df780e",
-    "event_id": "evt_b560c62bb49a73d0",
-    "rendered_output_hash": "abf4056f07c9ceda6faca02c050ff9208b58c4bfa1383493924c8434b0f0b15c",
-    "source_availability_report_hash": "6f3d0af1dfc20e5d743ace20bf629c1ca853719e1dc6f29959957cb7064afd85",
-    "source_boundary_report_hash": "6e0a55d50bfbf64eab94e981476631c04c12f2941d6c112dae973b421cbb89e2",
-    "source_confidence_report_hash": "e21bf99ae1dbd34ff4c7e5d7c1da0f8a1842044e23b4035b9455f9ee390a4b09"
+    "event_hash": "83312b019637578e33975ef7db6ca6fcfb4db4290d17907e3ebd8db788215d55",
+    "event_id": "evt_83312b019637578e",
+    "rendered_output_hash": "2cd7bdafda15234def412282ee9984546318d31199c950874163979df3d25a68",
+    "source_availability_report_hash": "35c511f3b053fa517e7f1989fa8fb81bd2a116862292d5600edd9fdc4497acd5",
+    "source_boundary_report_hash": "e6777da6e80e3da8d1326083b2e894a2da8eb8857ecfa38d1e240f7fdfd3336e",
+    "source_confidence_report_hash": "db0c2ceaab64e480f1bd1fd7378956511ff0f848b1dcd5e319c3636f2aaa55a9"
   },
   "issuer": "rdllm-local-demo",
   "issues": [],
@@ -108,7 +108,7 @@
     "report_uses_hashes_origin_booleans_and_risk_scores": true,
     "source_text_disclosed": false
   },
-  "report_hash": "dcd6cc4ca05e0273c32f26e6a99fab19442a3861e1d5c9dac47d4e0b92664dce",
+  "report_hash": "19ebc3a7fb7655a09000d5e86f672117e99b53133f5d00686bc2694bf787aeac",
   "report_version": "rdllm-source-authenticity-report/v1",
   "schemas": {
     "creator_license_contract": "docs/schemas/creator_license_contract.schema.json",
@@ -120,7 +120,7 @@
   "signature": {
     "algorithm": "HMAC-SHA256",
     "issuer": "rdllm-local-demo",
-    "value": "d9a05c0f45290d42d59df5a64e2b7c049358a08b1af53ed2caa7bbcaf1342734"
+    "value": "9db1a84ddf233fc0c93c568750eb7685cbffe784c4ff7de3f3209734fd773046"
   },
   "source_authenticity_rows": [
     {
@@ -160,12 +160,12 @@
       "payout_mode": "eligible_direct_payout",
       "poisoning_risk_below_threshold": true,
       "poisoning_risk_score": 0.02,
-      "source_authenticity_hash": "f888a1f2229940b25cafb82cb0652d0f8d3f5b3a22dc25acfcb973bd76847c84",
+      "source_authenticity_hash": "a073c3ce520d085156412c739980176109efe984a37e79ff752a3a1c8aac9298",
       "source_authenticity_status": "verified_human_origin",
       "source_authenticity_verified": true,
       "source_available_and_inspectable": true,
       "source_boundary_closed": true,
-      "source_boundary_hash": "6cc791c1e7b177c499d42590a534b693f50ab7c0196c7edd8b1d3fe54e01c89e",
+      "source_boundary_hash": "7dcf17a5f3cf87a8de91d9ff6e1d8fb99b40740f206ac40d9d75f97654911f14",
       "source_confidence_level": "verified",
       "source_farm_risk_below_threshold": true,
       "source_farm_risk_score": 0.02,
@@ -211,12 +211,12 @@
       "payout_mode": "eligible_direct_payout",
       "poisoning_risk_below_threshold": true,
       "poisoning_risk_score": 0.03,
-      "source_authenticity_hash": "a1f0ad1e7a0224f90ee07c292f87e8ce708bc6bf4bf60d3f8e9afbba70669553",
+      "source_authenticity_hash": "635bc7a2f8a40ab63a45ea8870258f5f35dc6c4c0671b2bcde02c4c4e82a6c95",
       "source_authenticity_status": "verified_human_origin",
       "source_authenticity_verified": true,
       "source_available_and_inspectable": true,
       "source_boundary_closed": true,
-      "source_boundary_hash": "cec83ec883e4fe8715846ae902d06b857983c1c968baf55e4008c4844ec3e52c",
+      "source_boundary_hash": "11099be816ea2c09c53618319fb004704a0d341c7a1420c92be2afdd0629357b",
       "source_confidence_level": "verified",
       "source_farm_risk_below_threshold": true,
       "source_farm_risk_score": 0.03,
@@ -262,12 +262,12 @@
       "payout_mode": "eligible_direct_payout",
       "poisoning_risk_below_threshold": true,
       "poisoning_risk_score": 0.02,
-      "source_authenticity_hash": "2e868a4b5a4e0bb4d8abaa9df38839b4b769f2cd7fa386444a3293b8d7253d2b",
+      "source_authenticity_hash": "f088f37edcb6a596f620cb0e110d77c8a97afd6b859914a82c35bfa2a0a941e9",
       "source_authenticity_status": "verified_human_origin",
       "source_authenticity_verified": true,
       "source_available_and_inspectable": true,
       "source_boundary_closed": true,
-      "source_boundary_hash": "55d58ea4d013d78508108e576438a3bfea1c787581de4ec658ea4c44a30b8a8c",
+      "source_boundary_hash": "4010b694bc7d7cafb26a4ee54878a11c1afe8db21fc254b55e20f6773aa9c9bc",
       "source_confidence_level": "verified",
       "source_farm_risk_below_threshold": true,
       "source_farm_risk_score": 0.01,

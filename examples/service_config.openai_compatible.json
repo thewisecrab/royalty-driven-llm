@@ -36,7 +36,8 @@
       "model": "replace-with-provider-model",
       "api_key_env": "RDLLM_PROVIDER_OPENAI_KEY",
       "timeout_seconds": 30,
-      "max_response_bytes": 1000000
+      "max_response_bytes": 1000000,
+      "require_grounding_evidence": true
     }
   ]
 }

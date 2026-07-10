@@ -131,7 +131,7 @@ def smoke() -> dict[str, Any]:
                 "src/rdllm/data/production_profiles/company_instruction_only.json",
                 "src/rdllm/data/production_profiles/institution_instruction_only.json",
                 "src/rdllm/data/production_profiles/government_escrow_only.json",
-                "src/rdllm/data/production_profiles/public_sector_processor_attested.json",
+                "src/rdllm/data/production_profiles/public_sector_processor_required.json",
                 "src/rdllm/data/reference_artifacts/certification_report.json",
                 "src/rdllm/data/reference_artifacts/discovery_manifest.json",
                 "src/rdllm/data/reference_artifacts/production_readiness_report.json",
@@ -181,7 +181,7 @@ def smoke() -> dict[str, Any]:
                 "examples/production_profiles/company_instruction_only.json",
                 "examples/production_profiles/institution_instruction_only.json",
                 "examples/production_profiles/government_escrow_only.json",
-                "examples/production_profiles/public_sector_processor_attested.json",
+                "examples/production_profiles/public_sector_processor_required.json",
                 "examples/service_config.openai_compatible.json",
             )
             for suffix in required_sdist_suffixes:
@@ -250,7 +250,7 @@ def smoke() -> dict[str, Any]:
             )
             rdllm_service = _console_script(venv_dir, "rdllm-service")
             _run(
-                [str(python), "-m", "pip", "install", "--no-index", str(wheels[0])],
+                [str(python), "-m", "pip", "install", str(wheels[0])],
                 cwd=run_dir,
             )
 
@@ -1311,9 +1311,25 @@ def smoke() -> dict[str, Any]:
                 acceptance_report.get("summary", {}).get(
                     "production_acceptance_decision"
                 )
-                != "allow"
+                != "block"
             ):
-                errors.append("operator acceptance did not allow ready deployment")
+                errors.append(
+                    "unattested packaged profile did not block production acceptance"
+                )
+            if (
+                acceptance_report.get("summary", {}).get(
+                    "production_grade_claim_allowed"
+                )
+                is not False
+            ):
+                errors.append("packaged profile self-authorized a production claim")
+            if (
+                acceptance_report.get("summary", {}).get(
+                    "direct_creator_settlement_allowed"
+                )
+                is not False
+            ):
+                errors.append("packaged profile self-authorized direct settlement")
             if acceptance_support_bundle.get("status") != "passed":
                 errors.append("acceptance support bundle did not pass")
             if (

@@ -1,10 +1,16 @@
 # Service API
 
-RDLLM includes a dependency-free HTTP service boundary for production operators.
+RDLLM includes a small reference HTTP service boundary for operators.
 It is intentionally small: run it behind the operator's normal reverse proxy,
 identity provider, TLS termination, and observability stack. The service also
-enforces its own protected-endpoint rate limit so a missing ingress rule does
+enforces a per-process protected-endpoint rate limit so a missing ingress rule does
 not turn attribution, metrics, or provider calls into an unbounded surface.
+
+This process is not a multi-tenant identity gateway or distributed ledger. Its
+shared token, in-memory counters, and local JSONL audit log are suitable for a
+single operator boundary. Use external identity, tenant isolation, distributed
+rate limiting, and durable append-only storage for multi-instance or multi-tenant
+deployments, then verify those controls through the external attestation gate.
 
 ## Start
 
@@ -99,7 +105,7 @@ Response shape:
   unsupported or weakly grounded claims are disclosed in the footer and block
   production display.
 - `audit_errors`: fail-closed verifier errors
-- `event`: full authenticated usage event for the requesting tenant
+- `event`: full authenticated usage event for the requesting operator boundary
 
 The response is described by
 `docs/schemas/service_attribution_response.schema.json`.
@@ -151,7 +157,8 @@ the displayed claim. They also expose `source_disagreement_profile`,
 plainly contradicts a supported claim. A ready response is also rejected if a
 visible source row omits or forges its verification handle. Rendered source rows
 expose `uri`, `verify`, and `hash`
-locators, plus `support`, `text_match`, `weight`, and `payout`. They also expose
+locators, plus `support`, `text_match`, `weight`, and `payout`. Here, `payout` is
+a candidate allocation amount, not evidence of an executed payment. Rows also expose
 `usage_metric_profile`, `usage_metric_scope`, and the method identifiers for
 each usage metric, so the copied/exported answer shows both where the source can
 be checked and which observable metric profile produced the allocation numbers.
