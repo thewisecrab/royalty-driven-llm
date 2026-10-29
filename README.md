@@ -205,6 +205,9 @@ PYTHONPATH=src python3 tools/ship_check.py
 ```
 
 Python 3.10 or newer. Runtime dependency: `cryptography>=50.0.0,<51`.
+The dev extra pins `setuptools>=84.1.0` and, on Python 3.11 and newer,
+`filelock>=4.2.1`. filelock's fixed releases do not support Python 3.10, and
+CI ignores only those filelock CVE ids on 3.10.
 Development extras (`jsonschema`, `markdown`, `build`, `pip-audit`) are the
 `dev` extra in `pyproject.toml`.
 

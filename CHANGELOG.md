@@ -32,6 +32,12 @@
   The current paper is `paper/rdllm_white_paper.md`. The exported
   `docs/.well-known` tree is not claimed as a hosted origin `/.well-known`
   surface.
+- Pins the dev extra and the build backend to `setuptools>=84.1.0`
+  (PYSEC-2026-3447, GHSA-xmj3-9gf7-h52w; the GitHub 3.10/3.11 images had
+  79.0.1). Pins `filelock>=4.2.1` on Python 3.11 and newer. filelock 4.2.1 is
+  the first release outside the 2026 SoftFileLock ranges and requires Python
+  >=3.11. Every filelock release that installs on 3.10 is inside those ranges
+  (OSV, 2026-10-29), so CI ignores only those seventeen CVE ids on 3.10.
 - Raises the cryptography floor from `>=48.0.1,<49` to `>=50.0.0,<51`.
   `cryptography` 48.0.1 is flagged by current pip-audit (PYSEC-2026-3552,
   PYSEC-2026-3553, PYSEC-2026-3554). A clean environment with 50.0.0 and the
