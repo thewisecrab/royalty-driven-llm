@@ -2560,7 +2560,7 @@ class ServiceBoundaryTests(unittest.TestCase):
         )
         self.assertEqual(
             acceptance["source_usage_metric_names"],
-            ["support", "text_match", "weight", "payout"],
+            ["support", "entailment", "text_match", "weight", "payout"],
         )
         self.assertEqual(
             acceptance["source_usage_metric_row_count"],

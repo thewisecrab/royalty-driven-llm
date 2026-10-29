@@ -14,8 +14,9 @@ can verify the claims.
 - Research and policy sources are indexed in `docs/references.md`,
   `docs/recent_research.md`, `docs/evidence.md`,
   `paper/rdllm_white_paper.md`, and `paper/references.bib`.
-- Public proof artifacts are in `artifacts/` and hosted copies are exported under
-  `docs/.well-known/rdllm/`.
+- Public proof artifacts are in `artifacts/`. Copies for static discovery are
+  exported under `docs/.well-known/rdllm/`. They are not served at the origin
+  `/.well-known` URL.
 - Machine-checkable schemas are in `docs/schemas/` and packaged copies are in
   `src/rdllm/data/schemas/`.
 - The shipping gate is `PYTHONPATH=src python3 tools/ship_check.py`.
@@ -70,9 +71,9 @@ runtime examples.
 ## Code Attribution
 
 The repository code is authored for this project and distributed under the
-repository license. The Python package has no required runtime dependencies in
-`pyproject.toml`; development checks use optional tooling such as `build` and
-`jsonschema`.
+repository license. The Python package depends on `cryptography` for Ed25519
+signatures. Development checks use optional tooling such as `build`,
+`jsonschema`, `markdown`, and `pip-audit`.
 
 Important code locations:
 
@@ -89,10 +90,11 @@ Important code locations:
 
 ## Paper And Research Attribution
 
-The paper source is `paper/royalty_driven_llm_paper.md`. The public concept
-white paper is `paper/rdllm_white_paper.md`; it explains the state-of-the-art
-evidence base, runtime architecture, allocation mechanism, threat model, and
-public-readiness posture. The BibTeX bibliography is `paper/references.bib`.
+The current paper is `paper/rdllm_white_paper.md`. It explains the
+state-of-the-art evidence base, runtime architecture, allocation mechanism,
+threat model, and public-readiness posture.
+`paper/royalty_driven_llm_paper.md` is a superseded historical draft and is
+not the paper source. The BibTeX bibliography is `paper/references.bib`.
 The public human-readable reference index is `docs/references.md`. Current
 implementation-facing research notes are in `docs/recent_research.md`.
 
@@ -122,9 +124,10 @@ README and example docs.
 ## Public Artifact Attribution
 
 Public artifacts are generated and verified through the repository gates. The
-canonical source files are in `artifacts/`. Hosted copies for static discovery
-are exported to `docs/.well-known/rdllm/` and indexed by
-`docs/.well-known/rdllm.json`.
+canonical source files are in `artifacts/`. Copies for static discovery are
+exported to `docs/.well-known/rdllm/` and indexed by
+`docs/.well-known/rdllm.json`. That export is not yet served at the origin
+`/.well-known` URL.
 
 Verify hosted artifacts:
 

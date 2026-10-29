@@ -48,6 +48,10 @@ from rdllm.text import (
     term_counts,
     tokenize,
 )
+from rdllm.cooperative_allocation import (
+    cooperative_values,
+    output_token_coverage_value,
+)
 from rdllm.valuation import exact_shapley_values
 
 MONEY_QUANT = Decimal("0.000001")
@@ -74,6 +78,9 @@ class RoyaltyDrivenLLM:
         attestations: list[OwnershipAttestation] | None = None,
         registry_report: dict[str, Any] | None = None,
         enforce_registry: bool = False,
+        *,
+        allocation_method: str = "fixed_coefficients",
+        allocation_seed: int = 0,
     ) -> None:
         self.creators = {creator.creator_id: creator for creator in creators}
         self.works = {work.work_id: work for work in works}
@@ -85,6 +92,10 @@ class RoyaltyDrivenLLM:
             works, attestations=self.attestations
         )
         self.enforce_registry = enforce_registry
+        if allocation_method not in {"fixed_coefficients", "shapley", "banzhaf"}:
+            raise ValueError(f"unsupported allocation method: {allocation_method}")
+        self.allocation_method = allocation_method
+        self.allocation_seed = allocation_seed
         self.registry_conflicts_by_work_id = (
             conflicts_by_work_id(self.registry_report) if enforce_registry else {}
         )
@@ -110,6 +121,9 @@ class RoyaltyDrivenLLM:
         attestations_path: str | Path | None = None,
         registry_report_path: str | Path | None = None,
         enforce_registry: bool = False,
+        *,
+        allocation_method: str = "fixed_coefficients",
+        allocation_seed: int = 0,
     ) -> "RoyaltyDrivenLLM":
         data = json.loads(Path(path).read_text(encoding="utf-8"))
         creators = [Creator.from_dict(item) for item in data["creators"]]
@@ -133,6 +147,8 @@ class RoyaltyDrivenLLM:
             attestations=attestations,
             registry_report=registry_report,
             enforce_registry=enforce_registry,
+            allocation_method=allocation_method,
+            allocation_seed=allocation_seed,
         )
 
     def retrieve(
@@ -870,6 +886,9 @@ class RoyaltyDrivenLLM:
             if raw > 0:
                 raw_scores.append((chunk, raw, attribution_basis))
 
+        if self.allocation_method != "fixed_coefficients":
+            raw_scores = self._cooperative_scores(raw_scores, output_tokens)
+
         total_raw = sum(raw for _, raw, _ in raw_scores)
         if total_raw <= 0:
             return [self._escrow_share(creator_pool)]
@@ -912,6 +931,43 @@ class RoyaltyDrivenLLM:
             )
 
         return shares
+
+    def _cooperative_scores(
+        self,
+        raw_scores: list[tuple[Chunk, float, dict[str, float]]],
+        output_tokens: list[str],
+    ) -> list[tuple[Chunk, float, dict[str, float]]]:
+        """Replace fixed-coefficient utilities with Shapley or Banzhaf weights.
+
+        The value function is output-token coverage. It is monotone, so a source
+        that shares no output token is a null player and is dropped. This is not
+        the MaxShapley or Cluster Shapley algorithm.
+        """
+
+        players = [chunk.chunk_id for chunk, _raw, _basis in raw_scores]
+        token_sets = {
+            chunk.chunk_id: set(tokenize(chunk.text))
+            for chunk, _raw, _basis in raw_scores
+        }
+        output = set(output_tokens)
+
+        def value(coalition: frozenset[str]) -> float:
+            return output_token_coverage_value(coalition, token_sets, output)
+
+        values = cooperative_values(
+            players,
+            value,
+            method=self.allocation_method,
+            seed=self.allocation_seed,
+        )
+        rebuilt: list[tuple[Chunk, float, dict[str, float]]] = []
+        for chunk, _raw, basis in raw_scores:
+            weight = float(values.get(chunk.chunk_id, 0.0))
+            if weight > 1e-12:
+                updated = dict(basis)
+                updated["cooperative_weight"] = weight
+                rebuilt.append((chunk, weight, updated))
+        return rebuilt
 
     def _source_labels(
         self, hits: list[RetrievalHit], text_matches: list[TextMatch]

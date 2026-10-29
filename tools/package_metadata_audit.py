@@ -12,15 +12,16 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 PYPROJECT = ROOT / "pyproject.toml"
 
-PRODUCTION_CLASSIFIER = "Development Status :: 5 - Production/Stable"
+BETA_CLASSIFIER = "Development Status :: 4 - Beta"
 FORBIDDEN_DEVELOPMENT_STATUS_PREFIXES = (
     "Development Status :: 1 - Planning",
     "Development Status :: 2 - Pre-Alpha",
     "Development Status :: 3 - Alpha",
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
+    "Development Status :: 6 - Mature",
 )
 REQUIRED_CLASSIFIERS = (
-    PRODUCTION_CLASSIFIER,
+    BETA_CLASSIFIER,
     "Intended Audience :: Developers",
     "Intended Audience :: Legal Industry",
     "Intended Audience :: Science/Research",
@@ -176,7 +177,7 @@ def audit(path: Path = PYPROJECT) -> dict[str, Any]:
     elif _major_version(version) is None:
         errors.append("project.version: expected semantic version")
     elif _major_version(version) < MINIMUM_PRODUCTION_MAJOR_VERSION:
-        errors.append("project.version: production/stable releases must be >=1.0.0")
+        errors.append("project.version: 1.x releases must be >=1.0.0")
     if project.get("readme") != "README.md":
         errors.append("project.readme: expected 'README.md'")
     description = str(project.get("description", ""))
@@ -185,10 +186,10 @@ def audit(path: Path = PYPROJECT) -> dict[str, Any]:
             errors.append(f"project.description: missing {term!r}")
     dependencies = project.get("dependencies")
     if not isinstance(dependencies, list) or not any(
-        str(value).startswith("cryptography>=48.0.1") for value in dependencies
+        str(value).startswith("cryptography>=50.0.0") for value in dependencies
     ):
         errors.append(
-            "project.dependencies: cryptography>=48.0.1 is required for Ed25519 proofs"
+            "project.dependencies: cryptography>=50.0.0 is required for Ed25519 proofs"
         )
     if project.get("license") != "MIT":
         errors.append("project.license: expected 'MIT'")
@@ -202,8 +203,8 @@ def audit(path: Path = PYPROJECT) -> dict[str, Any]:
     )
     if "prototype" in package_init.lower():
         errors.append("src/rdllm/__init__.py: must not describe RDLLM as a prototype")
-    if "production-stable" not in package_init.lower():
-        errors.append("src/rdllm/__init__.py: missing production-stable positioning")
+    if "beta" not in package_init.lower():
+        errors.append("src/rdllm/__init__.py: missing beta positioning")
     if "externally attested" not in package_init.lower():
         errors.append("src/rdllm/__init__.py: missing external attestation boundary")
 
@@ -218,8 +219,8 @@ def audit(path: Path = PYPROJECT) -> dict[str, Any]:
     changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
     if f"## {version} -" not in changelog:
         errors.append("CHANGELOG.md: missing current project.version entry")
-    if "production-stable software baseline" not in changelog:
-        errors.append("CHANGELOG.md: missing production-stable release note")
+    if "## Unreleased" not in changelog or "beta reference implementation" not in changelog.lower():
+        errors.append("CHANGELOG.md: missing Unreleased beta reference note")
 
     development_status = next(
         (

@@ -336,13 +336,16 @@ def render_markdown(data: dict[str, Any]) -> str:
             "",
             "The reference artifacts currently report:",
             "",
-            "- `artifacts/certification_report.json`: "
-            f"{data['artifact_summaries']['certification_report'].get('status')} at "
-            f"{data['artifact_summaries']['certification_report'].get('highest_level')}",
+            "- `artifacts/certification_report.json`: internal conformance suite "
+            f"{data['artifact_summaries']['certification_report'].get('status')} "
+            f"through {data['artifact_summaries']['certification_report'].get('highest_level')}"
+            " (self-checked; no third-party certification)",
             "- `artifacts/universal_foundation_provider_binding_matrix.json`: "
-            f"{binding_summary.get('ready_provider_family_count')} ready provider families",
+            f"{binding_summary.get('ready_provider_family_count')} provider families "
+            "mapped in design fixtures; not validated against live provider APIs",
             "- `artifacts/universal_live_capability_discovery_contract.json`: "
-            f"{discovery_summary.get('ready_provider_family_count')} ready live capability provider families",
+            f"{discovery_summary.get('ready_provider_family_count')} provider families "
+            "mapped in design fixtures; not validated against live provider APIs",
             "- `artifacts/universal_provider_meter_normalization_contract.json`: "
             f"{meter_summary.get('ready_provider_meter_surface_count')} ready meter surfaces",
             "- `artifacts/universal_provider_response_state_normalization_contract.json`: "

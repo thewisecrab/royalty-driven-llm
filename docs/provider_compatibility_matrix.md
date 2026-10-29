@@ -138,8 +138,8 @@ Compatibility is not a vendor-name assertion. A route is compatible only when:
 
 The reference artifacts currently report:
 
-- `artifacts/certification_report.json`: passed at RDLLM-L186
-- `artifacts/universal_foundation_provider_binding_matrix.json`: 16 ready provider families
-- `artifacts/universal_live_capability_discovery_contract.json`: 16 ready live capability provider families
+- `artifacts/certification_report.json`: internal conformance suite passed through RDLLM-L186 (self-checked; no third-party certification)
+- `artifacts/universal_foundation_provider_binding_matrix.json`: 16 provider families mapped in design fixtures; not validated against live provider APIs
+- `artifacts/universal_live_capability_discovery_contract.json`: 16 provider families mapped in design fixtures; not validated against live provider APIs
 - `artifacts/universal_provider_meter_normalization_contract.json`: 24 ready meter surfaces
 - `artifacts/universal_provider_response_state_normalization_contract.json`: 24 ready response-state surfaces

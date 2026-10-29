@@ -1,0 +1,8 @@
+User-agent: GPTBot
+Disallow: /
+
+User-agent: *
+Allow: /
+
+tdm-reservation: 1
+Content-Usage: train-ai=n, ai-use=y, search=n

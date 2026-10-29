@@ -92,6 +92,12 @@ def _copy_sources(output: Path) -> None:
         ROOT / "paper" / "arxiv" / "rdllm_white_paper.pdf",
         output / "paper" / "rdllm_white_paper.pdf",
     )
+    arxiv_out = output / "paper" / "arxiv"
+    arxiv_out.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(
+        ROOT / "paper" / "arxiv" / "rdllm_white_paper.pdf",
+        arxiv_out / "rdllm_white_paper.pdf",
+    )
     (output / ".nojekyll").write_text("", encoding="utf-8")
 
 

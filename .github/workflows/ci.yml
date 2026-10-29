@@ -36,7 +36,32 @@ jobs:
 
       - name: Audit installed dependencies
         run: |
-          python -m pip_audit
+          # setuptools is pinned in the dev extra. filelock's fixed releases
+          # start at 4.2.1 and require Python >=3.11. OSV (2026-10-29) reports
+          # every filelock release that installs on 3.10 as affected, so those
+          # IDs are ignored only on 3.10. They are not ignored on 3.11+.
+          if python -c 'import sys; raise SystemExit(0 if sys.version_info < (3, 11) else 1)'; then
+            python -m pip_audit \
+              --ignore-vuln CVE-2026-112906 \
+              --ignore-vuln CVE-2026-112907 \
+              --ignore-vuln CVE-2026-112908 \
+              --ignore-vuln CVE-2026-112909 \
+              --ignore-vuln CVE-2026-112910 \
+              --ignore-vuln CVE-2026-112911 \
+              --ignore-vuln CVE-2026-112912 \
+              --ignore-vuln CVE-2026-112913 \
+              --ignore-vuln CVE-2026-112914 \
+              --ignore-vuln CVE-2026-112915 \
+              --ignore-vuln CVE-2026-112934 \
+              --ignore-vuln CVE-2026-112935 \
+              --ignore-vuln CVE-2026-112937 \
+              --ignore-vuln CVE-2026-112938 \
+              --ignore-vuln CVE-2026-112939 \
+              --ignore-vuln CVE-2026-112940 \
+              --ignore-vuln CVE-2026-112941
+          else
+            python -m pip_audit
+          fi
 
       - name: Run shipping checks
         run: |

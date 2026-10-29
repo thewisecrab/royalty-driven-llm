@@ -317,10 +317,10 @@ correct citations from faithful reliance on cited documents; CiteGuard validates
 citation-attribution alignment through retrieval-aware checks; OWASP LLM01:2025
 recommends segregating external content; AIP shows that RAG prompts can be
 weaponized; and large-scale 2026 measurements find indirect prompt injections in
-web content. RDLLM-L60 proves cited evidence was in the generation context before
-answer delivery, RDLLM-L61 proves that those source packets were evidence-only
+web content. RDLLM-L60 checks cited evidence was in the generation context before
+answer delivery, RDLLM-L61 checks that those source packets were evidence-only
 data, not instruction/control channels or attribution/payout policy inputs, and
-RDLLM-L62 proves that answer claims, footer rows, payout participation, and release
+RDLLM-L62 checks that answer claims, footer rows, payout participation, and release
 decisions are influenced only by authorized proof, policy, accounting, and
 boundary-guard artifacts.
 This also motivates private audit challenges: the user-facing footer can expose
@@ -495,69 +495,69 @@ The next level, `RDLLM-L9`, proves settlement finality: when a dispute is resolv
 escrow release happens through a separate report that binds the original event hash,
 registry conflict, resolution evidence, payout split, balances, report hash, and
 signature rather than rewriting the historical receipt.
-`RDLLM-L10` proves interoperability: attribution receipts,
+`RDLLM-L10` checks interoperability: attribution receipts,
 PROV-shaped answer graphs, and optional escrow-settlement credentials must verify
 their hashes and deterministic proofs, and must fail when their receipt or settlement
 bindings are tampered with.
-`RDLLM-L11` proves attribution-gap accountability: every source
+`RDLLM-L11` checks attribution-gap accountability: every source
 accessed by retrieval or text matching must be user-visible, paid, or explicitly
 withheld through rights-conflict or registry-dispute escrow. The suite also proves
 that hiding a paid source from the footer opens a verifiable gap.
-`RDLLM-L12` proves selective-disclosure accountability: public
+`RDLLM-L12` checks selective-disclosure accountability: public
 receipts can expose source attribution and claim-support metadata while salted
 commitments bind private source quotes, claim evidence text, access traces,
 economics, rights decisions, and registry decision internals. The suite proves that
 public receipt drift and disclosed-leaf tampering are rejected.
-`RDLLM-L13` proves trace-exchange accountability:
+`RDLLM-L13` checks trace-exchange accountability:
 OpenTelemetry-aligned generation, source-access, citation, and claim-support spans
 must match the signed receipt and ledger. The suite proves that omitted provider
 source-access spans and relabeled citation hashes are rejected.
-`RDLLM-L14` proves aggregate royalty-statement accountability:
+`RDLLM-L14` checks aggregate royalty-statement accountability:
 many private usage events roll up into creator, escrow, work, source-usage,
 receipt, and trace commitments. The suite proves payout conservation, private-text
 redaction, receipt/trace root binding, and rejection of creator-statement drift.
-`RDLLM-L15` proves creator challenge correction: an omitted
+`RDLLM-L15` checks creator challenge correction: an omitted
 source can be accepted for corrective payment without rewriting the original event,
 already credited sources receive no double payment, private text remains hidden, and
 remedy tampering is rejected.
-`RDLLM-L16` proves provider-card accountability: a provider can
+`RDLLM-L16` checks provider-card accountability: a provider can
 publish a signed, privacy-preserving attribution posture card that binds
 certification evidence, ledger coverage, supported evidence channels, public
 disclosure surfaces, challenge policy, limitations, and evidence roots. The suite
 rejects stale certification evidence and coverage tampering.
-`RDLLM-L17` proves training-summary accountability: a provider
+`RDLLM-L17` checks training-summary accountability: a provider
 can publish a GPAI/Croissant/SPDX/ODRL-aligned training-content summary that binds
 corpus categories, rights coverage, license/use counts, policy roots, content-hash
 roots, and training-value commitments while redacting private work text. The suite
 rejects stale certification/provider-card evidence and coverage tampering.
-`RDLLM-L18` proves public assurance-bundle accountability:
+`RDLLM-L18` checks public assurance-bundle accountability:
 providers publish hash-only proof-pack entries, Merkle roots, inclusion proofs, and
 profile flags aligned with SCITT/Rekor/in-toto/C2PA-style verification patterns.
 The suite rejects artifact-hash tampering, missing inclusion proofs, invalid
 signatures, and private payload disclosure.
-`RDLLM-L19` proves answer-provenance-card accountability:
+`RDLLM-L19` checks answer-provenance-card accountability:
 visible source footers and claim span hashes are bound to receipt hashes, trace
 hashes, grounding verdicts, and attribution-gap verdicts without revealing private
 prompt, answer, claim, source quote, or evidence text. The suite rejects footer
 relabeling and card tampering.
-`RDLLM-L20` proves source-materialization accountability:
+`RDLLM-L20` checks source-materialization accountability:
 cited source hashes, quote hashes, source URIs, claim evidence spans, answer-card
 bindings, and visible footer prefixes resolve to registered content without
 revealing prompt, answer, source, quote, claim, or evidence text. The suite rejects
 fabricated source hashes, stale answer-card bindings, and claim evidence that
 cannot be reproduced from the registered corpus.
-`RDLLM-L21` proves response-envelope accountability:
+`RDLLM-L21` checks response-envelope accountability:
 rendered answers, answer cards, source verification reports, provider cards,
 certification posture, and public receipts are packaged into one signed API
 artifact that can be verified without the private ledger or source corpus. The
 suite rejects rendered-output tampering and embedded-artifact tampering.
-`RDLLM-L22` proves integration-profile accountability:
+`RDLLM-L22` checks integration-profile accountability:
 providers publish a signed API contract with generation and verification endpoints,
 required headers, embedded artifact requirements, verifier commands, schemas,
 public surfaces, readiness checks, and bound proof hashes. The suite rejects
 profile tampering, provider-surface drift, certification regression, and
 response-envelope drift.
-`RDLLM-L23` proves discovery-manifest accountability:
+`RDLLM-L23` checks discovery-manifest accountability:
 providers publish a signed `/.well-known/rdllm.json` entry point that catalogs the
 provider card, certification report, integration profile, response envelope,
 assurance bundle, optional training summary, API contract hash, schemas, verifier
@@ -565,7 +565,7 @@ commands, readiness checks, and bound proof hashes. The suite rejects discovery
 path tampering, certification regression, provider-surface drift, artifact hash
 drift, and assurance bundles that omit integration-profile or response-envelope
 evidence.
-`RDLLM-L24` proves derivative-lineage accountability:
+`RDLLM-L24` checks derivative-lineage accountability:
 summaries, curated datasets, synthetic examples, tool outputs, and transformed
 corpora can carry machine-readable upstream work edges, and settlement obligations
 split derivative source payouts between immediate and upstream owners while
@@ -573,13 +573,13 @@ conserving the source payout. The suite rejects missing upstream works, lineage
 cycles, declared upstream hash drift, payout drift, private-text leakage, and report
 tampering.
 
-`RDLLM-L25` proves benchmarked provenance accountability:
+`RDLLM-L25` checks benchmarked provenance accountability:
 providers publish a signed `rdllm-provenance-evaluation/v1` report that replays
 clean-source, paraphrase, hard-decoy, unattributed-escrow, and derivative-lineage
 cases. The suite rejects report tampering, omitted cases, source-ranking drift,
 signature drift, and disclosure of raw benchmark prompts, answers, or source text.
 
-`RDLLM-L26` proves counterfactual influence accountability:
+`RDLLM-L26` checks counterfactual influence accountability:
 providers publish a signed `rdllm-counterfactual-influence/v1` report that removes
 each credited work, replays the same prompt and answer, and records whether the
 source disappeared, payout reallocated or escrowed, and the credited work had a
@@ -590,13 +590,13 @@ The public proof pack includes a decisive-source counterfactual vector so the
 artifact demonstrates a positive influence margin, not only replaceable-source
 accounting.
 
-`RDLLM-L27` proves multimodal media attribution:
+`RDLLM-L27` checks multimodal media attribution:
 providers publish a signed `rdllm-media-attribution/v1` report that matches image,
 audio, video, 3D, and text-shaped media signatures to registered assets, pays
 matched owners, escrows weak or unknown media influence, and rejects raw media or
 descriptor disclosure.
 
-`RDLLM-L28` proves model-internal signal attribution:
+`RDLLM-L28` checks model-internal signal attribution:
 providers publish a signed `rdllm-model-signal-attribution/v1` report that explains
 which output is being attributed, which features are eligible for credit, which
 score is attributed, and what is held fixed. The report verifies private

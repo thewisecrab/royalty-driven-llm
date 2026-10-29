@@ -2,7 +2,8 @@
 
 Author-produced PDF:
 
-- `rdllm_white_paper.pdf`
+- `rdllm_white_paper.pdf`, rendered 2026-10-29 from `paper/rdllm_white_paper.md`
+  (document version 2026-10-29) by `tools/build_arxiv_white_paper.py`
 
 Recommended arXiv metadata:
 
@@ -17,23 +18,21 @@ Recommended arXiv metadata:
 
 Abstract:
 
-Royalty Driven LLM Model (RDLLM) is a provider-neutral reference architecture for
-making AI answers visibly grounded, auditable, and economically accountable. When
-an AI product uses registered sources, retrieved evidence, generated text, or
-provider-native source metadata to produce a public answer, RDLLM makes the
-system show users which sources support the answer, explain observable source
-usage in allocation terms, and route creator value to processor instruction,
-review, or escrow rather than silently absorbing it. The design combines user-facing
-source footers, claim-evidence rows, usage metrics with method provenance,
-creator-pool allocation, escrow paths, response hashes, Ed25519 signatures,
-external deployment attestations, public schemas, and verifier commands. RDLLM
-does not claim hidden model-internal
-reliance by default; it reports observable support and settlement allocation
-unless separate provider telemetry proves internal reliance.
+Royalty Driven LLM Model (RDLLM) is a beta, provider-neutral reference
+implementation for visible source evidence and auditable creator allocation.
+The default claim score is text overlap (`rdllm-claim-text-overlap/v1`). An
+optional entailment channel (`rdllm-nli-support/v1`) defaults to a deterministic
+stub and has not been evaluated with MiniCheck, AlignScore, or a public
+benchmark. Shapley and normalized Banzhaf allocation are opt-in. RSL 1.0,
+IETF aipref Content-Usage, and robots/TDM signals can be parsed. The package is
+not on PyPI. Provider families in the repository are design fixtures; the
+provider smoke uses a localhost mock. The internal conformance suite through
+RDLLM-L186 is self-checked, not a third-party certification.
 
 The repository's tests establish software and schema invariants over synthetic
 fixtures. They do not constitute a comparative attribution benchmark, a user
-study, legal validation, or evidence that a payment executed.
+study, legal validation, or evidence that a payment executed. No benchmark
+accuracy is stated in the paper.
 
 License:
 
