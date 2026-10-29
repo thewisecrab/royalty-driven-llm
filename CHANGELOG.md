@@ -37,6 +37,17 @@
   PYSEC-2026-3553, PYSEC-2026-3554). A clean environment with 50.0.0 and the
   dev extras reported no known vulnerabilities. Python 3.10 through 3.13 remain
   in the classifiers; cryptography 50.0.0 still publishes 3.10 and 3.11 wheels.
+- Rewrites the README for the beta status, GitHub checkout install (the
+  package is not on PyPI; release v1.0.0 is the 2026-07-10 wheel and does not
+  contain this unreleased work), the text-overlap and stub entailment channels,
+  the synthetic-only eval harness, the opt-in Shapley/Banzhaf allocators, the
+  RSL/aipref/robots-TDM parsers, and an explicit validated / not-validated
+  section. No benchmark numbers are stated.
+- Updates `paper/rdllm_white_paper.md` (document date 2026-10-29) so related
+  work, methods, limitations, and future work match that code. Future work
+  explicitly lists the unrun trained-NLI evaluation and the unrun live-provider
+  validation. Regenerates `paper/arxiv/rdllm_white_paper.pdf` from that
+  Markdown.
 - Corrects bibliography entries `syta2015cosi`, `wu2026aioEcosystem`,
   `permissiveWashing2026`, and `gadWild2026` to the arXiv records for those
   ids. Removes `hu2026aibom` because arXiv:2605.19755 is a different paper and

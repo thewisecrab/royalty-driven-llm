@@ -11,21 +11,23 @@ Document label: RDLLM White Paper
 Companion artifacts:
 
 - Runtime walkthrough: `docs/first_5_minutes.md`
-- Live examples: `examples/live_use_cases/README.md`
+- Runnable use cases on synthetic data: `examples/live_use_cases/README.md`
 - Public explainer: `docs/public_explainer.md`
 - Research notes: `docs/recent_research.md`
 - Bibliography: `paper/references.bib`
 
 ## Abstract
 
-Royalty Driven LLM Model (RDLLM) is a provider-neutral reference architecture for
-making AI answers visibly grounded, auditable, and economically accountable. The
-central claim is narrow but important: when an AI product uses registered
-sources, retrieved evidence, generated text, or provider-native source metadata
-to produce a public answer, the system should show users which sources support
-the answer, explain how those sources were used in observable allocation terms,
-and route creator value to payment, review, or escrow rather than silently
-absorbing it.
+Royalty Driven LLM Model (RDLLM) is a beta, provider-neutral reference
+implementation for making AI answers visibly grounded, auditable, and
+economically accountable. The central claim is narrow: when an AI product uses
+registered sources, retrieved evidence, generated text, or provider-native
+source metadata to produce a public answer, the system should show which
+sources were supplied, how strongly each claim overlaps their text, how a
+creator pool was divided, and whether value is eligible, held, or escrowed.
+Text overlap is not an entailment judgment. An optional entailment channel
+exists and defaults to a deterministic stub. This paper does not report a
+benchmark score for that stub, and it does not report a live provider test.
 
 RDLLM combines four layers that are usually treated separately:
 
@@ -69,19 +71,25 @@ evidence spans, source-access traces, rights policy, source-usage metrics,
 allocation weights, payout or escrow status, and hashes that allow independent
 verification.
 
-The reference implementation is deliberately practical. A new user can run:
+The reference implementation is deliberately practical, and it is beta software.
+It is not published on PyPI. A new user installs from a GitHub checkout:
 
 ```bash
+git clone https://github.com/thewisecrab/royalty-driven-llm.git
+cd royalty-driven-llm
 python -m pip install .
 rdllm-first-run
 ```
 
-The packaged synthetic first-run path emits `rdllm_first_run status: passed`, visible
-source rows, Claim Evidence rows, `support`, `text_match`, `payout`, and
-`disagreement=passed` fields. Here, `payout` is a candidate creator-pool
-allocation, not evidence that money moved. The same repository includes service smoke tests,
-provider-route smoke tests, package smoke tests, link audits, public proof
-artifacts, and production-readiness gates.
+The GitHub Release v1.0.0 is the 2026-07-10 wheel and sdist. It does not contain
+the unreleased entailment channel, evaluation harness, Shapley/Banzhaf options,
+or licence parsers. The packaged synthetic first-run path emits
+`rdllm_first_run status: passed`, visible source rows, Claim Evidence rows,
+`support`, `text_match`, `payout`, and `disagreement=passed` fields. On that
+run, `support` is the text-overlap score. `payout` is a candidate creator-pool
+allocation, not evidence that money moved. The same repository includes service
+smoke tests, a provider-route smoke test against a localhost mock, package
+smoke tests, link audits, public proof artifacts, and readiness gates.
 
 The key product principles are:
 
@@ -166,8 +174,8 @@ usage profile is therefore named
 ## 3. State Of The Art
 
 This section summarizes the research and standards base that shapes RDLLM as of
-July 8, 2026. Sections 3.8, 6, 13, and 14 were updated on 2026-10-29. The point
-is not that any one paper proves RDLLM. The point is
+July 8, 2026. Sections 3.8, 3.13, 5, 6, 12, 13, 14, and 15 were updated on
+2026-10-29. The point is not that any one paper proves RDLLM. The point is
 that the current evidence converges on a practical engineering rule: source
 credit must be claim-level, evidence-bound, metric-scoped, and independently
 verifiable.
@@ -342,6 +350,45 @@ RDLLM consequence: technical attribution cannot decide all legal questions, but
 it can provide the evidence substrate that licensing, opt-out, rights review,
 creator challenge, and settlement processes need.
 
+### 3.13 Cooperative Allocation And Machine-Readable Opt-Outs
+
+Four lines of work motivate the optional allocators and the licence parsers.
+None of them was re-run for this paper.
+
+MiniCheck (Tang, Laban, and Durrett, arXiv:2404.10774) and AlignScore (Zha,
+Yang, Li, and Hu, arXiv:2305.16739) define factual-consistency checks of a
+claim against a document. RDLLM's `rdllm-nli-support/v1` uses that
+premise/hypothesis setup. The shipped backend is a deterministic stub named
+`rdllm-deterministic-entailment-stub` version `1`. MiniCheck and AlignScore are
+not installed, and this paper reports no score for them.
+
+MaxShapley (Patel, Zhou, and Fanti, arXiv:2512.05958) gives a polynomial
+Shapley special case for generative search. Cluster Shapley (Ye and
+Yoganarasimhan, arXiv:2505.23842, title "Fair Document Valuation in LLM
+Summaries via Shapley Values") argues that equal or relevance splits can be
+unfair for multi-document summaries. Data Banzhaf (Wang and Jia,
+arXiv:2205.15466) studies the Banzhaf semivalue when utility estimates are
+noisy. RDLLM's opt-in allocators are exact or Monte Carlo Shapley and a
+normalized Banzhaf index of an explicit coverage function. They are not those
+algorithms, and no fairness comparison is reported.
+
+RSL 1.0 (https://rslstandard.org/rsl) and IETF draft-ietf-aipref-vocab-08
+(https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/) define
+machine-readable licensing and AI-use preferences. The implementation parses
+those documents, plus robots.txt and `tdm-reservation`, into the existing use
+labels. That parse is not a legal determination.
+
+The bibliography in `paper/references.bib` was checked against the arXiv API on
+2026-10-29. Titles and authors were corrected for arXiv:1503.08768 (Syta et al.,
+decentralized witness cosigning), arXiv:2601.22493 (Wu et al., *Mechanism Design
+for AI Overviews: Creator Incentives and Long-Term Profit*), arXiv:2602.08816
+(Jewitt et al., *Permissive-Washing in the Open AI Supply Chain*), and
+arXiv:2605.07133 (Zhou et al., *GAD in the Wild: Benchmarking Graph Anomaly
+Detection under Realistic Deployment Challenges*). A Hu and Wang AIBOM entry
+that pointed at arXiv:2605.19755 was removed: that id is a different paper, and
+the cited work could not be confirmed. GAD in the Wild is a graph-anomaly
+benchmark. This paper does not use it as evidence about royalties.
+
 ## 4. RDLLM Conceptual Model
 
 RDLLM models each monetized AI interaction as an attribution event.
@@ -411,11 +458,20 @@ rule is that attribution metadata must bind to the actual answer path, not a
 later marketing claim. For provider routes, retrieved source blocks are supplied
 before generation and valid provider-native annotations or explicit source markers
 must resolve to those blocks. Missing or foreign source evidence fails closed.
+The provider path in this repository is tested against an OpenAI-compatible
+mock. It has not been validated against a live provider API. The 16 provider
+families in the compatibility matrix are design fixtures.
 
 ### 5.4 Claim Evidence
 
-The answer is decomposed into support-bearing claims. Each supported claim must
-resolve to source evidence. The public Claim Evidence row includes:
+The answer is decomposed into claims. Whether a claim is marked `supported` is
+decided by text overlap, metric `rdllm-claim-text-overlap/v1`, together with
+the existing warrant and disagreement checks. That score is not an entailment
+probability. The optional metric `rdllm-nli-support/v1` scores the same pair
+as premise and hypothesis. With no injected fact-checker it uses
+`rdllm-deterministic-entailment-stub` version `1` and records that backend. The
+stub does not change the `supported` bit. No public-benchmark accuracy is
+reported for either metric. The public Claim Evidence row includes:
 
 - source label such as `S1`;
 - claim hash;
@@ -436,8 +492,9 @@ The displayed source footer is the user-facing trust surface. It should show:
 - source URI;
 - claim count;
 - confidence or review state;
-- support score;
+- text-overlap score, exposed under the historical label `support`;
 - text-match score;
+- entailment method id (`rdllm-nli-support/v1` on service footers);
 - contribution weight;
 - payout or escrow state;
 - hash/verification handle;
@@ -511,8 +568,15 @@ arXiv:2505.23842). Data Banzhaf (Wang and Jia, arXiv:2205.15466) is the reason
 the Banzhaf option is offered: it is a semivalue with a larger safety margin
 under noisy utility, in the setting that paper studies. This paper does not
 report a fairness or calibration comparison of these allocators. The default
-remains the fixed coefficients. A deployment should publish its allocator id,
-value function, calibration evidence, and policy version.
+remains the fixed coefficients. Allocator ids are
+`rdllm-fixed-coefficient-allocation/v1`,
+`rdllm-shapley-context-allocation/v1`, and
+`rdllm-normalized-banzhaf-context-allocation/v1`. The service footer still
+records `rdllm-creator-pool-weighted-allocation/v1` for the default payout
+channel. A deployment should publish its allocator id, value function,
+calibration evidence, and policy version. Exact Shapley and Banzhaf are used
+for at most 10 players; larger sets use a seeded Monte Carlo estimate that is
+rescaled to `v(N) - v(empty)`.
 
 This calculation does not execute money movement. Direct execution remains false
 inside the runtime event. A production operator can emit a processor instruction
@@ -526,7 +590,8 @@ dispute handling.
 
 ## 7. Runtime Example
 
-The repository's beginner command verifies the live path using fictional data:
+The repository's beginner command runs the synthetic first-run on fictional data.
+It does not call a live model provider:
 
 ```bash
 PYTHONPATH=src python3 -m rdllm.first_run
@@ -720,7 +785,7 @@ PYTHONPATH=src python3 -m unittest discover -s tests
 The public docs include:
 
 - first-run onboarding;
-- live use cases with screenshots;
+- runnable use cases with screenshots of local synthetic runs;
 - API clients;
 - multilingual quickstarts and explainers;
 - project attribution map;
@@ -733,9 +798,10 @@ verify the claims without reverse-engineering the repository.
 
 ## 13. Implementation Status
 
-The reference implementation currently includes:
+The reference implementation is beta software (`Development Status :: 4 - Beta`).
+It currently includes:
 
-- Python package runtime with `cryptography` for Ed25519 signatures;
+- Python package runtime with `cryptography>=50.0.0,<51` for Ed25519 signatures;
 - sample corpus;
 - first-run console command;
 - CLI answer renderer;
@@ -743,13 +809,16 @@ The reference implementation currently includes:
 - service response verifier;
 - public source-footer verifier;
 - operator doctor/bootstrap/launch-gate tooling;
-- provider live smoke route;
+- provider route smoke against a localhost mock, not a live provider API;
 - provider context grounding with request/response and source-evidence binding;
 - public-key receipt signing and external deployment-attestation verification;
 - package smoke;
 - public schemas;
 - well-known proof artifacts exported under `docs/.well-known` (not yet served at the origin `/.well-known` URL);
-- source usage metrics;
+- source usage metrics, with text overlap (`rdllm-claim-text-overlap/v1`) separate from optional entailment (`rdllm-nli-support/v1`);
+- an offline support-checker harness (`tools/eval_support_checker.py`) and a synthetic fixture only;
+- opt-in Shapley and normalized Banzhaf allocation beside the fixed coefficients;
+- parsers for RSL 1.0, IETF aipref Content-Usage, and robots.txt / TDM reservation;
 - source disagreement checks;
 - answer-claim coverage;
 - citation marker and answer-link gates;
@@ -854,7 +923,21 @@ agentic isolation remains an active engineering area.
 The next state-of-the-art frontier is not "add citations." It is to make
 attribution reliable, portable, privacy-preserving, and economically useful.
 
-Open research directions:
+### Not yet run
+
+The following work is explicitly future work. This paper does not report
+results for it.
+
+1. Entailment evaluation. Score `rdllm-nli-support/v1` with a trained
+   fact-checker such as MiniCheck or AlignScore on a public set such as
+   LLM-AggreFact or AttributionBench. The harness can load that row shape. No
+   such run was executed, and no accuracy, precision, recall, or balanced
+   accuracy is stated here. The committed JSONL file is synthetic.
+2. Live-provider validation. Exercise the provider client against real APIs
+   and record dated results. The current provider smoke uses a localhost mock.
+   The 16 provider families are design fixtures.
+
+Open research directions, also not claimed as results:
 
 1. Better evidence-span discovery across long documents and multimodal sources.
 2. Target-calibrated attribution metrics with published validation profiles.

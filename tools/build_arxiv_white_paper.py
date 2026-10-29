@@ -35,7 +35,13 @@ TITLE = (
     "for Grounded AI Outputs"
 )
 AUTHOR = "Siddharth Nilesh Patel"
-SUBTITLE = "Public technical white paper, version 2026-07-10"
+
+
+def document_version(markdown: str) -> str:
+    match = re.search(r"^Version:\s*(\S+)\s*$", markdown, re.MULTILINE)
+    if not match:
+        raise SystemExit("paper/rdllm_white_paper.md is missing a Version line")
+    return match.group(1)
 
 
 def inline_markup(text: str) -> str:
@@ -219,10 +225,14 @@ def flush_paragraph(story, paragraph_lines: list[str], styles) -> None:
 
 def build_story(markdown: str):
     styles = build_styles()
+    version = document_version(markdown)
     story = [
         Paragraph(TITLE, styles["TitlePageTitle"]),
         Paragraph(f"Author: {AUTHOR}", styles["Byline"]),
-        Paragraph(SUBTITLE, styles["Byline"]),
+        Paragraph(
+            f"Public technical white paper, version {version}",
+            styles["Byline"],
+        ),
         Spacer(1, 0.18 * inch),
     ]
 
