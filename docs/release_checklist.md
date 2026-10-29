@@ -43,9 +43,10 @@ Use this checklist before tagging a GitHub release or deploying the hosted docs.
 - `tools/adopter_quickstart_audit.py` passes, proving the quickstart remains
   rootless, copyable, role-complete, and runtime-probed through source-grounded
   attribution plus hash-chained service audit verification.
-- The hosted well-known discovery entry point exists at
+- The well-known discovery entry point exists in the repository at
   `docs/.well-known/rdllm.json`, and every public artifact path advertised by
   `artifacts/discovery_manifest.json` is exported under `docs/.well-known/rdllm/`.
+  This export is not yet served at the origin `/.well-known` URL.
 - Hosted discovery resolves every advertised artifact and schema path, and hosted
   artifact hashes match the discovery catalog.
 - Hosted public artifacts and schema mirrors pass the privacy audit, proving they

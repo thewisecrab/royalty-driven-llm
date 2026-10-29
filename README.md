@@ -4,8 +4,11 @@
 [![Pages](https://github.com/thewisecrab/royalty-driven-llm/actions/workflows/pages.yml/badge.svg)](https://github.com/thewisecrab/royalty-driven-llm/actions/workflows/pages.yml)
 
 RDLLM adds visible source evidence and auditable creator allocation to AI
-answers. It records which sources were supplied, which claims they support, how
-much value was allocated, and whether settlement is eligible, held, or escrowed.
+answers. It records which sources were supplied, which claims show measurable
+text overlap with them (metric `rdllm-claim-text-overlap/v1`), how much value
+was allocated, and whether settlement is eligible, held, or escrowed. An
+optional entailment score (`rdllm-nli-support/v1`) can be recorded separately.
+Without an installed fact-checker it uses a deterministic stub and says so.
 
 ## Try It
 
@@ -30,7 +33,7 @@ allocations are fictitious; no model provider is called and no money moves.
 - an answer with visible source labels such as `[S1]`;
 - claim-to-evidence rows with hashes and character spans;
 - observable usage metrics for retrieval, matching, citations, and allocation;
-- a source footer that survives API, copy, and export verification;
+- a source footer that can be re-verified after API delivery, copy, or export; stripped or altered footers are detected;
 - a settlement decision that fails closed when evidence is weak or missing;
 - publicly verifiable Ed25519 receipts for production integrations.
 
@@ -49,7 +52,9 @@ attestation.
 
 **Ground a provider response:** RDLLM retrieves allowed source context before
 generation, requires the provider to return matching source IDs or native
-annotations, and binds request, response, context, and evidence hashes.
+annotations, and binds request, response, context, and evidence hashes. That
+path is tested against an OpenAI-compatible mock. It has not been validated
+against live provider APIs.
 
 **Audit existing text:** RDLLM can measure observable overlap after generation,
 but labels that result `post_hoc_observable_match` and holds settlement for
@@ -63,11 +68,12 @@ or rights-blocked claims route value to escrow.
 
 ## Trust Boundary
 
-RDLLM 1.0 is production-stable software. An operator deployment is not
-production-attested merely because its configuration passes. Production claims
-require signed third-party evidence verified against an independently managed
-trust store. Bundled artifacts are synthetic fixtures and shared-secret HMAC is
-never accepted as a public production signature.
+RDLLM 1.0 is a beta reference implementation. The 1.x interfaces are in use,
+and no production deployment has been externally attested. An operator
+deployment is not production-attested merely because its configuration passes.
+Production claims require signed third-party evidence verified against an
+independently managed trust store. Bundled artifacts are synthetic fixtures and
+shared-secret HMAC is never accepted as a public production signature.
 
 RDLLM reports observable source support and allocation by default:
 

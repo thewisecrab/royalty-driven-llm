@@ -211,7 +211,7 @@ def run_smoke() -> dict[str, Any]:
                 errors.append(
                     "provider source footer should render source usage metric scope"
                 )
-            if "methods=support:rdllm-claim-overlap-support/v1" not in rendered_footer:
+            if "methods=support:rdllm-claim-text-overlap/v1" not in rendered_footer:
                 errors.append(
                     "provider source footer should render source usage metric methods"
                 )

@@ -1,6 +1,6 @@
 # RDLLM: Verifiable Source Attribution and Creator-Value Accounting for Grounded AI Outputs
 
-Version: 2026-07-10
+Version: 2026-10-29
 
 Author: Siddharth Nilesh Patel
 
@@ -140,8 +140,8 @@ RDLLM can support these claims when the corresponding artifacts are present:
 
 - This answer displayed these source rows.
 - These answer claims had these evidence rows.
-- This source row exposed support, text match, allocation weight, payout, and
-  metric provenance.
+- This source row exposed text overlap, text match, allocation weight, payout,
+  and metric provenance. Text overlap is not an entailment judgment.
 - The displayed footer matched the event source metadata.
 - The display text included the verified source footer.
 - The service or package passed a named verifier or smoke test.
@@ -166,7 +166,8 @@ usage profile is therefore named
 ## 3. State Of The Art
 
 This section summarizes the research and standards base that shapes RDLLM as of
-July 8, 2026. The point is not that any one paper proves RDLLM. The point is
+July 8, 2026. Sections 3.8, 6, 13, and 14 were updated on 2026-10-29. The point
+is not that any one paper proves RDLLM. The point is
 that the current evidence converges on a practical engineering rule: source
 credit must be claim-level, evidence-bound, metric-scoped, and independently
 verifiable.
@@ -274,9 +275,16 @@ target validation.
 
 RDLLM consequence: every visible usage metric must disclose its profile, scope,
 and method. RDLLM footers expose methods such as
-`rdllm-claim-overlap-support/v1` and
+`rdllm-claim-text-overlap/v1` and
 `rdllm-ngram-lcs-text-match/v1`, and the verifier rejects rows that omit metric
-provenance.
+provenance. The text-overlap id replaces the earlier name
+`rdllm-claim-overlap-support/v1`. Overlap is not entailment.
+
+An optional second method, `rdllm-nli-support/v1`, uses the claim-versus-document
+setup of MiniCheck (Tang, Laban, and Durrett, arXiv:2404.10774) and AlignScore
+(Zha, Yang, Li, and Hu, arXiv:2305.16739). The reference package does not install
+those models. If no fact-checker is supplied, the score is a deterministic stub
+and the result says so. This paper does not report accuracy for that stub.
 
 ### 3.9 Compensation Must Reflect Attribution Uncertainty
 
@@ -493,8 +501,18 @@ candidate_allocation_s = creator_pool * weight_s
 ```
 
 The coefficients are not universal truth. They are the published defaults of
-the reference implementation. A production deployment should publish its own
-metric profile, calibration evidence, and policy version.
+the reference implementation (`fixed_coefficients`). A caller can instead
+allocate the same creator pool with exact Shapley values for a small candidate
+set, Monte Carlo Shapley for a larger set, or a normalized Banzhaf index. The
+reference value function is output-token coverage. That is a classical
+cooperative value, not the polynomial MaxShapley algorithm (Patel, Zhou, and
+Fanti, arXiv:2512.05958) and not Cluster Shapley (Ye and Yoganarasimhan,
+arXiv:2505.23842). Data Banzhaf (Wang and Jia, arXiv:2205.15466) is the reason
+the Banzhaf option is offered: it is a semivalue with a larger safety margin
+under noisy utility, in the setting that paper studies. This paper does not
+report a fairness or calibration comparison of these allocators. The default
+remains the fixed coefficients. A deployment should publish its allocator id,
+value function, calibration evidence, and policy version.
 
 This calculation does not execute money movement. Direct execution remains false
 inside the runtime event. A production operator can emit a processor instruction
@@ -730,7 +748,7 @@ The reference implementation currently includes:
 - public-key receipt signing and external deployment-attestation verification;
 - package smoke;
 - public schemas;
-- hosted well-known proof surface;
+- well-known proof artifacts exported under `docs/.well-known` (not yet served at the origin `/.well-known` URL);
 - source usage metrics;
 - source disagreement checks;
 - answer-claim coverage;
@@ -750,6 +768,13 @@ conformance, deterministic adversarial behavior, and end-to-end fixture
 execution. They are not evidence that RDLLM outperforms published attribution
 methods, improves user trust in a controlled study, or produces legally correct
 royalties. No such state-of-the-art empirical claim is made in this white paper.
+
+`tools/eval_support_checker.py` can score the text-overlap metric and the
+optional entailment stub on a local claim/document file in AttributionBench or
+LLM-AggreFact field shape. The file shipped under `tests/fixtures/support_eval`
+is a synthetic fixture for the loader. It is not a public benchmark sample, and
+this paper does not publish precision, recall, or balanced accuracy from any
+benchmark run.
 
 A comparative evaluation should report at least claim-level citation precision
 and recall, evidence-span accuracy, source accessibility, factual support,
@@ -775,7 +800,23 @@ as direct internal reliance proof.
 
 The default metrics are useful for a reference implementation, but production
 deployments must validate metric behavior for their corpus, domain, language,
-retrieval architecture, and risk tolerance.
+retrieval architecture, and risk tolerance. Text overlap is not factual
+entailment. The optional `rdllm-nli-support/v1` channel is a deterministic stub
+unless the caller supplies a fact-checker. Passing the stub's threshold is not
+evidence that a neural fact-checker would agree.
+
+### Allocation And Opt-Out Parsing
+
+Fixed coefficients remain the default payout rule. Shapley and normalized
+Banzhaf are available for an explicit coverage value function. They satisfy the
+efficiency, symmetry, and null-player checks in the unit tests for that
+function. Those tests are not a study of creator fairness.
+
+RSL 1.0, IETF draft-ietf-aipref-vocab-08 Content-Usage, and robots.txt / TDM
+reservation documents can be parsed into the existing use labels when a record
+asks for machine-readable parsing. The mapping is an engineering interpretation
+for the policy checker. It is not a determination that an opt-out is legally
+effective.
 
 ### Independent Deployment Evidence
 
@@ -875,3 +916,10 @@ for the main sources.
 - NIST AI 600-1, Generative AI Profile: https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence
 - European Commission AI Act overview: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 - U.S. Copyright Office AI initiative: https://www.copyright.gov/ai/
+- Tang, Laban, and Durrett, MiniCheck, arXiv:2404.10774
+- Zha, Yang, Li, and Hu, AlignScore, arXiv:2305.16739
+- Patel, Zhou, and Fanti, MaxShapley, arXiv:2512.05958
+- Wang and Jia, Data Banzhaf, arXiv:2205.15466
+- Ye and Yoganarasimhan, Fair Document Valuation in LLM Summaries via Shapley Values, arXiv:2505.23842
+- RSL 1.0: https://rslstandard.org/rsl
+- IETF draft-ietf-aipref-vocab-08: https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/

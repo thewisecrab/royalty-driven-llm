@@ -1052,7 +1052,7 @@ def smoke() -> dict[str, Any]:
                 "payout=",
                 "metrics=rdllm-observable-source-usage-metrics/v1",
                 "scope=observable_support_allocation_not_model_internal_reliance",
-                "methods=support:rdllm-claim-overlap-support/v1",
+                "methods=support:rdllm-claim-text-overlap/v1",
                 "warrant=passed",
                 "disagreement=passed",
                 "conflicts=none",

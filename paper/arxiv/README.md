@@ -2,7 +2,8 @@
 
 Author-produced PDF:
 
-- `rdllm_white_paper.pdf`
+- `rdllm_white_paper.pdf` (rendered 2026-07-10; the Markdown was updated on
+  2026-10-29 and this PDF has not been regenerated)
 
 Recommended arXiv metadata:
 

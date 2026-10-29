@@ -171,9 +171,10 @@
     "source_usage_metric_methods": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["support", "text_match", "weight", "payout"],
+      "required": ["support", "entailment", "text_match", "weight", "payout"],
       "properties": {
-        "support": { "const": "rdllm-claim-overlap-support/v1" },
+        "support": { "const": "rdllm-claim-text-overlap/v1" },
+        "entailment": { "const": "rdllm-nli-support/v1" },
         "text_match": { "const": "rdllm-ngram-lcs-text-match/v1" },
         "weight": { "const": "rdllm-normalized-source-utility-weight/v1" },
         "payout": { "const": "rdllm-creator-pool-weighted-allocation/v1" }

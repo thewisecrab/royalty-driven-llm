@@ -23,7 +23,7 @@ keywords = [
   "creator-economy"
 ]
 classifiers = [
-  "Development Status :: 5 - Production/Stable",
+  "Development Status :: 4 - Beta",
   "Intended Audience :: Developers",
   "Intended Audience :: Legal Industry",
   "Intended Audience :: Science/Research",
@@ -37,7 +37,7 @@ classifiers = [
   "Topic :: Software Development :: Libraries :: Python Modules"
 ]
 dependencies = [
-  "cryptography>=48.0.1,<49",
+  "cryptography>=50.0.0,<51",
 ]
 
 [project.optional-dependencies]

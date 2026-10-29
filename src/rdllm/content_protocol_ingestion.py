@@ -14,6 +14,7 @@ from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Any
 
+from rdllm.licensing_signals import parse_licensing_signal
 from rdllm.receipts import (
     DEFAULT_ISSUER,
     canonical_json,
@@ -36,6 +37,8 @@ SUPPORTED_PROTOCOLS = {
     "croissant",
     "c2pa_tdm",
     "robots_txt",
+    "aipref",
+    "tdmrep",
     "custom",
 }
 
@@ -302,9 +305,39 @@ def _is_direct(row: dict[str, Any]) -> bool:
     )
 
 
+def _apply_machine_readable_record(row: dict[str, Any]) -> dict[str, Any]:
+    """Fill use and payment fields from a parsed license when the caller asks.
+
+    Pre-labelled records are left unchanged. Prose notices are not parsed.
+    """
+
+    if row.get("parse_machine_readable") is not True:
+        return row
+    raw = str(row.get("raw_notice_text", row.get("raw_protocol_payload", "")))
+    parsed = parse_licensing_signal(raw)
+    if not parsed.get("recognized"):
+        return row
+    updated = dict(row)
+    if parsed.get("protocol"):
+        updated["protocol"] = parsed["protocol"]
+    updated["allowed_uses"] = list(parsed.get("allowed_uses", []))
+    updated["prohibited_uses"] = list(parsed.get("prohibited_uses", []))
+    if parsed.get("payment_type"):
+        updated["payment_type"] = parsed["payment_type"]
+        updated["royalty_required"] = bool(parsed.get("royalty_required"))
+    if parsed.get("attribution_required") is not None:
+        updated["attribution_required"] = parsed["attribution_required"]
+    if parsed.get("minimum_creator_pool_rate") is not None:
+        updated["minimum_creator_pool_rate"] = parsed["minimum_creator_pool_rate"]
+    if parsed.get("vocabulary") and not updated.get("protocol_version"):
+        updated["protocol_version"] = str(parsed["vocabulary"])
+    return updated
+
+
 def _protocol_rows(protocol_input: dict[str, Any]) -> list[dict[str, Any]]:
     rows = []
     for index, row in enumerate(protocol_input.get("protocol_records", []), start=1):
+        row = _apply_machine_readable_record(row)
         raw_notice = str(row.get("raw_notice_text", row.get("raw_protocol_payload", "")))
         protocol = _protocol_name(row.get("protocol"))
         payment_type = str(row.get("payment_type", "attribution")).strip().lower()

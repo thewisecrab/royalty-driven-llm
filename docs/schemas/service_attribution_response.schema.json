@@ -312,6 +312,7 @@
         "usage_metric_profile",
         "usage_metric_scope",
         "support_metric_method",
+        "entailment_metric_method",
         "text_match_metric_method",
         "weight_metric_method",
         "payout_metric_method",
@@ -382,7 +383,10 @@
           "const": "observable_support_allocation_not_model_internal_reliance"
         },
         "support_metric_method": {
-          "const": "rdllm-claim-overlap-support/v1"
+          "const": "rdllm-claim-text-overlap/v1"
+        },
+        "entailment_metric_method": {
+          "const": "rdllm-nli-support/v1"
         },
         "text_match_metric_method": {
           "const": "rdllm-ngram-lcs-text-match/v1"

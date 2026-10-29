@@ -661,7 +661,7 @@ class ShippingReadinessTests(unittest.TestCase):
             msg=f"stdout:\n{result.stdout}\nstderr:\n{result.stderr}",
         )
         self.assertIn(
-            "development_status: Development Status :: 5 - Production/Stable",
+            "development_status: Development Status :: 4 - Beta",
             result.stdout,
         )
         self.assertIn("version: 1.0.0", result.stdout)

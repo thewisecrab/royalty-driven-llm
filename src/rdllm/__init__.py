@@ -1,4 +1,4 @@
-"""Production-stable RDLLM library with externally attested deployment gates."""
+"""Beta RDLLM reference implementation with externally attested deployment gates."""
 
 from rdllm.assurance import (
     make_assurance_bundle,

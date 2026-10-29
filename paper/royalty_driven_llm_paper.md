@@ -1,5 +1,10 @@
 # Royalty-Driven LLMs: A Usage-Based Compensation Mechanism for Creator-Owned Training and Retrieval Data
 
+> **Superseded historical draft.** This long-form manuscript is not the current
+> paper. The current white paper is `paper/rdllm_white_paper.md`. This draft
+> still describes a dependency-free prototype; the package now depends on
+> `cryptography`. Do not cite this file as the project description.
+
 ## Abstract
 
 Generative AI systems derive value from human-authored works, yet most deployed
@@ -375,7 +380,7 @@ therefore treats source attribution, tool use, memory use, model invocation,
 footer release, and settlement as one authorized runtime chain.
 RDLLM-L146 then turns that runtime chain into a provider-neutral root by combining
 explicit provenance, CUE-R evidence utility [@jain2026cuer], faithful citation
-attribution [@choi2025citeguard], AIBOM lifecycle assurance [@hu2026aibom],
+attribution [@choi2025citeguard], AIBOM lifecycle assurance,
 SCITT-style transparent statements [@ietf2026scitt], W3C Data Integrity
 [@w3cDataIntegrity], and C2PA content credentials [@c2pa2026spec] into one public
 verification object.
@@ -2516,7 +2521,7 @@ leakage. This imports current AI bill-of-materials and ML-BOM standardization in
 royalty attribution while addressing permissive-washing findings: attribution is
 not only a payout row, but a release artifact that preserves notice and license
 obligations across model, API, and application boundaries
-[@cyclonedxMlbom2026; @hu2026aibom; @permissiveWashing2026].
+[@cyclonedxMlbom2026; @permissiveWashing2026].
 
 The L110 layer adds creator attribution audit indexes. Aggregate transparency and
 model-level bills of materials still leave a creator with a hard question: given a
@@ -3575,7 +3580,7 @@ The prototype's tests verify these invariants:
     without exposing raw prompts, source text, training records, customer logs,
     payment details, tool payloads, memory cells, model weights, private keys, or
     API tokens [@hu2026responsibleAgenticProvenance; @jain2026cuer;
-    @choi2025citeguard; @hu2026aibom; @ietf2026scitt; @w3cDataIntegrity;
+    @choi2025citeguard; @ietf2026scitt; @w3cDataIntegrity;
     @c2pa2026spec; @bae2026creatorsGenAI].
 147. `rdllm-universal-emission-enforcement-gateway/v1`: binds each concrete
     emitted answer to the L146 root, response release gate, proof-carrying
